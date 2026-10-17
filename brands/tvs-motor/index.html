@@ -86,6 +86,7 @@
 /* Responsive */
 @media(max-width:640px){
   .brand-hero-content{grid-template-columns:1fr;gap:20px;padding:36px 0 32px}
+  .brand-top-grid{grid-template-columns:1fr}
   .brand-logo-big{width:72px;height:72px}
   .brand-stats{max-width:100%}
   .bs-num{font-size:18px}
@@ -106,6 +107,7 @@
       <div class="nav-links" role="list">
         <a href="/" class="nav-link" role="listitem">Home</a><a href="/listings" class="nav-link" role="listitem">All Scooters</a><a href="/compare" class="nav-link" role="listitem">Compare</a><a href="/best" class="nav-link" role="listitem">Best For</a><a href="/trending" class="nav-link" role="listitem">🔥 Trending</a><a href="/launches" class="nav-link" role="listitem">🆕 Launches</a><a href="/emi" class="nav-link" role="listitem">EMI Calc</a><a href="/cases" class="nav-link" role="listitem">🛡️ Cases</a>
       </div>
+      
       <button class="hamburger" id="navToggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -171,7 +173,7 @@
 <div class="breadcrumb"><div class="container"><div class="breadcrumb-inner"><a href="/">Home</a><span class="bc-sep">›</span><a href="/listings">Electric Scooters</a><span class="bc-sep">›</span><span id="bcBrand">TVS Motor</span></div></div></div>
 
 <div class="container" style="padding:32px 20px 64px">
-  <div class="grid-2" style="gap:24px;margin-bottom:32px;align-items:start">
+  <div class="grid-2 brand-top-grid" style="gap:24px;margin-bottom:32px;align-items:start">
     <div>
       <div class="brand-about-card">
         <div class="eyebrow mb-8">About the brand</div>
@@ -627,7 +629,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 E-ScooterWale. All prices ex-showroom Delhi. Data updated April 2026.</span>
+        <span>© 2026 E-ScooterWale. Prices are ex-showroom<span data-sw="priceCityIn"></span>. Data updated <span data-sw="updated">October 2026</span>.</span>
         <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
           <span>Not affiliated with any EV manufacturer.</span>
           <a href="/yellow-brother" style="color:var(--amber);font-weight:700;font-size:12px;text-decoration:none">🟡 Yellow Brother Blog</a>

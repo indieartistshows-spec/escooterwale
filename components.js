@@ -219,7 +219,12 @@ function compareTrayHTML(){ return '<div id="compareTrayInner"></div>'; }
 const SW_LANGS=[['en','English'],['hi','हिन्दी'],['mr','मराठी'],['ta','தமிழ்'],['te','తెలుగు'],['kn','ಕನ್ನಡ'],['gu','ગુજરાતી'],['bn','বাংলা'],['or','ଓଡ଼ିଆ']];
 function langSelectHTML(){
   const cur=window.__SW_LANG__||'en';
-  return `<label class="lang-sel-wrap" translate="no"><span class="lang-sel-icon" aria-hidden="true">🌐</span><select class="lang-sel" aria-label="Language" onchange="swLang(this.value)">${SW_LANGS.map(([c,n])=>`<option value="${c}"${c===cur?' selected':''}>${n}</option>`).join('')}</select></label>`;
+  // only languages that are fully translated are offered (SW_CONFIG.langsLive, set at build)
+  let live=[];try{live=(typeof SW_CONFIG!=='undefined'&&SW_CONFIG.langsLive)||[]}catch(e){}
+  if(cur!=='en'&&!live.includes(cur))live=live.concat(cur);
+  if(!live.length)return '';
+  const opts=SW_LANGS.filter(([c])=>c==='en'||live.includes(c));
+  return `<label class="lang-sel-wrap" translate="no"><span class="lang-sel-icon" aria-hidden="true">🌐</span><select class="lang-sel" aria-label="Language" onchange="swLang(this.value)">${opts.map(([c,n])=>`<option value="${c}"${c===cur?' selected':''}>${n}</option>`).join('')}</select></label>`;
 }
 function swLang(l){
   const path=location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/';

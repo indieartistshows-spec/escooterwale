@@ -822,3 +822,7 @@ img.lazy.loaded{opacity:1}
 .lang-sel{background:transparent;color:rgba(255,255,255,.85);border:0;font:600 12px/1.2 inherit;font-family:inherit;cursor:pointer;outline:none;max-width:92px}
 .lang-sel option{color:#111;background:#fff}
 @media(max-width:900px){.lang-sel-wrap{margin-left:auto;margin-right:8px}}
+
+/* v2.1: stop wide content (tables, chip rows) pushing grid columns past the screen on phones */
+.guide-layout>*,.city-layout>*,.brand-layout>*,.brand-hero-content>*{min-width:0}
+.guide-content table,.city-layout table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}

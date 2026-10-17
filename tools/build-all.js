@@ -2,8 +2,8 @@
    tools/build-all.js  |  rebuild the whole site from /data
    Order matters:
      data.js -> generated guides -> launches page -> schema ->
-     llms.txt -> pre-render (needs a local server) -> sitemap ->
-     language versions
+     llms.txt -> pre-render (needs a local server) -> language
+     versions (only fully translated ones go live) -> sitemap
    Usage: node tools/build-all.js [--no-i18n]
    ============================================================ */
 const { execSync } = require('child_process');
@@ -28,7 +28,10 @@ function serve(port) {
   run('node build-llms.js');
   const srv = serve(8877);
   try { run('node prerender.js'); } finally { srv.kill(); }
-  run('node build-sitemap.js');
-  if (!process.argv.includes('--no-i18n') && fs.existsSync('tools/i18n-build.js')) run('node tools/i18n-build.js');
+  if (!process.argv.includes('--no-i18n') && fs.existsSync('tools/i18n-build.js')) {
+    run('node tools/i18n-patterns.js');
+    run('node tools/i18n-build.js');
+  }
+  run('node build-sitemap.js'); // after languages, so live language URLs get real lastmod dates
   console.log('\n✓ site built');
 })().catch(e => { console.error(e); process.exit(1); });

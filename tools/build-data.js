@@ -69,13 +69,15 @@ for (const s of scooters) {
   s.cityPrices = {};
   for (const c of cities) {
     const st = subsidy.cityState[c.id];
-    const ex = cp[c.id] && cp[c.id].ex ? cp[c.id].ex : null;
-    if (!ex) continue;                                   // only cities with real city data are listed
+    // brand's own city ex-showroom when we have it, otherwise the national price
+    // with this city's road tax and charges on top (exConfirmed tells the page which)
+    const exConfirmed = !!(cp[c.id] && cp[c.id].ex);
+    const ex = exConfirmed ? cp[c.id].ex : s.nationalPrice;
     const o = onRoadFor(ex, st);
-    s.cityPrices[c.id] = { city: c.name, ex, exDisplay: inr(ex), onRoad: o.onRoad, onRoadDisplay: inr(o.onRoad), roadTaxKnown: o.roadTaxKnown, emi: emi(ex), checked: cp[c.id].checked };
+    s.cityPrices[c.id] = { city: c.name, ex, exDisplay: inr(ex), exConfirmed, onRoad: o.onRoad, onRoadDisplay: inr(o.onRoad), roadTaxKnown: o.roadTaxKnown, emi: emi(ex), checked: exConfirmed ? cp[c.id].checked : null };
   }
   // headline price = headline city when we have it, else national
-  const h = s.cityPrices[headline];
+  const h = s.cityPrices[headline] && s.cityPrices[headline].exConfirmed ? s.cityPrices[headline] : null;
   const headEx = h ? h.ex : s.price;
   const headOn = h ? h.onRoad : onRoadFor(s.price, subsidy.cityState[headline]).onRoad;
   s.headlinePriceCity = h ? headline : null;
@@ -104,7 +106,7 @@ const out = header +
   `const SUBSIDY = ${JSON.stringify(subsidy, null, 1)};\n\n` +
   `const BRAND_LINKS = ${JSON.stringify(brandLinks, null, 1)};\n\n` +
   `const EV_SALES = ${JSON.stringify(evSales, null, 1)};\n\n` +
-  `const SW_CONFIG = ${JSON.stringify({ headlineCity: headline, headlineCityName: (cities.find(c => c.id === headline) || {}).name, dataUpdated: config.dataUpdated }, null, 1)};\n\n` +
+  `const SW_CONFIG = ${JSON.stringify({ headlineCity: headline, headlineCityName: (cities.find(c => c.id === headline) || {}).name, dataUpdated: config.dataUpdated, langsLive: (() => { try { return require('./i18n-live.js').liveLangs(); } catch (e) { return []; } })() }, null, 1)};\n\n` +
 `function getById(id)       { return SCOOTERS_DB.find(s=>s.id===id); }
 function getByBrand(slug)  { return SCOOTERS_DB.filter(s=>s.brandSlug===slug); }
 function getSorted(by)     { return [...SCOOTERS_DB].sort((a,b)=>b[by]-a[by]); }

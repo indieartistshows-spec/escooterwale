@@ -25,7 +25,9 @@ const { englishPages } = require('./i18n-extract.js');
 const ROOT = path.resolve(__dirname, '..'); process.chdir(ROOT);
 const BASE = 'https://www.escooterwale.in', ORIGIN = 'http://127.0.0.1:8878';
 const argLangs = (process.argv.find(a => a.startsWith('--langs=')) || '').split('=')[1];
-const LANGS = argLangs ? argLangs.split(',') : Object.keys(C.LANGS);
+const ALL = Object.keys(C.LANGS);
+// pages are only built for fully translated languages; the rest are tracked in missing.json
+const LANGS = argLangs ? argLangs.split(',') : require('./i18n-live.js').liveLangs();
 const EXTRACT_ONLY = process.argv.includes('--extract-only');
 const SKIP = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'SVG', 'CODE', 'PRE', 'TEMPLATE']);
 const ATTRS = ['title', 'alt', 'placeholder', 'aria-label', 'data-label', 'data-short'];
@@ -36,7 +38,7 @@ const langUrl = (l, u) => l === 'en' ? u : '/' + l + (u === '/' ? '' : u);
 const langFile = (l, f) => path.join(l, f);
 
 function hreflangBlock(u) {
-  const links = ['en', ...Object.keys(C.LANGS)].map(l => `<link rel="alternate" hreflang="${l === 'en' ? 'en-IN' : l + '-IN'}" href="${BASE}${langUrl(l, u)}"/>`);
+  const links = ['en', ...LANGS].map(l => `<link rel="alternate" hreflang="${l === 'en' ? 'en-IN' : l + '-IN'}" href="${BASE}${langUrl(l, u)}"/>`);
   links.push(`<link rel="alternate" hreflang="x-default" href="${BASE}${u}"/>`);
   return `<!--hreflang-->\n${links.join('\n')}\n<!--/hreflang-->`;
 }
@@ -51,7 +53,7 @@ function absolutise(html) {
 
 function loadDicts() {
   const d = {};
-  for (const l of LANGS) { try { d[l] = JSON.parse(fs.readFileSync(`i18n/${l}.json`, 'utf8')); } catch (e) { d[l] = {}; } }
+  for (const l of ALL) { try { d[l] = JSON.parse(fs.readFileSync(`i18n/${l}.json`, 'utf8')); } catch (e) { d[l] = {}; } }
   return d;
 }
 
@@ -128,7 +130,7 @@ function translateDoc(doc, dict, lang, u, missing) {
     const u = urlOf(f);
     // English page: add hreflang links in place (idempotent)
     let en = fs.readFileSync(f, 'utf8').replace(/<!--hreflang-->[\s\S]*?<!--\/hreflang-->\n?/, '');
-    en = en.replace('</head>', hreflangBlock(u) + '\n</head>');
+    if (LANGS.length) en = en.replace('</head>', hreflangBlock(u) + '\n</head>');
     if (!EXTRACT_ONLY) fs.writeFileSync(f, en);
 
     let base = absolutise(html0).replace(/<!--hreflang-->[\s\S]*?<!--\/hreflang-->\n?/, '');
@@ -163,9 +165,11 @@ ${hreflangBlock(u)}`;
   fs.writeFileSync('i18n/keys.json', JSON.stringify(keysArr, null, 0));
   if (!EXTRACT_ONLY) {
     const miss = {};
-    for (const l of LANGS) miss[l] = [...missing[l]].sort();
+    for (const l of ALL) miss[l] = LANGS.includes(l) ? [...missing[l]].sort() : keysArr.filter(k => dicts[l][k] == null);
     fs.writeFileSync('i18n/missing.json', JSON.stringify(miss, null, 1));
-    const counts = LANGS.map(l => `${l}: ${keysArr.length - miss[l].length}/${keysArr.length}`).join(', ');
-    console.log(`translated pages written for ${LANGS.join(', ')} | coverage ${counts}`);
+    // a language that is not live must not leave old pages behind
+    for (const l of ALL) if (!LANGS.includes(l) && fs.existsSync(l)) fs.rmSync(l, { recursive: true, force: true });
+    const counts = ALL.map(l => `${l}: ${keysArr.length - miss[l].length}/${keysArr.length}`).join(', ');
+    console.log(`language pages written for ${LANGS.join(', ') || 'none (no language fully translated yet)'} | coverage ${counts}`);
   } else console.log(`${keysArr.length} keys extracted`);
 })().catch(e => { console.error(e); process.exit(1); });

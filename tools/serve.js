@@ -1,6 +1,6 @@
-/* tools/serve.js <port>  |  tiny static server for builds and screenshots (clean URLs like Vercel) */
+/* tools/serve.js <port> [dir]  |  tiny static server for builds and screenshots (clean URLs like Vercel) */
 const http = require('http'), fs = require('fs'), path = require('path');
-const ROOT = path.resolve(__dirname, '..'), port = +process.argv[2] || 8877;
+const ROOT = process.argv[3] ? path.resolve(process.argv[3]) : path.resolve(__dirname, '..'), port = +process.argv[2] || 8877;
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.avif': 'image/avif', '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.txt': 'text/plain', '.woff2': 'font/woff2' };
 http.createServer((req, rsp) => {
   let f = path.join(ROOT, decodeURIComponent(req.url.split('?')[0]));

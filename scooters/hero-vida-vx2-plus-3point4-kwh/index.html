@@ -224,6 +224,8 @@
 .cp-row{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;padding:8px 12px;font-size:12px;color:var(--ink-2);background:var(--surf);border:0;border-top:1px solid var(--border);font-family:inherit;text-align:left}
 .cp-row:first-child{border-top:0}
 .cp-national strong{color:var(--ink);font-size:13px}
+.cp-foot{padding:7px 12px 9px;font-size:10.5px;line-height:1.5;color:var(--ink-4);background:var(--surf-2);border-top:1px solid var(--border)}
+.cp-city span:first-child{flex:1}
 .cp-head{padding:7px 12px 5px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);background:var(--surf-2);border-top:1px solid var(--border)}
 .cp-city{cursor:pointer}
 .cp-city span:first-child{flex:1;font-weight:600;color:var(--ink)}
@@ -246,6 +248,7 @@
       <div class="nav-links" role="list">
         <a href="/" class="nav-link" role="listitem">Home</a><a href="/listings" class="nav-link active" role="listitem">All Scooters</a><a href="/compare" class="nav-link" role="listitem">Compare</a><a href="/best" class="nav-link" role="listitem">Best For</a><a href="/trending" class="nav-link" role="listitem">🔥 Trending</a><a href="/launches" class="nav-link" role="listitem">🆕 Launches</a><a href="/emi" class="nav-link" role="listitem">EMI Calc</a><a href="/cases" class="nav-link" role="listitem">🛡️ Cases</a>
       </div>
+      
       <button class="hamburger" id="navToggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -319,7 +322,7 @@
       <h1 class="product-title" id="dName">VX2 Plus 3.4 kWh</h1>
       <div class="product-meta-row">
         <div id="dRatingRow"><span class="stars">★★★<span style="opacity:.5">★</span>☆</span><span style="font-weight:700;font-size:14px;margin-left:4px">7.5/10</span><span style="font-size:13px;color:var(--ink-3);margin-left:4px">ScootScore</span></div>
-        <span class="badge badge-outline">Updated Apr 2026</span>
+        <span class="badge badge-outline">Updated <span data-sw="updated">October 2026</span></span>
       </div>
       <div class="badge-strip" id="dBadgeStrip"><span class="badge badge-green">PM E-DRIVE eligible</span></div>
       <div class="variant-row" id="variantRow"></div>
@@ -383,7 +386,9 @@
     <div class="metric"><div class="metric-icon">🏎️</div><div class="metric-val">80 km/h</div><div class="metric-label">Top speed</div></div>
     <div class="metric"><div class="metric-icon">⏱</div><div class="metric-val">5.3 hrs</div><div class="metric-label">Fast charge</div></div>
     <div class="metric"><div class="metric-icon">🧳</div><div class="metric-val">26 L</div><div class="metric-label">Boot space</div></div>
-    <div class="metric"><div class="metric-icon">⚖️</div><div class="metric-val">108 kg</div><div class="metric-label">Kerb weight</div></div></div>
+    <div class="metric"><div class="metric-icon">⚖️</div><div class="metric-val">108 kg</div><div class="metric-label">Kerb weight</div></div>
+    <div class="metric"><div class="metric-icon">🔌</div><div class="metric-val">3.4 kWh</div><div class="metric-label">Battery</div></div>
+    <div class="metric"><div class="metric-icon">🏛️</div><div class="metric-val">₹5,000</div><div class="metric-label">PM E-DRIVE subsidy</div></div></div>
   </div>
 
   <!-- BEST FOR / AVOID IF — redesigned -->
@@ -535,8 +540,8 @@
   <div class="buy-card">
     <div class="buy-price-label" id="buyPriceLabel">Ex-showroom price</div>
     <div class="buy-price-main" id="buyPrice">₹1,20,440</div>
-    <div class="buy-price-note" id="buyNote">On-road approx. ₹1,26,610 · EMI from <span id="buyEMI">₹3,172</span>/mo</div>
-    <div class="cp-box" id="cityPriceBox"><div class="cp-row cp-national"><span>National ex-showroom</span><strong>₹1,20,440</strong></div></div>
+    <div class="buy-price-note" id="buyNote">On-road in Hyderabad approx. ₹1,26,610 · EMI from <span id="buyEMI">₹3,172</span>/mo</div>
+    <div class="cp-box" id="cityPriceBox"><div class="cp-row cp-national"><span>National ex-showroom</span><strong>₹1,20,440</strong></div><div class="cp-head">Check price by city</div><button type="button" class="cp-row cp-city active" data-city="hyderabad" onclick="setPriceCity('hyderabad')"><span>Hyderabad</span><span class="cp-on">on-road ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="ahmedabad" onclick="setPriceCity('ahmedabad')"><span>Ahmedabad</span><span class="cp-on">on-road ≈ ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="bangalore" onclick="setPriceCity('bangalore')"><span>Bengaluru</span><span class="cp-on">on-road ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="chandigarh" onclick="setPriceCity('chandigarh')"><span>Chandigarh</span><span class="cp-on">on-road ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="chennai" onclick="setPriceCity('chennai')"><span>Chennai</span><span class="cp-on">on-road ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="delhi" onclick="setPriceCity('delhi')"><span>Delhi</span><span class="cp-on">on-road ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="jaipur" onclick="setPriceCity('jaipur')"><span>Jaipur</span><span class="cp-on">on-road ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="kolkata" onclick="setPriceCity('kolkata')"><span>Kolkata</span><span class="cp-on">on-road ≈ ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="lucknow" onclick="setPriceCity('lucknow')"><span>Lucknow</span><span class="cp-on">on-road ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="mumbai" onclick="setPriceCity('mumbai')"><span>Mumbai</span><span class="cp-on">on-road ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="pune" onclick="setPriceCity('pune')"><span>Pune</span><span class="cp-on">on-road ₹1,26,610</span></button><button type="button" class="cp-row cp-city" data-city="surat" onclick="setPriceCity('surat')"><span>Surat</span><span class="cp-on">on-road ≈ ₹1,26,610</span></button><div class="cp-foot">On-road is our estimate: ex-showroom plus that city's road tax, first-year insurance and handling.</div></div>
     <div class="emi-strip mt-12">
       <div class="emi-strip-label">EMI starting from</div>
       <div class="emi-strip-val" id="emiStrip">₹3,172 <span style="font-size:14px;font-weight:400;color:var(--ink-3)">/month</span></div>
@@ -607,9 +612,9 @@
     <div class="label-sm mb-12">Why trust ScooterWale?</div>
     <div style="display:flex;flex-direction:column;gap:8px">
       <div class="trust-item"><span class="trust-icon">✓</span><span style="font-size:13px">Real-world test data, not manufacturer claims</span></div>
-      <div class="trust-item"><span class="trust-icon">✓</span><span style="font-size:13px">Independent reviews — not paid by brands</span></div>
-      <div class="trust-item"><span class="trust-icon">✓</span><span style="font-size:13px">Updated monthly with latest prices</span></div>
-      <div class="trust-item"><span class="trust-icon">✓</span><span style="font-size:13px">2.1 lakh+ readers every month</span></div>
+      <div class="trust-item"><span class="trust-icon">✓</span><span style="font-size:13px">Independent reviews, not paid by brands</span></div>
+      <div class="trust-item"><span class="trust-icon">✓</span><span style="font-size:13px">Prices checked every week</span></div>
+      <div class="trust-item"><span class="trust-icon">✓</span><span style="font-size:13px">₹0 commission from any brand</span></div>
     </div>
   </div>
 
@@ -674,7 +679,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 E-ScooterWale. All prices ex-showroom Delhi. Data updated April 2026.</span>
+        <span>© 2026 E-ScooterWale. Prices are ex-showroom<span data-sw="priceCityIn"></span>. Data updated <span data-sw="updated">October 2026</span>.</span>
         <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
           <span>Not affiliated with any EV manufacturer.</span>
           <a href="/yellow-brother" style="color:var(--amber);font-weight:700;font-size:12px;text-decoration:none">🟡 Yellow Brother Blog</a>
@@ -763,21 +768,23 @@ function renderCityPrices(s){
   cities.sort((a,b)=>(a[0]===head?-1:b[0]===head?1:a[1].city.localeCompare(b[1].city)));
   let html=`<div class="cp-row cp-national"><span>National ex-showroom</span><strong>${s.nationalPriceDisplay}</strong></div>`;
   if(cities.length){
+    const anyCity=cities.some(([,c])=>c.exConfirmed);
     html+=`<div class="cp-head">Check price by city</div>`+cities.map(([id,c])=>
-      `<button type="button" class="cp-row cp-city" data-city="${id}" onclick="setPriceCity('${id}')"><span>${c.city}</span><span>${c.exDisplay}</span><span class="cp-on">on-road ${c.onRoadDisplay}</span></button>`).join('');
+      `<button type="button" class="cp-row cp-city" data-city="${id}" onclick="setPriceCity('${id}')"><span>${c.city}</span>${anyCity?`<span>${c.exConfirmed?c.exDisplay:'national'}</span>`:''}<span class="cp-on">on-road ${c.roadTaxKnown?'':'≈ '}${c.onRoadDisplay}</span></button>`).join('')+
+      `<div class="cp-foot">On-road is our estimate: ex-showroom plus that city's road tax, first-year insurance and handling.</div>`;
   }
   box.innerHTML=html;
   let pick=null; try{pick=localStorage.getItem('sw_city')}catch(e){}
-  setPriceCity(pick&&s.cityPrices&&s.cityPrices[pick]?pick:(s.headlinePriceCity||null), true);
+  setPriceCity(pick&&s.cityPrices&&s.cityPrices[pick]?pick:(s.headlinePriceCity||SW_CONFIG.headlineCity||null), true);
 }
 function setPriceCity(cityId, initial){
   const s=window.__SW_CUR__; if(!s) return;
   const c=cityId&&s.cityPrices?s.cityPrices[cityId]:null;
   const ex=c?c.ex:s.nationalPrice, exD=c?c.exDisplay:s.nationalPriceDisplay;
   const on=c?c.onRoadDisplay:s.onRoadDisplay, emi=c?c.emi:s.emiFrom;
-  document.getElementById('buyPriceLabel').textContent=c?`Ex-showroom price in ${c.city}`:'Ex-showroom price';
+  document.getElementById('buyPriceLabel').textContent=c&&c.exConfirmed?`Ex-showroom price in ${c.city}`:'Ex-showroom price';
   document.getElementById('buyPrice').textContent=exD;
-  document.getElementById('buyNote').innerHTML=`On-road approx. ${on} · EMI from <span id="buyEMI">₹${emi.toLocaleString('en-IN')}</span>/mo`;
+  document.getElementById('buyNote').innerHTML=`On-road${c?' in '+c.city:''} approx. ${on} · EMI from <span id="buyEMI">₹${emi.toLocaleString('en-IN')}</span>/mo`;
   document.getElementById('emiStrip').innerHTML=`₹${emi.toLocaleString('en-IN')} <span style="font-size:14px;font-weight:400;color:var(--ink-3)">/month</span>`;
   const sp=document.getElementById('sbarPrice'); if(sp) sp.textContent=exD;
   const se=document.getElementById('sbarEmi'); if(se) se.textContent='EMI from ₹'+emi.toLocaleString('en-IN')+'/mo';
@@ -1011,7 +1018,9 @@ function hydratePage(id){
     <div class="metric"><div class="metric-icon">🏎️</div><div class="metric-val">${s.speed}</div><div class="metric-label">Top speed</div></div>
     <div class="metric"><div class="metric-icon">⏱</div><div class="metric-val">${s.charging}</div><div class="metric-label">Fast charge</div></div>
     <div class="metric"><div class="metric-icon">🧳</div><div class="metric-val">${s.bootSpace||'—'}</div><div class="metric-label">Boot space</div></div>
-    <div class="metric"><div class="metric-icon">⚖️</div><div class="metric-val">${s.weight||'—'}</div><div class="metric-label">Kerb weight</div></div>`;
+    <div class="metric"><div class="metric-icon">⚖️</div><div class="metric-val">${s.weight||'—'}</div><div class="metric-label">Kerb weight</div></div>
+    <div class="metric"><div class="metric-icon">🔌</div><div class="metric-val">${s.battery||'—'}</div><div class="metric-label">Battery</div></div>
+    <div class="metric"><div class="metric-icon">🏛️</div><div class="metric-val">${s.subsidy&&s.subsidy.eligible?'₹'+s.subsidy.amount.toLocaleString('en-IN'):'None'}</div><div class="metric-label">PM E-DRIVE subsidy</div></div>`;
 
   // Best For / Avoid If — redesigned
   const bestItems = (s.bestFor||[]).map(i=>`<div class="dbox-item"><span class="dbox-item-dot"></span><span>${i}</span></div>`).join('');

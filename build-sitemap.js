@@ -79,6 +79,15 @@ try {
   console.warn('  no .prerender-manifest.json found — run node prerender.js first to include comparison pages');
 }
 
+// language versions: only for languages that are fully translated (tools/i18n-live.js)
+let LIVE = [];
+try { LIVE = require('./tools/i18n-live.js').liveLangs(); } catch (e) {}
+const enCount = urls.length;
+for (const l of LIVE) for (const u of urls.slice(0, enCount)) {
+  const p = u.loc.replace(BASE, '');
+  urls.push({ loc: BASE + '/' + l + (p === '/' || p === '' ? '' : p), priority: (Math.max(0.1, parseFloat(u.priority) - 0.1)).toFixed(1), changefreq: u.changefreq });
+}
+
 const esc = s => s.replace(/&/g, '&amp;');
 
 const xml =

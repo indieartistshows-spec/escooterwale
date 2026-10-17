@@ -132,6 +132,7 @@
       <div class="nav-links" role="list">
         <a href="/" class="nav-link" role="listitem">Home</a><a href="/listings" class="nav-link" role="listitem">All Scooters</a><a href="/compare" class="nav-link active" role="listitem">Compare</a><a href="/best" class="nav-link" role="listitem">Best For</a><a href="/trending" class="nav-link" role="listitem">🔥 Trending</a><a href="/launches" class="nav-link" role="listitem">🆕 Launches</a><a href="/emi" class="nav-link" role="listitem">EMI Calc</a><a href="/cases" class="nav-link" role="listitem">🛡️ Cases</a>
       </div>
+      
       <button class="hamburger" id="navToggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -325,14 +326,6 @@
       <div class="cmp-cell dat "><span class="cmp-val ">80 km/h</span></div>
       <div class="cmp-cell dat win-cell"><span class="cmp-val win">90 km/h</span><span class="win-tag">✓ Winner</span></div>
     </div><div class="cmp-cols">
-      <div class="cmp-cell lbl">Motor power</div>
-      <div class="cmp-cell dat "><span class="cmp-val ">undefined</span></div>
-      <div class="cmp-cell dat "><span class="cmp-val ">undefined</span></div>
-    </div><div class="cmp-cols">
-      <div class="cmp-cell lbl">Torque</div>
-      <div class="cmp-cell dat "><span class="cmp-val ">undefined</span></div>
-      <div class="cmp-cell dat "><span class="cmp-val ">undefined</span></div>
-    </div><div class="cmp-cols">
         <div class="cmp-cell lbl" style="background:var(--ink-2);color:rgba(255,255,255,.45);font-size:10px;padding:8px 10px"></div>
         <div class="cmp-cell dat" style="background:var(--ink-2);color:rgba(255,255,255,.8);font-size:12px;font-weight:700;padding:8px 16px;justify-content:flex-start">📦 Practicality</div>
         <div class="cmp-cell dat" style="background:var(--ink-2);padding:8px 16px"></div>
@@ -342,12 +335,12 @@
       <div class="cmp-cell dat "><span class="cmp-val ">22 L</span></div>
     </div><div class="cmp-cols">
       <div class="cmp-cell lbl">Kerb weight</div>
-      <div class="cmp-cell dat "><span class="cmp-val ">108 kg</span><span style="font-size:10px;color:var(--ink-4)">Lighter = better</span></div>
-      <div class="cmp-cell dat win-cell"><span class="cmp-val win">108 kg</span><span class="win-tag">✓ Winner</span></div>
+      <div class="cmp-cell dat "><span class="cmp-val ">108 kg</span></div>
+      <div class="cmp-cell dat "><span class="cmp-val ">108 kg</span></div>
     </div><div class="cmp-cols">
       <div class="cmp-cell lbl">Ground clearance</div>
       <div class="cmp-cell dat "><span class="cmp-val ">155 mm</span></div>
-      <div class="cmp-cell dat win-cell"><span class="cmp-val win">155 mm</span><span class="win-tag">✓ Winner</span></div>
+      <div class="cmp-cell dat "><span class="cmp-val ">155 mm</span></div>
     </div><div class="cmp-cols">
       <div class="cmp-cell lbl">Seat height</div>
       <div class="cmp-cell dat "><span class="cmp-val ">785 mm</span></div>
@@ -363,7 +356,7 @@
     </div><div class="cmp-cols">
       <div class="cmp-cell lbl">Features</div>
       <div class="cmp-cell dat "><span class="cmp-val ">8.5</span></div>
-      <div class="cmp-cell dat win-cell"><span class="cmp-val win">8.5</span><span class="win-tag">✓ Winner</span></div>
+      <div class="cmp-cell dat "><span class="cmp-val ">8.5</span></div>
     </div><div class="cmp-cols">
       <div class="cmp-cell lbl">Value for money</div>
       <div class="cmp-cell dat "><span class="cmp-val ">5.2</span></div>
@@ -371,11 +364,11 @@
     </div><div class="cmp-cols">
       <div class="cmp-cell lbl">Ride quality</div>
       <div class="cmp-cell dat "><span class="cmp-val ">9.5</span></div>
-      <div class="cmp-cell dat win-cell"><span class="cmp-val win">9.5</span><span class="win-tag">✓ Winner</span></div>
+      <div class="cmp-cell dat "><span class="cmp-val ">9.5</span></div>
     </div><div class="cmp-cols">
       <div class="cmp-cell lbl">Service network</div>
       <div class="cmp-cell dat "><span class="cmp-val ">9</span></div>
-      <div class="cmp-cell dat win-cell"><span class="cmp-val win">9</span><span class="win-tag">✓ Winner</span></div>
+      <div class="cmp-cell dat "><span class="cmp-val ">9</span></div>
     </div></div><div class="scores-section">
     <h3 style="font-size:18px;font-weight:800;margin-bottom:4px">Category breakdown</h3>
     <div style="display:flex;gap:16px;font-size:12px;margin-bottom:4px">
@@ -470,7 +463,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 E-ScooterWale. All prices ex-showroom Delhi. Data updated April 2026.</span>
+        <span>© 2026 E-ScooterWale. Prices are ex-showroom<span data-sw="priceCityIn"></span>. Data updated <span data-sw="updated">October 2026</span>.</span>
         <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
           <span>Not affiliated with any EV manufacturer.</span>
           <a href="/yellow-brother" style="color:var(--amber);font-weight:700;font-size:12px;text-decoration:none">🟡 Yellow Brother Blog</a>
@@ -610,7 +603,12 @@ function buildCmp(a,b){
         <div class="cmp-cell dat" style="background:var(--ink-2);padding:8px 16px"></div>
       </div>`;return;
     }
-    const vA2=row.fA(a),vB2=row.fB(b),w=row.win?row.win(a,b):null,note=row.note?row.note(a,b):'';
+    let vA2=row.fA(a),vB2=row.fB(b);
+    const empty=v=>v==null||v===''||v==='undefined';
+    if(empty(vA2)&&empty(vB2)) return;           // no data for either: skip the row
+    if(empty(vA2)) vA2='—'; if(empty(vB2)) vB2='—';
+    // a tie has no winner
+    const w=row.win&&String(vA2)!==String(vB2)?row.win(a,b):null, note=row.note&&w?row.note(a,b):'';
     h+=`<div class="cmp-cols">
       <div class="cmp-cell lbl">${row.lbl}</div>
       <div class="cmp-cell dat ${w==='a'?'win-cell':''}"><span class="cmp-val ${w==='a'?'win':''}">${vA2}</span>${w==='a'?'<span class="win-tag">✓ Winner</span>':''}${note&&w!=='a'?`<span style="font-size:10px;color:var(--ink-4)">${note}</span>`:''}</div>

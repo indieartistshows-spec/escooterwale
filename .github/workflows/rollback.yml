@@ -1,0 +1,35 @@
+# One-click undo for the weekly update.
+# Actions -> Rollback -> Run workflow. By default it reverts the latest
+# "Weekly update" commit; Vercel then redeploys the previous site.
+name: Rollback
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: 'Commit to undo (leave empty for the latest weekly update)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 50 }
+      - name: Revert
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "actions@users.noreply.github.com"
+          SHA="${{ inputs.commit }}"
+          if [ -z "$SHA" ]; then SHA=$(git log --format=%H --grep='^Weekly update' -n 1); fi
+          if [ -z "$SHA" ]; then echo "No weekly update commit found"; exit 1; fi
+          echo "Reverting $SHA: $(git log -1 --format=%s $SHA)"
+          git revert --no-edit "$SHA"
+          git push origin HEAD:main
+          gh issue create --title "Rolled back: $(git log -1 --format=%s $SHA)" --body "Reverted commit $SHA. The previous version of the site is redeploying on Vercel. Data in /data is back to the week before, so next Monday's run starts from there."
