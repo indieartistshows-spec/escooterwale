@@ -64,7 +64,7 @@ async function heroImage(ctx, url, kind) {
     return await p.evaluate(kind => {
       const H = innerHeight * 1.4, out = [];
       const add = (src, r, nw, nh) => {
-        if (!src || src.startsWith('data:') || /logo|icon|sprite/i.test(src)) return;
+        if (!src || src.startsWith('data:') || /logo|icon|sprite|line-art|\.svg(\?|$)/i.test(src)) return;
         if (r.bottom < 0 || r.top > H || r.width < innerWidth * 0.55) return;
         out.push({ src, area: r.width * Math.min(r.height, H), ratio: (nw || r.width) / (nh || r.height), nw: nw || r.width });
       };
@@ -88,7 +88,7 @@ async function render(browser, dataUrl, kind, dest) {
   try {
     await p.setContent(`<html><body style="margin:0;background:#0b0f14"><img id="i" src="${dataUrl}" style="width:${w}px;height:${h}px;object-fit:cover;object-position:${kind === 'd' ? '60% 50%' : '50% 45%'};display:block"></body></html>`);
     const nat = await p.evaluate(() => new Promise(r => { const i = document.getElementById('i'); const f = () => r([i.naturalWidth, i.naturalHeight]); i.complete ? f() : (i.onload = f, i.onerror = () => r([0, 0])); }));
-    if (nat[0] < 300) return false;
+    if (nat[0] < (kind === 'd' ? 1000 : 380)) return false;
     const buf = await p.screenshot({ type: 'jpeg', quality: 78 });
     if (buf.length < 12000) return false; // blank or broken
     fs.writeFileSync(dest, buf);
@@ -101,6 +101,7 @@ async function fetchAsDataUrl(ctx, src) {
   if (!r.ok()) throw new Error('HTTP ' + r.status());
   const type = (r.headers()['content-type'] || 'image/jpeg').split(';')[0];
   if (!/^image\//.test(type)) throw new Error('not an image: ' + type);
+  if (/svg/.test(type) || /\.svg(\?|$)/i.test(src)) throw new Error('vector art, not a banner photo');
   return `data:${type};base64,${(await r.body()).toString('base64')}`;
 }
 

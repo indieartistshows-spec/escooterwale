@@ -184,8 +184,8 @@ const eligibilityRows = rows.map(r => `      <tr>
 page({
   file: 'guide-subsidy-eligibility.html',
   canon: '/guide-subsidy-eligibility',
-  title: 'Which Electric Scooters Qualify for PM E-DRIVE Subsidy? All 41 Models Checked | ScooterWale',
-  desc: 'Four of the 41 electric scooters sold in India get no PM E-DRIVE subsidy because they exceed the ₹1.5 lakh ex-factory cap. Model-by-model subsidy amounts, verified 24 August 2026.',
+  title: 'Which Electric Scooters Qualify for PM E-DRIVE Subsidy? All 44 Models Checked | ScooterWale',
+  desc: 'Four of the 44 electric scooters sold in India get no PM E-DRIVE subsidy because they exceed the ₹1.5 lakh ex-factory cap. Model-by-model subsidy amounts, verified 24 August 2026.',
   eyebrow: 'Eligibility Check',
   crumb: 'Which scooters qualify',
   h1: 'Which electric scooters actually qualify for the PM E-DRIVE subsidy?',
@@ -657,7 +657,7 @@ const brandList = arr => arr.map(r => `<li><a href="/scooters/${r.s.id}">${r.s.b
 page({
   file: 'guide-battery-chemistry.html',
   canon: '/guide-battery-chemistry',
-  title: 'Which Electric Scooters Use LFP vs NMC Batteries in India? All 41 Models | ScooterWale',
+  title: 'Which Electric Scooters Use LFP vs NMC Batteries in India? All 44 Models | ScooterWale',
   desc: 'Battery cell chemistry for every electric scooter sold in India. Which use LFP, which use NMC, which brands refuse to say, and which have removable packs. Verified 24 August 2026.',
   eyebrow: 'Battery Guide',
   crumb: 'LFP vs NMC by model',

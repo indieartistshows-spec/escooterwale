@@ -23,6 +23,9 @@ const CHEM = {
   'ather-energy-450-apex-3point7-kwh':  { chem: 'NMC', removable: false, warranty: '5 yr / 60,000 km', src: 'Autocar India, July 2026', conf: 'High' },
   'ather-energy-rizta-s-2point9-kwh':   { chem: 'LFP or NMC', removable: false, warranty: '5 yr / 60,000 km', src: 'Autocar India / Rushlane, July 2026', conf: 'High', note: 'Ather began fitting LFP to the smaller Rizta pack in July 2026. Which chemistry you get depends on supply and cannot be specified at order.' },
   'ather-energy-rizta-z-3point7-kwh':   { chem: 'NMC', removable: false, warranty: '5 yr / 60,000 km', src: 'Autocar India / Rushlane', conf: 'Medium', note: 'Autocar and Rushlane report NMC on the larger pack. Team-BHP reports LFP is also possible. Treat as NMC unless the dealer confirms otherwise.' },
+  'ather-energy-konarc-s-100-2point1-kwh': { chem: 'Not published', removable: false, warranty: '3 yr / 30,000 km (5 yr / 60,000 km with AtherStack Pro)', src: 'Rushlane launch report, August 2026', conf: 'High', note: 'Ather has not stated the cell chemistry for the Konarc. The pack has an aluminium casing and IP67 rating.' },
+  'ather-energy-konarc-s-125-2point7-kwh': { chem: 'Not published', removable: false, warranty: '3 yr / 30,000 km (5 yr / 60,000 km with AtherStack Pro)', src: 'Rushlane launch report, August 2026', conf: 'High', note: 'Ather has not stated the cell chemistry for the Konarc. The pack has an aluminium casing and IP67 rating.' },
+  'ather-energy-konarc-s-161-3point5-kwh': { chem: 'Not published', removable: false, warranty: '3 yr / 30,000 km (5 yr / 60,000 km with AtherStack Pro)', src: 'Rushlane launch report, August 2026', conf: 'High', note: 'Ather has not stated the cell chemistry for the Konarc. The pack has an aluminium casing and IP67 rating.' },
 
   // ── TVS: NMC, stated by TVS Motor.
   'tvs-motor-iqube-2point2-kwh':        { chem: 'NMC', removable: false, warranty: '3 yr / 50,000 km', src: 'TVS Motor FAQ', conf: 'High' },

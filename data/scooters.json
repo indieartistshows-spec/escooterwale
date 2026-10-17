@@ -741,6 +741,220 @@
   }
  },
  {
+  "id": "ather-energy-konarc-s-100-2point1-kwh",
+  "brand": "Ather Energy",
+  "brandSlug": "ather-energy",
+  "name": "Konarc S 100 2.1 kWh",
+  "slug": "ather-energy-konarc-s-100-2point1-kwh",
+  "tagline": "Ather Energy Rizta S — 2.9 kWh | 123 km claimed | 80 km/h",
+  "price": 99999,
+  "priceDisplay": "₹112,499",
+  "onRoad": 123748,
+  "onRoadDisplay": "₹123,748",
+  "emiFrom": 2925,
+  "range": "100 km",
+  "realRange": "72–82 km",
+  "speed": "70 km/h",
+  "charging": "4 hrs",
+  "battery": "2.1 kWh",
+  "bootSpace": "31 L",
+  "weight": "Not published",
+  "groundClearance": "Not published",
+  "seatHeight": "Not published",
+  "rating": null,
+  "reviews": 0,
+  "views": 0,
+  "badge": "New",
+  "accentColor": "#2563eb",
+  "brandColor": "#2563eb",
+  "brandUrl": "https://www.atherenergy.com/konarc",
+  "detailUrl": "scooter-detail.html",
+  "score": 7.4,
+  "scores": {
+   "Range": 4.8,
+   "Features": 6.8,
+   "Value": 8.4,
+   "Ride": 8.6,
+   "Service": 9
+  },
+  "tags": [
+   "under-1-lakh",
+   "trusted-brand",
+   "family-friendly",
+   "new-launch"
+  ],
+  "heroImg": "/images/banners/ather-konarc-d.jpg",
+  "cardImg": "/images/banners/ather-konarc-d.jpg",
+  "verdict": "The Konarc S 100 is the cheapest way into an Ather, at ₹99,999. Drum brakes and a basic 4.2-inch screen keep the price down. Deliveries start in early 2027.",
+  "bestFor": [
+   "First-time EV buyers on a tight budget",
+   "Short city commutes",
+   "Riders who want Ather service at entry price"
+  ],
+  "avoidIf": [
+   "You need it before 2027",
+   "You want a front disc brake"
+  ],
+  "variants": [],
+  "specs": {
+   "performance": {
+    "Top speed": "70 km/h",
+    "Battery capacity": "2.1 kWh",
+    "Charging time (0–80%)": "4 hrs",
+    "Peak power": "4 kW",
+    "Torque": "16 Nm"
+   },
+   "battery": {
+    "Claimed range": "100 km",
+    "Real-world range": "72–82 km",
+    "Charge time": "4 hrs"
+   }
+  }
+ },
+ {
+  "id": "ather-energy-konarc-s-125-2point7-kwh",
+  "brand": "Ather Energy",
+  "brandSlug": "ather-energy",
+  "name": "Konarc S 125 2.7 kWh",
+  "slug": "ather-energy-konarc-s-125-2point7-kwh",
+  "tagline": "Ather Energy Rizta S — 2.9 kWh | 123 km claimed | 80 km/h",
+  "price": 121999,
+  "priceDisplay": "₹112,499",
+  "onRoad": 123748,
+  "onRoadDisplay": "₹123,748",
+  "emiFrom": 2925,
+  "range": "125 km",
+  "realRange": "92–105 km",
+  "speed": "70 km/h",
+  "charging": "4.5 hrs",
+  "battery": "2.7 kWh",
+  "bootSpace": "31 L",
+  "weight": "126.5 kg",
+  "groundClearance": "Not published",
+  "seatHeight": "Not published",
+  "rating": null,
+  "reviews": 0,
+  "views": 0,
+  "badge": "New",
+  "accentColor": "#2563eb",
+  "brandColor": "#2563eb",
+  "brandUrl": "https://www.atherenergy.com/konarc",
+  "detailUrl": "scooter-detail.html",
+  "score": 7.8,
+  "scores": {
+   "Range": 5.6,
+   "Features": 8.2,
+   "Value": 8,
+   "Ride": 8.6,
+   "Service": 9
+  },
+  "tags": [
+   "under-1-5l",
+   "trusted-brand",
+   "family-friendly",
+   "new-launch"
+  ],
+  "heroImg": "/images/banners/ather-konarc-d.jpg",
+  "cardImg": "/images/banners/ather-konarc-d.jpg",
+  "verdict": "The Konarc S 125 is Ather's new family scooter: metal body, 31 L boot, front disc and the full Ather app and Grid charging. Top speed is 70 km/h, so it suits the city more than the highway.",
+  "bestFor": [
+   "Family city use",
+   "Buyers who want a metal body",
+   "Riders near Ather Grid chargers"
+  ],
+  "avoidIf": [
+   "You ride on highways often (70 km/h top speed)",
+   "You need more than 100 km a day"
+  ],
+  "variants": [],
+  "specs": {
+   "performance": {
+    "Top speed": "70 km/h",
+    "Battery capacity": "2.7 kWh",
+    "Charging time (0–80%)": "4.5 hrs",
+    "Peak power": "4.7 kW",
+    "Torque": "16 Nm"
+   },
+   "battery": {
+    "Claimed range": "125 km",
+    "Real-world range": "92–105 km",
+    "Charge time": "4.5 hrs"
+   }
+  }
+ },
+ {
+  "id": "ather-energy-konarc-s-161-3point5-kwh",
+  "brand": "Ather Energy",
+  "brandSlug": "ather-energy",
+  "name": "Konarc S 161 3.5 kWh",
+  "slug": "ather-energy-konarc-s-161-3point5-kwh",
+  "tagline": "Ather Energy Rizta S — 2.9 kWh | 123 km claimed | 80 km/h",
+  "price": 144999,
+  "priceDisplay": "₹112,499",
+  "onRoad": 123748,
+  "onRoadDisplay": "₹123,748",
+  "emiFrom": 2925,
+  "range": "161 km",
+  "realRange": "120–135 km",
+  "speed": "70 km/h",
+  "charging": "5.7 hrs",
+  "battery": "3.5 kWh",
+  "bootSpace": "31 L",
+  "weight": "129 kg",
+  "groundClearance": "Not published",
+  "seatHeight": "Not published",
+  "rating": null,
+  "reviews": 0,
+  "views": 0,
+  "badge": "New",
+  "accentColor": "#2563eb",
+  "brandColor": "#2563eb",
+  "brandUrl": "https://www.atherenergy.com/konarc",
+  "detailUrl": "scooter-detail.html",
+  "score": 8,
+  "scores": {
+   "Range": 6.8,
+   "Features": 8.2,
+   "Value": 7.6,
+   "Ride": 8.6,
+   "Service": 9
+  },
+  "tags": [
+   "under-1-5l",
+   "trusted-brand",
+   "family-friendly",
+   "best-range",
+   "new-launch"
+  ],
+  "heroImg": "/images/banners/ather-konarc-d.jpg",
+  "cardImg": "/images/banners/ather-konarc-d.jpg",
+  "verdict": "The Konarc S 161 has the biggest battery in the Konarc range, about 120 to 135 km in real use, and still sits under the PM E-DRIVE price cap. A second 450 W charger cuts home charging to about 3 hours.",
+  "bestFor": [
+   "Longer daily commutes",
+   "Families who want one scooter for everything",
+   "Ather buyers under ₹1.5 lakh"
+  ],
+  "avoidIf": [
+   "You ride on highways often (70 km/h top speed)",
+   "You want the fastest Ather (450 series)"
+  ],
+  "variants": [],
+  "specs": {
+   "performance": {
+    "Top speed": "70 km/h",
+    "Battery capacity": "3.5 kWh",
+    "Charging time (0–80%)": "5.7 hrs",
+    "Peak power": "4.7 kW",
+    "Torque": "16 Nm"
+   },
+   "battery": {
+    "Claimed range": "161 km",
+    "Real-world range": "120–135 km",
+    "Charge time": "5.7 hrs"
+   }
+  }
+ },
+ {
   "id": "tvs-motor-iqube-2point2-kwh",
   "brand": "TVS Motor",
   "brandSlug": "tvs-motor",

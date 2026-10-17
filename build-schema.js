@@ -22,7 +22,7 @@ const ORG = {
   url: `${BASE}/`,
   logo: { '@type': 'ImageObject', url: `${BASE}/images/escooterwale_logo.png` },
   image: `${BASE}/og-image.jpg`,
-  description: 'Independent electric scooter comparison and review platform for India. Real-world range testing, ScootScore ratings and buyer guides across 41 models from 10 brands.',
+  description: 'Independent electric scooter comparison and review platform for India. Real-world range testing, ScootScore ratings and buyer guides across 44 models from 10 brands.',
   areaServed: { '@type': 'Country', name: 'India' },
   knowsAbout: ['Electric scooters','Electric two-wheelers','EV range testing','PM e-Drive subsidy','Indian EV market']
   // TODO Abhishek: add "sameAs": ["https://instagram.com/...","https://youtube.com/..."] once profiles are live
@@ -71,7 +71,7 @@ inject('index.html', [ORG, WEBSITE, {
   name: 'Best Electric Scooters in India 2026',
   isPartOf: { '@id': SITE_ID },
   about: { '@id': ORG_ID },
-  description: 'Compare 41 electric scooters in India with real-world range tests, prices and independent ScootScore ratings.'
+  description: 'Compare 44 electric scooters in India with real-world range tests, prices and independent ScootScore ratings.'
 }]);
 
 /* ── 2. Listings: the full 41-model catalogue, statically ── */

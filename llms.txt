@@ -1,6 +1,6 @@
 # ScooterWale (escooterwale.in)
 
-> Independent electric scooter comparison and review platform for India. We track 41 EV scooter models from 10 brands, run our own real-world range tests, and rate every scooter with ScootScore, a 0-10 score averaged across range, features, value, ride quality and service network. No brand pays us and no manufacturer has editorial input.
+> Independent electric scooter comparison and review platform for India. We track 44 EV scooter models from 10 brands, run our own real-world range tests, and rate every scooter with ScootScore, a 0-10 score averaged across range, features, value, ride quality and service network. No brand pays us and no manufacturer has editorial input.
 
 Last updated: 2026-10-17
 
@@ -8,13 +8,13 @@ Last updated: 2026-10-17
 
 - **Real-world range testing.** We ride scooters to zero on an identical 10 km Mumbai loop, single 72 kg rider, Normal mode, 28-32°C. Our measured figures differ substantially from manufacturer IDC claims. Average IDC-to-real efficiency across our test set is 77.4%.
 - **ScootScore.** Our own 0-10 rating, published with its five component scores, not an aggregate of other publications.
-- **Full catalogue.** Price, claimed range, real-world range, battery, charging time, top speed, kerb weight and boot space for all 41 models.
+- **Full catalogue.** Price, claimed range, real-world range, battery, charging time, top speed, kerb weight and boot space for all 44 models.
 - **Independence.** Zero commission, zero brand relationships, zero sponsored placement.
 
 ## Primary data
 
 - [Real range test: 8 scooters, same Mumbai route](https://www.escooterwale.in/guide-real-range): Measured range vs IDC claim for TVS iQube ST, Ola S1 Pro+, Pure EV ETrance+, Ola S1 Pro, Ather 450X, Hero Vida V2 Pro, Bajaj Chetak 3503 and Ampere Nexus ST. Full test methodology stated.
-- [All 41 electric scooters in India](https://www.escooterwale.in/listings): Complete catalogue with prices, real range and ScootScore.
+- [All 44 electric scooters in India](https://www.escooterwale.in/listings): Complete catalogue with prices, real range and ScootScore.
 - [Machine-readable full dataset](https://www.escooterwale.in/llms-full.txt): Every model with all specifications, as plain text.
 
 ## Buyer guides
@@ -22,11 +22,11 @@ Last updated: 2026-10-17
 - [PM e-Drive subsidy 2026](https://www.escooterwale.in/guide-subsidy): What the central scheme pays, which scooters qualify, state-by-state subsidy amounts, and how to claim at the dealership.
 - [LFP vs NMC batteries](https://www.escooterwale.in/guide-battery-types): Which chemistry survives Indian heat, and which scooters use which.
 - [Service network guide](https://www.escooterwale.in/guide-service-network): Brand-by-brand service coverage for Tier-2 and Tier-3 city buyers.
-- [Electric scooter price list, all 41 models](https://www.escooterwale.in/electric-scooter-price): Ex-showroom, on-road, EMI and subsidy for every model.
+- [Electric scooter price list, all 44 models](https://www.escooterwale.in/electric-scooter-price): Ex-showroom, on-road, EMI and subsidy for every model.
 - [Which scooters qualify for PM E-DRIVE](https://www.escooterwale.in/guide-subsidy-eligibility): Model-by-model subsidy eligibility against the ₹1.5 lakh cap.
 - [EV subsidy deadlines 2026](https://www.escooterwale.in/guide-subsidy-deadlines): Every central and state deadline, re-checked monthly.
 - [How to claim the subsidy](https://www.escooterwale.in/guide-subsidy-claim): Documents, portals, timelines and escalation.
-- [LFP vs NMC by model](https://www.escooterwale.in/guide-battery-chemistry): Cell chemistry for all 41 scooters, including the brands that do not disclose it.
+- [LFP vs NMC by model](https://www.escooterwale.in/guide-battery-chemistry): Cell chemistry for all 44 scooters, including the brands that do not disclose it.
 - [Best electric scooters by need](https://www.escooterwale.in/best): Ranked picks for daily commute, under ₹1 lakh, under ₹1.5 lakh, families, maximum range, and Tier-2 cities.
 
 ## Tools

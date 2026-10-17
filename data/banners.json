@@ -8,14 +8,12 @@
       "brandId": "ampere",
       "model": "Magnus G Max",
       "modelId": "ampere-magnus-g-max-3point0-kwh",
-      "home": "https://www.amperevehicles.com/",
+      "home": "https://ampere-electric.com/",
       "pages": [
-        "https://www.amperevehicles.com/magnus-g-max",
-        "https://www.amperevehicles.com/scooters/magnus-g-max",
-        "https://www.amperevehicles.com/electric-scooters/magnus-g-max"
+        "https://ampere-electric.com/gmax"
       ],
-      "find": "magnus[^\"']*g[^\"']*max",
-      "url": "https://www.amperevehicles.com/",
+      "find": "gmax|magnus[^\"']*g[^\"']*max",
+      "url": "https://ampere-electric.com/gmax",
       "img": {
         "d": "/images/banners/ampere-magnus-g-max-d.jpg",
         "m": "/images/banners/ampere-magnus-g-max-m.jpg"
@@ -88,7 +86,7 @@
         "m": "/images/banners/bajaj-chetak-m.jpg"
       },
       "source": {
-        "m": "https://cdn.bajajauto.com/images/chetak-v2/headlight-line-art-white-small.svg"
+        "d": "https://www.chetak.com/-/media/chetakv2/content-image/home-banner/chetak-updated-banner-web-1.webp"
       },
       "checked": "2026-10-17"
     },
@@ -113,5 +111,6 @@
       "source": null,
       "checked": null
     }
-  ]
+  ],
+  "overlay": 0.5
 }
