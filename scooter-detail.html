@@ -220,6 +220,16 @@
 @media(max-width:899px){
   .page-wrap{padding-bottom:80px}
 }
+.cp-box{border:1px solid var(--border);border-radius:var(--r-sm);margin:-6px 0 16px;overflow:hidden}
+.cp-row{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;padding:8px 12px;font-size:12px;color:var(--ink-2);background:var(--surf);border:0;border-top:1px solid var(--border);font-family:inherit;text-align:left}
+.cp-row:first-child{border-top:0}
+.cp-national strong{color:var(--ink);font-size:13px}
+.cp-head{padding:7px 12px 5px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);background:var(--surf-2);border-top:1px solid var(--border)}
+.cp-city{cursor:pointer}
+.cp-city span:first-child{flex:1;font-weight:600;color:var(--ink)}
+.cp-city .cp-on{color:var(--ink-3);font-size:11px}
+.cp-city.active{background:var(--g-bg,#edfbf4)}
+.cp-city.active span:first-child{color:var(--g)}
 </style>
 
 <!-- Favicon -->
@@ -340,13 +350,14 @@
 <div class="sticky-buy" id="stickyBuy">
 
   <div class="buy-card">
-    <div class="buy-price-label">Ex-showroom price, India</div>
+    <div class="buy-price-label" id="buyPriceLabel">Ex-showroom price</div>
     <div class="buy-price-main" id="buyPrice">₹1,39,999</div>
     <div class="buy-price-note" id="buyNote">+ on-road charges · EMI from <span id="buyEMI">₹3,820</span>/mo</div>
+    <div class="cp-box" id="cityPriceBox"></div>
     <div class="emi-strip mt-12">
       <div class="emi-strip-label">EMI starting from</div>
       <div class="emi-strip-val" id="emiStrip">₹3,820 <span style="font-size:14px;font-weight:400;color:var(--ink-3)">/month</span></div>
-      <div class="emi-strip-note">36 mo · 9.5% · ₹20K down</div>
+      <div class="emi-strip-note" id="emiStripNote">48 mo · 12% · no down payment</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px">
       <a href="#" id="buyBrandLink" target="_blank" rel="noopener">
@@ -462,6 +473,39 @@ const EMI_DEFAULTS = {price:139999,down:20000,tenure:36,rate:9.5};
 function calcEMI(price,down,tenure,rate){
   const p=price-down,r=rate/100/12;
   return Math.round(p*r*Math.pow(1+r,tenure)/(Math.pow(1+r,tenure)-1));
+}
+
+/* ── City pricing ───────────────────────────────────────────
+   National ex-showroom always has its own line. "Check price by
+   city" lists only cities where we pulled a real city price.
+   Picking a city updates every price figure on the page. */
+function renderCityPrices(s){
+  const box=document.getElementById('cityPriceBox');
+  const cities=Object.entries(s.cityPrices||{});
+  const head=SW_CONFIG.headlineCity;
+  cities.sort((a,b)=>(a[0]===head?-1:b[0]===head?1:a[1].city.localeCompare(b[1].city)));
+  let html=`<div class="cp-row cp-national"><span>National ex-showroom</span><strong>${s.nationalPriceDisplay}</strong></div>`;
+  if(cities.length){
+    html+=`<div class="cp-head">Check price by city</div>`+cities.map(([id,c])=>
+      `<button type="button" class="cp-row cp-city" data-city="${id}" onclick="setPriceCity('${id}')"><span>${c.city}</span><span>${c.exDisplay}</span><span class="cp-on">on-road ${c.onRoadDisplay}</span></button>`).join('');
+  }
+  box.innerHTML=html;
+  let pick=null; try{pick=localStorage.getItem('sw_city')}catch(e){}
+  setPriceCity(pick&&s.cityPrices&&s.cityPrices[pick]?pick:(s.headlinePriceCity||null), true);
+}
+function setPriceCity(cityId, initial){
+  const s=window.__SW_CUR__; if(!s) return;
+  const c=cityId&&s.cityPrices?s.cityPrices[cityId]:null;
+  const ex=c?c.ex:s.nationalPrice, exD=c?c.exDisplay:s.nationalPriceDisplay;
+  const on=c?c.onRoadDisplay:s.onRoadDisplay, emi=c?c.emi:s.emiFrom;
+  document.getElementById('buyPriceLabel').textContent=c?`Ex-showroom price in ${c.city}`:'Ex-showroom price';
+  document.getElementById('buyPrice').textContent=exD;
+  document.getElementById('buyNote').innerHTML=`On-road approx. ${on} · EMI from <span id="buyEMI">₹${emi.toLocaleString('en-IN')}</span>/mo`;
+  document.getElementById('emiStrip').innerHTML=`₹${emi.toLocaleString('en-IN')} <span style="font-size:14px;font-weight:400;color:var(--ink-3)">/month</span>`;
+  const sp=document.getElementById('sbarPrice'); if(sp) sp.textContent=exD;
+  const se=document.getElementById('sbarEmi'); if(se) se.textContent='EMI from ₹'+emi.toLocaleString('en-IN')+'/mo';
+  document.querySelectorAll('.cp-city').forEach(b=>b.classList.toggle('active',b.dataset.city===cityId));
+  if(!initial){ try{localStorage.setItem('sw_city',cityId)}catch(e){} if(typeof hydrateEMI==='function') hydrateEMI(Object.assign({},s,{price:ex,priceDisplay:exD})); }
 }
 
 function hydrateEMI(s){
@@ -628,6 +672,7 @@ function hydratePage(id){
   if(!s){ console.error('Scooter not found:',id); return; }
   try {
   // Build ex: prefer DETAIL_EXTRAS entry, else synthesise from scooter data
+  window.__SW_CUR__ = s;
   const _ex = DETAIL_EXTRAS[id];
   const ex = _ex ? _ex : {
     score: s.score || 7.5,
@@ -751,17 +796,14 @@ function hydratePage(id){
   // EMI tab
   hydrateEMI(s);
 
-  // Buy panel
-  document.getElementById('buyPrice').textContent=s.priceDisplay;
-  document.getElementById('buyNote').innerHTML=`On-road approx. ${s.onRoadDisplay} · EMI from <span id="buyEMI">₹${s.emiFrom.toLocaleString('en-IN')}</span>/mo`;
-  document.getElementById('emiStrip').innerHTML=`₹${s.emiFrom.toLocaleString('en-IN')} <span style="font-size:14px;font-weight:400;color:var(--ink-3)">/month</span>`;
+  // Buy panel (price figures are set by setPriceCity below)
+  const em=SUBSIDY.emiModel; document.getElementById('emiStripNote').textContent=`${em.months} mo · ${em.annualRatePct}% · no down payment`;
   document.getElementById('buyBrandText').textContent=`Buy on ${s.brand.split(' ')[0]}`;
   document.getElementById('buyBrandLink').href=s.brandUrl;
 
   // Sticky bar
   document.getElementById('sbarName').textContent = s.brand + ' ' + s.name;
-  document.getElementById('sbarPrice').textContent = s.priceDisplay;
-  document.getElementById('sbarEmi').textContent = 'EMI from ₹' + s.emiFrom.toLocaleString('en-IN') + '/mo';
+  renderCityPrices(s);
   document.getElementById('sbarLink').href = s.brandUrl;
   document.getElementById('sbarLink').innerHTML = `
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
