@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ5QX4MXYX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NZ5QX4MXYX');
+</script>
+    <!-- SEO Title -->
+
+<!-- Meta Description -->
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+<title>Electric Scooter EMI Calculator 2026 – Monthly Loan Calculator | ScooterWale</title>
+<meta name="description" content="Calculate exact EMI for any electric scooter in India. Adjust price, down payment, tenure and interest rate. Compare loan options for Ola, Ather, TVS, Bajaj."/>
+<meta name="keywords" content="electric scooter emi calculator, ev scooter loan emi, ola s1 pro emi, ather 450x emi monthly, ev bike loan calculator india"/>
+<link rel="canonical" href="https://www.escooterwale.in/emi"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.emi-hero{background:var(--ink);padding:44px 0 36px}
+.emi-main-card,.emi-result-hero{overflow-x:hidden}
+.emi-hero h1{color:#fff;margin-bottom:8px}
+.emi-hero p{color:rgba(255,255,255,.55);font-size:15px}
+.emi-layout{display:grid;grid-template-columns:1fr 380px;gap:28px;padding:32px 0 64px;align-items:start}
+.emi-main-card{background:var(--surf);border:1px solid var(--border);border-radius:var(--r-xl);padding:32px;box-shadow:var(--sh)}
+.emi-section-title{font-size:18px;font-weight:800;margin-bottom:24px}
+.emi-row{margin-bottom:24px}
+.emi-label-row{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600;color:var(--ink-2);margin-bottom:10px}
+.emi-label-row .val{color:var(--g);font-size:17px;font-weight:800}
+input[type=range]{width:100%;accent-color:var(--g);height:6px;border-radius:99px;cursor:pointer;margin:4px 0}
+.emi-result-hero{
+  background:linear-gradient(135deg,var(--ink) 0%,#1c2333 100%);
+  border-radius:var(--r-lg);padding:28px;text-align:center;
+  color:#fff;margin-top:24px;
+  border:1px solid rgba(22,166,99,.25)
+}
+.emi-result-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.45);margin-bottom:6px}
+.emi-result-big{font-size:52px;font-weight:800;color:var(--g);line-height:1}
+.emi-result-mo{font-size:16px;color:rgba(255,255,255,.5);margin-top:2px}
+.emi-breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+.emi-breakdown-item{text-align:center}
+.emi-bd-val{font-size:18px;font-weight:800;color:#fff}
+.emi-bd-label{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px;text-transform:uppercase;letter-spacing:.05em}
+.presets-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.preset-btn{padding:7px 14px;border-radius:var(--r-sm);border:1.5px solid var(--border);background:var(--surf);font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;font-family:var(--f)}
+.preset-btn:hover,.preset-btn.active{background:var(--g-tint);border-color:var(--g);color:var(--g-dim)}
+.insurance-row{display:flex;gap:16px;margin-top:16px}
+.insurance-item{flex:1;background:var(--surf-2);border-radius:var(--r-sm);padding:14px;border:1px solid var(--border)}
+.ins-label{font-size:11px;color:var(--ink-3);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.ins-val{font-size:16px;font-weight:800}
+.compare-emi-scooters{margin-top:32px}
+.emi-scooter-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border);gap:12px}
+.emi-sc-img{width:80px;height:52px;border-radius:var(--r-sm);overflow:hidden;flex-shrink:0;background:var(--surf-2)}
+.emi-sc-img img{width:100%;height:100%;object-fit:cover}
+.emi-sc-info{flex:1}
+.emi-sc-name{font-size:14px;font-weight:700}
+.emi-sc-price{font-size:12px;color:var(--ink-3);margin-top:2px}
+.emi-sc-emi{font-size:18px;font-weight:800;color:var(--g);white-space:nowrap}
+.emi-sc-emi-note{font-size:10px;color:var(--ink-4);text-align:right;margin-top:1px}
+/* ── 900px: stack layout ── */
+@media(max-width:900px){
+  .emi-layout{grid-template-columns:1fr}
+  .insurance-row{flex-direction:column;gap:10px}
+  /* right panel: drop sticky, natural flow */
+  .emi-layout > div[style*="sticky"]{position:static!important;top:auto!important}
+}
+
+/* ── 768px: full mobile treatment ── */
+@media(max-width:768px){
+  /* Hero */
+  .emi-hero{padding:28px 0 22px}
+  .emi-hero h1{font-size:22px;line-height:1.2}
+  .emi-hero p{font-size:13px}
+
+  /* Card padding */
+  .emi-main-card{padding:20px 16px}
+
+  /* Section title */
+  .emi-section-title{font-size:16px;margin-bottom:18px}
+
+  /* Slider label rows — prevent overflow */
+  .emi-label-row{font-size:13px;flex-wrap:wrap;gap:4px}
+  .emi-label-row .val{font-size:15px}
+
+  /* Result hero */
+  .emi-result-hero{padding:20px 16px}
+  .emi-result-big{font-size:36px}
+  .emi-result-mo{font-size:13px}
+  .emi-result-label{font-size:11px}
+
+  /* Breakdown 3-col — tighter */
+  .emi-breakdown{gap:6px;margin-top:16px;padding-top:16px}
+  .emi-bd-val{font-size:13px;word-break:break-all}
+  .emi-bd-label{font-size:9px;letter-spacing:.03em}
+
+  /* Insurance row */
+  .insurance-row{gap:8px}
+  .insurance-item{padding:12px}
+  .ins-label{font-size:10px}
+  .ins-val{font-size:14px}
+
+  /* Preset buttons */
+  .presets-row{gap:6px}
+  .preset-btn{font-size:12px;padding:6px 10px}
+
+  /* Scooter compare rows */
+  .emi-scooter-row{gap:8px;padding:12px 0;flex-wrap:wrap}
+  .emi-sc-img{width:60px;height:40px}
+  .emi-sc-name{font-size:13px}
+  .emi-sc-price{font-size:11px}
+  .emi-sc-emi{font-size:15px}
+  .emi-sc-emi-note{font-size:10px}
+  /* Hide Details button on mobile — saves it from overflowing */
+  .emi-scooter-row .btn{display:none}
+
+  /* Right panel cards */
+  .card.card-pad{padding:16px}
+}
+</style>
+</head>
+<body>
+<div id="navMount"></div>
+<div class="page-wrap">
+
+<div class="emi-hero">
+  <div class="container">
+    <div class="eyebrow mb-12">Finance your EV</div>
+    <h1>Electric scooter EMI calculator</h1>
+    <p>Calculate your exact monthly payment. Adjust for any scooter, down payment, tenure and bank rate.</p>
+  </div>
+</div>
+
+<div class="breadcrumb"><div class="container"><div class="breadcrumb-inner"><a href="/">Home</a><span class="bc-sep">›</span><span>EMI Calculator</span></div></div></div>
+
+<div class="container">
+<div class="emi-layout">
+
+<div>
+  <div class="emi-main-card">
+    <div class="emi-section-title">EMI calculator</div>
+
+    <p style="font-size:13px;color:var(--ink-3);margin-bottom:20px">Quick load a scooter:</p>
+    <div class="presets-row" id="presetsRow"></div>
+
+    <div class="emi-row">
+      <div class="emi-label-row">Scooter price (ex-showroom) <span class="val" id="priceVal">₹1,39,999</span></div>
+      <input type="range" id="slPrice" min="50000" max="300000" step="5000" value="139999" oninput="calc()"/>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink-4);margin-top:4px"><span>₹50,000</span><span>₹3,00,000</span></div>
+    </div>
+
+    <div class="emi-row">
+      <div class="emi-label-row">Down payment <span class="val" id="downVal">₹20,000</span></div>
+      <input type="range" id="slDown" min="0" max="150000" step="5000" value="20000" oninput="calc()"/>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink-4);margin-top:4px"><span>₹0</span><span>₹1,50,000</span></div>
+    </div>
+
+    <div class="emi-row">
+      <div class="emi-label-row">Loan tenure <span class="val" id="tenureVal">36 months</span></div>
+      <input type="range" id="slTenure" min="12" max="60" step="6" value="36" oninput="calc()"/>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink-4);margin-top:4px"><span>12 mo</span><span>60 mo</span></div>
+    </div>
+
+    <div class="emi-row">
+      <div class="emi-label-row">Interest rate (p.a.) <span class="val" id="rateVal">9.5%</span></div>
+      <input type="range" id="slRate" min="6" max="18" step="0.5" value="9.5" oninput="calc()"/>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink-4);margin-top:4px"><span>6%</span><span>18%</span></div>
+    </div>
+
+    <div class="emi-result-hero">
+      <div class="emi-result-label">Monthly EMI</div>
+      <div class="emi-result-big" id="emiResult">₹3,820</div>
+      <div class="emi-result-mo">per month</div>
+      <div class="emi-breakdown">
+        <div class="emi-breakdown-item"><div class="emi-bd-val" id="bdLoan">₹1,19,999</div><div class="emi-bd-label">Loan amount</div></div>
+        <div class="emi-breakdown-item"><div class="emi-bd-val" id="bdInterest">₹17,521</div><div class="emi-bd-label">Total interest</div></div>
+        <div class="emi-breakdown-item"><div class="emi-bd-val" id="bdTotal">₹1,37,520</div><div class="emi-bd-label">Total payable</div></div>
+      </div>
+    </div>
+
+    <div class="insurance-row mt-20">
+      <div class="insurance-item"><div class="ins-label">5-year insurance (est.)</div><div class="ins-val" id="insEst">₹12,000</div></div>
+      <div class="insurance-item"><div class="ins-label">Registration charges (est.)</div><div class="ins-val" id="regEst">₹4,200</div></div>
+      <div class="insurance-item"><div class="ins-label">On-road total (est.)</div><div class="ins-val" id="onRoadEst">₹1,56,199</div></div>
+    </div>
+  </div>
+
+  <!-- SCOOTER EMI COMPARISON -->
+  <div class="emi-main-card" style="margin-top:24px">
+    <div class="emi-section-title">Compare EMIs — all scooters</div>
+    <p style="font-size:13px;color:var(--ink-3);margin-bottom:16px">Based on ₹20,000 down · 36 months · 9.5% p.a.</p>
+    <div id="emiCompareList"></div>
+  </div>
+</div>
+
+<!-- RIGHT PANEL -->
+<div style="position:sticky;top:80px;display:flex;flex-direction:column;gap:16px">
+  <div class="card card-pad">
+    <div class="label-sm mb-12">Key EMI tips</div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="trust-item"><span class="trust-icon">💡</span><span style="font-size:13px;line-height:1.5">Put down <strong>20–30%</strong> to significantly reduce monthly EMI and total interest.</span></div>
+      <div class="trust-item"><span class="trust-icon">💡</span><span style="font-size:13px;line-height:1.5">24-month tenure has higher EMI but saves ₹8,000–12,000 in interest vs 48 months.</span></div>
+      <div class="trust-item"><span class="trust-icon">💡</span><span style="font-size:13px;line-height:1.5">EV-specific loans from HDFC, SBI, and Bajaj Finance offer 7.5–9% rates — lower than standard auto loans.</span></div>
+      <div class="trust-item"><span class="trust-icon">💡</span><span style="font-size:13px;line-height:1.5">FAME-III subsidy of ₹10,000–15,000 reduces your effective ex-showroom price before EMI calculation.</span></div>
+      <div class="trust-item"><span class="trust-icon">💡</span><span style="font-size:13px;line-height:1.5">Pre-approved loans from banks may offer better rates than in-house dealer financing.</span></div>
+    </div>
+  </div>
+
+  <div class="card card-pad">
+    <div class="label-sm mb-12">EV vs Petrol savings</div>
+    <div class="spec-table-wrap">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <tr style="background:var(--surf-2)"><td style="padding:8px 10px;font-weight:700">50 km/day × 30 days</td><td style="padding:8px 10px;text-align:right;font-weight:700"></td></tr>
+        <tr><td style="padding:8px 10px;color:var(--ink-3);border-bottom:1px solid var(--border)">Petrol cost/mo</td><td style="padding:8px 10px;border-bottom:1px solid var(--border);text-align:right;color:var(--red);font-weight:600">₹4,200–5,400</td></tr>
+        <tr><td style="padding:8px 10px;color:var(--ink-3);border-bottom:1px solid var(--border)">EV electricity/mo</td><td style="padding:8px 10px;border-bottom:1px solid var(--border);text-align:right;color:var(--g);font-weight:600">₹450–750</td></tr>
+        <tr style="background:var(--g-tint)"><td style="padding:10px;font-weight:700">Monthly savings</td><td style="padding:10px;text-align:right;font-weight:800;color:var(--g-dim);font-size:16px">₹3,450–4,650</td></tr>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--ink-3);margin-top:10px;line-height:1.6">At ₹3,500/month savings, a ₹1.4L scooter pays for itself in <strong>40 months</strong> vs petrol.</p>
+  </div>
+
+  <div class="card card-pad" style="text-align:center">
+    <div style="font-size:32px;margin-bottom:10px">🏦</div>
+    <h4 class="mb-8">Ready to apply for a loan?</h4>
+    <p style="font-size:13px;color:var(--ink-3);margin-bottom:14px">Compare rates from HDFC, SBI, Bajaj Finance, ICICI and more.</p>
+    <button class="btn btn-primary btn-full" onclick="alert('Loan comparison feature launching soon!')">Compare loan rates →</button>
+  </div>
+</div>
+
+</div><!-- /emi-layout -->
+</div><!-- /container -->
+
+<div id="footerMount"></div>
+</div>
+
+<script src="data.js"></script>
+<script src="components.js"></script>
+<script>
+document.getElementById('navMount').innerHTML=navHTML('emi');
+document.getElementById('footerMount').innerHTML=footerHTML();
+
+// Presets
+document.getElementById('presetsRow').innerHTML=SCOOTERS_DB.map(s=>`
+  <button class="preset-btn" onclick="loadPreset(${s.price},'${s.priceDisplay}',this)">${s.name}</button>`).join('');
+
+window.loadPreset=function(price,disp,btn){
+  document.querySelectorAll('.preset-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('slPrice').value=price;
+  calc();
+};
+
+function fmt(n){return '₹'+Math.round(n).toLocaleString('en-IN')}
+function calcEMI(p,r,n){
+  if(r===0)return p/n;
+  const rm=r/100/12;
+  return p*rm*Math.pow(1+rm,n)/(Math.pow(1+rm,n)-1);
+}
+
+window.calc=function(){
+  const price=+document.getElementById('slPrice').value;
+  const down=+document.getElementById('slDown').value;
+  const tenure=+document.getElementById('slTenure').value;
+  const rate=+document.getElementById('slRate').value;
+  document.getElementById('priceVal').textContent=fmt(price);
+  document.getElementById('downVal').textContent=fmt(down);
+  document.getElementById('tenureVal').textContent=tenure+' months';
+  document.getElementById('rateVal').textContent=rate.toFixed(1)+'%';
+  const loan=Math.max(0,price-down);
+  const emi=Math.round(calcEMI(loan,rate,tenure));
+  const totalPay=emi*tenure;
+  const interest=totalPay-loan;
+  document.getElementById('emiResult').textContent=fmt(emi);
+  document.getElementById('bdLoan').textContent=fmt(loan);
+  document.getElementById('bdInterest').textContent=fmt(interest);
+  document.getElementById('bdTotal').textContent=fmt(totalPay);
+  document.getElementById('insEst').textContent=fmt(price*0.085);
+  document.getElementById('regEst').textContent=fmt(price*0.03);
+  document.getElementById('onRoadEst').textContent=fmt(price+price*0.085+price*0.03);
+};
+
+// EMI compare list
+document.getElementById('emiCompareList').innerHTML=SCOOTERS_DB.map(s=>{
+  const loan=s.price-20000;
+  const emi=Math.round(calcEMI(loan,9.5,36));
+  return `<div class="emi-scooter-row">
+    <div class="emi-sc-img"><img src="${s.cardImg}" alt="${s.name}" loading="lazy" onerror="this.parentElement.style.background='var(--surf-3)'"/></div>
+    <div class="emi-sc-info">
+      <div class="emi-sc-name">${s.brand} ${s.name}</div>
+      <div class="emi-sc-price">${s.priceDisplay} ex-showroom</div>
+    </div>
+    <div>
+      <div class="emi-sc-emi">${fmt(emi)}/mo</div>
+      <div class="emi-sc-emi-note">36 mo · 9.5%</div>
+    </div>
+    <a href="/scooters/${s.id}/"><button class="btn btn-ghost btn-sm">Details</button></a>
+  </div>`;
+}).join('');
+
+calc();
+</script>
+</body>
+</html>

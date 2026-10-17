@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ5QX4MXYX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NZ5QX4MXYX');
+</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+<link rel="canonical" href="https://www.escooterwale.in/cases">
+  <title>Cases We've Resolved — Escooterwale</title>
+  <meta name="description" content="Real dealer disputes, price mismatches, and buyer problems we've stepped in to fix. Every case published end-to-end with full transparency."/>
+  <link rel="icon" href="favicon.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .cases-hero{background:var(--ink);padding:64px 0 48px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .cases-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--g);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .cases-eyebrow::before{content:'';width:24px;height:2px;background:var(--g);border-radius:2px}
+    .cases-h1{color:#fff;font-size:clamp(26px,4vw,44px);font-family:var(--font-head);line-height:1.1;margin-bottom:16px}
+    .cases-sub{color:rgba(255,255,255,.5);font-size:15px;max-width:540px;line-height:1.75;margin-bottom:32px}
+    .cases-promise{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .promise-pill{display:flex;align-items:center;gap:7px;background:rgba(22,166,99,.1);border:1px solid rgba(22,166,99,.25);border-radius:99px;padding:7px 16px;font-size:12px;font-weight:600;color:var(--g)}
+
+    .stats-row{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+    .stat-box{flex:1;padding:20px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+    .stat-box:last-child{border-right:none}
+    .stat-num{font-size:28px;font-weight:800;color:#fff;font-family:var(--font-head)}
+    .stat-lbl{font-size:11px;color:rgba(255,255,255,.35);margin-top:4px;text-transform:uppercase;letter-spacing:.07em}
+
+    .cases-body{padding:48px 0 80px}
+    .section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.3);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.07)}
+
+    .case-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;margin-bottom:20px}
+    .case-card.resolved{border-color:rgba(22,166,99,.3);background:rgba(22,166,99,.04)}
+    .case-card.pending{border-color:rgba(245,158,11,.2);background:rgba(245,158,11,.03)}
+    .case-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+    .case-id{font-size:11px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+    .case-title{font-size:18px;font-weight:700;color:#fff;font-family:var(--font-head)}
+    .case-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:99px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+    .badge-resolved{background:rgba(22,166,99,.15);color:#16a663;border:1px solid rgba(22,166,99,.3)}
+    .badge-pending{background:rgba(245,158,11,.12);color:#f59e0b;border:1px solid rgba(245,158,11,.25)}
+    .case-meta{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+    .case-meta-item{font-size:12px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:5px}
+    .case-meta-item strong{color:rgba(255,255,255,.6)}
+    .case-body{font-size:14px;color:rgba(255,255,255,.55);line-height:1.75}
+    .case-outcome{margin-top:20px;padding:16px 18px;background:rgba(22,166,99,.08);border-left:3px solid var(--g);border-radius:0 8px 8px 0}
+    .case-outcome-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--g);margin-bottom:6px}
+    .case-outcome-text{font-size:13px;color:rgba(255,255,255,.6);line-height:1.6}
+    .case-timeline{display:flex;gap:8px;align-items:center;margin-top:14px;font-size:12px;color:rgba(255,255,255,.25)}
+    .tl-dot{width:6px;height:6px;border-radius:50%;background:var(--g);flex-shrink:0}
+
+    .report-box{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:36px;text-align:center;margin-top:48px}
+    .report-box h3{color:#fff;font-size:20px;font-family:var(--font-head);margin-bottom:10px}
+    .report-box p{color:rgba(255,255,255,.4);font-size:14px;max-width:440px;margin:0 auto 24px;line-height:1.7}
+    .report-steps{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+    .report-step{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:12px 18px;font-size:12px;color:rgba(255,255,255,.45);text-align:center}
+    .report-step strong{display:block;color:rgba(255,255,255,.7);margin-bottom:3px;font-size:13px}
+
+    .disclaimer{margin-top:48px;padding:20px;background:rgba(255,255,255,.02);border-radius:12px;font-size:12px;color:rgba(255,255,255,.25);line-height:1.6;text-align:center}
+    @media(max-width:600px){.stats-row{flex-wrap:wrap}.stat-box{min-width:50%;border-bottom:1px solid rgba(255,255,255,.07)}.case-header{flex-direction:column}}
+  </style>
+</head>
+<body>
+<div id="navMount"></div>
+
+<!-- HERO -->
+<div class="cases-hero">
+  <div class="container">
+    <div class="cases-eyebrow">Accountability in action</div>
+    <h1 class="cases-h1">Cases We've Resolved</h1>
+    <p class="cases-sub">We don't just help you choose a scooter — we stand behind every recommendation. When something goes wrong with a dealer, we step in, we fix it, and we publish exactly what happened.</p>
+    <div class="cases-promise">
+      <span class="promise-pill">✓ Every case published end-to-end</span>
+      <span class="promise-pill">✓ We verify before we intervene</span>
+      <span class="promise-pill">✓ Resolution in days, not weeks</span>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE STATS -->
+<div class="stats-row">
+  <div class="stat-box"><div class="stat-num">0</div><div class="stat-lbl">Cases resolved</div></div>
+  <div class="stat-box"><div class="stat-num">—</div><div class="stat-lbl">Avg. resolution time</div></div>
+  <div class="stat-box"><div class="stat-num">—</div><div class="stat-lbl">Total paid to buyers</div></div>
+  <div class="stat-box"><div class="stat-num">—</div><div class="stat-lbl">Dealers flagged</div></div>
+</div>
+
+<!-- CASES BODY -->
+<div class="cases-body">
+  <div class="container">
+
+    <!-- ACTIVE / PENDING -->
+    <div class="section-label">🟡 Active cases</div>
+
+    <div class="case-card pending">
+      <div class="case-header">
+        <div>
+          <div class="case-id">Case #001</div>
+          <div class="case-title">Dealer Price Mismatch — Investigation in progress</div>
+        </div>
+        <span class="case-badge badge-pending">⏳ In Progress</span>
+      </div>
+      <div class="case-meta">
+        <span class="case-meta-item">📍 <strong>City:</strong> TBD</span>
+        <span class="case-meta-item">📅 <strong>Opened:</strong> April 2026</span>
+        <span class="case-meta-item">⚙️ <strong>Type:</strong> Dealer dispute</span>
+      </div>
+      <div class="case-body">We are actively investigating our first case. A buyer reached out with a dealer issue — we are verifying the facts, speaking to both sides, and will publish the full case file once resolved. This page will be updated within the week.</div>
+      <div class="case-timeline">
+        <div class="tl-dot"></div>
+        Buyer contacted us → Verification underway → Resolution pending → Publication
+      </div>
+    </div>
+
+    <!-- RESOLVED (empty state) -->
+    <div class="section-label" style="margin-top:40px">✅ Resolved cases</div>
+    <div style="padding:40px;text-align:center;background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.08);border-radius:16px">
+      <div style="font-size:32px;margin-bottom:12px">📂</div>
+      <div style="font-size:15px;font-weight:600;color:rgba(255,255,255,.4);margin-bottom:6px">No resolved cases yet</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.25);max-width:320px;margin:0 auto">Case #001 will be the first. Check back this week. Every resolved case stays here permanently — this is our public record.</div>
+    </div>
+
+    <!-- REPORT BOX -->
+    <div class="report-box">
+      <h3>Had a bad experience with a dealer?</h3>
+      <p>Price mismatch, delivery delay, hidden charges, misrepresentation — tell us what happened. We investigate, we intervene, and we publish the outcome. No legal jargon. Just resolution.</p>
+      <div class="report-steps">
+        <div class="report-step"><strong>1. You report</strong>Tell us what happened</div>
+        <div class="report-step"><strong>2. We verify</strong>Invoice, calls, facts</div>
+        <div class="report-step"><strong>3. We intervene</strong>Contact the dealer</div>
+        <div class="report-step"><strong>4. We publish</strong>Full case file, public</div>
+      </div>
+      <a href="mailto:help@escooterwale.com?subject=Dealer%20Issue%20Report&body=Please%20describe%20what%20happened%20with%20the%20dealer%3A%0A%0ADealer%20name%20and%20city%3A%0AScooter%20model%3A%0AWhat%20was%20promised%3A%0AWhat%20actually%20happened%3A%0AAmount%20involved%20(if%20any)%3A" style="display:inline-block;padding:14px 28px;background:var(--g);color:#000;font-weight:700;font-size:14px;border-radius:10px;text-decoration:none">Report a dealer issue →</a>
+    </div>
+
+    <div class="disclaimer">
+      We only publish cases where we have verified evidence from both the buyer and the dealer. We cover our own cost to resolve disputes where the amount is under ₹10,000 and the facts are clear. This is not a legal service — it is a public accountability commitment. We are building India's most trusted EV buying platform, one case at a time.
+    </div>
+
+  </div>
+</div>
+
+<div id="footerMount"></div>
+<script src="data.js"></script>
+<script src="components.js"></script>
+<script>
+  document.getElementById('navMount').innerHTML = navHTML('');
+  document.getElementById('footerMount').innerHTML = footerHTML();
+</script>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ5QX4MXYX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NZ5QX4MXYX');
+</script>
+    <!-- SEO Title -->
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+<title>Real Range Test: 8 EV Scooters, Same Route, Honest Results | ScooterWale</title>
+<meta name="description" content="We rode 8 popular EV scooters on the same Mumbai route until they stopped. IDC claims vs real-world range — the honest results that brands don't want you to see."/>
+<link rel="canonical" href="https://www.escooterwale.in/guide-real-range"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.guide-hero{background:linear-gradient(135deg,#0d1117 0%,#0a0a2a 100%);padding:56px 0 48px;border-bottom:1px solid rgba(139,92,246,.2)}
+.guide-hero-inner{max-width:760px}
+.guide-eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#a78bfa;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.guide-eyebrow::before{content:'';width:20px;height:2px;background:#a78bfa;border-radius:2px}
+.guide-hero h1{color:#fff;font-size:clamp(26px,4vw,42px);line-height:1.15;margin-bottom:16px;font-family:var(--f-head)}
+.guide-hero p{color:rgba(255,255,255,.6);font-size:16px;line-height:1.75;max-width:620px}
+.guide-meta{display:flex;gap:16px;margin-top:24px;flex-wrap:wrap}
+.guide-meta-item{font-size:13px;color:rgba(255,255,255,.45)}
+.guide-layout{display:grid;grid-template-columns:1fr 300px;gap:32px;padding:48px 0 80px;align-items:start}
+.guide-content h2{font-size:24px;font-weight:800;margin:36px 0 14px;color:var(--ink);font-family:var(--f-head);padding-bottom:10px;border-bottom:2px solid #f5f3ff}
+.guide-content h3{font-size:18px;font-weight:700;margin:24px 0 10px;color:var(--ink)}
+.guide-content p{font-size:16px;line-height:1.85;color:var(--ink-2);margin-bottom:18px}
+.guide-content ul{margin:0 0 18px 20px}
+.guide-content li{font-size:15px;line-height:1.7;color:var(--ink-2);margin-bottom:6px}
+.guide-content strong{color:var(--ink);font-weight:700}
+.guide-content blockquote{background:#f5f3ff;border-left:4px solid #8b5cf6;border-radius:0 var(--r-sm) var(--r-sm) 0;padding:16px 20px;margin:24px 0;color:var(--ink-2)}
+.callout-box{background:var(--surf-2);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:24px;margin:28px 0}
+.callout-box.purple{background:#f5f3ff;border-color:#c4b5fd}
+.callout-box.green{background:rgba(22,166,99,.06);border-color:rgba(22,166,99,.25)}
+.callout-box h4{font-size:15px;font-weight:700;margin-bottom:10px;font-family:var(--f-head)}
+.range-results{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.rr-item{background:var(--surf);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .15s}
+.rr-item:hover{border-color:var(--g);box-shadow:var(--sh)}
+.rr-header{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--surf-2);border-bottom:1px solid var(--border)}
+.rr-rank{width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;font-family:var(--f-head)}
+.rr-rank-1{background:var(--g)}
+.rr-rank-2{background:#3b82f6}
+.rr-rank-3{background:#7c3aed}
+.rr-name{font-size:15px;font-weight:800;font-family:var(--f-head);flex:1}
+.rr-body{padding:14px 18px}
+.rr-bars-wrap{margin-bottom:8px}
+.rr-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.rr-bar-lbl{font-size:11px;font-weight:600;color:var(--ink-3);width:72px;flex-shrink:0;text-transform:uppercase;letter-spacing:.05em}
+.rr-bar-track{flex:1;background:var(--surf-3);border-radius:99px;height:8px;overflow:hidden}
+.rr-bar-claimed{background:rgba(139,92,246,.35);border-radius:99px;height:8px}
+.rr-bar-real{background:var(--g);border-radius:99px;height:8px}
+.rr-bar-track.real-track{background:var(--surf-3)}
+.rr-num{font-size:13px;font-weight:800;width:56px;flex-shrink:0;text-align:right}
+.rr-num.claimed{color:rgba(139,92,246,.7)}
+.rr-num.real{color:var(--g)}
+.rr-verdict{font-size:13px;color:var(--ink-3);line-height:1.5}
+.test-conditions{background:var(--ink);border-radius:var(--r-lg);padding:24px;margin:28px 0;color:#fff}
+.tc-title{font-size:16px;font-weight:800;margin-bottom:14px;font-family:var(--f-head)}
+.tc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tc-item{background:rgba(255,255,255,.05);border-radius:var(--r-sm);padding:10px 12px}
+.tc-label{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.4);font-weight:600;margin-bottom:4px}
+.tc-val{font-size:14px;font-weight:700;color:#fff}
+.guide-sidebar{position:sticky;top:80px;display:flex;flex-direction:column;gap:14px}
+.sidebar-card{background:var(--surf);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px}
+.sidebar-card h4{font-size:14px;font-weight:700;margin-bottom:12px;font-family:var(--f-head)}
+.toc-link{display:block;font-size:13px;color:var(--ink-3);padding:5px 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s}
+.toc-link:last-child{border-bottom:none}
+.toc-link:hover{color:var(--g)}
+.guide-nav{display:flex;justify-content:space-between;gap:12px;margin-top:40px;padding-top:32px;border-top:1px solid var(--border)}
+.guide-nav-card{flex:1;background:var(--surf);border:1px solid var(--border);border-radius:var(--r-lg);padding:16px;text-decoration:none;color:inherit;transition:all .15s}
+.guide-nav-card:hover{border-color:var(--g)}
+.gnc-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-4);font-weight:700;margin-bottom:5px}
+.gnc-title{font-size:14px;font-weight:700;color:var(--ink);font-family:var(--f-head)}
+@media(max-width:900px){.guide-layout{grid-template-columns:1fr}.guide-sidebar{position:static}.tc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.tc-grid{grid-template-columns:1fr 1fr}}
+</style>
+<!-- schema:start (generated by build-schema.js — do not edit by hand) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.escooterwale.in/#organization",
+      "name": "ScooterWale",
+      "alternateName": "Escooterwale",
+      "url": "https://www.escooterwale.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.escooterwale.in/images/escooterwale_logo.png"
+      },
+      "image": "https://www.escooterwale.in/og-image.jpg",
+      "description": "Independent electric scooter comparison and review platform for India. Real-world range testing, ScootScore ratings and buyer guides across 41 models from 10 brands.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "knowsAbout": [
+        "Electric scooters",
+        "Electric two-wheelers",
+        "EV range testing",
+        "PM e-Drive subsidy",
+        "Indian EV market"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.escooterwale.in/#website",
+      "url": "https://www.escooterwale.in/",
+      "name": "ScooterWale",
+      "publisher": {
+        "@id": "https://www.escooterwale.in/#organization"
+      },
+      "inLanguage": "en-IN",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.escooterwale.in/listings?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.escooterwale.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://www.escooterwale.in/listings"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Real range test results"
+        }
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://www.escooterwale.in/guide-real-range#article",
+      "headline": "Real range test: 8 scooters, same Mumbai route, honest results",
+      "description": "Eight popular Indian electric scooters ridden to zero on the same 10 km Mumbai loop. IDC claimed range versus measured real-world range, with full test conditions.",
+      "url": "https://www.escooterwale.in/guide-real-range",
+      "datePublished": "2026-03-01",
+      "dateModified": "2026-03-01",
+      "author": {
+        "@type": "Organization",
+        "name": "ScooterWale Test Team",
+        "url": "https://www.escooterwale.in/"
+      },
+      "publisher": {
+        "@id": "https://www.escooterwale.in/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://www.escooterwale.in/#website"
+      },
+      "inLanguage": "en-IN",
+      "articleSection": "EV range testing",
+      "about": {
+        "@type": "Thing",
+        "name": "Electric scooter real-world range in India"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.escooterwale.in/guide-real-range#dataset",
+      "name": "ScooterWale Real Range Test 2026 — 8 Indian electric scooters",
+      "description": "Measured real-world range for eight electric scooters sold in India, tested on an identical 10 km Mumbai urban loop from 100% to 0% state of charge. Single 72 kg rider, Normal/City mode, mixed morning traffic, 28-32°C. Average IDC-to-real efficiency across the set was 77.4%.",
+      "url": "https://www.escooterwale.in/guide-real-range",
+      "license": "https://www.escooterwale.in/guide-real-range",
+      "creator": {
+        "@type": "Organization",
+        "name": "ScooterWale Test Team",
+        "@id": "https://www.escooterwale.in/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.escooterwale.in/#organization"
+      },
+      "datePublished": "2026-03-01",
+      "temporalCoverage": "2026-03",
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Mumbai, Maharashtra, India"
+      },
+      "measurementTechnique": "Full-discharge road test on a fixed 10 km urban loop, single 72 kg rider, Normal/City riding mode, mixed morning traffic, ambient 28-32°C, 100% to 0% state of charge",
+      "keywords": [
+        "electric scooter range",
+        "real world range",
+        "IDC range",
+        "India EV",
+        "range test"
+      ],
+      "variableMeasured": [
+        {
+          "@type": "PropertyValue",
+          "name": "IDC claimed range",
+          "unitCode": "KMT",
+          "description": "Manufacturer claimed range under the Indian Driving Cycle"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Real-world range",
+          "unitCode": "KMT",
+          "description": "Measured range to zero state of charge on the test loop"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "IDC-to-real efficiency",
+          "unitText": "percent",
+          "value": 77.4,
+          "description": "Measured range as a percentage of the IDC claim, averaged across all 8 scooters"
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "Observation",
+          "name": "TVS iQube ST 5.3 kWh range test result",
+          "measuredProperty": "Real-world range",
+          "measuredValue": 165,
+          "unitCode": "KMT",
+          "description": "TVS iQube ST 5.3 kWh: 212 km IDC claimed, 165 km measured real-world range (77.8% of claim)."
+        },
+        {
+          "@type": "Observation",
+          "name": "Ola Electric S1 Pro+ 5.2 kWh range test result",
+          "measuredProperty": "Real-world range",
+          "measuredValue": 155,
+          "unitCode": "KMT",
+          "description": "Ola Electric S1 Pro+ 5.2 kWh: 320 km IDC claimed, 155 km measured real-world range (48.4% of claim)."
+        },
+        {
+          "@type": "Observation",
+          "name": "Pure EV ETrance+ 4.5 kWh range test result",
+          "measuredProperty": "Real-world range",
+          "measuredValue": 148,
+          "unitCode": "KMT",
+          "description": "Pure EV ETrance+ 4.5 kWh: 171 km IDC claimed, 148 km measured real-world range (86.5% of claim)."
+        },
+        {
+          "@type": "Observation",
+          "name": "Ola Electric S1 Pro 4 kWh range test result",
+          "measuredProperty": "Real-world range",
+          "measuredValue": 140,
+          "unitCode": "KMT",
+          "description": "Ola Electric S1 Pro 4 kWh: 176 km IDC claimed, 140 km measured real-world range (79.5% of claim)."
+        },
+        {
+          "@type": "Observation",
+          "name": "Ather Energy 450X 3.7 kWh range test result",
+          "measuredProperty": "Real-world range",
+          "measuredValue": 125,
+          "unitCode": "KMT",
+          "description": "Ather Energy 450X 3.7 kWh: 161 km IDC claimed, 125 km measured real-world range (77.6% of claim)."
+        },
+        {
+          "@type": "Observation",
+          "name": "Hero Vida V2 Pro 3.94 kWh range test result",
+          "measuredProperty": "Real-world range",
+          "measuredValue": 118,
+          "unitCode": "KMT",
+          "description": "Hero Vida V2 Pro 3.94 kWh: 143 km IDC claimed, 118 km measured real-world range (82.5% of claim)."
+        },
+        {
+          "@type": "Observation",
+          "name": "Bajaj Chetak 3503 3.5 kWh range test result",
+          "measuredProperty": "Real-world range",
+          "measuredValue": 116,
+          "unitCode": "KMT",
+          "description": "Bajaj Chetak 3503 3.5 kWh: 153 km IDC claimed, 116 km measured real-world range (75.8% of claim)."
+        },
+        {
+          "@type": "Observation",
+          "name": "Ampere Nexus ST 3 kWh range test result",
+          "measuredProperty": "Real-world range",
+          "measuredValue": 112,
+          "unitCode": "KMT",
+          "description": "Ampere Nexus ST 3 kWh: 136 km IDC claimed, 112 km measured real-world range (82.4% of claim)."
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- schema:end -->
+</head>
+<body>
+<div id="navMount"></div>
+<div class="page-wrap">
+
+<div class="breadcrumb"><div class="container"><div class="breadcrumb-inner">
+  <a href="/">Home</a><span class="bc-sep">›</span>
+  <a href="/trending">Guides</a><span class="bc-sep">›</span>
+  <span>Real Range Test Results</span>
+</div></div></div>
+
+<section class="guide-hero">
+  <div class="container">
+    <div class="guide-hero-inner">
+      <div class="guide-eyebrow">Range Test</div>
+      <h1>Real range test: 8 scooters, same Mumbai route, honest results</h1>
+      <p>We rode every popular EV scooter until the battery hit zero on the same 10 km test loop in Mumbai. Multiple riders, consistent conditions, and no editorial relationships with any brand. Here's what actually happened.</p>
+      <div class="guide-meta">
+        <div class="guide-meta-item">✍️ ScooterWale Test Team</div>
+        <div class="guide-meta-item">📅 March 2026</div>
+        <div class="guide-meta-item">⏱ 9 min read</div>
+        <div class="guide-meta-item">🧪 Independent test — zero brand involvement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+<div class="guide-layout">
+
+<article class="guide-content">
+
+  <h2>Test methodology</h2>
+  <p>We chose a standardised approach after watching too many YouTube "range tests" that involved a single rider, perfect road conditions, and Eco mode only. Our test is designed to reflect what actual daily commuters in Indian cities experience.</p>
+
+  <div class="test-conditions">
+    <div class="tc-title">🔬 Test conditions</div>
+    <div class="tc-grid">
+      <div class="tc-item"><div class="tc-label">Route</div><div class="tc-val">Mumbai urban loop</div></div>
+      <div class="tc-item"><div class="tc-label">Traffic</div><div class="tc-val">Mixed — morning rush</div></div>
+      <div class="tc-item"><div class="tc-label">Rider weight</div><div class="tc-val">72 kg (single rider)</div></div>
+      <div class="tc-item"><div class="tc-label">Mode</div><div class="tc-val">Normal / City mode</div></div>
+      <div class="tc-item"><div class="tc-label">Temperature</div><div class="tc-val">28–32°C</div></div>
+      <div class="tc-item"><div class="tc-label">Charge</div><div class="tc-val">100% to 0%</div></div>
+    </div>
+  </div>
+
+  <div class="callout-box purple">
+    <h4>⚠️ Important: What these numbers mean</h4>
+    <p style="margin:0;font-size:15px">These are <strong>Normal mode results with a single 72 kg rider in mixed Mumbai traffic</strong>. Eco mode adds 15–25% more range. Two riders subtract 10–20%. Highway riding at sustained speed reduces range. Your real-world number will vary — these give you a calibrated baseline to compare against IDC claims.</p>
+  </div>
+
+  <h2>The results: ranked by real-world range</h2>
+
+  <div class="range-results" id="rangeResults">
+
+    <div class="rr-item">
+      <div class="rr-header">
+        <div class="rr-rank rr-rank-1">#1</div>
+        <div class="rr-name">TVS iQube ST 5.3 kWh</div>
+        <div style="font-size:13px;color:var(--g);font-weight:700">Best in test</div>
+      </div>
+      <div class="rr-body">
+        <div class="rr-bars-wrap">
+          <div class="rr-bar-row"><span class="rr-bar-lbl">IDC claim</span><div class="rr-bar-track"><div class="rr-bar-claimed" style="width:100%"></div></div><span class="rr-num claimed">212 km</span></div>
+          <div class="rr-bar-row"><span class="rr-bar-lbl">Real world</span><div class="rr-bar-track real-track"><div class="rr-bar-real" style="width:78%"></div></div><span class="rr-num real">165 km</span></div>
+        </div>
+        <div class="rr-verdict">Delivered 165 km — our highest real-world result. The 5.3 kWh battery is genuinely large. Closing the gap to IDC requires Eco mode; we tested Normal. Even so, 165 km is a number that eliminates range anxiety for most riders.</div>
+      </div>
+    </div>
+
+    <div class="rr-item">
+      <div class="rr-header">
+        <div class="rr-rank rr-rank-2">#2</div>
+        <div class="rr-name">Ola Electric S1 Pro+ 5.2 kWh</div>
+      </div>
+      <div class="rr-body">
+        <div class="rr-bars-wrap">
+          <div class="rr-bar-row"><span class="rr-bar-lbl">IDC claim</span><div class="rr-bar-track"><div class="rr-bar-claimed" style="width:100%"></div></div><span class="rr-num claimed">320 km</span></div>
+          <div class="rr-bar-row"><span class="rr-bar-lbl">Real world</span><div class="rr-bar-track real-track"><div class="rr-bar-real" style="width:73%"></div></div><span class="rr-num real">155 km</span></div>
+        </div>
+        <div class="rr-verdict">The largest gap between IDC and reality in our test (320 → 155 km). Ola's IDC methodology is aggressive. Still, 155 km real-world is genuinely impressive and among the best available. The gap is misleading, the actual range is not.</div>
+      </div>
+    </div>
+
+    <div class="rr-item">
+      <div class="rr-header">
+        <div class="rr-rank rr-rank-3">#3</div>
+        <div class="rr-name">Pure EV ETrance+ 4.5 kWh</div>
+      </div>
+      <div class="rr-body">
+        <div class="rr-bars-wrap">
+          <div class="rr-bar-row"><span class="rr-bar-lbl">IDC claim</span><div class="rr-bar-track"><div class="rr-bar-claimed" style="width:80%"></div></div><span class="rr-num claimed">171 km</span></div>
+          <div class="rr-bar-row"><span class="rr-bar-lbl">Real world</span><div class="rr-bar-track real-track"><div class="rr-bar-real" style="width:70%"></div></div><span class="rr-num real">148 km</span></div>
+        </div>
+        <div class="rr-verdict">The best IDC-to-real ratio in the test (86.5% efficiency). Pure EV's conservative IDC claims pay off here — the real number is genuinely close. Best value for range-per-rupee in the sub-₹1.2L category.</div>
+      </div>
+    </div>
+
+    <div class="rr-item">
+      <div class="rr-header">
+        <div class="rr-rank">#4</div>
+        <div class="rr-name">Ola Electric S1 Pro 4 kWh</div>
+      </div>
+      <div class="rr-body">
+        <div class="rr-bars-wrap">
+          <div class="rr-bar-row"><span class="rr-bar-lbl">IDC claim</span><div class="rr-bar-track"><div class="rr-bar-claimed" style="width:83%"></div></div><span class="rr-num claimed">176 km</span></div>
+          <div class="rr-bar-row"><span class="rr-bar-lbl">Real world</span><div class="rr-bar-track real-track"><div class="rr-bar-real" style="width:66%"></div></div><span class="rr-num real">140 km</span></div>
+        </div>
+        <div class="rr-verdict">140 km puts it ahead of all except the large-battery scooters. Hyper mode significantly cuts this — engaging it regularly drops real range to 110–120 km. Normal mode is where 140 km is achievable.</div>
+      </div>
+    </div>
+
+    <div class="rr-item">
+      <div class="rr-header">
+        <div class="rr-rank">#5</div>
+        <div class="rr-name">Ather Energy 450X 3.7 kWh</div>
+      </div>
+      <div class="rr-body">
+        <div class="rr-bars-wrap">
+          <div class="rr-bar-row"><span class="rr-bar-lbl">IDC claim</span><div class="rr-bar-track"><div class="rr-bar-claimed" style="width:76%"></div></div><span class="rr-num claimed">161 km</span></div>
+          <div class="rr-bar-row"><span class="rr-bar-lbl">Real world</span><div class="rr-bar-track real-track"><div class="rr-bar-real" style="width:59%"></div></div><span class="rr-num real">125 km</span></div>
+        </div>
+        <div class="rr-verdict">125 km in Normal mode. The 450X's Warp mode destroys range (drops to 80–90 km if used regularly). The ride quality and handling are noticably better than every other scooter we tested — this scooter earns its premium with feel, not range numbers.</div>
+      </div>
+    </div>
+
+    <div class="rr-item">
+      <div class="rr-header">
+        <div class="rr-rank">#6</div>
+        <div class="rr-name">Hero Vida V2 Pro 3.94 kWh</div>
+      </div>
+      <div class="rr-body">
+        <div class="rr-bars-wrap">
+          <div class="rr-bar-row"><span class="rr-bar-lbl">IDC claim</span><div class="rr-bar-track"><div class="rr-bar-claimed" style="width:67%"></div></div><span class="rr-num claimed">143 km</span></div>
+          <div class="rr-bar-row"><span class="rr-bar-lbl">Real world</span><div class="rr-bar-track real-track"><div class="rr-bar-real" style="width:56%"></div></div><span class="rr-num real">118 km</span></div>
+        </div>
+        <div class="rr-verdict">118 km is solid for daily city use. Hero's conservative 80% real-world efficiency is better than Ola's. The ride is comfortable and unremarkable — a reliable, range-adequate commuter for most Indian buyers.</div>
+      </div>
+    </div>
+
+    <div class="rr-item">
+      <div class="rr-header">
+        <div class="rr-rank">#7</div>
+        <div class="rr-name">Bajaj Chetak 3503 3.5 kWh</div>
+      </div>
+      <div class="rr-body">
+        <div class="rr-bars-wrap">
+          <div class="rr-bar-row"><span class="rr-bar-lbl">IDC claim</span><div class="rr-bar-track"><div class="rr-bar-claimed" style="width:72%"></div></div><span class="rr-num claimed">153 km</span></div>
+          <div class="rr-bar-row"><span class="rr-bar-lbl">Real world</span><div class="rr-bar-track real-track"><div class="rr-bar-real" style="width:55%"></div></div><span class="rr-num real">116 km</span></div>
+        </div>
+        <div class="rr-verdict">The Chetak's premium build quality is evident on every speed bump and pothole — it absorbs them better than any other scooter we tested. Range is adequate for a 40–50 km daily commute with buffer. The retro design remains a unique selling point no spec can capture.</div>
+      </div>
+    </div>
+
+    <div class="rr-item">
+      <div class="rr-header">
+        <div class="rr-rank">#8</div>
+        <div class="rr-name">Ampere Nexus ST 3 kWh</div>
+      </div>
+      <div class="rr-body">
+        <div class="rr-bars-wrap">
+          <div class="rr-bar-row"><span class="rr-bar-lbl">IDC claim</span><div class="rr-bar-track"><div class="rr-bar-claimed" style="width:64%"></div></div><span class="rr-num claimed">136 km</span></div>
+          <div class="rr-bar-row"><span class="rr-bar-lbl">Real world</span><div class="rr-bar-track real-track"><div class="rr-bar-real" style="width:53%"></div></div><span class="rr-num real">112 km</span></div>
+        </div>
+        <div class="rr-verdict">112 km real range is lower than the segment average, but Ampere's LFP battery means this number degrades more slowly over time. In three years, the Nexus ST may actually out-range an NMC competitor whose battery has degraded in heat.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>What the gap between IDC and real range tells you</h2>
+  <p>The average IDC-to-real efficiency across our 8 scooters was <strong>77.4%</strong>. In other words: take the IDC claimed range, multiply by 0.77, and you'll have a reasonable Normal mode city estimate. In Eco mode, multiply by 0.9. In aggressive/Sport mode, multiply by 0.65.</p>
+
+  <blockquote>The Pure EV ETrance+ and TVS iQube ST had the highest real-to-claimed ratios (86% and 78%). The Ola S1 Pro+ had the lowest (48%). Ola's IDC numbers are unusually optimistic even by industry standards — always apply a larger discount to Ola claimed ranges than other brands.</blockquote>
+
+  <div class="callout-box green">
+    <h4>📌 Our range recommendation framework</h4>
+    <ul style="margin:0 0 0 16px">
+      <li><strong>Daily commute under 40 km:</strong> Any scooter in this test works. Range is not your constraint.</li>
+      <li><strong>Daily commute 40–70 km:</strong> Minimum real range needed is 90–100 km (to allow 40% buffer). Ather 450X and above work.</li>
+      <li><strong>Daily commute 70–100 km:</strong> You need TVS iQube ST 5.3 kWh, Ola S1 Pro 4 kWh, or Pure EV ETrance+.</li>
+      <li><strong>Daily commute 100+ km:</strong> Only the Ola S1 Pro+ or TVS iQube ST 5.3 kWh work without a midday top-up. Consider a scooter with swap battery or workplace charging.</li>
+    </ul>
+  </div>
+
+  <div class="guide-nav">
+    <a href="/guide-battery-types" class="guide-nav-card">
+      <div class="gnc-label">← Previous guide</div>
+      <div class="gnc-title">LFP vs NMC battery types</div>
+    </a>
+    <a href="/compare" class="guide-nav-card" style="text-align:right">
+      <div class="gnc-label">Next →</div>
+      <div class="gnc-title">Compare any two scooters</div>
+    </a>
+  </div>
+
+</article>
+
+<aside class="guide-sidebar">
+  <div class="sidebar-card">
+    <h4>📋 On this page</h4>
+    <a href="#" class="toc-link" onclick="return false">Test methodology</a>
+    <a href="#" class="toc-link" onclick="return false">Results: ranked</a>
+    <a href="#" class="toc-link" onclick="return false">IDC vs real gap</a>
+    <a href="#" class="toc-link" onclick="return false">Range recommendation</a>
+  </div>
+  <div class="sidebar-card" style="background:var(--ink);border-color:rgba(22,166,99,.2)">
+    <h4 style="color:#fff">🏆 Real range winners</h4>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+      <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(255,255,255,.7)">TVS iQube ST 5.3</span><strong style="color:#16c964">165 km</strong></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(255,255,255,.7)">Ola S1 Pro+ 5.2</span><strong style="color:#16c964">155 km</strong></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(255,255,255,.7)">Pure EV ETrance+</span><strong style="color:#22c55e">148 km</strong></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(255,255,255,.7)">Ola S1 Pro 4</span><strong style="color:#22c55e">140 km</strong></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:rgba(255,255,255,.7)">Ather 450X</span><strong style="color:#f59e0b">125 km</strong></div>
+    </div>
+  </div>
+  <div class="sidebar-card">
+    <h4>Other guides</h4>
+    <a href="/guide-subsidy" class="toc-link">🎁 PM e-Drive subsidy</a>
+    <a href="/guide-service-network" class="toc-link">🛠️ Service network guide</a>
+    <a href="/guide-battery-types" class="toc-link">🔋 LFP vs NMC battery</a>
+    <a href="/emi" class="toc-link">🏦 EMI calculator</a>
+  </div>
+  <div class="sidebar-card" style="text-align:center">
+    <div style="font-size:28px;margin-bottom:8px">⚖️</div>
+    <h4 class="mb-8">Compare head-to-head</h4>
+    <a href="/compare"><button class="btn btn-primary btn-full">Compare scooters →</button></a>
+  </div>
+</aside>
+
+</div>
+</div>
+<div id="footerMount"></div>
+</div>
+<script src="data.js"></script>
+<script src="components.js"></script>
+<script>
+document.getElementById('navMount').innerHTML=navHTML('news');
+document.getElementById('footerMount').innerHTML=footerHTML();
+</script>
+</body>
+</html>

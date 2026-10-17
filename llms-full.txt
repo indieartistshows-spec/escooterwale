@@ -1,0 +1,910 @@
+# ScooterWale — full electric scooter dataset for India
+
+Source: https://www.escooterwale.in
+Last updated: 2026-08-24
+Models: 41 | Brands: 10
+
+Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the
+manufacturer figure under the Indian Driving Cycle. "Real-world range" is ScooterWale's
+own estimate for Normal/City mode with a single rider in mixed Indian city traffic, and
+is consistently lower than the IDC claim. ScootScore is ScooterWale's independent 0-10
+rating averaged across five published components.
+
+## Real range test results (measured, March 2026)
+
+Test conditions: identical 10 km Mumbai urban loop, single 72 kg rider, Normal/City mode,
+mixed morning traffic, ambient 28-32°C, 100% to 0% state of charge.
+
+| Rank | Model | Battery | IDC claim | Measured real range | Efficiency |
+|------|-------|---------|-----------|---------------------|------------|
+| 1 | TVS iQube ST | 5.3 kWh | 212 km | 165 km | 77.8% |
+| 2 | Ola Electric S1 Pro+ | 5.2 kWh | 320 km | 155 km | 48.4% |
+| 3 | Pure EV ETrance+ | 4.5 kWh | 171 km | 148 km | 86.5% |
+| 4 | Ola Electric S1 Pro | 4 kWh | 176 km | 140 km | 79.5% |
+| 5 | Ather Energy 450X | 3.7 kWh | 161 km | 125 km | 77.6% |
+| 6 | Hero Vida V2 Pro | 3.94 kWh | 143 km | 118 km | 82.5% |
+| 7 | Bajaj Chetak 3503 | 3.5 kWh | 153 km | 116 km | 75.8% |
+| 8 | Ampere Nexus ST | 3 kWh | 136 km | 112 km | 82.4% |
+
+Average IDC-to-real efficiency: 77.4%. Rule of thumb: multiply an IDC claim by 0.77 for a
+Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
+
+## Brands
+
+### Ola Electric
+- URL: https://www.escooterwale.in/brands/ola-electric/
+- Models: 6
+- Founded: 2017
+- Headquarters: Bengaluru
+- Official site: https://www.olaelectric.com
+- About: India's #1 EV scooter brand by sales. MoveOS 5 software, 36L boot, 90–117 km/h range across S1 series. Gen 3 launched 2026.
+
+### Ather Energy
+- URL: https://www.escooterwale.in/brands/ather-energy/
+- Models: 5
+- Founded: 2013
+- Headquarters: Bengaluru
+- Official site: https://www.atherenergy.com
+- About: India's premium EV brand. Best ride quality, Ather Grid fast-charging, 3.3 hr charge on 450X. Rizta is best-selling family scooter.
+
+### TVS Motor
+- URL: https://www.escooterwale.in/brands/tvs-motor/
+- Models: 4
+- Founded: 1978
+- Headquarters: Chennai
+- Official site: https://www.tvsmotor.com
+- About: India's most reliable EV service network — 4500+ centres nationwide. iQube ST 5.3 kWh delivers 212 km claimed range.
+
+### Bajaj Chetak
+- URL: https://www.escooterwale.in/brands/bajaj-chetak/
+- Models: 5
+- Founded: 1945
+- Headquarters: Pune
+- Official site: https://www.chetak.com
+- About: India's iconic scooter nameplate, revived electric. All-metal body, 35L boot, 4000+ dealers. C2501 to 3503 — 5 variants.
+
+### Hero Vida
+- URL: https://www.escooterwale.in/brands/hero-vida/
+- Models: 3
+- Founded: 2022
+- Headquarters: New Delhi
+- Official site: https://www.vidaworld.com
+- About: Hero MotoCorp's EV arm. 6000+ Hero service points. VX2 has removable battery (BaaS model). Best hero service coverage in India.
+
+### Ampere
+- URL: https://www.escooterwale.in/brands/ampere/
+- Models: 5
+- Founded: 2008
+- Headquarters: Coimbatore
+- Official site: https://www.greavesamperev.com
+- About: India's oldest EV brand (2008). 5000+ dealers in 500+ cities. LFP batteries in Nexus range. Tier-2/3 India's most accessible EV.
+
+### Okinawa
+- URL: https://www.escooterwale.in/brands/okinawa/
+- Models: 5
+- Founded: 2015
+- Headquarters: Gurugram
+- Official site: https://www.okinawa.co.in
+- About: 10 years EV experience. 700+ dealers. Budget to mid-range. Okhi-90 is only Okinawa with 90 km/h. Entry R30 starts at ₹61,998.
+
+### Pure EV
+- URL: https://www.escooterwale.in/brands/pure-ev/
+- Models: 3
+- Founded: 2019
+- Headquarters: Hyderabad
+- Official site: https://pureev.in
+- About: IIT Hyderabad incubated. ETrance+ has 3G LTE, best real range in budget segment. Swappable batteries available.
+
+### Bounce Infinity
+- URL: https://www.escooterwale.in/brands/bounce-infinity/
+- Models: 2
+- Founded: 2021
+- Headquarters: Bengaluru
+- Official site: https://www.bounceev.com
+- About: Battery-swap pioneer. E1 is India's lowest-priced EV with swap support. BaaS model eliminates battery cost upfront.
+
+### BGauss
+- URL: https://www.escooterwale.in/brands/bgauss/
+- Models: 3
+- Founded: 2020
+- Headquarters: Mumbai
+- Official site: https://www.bgauss.com
+- About: RR Kabel backed Mumbai EV brand. Premium build quality above price. D15i and RUV 350i are flagship models.
+
+## All 41 models
+
+### Ola Electric S1 X 2 kWh
+- URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-2-kwh/
+- Ex-showroom price: ₹89,999
+- Estimated on-road price: ₹98,998
+- EMI from: ₹2340/month
+- Battery: 2 kWh
+- Claimed range (IDC): 108 km
+- Real-world range (ScooterWale estimate): 80–90 km
+- Top speed: 90 km/h
+- Charging time: 4.5 hrs
+- Kerb weight: 108 kg
+- Boot space: 34 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8/10 (Range 4.9, Features 9, Value 8.6, Ride 7.5, Service 6.5)
+- Verdict: The Ola S1 X (2 kWh) delivers 108 km claimed range at ₹89,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
+- Best for: Tech-forward buyers in metro cities; Daily commutes needing 80–90 km km real range
+- Avoid if: Tier-2 city buyers without Ola service; Buyers who prefer physical controls
+
+### Ola Electric S1 X 3 kWh
+- URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-3-kwh/
+- Ex-showroom price: ₹107,999
+- Estimated on-road price: ₹118,798
+- EMI from: ₹2808/month
+- Battery: 3 kWh
+- Claimed range (IDC): 176 km
+- Real-world range (ScooterWale estimate): 130–145 km
+- Top speed: 90 km/h
+- Charging time: 4.5 hrs
+- Kerb weight: 108 kg
+- Boot space: 34 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.3/10 (Range 8, Features 9, Value 7.6, Ride 7.5, Service 6.5)
+- Verdict: The Ola S1 X (3 kWh) delivers 176 km claimed range at ₹107,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
+- Best for: Tech-forward buyers in metro cities; Daily commutes needing 130–145 km km real range
+- Avoid if: Tier-2 city buyers without Ola service; Buyers who prefer physical controls
+
+### Ola Electric S1 X+ 4 kWh
+- URL: https://www.escooterwale.in/scooters/ola-electric-s1-xplus-4-kwh/
+- Ex-showroom price: ₹124,999
+- Estimated on-road price: ₹137,498
+- EMI from: ₹3250/month
+- Battery: 4 kWh
+- Claimed range (IDC): 242 km
+- Real-world range (ScooterWale estimate): 180–200 km
+- Top speed: 90 km/h
+- Charging time: 4.5 hrs
+- Kerb weight: 108 kg
+- Boot space: 34 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.5/10 (Range 10, Features 9, Value 6.7, Ride 7.5, Service 6.5)
+- Verdict: The Ola S1 X+ (4 kWh) delivers 242 km claimed range at ₹124,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
+- Best for: Tech-forward buyers in metro cities; Daily commutes needing 180–200 km km real range
+- Avoid if: Tier-2 city buyers without Ola service; Buyers who prefer physical controls
+
+### Ola Electric S1 Pro 3 kWh
+- URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-3-kwh/
+- Ex-showroom price: ₹129,999
+- Estimated on-road price: ₹142,998
+- EMI from: ₹3380/month
+- Battery: 3 kWh
+- Claimed range (IDC): 176 km
+- Real-world range (ScooterWale estimate): 140–150 km
+- Top speed: 117 km/h
+- Charging time: 4.5 hrs
+- Kerb weight: 108 kg
+- Boot space: 36 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.3/10 (Range 8, Features 9, Value 6.4, Ride 7.5, Service 6.5)
+- Verdict: The Ola S1 Pro (3 kWh) delivers 176 km claimed range at ₹129,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
+- Best for: Tech-forward buyers in metro cities; Daily commutes needing 140–150 km km real range
+- Avoid if: Tier-2 city buyers without Ola service; Buyers who prefer physical controls
+
+### Ola Electric S1 Pro 4 kWh
+- URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-4-kwh/
+- Ex-showroom price: ₹149,999
+- Estimated on-road price: ₹164,998
+- EMI from: ₹3900/month
+- Battery: 4 kWh
+- Claimed range (IDC): 195 km
+- Real-world range (ScooterWale estimate): 155–165 km
+- Top speed: 117 km/h
+- Charging time: 4.5 hrs
+- Kerb weight: 108 kg
+- Boot space: 36 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.3/10 (Range 8.9, Features 9, Value 5.3, Ride 7.5, Service 6.5)
+- Verdict: The Ola S1 Pro (4 kWh) delivers 195 km claimed range at ₹149,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
+- Best for: Tech-forward buyers in metro cities; Daily commutes needing 155–165 km km real range
+- Avoid if: Tier-2 city buyers without Ola service; Buyers who prefer physical controls
+
+### Ola Electric S1 Pro+ 5.2 kWh
+- URL: https://www.escooterwale.in/scooters/ola-electric-s1-proplus-5point2-kwh/
+- Ex-showroom price: ₹174,999
+- Estimated on-road price: ₹192,498
+- EMI from: ₹4550/month
+- Battery: 5.2 kWh
+- Claimed range (IDC): 320 km
+- Real-world range (ScooterWale estimate): 240–270 km
+- Top speed: 117 km/h
+- Charging time: 4 hrs
+- Kerb weight: 108 kg
+- Boot space: 36 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.5/10 (Range 10, Features 9, Value 5, Ride 7.5, Service 6.5)
+- Verdict: The Ola S1 Pro+ (5.2 kWh) delivers 320 km claimed range at ₹174,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
+- Best for: Tech-forward buyers in metro cities; Daily commutes needing 240–270 km km real range
+- Avoid if: Tier-2 city buyers without Ola service; Buyers who prefer physical controls
+
+### Ather Energy Rizta S 2.9 kWh
+- URL: https://www.escooterwale.in/scooters/ather-energy-rizta-s-2point9-kwh/
+- Ex-showroom price: ₹112,499
+- Estimated on-road price: ₹123,748
+- EMI from: ₹2925/month
+- Battery: 2.9 kWh
+- Claimed range (IDC): 123 km
+- Real-world range (ScooterWale estimate): 90–105 km
+- Top speed: 80 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 34 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.2/10 (Range 5.6, Features 8.5, Value 7.4, Ride 9.5, Service 9)
+- Verdict: The Ather Rizta S (2.9 kWh) is the most refined EV scooter at this price. Exceptional build quality, Ather Grid charging, and the best ride quality in India.
+- Best for: Premium buyers wanting refinement; Riders in Ather service cities; Fast charging priority (3.3 hrs)
+- Avoid if: Buyers needing large boot (>22L); Outside Ather service network
+
+### Ather Energy Rizta Z 3.7 kWh
+- URL: https://www.escooterwale.in/scooters/ather-energy-rizta-z-3point7-kwh/
+- Ex-showroom price: ₹151,998
+- Estimated on-road price: ₹167,197
+- EMI from: ₹3952/month
+- Battery: 3.7 kWh
+- Claimed range (IDC): 159 km
+- Real-world range (ScooterWale estimate): 120–135 km
+- Top speed: 80 km/h
+- Charging time: 4.5 hrs
+- Kerb weight: 108 kg
+- Boot space: 34 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.5/10 (Range 7.2, Features 8.5, Value 5.2, Ride 9.5, Service 9)
+- Verdict: The Ather Rizta Z (3.7 kWh) is the most refined EV scooter at this price. Exceptional build quality, Ather Grid charging, and the best ride quality in India.
+- Best for: Premium buyers wanting refinement; Riders in Ather service cities; Fast charging priority (3.3 hrs)
+- Avoid if: Buyers needing large boot (>22L); Outside Ather service network
+
+### Ather Energy 450S 2.9 kWh
+- URL: https://www.escooterwale.in/scooters/ather-energy-450s-2point9-kwh/
+- Ex-showroom price: ₹120,841
+- Estimated on-road price: ₹132,925
+- EMI from: ₹3142/month
+- Battery: 2.9 kWh
+- Claimed range (IDC): 122 km
+- Real-world range (ScooterWale estimate): 90–105 km
+- Top speed: 90 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 22 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.4/10 (Range 5.5, Features 8.5, Value 6.9, Ride 9.5, Service 9)
+- Verdict: The Ather 450S (2.9 kWh) is the most refined EV scooter at this price. Exceptional build quality, Ather Grid charging, and the best ride quality in India.
+- Best for: Premium buyers wanting refinement; Riders in Ather service cities; Fast charging priority (3.3 hrs)
+- Avoid if: Buyers needing large boot (>22L); Outside Ather service network
+
+### Ather Energy 450X 3.7 kWh
+- URL: https://www.escooterwale.in/scooters/ather-energy-450x-3point7-kwh/
+- Ex-showroom price: ₹157,999
+- Estimated on-road price: ₹173,798
+- EMI from: ₹4108/month
+- Battery: 3.7 kWh
+- Claimed range (IDC): 161 km
+- Real-world range (ScooterWale estimate): 120–135 km
+- Top speed: 90 km/h
+- Charging time: 3.3 hrs
+- Kerb weight: 108 kg
+- Boot space: 22 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.7/10 (Range 7.3, Features 8.5, Value 5, Ride 9.5, Service 9)
+- Verdict: The Ather 450X (3.7 kWh) is the most refined EV scooter at this price. Exceptional build quality, Ather Grid charging, and the best ride quality in India.
+- Best for: Premium buyers wanting refinement; Riders in Ather service cities; Fast charging priority (3.3 hrs)
+- Avoid if: Buyers needing large boot (>22L); Outside Ather service network
+
+### Ather Energy 450 Apex 3.7 kWh
+- URL: https://www.escooterwale.in/scooters/ather-energy-450-apex-3point7-kwh/
+- Ex-showroom price: ₹184,999
+- Estimated on-road price: ₹203,498
+- EMI from: ₹4810/month
+- Battery: 3.7 kWh
+- Claimed range (IDC): 161 km
+- Real-world range (ScooterWale estimate): 120–135 km
+- Top speed: 90 km/h
+- Charging time: 3.3 hrs
+- Kerb weight: 108 kg
+- Boot space: 22 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8.7/10 (Range 7.3, Features 8.5, Value 5, Ride 9.5, Service 9)
+- Verdict: The Ather 450 Apex (3.7 kWh) is the most refined EV scooter at this price. Exceptional build quality, Ather Grid charging, and the best ride quality in India.
+- Best for: Premium buyers wanting refinement; Riders in Ather service cities; Fast charging priority (3.3 hrs)
+- Avoid if: Buyers needing large boot (>22L); Outside Ather service network
+
+### TVS Motor iQube 2.2 kWh
+- URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-2point2-kwh/
+- Ex-showroom price: ₹109,319
+- Estimated on-road price: ₹120,250
+- EMI from: ₹2842/month
+- Battery: 2.2 kWh
+- Claimed range (IDC): 94 km
+- Real-world range (ScooterWale estimate): 70–82 km
+- Top speed: 82 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 30 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.5/10 (Range 4.3, Features 6, Value 7.5, Ride 8, Service 9.5)
+- Verdict: The TVS iQube (2.2 kWh) is the rational choice for dependable daily commuting. TVS's 4500+ service centres are unmatched across India.
+- Best for: Buyers outside metros needing wide service; Commutes needing 70–82 km real range
+- Avoid if: Tech & connected features are priority; Top speed above 82 km/h needed
+
+### TVS Motor iQube S 3.5 kWh
+- URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-s-3point5-kwh/
+- Ex-showroom price: ₹127,990
+- Estimated on-road price: ₹140,789
+- EMI from: ₹3328/month
+- Battery: 3.5 kWh
+- Claimed range (IDC): 145 km
+- Real-world range (ScooterWale estimate): 100–118 km
+- Top speed: 82 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 32 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.5/10 (Range 6.6, Features 6, Value 6.5, Ride 8, Service 9.5)
+- Verdict: The TVS iQube S (3.5 kWh) is the rational choice for dependable daily commuting. TVS's 4500+ service centres are unmatched across India.
+- Best for: Buyers outside metros needing wide service; Commutes needing 100–118 km real range
+- Avoid if: Tech & connected features are priority; Top speed above 82 km/h needed
+
+### TVS Motor iQube ST 3.5 kWh
+- URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-st-3point5-kwh/
+- Ex-showroom price: ₹149,990
+- Estimated on-road price: ₹164,989
+- EMI from: ₹3900/month
+- Battery: 3.5 kWh
+- Claimed range (IDC): 145 km
+- Real-world range (ScooterWale estimate): 100–118 km
+- Top speed: 82 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 32 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.5/10 (Range 6.6, Features 6, Value 5.3, Ride 8, Service 9.5)
+- Verdict: The TVS iQube ST (3.5 kWh) is the rational choice for dependable daily commuting. TVS's 4500+ service centres are unmatched across India.
+- Best for: Buyers outside metros needing wide service; Commutes needing 100–118 km real range
+- Avoid if: Tech & connected features are priority; Top speed above 82 km/h needed
+
+### TVS Motor iQube ST 5.3 kWh
+- URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-st-5point3-kwh/
+- Ex-showroom price: ₹169,000
+- Estimated on-road price: ₹185,900
+- EMI from: ₹4394/month
+- Battery: 5.3 kWh
+- Claimed range (IDC): 212 km
+- Real-world range (ScooterWale estimate): 155–175 km
+- Top speed: 82 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 32 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 8/10 (Range 9.6, Features 6, Value 5, Ride 8, Service 9.5)
+- Verdict: The TVS iQube ST (5.3 kWh) is the rational choice for dependable daily commuting. TVS's 4500+ service centres are unmatched across India.
+- Best for: Buyers outside metros needing wide service; Commutes needing 155–175 km real range
+- Avoid if: Tech & connected features are priority; Top speed above 82 km/h needed
+
+### Bajaj Chetak Chetak C2501 2.5 kWh
+- URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-c2501-2point5-kwh/
+- Ex-showroom price: ₹91,399
+- Estimated on-road price: ₹100,538
+- EMI from: ₹2376/month
+- Battery: 2.5 kWh
+- Claimed range (IDC): 113 km
+- Real-world range (ScooterWale estimate): 85–98 km
+- Top speed: 73 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 35 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.5/10 (Range 5.1, Features 6, Value 8.5, Ride 8, Service 9.5)
+- Verdict: The Bajaj Chetak C2501 (2.5 kWh) combines iconic retro design with Bajaj's 4000+ dealer network. All-metal body, premium finish. Best for style-conscious buyers.
+- Best for: Design-forward buyers wanting retro premium; Bajaj loyalists with local dealer access
+- Avoid if: Range > 130 km real needed; Connected tech features expected
+
+### Bajaj Chetak Chetak 3001 3.0 kWh
+- URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3001-3point0-kwh/
+- Ex-showroom price: ₹99,990
+- Estimated on-road price: ₹109,989
+- EMI from: ₹2600/month
+- Battery: 3.0 kWh
+- Claimed range (IDC): 127 km
+- Real-world range (ScooterWale estimate): 95–108 km
+- Top speed: 73 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 35 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.5/10 (Range 5.8, Features 6, Value 8.1, Ride 8, Service 9.5)
+- Verdict: The Bajaj Chetak 3001 (3.0 kWh) combines iconic retro design with Bajaj's 4000+ dealer network. All-metal body, premium finish. Best for style-conscious buyers.
+- Best for: Design-forward buyers wanting retro premium; Bajaj loyalists with local dealer access
+- Avoid if: Range > 130 km real needed; Connected tech features expected
+
+### Bajaj Chetak Chetak 3501 3.5 kWh
+- URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3501-3point5-kwh/
+- Ex-showroom price: ₹114,611
+- Estimated on-road price: ₹126,072
+- EMI from: ₹2980/month
+- Battery: 3.5 kWh
+- Claimed range (IDC): 153 km
+- Real-world range (ScooterWale estimate): 115–130 km
+- Top speed: 73 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 35 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.8/10 (Range 7, Features 6, Value 7.2, Ride 8, Service 9.5)
+- Verdict: The Bajaj Chetak 3501 (3.5 kWh) combines iconic retro design with Bajaj's 4000+ dealer network. All-metal body, premium finish. Best for style-conscious buyers.
+- Best for: Design-forward buyers wanting retro premium; Bajaj loyalists with local dealer access
+- Avoid if: Range > 130 km real needed; Connected tech features expected
+
+### Bajaj Chetak Chetak 3502 3.5 kWh
+- URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3502-3point5-kwh/
+- Ex-showroom price: ₹127,626
+- Estimated on-road price: ₹140,388
+- EMI from: ₹3318/month
+- Battery: 3.5 kWh
+- Claimed range (IDC): 153 km
+- Real-world range (ScooterWale estimate): 115–130 km
+- Top speed: 73 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 35 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.8/10 (Range 7, Features 6, Value 6.5, Ride 8, Service 9.5)
+- Verdict: The Bajaj Chetak 3502 (3.5 kWh) combines iconic retro design with Bajaj's 4000+ dealer network. All-metal body, premium finish. Best for style-conscious buyers.
+- Best for: Design-forward buyers wanting retro premium; Bajaj loyalists with local dealer access
+- Avoid if: Range > 130 km real needed; Connected tech features expected
+
+### Bajaj Chetak Chetak 3503 3.5 kWh
+- URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3503-3point5-kwh/
+- Ex-showroom price: ₹139,603
+- Estimated on-road price: ₹153,563
+- EMI from: ₹3630/month
+- Battery: 3.5 kWh
+- Claimed range (IDC): 153 km
+- Real-world range (ScooterWale estimate): 115–130 km
+- Top speed: 73 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 35 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.8/10 (Range 7, Features 6, Value 5.9, Ride 8, Service 9.5)
+- Verdict: The Bajaj Chetak 3503 (3.5 kWh) combines iconic retro design with Bajaj's 4000+ dealer network. All-metal body, premium finish. Best for style-conscious buyers.
+- Best for: Design-forward buyers wanting retro premium; Bajaj loyalists with local dealer access
+- Avoid if: Range > 130 km real needed; Connected tech features expected
+
+### Hero Vida VX2 Go 2.2 kWh
+- URL: https://www.escooterwale.in/scooters/hero-vida-vx2-go-2point2-kwh/
+- Ex-showroom price: ₹99,490
+- Estimated on-road price: ₹109,439
+- EMI from: ₹2587/month
+- Battery: 2.2 kWh
+- Claimed range (IDC): 92 km
+- Real-world range (ScooterWale estimate): 68–78 km
+- Top speed: 70 km/h
+- Charging time: 3.5 hrs
+- Kerb weight: 108 kg
+- Boot space: 26 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.5/10 (Range 4.2, Features 6, Value 8.1, Ride 7.5, Service 9)
+- Verdict: The Hero Vida VX2 Go (2.2 kWh) gives strong real range with Hero's 6000+ service points. Best value-for-money EV from a nationally trusted brand.
+- Best for: Value-conscious buyers; Hero loyalists outside metros
+- Avoid if: Premium tech or touchscreen matters; Sport riding expected
+
+### Hero Vida VX2 Plus 3.4 kWh
+- URL: https://www.escooterwale.in/scooters/hero-vida-vx2-plus-3point4-kwh/
+- Ex-showroom price: ₹120,440
+- Estimated on-road price: ₹132,484
+- EMI from: ₹3131/month
+- Battery: 3.4 kWh
+- Claimed range (IDC): 142 km
+- Real-world range (ScooterWale estimate): 105–120 km
+- Top speed: 80 km/h
+- Charging time: 5.3 hrs
+- Kerb weight: 108 kg
+- Boot space: 26 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.5/10 (Range 6.5, Features 6, Value 6.9, Ride 7.5, Service 9)
+- Verdict: The Hero Vida VX2 Plus (3.4 kWh) gives strong real range with Hero's 6000+ service points. Best value-for-money EV from a nationally trusted brand.
+- Best for: Value-conscious buyers; Hero loyalists outside metros
+- Avoid if: Premium tech or touchscreen matters; Sport riding expected
+
+### Hero Vida V2 Pro 3.94 kWh
+- URL: https://www.escooterwale.in/scooters/hero-vida-v2-pro-3point94-kwh/
+- Ex-showroom price: ₹129,566
+- Estimated on-road price: ₹142,522
+- EMI from: ₹3369/month
+- Battery: 3.94 kWh
+- Claimed range (IDC): 143 km
+- Real-world range (ScooterWale estimate): 108–122 km
+- Top speed: 80 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 26 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.5/10 (Range 6.5, Features 6, Value 6.4, Ride 7.5, Service 9)
+- Verdict: The Hero Vida V2 Pro (3.94 kWh) gives strong real range with Hero's 6000+ service points. Best value-for-money EV from a nationally trusted brand.
+- Best for: Value-conscious buyers; Hero loyalists outside metros
+- Avoid if: Premium tech or touchscreen matters; Sport riding expected
+
+### Ampere Reo 1.3 kWh
+- URL: https://www.escooterwale.in/scooters/ampere-reo-1point3-kwh/
+- Ex-showroom price: ₹59,900
+- Estimated on-road price: ₹65,890
+- EMI from: ₹1557/month
+- Battery: 1.3 kWh
+- Claimed range (IDC): 80 km
+- Real-world range (ScooterWale estimate): 55–65 km
+- Top speed: 45 km/h
+- Charging time: 6 hrs
+- Kerb weight: 108 kg
+- Boot space: 20 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 3.6, Features 6, Value 9.5, Ride 7, Service 8)
+- Verdict: The Ampere Reo (1.3 kWh) is India's most accessible EV with 5000+ dealers in 500+ cities. Best for Tier-2/3 buyers who need a service centre nearby.
+- Best for: Tier-2/3 city buyers needing wide service; Budget-conscious buyers
+- Avoid if: Premium ride quality expected; Real-world range > 120 km needed
+
+### Ampere Magnus Neo 2.3 kWh
+- URL: https://www.escooterwale.in/scooters/ampere-magnus-neo-2point3-kwh/
+- Ex-showroom price: ₹79,999
+- Estimated on-road price: ₹87,998
+- EMI from: ₹2080/month
+- Battery: 2.3 kWh
+- Claimed range (IDC): 85 km
+- Real-world range (ScooterWale estimate): 60–72 km
+- Top speed: 65 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 22 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 3.9, Features 6, Value 9.2, Ride 7, Service 8)
+- Verdict: The Ampere Magnus Neo (2.3 kWh) is India's most accessible EV with 5000+ dealers in 500+ cities. Best for Tier-2/3 buyers who need a service centre nearby.
+- Best for: Tier-2/3 city buyers needing wide service; Budget-conscious buyers
+- Avoid if: Premium ride quality expected; Real-world range > 120 km needed
+
+### Ampere Magnus G Max 3.0 kWh
+- URL: https://www.escooterwale.in/scooters/ampere-magnus-g-max-3point0-kwh/
+- Ex-showroom price: ₹94,999
+- Estimated on-road price: ₹104,498
+- EMI from: ₹2470/month
+- Battery: 3.0 kWh
+- Claimed range (IDC): 142 km
+- Real-world range (ScooterWale estimate): 105–120 km
+- Top speed: 65 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 22 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 6.5, Features 6, Value 8.3, Ride 7, Service 8)
+- Verdict: The Ampere Magnus G Max (3.0 kWh) is India's most accessible EV with 5000+ dealers in 500+ cities. Best for Tier-2/3 buyers who need a service centre nearby.
+- Best for: Tier-2/3 city buyers needing wide service; Budget-conscious buyers
+- Avoid if: Premium ride quality expected; Real-world range > 120 km needed
+
+### Ampere Nexus EX 3 kWh
+- URL: https://www.escooterwale.in/scooters/ampere-nexus-ex-3-kwh/
+- Ex-showroom price: ₹119,900
+- Estimated on-road price: ₹131,890
+- EMI from: ₹3117/month
+- Battery: 3 kWh
+- Claimed range (IDC): 100 km
+- Real-world range (ScooterWale estimate): 78–90 km
+- Top speed: 93 km/h
+- Charging time: 3.3 hrs
+- Kerb weight: 108 kg
+- Boot space: 24 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.2/10 (Range 4.5, Features 7, Value 7, Ride 7, Service 8)
+- Verdict: The Ampere Nexus EX (3 kWh) is India's most accessible EV with 5000+ dealers in 500+ cities. Best for Tier-2/3 buyers who need a service centre nearby.
+- Best for: Tier-2/3 city buyers needing wide service; Budget-conscious buyers
+- Avoid if: Premium ride quality expected; Real-world range > 120 km needed
+
+### Ampere Nexus ST 3 kWh
+- URL: https://www.escooterwale.in/scooters/ampere-nexus-st-3-kwh/
+- Ex-showroom price: ₹129,900
+- Estimated on-road price: ₹142,890
+- EMI from: ₹3377/month
+- Battery: 3 kWh
+- Claimed range (IDC): 105 km
+- Real-world range (ScooterWale estimate): 80–95 km
+- Top speed: 93 km/h
+- Charging time: 3.3 hrs
+- Kerb weight: 108 kg
+- Boot space: 24 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.2/10 (Range 4.8, Features 6, Value 6.4, Ride 7, Service 8)
+- Verdict: The Ampere Nexus ST (3 kWh) is India's most accessible EV with 5000+ dealers in 500+ cities. Best for Tier-2/3 buyers who need a service centre nearby.
+- Best for: Tier-2/3 city buyers needing wide service; Budget-conscious buyers
+- Avoid if: Premium ride quality expected; Real-world range > 120 km needed
+
+### Okinawa R30 0.8 kWh
+- URL: https://www.escooterwale.in/scooters/okinawa-r30-0point8-kwh/
+- Ex-showroom price: ₹61,998
+- Estimated on-road price: ₹68,197
+- EMI from: ₹1612/month
+- Battery: 0.8 kWh
+- Claimed range (IDC): 60 km
+- Real-world range (ScooterWale estimate): 42–50 km
+- Top speed: 25 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 14 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 2.7, Features 6, Value 9.5, Ride 7, Service 5.5)
+- Verdict: The Okinawa R30 (0.8 kWh) is a budget-friendly option from one of India's oldest EV brands. 700+ dealers. Good for cost-conscious buyers.
+- Best for: Budget buyers near Okinawa dealers; Short daily commutes
+- Avoid if: Service consistency is critical; Premium build quality expected
+
+### Okinawa Lite 1.2 kWh
+- URL: https://www.escooterwale.in/scooters/okinawa-lite-1point2-kwh/
+- Ex-showroom price: ₹69,090
+- Estimated on-road price: ₹75,999
+- EMI from: ₹1796/month
+- Battery: 1.2 kWh
+- Claimed range (IDC): 70 km
+- Real-world range (ScooterWale estimate): 50–58 km
+- Top speed: 25 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 16 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 3.2, Features 6, Value 9.5, Ride 7, Service 5.5)
+- Verdict: The Okinawa Lite (1.2 kWh) is a budget-friendly option from one of India's oldest EV brands. 700+ dealers. Good for cost-conscious buyers.
+- Best for: Budget buyers near Okinawa dealers; Short daily commutes
+- Avoid if: Service consistency is critical; Premium build quality expected
+
+### Okinawa iPraise+ 2.2 kWh
+- URL: https://www.escooterwale.in/scooters/okinawa-ipraiseplus-2point2-kwh/
+- Ex-showroom price: ₹89,999
+- Estimated on-road price: ₹98,998
+- EMI from: ₹2340/month
+- Battery: 2.2 kWh
+- Claimed range (IDC): 100 km
+- Real-world range (ScooterWale estimate): 72–84 km
+- Top speed: 55 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 18 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 4.5, Features 6, Value 8.6, Ride 7, Service 5.5)
+- Verdict: The Okinawa iPraise+ (2.2 kWh) is a budget-friendly option from one of India's oldest EV brands. 700+ dealers. Good for cost-conscious buyers.
+- Best for: Budget buyers near Okinawa dealers; Short daily commutes
+- Avoid if: Service consistency is critical; Premium build quality expected
+
+### Okinawa Ridge+ 2.8 kWh
+- URL: https://www.escooterwale.in/scooters/okinawa-ridgeplus-2point8-kwh/
+- Ex-showroom price: ₹106,990
+- Estimated on-road price: ₹117,689
+- EMI from: ₹2782/month
+- Battery: 2.8 kWh
+- Claimed range (IDC): 120 km
+- Real-world range (ScooterWale estimate): 88–100 km
+- Top speed: 58 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 20 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 5.5, Features 6, Value 7.7, Ride 7, Service 5.5)
+- Verdict: The Okinawa Ridge+ (2.8 kWh) is a budget-friendly option from one of India's oldest EV brands. 700+ dealers. Good for cost-conscious buyers.
+- Best for: Budget buyers near Okinawa dealers; Short daily commutes
+- Avoid if: Service consistency is critical; Premium build quality expected
+
+### Okinawa Okhi-90 2.8 kWh
+- URL: https://www.escooterwale.in/scooters/okinawa-okhi-90-2point8-kwh/
+- Ex-showroom price: ₹150,000
+- Estimated on-road price: ₹165,000
+- EMI from: ₹3900/month
+- Battery: 2.8 kWh
+- Claimed range (IDC): 100 km
+- Real-world range (ScooterWale estimate): 72–84 km
+- Top speed: 90 km/h
+- Charging time: 4 hrs
+- Kerb weight: 108 kg
+- Boot space: 20 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.2/10 (Range 4.5, Features 6, Value 5.3, Ride 7, Service 5.5)
+- Verdict: The Okinawa Okhi-90 (2.8 kWh) is a budget-friendly option from one of India's oldest EV brands. 700+ dealers. Good for cost-conscious buyers.
+- Best for: Budget buyers near Okinawa dealers; Short daily commutes
+- Avoid if: Service consistency is critical; Premium build quality expected
+
+### Pure EV EPluto 7G 2.0 kWh
+- URL: https://www.escooterwale.in/scooters/pure-ev-epluto-7g-2point0-kwh/
+- Ex-showroom price: ₹79,999
+- Estimated on-road price: ₹87,998
+- EMI from: ₹2080/month
+- Battery: 2.0 kWh
+- Claimed range (IDC): 90 km
+- Real-world range (ScooterWale estimate): 65–76 km
+- Top speed: 55 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 18 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 4.1, Features 6, Value 9.2, Ride 7, Service 5)
+- Verdict: The Pure EV EPluto 7G (2.0 kWh) is IIT Hyderabad incubated with solid real range and LTE connectivity. Best in South India near Pure EV's service network.
+- Best for: South India buyers near Pure EV service; Range-focused buyers on a budget
+- Avoid if: Outside Pure EV service zones; Service reliability is non-negotiable
+
+### Pure EV ETrance+ 4.5 kWh
+- URL: https://www.escooterwale.in/scooters/pure-ev-etranceplus-4point5-kwh/
+- Ex-showroom price: ₹110,000
+- Estimated on-road price: ₹121,000
+- EMI from: ₹2860/month
+- Battery: 4.5 kWh
+- Claimed range (IDC): 171 km
+- Real-world range (ScooterWale estimate): 130–148 km
+- Top speed: 75 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 28 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7.3/10 (Range 7.8, Features 6, Value 7.5, Ride 7, Service 5)
+- Verdict: The Pure EV ETrance+ (4.5 kWh) is IIT Hyderabad incubated with solid real range and LTE connectivity. Best in South India near Pure EV's service network.
+- Best for: South India buyers near Pure EV service; Range-focused buyers on a budget
+- Avoid if: Outside Pure EV service zones; Service reliability is non-negotiable
+
+### Pure EV Etron Plus 3.0 kWh
+- URL: https://www.escooterwale.in/scooters/pure-ev-etron-plus-3point0-kwh/
+- Ex-showroom price: ₹129,999
+- Estimated on-road price: ₹142,998
+- EMI from: ₹3380/month
+- Battery: 3.0 kWh
+- Claimed range (IDC): 120 km
+- Real-world range (ScooterWale estimate): 90–105 km
+- Top speed: 70 km/h
+- Charging time: 5 hrs
+- Kerb weight: 108 kg
+- Boot space: 22 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 5.5, Features 6, Value 6.4, Ride 7, Service 5)
+- Verdict: The Pure EV Etron Plus (3.0 kWh) is IIT Hyderabad incubated with solid real range and LTE connectivity. Best in South India near Pure EV's service network.
+- Best for: South India buyers near Pure EV service; Range-focused buyers on a budget
+- Avoid if: Outside Pure EV service zones; Service reliability is non-negotiable
+
+### Bounce Infinity Infinity E1 2.0 kWh
+- URL: https://www.escooterwale.in/scooters/bounce-infinity-infinity-e1-2point0-kwh/
+- Ex-showroom price: ₹68,999
+- Estimated on-road price: ₹75,898
+- EMI from: ₹1794/month
+- Battery: 2.0 kWh
+- Claimed range (IDC): 85 km
+- Real-world range (ScooterWale estimate): 60–72 km
+- Top speed: 65 km/h
+- Charging time: 4 hrs
+- Kerb weight: 108 kg
+- Boot space: 18 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 3.9, Features 6, Value 9.5, Ride 7, Service 5)
+- Verdict: The Infinity E1 (2.0 kWh) supports battery-swap — 0-minute 'recharge' at Bounce stations. Best for heavy users near Bounce swap cities.
+- Best for: Buyers near Bounce swap stations in metro cities; Delivery riders wanting zero charge wait
+- Avoid if: No Bounce swap station nearby; Range > 90 km real needed
+
+### Bounce Infinity Infinity E1 Plus 2.5 kWh
+- URL: https://www.escooterwale.in/scooters/bounce-infinity-infinity-e1-plus-2point5-kwh/
+- Ex-showroom price: ₹85,000
+- Estimated on-road price: ₹93,500
+- EMI from: ₹2210/month
+- Battery: 2.5 kWh
+- Claimed range (IDC): 105 km
+- Real-world range (ScooterWale estimate): 78–90 km
+- Top speed: 65 km/h
+- Charging time: 4 hrs
+- Kerb weight: 108 kg
+- Boot space: 18 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 4.8, Features 6, Value 8.9, Ride 7, Service 5)
+- Verdict: The Infinity E1 Plus (2.5 kWh) supports battery-swap — 0-minute 'recharge' at Bounce stations. Best for heavy users near Bounce swap cities.
+- Best for: Buyers near Bounce swap stations in metro cities; Delivery riders wanting zero charge wait
+- Avoid if: No Bounce swap station nearby; Range > 90 km real needed
+
+### Bgauss C12i 2.0 kWh
+- URL: https://www.escooterwale.in/scooters/bgauss-c12i-2point0-kwh/
+- Ex-showroom price: ₹97,950
+- Estimated on-road price: ₹107,745
+- EMI from: ₹2547/month
+- Battery: 2.0 kWh
+- Claimed range (IDC): 110 km
+- Real-world range (ScooterWale estimate): 82–95 km
+- Top speed: 72 km/h
+- Charging time: 4 hrs
+- Kerb weight: 108 kg
+- Boot space: 22 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 5, Features 6, Value 8.2, Ride 7, Service 5.5)
+- Verdict: The Bgauss C12i (2.0 kWh) is Mumbai-made with above-average build quality backed by RR Kabel. Good real range for its price.
+- Best for: Mumbai and western India buyers; Buyers wanting build quality above price
+- Avoid if: Outside Bgauss's limited service zone
+
+### Bgauss D15i 3.0 kWh
+- URL: https://www.escooterwale.in/scooters/bgauss-d15i-3point0-kwh/
+- Ex-showroom price: ₹114,500
+- Estimated on-road price: ₹125,950
+- EMI from: ₹2977/month
+- Battery: 3.0 kWh
+- Claimed range (IDC): 120 km
+- Real-world range (ScooterWale estimate): 90–105 km
+- Top speed: 82 km/h
+- Charging time: 4 hrs
+- Kerb weight: 108 kg
+- Boot space: 26 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 5.5, Features 6, Value 7.2, Ride 7, Service 5.5)
+- Verdict: The Bgauss D15i (3.0 kWh) is Mumbai-made with above-average build quality backed by RR Kabel. Good real range for its price.
+- Best for: Mumbai and western India buyers; Buyers wanting build quality above price
+- Avoid if: Outside Bgauss's limited service zone
+
+### Bgauss RUV 350i 3.0 kWh
+- URL: https://www.escooterwale.in/scooters/bgauss-ruv-350i-3point0-kwh/
+- Ex-showroom price: ₹124,900
+- Estimated on-road price: ₹137,390
+- EMI from: ₹3247/month
+- Battery: 3.0 kWh
+- Claimed range (IDC): 100 km
+- Real-world range (ScooterWale estimate): 75–88 km
+- Top speed: 75 km/h
+- Charging time: 4 hrs
+- Kerb weight: 108 kg
+- Boot space: 24 L
+- Ground clearance: 155 mm
+- Seat height: 785 mm
+- ScootScore: 7/10 (Range 4.5, Features 6, Value 6.7, Ride 7, Service 5.5)
+- Verdict: The Bgauss RUV 350i (3.0 kWh) is Mumbai-made with above-average build quality backed by RR Kabel. Good real range for its price.
+- Best for: Mumbai and western India buyers; Buyers wanting build quality above price
+- Avoid if: Outside Bgauss's limited service zone
+
+## City subsidy summary
+
+| City | State | State subsidy | Charging infrastructure |
+|------|-------|---------------|--------------------------|
+| Mumbai | Maharashtra | ₹5,000 | Good |
+| Delhi | Delhi NCR | ₹30,000 | Excellent |
+| Bengaluru | Karnataka | ₹10,000 | Excellent |
+| Hyderabad | Telangana | ₹5,000 | Good |
+| Chennai | Tamil Nadu | ₹5,000 | Good |
+| Pune | Maharashtra | ₹5,000 | Good |
+| Ahmedabad | Gujarat | ₹20,000 | Moderate |
+| Kolkata | West Bengal | ₹0 | Moderate |
+| Jaipur | Rajasthan | ₹10,000 | Developing |
+| Lucknow | Uttar Pradesh | ₹0 | Developing |
+| Surat | Gujarat | ₹20,000 | Good |
+| Chandigarh | Punjab/Haryana | ₹0 | Good |

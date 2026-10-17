@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ5QX4MXYX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NZ5QX4MXYX');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+<title>EV Scooter Trending Now – YouTube Reviews, Reddit Buzz & Brand Updates | ScooterWale</title>
+<meta name="description" content="What's trending in India's EV scooter world right now. Latest YouTube reviews from top tech creators, Reddit discussions, and official brand social posts."/>
+<meta name="keywords" content="ev scooter review youtube, electric scooter reddit india, ola electric instagram, ather energy, ev scooter trending 2026"/>
+<link rel="canonical" href="https://www.escooterwale.in/trending"/>
+<meta property="og:title" content="EV Scooter Trending Now – ScooterWale"/>
+<meta property="og:description" content="YouTube reviews, Reddit buzz, and latest brand posts all in one place."/>
+<meta property="og:type" content="website"/>
+<link rel="stylesheet" href="styles.css"/>
+<script src="data.js"></script>
+<script src="components.js"></script>
+<script src="videos-db.js"></script>
+<style>
+/* ── PAGE HERO ──────────────────────────────────────────── */
+.trending-hero{
+  background:var(--ink);
+  padding:56px 0 40px;
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+.trending-hero h1{color:#fff;margin-bottom:10px}
+.trending-hero p{color:rgba(255,255,255,.5);font-size:16px;max-width:520px}
+.trending-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:16px
+}
+.trending-eyebrow::before{content:'🔥';font-size:14px}
+
+/* ── TAB SWITCHER ───────────────────────────────────────── */
+.tab-row{
+  display:flex;gap:4px;background:var(--surf-2);
+  border-radius:var(--r-lg);padding:4px;
+  border:1px solid var(--border);width:fit-content;margin-bottom:28px
+}
+.tab-btn{
+  padding:10px 22px;border-radius:calc(var(--r-lg) - 4px);
+  font-size:13px;font-weight:600;cursor:pointer;border:none;
+  background:transparent;color:var(--ink-3);transition:all .2s
+}
+.tab-btn.active{background:#fff;color:var(--ink);box-shadow:var(--sh-sm)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+/* ── SECTION HEADER ─────────────────────────────────────── */
+.section-intro{
+  background:linear-gradient(135deg,var(--surf),var(--surf-2));
+  border:1px solid var(--border);border-radius:var(--r-xl);
+  padding:24px 28px;margin-bottom:28px;
+  display:flex;align-items:flex-start;gap:16px
+}
+.si-icon{font-size:32px;flex-shrink:0}
+.si-title{font-size:17px;font-weight:800;margin-bottom:4px}
+.si-desc{font-size:13px;color:var(--ink-3);line-height:1.6}
+.si-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  background:var(--g-tint);color:var(--g-dim);
+  border:1px solid var(--g-mid);border-radius:99px;
+  font-size:11px;font-weight:700;padding:3px 10px;margin-top:8px
+}
+.si-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--g);flex-shrink:0}
+
+/* ── YOUTUBE GRID ───────────────────────────────────────── */
+.yt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.yt-card{
+  background:var(--surf);border:1.5px solid var(--border);
+  border-radius:var(--r-lg);overflow:hidden;transition:all .2s;
+  text-decoration:none;color:inherit;display:block
+}
+.yt-card:hover{box-shadow:var(--sh-lg);transform:translateY(-3px);border-color:rgba(255,0,0,.3)}
+.yt-thumb{
+  position:relative;background:#111;
+  aspect-ratio:16/9;overflow:hidden
+}
+.yt-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.yt-card:hover .yt-thumb img{transform:scale(1.05)}
+.yt-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.35);transition:background .2s
+}
+.yt-card:hover .yt-play{background:rgba(0,0,0,.5)}
+.yt-play-btn{
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(255,0,0,.9);display:flex;align-items:center;justify-content:center;
+  font-size:20px;transition:transform .2s
+}
+.yt-card:hover .yt-play-btn{transform:scale(1.1)}
+.yt-duration{
+  position:absolute;bottom:8px;right:8px;
+  background:rgba(0,0,0,.85);color:#fff;
+  font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px
+}
+.yt-body{padding:14px 16px}
+.yt-creator{margin-bottom:6px}
+.yt-creator-name{
+  font-size:12px;font-weight:700;color:#ff0000;
+  display:flex;align-items:center;gap:5px
+}
+.yt-creator-name::before{content:'▶';font-size:9px}
+.yt-title{font-size:14px;font-weight:700;line-height:1.4;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.yt-meta{display:none}
+.yt-views,.yt-scooter-tag,.yt-creator-subs{display:none}
+
+/* ── REDDIT GRID ────────────────────────────────────────── */
+.reddit-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(max-width:700px){.reddit-list{grid-template-columns:1fr}}
+.reddit-card{
+  background:var(--surf);border:1.5px solid var(--border);
+  border-radius:var(--r-lg);padding:20px 24px;
+  transition:all .2s;text-decoration:none;color:inherit;display:block
+}
+.reddit-card:hover{box-shadow:var(--sh);border-color:rgba(37,99,235,.3);transform:translateX(4px)}
+.reddit-top{display:flex;align-items:flex-start;gap:14px}
+.reddit-votes{
+  display:flex;flex-direction:column;align-items:center;gap:2px;flex-shrink:0;
+  min-width:44px
+}
+.rv-num{font-size:16px;font-weight:800;color:var(--ink)}
+.rv-arrow{font-size:18px;color:#ff4500}
+.rv-label{font-size:10px;color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em}
+.reddit-content{flex:1}
+.reddit-flair{
+  display:inline-block;background:#ff4500;color:#fff;
+  font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:8px
+}
+.reddit-title{font-size:15px;font-weight:700;line-height:1.4;margin-bottom:8px}
+.reddit-excerpt{font-size:13px;color:var(--ink-3);line-height:1.6;margin-bottom:10px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.reddit-meta{display:flex;align-items:center;gap:14px;font-size:12px;color:var(--ink-4)}
+.reddit-sub{color:#c0392b;font-weight:600}
+.reddit-comments::before{content:'💬 '}
+.reddit-hot{
+  background:#fff3e0;color:#e65100;border:1px solid #ffcc80;
+  font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;
+  margin-left:auto
+}
+
+/* ── BRAND INSTAGRAM GRID ────────────────────────────────── */
+.social-brands{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media(max-width:1100px){.social-brands{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:800px){.social-brands{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.social-brands{grid-template-columns:repeat(2,1fr)}}
+
+.insta-card{
+  display:block;text-decoration:none;color:inherit;
+  border-radius:16px;overflow:hidden;
+  border:2px solid transparent;
+  transition:all .22s;
+  background:var(--surf);
+  position:relative
+}
+.insta-card:hover{
+  transform:translateY(-5px) scale(1.02);
+  box-shadow:0 16px 40px rgba(225,48,108,.18);
+  border-color:rgba(225,48,108,.5)
+}
+
+/* Screenshot fills the card */
+.insta-screenshot{
+  width:100%;
+  aspect-ratio:9/19;
+  object-fit:cover;
+  object-position:top center;
+  display:block
+}
+
+/* Overlay footer bar */
+.insta-overlay{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(transparent,rgba(0,0,0,.82) 40%);
+  padding:28px 10px 12px;
+  display:flex;flex-direction:column;gap:3px
+}
+.insta-brand-name{
+  font-size:12px;font-weight:800;color:#fff;
+  line-height:1.2
+}
+.insta-handle{
+  font-size:10px;color:rgba(255,255,255,.65);
+}
+.insta-ig-pill{
+  display:inline-flex;align-items:center;gap:4px;
+  margin-top:5px;
+  background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366);
+  color:#fff;font-size:9px;font-weight:800;
+  padding:3px 9px;border-radius:99px;width:fit-content;
+  letter-spacing:.03em
+}
+
+/* ── UPDATE NOTICE ──────────────────────────────────────── */
+.live-note{
+  background:linear-gradient(135deg,#0d1117,#161b22);
+  border:1px solid rgba(22,166,99,.3);border-radius:var(--r-lg);
+  padding:16px 20px;display:flex;align-items:center;gap:12px;
+  margin-bottom:28px;color:rgba(255,255,255,.7);font-size:13px
+}
+.live-dot{width:8px;height:8px;border-radius:50%;background:var(--g);flex-shrink:0;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.9)}}
+
+/* ── SCOOTER FILTER ROW ─────────────────────────────────── */
+.filter-scooters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.scooter-filter-btn{
+  font-size:12px;font-weight:600;padding:6px 14px;
+  border-radius:99px;border:1.5px solid var(--border);
+  background:var(--surf);cursor:pointer;transition:all .15s;color:var(--ink-3)
+}
+.scooter-filter-btn.active,.scooter-filter-btn:hover{
+  border-color:var(--g);background:var(--g-tint);color:var(--g-dim)
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:900px){
+  .yt-grid{grid-template-columns:repeat(2,1fr)}
+  .social-brands{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .yt-grid{grid-template-columns:1fr}
+  /* Tab row: stack buttons vertically on small screens */
+  .tab-row{
+    width:100%;
+    flex-direction:column;
+    gap:4px
+  }
+  .tab-btn{
+    width:100%;
+    padding:11px 16px;
+    font-size:13px;
+    text-align:center
+  }
+  /* Brand socials: 2 columns on mobile */
+  .social-brands{grid-template-columns:repeat(2,1fr);gap:10px}
+  .section-intro{flex-direction:column;gap:8px}
+  .reddit-top{gap:10px}
+}
+@media(max-width:360px){
+  .social-brands{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="navMount"></div>
+<div class="page-wrap">
+
+<!-- ── PAGE HERO ─────────────────────────────────────────── -->
+<div class="trending-hero">
+  <div class="container">
+    <div class="trending-eyebrow">What's buzzing right now</div>
+    <h1>EV Scooter Trending 🔥</h1>
+    <p>YouTube reviews from top creators, Reddit conversations, and the latest brand posts — all in one place. Updated daily.</p>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ──────────────────────────────────────── -->
+<section class="sec">
+  <div class="container">
+
+    <!-- Tab Switcher -->
+    <div class="tab-row" id="tabRow">
+      <button class="tab-btn active" onclick="switchTab('youtube',this)" data-label="▶ YouTube Reviews" data-short="▶ YouTube">▶ YouTube Reviews</button>
+      <button class="tab-btn" onclick="switchTab('reddit',this)" data-label="📖 Read Before You Buy" data-short="📖 Read First">📖 Read Before You Buy</button>
+      <button class="tab-btn" onclick="switchTab('social',this)" data-label="📸 Brand Socials" data-short="📸 Socials">📸 Brand Socials</button>
+    </div>
+
+    <!-- ══ YOUTUBE TAB ══════════════════════════════════════ -->
+    <div class="tab-panel active" id="tab-youtube">
+      <div class="live-note">
+        <div class="live-dot"></div>
+        <div>These are the most-watched EV scooter reviews from India's top tech creators. Click any card to watch on YouTube.</div>
+      </div>
+      
+
+      <!-- Scooter filter -->
+      <div class="filter-scooters" id="ytFilter">
+        <button class="scooter-filter-btn active" onclick="filterYT('all',this)">All Scooters</button>
+        <button class="scooter-filter-btn" onclick="filterYT('ola',this)">Ola Electric</button>
+        <button class="scooter-filter-btn" onclick="filterYT('ather',this)">Ather</button>
+        <button class="scooter-filter-btn" onclick="filterYT('tvs',this)">TVS iQube</button>
+        <button class="scooter-filter-btn" onclick="filterYT('honda',this)">Honda Activa EV</button>
+        <button class="scooter-filter-btn" onclick="filterYT('ampere',this)">Greaves Ampere</button>
+        <button class="scooter-filter-btn" onclick="filterYT('simple',this)">Simple One</button>
+      </div>
+
+      <div class="yt-grid" id="ytGrid"></div>
+    </div>
+
+    <!-- ══ REDDIT TAB ════════════════════════════════════════ -->
+    <div class="tab-panel" id="tab-reddit">
+      <div class="live-note">
+        <div class="live-dot"></div>
+        <div>Verified ownership reports, comparisons and industry data from Team-BHP and Autocar India. Every link goes directly to the exact article or thread.</div>
+      </div>
+      
+      <div class="reddit-list" id="redditList"></div>
+    </div>
+
+    <!-- ══ SOCIAL TAB ════════════════════════════════════════ -->
+    <div class="tab-panel" id="tab-social">
+      <div class="live-note">
+        <div class="live-dot"></div>
+        <div>Latest posts from EV scooter brand official accounts. New launches, offers, and updates — directly from the brands.</div>
+      </div>
+      
+      <div class="social-brands" id="socialBrands"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── COMPARE CTA ────────────────────────────────────────── -->
+<section class="sec-alt">
+  <div class="container">
+    <div class="compare-callout">
+      <div class="compare-callout-text">
+        <h2>Ready to compare the scooters you just saw?</h2>
+        <p>Pick any two and get a side-by-side verdict in 30 seconds</p>
+      </div>
+      <div class="compare-callout-right">
+        <a href="/compare" class="btn btn-primary btn-lg">Compare Now →</a>
+        <a href="/listings" class="btn btn-outline-light btn-lg">Browse All Scooters</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footerMount"></div>
+<div id="compareTrayMount"></div>
+</div>
+
+<script>
+// ── Data ──────────────────────────────────────────────────
+/* ── HOW TO ADD REAL VIDEO IDs ───────────────────────────────
+   1. Find the YouTube video you want (e.g. youtube.com/watch?v=ABC123)
+   2. Set videoId:"ABC123" on that entry
+   3. The card will auto-use the YouTube thumbnail + exact video link
+   ─────────────────────────────────────────────────────────── */
+const YT_VIDEOS = [
+  {
+    id:"yt1", brand:"ola", scooter:"Ola S1 Pro Gen 3",
+    title:"Ola S1 Pro Gen 3 — Complete Review: Range, Features & Real-World Use",
+    creator:"Mumbiker Nikhil", avatar:"MN", avatarColor:"#e63946",
+    subs:"4.2M", views:"2.4M", duration:"22:18", daysAgo:12,
+    videoId: null,   // ← paste real YouTube video ID here e.g. "kIBDNyvYqzA"
+    channelSearch:"https://www.youtube.com/results?search_query=Mumbiker+Nikhil+Ola+S1+Pro+review",
+    scooterImg:"/images/Ola Electric S1 Pro 4 kWh.webp",
+    scooterColor:"#16a663", verdict:"Long-term ownership verdict"
+  },
+  {
+    id:"yt2", brand:"ather", scooter:"Ather 450X Gen 3",
+    title:"Ather 450X vs Ola S1 Pro Gen 3 — Which ONE to Buy in 2026?",
+    creator:"Technical Guruji", avatar:"TG", avatarColor:"#2563eb",
+    subs:"23.7M", views:"3.8M", duration:"28:44", daysAgo:8,
+    videoId: null,
+    channelSearch:"https://www.youtube.com/results?search_query=Technical+Guruji+Ather+450X+Ola+S1+Pro+comparison",
+    scooterImg:"/images/Ather Energy 450X 3.7 kWh.webp",
+    scooterColor:"#2563eb", verdict:"Head-to-head comparison"
+  },
+  {
+    id:"yt3", brand:"tvs", scooter:"TVS iQube ST 5.3 kWh",
+    title:"TVS iQube ST 5.3 kWh Real Range Test — Does It Actually Do 210km?",
+    creator:"Pushpak EV World", avatar:"PE", avatarColor:"#f59e0b",
+    subs:"1.2M", views:"980K", duration:"15:22", daysAgo:21,
+    videoId: null,
+    channelSearch:"https://www.youtube.com/results?search_query=TVS+iQube+ST+range+test+review+2025",
+    scooterImg:"/images/TVS Motor iQube ST 5.3 kWh.webp",
+    scooterColor:"#f59e0b", verdict:"Real-world range test"
+  },
+  {
+    id:"yt4", brand:"ather", scooter:"Ather Rizta Z",
+    title:"Ather Rizta Z — Best Family EV Scooter in India? Full Review",
+    creator:"Bike With Girl", avatar:"BG", avatarColor:"#2563eb",
+    subs:"2.1M", views:"1.4M", duration:"20:11", daysAgo:5,
+    videoId: null,
+    channelSearch:"https://www.youtube.com/results?search_query=Bike+with+Girl+Ather+Rizta+Z+review",
+    scooterImg:"/images/Ather Energy Rizta Z 3.7 kWh.webp",
+    scooterColor:"#2563eb", verdict:"Family buyer perspective"
+  },
+  {
+    id:"yt5", brand:"ola", scooter:"Ola S1 X+",
+    title:"Ola S1 X+ 4 kWh — Best Scooter Under ₹1.25L? Honest Review",
+    creator:"Tech Burner", avatar:"TB", avatarColor:"#16a663",
+    subs:"8.4M", views:"2.1M", duration:"16:30", daysAgo:3,
+    videoId: null,
+    channelSearch:"https://www.youtube.com/results?search_query=TechBurner+Ola+S1+X+review+2025",
+    scooterImg:"/images/Ola Electric S1 X+ 4 kWh.webp",
+    scooterColor:"#16a663", verdict:"Budget champion deep dive"
+  },
+  {
+    id:"yt6", brand:"bajaj", scooter:"Bajaj Chetak 3503",
+    title:"Bajaj Chetak 3503 — Why It's Still Worth Buying in 2026",
+    creator:"WheelSpin Media", avatar:"WS", avatarColor:"#7c3aed",
+    subs:"890K", views:"1.1M", duration:"19:45", daysAgo:14,
+    videoId: null,
+    channelSearch:"https://www.youtube.com/results?search_query=Bajaj+Chetak+3503+review+2025+2026",
+    scooterImg:"/images/Bajaj Chetak Chetak 3503 3.5 kWh.webp",
+    scooterColor:"#7c3aed", verdict:"Design vs rivals breakdown"
+  },
+  {
+    id:"yt7", brand:"hero", scooter:"Hero Vida V2 Pro",
+    title:"Hero Vida V2 Pro — Best Range Per Rupee in India? We Test It",
+    creator:"PowerDrift", avatar:"PD", avatarColor:"#dc2626",
+    subs:"3.2M", views:"870K", duration:"18:22", daysAgo:19,
+    videoId: null,
+    channelSearch:"https://www.youtube.com/results?search_query=PowerDrift+Hero+Vida+V2+Pro+review",
+    scooterImg:"/images/Hero Vida V2 Pro 3.94 kWh.png",
+    scooterColor:"#dc2626", verdict:"Value segment winner?"
+  },
+  {
+    id:"yt8", brand:"ather", scooter:"Ather 450 Apex",
+    title:"Ather 450 Apex — India's Most Exciting EV? Full Review",
+    creator:"MotorOctane", avatar:"MO", avatarColor:"#2563eb",
+    subs:"1.5M", views:"1.2M", duration:"24:15", daysAgo:7,
+    videoId: null,
+    channelSearch:"https://www.youtube.com/results?search_query=Ather+450+Apex+review+2025",
+    scooterImg:"/images/Ather Energy 450 Apex 3.7 kWh.webp",
+    scooterColor:"#2563eb", verdict:"Premium performance scooter"
+  },
+  {
+    id:"yt9", brand:"tvs", scooter:"TVS iQube S",
+    title:"TVS iQube S vs Hero Vida V2 Pro — Tier-2 City Shootout 2026",
+    creator:"Zigwheels", avatar:"ZW", avatarColor:"#f59e0b",
+    subs:"2.8M", views:"760K", duration:"21:05", daysAgo:11,
+    videoId: null,
+    channelSearch:"https://www.youtube.com/results?search_query=TVS+iQube+vs+Hero+Vida+comparison+2025+2026",
+    scooterImg:"/images/TVS Motor iQube S 3.5 kWh.webp",
+    scooterColor:"#f59e0b", verdict:"Tier-2 city best pick"
+  }
+];
+
+// ── Resolve URL and thumbnail for each video ────────────────
+// If videoId is set → use YouTube exact video + official thumbnail
+// If not → use YouTube search URL + scooter product image
+YT_VIDEOS.forEach(function(v){
+  if(v.videoId){
+    v.url   = 'https://www.youtube.com/watch?v=' + v.videoId;
+    v.thumb = 'https://img.youtube.com/vi/' + v.videoId + '/maxresdefault.jpg';
+  } else {
+    v.url   = v.channelSearch;
+    v.thumb = v.scooterImg;
+  }
+});
+
+const REDDIT_POSTS = [
+  {
+    id:"r1", sub:"BikeDekho", flair:"Review Site", hot:true,
+    title:"Electric Scooters in India",
+    excerpt:"Click to read — BikeDekho",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.bikedekho.com/electric-scooters",
+    _icon:"🏍️", _color:"#ef4444"
+  },
+  {
+    id:"r2", sub:"BikeWale", flair:"Review Site", hot:true,
+    title:"Electric Scooters in India",
+    excerpt:"Click to read — BikeWale",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.bikewale.com/electric-scooters/",
+    _icon:"🛵", _color:"#f97316"
+  },
+  {
+    id:"r3", sub:"ZigWheels", flair:"Review Site", hot:true,
+    title:"New Electric Scooters",
+    excerpt:"Click to read — ZigWheels",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.zigwheels.com/newbikes/electric-scooters",
+    _icon:"⚡", _color:"#f59e0b"
+  },
+  {
+    id:"r4", sub:"Tata AIG", flair:"Guide", hot:true,
+    title:"Top Electric Scooters in India",
+    excerpt:"Click to read — Tata AIG",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.tataaig.com/knowledge-center/two-wheeler-insurance/top-electric-scooters-in-india",
+    _icon:"🛡️", _color:"#16a663"
+  },
+  {
+    id:"r5", sub:"Bajaj Finserv", flair:"Guide", hot:true,
+    title:"Top 10 Electric Scooters",
+    excerpt:"Click to read — Bajaj Finserv",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.bajajfinserv.in/top-10-electric-scooters",
+    _icon:"💰", _color:"#16a663"
+  },
+  {
+    id:"r6", sub:"OLX Blog", flair:"Guide", hot:false,
+    title:"EV Scooter Brands in India",
+    excerpt:"Click to read — OLX Blog",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.olx.in/blog/bikes/ev-scooter-brands-in-india/",
+    _icon:"🛒", _color:"#f59e0b"
+  },
+  {
+    id:"r7", sub:"DriveSpark", flair:"News", hot:true,
+    title:"Best Electric Scooters in India 2025",
+    excerpt:"Click to read — DriveSpark",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.drivespark.com/two-wheelers/2025/best-electric-scooters-in-india-in-2025-budget-performance-premium-family-segment-080080.html",
+    _icon:"📡", _color:"#0ea5e9"
+  },
+  {
+    id:"r8", sub:"BikeAdvice", flair:"Guide", hot:true,
+    title:"Top 5 Electric Scooters 2025",
+    excerpt:"Click to read — BikeAdvice",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://bikeadvice.in/top-5-electric-scooters-launched-in-2025-in-india/",
+    _icon:"💡", _color:"#8b5cf6"
+  },
+  {
+    id:"r9", sub:"Gyroor", flair:"Guide", hot:false,
+    title:"Best Electric Scooters Guide",
+    excerpt:"Click to read — Gyroor",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://gyroorboard.com/blogs/learn-with-gyroor/best-electric-scooters-india-2025-comparison-top-picks-and-buying-guide",
+    _icon:"📋", _color:"#6366f1"
+  },
+  {
+    id:"r10", sub:"ErideHero", flair:"Guide", hot:false,
+    title:"Best Electric Scooters",
+    excerpt:"Click to read — ErideHero",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://eridehero.com/best-electric-scooters/",
+    _icon:"⚡", _color:"#10b981"
+  },
+  {
+    id:"r11", sub:"BikeDekho", flair:"Review Site", hot:false,
+    title:"Compare Scooters Tool",
+    excerpt:"Click to read — BikeDekho",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.bikedekho.com/compare-scooters",
+    _icon:"🏍️", _color:"#ef4444"
+  },
+  {
+    id:"r12", sub:"BikeWale", flair:"Review Site", hot:false,
+    title:"Compare Bikes Tool",
+    excerpt:"Click to read — BikeWale",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.bikewale.com/compare-bikes/",
+    _icon:"🛵", _color:"#f97316"
+  },
+  {
+    id:"r13", sub:"ZigWheels", flair:"Review Site", hot:false,
+    title:"Bike Comparison Tool",
+    excerpt:"Click to read — ZigWheels",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.zigwheels.com/bike-comparison/",
+    _icon:"⚡", _color:"#f59e0b"
+  },
+  {
+    id:"r14", sub:"CarandBike", flair:"Review Site", hot:false,
+    title:"Compare Bikes",
+    excerpt:"Click to read — CarandBike",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.carandbike.com/compare-bikes",
+    _icon:"🚗", _color:"#64748b"
+  },
+  {
+    id:"r15", sub:"Autocar India", flair:"Expert Review", hot:true,
+    title:"Bike Reviews",
+    excerpt:"Click to read — Autocar India",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.autocarindia.com/bike-reviews",
+    _icon:"📰", _color:"#2563eb"
+  },
+  {
+    id:"r16", sub:"YouTube", flair:"Video", hot:true,
+    title:"Ola vs Ather Comparison",
+    excerpt:"Click to read — YouTube",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.youtube.com/watch?v=8-Y49g_Uhfc",
+    _icon:"▶️", _color:"#ff0000"
+  },
+  {
+    id:"r17", sub:"YouTube", flair:"Video", hot:true,
+    title:"EV Scooter Comparison India",
+    excerpt:"Click to read — YouTube",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.youtube.com/watch?v=fdWK8aDf5Ds",
+    _icon:"▶️", _color:"#ff0000"
+  },
+  {
+    id:"r18", sub:"YouTube", flair:"Video", hot:true,
+    title:"Best EV Scooters India",
+    excerpt:"Click to read — YouTube",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.youtube.com/watch?v=3oBkoYUiyfs",
+    _icon:"▶️", _color:"#ff0000"
+  },
+  {
+    id:"r19", sub:"Reddit (r/indianbikes)", flair:"Community", hot:true,
+    title:"Which EV scooter to buy",
+    excerpt:"Click to read — Reddit (r/indianbikes)",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reddit.com/r/indianbikes/comments/1hjs42r/which_ev_scooter_to_buy_in_india/",
+    _icon:"💬", _color:"#ff4500"
+  },
+  {
+    id:"r20", sub:"Reddit (r/indianbikes)", flair:"Community", hot:true,
+    title:"Best scooter performance India",
+    excerpt:"Click to read — Reddit (r/indianbikes)",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reddit.com/r/indianbikes/comments/1nqzaoe/guide_me_for_buying_the_best_scooter_performance/",
+    _icon:"💬", _color:"#ff4500"
+  },
+  {
+    id:"r21", sub:"Reddit", flair:"Community", hot:false,
+    title:"Electric Vehicles Discussion",
+    excerpt:"Click to read — Reddit",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reddit.com/r/electricvehicles/",
+    _icon:"💬", _color:"#ff4500"
+  },
+  {
+    id:"r22", sub:"Reddit", flair:"Community", hot:false,
+    title:"Electric Scooters Discussion",
+    excerpt:"Click to read — Reddit",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reddit.com/r/ElectricScooters/",
+    _icon:"💬", _color:"#ff4500"
+  },
+  {
+    id:"r23", sub:"Reddit", flair:"Community", hot:false,
+    title:"EV Scooter India Search",
+    excerpt:"Click to read — Reddit",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reddit.com/r/india/search/?q=ev%20scooter",
+    _icon:"💬", _color:"#ff4500"
+  },
+  {
+    id:"r24", sub:"Reddit", flair:"Community", hot:false,
+    title:"Cars India EV Discussions",
+    excerpt:"Click to read — Reddit",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reddit.com/r/CarsIndia/",
+    _icon:"💬", _color:"#ff4500"
+  },
+  {
+    id:"r25", sub:"Reddit", flair:"Community", hot:false,
+    title:"Ola S1 Pro Reviews",
+    excerpt:"Click to read — Reddit",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reddit.com/search/?q=ola%20s1%20pro%20review",
+    _icon:"💬", _color:"#ff4500"
+  },
+  {
+    id:"r26", sub:"Reddit", flair:"Community", hot:false,
+    title:"Ather 450X Reviews",
+    excerpt:"Click to read — Reddit",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reddit.com/search/?q=ather%20450x%20review",
+    _icon:"💬", _color:"#ff4500"
+  },
+  {
+    id:"r27", sub:"Reddit", flair:"Community", hot:false,
+    title:"TVS iQube Reviews",
+    excerpt:"Click to read — Reddit",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reddit.com/search/?q=tvs%20iqube%20review",
+    _icon:"💬", _color:"#ff4500"
+  },
+  {
+    id:"r28", sub:"Facebook", flair:"Community", hot:false,
+    title:"EV India Group Discussion",
+    excerpt:"Click to read — Facebook",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.facebook.com/groups/662724451304068/posts/1788073718769130/",
+    _icon:"👥", _color:"#1877f2"
+  },
+  {
+    id:"r29", sub:"Team-BHP", flair:"Community", hot:true,
+    title:"Motorbike Discussions",
+    excerpt:"Click to read — Team-BHP",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.team-bhp.com/forum/motorbikes/",
+    _icon:"🏁", _color:"#c0392b"
+  },
+  {
+    id:"r30", sub:"Quora", flair:"Community", hot:false,
+    title:"Best Electric Scooter India",
+    excerpt:"Click to read — Quora",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.quora.com/Which-electric-scooter-is-best-in-India",
+    _icon:"❓", _color:"#b92b27"
+  },
+  {
+    id:"r31", sub:"Quora", flair:"Community", hot:false,
+    title:"Is Ola S1 Pro worth buying",
+    excerpt:"Click to read — Quora",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.quora.com/Is-Ola-S1-Pro-worth-buying",
+    _icon:"❓", _color:"#b92b27"
+  },
+  {
+    id:"r32", sub:"Quora", flair:"Community", hot:false,
+    title:"Ather vs Ola Comparison",
+    excerpt:"Click to read — Quora",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.quora.com/Ather-450X-vs-Ola-S1-Pro",
+    _icon:"❓", _color:"#b92b27"
+  },
+  {
+    id:"r33", sub:"Facebook", flair:"Community", hot:false,
+    title:"Electric Vehicles India Group",
+    excerpt:"Click to read — Facebook",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.facebook.com/groups/electricvehiclesindia",
+    _icon:"👥", _color:"#1877f2"
+  },
+  {
+    id:"r34", sub:"Facebook", flair:"Community", hot:false,
+    title:"EV Owners India Group",
+    excerpt:"Click to read — Facebook",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.facebook.com/groups/evownersindia",
+    _icon:"👥", _color:"#1877f2"
+  },
+  {
+    id:"r35", sub:"Car and Driver", flair:"Expert Review", hot:false,
+    title:"Best Electric Scooters Tested",
+    excerpt:"Click to read — Car and Driver",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.caranddriver.com/car-accessories/g62530668/best-electric-scooters-tested/",
+    _icon:"🏎️", _color:"#374151"
+  },
+  {
+    id:"r36", sub:"Autocar India", flair:"Expert Review", hot:false,
+    title:"Bike Reviews Section",
+    excerpt:"Click to read — Autocar India",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.autocarindia.com/bike-reviews",
+    _icon:"📰", _color:"#2563eb"
+  },
+  {
+    id:"r37", sub:"Overdrive", flair:"Expert Review", hot:false,
+    title:"EV Reviews",
+    excerpt:"Click to read — Overdrive",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.overdrive.in/reviews/",
+    _icon:"🏁", _color:"#7c3aed"
+  },
+  {
+    id:"r38", sub:"ZigWheels", flair:"Review Site", hot:false,
+    title:"Scooter Reviews",
+    excerpt:"Click to read — ZigWheels",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.zigwheels.com/reviews",
+    _icon:"⚡", _color:"#f59e0b"
+  },
+  {
+    id:"r39", sub:"BikeDekho", flair:"Review Site", hot:false,
+    title:"Scooter Reviews",
+    excerpt:"Click to read — BikeDekho",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.bikedekho.com/reviews",
+    _icon:"🏍️", _color:"#ef4444"
+  },
+  {
+    id:"r40", sub:"BikeWale", flair:"Review Site", hot:false,
+    title:"Scooter Reviews",
+    excerpt:"Click to read — BikeWale",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.bikewale.com/reviews/",
+    _icon:"🛵", _color:"#f97316"
+  },
+  {
+    id:"r41", sub:"Times of India", flair:"News", hot:false,
+    title:"Auto News",
+    excerpt:"Click to read — Times of India",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://timesofindia.indiatimes.com/auto",
+    _icon:"📰", _color:"#dc2626"
+  },
+  {
+    id:"r42", sub:"Reuters", flair:"News", hot:false,
+    title:"EV Industry News",
+    excerpt:"Click to read — Reuters",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.reuters.com/business/autos-transportation/",
+    _icon:"📡", _color:"#f59e0b"
+  },
+  {
+    id:"r43", sub:"Economic Times", flair:"News", hot:false,
+    title:"Auto Industry News",
+    excerpt:"Click to read — Economic Times",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://economictimes.indiatimes.com/industry/auto",
+    _icon:"📈", _color:"#1e40af"
+  },
+  {
+    id:"r44", sub:"DriveSpark", flair:"News", hot:false,
+    title:"EV News & Reviews",
+    excerpt:"Click to read — DriveSpark",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.drivespark.com/",
+    _icon:"📡", _color:"#0ea5e9"
+  },
+  {
+    id:"r45", sub:"Financial Express", flair:"News", hot:false,
+    title:"Auto Section",
+    excerpt:"Click to read — Financial Express",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.financialexpress.com/auto/",
+    _icon:"📊", _color:"#0f766e"
+  },
+  {
+    id:"r46", sub:"Times of India", flair:"News", hot:true,
+    title:"Simple One Review",
+    excerpt:"Click to read — Times of India",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://timesofindia.indiatimes.com/auto/bikes/simple-one-gen-2-first-ride-review-small-smart-changes/articleshow/128378955.cms",
+    _icon:"📰", _color:"#dc2626"
+  },
+  {
+    id:"r47", sub:"Times of India", flair:"News", hot:true,
+    title:"Bajaj Chetak Launch",
+    excerpt:"Click to read — Times of India",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://timesofindia.indiatimes.com/auto/electric-bikes/bajaj-chetak-3001-launched-at-rs-99990-range-features-more/articleshow/121906304.cms",
+    _icon:"📰", _color:"#dc2626"
+  },
+  {
+    id:"r48", sub:"Bajaj", flair:"Official", hot:false,
+    title:"Chetak Official Website",
+    excerpt:"Click to read — Bajaj",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.chetak.com/",
+    _icon:"🏢", _color:"#7c3aed"
+  },
+  {
+    id:"r49", sub:"Ola Electric", flair:"Official", hot:true,
+    title:"Official Website",
+    excerpt:"Click to read — Ola Electric",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.olaelectric.com/",
+    _icon:"🟢", _color:"#16a663"
+  },
+  {
+    id:"r50", sub:"Ather Energy", flair:"Official", hot:true,
+    title:"Official Website",
+    excerpt:"Click to read — Ather Energy",
+    votes:"0", comments:"0", daysAgo:0,
+    url:"https://www.atherenergy.com/",
+    _icon:"🔵", _color:"#2563eb"
+  }
+];
+
+// ── Render YT Grid ──────────────────────────────────────
+function fmtViews(n){
+  if(!n) return '';
+  const num = parseFloat(n.replace(/[KMB]/,''));
+  if(n.includes('M')) return (num).toFixed(1)+'M views';
+  if(n.includes('K')) return (num).toFixed(0)+'K views';
+  return n+' views';
+}
+
+let activeYTFilter = 'all';
+function renderYT(filter='all'){
+  const grid = document.getElementById('ytGrid');
+  const filtered = filter==='all' ? YT_VIDEOS : YT_VIDEOS.filter(v=>v.brand===filter);
+  grid.innerHTML = filtered.map(v=>{
+    const hasVideo = !!v.videoId;
+    return `
+    <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="yt-card" data-brand="${v.brand}">
+      <div class="yt-thumb">
+        <img src="${v.thumb}" alt="${v.title}" loading="lazy"
+          onerror="this.src='/images/Ola Electric S1 Pro 4 kWh.webp'"/>
+        <div class="yt-play">
+          <div class="yt-play-btn">${hasVideo ? '▶' : '🔍'}</div>
+        </div>
+        ${!hasVideo ? '<div style="position:absolute;top:10px;left:10px;background:rgba(0,0,0,.7);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:.04em">SEARCH ON YOUTUBE</div>' : ''}
+        <div class="yt-duration">${v.duration}</div>
+      </div>
+      <div class="yt-body">
+        <div class="yt-creator">
+          <div class="yt-creator-name">${v.creator}</div>
+        </div>
+        <div class="yt-title">${v.title}</div>
+      </div>
+    </a>`;
+  }).join('');
+}
+
+function filterYT(filter, btn){
+  activeYTFilter = filter;
+  document.querySelectorAll('#ytFilter .scooter-filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderYT(filter);
+}
+
+// ── Render Reddit ───────────────────────────────────────
+function renderReddit(){
+  const list = document.getElementById('redditList');
+  const FLAIR_COLORS = {
+    'Review Site':'#2563eb','Expert Review':'#7c3aed','Community':'#ff4500',
+    'Video':'#ff0000','Guide':'#16a663','News':'#f59e0b','Official':'#0ea5e9'
+  };
+  list.innerHTML = REDDIT_POSTS.map(function(p){
+    const flairColor = FLAIR_COLORS[p.flair] || '#64748b';
+    const icon = p._icon || '📄';
+    const iconColor = p._color || '#64748b';
+    return '<a href="'+p.url+'" target="_blank" rel="noopener noreferrer" class="reddit-card">'+
+      '<div class="reddit-top">'+
+        '<div style="flex-shrink:0;width:40px;height:40px;border-radius:10px;background:'+iconColor+'18;border:1px solid '+iconColor+'30;display:flex;align-items:center;justify-content:center;font-size:18px;margin-top:2px">'+icon+'</div>'+
+        '<div class="reddit-content">'+
+          '<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">'+
+            '<span style="font-size:10px;font-weight:800;padding:2px 8px;border-radius:4px;background:'+flairColor+';color:#fff">'+p.flair+'</span>'+
+            '<span style="font-size:11px;font-weight:700;color:'+iconColor+'">'+p.sub+'</span>'+
+          '</div>'+
+          '<div class="reddit-title">'+p.title+'</div>'+
+          '<div style="margin-top:8px;font-size:11px;color:var(--ink-4)">↗ Click to read</div>'+
+        '</div>'+
+      '</div>'+
+    '</a>';
+  }).join('');
+}
+
+// ── Render Social ───────────────────────────────────────
+const PLATFORM_ICONS = {instagram:'📷',twitter:'🐦',youtube:'▶',linkedin:'💼'};
+const PLATFORM_CLASSES = {instagram:'sp-instagram',twitter:'sp-twitter',youtube:'sp-youtube',linkedin:'sp-linkedin'};
+
+function renderSocial(){
+  const container = document.getElementById('socialBrands');
+
+  const brands = [
+    {
+      name:'Ola Electric',
+      handle:'@olaelectric',
+      img:'/images/brand-socials/ola-electric.jpg',
+      insta:'https://www.instagram.com/olaelectric/'
+    },
+    {
+      name:'Ather Energy',
+      handle:'@atherenergy',
+      img:'/images/brand-socials/ather-energy.jpg',
+      insta:'https://www.instagram.com/atherenergy/'
+    },
+    {
+      name:'TVS Motor',
+      handle:'@tvsmotorcompany',
+      img:'/images/brand-socials/tvs-motors.jpg',
+      insta:'https://www.instagram.com/tvsmotorcompany/'
+    },
+    {
+      name:'Bajaj Chetak',
+      handle:'@bajajchetak',
+      img:'/images/brand-socials/bajaj-chetak.jpg',
+      insta:'https://www.instagram.com/bajajchetak/'
+    },
+    {
+      name:'Hero Vida',
+      handle:'@herovida_official',
+      img:'/images/brand-socials/hero-vida.jpg',
+      insta:'https://www.instagram.com/herovida_official/'
+    },
+    {
+      name:'Greaves Ampere',
+      handle:'@greavesamperev',
+      img:'/images/brand-socials/ampere.jpg',
+      insta:'https://www.instagram.com/greavesamperev/'
+    },
+    {
+      name:'Okinawa',
+      handle:'@okinawaautotech',
+      img:'/images/brand-socials/okinawa.jpg',
+      insta:'https://www.instagram.com/okinawaautotech/'
+    },
+    {
+      name:'Pure EV',
+      handle:'@pureev_india',
+      img:'/images/brand-socials/pure-ev.jpg',
+      insta:'https://www.instagram.com/pureev_india/'
+    },
+    {
+      name:'Bounce Infinity',
+      handle:'@bounce_infinity',
+      img:'/images/brand-socials/bounce-infinity.jpg',
+      insta:'https://www.instagram.com/bounce_infinity/'
+    },
+    {
+      name:'BGauss',
+      handle:'@bgauss_official',
+      img:'/images/brand-socials/bgauss.jpg',
+      insta:'https://www.instagram.com/bgauss_official/'
+    }
+  ];
+
+  container.innerHTML = brands.map(function(b){
+    return '<a href="'+b.insta+'" target="_blank" rel="noopener noreferrer" class="insta-card">'+
+      '<img class="insta-screenshot" src="'+b.img+'" alt="'+b.name+' Instagram" loading="lazy"/>'+
+      '<div class="insta-overlay">'+
+        '<div class="insta-brand-name">'+b.name+'</div>'+
+        '<div class="insta-handle">'+b.handle+'</div>'+
+        '<div class="insta-ig-pill">📸 Instagram</div>'+
+      '</div>'+
+    '</a>';
+  }).join('');
+}
+
+// ── Tab Switching// ── Tab Switching// ── Tab Switching ───────────────────────────────────────
+function switchTab(tab, btn){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+tab).classList.add('active');
+}
+
+// ── Init ────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded',()=>{
+  // Merge any real videos from videos-db.js into the trending grid
+  if(typeof getAllVideos === 'function'){
+    const realVideos = getAllVideos();
+    if(realVideos.length > 0){
+      // Build YT_VIDEOS entries from the real DB, mapped to scooter data
+      realVideos.forEach(function(v){
+        const scooter = SCOOTERS_DB.find(function(s){ return s.id === v.scooterId; });
+        if(!scooter) return;
+        // Check if this video is already in YT_VIDEOS (by videoId)
+        const exists = YT_VIDEOS.some(function(y){ return y.videoId === v.videoId; });
+        if(!exists){
+          YT_VIDEOS.unshift({
+            id: 'db-' + v.videoId,
+            brand: scooter.brandSlug,
+            scooter: scooter.name,
+            title: scooter.brand + ' ' + scooter.name + ' — ' + (v.type||'Review').replace(/_/g,' '),
+            creator: v.creator,
+            avatar: v.avatar || v.creator.substring(0,2).toUpperCase(),
+            avatarColor: v.avatarColor || '#16a663',
+            subs: '',
+            views: '',
+            duration: '',
+            daysAgo: null,
+            videoId: v.videoId,
+            url: v.url,
+            thumb: v.thumb,
+            scooterColor: scooter.color || '#16a663',
+            verdict: (v.type||'review').replace(/_/g,' ')
+          });
+        }
+      });
+    }
+  }
+  document.getElementById('navMount').innerHTML = navHTML('trending');
+  document.getElementById('footerMount').innerHTML = footerHTML();
+  document.getElementById('compareTrayMount').innerHTML = compareTrayHTML();
+  renderYT('all');
+  renderReddit();
+  renderSocial();
+});
+</script>
+</body>
+</html>
