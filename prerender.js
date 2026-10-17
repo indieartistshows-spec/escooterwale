@@ -121,6 +121,10 @@ async function renderOne(page, { url, inject, outDir, canonical }) {
 
 (async () => {
   const browser = await chromium.launch();
+  // Third-party requests (analytics, fonts, YouTube thumbnails) are not part of the
+  // captured DOM, and waiting on them makes the build slow and flaky. Block them.
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  await ctx.route(u => !u.href.startsWith(ORIGIN), r => r.abort());
   const jobs = [];
 
   SCOOTERS_DB.forEach(s => jobs.push({
@@ -181,7 +185,7 @@ async function renderOne(page, { url, inject, outDir, canonical }) {
   async function worker() {
     while (jobs.length) {
       const job = jobs.shift();
-      const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+      const page = await ctx.newPage();
       const errs = [];
       page.on('pageerror', e => errs.push(String(e)));
       try {

@@ -76,13 +76,15 @@
       updated: C ? new Date(C.dataUpdated).toLocaleDateString('en-IN', { month: 'long', year: 'numeric' }) : '',
       bestRange: Math.max(...S.map(s => num(s.range))) + ' km',
       fastestCharge: Math.min(...S.map(s => num(s.charging))) + ' hrs',
-      maxCentral: SU ? inr(SU.central.cap) : ''
+      maxCentral: SU ? inr(SU.central.cap) : '',
+      priceCityIn: C && C.headlineCityName && S.some(s => s.headlinePriceCity) ? ' in ' + C.headlineCityName + ' unless a city is shown' : ''
     };
     doc.querySelectorAll('[data-sw]').forEach(el => { const v = facts[el.getAttribute('data-sw')]; if (v !== undefined && v !== '') el.textContent = v; });
   };
   if (typeof document !== 'undefined') {
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => SEO.fillFacts(document));
-    else SEO.fillFacts(document);
+    const go = () => { SEO.fillFacts(document); setTimeout(() => SEO.fillFacts(document), 0); };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
+    window.addEventListener('load', () => SEO.fillFacts(document));
   }
 
   root.SEO = SEO;

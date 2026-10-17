@@ -2,7 +2,7 @@
 
 > Independent electric scooter comparison and review platform for India. We track 41 EV scooter models from 10 brands, run our own real-world range tests, and rate every scooter with ScootScore, a 0-10 score averaged across range, features, value, ride quality and service network. No brand pays us and no manufacturer has editorial input.
 
-Last updated: 2026-08-24
+Last updated: 2026-10-17
 
 ## What makes this source citable
 
@@ -37,16 +37,16 @@ Last updated: 2026-08-24
 
 ## Brands covered
 
-- [Ola Electric](https://www.escooterwale.in/brands/ola-electric/): 6 models. Founded 2017, HQ Bengaluru.
-- [Ather Energy](https://www.escooterwale.in/brands/ather-energy/): 5 models. Founded 2013, HQ Bengaluru.
-- [TVS Motor](https://www.escooterwale.in/brands/tvs-motor/): 4 models. Founded 1978, HQ Chennai.
-- [Bajaj Chetak](https://www.escooterwale.in/brands/bajaj-chetak/): 5 models. Founded 1945, HQ Pune.
-- [Hero Vida](https://www.escooterwale.in/brands/hero-vida/): 3 models. Founded 2022, HQ New Delhi.
-- [Ampere](https://www.escooterwale.in/brands/ampere/): 5 models. Founded 2008, HQ Coimbatore.
-- [Okinawa](https://www.escooterwale.in/brands/okinawa/): 5 models. Founded 2015, HQ Gurugram.
-- [Pure EV](https://www.escooterwale.in/brands/pure-ev/): 3 models. Founded 2019, HQ Hyderabad.
-- [Bounce Infinity](https://www.escooterwale.in/brands/bounce-infinity/): 2 models. Founded 2021, HQ Bengaluru.
-- [BGauss](https://www.escooterwale.in/brands/bgauss/): 3 models. Founded 2020, HQ Mumbai.
+- [Ola Electric](https://www.escooterwale.in/brands/ola-electric): 6 models. Founded 2017, HQ Bengaluru.
+- [Ather Energy](https://www.escooterwale.in/brands/ather-energy): 5 models. Founded 2013, HQ Bengaluru.
+- [TVS Motor](https://www.escooterwale.in/brands/tvs-motor): 4 models. Founded 1978, HQ Chennai.
+- [Bajaj Chetak](https://www.escooterwale.in/brands/bajaj-chetak): 5 models. Founded 1945, HQ Pune.
+- [Hero Vida](https://www.escooterwale.in/brands/hero-vida): 3 models. Founded 2022, HQ New Delhi.
+- [Ampere](https://www.escooterwale.in/brands/ampere): 5 models. Founded 2008, HQ Coimbatore.
+- [Okinawa](https://www.escooterwale.in/brands/okinawa): 5 models. Founded 2015, HQ Gurugram.
+- [Pure EV](https://www.escooterwale.in/brands/pure-ev): 3 models. Founded 2019, HQ Hyderabad.
+- [Bounce Infinity](https://www.escooterwale.in/brands/bounce-infinity): 2 models. Founded 2021, HQ Bengaluru.
+- [BGauss](https://www.escooterwale.in/brands/bgauss): 3 models. Founded 2020, HQ Mumbai.
 
 ## Citation
 

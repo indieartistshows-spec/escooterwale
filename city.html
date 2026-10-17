@@ -223,7 +223,8 @@ function loadCity(cityId){
   ];
   if(st.deadline) rows.push({lbl:'State scheme valid until',val:fmtDate(st.deadline)});
   document.getElementById('subsidyRows').innerHTML=rows.map(s=>`<div class="subsidy-row"><span class="subsidy-label">${s.lbl}</span><span class="subsidy-val">${s.val}</span></div>`).join('');
-  document.getElementById('subsidyNote').textContent=`${cash.text||''} ${st.notes||''} Checked ${fmtDate(SUBSIDY.checked)}.`.trim();
+  const srcs=[...(SUBSIDY.central.sources||[]).filter(x=>x.official),...(st.sources||[])];
+  document.getElementById('subsidyNote').innerHTML=`${cash.text||''} ${st.notes||''} Checked ${fmtDate(SUBSIDY.checked)}.`.trim()+(srcs.length?`<br>Sources: ${srcs.map(x=>`<a href="${x.url}" target="_blank" rel="noopener" data-out="source" style="color:inherit">${x.title}</a>`).join(' · ')}`:'');
 
   // City buying notes
   document.getElementById('cityGuideTitle').textContent=`Buying an electric scooter in ${c.name}`;

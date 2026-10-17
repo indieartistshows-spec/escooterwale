@@ -71,14 +71,14 @@
         <span class="nav-logo-text"><strong>E-Scooter</strong><em>Wale</em></span>
       </a>
       <div class="nav-links" role="list">
-        <a href="/" class="nav-link" role="listitem">Home</a><a href="/listings" class="nav-link" role="listitem">All Scooters</a><a href="/compare" class="nav-link" role="listitem">Compare</a><a href="/best" class="nav-link" role="listitem">Best For</a><a href="/trending" class="nav-link" role="listitem">🔥 Trending</a><a href="/emi" class="nav-link" role="listitem">EMI Calc</a><a href="/cases" class="nav-link" role="listitem">🛡️ Cases</a>
+        <a href="/" class="nav-link" role="listitem">Home</a><a href="/listings" class="nav-link" role="listitem">All Scooters</a><a href="/compare" class="nav-link" role="listitem">Compare</a><a href="/best" class="nav-link" role="listitem">Best For</a><a href="/trending" class="nav-link" role="listitem">🔥 Trending</a><a href="/launches" class="nav-link" role="listitem">🆕 Launches</a><a href="/emi" class="nav-link" role="listitem">EMI Calc</a><a href="/cases" class="nav-link" role="listitem">🛡️ Cases</a>
       </div>
       <button class="hamburger" id="navToggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-      <a href="/" class="mob-link">Home</a><a href="/listings" class="mob-link">All Scooters</a><a href="/compare" class="mob-link">Compare</a><a href="/best" class="mob-link">Best For</a><a href="/trending" class="mob-link">🔥 Trending</a><a href="/emi" class="mob-link">EMI Calc</a><a href="/cases" class="mob-link">🛡️ Cases</a>
+      <a href="/" class="mob-link">Home</a><a href="/listings" class="mob-link">All Scooters</a><a href="/compare" class="mob-link">Compare</a><a href="/best" class="mob-link">Best For</a><a href="/trending" class="mob-link">🔥 Trending</a><a href="/launches" class="mob-link">🆕 Launches</a><a href="/emi" class="mob-link">EMI Calc</a><a href="/cases" class="mob-link">🛡️ Cases</a>
     </div>
   </nav>
   <nav class="mob-tab-bar" aria-label="Mobile tab navigation">
@@ -133,21 +133,21 @@
   <div class="art-sidebar-card">
     <h4>Share this article</h4>
     <div class="share-btns">
-      <button class="share-btn" onclick="navigator.share?navigator.share({title:document.title,url:location.href}):alert('Link copied!')">↗ Share</button>
+      <button class="share-btn" onclick="if(navigator.share){navigator.share({title:document.title,url:location.href})}else{navigator.clipboard&amp;&amp;navigator.clipboard.writeText(location.href).then(()=&gt;{this.textContent='✓ Link copied'})}">↗ Share</button>
       <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title)+'&amp;url='+encodeURIComponent(location.href))">X / Twitter</button>
     </div>
   </div>
   <div class="art-sidebar-card" id="scooterLinksCard"><h4>Scooters in this article</h4><div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">
       <div style="width:60px;height:44px;border-radius:var(--r-sm);overflow:hidden;flex-shrink:0;background:var(--surf-2)"><img src="/images/ola-electric-s1-pro-4-kwh.webp" alt="S1 Pro 4 kWh" style="width:100%;height:100%;object-fit:cover"></div>
-      <div style="flex:1"><div style="font-size:13px;font-weight:700">S1 Pro 4 kWh</div><div style="font-size:12px;color:var(--g);font-weight:700">₹149,999</div></div>
+      <div style="flex:1"><div style="font-size:13px;font-weight:700">S1 Pro 4 kWh</div><div style="font-size:12px;color:var(--g);font-weight:700">₹1,49,999</div></div>
       <a href="/scooters/ola-electric-s1-pro-4-kwh"><button class="btn btn-ghost btn-sm">View</button></a>
     </div><div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">
       <div style="width:60px;height:44px;border-radius:var(--r-sm);overflow:hidden;flex-shrink:0;background:var(--surf-2)"><img src="/images/ather-energy-450x-3.7-kwh.webp" alt="450X 3.7 kWh" style="width:100%;height:100%;object-fit:cover"></div>
-      <div style="flex:1"><div style="font-size:13px;font-weight:700">450X 3.7 kWh</div><div style="font-size:12px;color:var(--g);font-weight:700">₹157,999</div></div>
+      <div style="flex:1"><div style="font-size:13px;font-weight:700">450X 3.7 kWh</div><div style="font-size:12px;color:var(--g);font-weight:700">₹1,57,999</div></div>
       <a href="/scooters/ather-energy-450x-3point7-kwh"><button class="btn btn-ghost btn-sm">View</button></a>
     </div><div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">
       <div style="width:60px;height:44px;border-radius:var(--r-sm);overflow:hidden;flex-shrink:0;background:var(--surf-2)"><img src="/images/ola-electric-s1-x-3-kwh.webp" alt="S1 X 3 kWh" style="width:100%;height:100%;object-fit:cover"></div>
-      <div style="flex:1"><div style="font-size:13px;font-weight:700">S1 X 3 kWh</div><div style="font-size:12px;color:var(--g);font-weight:700">₹107,999</div></div>
+      <div style="flex:1"><div style="font-size:13px;font-weight:700">S1 X 3 kWh</div><div style="font-size:12px;color:var(--g);font-weight:700">₹1,07,999</div></div>
       <a href="/scooters/ola-electric-s1-x-3-kwh"><button class="btn btn-ghost btn-sm">View</button></a>
     </div></div>
   <div class="art-sidebar-card">
@@ -245,6 +245,8 @@
 </div>
 
 <script src="/data.js"></script>
+<script src="/seo.js"></script>
+<script src="/outbound.js"></script>
 <script src="/components.js"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('news');

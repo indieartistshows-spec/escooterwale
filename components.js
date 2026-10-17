@@ -333,7 +333,7 @@ function footerHTML(){
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 E-ScooterWale. All prices ex-showroom Delhi. Data updated April 2026.</span>
+        <span>© 2026 E-ScooterWale. Prices are ex-showroom<span data-sw="priceCityIn"></span>. Data updated <span data-sw="updated">October 2026</span>.</span>
         <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
           <span>Not affiliated with any EV manufacturer.</span>
           <a href="/yellow-brother" style="color:var(--amber);font-weight:700;font-size:12px;text-decoration:none">🟡 Yellow Brother Blog</a>

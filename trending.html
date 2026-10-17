@@ -888,7 +888,7 @@ function renderYT(filter='all'){
       <div class="yt-thumb">
         <img src="${v.thumb}" alt="${v.title}" loading="lazy" onerror="this.src='https://img.youtube.com/vi/${v.videoId}/hqdefault.jpg'"/>
         <div class="yt-play"><div class="yt-play-btn">▶</div></div>
-        <div class="yt-duration">${fmtDay(v.published||v.added)}</div>
+        ${v.published?`<div class="yt-duration">${fmtDay(v.published)}</div>`:""}
       </div>
       <div class="yt-body">
         <div class="yt-creator"><div class="yt-creator-name">${v.channel||'YouTube'}</div></div>
