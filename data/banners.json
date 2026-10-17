@@ -9,10 +9,17 @@
       "model": "Magnus G Max",
       "modelId": "ampere-magnus-g-max-3point0-kwh",
       "home": "https://www.amperevehicles.com/",
-      "pages": ["https://www.amperevehicles.com/magnus-g-max", "https://www.amperevehicles.com/scooters/magnus-g-max", "https://www.amperevehicles.com/electric-scooters/magnus-g-max"],
+      "pages": [
+        "https://www.amperevehicles.com/magnus-g-max",
+        "https://www.amperevehicles.com/scooters/magnus-g-max",
+        "https://www.amperevehicles.com/electric-scooters/magnus-g-max"
+      ],
       "find": "magnus[^\"']*g[^\"']*max",
       "url": "https://www.amperevehicles.com/",
-      "img": { "d": "/images/banners/ampere-magnus-g-max-d.jpg", "m": "/images/banners/ampere-magnus-g-max-m.jpg" },
+      "img": {
+        "d": "/images/banners/ampere-magnus-g-max-d.jpg",
+        "m": "/images/banners/ampere-magnus-g-max-m.jpg"
+      },
       "source": null,
       "checked": null
     },
@@ -23,12 +30,23 @@
       "model": "Konarc",
       "modelId": "ather-energy-konarc-s-161-3point5-kwh",
       "home": "https://www.atherenergy.com/",
-      "pages": ["https://www.atherenergy.com/konarc"],
-      "images": { "d": "https://media.atherenergy.com/PDPKVDesktop.webp", "m": "https://media.atherenergy.com/PDPKVMobile.webp" },
+      "pages": [
+        "https://www.atherenergy.com/konarc"
+      ],
+      "images": {
+        "d": "https://media.atherenergy.com/PDPKVDesktop.webp",
+        "m": "https://media.atherenergy.com/PDPKVMobile.webp"
+      },
       "url": "https://www.atherenergy.com/konarc",
-      "img": { "d": "/images/banners/ather-konarc-d.jpg", "m": "/images/banners/ather-konarc-m.jpg" },
-      "source": null,
-      "checked": null
+      "img": {
+        "d": "/images/banners/ather-konarc-d.jpg",
+        "m": "/images/banners/ather-konarc-m.jpg"
+      },
+      "source": {
+        "d": "https://media.atherenergy.com/PDPKVDesktop.webp",
+        "m": "https://media.atherenergy.com/PDPKVDesktop.webp"
+      },
+      "checked": "2026-10-17"
     },
     {
       "id": "hero-vida",
@@ -37,11 +55,19 @@
       "model": "Vida",
       "modelId": "hero-vida-vx2-plus-3point4-kwh",
       "home": "https://www.vidaworld.com/",
-      "pages": ["https://www.vidaworld.com/"],
+      "pages": [
+        "https://www.vidaworld.com/"
+      ],
       "url": "https://www.vidaworld.com/",
-      "img": { "d": "/images/banners/hero-vida-d.jpg", "m": "/images/banners/hero-vida-m.jpg" },
-      "source": null,
-      "checked": null
+      "img": {
+        "d": "/images/banners/hero-vida-d.jpg",
+        "m": "/images/banners/hero-vida-m.jpg"
+      },
+      "source": {
+        "d": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg",
+        "m": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(M).jpg"
+      },
+      "checked": "2026-10-17"
     },
     {
       "id": "bajaj-chetak",
@@ -50,12 +76,21 @@
       "model": "Chetak",
       "modelId": "bajaj-chetak-chetak-3503-3point5-kwh",
       "home": "https://www.chetak.com/",
-      "pages": ["https://www.chetak.com/"],
-      "images": { "d": "https://www.chetak.com/-/media/chetakv2/content-image/home-banner/chetak-updated-banner-web-1.webp" },
+      "pages": [
+        "https://www.chetak.com/"
+      ],
+      "images": {
+        "d": "https://www.chetak.com/-/media/chetakv2/content-image/home-banner/chetak-updated-banner-web-1.webp"
+      },
       "url": "https://www.chetak.com/",
-      "img": { "d": "/images/banners/bajaj-chetak-d.jpg", "m": "/images/banners/bajaj-chetak-m.jpg" },
-      "source": null,
-      "checked": null
+      "img": {
+        "d": "/images/banners/bajaj-chetak-d.jpg",
+        "m": "/images/banners/bajaj-chetak-m.jpg"
+      },
+      "source": {
+        "m": "https://cdn.bajajauto.com/images/chetak-v2/headlight-line-art-white-small.svg"
+      },
+      "checked": "2026-10-17"
     },
     {
       "id": "tvs-iqube",
@@ -64,10 +99,17 @@
       "model": "iQube",
       "modelId": "tvs-motor-iqube-st-5point3-kwh",
       "home": "https://www.tvsmotor.com/",
-      "pages": ["https://www.tvsmotor.com/electric-scooters/tvs-iqube"],
-      "images": { "m": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Hero-Banners/iqube-31-intro-mobile-v1.webp" },
+      "pages": [
+        "https://www.tvsmotor.com/electric-scooters/tvs-iqube"
+      ],
+      "images": {
+        "m": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Hero-Banners/iqube-31-intro-mobile-v1.webp"
+      },
       "url": "https://www.tvsmotor.com/electric-scooters/tvs-iqube",
-      "img": { "d": "/images/banners/tvs-iqube-d.jpg", "m": "/images/banners/tvs-iqube-m.jpg" },
+      "img": {
+        "d": "/images/banners/tvs-iqube-d.jpg",
+        "m": "/images/banners/tvs-iqube-m.jpg"
+      },
       "source": null,
       "checked": null
     }
