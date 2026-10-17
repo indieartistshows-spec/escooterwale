@@ -412,6 +412,7 @@
 </div>
 
 <script src="data.js"></script>
+<script src="seo.js"></script>
 <script src="components.js"></script>
 <script src="videos-db.js"></script>
 <script>
@@ -636,12 +637,13 @@ function hydratePage(id){
   };
 
   // Meta & SEO
-  document.getElementById('pgTitle').textContent=`${s.brand} ${s.name} Review (2026) – Price, Real Range, Verdict | ScooterWale`;
-  document.getElementById('pgDesc').setAttribute('content',`${s.brand} ${s.name}: Price starts at ${s.priceDisplay}. Real-world range ${s.realRange} (not lab claims). Expert verdict, full specs, who should buy, who should avoid. Direct link to buy.`);
+  const _seo=SEO.scooter(s);
+  document.getElementById('pgTitle').textContent=_seo.title;
+  document.getElementById('pgDesc').setAttribute('content',_seo.desc);
   document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/scooters/${id}`);
   document.getElementById('pgSchema').textContent = JSON.stringify({
     "@context":"https://schema.org","@type":"Product",
-    "name":`${s.brand} ${s.name}`,"brand":{"@type":"Brand","name":s.brand},
+    "name":s.fullName,"brand":{"@type":"Brand","name":s.brand},
     "description":s.tagline,
     "offers":{"@type":"Offer","price":s.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":s.brandUrl},
     "review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":s.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}
@@ -655,7 +657,7 @@ function hydratePage(id){
   document.getElementById('dBrand').textContent=s.brand;
   document.getElementById('dName').textContent=s.name;
   document.getElementById('dRatingRow').innerHTML=`${renderStars(s.rating)}<span style="font-weight:700;font-size:14px;margin-left:4px">${s.rating}</span><span style="font-size:13px;color:var(--ink-3);margin-left:4px">(${fmtNum(s.reviews)} reviews)</span>`;
-  document.getElementById('dBadgeStrip').innerHTML=`<span class="badge badge-dark">🏆 Editor's Pick</span><span class="badge badge-green">FAME-III Eligible</span><span class="badge badge-amber">Best Range 2026</span>`;
+  document.getElementById('dBadgeStrip').innerHTML=(s.score>=8.5?`<span class="badge badge-dark">🏆 Editor's Pick</span>`:'')+(s.subsidy&&s.subsidy.eligible?`<span class="badge badge-green">PM E-DRIVE eligible</span>`:`<span class="badge badge-amber">No PM E-DRIVE subsidy</span>`)+((s.tags||[]).includes('best-range')?`<span class="badge badge-amber">Long range</span>`:'');
 
   // Variants
   document.getElementById('variantRow').innerHTML=(s.variants||[]).map((v,i)=>`<div class="variant-pill ${i===s.variants.length-1?'active':''}" onclick="selectVariant(this,'${v.price}','${v.priceDisplay}','${v.range}')">${v.name}<br><small style="font-weight:400;color:inherit;opacity:.8">${v.priceDisplay}</small></div>`).join('');

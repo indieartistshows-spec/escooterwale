@@ -161,6 +161,7 @@
 </div>
 
 <script src="data.js"></script>
+<script src="seo.js"></script>
 <script src="components.js"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
@@ -173,8 +174,9 @@ const models=SCOOTERS_DB.filter(s=>s.brandSlug===bid);
 const minPrice=models.length?Math.min(...models.map(s=>s.price)):0;
 const avgRating=models.length?(models.reduce((a,s)=>a+s.rating,0)/models.length).toFixed(1):0;
 
-document.getElementById('pgTitle').textContent=`${brand.name} Electric Scooters – All Models, Prices, Reviews 2026 | ScooterWale`;
-document.getElementById('pgDesc').setAttribute('content',`${brand.name} electric scooters in India 2025. ${models.length} models. Prices start at ₹${minPrice.toLocaleString('en-IN')}. Full specs, reviews & comparison.`);
+const _seo=SEO.brand(brand,models);
+document.getElementById('pgTitle').textContent=_seo.title;
+document.getElementById('pgDesc').setAttribute('content',_seo.desc);
 document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/brands/${bid}`);
 // Hero background: use first scooter image
 if(models[0]?.heroImg) document.getElementById('brandHeroBg').style.backgroundImage=`url('${models[0].heroImg}')`;

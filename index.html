@@ -494,11 +494,11 @@ h1,h2,h3,h4,.nav-logo-text,.sv2-num,.h-stat-num,.pick-name,.sc-name,.budget-rang
   <div class="container">
     <div class="dmh-header">
       <div>
-        <div class="eyebrow" style="color:var(--g);margin-bottom:6px">Trending right now</div>
+        <div class="eyebrow" style="color:var(--g);margin-bottom:6px">Sales leaderboard</div>
         <h2 class="dmh-title"><span>Demand Mein Hai</span> 🏁</h2>
-        <p style="color:rgba(255,255,255,.3);font-size:12px;margin-top:4px">Most searched EV scooters this week</p>
+        <p style="color:rgba(255,255,255,.3);font-size:12px;margin-top:4px" id="dmhSub">Electric two-wheeler brands by units registered last month</p>
       </div>
-      <div class="dmh-live"><span class="dmh-live-dot"></span><span>LIVE · <span id="dmhTotal">8.3L</span> views</span></div>
+      <div class="dmh-live"><span class="dmh-live-dot"></span><span>VAHAN · <span id="dmhTotal">2.07L</span> units</span></div>
     </div>
     <div class="race-track" id="raceTrack"></div>
   </div>
@@ -691,6 +691,7 @@ h1,h2,h3,h4,.nav-logo-text,.sv2-num,.h-stat-num,.pick-name,.sc-name,.budget-rang
 <div id="compareTrayMount"></div>
 
 <script src="data.js"></script>
+<script src="seo.js"></script>
 <script src="components.js"></script>
 <script src="videos-db.js"></script>
 <script>
@@ -824,45 +825,37 @@ function runCalc(){
     '₹' + Math.round(savings).toLocaleString('en-IN');
 }
 
-// DMH
-const raceData=[...SCOOTERS_DB].sort((a,b)=>b.views-a.views).slice(0,10);
-let maxV=raceData[0].views;
+// DMH: brand ranking by units registered last month (VAHAN), refreshed by the weekly job
+const raceData=[...EV_SALES.brands].sort((a,b)=>b.units-a.units).slice(0,7);
+const maxV=raceData[0].units;
 const BC={'ola-electric':'#16a663','ather-energy':'#2563eb','tvs-motor':'#f59e0b','bajaj-chetak':'#7c3aed','hero-vida':'#dc2626','ampere':'#f97316','okinawa':'#0ea5e9','pure-ev':'#10b981','bounce-infinity':'#ec4899','bgauss':'#1e40af'};
+const fmtUnits=n=>n>=100000?(n/100000).toFixed(2).replace(/0$/,'')+'L':n.toLocaleString('en-IN');
 function buildRace(){
-  document.getElementById('raceTrack').innerHTML=raceData.map((s,i)=>{
-    const clr=BC[s.brandSlug]||'#16a663';
-    // Brand logo + short model name
-    const logo=brandLogoHTML(s.brandSlug,26);
-    const modelShort=s.name.split(' ').slice(0,3).join(' ');
-    return `<div class="race-lane race-rank-${i+1}" onclick="window.location='/scooters/${s.id}'" role="link" style="cursor:pointer">
+  document.getElementById('raceTrack').innerHTML=raceData.map((b,i)=>{
+    const clr=BC[b.brandId]||'#64748b';
+    const logo=b.brandId?brandLogoHTML(b.brandId,26):`<span style="width:26px;height:26px;border-radius:6px;background:${clr};color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0">${b.name[0]}</span>`;
+    const go=b.brandId?` onclick="window.location='/brands/${b.brandId}'" role="link" style="cursor:pointer"`:' style="cursor:default"';
+    const key=(b.brandId||b.name).replace(/[^a-z0-9]/gi,'');
+    return `<div class="race-lane race-rank-${i+1}"${go}>
       <div class="race-pos">#${i+1}</div>
       <div class="race-name-cell">
         ${logo}
-        <span class="race-name">${modelShort}</span>
+        <span class="race-name">${b.name}</span>
       </div>
       <div class="race-road-wrap">
         <div class="race-road-dashes"></div>
-        <div class="race-road-fill" id="fill-${s.id}" style="width:0%;background:linear-gradient(90deg,${clr}40,${clr}cc)">
+        <div class="race-road-fill" id="fill-${key}" style="width:0%;background:linear-gradient(90deg,${clr}40,${clr}cc)">
           <div class="race-scooter" style="background:${clr}">⚡</div>
         </div>
       </div>
-      <div class="race-count"><span id="cnt-${s.id}">${fmtViews(s.views)}</span><span style="font-size:9px;color:rgba(255,255,255,.3);display:block">views</span></div>
+      <div class="race-count"><span>${fmtUnits(b.units)}</span><span style="font-size:9px;color:rgba(255,255,255,.3);display:block">units</span></div>
     </div>`;
   }).join('');
-  requestAnimationFrame(()=>setTimeout(()=>{raceData.forEach(s=>{const e=document.getElementById('fill-'+s.id);if(e)e.style.width=(s.views/maxV*100).toFixed(1)+'%';});},300));
+  requestAnimationFrame(()=>setTimeout(()=>{raceData.forEach(b=>{const e=document.getElementById('fill-'+(b.brandId||b.name).replace(/[^a-z0-9]/gi,''));if(e)e.style.width=(b.units/maxV*100).toFixed(1)+'%';});},300));
+  document.getElementById('dmhTotal').textContent=fmtUnits(EV_SALES.total);
+  document.getElementById('dmhSub').textContent=`Electric two-wheeler brands by units registered in ${EV_SALES.monthLabel}. Source: ${EV_SALES.source}.`;
 }
-function liveUpdate(){
-  raceData.forEach(s=>s.views=Math.max(1000,s.views+Math.round(Math.random()*80-10)));
-  raceData.sort((a,b)=>b.views-a.views);maxV=raceData[0].views;
-  raceData.forEach(s=>{
-    const f=document.getElementById('fill-'+s.id),c=document.getElementById('cnt-'+s.id);
-    if(f)f.style.width=(s.views/maxV*100).toFixed(1)+'%';
-    if(c)c.textContent=fmtViews(s.views);
-  });
-  const tot=raceData.reduce((a,s)=>a+s.views,0);
-  const el=document.getElementById('dmhTotal');if(el)el.textContent=(tot/100000).toFixed(1)+'L';
-}
-buildRace();setInterval(liveUpdate,2800);
+buildRace();
 
 // PICKS
 const PICKS={

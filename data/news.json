@@ -1,0 +1,57 @@
+[
+ {
+  "id": "ola-gen3",
+  "tag": "Review",
+  "title": "Ola Gen 3 — MoveOS 5, new specs, real-world test",
+  "excerpt": "We rode the new Gen 3 S1 Pro and S1 X for 1000 km. Here's the honest verdict.",
+  "date": "Apr 5, 2026",
+  "readTime": "9 min",
+  "img": "/images/ola-electric-s1-pro-4-kwh.webp",
+  "featured": true
+ },
+ {
+  "id": "ather-apex",
+  "tag": "Review",
+  "title": "Ather 450 Apex — the fastest, sharpest Ather ever",
+  "excerpt": "100 km/h, best suspension in Indian EVs, Warp mode redefined. Our full test.",
+  "date": "Apr 2, 2026",
+  "readTime": "8 min",
+  "img": "/images/ather-energy-450-apex-3.7-kwh.webp"
+ },
+ {
+  "id": "tvs-range-test",
+  "tag": "Test",
+  "title": "TVS iQube ST 5.3 kWh — does 212 km hold up?",
+  "excerpt": "Full charge, empty tank. We rode until the scooter stopped. The number will surprise you.",
+  "date": "Mar 28, 2026",
+  "readTime": "7 min",
+  "img": "/images/tvs-motor-iqube-st-5.3-kwh.webp"
+ },
+ {
+  "id": "pure-ev-etrance-review",
+  "tag": "Review",
+  "title": "Pure EV ETrance+ — Best real-world range under ₹1.2L?",
+  "excerpt": "IIT Hyderabad-backed EV. We tested its 171 km claim across city and highway. The results surprised us.",
+  "date": "Mar 22, 2026",
+  "readTime": "6 min",
+  "img": "/images/pure-ev-etrance+-4.5-kwh.webp"
+ },
+ {
+  "id": "chetak-c2501",
+  "tag": "News",
+  "title": "Bajaj Chetak C2501 — ₹91,399, 35L boot, Jan 2026",
+  "excerpt": "Bajaj's most affordable Chetak ever. Sub-₹1 lakh with 35L underseat boot.",
+  "date": "Mar 15, 2026",
+  "readTime": "5 min",
+  "img": "/images/bajaj-chetak-chetak-c2501-2.5-kwh.webp"
+ },
+ {
+  "id": "ev-vs-petrol",
+  "tag": "Analysis",
+  "title": "EV vs Petrol scooter: 5-year cost breakdown 2026",
+  "excerpt": "We ran the numbers on every brand. The savings are now undeniable.",
+  "date": "Mar 10, 2026",
+  "readTime": "6 min",
+  "img": "/images/hero-vida-v2-pro-3.94-kwh.webp"
+ }
+]

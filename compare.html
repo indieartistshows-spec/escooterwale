@@ -21,6 +21,7 @@
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="styles.css"/>
 <script src="data.js"></script>
+<script src="seo.js"></script>
 <script src="components.js"></script>
 <script src="videos-db.js"></script>
 <style>
@@ -384,20 +385,19 @@ function buildCmp(a,b){
 }
 
 function updateSEO(a,b){
-  const title=`${a.brand} ${a.name} vs ${b.brand} ${b.name} (2026) – Which One Should You Buy?`;
-  const desc=`${a.brand} ${a.name} vs ${b.brand} ${b.name}: Price, real range, specs, expert verdict. Find the winner in 2026.`;
+  const _seo=SEO.compare(a,b), title=_seo.title, desc=_seo.desc;
   document.getElementById('pgTitle').textContent=title+' | ScooterWale';
   document.getElementById('pgDesc').setAttribute('content',desc);
   document.getElementById('pgCanon').setAttribute('href', window.__SW_A__ ? `https://www.escooterwale.in/compare/${a.id}-vs-${b.id}` : 'https://www.escooterwale.in/compare');
   document.getElementById('ogTitle').setAttribute('content',title);
   document.getElementById('ogDesc').setAttribute('content',desc);
   document.getElementById('cmpH1').textContent=`${a.name} vs ${b.name} (2026)`;
-  document.getElementById('cmpSub').textContent='Complete specs, real-world range, expert verdict — with a clear winner.';
+  document.getElementById('cmpSub').textContent='Full specs, real-world range and our verdict, side by side.';
   const ex=document.querySelector('script[type="application/ld+json"]');if(ex)ex.remove();
   const ld=document.createElement('script');ld.type='application/ld+json';
   ld.textContent=JSON.stringify([
-    {"@context":"https://schema.org","@type":"Product","name":`${a.brand} ${a.name}`,"description":a.tagline,"offers":{"@type":"Offer","price":a.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":a.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":a.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}},
-    {"@context":"https://schema.org","@type":"Product","name":`${b.brand} ${b.name}`,"description":b.tagline,"offers":{"@type":"Offer","price":b.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":b.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":b.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}}
+    {"@context":"https://schema.org","@type":"Product","name":a.fullName,"description":a.tagline,"offers":{"@type":"Offer","price":a.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":a.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":a.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}},
+    {"@context":"https://schema.org","@type":"Product","name":b.fullName,"description":b.tagline,"offers":{"@type":"Offer","price":b.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":b.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":b.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}}
   ]);
   document.head.appendChild(ld);
 }

@@ -29,7 +29,7 @@
 .cst-lbl{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px;text-transform:uppercase;letter-spacing:.05em}
 .city-layout{display:grid;grid-template-columns:1fr 300px;gap:28px;padding:32px 0 64px;align-items:start}
 .city-selector{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
-.city-sel-btn{padding:9px 18px;border-radius:var(--r-sm);border:1.5px solid var(--border);background:var(--surf);font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;font-family:var(--f)}
+.city-sel-btn{display:inline-block;text-decoration:none;color:var(--ink);padding:9px 18px;border-radius:var(--r-sm);border:1.5px solid var(--border);background:var(--surf);font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;font-family:var(--f)}
 .city-sel-btn:hover,.city-sel-btn.active{background:var(--g);color:#fff;border-color:var(--g)}
 .subsidy-card{background:var(--g-tint);border:1.5px solid var(--g-mid);border-radius:var(--r-xl);padding:24px;margin-bottom:24px}
 .subsidy-card h3{color:var(--g-dim);margin-bottom:12px}
@@ -44,6 +44,12 @@
 .dealer-meta{display:flex;gap:8px;flex-wrap:wrap}
 .dealer-meta span{font-size:11px;background:var(--surf-2);border:1px solid var(--border);padding:2px 8px;border-radius:99px;color:var(--ink-3)}
 .map-placeholder{background:var(--surf-2);border:1px solid var(--border);border-radius:var(--r-lg);height:280px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;margin-bottom:24px}
+.city-price-table{width:100%;border-collapse:collapse;font-size:14px}
+.city-price-table th{background:var(--ink);color:#fff;padding:9px 12px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.city-price-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--ink-2);white-space:nowrap}
+.city-price-table tr:nth-child(even) td{background:var(--surf-2)}
+.city-price-table td a{color:var(--ink);font-weight:600;text-decoration:none}
+.city-price-table .amt{font-weight:700;color:var(--g)}
 @media(max-width:900px){.city-layout{grid-template-columns:1fr}.city-stats-row{gap:12px}}
 </style>
 
@@ -61,10 +67,10 @@
     <h1 id="cityHeroTitle">Electric scooters in Mumbai</h1>
     <p id="cityHeroDesc">Find the best EV scooter prices, dealers, charging stations, and state subsidies in Mumbai.</p>
     <div class="city-stats-row">
-      <div class="cst"><div class="cst-num" id="statDealers">420</div><div class="cst-lbl">EV Brands present</div></div>
-      <div class="cst"><div class="cst-num" id="statSubsidy">₹10,000</div><div class="cst-lbl">State subsidy</div></div>
-      <div class="cst"><div class="cst-num" id="statChargers">1,240</div><div class="cst-lbl">Charging points</div></div>
-      <div class="cst"><div class="cst-num" id="statRegistered">2.1L</div><div class="cst-lbl">EVs registered</div></div>
+      <div class="cst"><div class="cst-num" id="statDealers">420</div><div class="cst-lbl">EV brands on sale</div></div>
+      <div class="cst"><div class="cst-num" id="statSubsidy">₹10,000</div><div class="cst-lbl">Max state subsidy</div></div>
+      <div class="cst"><div class="cst-num" id="statChargers">1,240</div><div class="cst-lbl">Road tax on EVs</div></div>
+      <div class="cst"><div class="cst-num" id="statRegistered">2.1L</div><div class="cst-lbl">Models from</div></div>
     </div>
   </div>
 </div>
@@ -73,14 +79,7 @@
 
 <div class="container">
   <div style="padding-top:24px;margin-bottom:4px;font-size:13px;font-weight:600;color:var(--ink-3)">Browse by city:</div>
-  <div class="city-selector">
-    <button class="city-sel-btn" onclick="loadCity('mumbai',this)">🏙️ Mumbai</button>
-    <button class="city-sel-btn" onclick="loadCity('delhi',this)">🏛️ Delhi</button>
-    <button class="city-sel-btn" onclick="loadCity('bangalore',this)">🌿 Bangalore</button>
-    <button class="city-sel-btn" onclick="loadCity('hyderabad',this)">💊 Hyderabad</button>
-    <button class="city-sel-btn" onclick="loadCity('pune',this)">🎓 Pune</button>
-    <button class="city-sel-btn" onclick="loadCity('chennai',this)">🌊 Chennai</button>
-  </div>
+  <div class="city-selector" id="citySelector"></div>
 </div>
 
 <div class="container">
@@ -92,8 +91,18 @@
     <div class="eyebrow" style="color:var(--g-dim);margin-bottom:6px">🏛️ Government incentives</div>
     <h3 id="subsidyTitle">EV subsidies in Maharashtra (Mumbai)</h3>
     <div id="subsidyRows"></div>
-    <p style="font-size:12px;color:var(--g-dim);margin-top:12px;opacity:.7">Subsidies are applied at point of sale. Ask your dealer for the updated subsidy amount.</p>
+    <p style="font-size:12px;color:var(--g-dim);margin-top:12px;opacity:.7" id="subsidyNote">The central subsidy is taken off the price at the dealer. State cash subsidies are usually paid later by bank transfer.</p>
   </div>
+
+  <!-- ON-ROAD PRICES IN CITY -->
+  <div class="sec-hd" style="margin-bottom:12px">
+    <div>
+      <div class="eyebrow" id="priceEy">On-road prices</div>
+      <h2 class="mt-8" id="priceTitle">Electric scooter on-road price</h2>
+    </div>
+  </div>
+  <div style="overflow-x:auto;margin-bottom:8px"><table class="city-price-table" id="cityPriceTable"></table></div>
+  <p style="font-size:12px;color:var(--ink-3);margin-bottom:32px" id="priceNote"></p>
 
   <!-- TOP PICKS FOR CITY -->
   <div class="sec-hd" style="margin-bottom:16px">
@@ -109,9 +118,9 @@
     <div class="sec-hd"><div><div class="eyebrow">Dealers & charging</div><h2 class="mt-8" id="dealersTitle">EV dealers in Mumbai</h2></div></div>
     <div class="map-placeholder">
       <div style="font-size:48px">🗺️</div>
-      <div style="font-size:15px;font-weight:700;color:var(--ink-2)">Interactive dealer map</div>
-      <p style="font-size:13px;color:var(--ink-3);text-align:center;max-width:280px">Connect your Google Maps API key to display live dealer locations and charging stations.</p>
-      <button class="btn btn-primary" onclick="window.open('https://maps.google.com/maps/search/electric+scooter+dealer+mumbai','_blank')">Open in Google Maps ↗</button>
+      <div style="font-size:15px;font-weight:700;color:var(--ink-2)" id="mapTitle">Dealers and chargers near you</div>
+      <p style="font-size:13px;color:var(--ink-3);text-align:center;max-width:280px" id="mapDesc">See every electric scooter showroom and public charger on the map, or use each brand's own dealer finder below.</p>
+      <a id="mapLink" href="https://www.google.com/maps/search/electric+scooter+dealer+mumbai" target="_blank" rel="noopener"><button class="btn btn-primary">Open in Google Maps ↗</button></a>
     </div>
     <div id="dealersList"></div>
   </div>
@@ -129,7 +138,7 @@
     <div id="runningCosts"></div>
   </div>
   <div class="card card-pad">
-    <div class="label-sm mb-12">State registration benefits</div>
+    <div class="label-sm mb-12">State rules for EV buyers</div>
     <div id="stateBenefits"></div>
   </div>
 </aside>
@@ -142,153 +151,137 @@
 </div>
 
 <script src="data.js"></script>
+<script src="seo.js"></script>
 <script src="components.js"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
 document.getElementById('compareTrayMount').innerHTML=compareTrayHTML();
 
-const CITIES={
-  mumbai:{
-    name:'Mumbai',state:'Maharashtra',emoji:'🏙️',
-    dealers:420,chargers:1240,registered:'2.1L',
-    img:'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1400&q=80',
-    subsidy:[{lbl:'FAME-III central subsidy',val:'₹10,000+'},{lbl:'Maharashtra state subsidy',val:'₹10,000'},{lbl:'Road tax waiver',val:'100%'},{lbl:'Registration fee',val:'Waived'}],
-    dealers_list:[
-      {brand:'Ola Electric',name:'Ola Experience Centre Andheri',addr:'Link Road, Andheri West, Mumbai 400058',tags:['Test rides','Service','Fast charge']},
-      {brand:'Ather Energy',name:'Ather Space Bandra',addr:'Hill Road, Bandra West, Mumbai 400050',tags:['Test rides','Ather Grid','Service']},
-      {brand:'TVS Motor',name:'TVS EV Studio Thane',addr:'Pokhran Road, Thane West 400601',tags:['Test rides','Service']},
-      {brand:'Bajaj Auto',name:'Chetak Experience Store Dadar',addr:'NS Phadke Marg, Dadar East, Mumbai 400014',tags:['Test rides','Financing']}
-    ],
-    runningCosts:{fuelSaving:'₹3,200/mo',annualSaving:'₹38,400',payback:'3.8 years'},
-    benefits:['100% road tax exemption','Free FastTag for EVs','Priority lane access','Subsidised parking at MMRDA lots']
-  },
-  delhi:{
-    name:'Delhi',state:'Delhi',emoji:'🏛️',
-    dealers:580,chargers:2100,registered:'3.8L',
-    img:'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1400&q=80',
-    subsidy:[{lbl:'FAME-III central subsidy',val:'₹10,000+'},{lbl:'Delhi EV Policy subsidy',val:'₹5,000'},{lbl:'Road tax waiver',val:'100%'},{lbl:'DERC charging rate',val:'₹4.5/unit'}],
-    dealers_list:[
-      {brand:'Ola Electric',name:'Ola Experience Connaught Place',addr:'K Block, CP, New Delhi 110001',tags:['Test rides','Service','Hypercharger']},
-      {brand:'Ather Energy',name:'Ather Space Lajpat Nagar',addr:'Lajpat Nagar-II, New Delhi 110024',tags:['Test rides','Service','Ather Grid']},
-      {brand:'TVS Motor',name:'TVS EV Rohini',addr:'Sector 3, Rohini, New Delhi 110085',tags:['Test rides','Service']}
-    ],
-    runningCosts:{fuelSaving:'₹3,400/mo',annualSaving:'₹40,800',payback:'3.5 years'},
-    benefits:['100% road tax exemption','Delhi EV additional ₹5,000 subsidy','Priority parking at select malls','DTC charging facility access']
-  },
-  bangalore:{
-    name:'Bangalore',state:'Karnataka',emoji:'🌿',
-    dealers:360,chargers:980,registered:'1.8L',
-    img:'https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1400&q=80',
-    subsidy:[{lbl:'FAME-III central subsidy',val:'₹10,000+'},{lbl:'Karnataka EV subsidy',val:'₹10,000'},{lbl:'Road tax waiver',val:'100%'}],
-    dealers_list:[
-      {brand:'Ather Energy',name:'Ather HQ Experience Centre',addr:'17th Cross, Sadashivanagar, Bangalore 560080',tags:['Test rides','Full service','Ather Grid','R&D centre']},
-      {brand:'Ola Electric',name:'Ola Experience Whitefield',addr:'ITPL Road, Whitefield, Bangalore 560066',tags:['Test rides','Service']},
-    ],
-    runningCosts:{fuelSaving:'₹3,100/mo',annualSaving:'₹37,200',payback:'3.9 years'},
-    benefits:['100% road tax exemption','BESCOM EV tariff ₹5/unit','IT park free EV charging','BBMP free EV parking zones']
-  },
-  hyderabad:{
-    name:'Hyderabad',state:'Telangana',emoji:'💊',
-    dealers:290,chargers:640,registered:'1.2L',
-    img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80',
-    subsidy:[{lbl:'FAME-III central subsidy',val:'₹10,000+'},{lbl:'Telangana subsidy',val:'₹5,000'},{lbl:'Road tax',val:'Waived'}],
-    dealers_list:[
-      {brand:'Ola Electric',name:'Ola Experience Jubilee Hills',addr:'Road No. 36, Jubilee Hills, Hyd 500033',tags:['Test rides','Service']},
-      {brand:'Ather Energy',name:'Ather Space Madhapur',addr:'Hitech City Road, Madhapur, Hyd 500081',tags:['Test rides','Ather Grid']}
-    ],
-    runningCosts:{fuelSaving:'₹3,000/mo',annualSaving:'₹36,000',payback:'4.0 years'},
-    benefits:['Road tax exemption','DISCOMS special EV rate','TSRTC bus depot charging','GHMC dedicated EV lanes (upcoming)']
-  },
-  pune:{
-    name:'Pune',state:'Maharashtra',emoji:'🎓',
-    dealers:240,chargers:520,registered:'98K',
-    img:'https://images.unsplash.com/photo-1571333250630-f0230c320b6d?auto=format&fit=crop&w=1400&q=80',
-    subsidy:[{lbl:'FAME-III central',val:'₹10,000+'},{lbl:'Maharashtra subsidy',val:'₹10,000'},{lbl:'Road tax',val:'Waived'}],
-    dealers_list:[
-      {brand:'Ola Electric',name:'Ola Experience Kharadi',addr:'EON Free Zone, Kharadi, Pune 411014',tags:['Test rides','Service']},
-      {brand:'Bajaj Auto',name:'Chetak Experience Wakad',addr:'Wakad Chowk, Pimpri-Chinchwad 411057',tags:['Test rides','Financing']}
-    ],
-    runningCosts:{fuelSaving:'₹2,900/mo',annualSaving:'₹34,800',payback:'4.1 years'},
-    benefits:['Maharashtra road tax waiver','PMC EV parking incentive','MSEDCL EV charging rate']
-  },
-  chennai:{
-    name:'Chennai',state:'Tamil Nadu',emoji:'🌊',
-    dealers:210,chargers:480,registered:'82K',
-    img:'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1400&q=80',
-    subsidy:[{lbl:'FAME-III central',val:'₹10,000+'},{lbl:'Tamil Nadu EV policy',val:'₹5,000'},{lbl:'Road tax',val:'100% waived'}],
-    dealers_list:[
-      {brand:'Ather Energy',name:'Ather Space T Nagar',addr:'Usman Road, T Nagar, Chennai 600017',tags:['Test rides','Service']},
-      {brand:'TVS Motor',name:'TVS EV Studio Anna Nagar',addr:'60 Feet Road, Anna Nagar West, Chennai 600040',tags:['Test rides','Service','Fast charge']}
-    ],
-    runningCosts:{fuelSaving:'₹2,800/mo',annualSaving:'₹33,600',payback:'4.3 years'},
-    benefits:['100% road tax waiver','TANGEDCO EV tariff','CMRL station charging','TN government fleet EV push']
-  }
+/* City extras that are not in data/cities.json. Images only where we have them. */
+const CITY_IMG={
+  mumbai:'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1400&q=80',
+  delhi:'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1400&q=80',
+  bangalore:'https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1400&q=80',
+  hyderabad:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80'
 };
+/* Running cost assumptions, shown on the page */
+const RUN={kmPerDay:40,petrolPerL:102,petrolKmPerL:45,evKmPerKwh:30,tariff:8};
 
-const BRAND_COLORS={'Ola Electric':'#16a663','Ather Energy':'#2563eb','TVS Motor':'#f59e0b','Bajaj Auto':'#7c3aed'};
+const inrC=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+function onRoadIn(ex, stateId){
+  const m=SUBSIDY.onRoadModel, rt=(SUBSIDY.states[stateId]||{}).roadTax||{};
+  const tax=rt.type==='percent'?ex*rt.pct/100:0;
+  return Math.round((ex+tax+m.insuranceBase+ex*m.insurancePct/100+m.handling+m.registration)/10)*10;
+}
+function roadTaxLabel(st){
+  const rt=(st&&st.roadTax)||{};
+  if(rt.type==='exempt') return 'Exempt';
+  if(rt.type==='percent') return rt.pct+'%';
+  return 'Unconfirmed';
+}
+const fmtDate=d=>new Date(d).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
 
-function loadCity(cityId, btn){
-  if(btn){
-    document.querySelectorAll('.city-sel-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-  }
-  const c=CITIES[cityId]||CITIES['mumbai'];
-  document.getElementById('pgTitle').textContent=`Electric Scooters in ${c.name} – Prices, Dealers & EV Incentives 2026 | ScooterWale`;
-  document.getElementById('pgDesc').setAttribute('content',`Buy electric scooters in ${c.name}. ${c.dealers} dealers, ${c.state} government subsidies, ${c.chargers} charging stations. Compare Ola, Ather, TVS prices in ${c.name}.`);
-  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/cities/${cityId}`);
+document.getElementById('citySelector').innerHTML=CITIES_DB.map(c=>`<a class="city-sel-btn" href="/cities/${c.id}" data-city="${c.id}">${c.icon} ${c.name}</a>`).join('');
+
+function loadCity(cityId){
+  const c=CITIES_DB.find(x=>x.id===cityId)||CITIES_DB[0];
+  const stateId=SUBSIDY.cityState[c.id], st=SUBSIDY.states[stateId]||{name:c.state};
+  const cash=st.cash||{}, rtLabel=roadTaxLabel(st);
+  document.querySelectorAll('.city-sel-btn').forEach(b=>b.classList.toggle('active',b.dataset.city===c.id));
+
+  const _seo=SEO.city(c,{count:SCOOTERS_DB.length,state:st.name,taxLine:rtLabel==='Exempt'?'road tax exempt':(rtLabel==='Unconfirmed'?'road tax status unconfirmed':rtLabel+' road tax')});
+  document.getElementById('pgTitle').textContent=_seo.title;
+  document.getElementById('pgDesc').setAttribute('content',_seo.desc);
+  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/cities/${c.id}`);
   document.getElementById('cityHeroTitle').textContent=`Electric scooters in ${c.name}`;
-  document.getElementById('cityHeroDesc').textContent=`Best EV scooter prices, ${c.dealers} dealers, government subsidies in ${c.name}, ${c.state}.`;
-  document.getElementById('cityHero').style.backgroundImage=`url('${c.img}')`;
-  document.getElementById('statDealers').textContent=BRANDS_DB.length+'+';
-  document.getElementById('statChargers').textContent=c.chargers;
-  document.getElementById('statRegistered').textContent=c.registered;
+  document.getElementById('cityHeroDesc').textContent=`On-road prices for all ${SCOOTERS_DB.length} models, ${st.name} subsidy and road tax rules, and where to find dealers in ${c.name}.`;
+  document.getElementById('cityHero').style.backgroundImage=`url('${CITY_IMG[c.id]||'/images/hero-scooter.webp'}')`;
+
+  // Hero stats: only things we can stand behind
+  const minEx=Math.min(...SCOOTERS_DB.map(s=>(s.cityPrices&&s.cityPrices[c.id])?s.cityPrices[c.id].ex:s.nationalPrice));
+  document.getElementById('statDealers').textContent=BRANDS_DB.length;
+  document.getElementById('statSubsidy').textContent=cash.amount?inrC(cash.amount):(cash.amount===null?'Unclear':'None');
+  document.getElementById('statChargers').textContent=rtLabel;
+  document.getElementById('statRegistered').textContent=inrC(minEx);
   document.getElementById('bcCity').textContent=c.name;
-  document.getElementById('subsidyTitle').textContent=`EV subsidies in ${c.state} (${c.name})`;
-  document.getElementById('subsidyRows').innerHTML=c.subsidy.map(s=>`<div class="subsidy-row"><span class="subsidy-label">${s.lbl}</span><span class="subsidy-val">${s.val}</span></div>`).join('');
-  document.getElementById('cityPicksEy').textContent=`Best EV scooters in ${c.name}`;
+
+  // Subsidy card
+  document.getElementById('subsidyTitle').textContent=`EV subsidy in ${st.name} (${c.name})`;
+  const rows=[
+    {lbl:'PM E-DRIVE central subsidy',val:`Up to ${inrC(SUBSIDY.central.cap)}`},
+    {lbl:`${st.name} state subsidy`,val:cash.amount?`Up to ${inrC(cash.amount)}`:(cash.amount===null?'Unclear':'None')},
+    {lbl:'Road tax on electric two-wheelers',val:rtLabel},
+    {lbl:'Registration fee',val:'Waived (all EVs, nationwide)'}
+  ];
+  if(st.deadline) rows.push({lbl:'State scheme valid until',val:fmtDate(st.deadline)});
+  document.getElementById('subsidyRows').innerHTML=rows.map(s=>`<div class="subsidy-row"><span class="subsidy-label">${s.lbl}</span><span class="subsidy-val">${s.val}</span></div>`).join('');
+  document.getElementById('subsidyNote').textContent=`${cash.text||''} ${st.notes||''} Checked ${fmtDate(SUBSIDY.checked)}.`.trim();
+
+  // On-road price table, cheapest first
+  document.getElementById('priceEy').textContent=`On-road prices in ${c.name}`;
+  document.getElementById('priceTitle').textContent=`Electric scooter on-road price in ${c.name}`;
+  const rowsP=SCOOTERS_DB.map(s=>{
+    const cp=s.cityPrices&&s.cityPrices[c.id];
+    const ex=cp?cp.ex:s.nationalPrice;
+    return {s,ex,on:cp?cp.onRoad:onRoadIn(ex,stateId)};
+  }).sort((a,b)=>a.ex-b.ex);
+  document.getElementById('cityPriceTable').innerHTML=`<thead><tr><th>Model</th><th>Ex-showroom</th><th>On-road (approx.)</th><th>Real range</th></tr></thead><tbody>`+
+    rowsP.map(r=>`<tr><td><a href="/scooters/${r.s.id}">${r.s.fullName}</a></td><td>${inrC(r.ex)}</td><td class="amt">${inrC(r.on)}</td><td>${r.s.realRange}</td></tr>`).join('')+`</tbody>`;
+  document.getElementById('priceNote').textContent=`On-road is our estimate for ${c.name}: ex-showroom plus ${rtLabel==='Exempt'?'no road tax (EVs are exempt in '+st.name+')':(rtLabel==='Unconfirmed'?'road tax, which we could not confirm for '+st.name+' (ask the RTO or dealer)':rtLabel+' road tax')}, first-year insurance and handling. Registration is free for EVs. Prices updated ${fmtDate(SW_CONFIG.dataUpdated)}.`;
+
+  // Picks: strong service first, then ScootScore
+  document.getElementById('cityPicksEy').textContent=`Best electric scooters in ${c.name}`;
   document.getElementById('cityPicksTitle').textContent=`Top picks for ${c.name} commuters`;
-  document.getElementById('dealersTitle').textContent=`EV dealers in ${c.name}`;
-  document.getElementById('cityNameInline').textContent=c.name;
-  const totalSubsidy=c.subsidy.reduce((a,s)=>a+(parseInt(s.val.replace(/[^\d]/g,''))||0),0);
-  document.getElementById('statSubsidy').textContent='₹'+totalSubsidy.toLocaleString('en-IN')+'+';
+  const picks=[...SCOOTERS_DB].filter(s=>s.scores&&s.scores.Service>=8).sort((a,b)=>b.score-a.score);
+  const seen=new Set(), top=[];
+  for(const s of picks){ if(!seen.has(s.brandSlug)){ seen.add(s.brandSlug); top.push(s); } if(top.length===3) break; }
+  document.getElementById('cityPicksGrid').innerHTML=top.map(s=>scooterCardHTML(s)).join('');
 
-  // Picks grid
-  document.getElementById('cityPicksGrid').innerHTML=SCOOTERS_DB.slice(0,3).map(s=>scooterCardHTML(s)).join('');
-
-  // Dealers
-  document.getElementById('dealersList').innerHTML=c.dealers_list.map(d=>{
-    const col=BRAND_COLORS[d.brand]||'#16a663';
+  // Dealers: each brand's own dealer finder (no invented addresses)
+  document.getElementById('dealersTitle').textContent=`Electric scooter dealers in ${c.name}`;
+  document.getElementById('mapLink').href=`https://www.google.com/maps/search/${encodeURIComponent('electric scooter showroom '+c.name)}`;
+  document.getElementById('dealersList').innerHTML=BRANDS_DB.map(b=>{
+    const L=(typeof BRAND_LINKS!=='undefined'&&BRAND_LINKS[b.id])||{};
+    const dealer=L.dealer||b.website, ride=L.testRide||null;
+    const tags=[`${SCOOTERS_DB.filter(s=>s.brandSlug===b.id).length} models`].concat(L.charging?['Charging network']:[]);
     return `<div class="dealer-card">
-      <div class="dealer-logo" style="background:${col}18;color:${col}">${d.brand.split(' ').map(w=>w[0]).join('').slice(0,3)}</div>
+      <div class="dealer-logo" style="background:${b.color}18;color:${b.color}">${(b.shortName||b.name).split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase()}</div>
       <div>
-        <div class="dealer-name">${d.name}</div>
-        <div class="dealer-addr">📍 ${d.addr}</div>
-        <div class="dealer-meta">${d.tags.map(t=>`<span>${t}</span>`).join('')}</div>
-        <div style="margin-top:8px;display:flex;gap:8px">
-          <button class="btn btn-primary btn-sm" onclick="alert('Call to action: open booking form or directions')">Book test ride</button>
-          <button class="btn btn-ghost btn-sm" onclick="window.open('https://maps.google.com/maps?q='+encodeURIComponent('${d.addr}'),'_blank')">Directions ↗</button>
+        <div class="dealer-name">${b.name} in ${c.name}</div>
+        <div class="dealer-addr">Find the nearest ${b.shortName||b.name} showroom or service centre on the official dealer finder.</div>
+        <div class="dealer-meta">${tags.map(t=>`<span>${t}</span>`).join('')}</div>
+        <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+          ${ride?`<a href="${ride}" target="_blank" rel="noopener" data-out="test-ride" data-brand="${b.id}"><button class="btn btn-primary btn-sm">Book test ride ↗</button></a>`:''}
+          <a href="${dealer}" target="_blank" rel="noopener" data-out="dealer" data-brand="${b.id}"><button class="btn btn-ghost btn-sm">Find a dealer ↗</button></a>
+          <a href="https://www.google.com/maps/search/${encodeURIComponent((b.shortName||b.name)+' electric showroom '+c.name)}" target="_blank" rel="noopener"><button class="btn btn-ghost btn-sm">Directions ↗</button></a>
         </div>
       </div>
     </div>`;
   }).join('');
 
-  // Running costs
+  // Running costs, with the assumptions on show
+  const petrolMonth=RUN.kmPerDay*30/RUN.petrolKmPerL*RUN.petrolPerL, evMonth=RUN.kmPerDay*30/RUN.evKmPerKwh*RUN.tariff, save=petrolMonth-evMonth;
+  document.getElementById('cityNameInline').textContent=c.name;
   document.getElementById('runningCosts').innerHTML=`
     <div style="display:flex;flex-direction:column;gap:6px">
-      <div class="trust-item"><span class="trust-icon"></span><span style="font-size:13px">Monthly fuel savings: <strong>${c.runningCosts.fuelSaving}</strong></span></div>
-      <div class="trust-item"><span class="trust-icon">📅</span><span style="font-size:13px">Annual savings: <strong>${c.runningCosts.annualSaving}</strong></span></div>
-      <div class="trust-item"><span class="trust-icon">⏱</span><span style="font-size:13px">EV pays for itself in: <strong>${c.runningCosts.payback}</strong></span></div>
+      <div class="trust-item"><span class="trust-icon">⛽</span><span style="font-size:13px">Monthly fuel savings: <strong>${inrC(save)}</strong></span></div>
+      <div class="trust-item"><span class="trust-icon">📅</span><span style="font-size:13px">Annual savings: <strong>${inrC(save*12)}</strong></span></div>
+      <div class="trust-item"><span class="trust-icon">⏱</span><span style="font-size:13px">Five-year savings: <strong>${inrC(save*60)}</strong></span></div>
+      <div style="font-size:11px;color:var(--ink-3);margin-top:4px">Assumes ${RUN.kmPerDay} km a day, petrol at ₹${RUN.petrolPerL}/L in a ${RUN.petrolKmPerL} km/L scooter, and home charging at ₹${RUN.tariff}/unit.</div>
     </div>`;
 
-  // State benefits
-  document.getElementById('stateBenefits').innerHTML=`<ul>${c.benefits.map(b=>`<li class="trust-item" style="padding:4px 0"><span class="trust-icon">✓</span><span style="font-size:13px">${b}</span></li>`).join('')}</ul>`;
+  // State rules
+  const ben=[];
+  if(cash.amount) ben.push(`State cash subsidy up to ${inrC(cash.amount)}`);
+  ben.push(rtLabel==='Exempt'?`No road tax on electric two-wheelers${st.roadTax&&st.roadTax.until?' until '+fmtDate(st.roadTax.until):''}`:(rtLabel==='Unconfirmed'?'Road tax status unconfirmed, ask the RTO':`${rtLabel} road tax on EVs`));
+  ben.push('No registration fee for EVs (central rule)');
+  ben.push(`PM E-DRIVE subsidy up to ${inrC(SUBSIDY.central.cap)} on scooters under ₹1.5 lakh ex-factory`);
+  document.getElementById('stateBenefits').innerHTML=`<ul>${ben.map(b=>`<li class="trust-item" style="padding:4px 0"><span class="trust-icon">✓</span><span style="font-size:13px">${b}</span></li>`).join('')}</ul>`;
 }
 
 // Init from URL
-const initCity=window.__SW_CITY__||new URLSearchParams(location.search).get('city')||'mumbai';
-const initBtn=document.querySelector(`.city-sel-btn[onclick*="${initCity}"]`);
-if(initBtn) initBtn.classList.add('active');
+const initCity=window.__SW_CITY__||new URLSearchParams(location.search).get('city')||SW_CONFIG.headlineCity||'mumbai';
 loadCity(initCity);
 </script>
 </body>

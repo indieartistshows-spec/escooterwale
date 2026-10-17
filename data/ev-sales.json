@@ -1,0 +1,22 @@
+{
+  "month": "2026-09",
+  "monthLabel": "September 2026",
+  "source": "VAHAN registrations (FADA monthly retail data)",
+  "sourceUrl": "https://vahan.parivahan.gov.in/vahan4dashboard/",
+  "reportUrl": "https://bikeadvice.in/electric-two-wheeler-sales-sep-2026-tvs-bajaj-ather-vida-ola/",
+  "note": "Electric two-wheelers, all states on VAHAN. Telangana registers outside VAHAN and is not included.",
+  "total": 207314,
+  "checked": "2026-10-17",
+  "brands": [
+    {"name": "TVS", "brandId": "tvs-motor", "units": 54037},
+    {"name": "Bajaj Chetak", "brandId": "bajaj-chetak", "units": 48429},
+    {"name": "Ather", "brandId": "ather-energy", "units": 30533},
+    {"name": "Hero Vida", "brandId": "hero-vida", "units": 24321},
+    {"name": "Ola Electric", "brandId": "ola-electric", "units": 13451},
+    {"name": "Ampere", "brandId": "ampere", "units": 9316},
+    {"name": "River", "brandId": null, "units": 5556},
+    {"name": "BGauss", "brandId": "bgauss", "units": 5023},
+    {"name": "Bounce Infinity", "brandId": "bounce-infinity", "units": 3069},
+    {"name": "E-Sprinto", "brandId": null, "units": 1997}
+  ]
+}

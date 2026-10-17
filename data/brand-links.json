@@ -1,0 +1,13 @@
+{
+  "_note": "Official brand URLs used for outbound links. 'verified' = checked to load and match its purpose. The weekly job re-checks every URL and falls back to the brand homepage if one breaks.",
+  "ola-electric": {"testRide": "https://www.olaelectric.com/experience-centres/book-appointment", "dealer": "https://www.olaelectric.com/experience-centres/book-appointment", "verified": ["testRide"]},
+  "tvs-motor": {"testRide": "https://www.tvsmotor.com/book-a-ride", "dealer": "https://www.tvsmotor.com/en/tvs-dealer-locator", "verified": ["testRide", "dealer"]},
+  "ather-energy": {"testRide": null, "dealer": null, "verified": []},
+  "bajaj-chetak": {"testRide": null, "dealer": null, "verified": []},
+  "hero-vida": {"testRide": null, "dealer": null, "verified": []},
+  "ampere": {"testRide": null, "dealer": null, "verified": []},
+  "okinawa": {"testRide": null, "dealer": null, "verified": []},
+  "pure-ev": {"testRide": null, "dealer": null, "verified": []},
+  "bounce-infinity": {"testRide": null, "dealer": null, "verified": []},
+  "bgauss": {"testRide": null, "dealer": null, "verified": []}
+}
