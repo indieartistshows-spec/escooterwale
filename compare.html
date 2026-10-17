@@ -121,6 +121,18 @@
 <!-- Favicon -->
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!--hreflang-->
+<link rel="alternate" hreflang="en-IN" href="https://www.escooterwale.in/compare"/>
+<link rel="alternate" hreflang="hi-IN" href="https://www.escooterwale.in/hi/compare"/>
+<link rel="alternate" hreflang="mr-IN" href="https://www.escooterwale.in/mr/compare"/>
+<link rel="alternate" hreflang="ta-IN" href="https://www.escooterwale.in/ta/compare"/>
+<link rel="alternate" hreflang="te-IN" href="https://www.escooterwale.in/te/compare"/>
+<link rel="alternate" hreflang="kn-IN" href="https://www.escooterwale.in/kn/compare"/>
+<link rel="alternate" hreflang="gu-IN" href="https://www.escooterwale.in/gu/compare"/>
+<link rel="alternate" hreflang="bn-IN" href="https://www.escooterwale.in/bn/compare"/>
+<link rel="alternate" hreflang="or-IN" href="https://www.escooterwale.in/or/compare"/>
+<link rel="alternate" hreflang="x-default" href="https://www.escooterwale.in/compare"/>
+<!--/hreflang-->
 </head>
 <body>
 <div id="navMount"></div>
@@ -422,7 +434,7 @@ function runCompare(opts){
   document.getElementById('cmpOutput').innerHTML=buildCmp(a,b);
   updateSEO(a,b);
   if(scroll) document.querySelector('.cmp-body').scrollIntoView({behavior:'smooth',block:'start'});
-  if(!window.__SW_A__) history.replaceState({},'',`/compare?a=${idA}&b=${idB}`);
+  if(!window.__SW_A__) history.replaceState({},'',`${location.pathname.replace(/\/$/,"")}?a=${idA}&b=${idB}`);
 }
 window.setCompare=function(idA,idB,opts){
   const selA=document.getElementById('pickA'), selB=document.getElementById('pickB');

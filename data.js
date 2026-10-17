@@ -9599,7 +9599,16 @@ const SW_CONFIG = {
  "headlineCity": "hyderabad",
  "headlineCityName": "Hyderabad",
  "dataUpdated": "2026-10-17",
- "langsLive": []
+ "langsLive": [
+  "hi",
+  "mr",
+  "ta",
+  "te",
+  "kn",
+  "gu",
+  "bn",
+  "or"
+ ]
 };
 
 function getById(id)       { return SCOOTERS_DB.find(s=>s.id===id); }
