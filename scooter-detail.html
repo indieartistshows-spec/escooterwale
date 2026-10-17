@@ -652,9 +652,9 @@ function renderOwnerVoices(s) {
   ];
   el.innerHTML = (vids.length ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px">${vids.map(v => `
       <a href="https://www.youtube.com/watch?v=${v.videoId}" target="_blank" rel="noopener" data-out="video" style="text-decoration:none;color:inherit">
-        <img src="${v.thumb || 'https://i.ytimg.com/vi/' + v.videoId + '/hqdefault.jpg'}" alt="${v.title}" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px" onerror="this.src='https://img.youtube.com/vi/${v.videoId}/hqdefault.jpg'"/>
-        <div style="font-size:12px;font-weight:600;margin-top:6px;line-height:1.35">${v.title}</div>
-        ${v.channel ? `<div style="font-size:11px;color:var(--ink-3)">${v.channel}</div>` : ''}
+        <img translate="no" src="${v.thumb || 'https://i.ytimg.com/vi/' + v.videoId + '/hqdefault.jpg'}" alt="${v.title}" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.videoId}/hqdefault.jpg'"/>
+        <div translate="no" style="font-size:12px;font-weight:600;margin-top:6px;line-height:1.35">${v.title}</div>
+        ${v.channel ? `<div translate="no" style="font-size:11px;color:var(--ink-3)">${v.channel}</div>` : ''}
       </a>`).join('')}</div>` : '') +
     `<div style="display:flex;flex-direction:column;gap:8px">${links.map(([i, label, url, type]) => `
       <a href="${url}" target="_blank" rel="noopener" data-out="${type}" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--ink);font-size:13px;font-weight:600">

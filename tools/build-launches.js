@@ -24,7 +24,7 @@ const fold = f => {
   <section class="launch-fold">
     <a class="lf-img" href="${brandUrl}" target="_blank" rel="noopener" data-out="brand" data-brand="${f.brandId}" aria-label="${f.brand} ${f.model} on ${host(f.url)}">
       <picture><source media="(max-width:640px)" srcset="${m}"/><img src="${d}" alt="${f.brand} ${f.model}" loading="lazy" width="1920" height="760"/></picture>
-      <span class="lf-tag">${f.status} · ${fmt(f.date)}</span>
+      <span class="lf-tag">${f.status} · ${fmt(f.date)}</span>${f.imageNote ? `<span class="lf-note">${f.imageNote}</span>` : ''}
     </a>
     <div class="lf-body">
       <div class="lf-brand">${f.brand}</div>
@@ -45,6 +45,7 @@ const FOLD_CSS = `<style>
 .lf-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .lf-img::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.25)}
 .lf-tag{position:absolute;left:16px;top:16px;z-index:1;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px}
+.lf-note{position:absolute;right:12px;bottom:10px;z-index:1;color:rgba(255,255,255,.8);font-size:11px;background:rgba(0,0,0,.45);padding:3px 8px;border-radius:6px}
 .lf-body{padding:22px 24px 24px}
 .lf-brand{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--g,#16a663);margin-bottom:6px}
 .lf-title{margin:0 0 10px;font-size:24px;line-height:1.25}

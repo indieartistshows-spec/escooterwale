@@ -898,13 +898,13 @@ function renderYT(filter='all'){
   grid.innerHTML = filtered.slice(0, ytShown).map(v=>`
     <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="yt-card" data-brand="${v.brand}" data-out="video">
       <div class="yt-thumb">
-        <img src="${v.thumb}" alt="${v.title}" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.videoId}/hqdefault.jpg'"/>
+        <img translate="no" src="${v.thumb}" alt="${v.title}" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.videoId}/hqdefault.jpg'"/>
         <div class="yt-play"><div class="yt-play-btn">▶</div></div>
         ${v.published?`<div class="yt-duration">${fmtDay(v.published)}</div>`:""}
       </div>
       <div class="yt-body">
-        <div class="yt-creator"><div class="yt-creator-name">${v.channel||'YouTube'}</div></div>
-        <div class="yt-title">${v.title}</div>
+        <div class="yt-creator" translate="no"><div class="yt-creator-name">${v.channel||'YouTube'}</div></div>
+        <div class="yt-title" translate="no">${v.title}</div>
       </div>
     </a>`).join('');
   const more=document.getElementById('ytMore');

@@ -826,3 +826,16 @@ img.lazy.loaded{opacity:1}
 /* v2.1: stop wide content (tables, chip rows) pushing grid columns past the screen on phones */
 .guide-layout>*,.city-layout>*,.brand-layout>*,.brand-hero-content>*{min-width:0}
 .guide-content table,.city-layout table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* SEO link directory under the footer */
+.seo-links{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:28px 0 36px;color:rgba(255,255,255,.5);font-size:12.5px;line-height:1.75}
+.seo-links h3{color:rgba(255,255,255,.8);font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 16px}
+.sl-grid{columns:2 520px;column-gap:40px}
+.sl-brand{break-inside:avoid;margin:0 0 18px}
+.sl-brand h4{margin:0 0 6px;font-size:13px}
+.sl-brand h4 a{color:rgba(255,255,255,.85);text-decoration:none}
+.sl-brand ul{list-style:none;margin:0;padding:0}
+.sl-brand li{margin:0 0 4px}
+.seo-links a{color:rgba(255,255,255,.5);text-decoration:none}
+.seo-links a:hover{color:var(--g);text-decoration:underline}
+.seo-links .sl-model{color:rgba(255,255,255,.75);font-weight:600}

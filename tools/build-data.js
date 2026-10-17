@@ -106,12 +106,13 @@ const out = header +
   `const SUBSIDY = ${JSON.stringify(subsidy, null, 1)};\n\n` +
   `const BRAND_LINKS = ${JSON.stringify(brandLinks, null, 1)};\n\n` +
   `const EV_SALES = ${JSON.stringify(evSales, null, 1)};\n\n` +
+  `const AGG_LINKS = ${JSON.stringify((() => { try { return J('data/aggregator-links.json'); } catch (e) { return { families: {} }; } })())};\n\n` +
   `const SW_CONFIG = ${JSON.stringify({ headlineCity: headline, headlineCityName: (cities.find(c => c.id === headline) || {}).name, dataUpdated: config.dataUpdated, langsLive: (() => { try { return require('./i18n-live.js').liveLangs(); } catch (e) { return []; } })() }, null, 1)};\n\n` +
 `function getById(id)       { return SCOOTERS_DB.find(s=>s.id===id); }
 function getByBrand(slug)  { return SCOOTERS_DB.filter(s=>s.brandSlug===slug); }
 function getSorted(by)     { return [...SCOOTERS_DB].sort((a,b)=>b[by]-a[by]); }
 function getBrandById(id)  { return BRANDS_DB.find(b=>b.id===id); }
-if(typeof module!=='undefined') module.exports={SCOOTERS_DB,BRANDS_DB,NEWS_DB,CITIES_DB,SUBSIDY,SW_CONFIG,EV_SALES,BRAND_LINKS};
+if(typeof module!=='undefined') module.exports={AGG_LINKS,SCOOTERS_DB,BRANDS_DB,NEWS_DB,CITIES_DB,SUBSIDY,SW_CONFIG,EV_SALES,BRAND_LINKS};
 `;
 fs.writeFileSync('data.js', out);
 // Trending archive goes in its own file so data.js stays small as it grows

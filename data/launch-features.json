@@ -42,10 +42,10 @@
       "modelId": "ampere-reo-1point3-kwh",
       "date": "2026-06-17",
       "status": "Launched",
-      "headline": "Ampere Reo VYB launched at ₹69,499",
+      "headline": "Ampere Reo VYB launched from ₹69,499",
       "summary": "A low-speed city scooter with an LFP battery that Ampere rates for up to 1 lakh km. At 25 km/h it needs no licence or registration, which makes it an easy first EV for students and short errands.",
       "facts": [
-        "₹69,499 introductory ex-showroom price",
+        "Launched at ₹69,499 introductory, now ₹71,999 on Ampere's site",
         "80 km real riding range claimed",
         "LFP battery, rated up to 1 lakh km",
         "24 L boot, keyless start, front disc",
@@ -109,7 +109,10 @@
         "d": "https://cdn.olaelectric.com/sites/evdp/pages/gen3/s1_pro_plus_banner_web_v2.webp",
         "m": "https://cdn.olaelectric.com/sites/evdp/pages/s1pro/gen3_s1pro_plus_product_mweb_image.webp"
       },
-      "checked": "2026-10-17"
+      "checked": "2026-10-17",
+      "mobileFromDesktop": true,
+      "mobileFocus": "68% 50%",
+      "imageNote": "Image: Ola S1 Pro range"
     }
   ]
 }

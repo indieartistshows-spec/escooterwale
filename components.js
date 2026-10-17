@@ -291,6 +291,36 @@ function toggleMenu(){
   b.setAttribute('aria-expanded', open);
 }
 
+// ── SEO LINK DIRECTORY (below the footer) ────────────────────
+// Every model, grouped by brand: buy from the brand, on BikeDekho, on BikeWale,
+// compare on EVIndia and on ScooterWale. Links come from data/aggregator-links.json,
+// which the weekly job checks; a model without a checked page uses the site's brand page.
+function seoLinksHTML(){
+  if(typeof SCOOTERS_DB==='undefined')return '';
+  const L=(typeof AGG_LINKS!=='undefined'&&AGG_LINKS.families)||{};
+  const brands=(typeof BRANDS_DB!=='undefined'?BRANDS_DB:[]);
+  const fam=new Map();
+  SCOOTERS_DB.forEach(s=>{const base=s.name.replace(/\s*[\d.]+\s*kWh$/i,'').trim(),k=s.brandSlug+'|'+base;if(!fam.has(k))fam.set(k,{k,brand:s.brandSlug,base,first:s});});
+  const utm=(u,c)=>{try{const x=new URL(u);x.searchParams.set('utm_source','escooterwale');x.searchParams.set('utm_medium','referral');x.searchParams.set('utm_campaign','footer_directory');x.searchParams.set('utm_content',c);return x.toString()}catch(e){return u}};
+  const ext=(u,t,type,brand)=>`<a href="${u}" target="_blank" rel="noopener" data-out="${type}"${brand?` data-brand="${brand}"`:''}>${t}</a>`;
+  const groups={};fam.forEach(f=>{(groups[f.brand]=groups[f.brand]||[]).push(f)});
+  const body=Object.entries(groups).map(([bid,list])=>{
+    const b=brands.find(x=>x.id===bid)||{},bname=b.shortName||b.name||list[0].first.brand;
+    const rows=list.map(f=>{
+      const s=f.first,l=L[f.k]||{},last=bname.split(' ').pop(),nm=f.base.toLowerCase().startsWith(last.toLowerCase())?`${bname.split(' ').slice(0,-1).join(' ')} ${f.base}`.trim():`${bname} ${f.base}`;
+      const bw=(l.bikewale&&l.bikewale.url)||'https://www.bikewale.com/electric-bikes/';
+      const bd=(l.bikedekho&&l.bikedekho.url)||'https://www.bikedekho.com/electric-bikes';
+      const ev=(l.evindia&&l.evindia.url)||'https://evindia.online/';
+      return `<li><a class="sl-model" translate="no" href="/scooters/${s.id}">${nm}</a>: `+
+        (s.brandUrl?ext(utm(s.brandUrl,s.id),'Buy from '+bname,'brand',bid)+' · ':'')+
+        ext(bd,'Buy on BikeDekho','aggregator')+' · '+ext(bw,'Buy on BikeWale','aggregator')+' · '+
+        ext(ev,'Compare on EVIndia','aggregator')+' · '+`<a href="/compare?a=${s.id}">Compare on ScooterWale</a></li>`;
+    }).join('');
+    return `<div class="sl-brand"><h4><a href="/brands/${bid}">${bname} electric scooters</a></h4><ul>${rows}</ul></div>`;
+  }).join('');
+  return `<section class="seo-links" aria-label="Where to buy and compare every electric scooter"><div class="container"><h3>Buy and compare every electric scooter in India</h3><div class="sl-grid">${body}</div></div></section>`;
+}
+
 // ── FOOTER HTML ──────────────────────────────────────────────
 function footerHTML(){
   return `<footer class="footer">
@@ -357,7 +387,7 @@ function footerHTML(){
         </div>
       </div>
     </div>
-  </footer>`;
+  </footer>`+seoLinksHTML();
 }
 
 // ── LAZY IMAGE OBSERVER ──────────────────────────────────────
