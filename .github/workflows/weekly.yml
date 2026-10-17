@@ -71,6 +71,10 @@ jobs:
         if: env.SCRAPE == 'true'
         continue-on-error: true
         run: node automation/ga-headline.js
+      - name: Homepage banners from brand sites
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: node automation/banners.js
       - name: Outbound links
         if: env.SCRAPE == 'true'
         continue-on-error: true
