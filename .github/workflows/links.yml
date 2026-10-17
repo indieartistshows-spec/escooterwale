@@ -1,0 +1,32 @@
+# Finds and checks the BikeWale, BikeDekho and EVIndia page for every model (SEO footer links).
+name: Aggregator links
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [v2.1-build, main]
+    paths: ['automation/aggregator-links.js', '.github/workflows/links.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - run: node automation/aggregator-links.js
+      - run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add data/aggregator-links.json
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "Aggregator links checked"
+          git pull --rebase -q || true
+          git push

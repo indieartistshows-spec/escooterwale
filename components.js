@@ -240,7 +240,6 @@ function navHTML(active='home'){
     {id:'trending',label:'🔥 Trending',href:'/trending'},
     {id:'launches',label:'🆕 Launches',href:'/launches'},
     {id:'emi',label:'EMI Calc',href:'/emi'},
-    {id:'cases',label:'🛡️ Cases',href:'/cases'},
   ];
   return `<nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">

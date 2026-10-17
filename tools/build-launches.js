@@ -14,6 +14,47 @@ const fmt = iso => { const [y, m, d] = iso.split('-').map(Number); return `${d} 
 const ev = L.events || [];
 const launches = ev.filter(e => e.type === 'launch'), gone = ev.filter(e => e.type === 'discontinued');
 const onSale = S.filter(s => !s.discontinued).length;
+const F = JSON.parse(fs.readFileSync('data/launch-features.json', 'utf8')).slides.filter(f => f.img && fs.existsSync('.' + f.img.d) || f.img && fs.existsSync('.' + f.img.m));
+const host = u => new URL(u).hostname.replace(/^www\./, '');
+const fold = f => {
+  const brandUrl = UTM(f.url) + '&utm_content=' + f.id;
+  const d = fs.existsSync('.' + f.img.d) ? f.img.d : f.img.m, m = fs.existsSync('.' + f.img.m) ? f.img.m : d;
+  const inCat = f.modelId && S.some(x => x.id === f.modelId) && /konarc/i.test(f.model) ? `<a class="lf-btn ghost" href="/scooters/${f.modelId}">Konarc specs and review</a>` : '';
+  return `
+  <section class="launch-fold">
+    <a class="lf-img" href="${brandUrl}" target="_blank" rel="noopener" data-out="brand" data-brand="${f.brandId}" aria-label="${f.brand} ${f.model} on ${host(f.url)}">
+      <picture><source media="(max-width:640px)" srcset="${m}"/><img src="${d}" alt="${f.brand} ${f.model}" loading="lazy" width="1920" height="760"/></picture>
+      <span class="lf-tag">${f.status} · ${fmt(f.date)}</span>
+    </a>
+    <div class="lf-body">
+      <div class="lf-brand">${f.brand}</div>
+      <h2 class="lf-title">${f.headline}</h2>
+      <p>${f.summary}</p>
+      <ul class="lf-facts">${f.facts.map(x => `<li>${x}</li>`).join('')}</ul>
+      <div class="lf-actions">
+        <a class="lf-btn" href="${brandUrl}" target="_blank" rel="noopener" data-out="brand" data-brand="${f.brandId}">Visit ${host(f.url)} ↗</a>
+        <a class="lf-btn ghost" href="${f.article.url}" target="_blank" rel="noopener" data-out="article">Read the ${f.article.source} report ↗</a>
+        ${inCat}
+      </div>
+    </div>
+  </section>`;
+};
+const FOLD_CSS = `<style>
+.launch-fold{margin:0 0 32px;border:1px solid var(--line,#e5e7eb);border-radius:18px;overflow:hidden;background:var(--card,#fff)}
+.lf-img{position:relative;display:block;aspect-ratio:1920/760;background:#0b0f14}
+.lf-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.lf-img::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.25)}
+.lf-tag{position:absolute;left:16px;top:16px;z-index:1;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px}
+.lf-body{padding:22px 24px 24px}
+.lf-brand{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--g,#16a663);margin-bottom:6px}
+.lf-title{margin:0 0 10px;font-size:24px;line-height:1.25}
+.lf-facts{margin:12px 0 16px;padding-left:18px}
+.lf-facts li{margin:4px 0}
+.lf-actions{display:flex;flex-wrap:wrap;gap:10px}
+.lf-btn{display:inline-flex;align-items:center;padding:10px 16px;border-radius:10px;background:var(--g,#16a663);color:#fff!important;font-weight:700;font-size:14px;text-decoration:none!important}
+.lf-btn.ghost{background:transparent;color:var(--ink,#111)!important;border:1px solid var(--line,#d1d5db)}
+@media(max-width:640px){.lf-img{aspect-ratio:780/1040;max-height:420px}.lf-title{font-size:20px}.lf-body{padding:18px}}
+</style>`;
 const UTM = u => u ? u + (u.includes('?') ? '&' : '?') + 'utm_source=escooterwale&utm_medium=referral&utm_campaign=launches' : '';
 
 const row = e => `      <tr>
@@ -45,13 +86,17 @@ page({
   schema: { '@context': 'https://schema.org', '@graph': [ORG,
     crumbs([{ name: 'Home', url: `${BASE}/` }, { name: 'Launches' }]),
     { '@type': 'ItemList', name: 'New electric scooter launches in India', itemListElement: launches.slice(0, 30).map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: `${e.brand} ${e.name}` })) }] },
-  body: `
+  body: `${FOLD_CSS}
+  <h2>Latest launches</h2>
+  ${F.map(fold).join('')}
+
   <div class="callout-box green">
     <h4>💡 How this list works</h4>
     <p style="margin:0;font-size:15px">A model counts as <strong>new</strong> once it has appeared on the brand's own website in two weekly checks in a row, so one-off test pages do not sneak in. It counts as <strong>discontinued</strong> after it has been missing for two checks in a row. Entries stay here permanently.</p>
   </div>
 
-  <h2>New launches</h2>
+  <h2>Launch log</h2>
+  <p>New models and battery options we have spotted on brand websites, newest first.</p>
   ${table(launches)}
 
   <h2>Discontinued models</h2>

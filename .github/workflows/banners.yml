@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [v2.1-build, main]
-    paths: ['automation/banners.js', '.github/workflows/banners.yml']
+    paths: ['automation/banners.js', '.github/workflows/banners.yml', 'data/launch-features.json']
 
 permissions:
   contents: write
@@ -24,14 +24,16 @@ jobs:
           npm ci
           npx playwright install --with-deps chromium
       - name: Fetch banners
-        run: node automation/banners.js
+        run: |
+          node automation/banners.js
+          node automation/banners.js --file=data/launch-features.json
       - name: Report
-        run: cat automation/out/banners.json
+        run: cat automation/out/banners.json automation/out/launch-features.json
       - name: Commit
         run: |
           git config user.name "escooterwale-bot"
           git config user.email "bot@escooterwale.in"
-          git add images/banners data/banners.json
+          git add images/banners data/banners.json data/launch-features.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "Homepage banners refreshed from brand sites"
           git push

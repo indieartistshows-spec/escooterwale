@@ -17,7 +17,7 @@
 const fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 
-const FILE = 'data/banners.json';
+const FILE = (process.argv.find(a => a.startsWith('--file=')) || '--file=data/banners.json').slice(7);
 const CFG = JSON.parse(fs.readFileSync(FILE, 'utf8'));
 const SCOOTERS = JSON.parse(fs.readFileSync('data/scooters.json', 'utf8'));
 const OFFLINE = process.argv.includes('--offline');
@@ -106,6 +106,7 @@ async function fetchAsDataUrl(ctx, src) {
 }
 
 function modelPhoto(s) {
+  if (s.fallbackPhoto && fs.existsSync('.' + s.fallbackPhoto)) { const e = path.extname(s.fallbackPhoto).slice(1).replace('jpg', 'jpeg'); return `data:image/${e};base64,${fs.readFileSync('.' + s.fallbackPhoto).toString('base64')}`; }
   const m = SCOOTERS.find(x => x.id === s.modelId) || SCOOTERS.find(x => x.brandSlug === s.brandId);
   const f = m && (m.heroImg || m.cardImg);
   if (!f || !fs.existsSync('.' + f)) return null;
@@ -154,5 +155,5 @@ function modelPhoto(s) {
   }
   await browser.close();
   fs.writeFileSync(FILE, JSON.stringify(CFG, null, 2) + '\n');
-  fs.writeFileSync(path.join(OUT, 'banners.json'), JSON.stringify(report, null, 1));
+  fs.writeFileSync(path.join(OUT, path.basename(FILE)), JSON.stringify(report, null, 1));
 })();

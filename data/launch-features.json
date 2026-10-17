@@ -1,0 +1,109 @@
+{
+  "_note": "Featured launch banners on /launches, newest first. Facts come from the linked report and the brand's own page. automation/banners.js --file=data/launch-features.json refreshes the images from the brand site every week.",
+  "slides": [
+    {
+      "id": "launch-ather-konarc",
+      "brand": "Ather",
+      "brandId": "ather-energy",
+      "model": "Konarc",
+      "modelId": "ather-energy-konarc-s-125-2point7-kwh",
+      "date": "2026-08-29",
+      "status": "Launched",
+      "headline": "Ather Konarc launched from ₹99,999",
+      "summary": "Ather's first scooter on its new EL platform, shown at Community Day. It is a family scooter with a steel unibody, metal panels and IP67 sealing, priced well below the Rizta.",
+      "facts": [
+        "From ₹99,999 (S 100), ₹1,21,999 (S 125), ₹1,44,999 (S 161)",
+        "100, 125 and 161 km claimed range",
+        "70 km/h top speed",
+        "31 L boot",
+        "S 125 and S 161 deliveries from September 2026, S 100 from early 2027"
+      ],
+      "home": "https://www.atherenergy.com/",
+      "pages": [
+        "https://www.atherenergy.com/konarc"
+      ],
+      "url": "https://www.atherenergy.com/konarc",
+      "article": {
+        "url": "https://www.rushlane.com/new-ather-konarc-launch-price-rs-99999-up-to-200-km-range-12554471.html",
+        "source": "Rushlane"
+      },
+      "img": {
+        "d": "/images/banners/ather-konarc-d.jpg",
+        "m": "/images/banners/ather-konarc-m.jpg"
+      },
+      "source": null,
+      "checked": null
+    },
+    {
+      "id": "launch-ampere-reo-vyb",
+      "brand": "Ampere",
+      "brandId": "ampere",
+      "model": "Reo VYB",
+      "modelId": "ampere-reo-1point3-kwh",
+      "date": "2026-06-17",
+      "status": "Launched",
+      "headline": "Ampere Reo VYB launched at ₹69,499",
+      "summary": "A low-speed city scooter with an LFP battery that Ampere rates for up to 1 lakh km. At 25 km/h it needs no licence or registration, which makes it an easy first EV for students and short errands.",
+      "facts": [
+        "₹69,499 introductory ex-showroom price",
+        "80 km real riding range claimed",
+        "LFP battery, rated up to 1 lakh km",
+        "24 L boot, keyless start, front disc",
+        "3 years or 30,000 km warranty"
+      ],
+      "home": "https://ampere-electric.com/",
+      "pages": [
+        "https://ampere-electric.com/reovyb"
+      ],
+      "find": "reovyb|reo[^\"']*vyb",
+      "url": "https://ampere-electric.com/reovyb",
+      "article": {
+        "url": "https://bikeadvice.in/ampere-reo-vyb-launch-price-rs-69499-80-km-range/",
+        "source": "BikeAdvice"
+      },
+      "img": {
+        "d": "/images/banners/launch-ampere-reo-vyb-d.jpg",
+        "m": "/images/banners/launch-ampere-reo-vyb-m.jpg"
+      },
+      "fallbackPhoto": "/images/ampere-reo-1.3-kwh.webp",
+      "source": null,
+      "checked": null
+    },
+    {
+      "id": "launch-ola-s1-pro-sport",
+      "brand": "Ola",
+      "brandId": "ola-electric",
+      "model": "S1 Pro Sport",
+      "modelId": null,
+      "date": "2026-01-15",
+      "status": "Deliveries started",
+      "headline": "Ola S1 Pro Sport, the first scooter with ADAS, is now delivering",
+      "summary": "Unveiled at Ola's Sankalp event on Independence Day 2025 and delivered from January 2026. It is Ola's fastest scooter and the first in India with driver assistance features.",
+      "facts": [
+        "₹1.50 lakh introductory ex-showroom price",
+        "5.2 kWh Bharat Cell pack, also a 4 kWh option",
+        "320 km claimed range",
+        "152 km/h top speed",
+        "Adaptive cruise, forward collision and lane departure warnings"
+      ],
+      "home": "https://www.olaelectric.com/",
+      "pages": [
+        "https://www.olaelectric.com/s1-pro-sport",
+        "https://www.olaelectric.com/s1-pro"
+      ],
+      "find": "pro-sport|pro sport",
+      "url": "https://www.olaelectric.com/",
+      "article": {
+        "url": "https://www.evoindia.com/news/bike-news/ola-s1-pro-sport-electric-scooter-launched-at-150-lakh-alongside-the-unveiling-of-the-updated-diamondhead-sports-electric-bike-ahead-of-launch-in-2027-587100",
+        "source": "evo India"
+      },
+      "img": {
+        "d": "/images/banners/launch-ola-s1-pro-sport-d.jpg",
+        "m": "/images/banners/launch-ola-s1-pro-sport-m.jpg"
+      },
+      "fallbackPhoto": "/images/hero-scooter.webp",
+      "source": null,
+      "checked": null
+    }
+  ]
+}

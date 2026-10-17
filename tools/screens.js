@@ -8,7 +8,7 @@ const BASE = process.argv[3] || 'http://127.0.0.1:8877';
 const PAGES = (process.env.SHOT_PAGES || [
   '/', '/listings', '/scooters/ather-energy-450x-3point7-kwh', '/scooters/ola-electric-s1-x-2-kwh',
   '/brands/ampere', '/cities/hyderabad', '/best/under-1-5l', '/compare/ola-electric-s1-x-3-kwh-vs-ather-energy-450s-2point9-kwh',
-  '/guide-subsidy', '/guide-subsidy-deadlines', '/electric-scooter-price', '/emi', '/trending', '/cases', '/launches'
+  '/guide-subsidy', '/guide-subsidy-deadlines', '/electric-scooter-price', '/emi', '/trending', '/launches'
 ].join(',')).split(',');
 const VIEWPORTS = [{ name: 'd', width: 1280, height: 900 }, { name: 'm', width: 375, height: 812 }];
 (async () => {

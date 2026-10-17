@@ -78,7 +78,9 @@ jobs:
       - name: Homepage banners from brand sites
         if: env.SCRAPE == 'true'
         continue-on-error: true
-        run: node automation/banners.js
+        run: |
+          node automation/banners.js
+          node automation/banners.js --file=data/launch-features.json
       - name: Outbound links
         if: env.SCRAPE == 'true'
         continue-on-error: true

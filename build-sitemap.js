@@ -46,7 +46,6 @@ add(`${BASE}/compare`,                '0.8', 'weekly');
 add(`${BASE}/best`,                   '0.8', 'weekly');
 add(`${BASE}/trending`,               '0.8', 'daily');
 add(`${BASE}/emi`,                    '0.7', 'monthly');
-add(`${BASE}/cases`,                  '0.6', 'weekly');
 add(`${BASE}/launches`,               '0.8', 'weekly');
 add(`${BASE}/yellow-brother`,         '0.7', 'weekly');
 
