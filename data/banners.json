@@ -25,7 +25,7 @@
       "checked": "2026-10-17",
       "keep": {
         "x0": 0.51,
-        "x1": 1.0
+        "x1": 1
       },
       "keepFor": "https://static.ampere-electric.com/magnus_gmax_pp_hero_banner_1440px_95032a2dcd.webp"
     },
@@ -71,11 +71,11 @@
       },
       "source": {
         "d": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg",
-        "m": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg"
+        "m": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(M).jpg"
       },
       "checked": "2026-10-17",
       "keep": {
-        "x0": 0.0,
+        "x0": 0,
         "x1": 0.41
       },
       "keepFor": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg"
