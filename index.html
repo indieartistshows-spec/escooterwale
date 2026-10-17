@@ -650,12 +650,12 @@ h1,h2,h3,h4,.nav-logo-text,.sv2-num,.h-stat-num,.pick-name,.sc-name,.budget-rang
   <div class="container">
     <div class="sec-hd"><div><div class="eyebrow">By city</div><h2 class="mt-8">Find EV scooters in your city</h2></div></div>
     <div class="city-grid">
-      <a href="/cities/mumbai/" class="city-card"><div class="city-icon">🌊</div><div class="city-name">Mumbai</div><div class="city-sub">₹5K subsidy</div></a>
-      <a href="/cities/delhi/" class="city-card"><div class="city-icon">🏛️</div><div class="city-name">Delhi</div><div class="city-sub">₹30K subsidy</div></a>
-      <a href="/cities/bangalore/" class="city-card"><div class="city-icon">🌿</div><div class="city-name">Bengaluru</div><div class="city-sub">₹10K subsidy</div></a>
-      <a href="/cities/hyderabad/" class="city-card"><div class="city-icon">🍊</div><div class="city-name">Hyderabad</div><div class="city-sub">₹5K subsidy</div></a>
-      <a href="/cities/pune/" class="city-card"><div class="city-icon">🎓</div><div class="city-name">Pune</div><div class="city-sub">₹5K subsidy</div></a>
-      <a href="/cities/chennai/" class="city-card"><div class="city-icon">🌊</div><div class="city-name">Chennai</div><div class="city-sub">₹5K subsidy</div></a>
+      <a href="/cities/mumbai" class="city-card"><div class="city-icon">🌊</div><div class="city-name">Mumbai</div><div class="city-sub">₹5K subsidy</div></a>
+      <a href="/cities/delhi" class="city-card"><div class="city-icon">🏛️</div><div class="city-name">Delhi</div><div class="city-sub">₹30K subsidy</div></a>
+      <a href="/cities/bangalore" class="city-card"><div class="city-icon">🌿</div><div class="city-name">Bengaluru</div><div class="city-sub">₹10K subsidy</div></a>
+      <a href="/cities/hyderabad" class="city-card"><div class="city-icon">🍊</div><div class="city-name">Hyderabad</div><div class="city-sub">₹5K subsidy</div></a>
+      <a href="/cities/pune" class="city-card"><div class="city-icon">🎓</div><div class="city-name">Pune</div><div class="city-sub">₹5K subsidy</div></a>
+      <a href="/cities/chennai" class="city-card"><div class="city-icon">🌊</div><div class="city-name">Chennai</div><div class="city-sub">₹5K subsidy</div></a>
     </div>
   </div>
 </section>
@@ -760,11 +760,11 @@ function hideSugg(){const b=document.getElementById('searchSuggestions');if(b)b.
 // SCOOTSCORE SHOWCASE
 const SC=s=>s>=8.5?'#16c964':s>=7.5?'#22c55e':s>=6.5?'#f59e0b':'#ef4444';
 const topS=[...SCOOTERS_DB].sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,6);
-document.getElementById('ssShowcase').innerHTML=topS.map(s=>`<a href="/scooters/${s.id}/" class="ss-card"><div class="ss-card-score" style="color:${SC(s.score||0)}">${(s.score||0).toFixed(1)}</div><div class="ss-card-lbl">Score</div><div class="ss-card-name">${s.brand.split(' ')[0]} ${s.name.split(' ').slice(0,2).join(' ')}</div></a>`).join('');
+document.getElementById('ssShowcase').innerHTML=topS.map(s=>`<a href="/scooters/${s.id}" class="ss-card"><div class="ss-card-score" style="color:${SC(s.score||0)}">${(s.score||0).toFixed(1)}</div><div class="ss-card-lbl">Score</div><div class="ss-card-name">${s.brand.split(' ')[0]} ${s.name.split(' ').slice(0,2).join(' ')}</div></a>`).join('');
 
 // BRAND STRIP — real logos
 document.getElementById('brandStrip').innerHTML=BRANDS_DB.map(b=>{
-  return `<a href="/brands/${b.id}/" class="brand-chip" role="listitem">
+  return `<a href="/brands/${b.id}" class="brand-chip" role="listitem">
     ${brandLogoHTML(b.id, 52)}
     <div class="brand-chip-name">${b.name.split(' ')[0]}</div>
     <div class="brand-chip-count">${b.models} models</div>
@@ -779,7 +779,7 @@ document.getElementById('brandStrip').innerHTML=BRANDS_DB.map(b=>{
 });
 
 // NEWS
-document.getElementById('newsGrid').innerHTML=NEWS_DB.slice(0,3).map((n,i)=>`<a href="/articles/${n.id}/" class="news-card"><div class="news-img ${i===0?'news-img-tall':'news-img-short'}"><img src="${n.img}" alt="${n.title}" loading="lazy" onerror="this.parentElement.style.background='var(--surf-3)'"/></div><div class="news-body"><div class="news-tag">${n.tag}</div><div class="news-title">${n.title}</div><div class="news-meta">${n.date} · ${n.readTime} read</div></div></a>`).join('');
+document.getElementById('newsGrid').innerHTML=NEWS_DB.slice(0,3).map((n,i)=>`<a href="/articles/${n.id}" class="news-card"><div class="news-img ${i===0?'news-img-tall':'news-img-short'}"><img src="${n.img}" alt="${n.title}" loading="lazy" onerror="this.parentElement.style.background='var(--surf-3)'"/></div><div class="news-body"><div class="news-tag">${n.tag}</div><div class="news-title">${n.title}</div><div class="news-meta">${n.date} · ${n.readTime} read</div></div></a>`).join('');
 
 // REAL RANGE BARS
 const RR=[{name:'Ola S1 Pro',claimed:176,real:140},{name:'Ather 450X',claimed:161,real:125},{name:'TVS iQube ST',claimed:212,real:165},{name:'Bajaj Chetak',claimed:153,real:118},{name:'Hero Vida V2',claimed:143,real:112}];
@@ -834,7 +834,7 @@ function buildRace(){
     // Brand logo + short model name
     const logo=brandLogoHTML(s.brandSlug,26);
     const modelShort=s.name.split(' ').slice(0,3).join(' ');
-    return `<div class="race-lane race-rank-${i+1}" onclick="window.location='/scooters/${s.id}/'" role="link" style="cursor:pointer">
+    return `<div class="race-lane race-rank-${i+1}" onclick="window.location='/scooters/${s.id}'" role="link" style="cursor:pointer">
       <div class="race-pos">#${i+1}</div>
       <div class="race-name-cell">
         ${logo}
@@ -897,7 +897,7 @@ function renderPicks(key='default'){
   document.getElementById('picksGrid').innerHTML=PICKS[key].map(p=>{
     const s=SCOOTERS_DB.find(x=>x.id===p.id);if(!s)return '';
     const sc=s.score||0,scC=SC(sc);
-    return `<div class="pick-card ${p.featured?'featured':''}" onclick="window.location='/scooters/${s.id}/'" style="cursor:pointer">
+    return `<div class="pick-card ${p.featured?'featured':''}" onclick="window.location='/scooters/${s.id}'" style="cursor:pointer">
       <div class="pick-img">
         <img src="${s.cardImg}" alt="${s.brand} ${s.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='var(--surf-3)'"/>
         <div class="pick-overlay"></div>
@@ -916,7 +916,7 @@ function renderPicks(key='default'){
         </div>
         <div class="pick-bestfor"><strong>Best for:</strong> ${p.bestFor}</div>
         <div class="pick-actions" onclick="event.stopPropagation()">
-          <a href="/scooters/${s.id}/"><button class="btn btn-outline" style="width:100%;padding:10px;font-size:12px">Full review</button></a>
+          <a href="/scooters/${s.id}"><button class="btn btn-outline" style="width:100%;padding:10px;font-size:12px">Full review</button></a>
           <a href="${s.brandUrl}" target="_blank" rel="noopener"><button class="btn btn-primary" style="width:100%;padding:10px;font-size:12px">Buy ↗</button></a>
         </div>
       </div>

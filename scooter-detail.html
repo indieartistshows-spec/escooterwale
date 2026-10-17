@@ -638,13 +638,13 @@ function hydratePage(id){
   // Meta & SEO
   document.getElementById('pgTitle').textContent=`${s.brand} ${s.name} Review (2026) – Price, Real Range, Verdict | ScooterWale`;
   document.getElementById('pgDesc').setAttribute('content',`${s.brand} ${s.name}: Price starts at ${s.priceDisplay}. Real-world range ${s.realRange} (not lab claims). Expert verdict, full specs, who should buy, who should avoid. Direct link to buy.`);
-  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/scooter-detail?id=${id}`);
+  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/scooters/${id}`);
   document.getElementById('pgSchema').textContent = JSON.stringify({
     "@context":"https://schema.org","@type":"Product",
     "name":`${s.brand} ${s.name}`,"brand":{"@type":"Brand","name":s.brand},
     "description":s.tagline,
     "offers":{"@type":"Offer","price":s.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":s.brandUrl},
-    "aggregateRating":{"@type":"AggregateRating","ratingValue":s.rating,"reviewCount":s.reviews}
+    "review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":s.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}
   });
 
   // Header
@@ -781,7 +781,7 @@ function hydratePage(id){
   // Similar
   const others=SCOOTERS_DB.filter(x=>x.id!==id).slice(0,3);
   document.getElementById('similarGrid').innerHTML=others.map(o=>`
-    <a href="/scooters/${o.id}/" class="sim-card">
+    <a href="/scooters/${o.id}" class="sim-card">
       <div class="sim-img"><img src="${o.cardImg}" alt="${o.name}" loading="lazy" onerror="this.parentElement.style.background='var(--surf-3)'"/></div>
       <div class="sim-brand">${o.brand}</div>
       <div class="sim-name">${o.name}</div>

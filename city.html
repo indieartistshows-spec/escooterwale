@@ -236,7 +236,7 @@ function loadCity(cityId, btn){
   const c=CITIES[cityId]||CITIES['mumbai'];
   document.getElementById('pgTitle').textContent=`Electric Scooters in ${c.name} – Prices, Dealers & EV Incentives 2026 | ScooterWale`;
   document.getElementById('pgDesc').setAttribute('content',`Buy electric scooters in ${c.name}. ${c.dealers} dealers, ${c.state} government subsidies, ${c.chargers} charging stations. Compare Ola, Ather, TVS prices in ${c.name}.`);
-  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/city?city=${cityId}`);
+  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/cities/${cityId}`);
   document.getElementById('cityHeroTitle').textContent=`Electric scooters in ${c.name}`;
   document.getElementById('cityHeroDesc').textContent=`Best EV scooter prices, ${c.dealers} dealers, government subsidies in ${c.name}, ${c.state}.`;
   document.getElementById('cityHero').style.backgroundImage=`url('${c.img}')`;

@@ -107,7 +107,7 @@ function scooterCardHTML(s, opts={}){
   const badgeLabel = s.badge ? (badgeMap[s.badge]||s.badge) : null;
 
   return `
-  <div class="scooter-card ${extraClass}" data-id="${s.id}" onclick="window.location='/scooters/${s.id}/'" role="button" tabindex="0" style="cursor:pointer">
+  <div class="scooter-card ${extraClass}" data-id="${s.id}" onclick="window.location='/scooters/${s.id}'" role="button" tabindex="0" style="cursor:pointer">
     <div class="sc-img-wrap">
       <img src="${s.cardImg}"
            alt="${s.brand} ${s.name} electric scooter price India 2026"
@@ -155,7 +155,7 @@ function scooterCardHTML(s, opts={}){
       </div>
       <div class="sc-verdict-preview">${(s.verdict||'').substring(0,90)}${(s.verdict||'').length>90?'…':''}</div>
       <div class="sc-actions" onclick="event.stopPropagation()">
-        <a href="/scooters/${s.id}/"><button class="btn btn-outline sc-btn">Full review</button></a>
+        <a href="/scooters/${s.id}"><button class="btn btn-outline sc-btn">Full review</button></a>
         <a href="${s.brandUrl}" target="_blank" rel="noopener noreferrer">
           <button class="btn btn-primary sc-btn" style="display:flex;align-items:center;justify-content:center;gap:6px">
             ${brandLogoHTML(s.brandSlug,18)}
@@ -312,12 +312,12 @@ function footerHTML(){
         <!-- Top Brands -->
         <div class="footer-col">
           <h5>Top Brands</h5>
-          <a href="/brands/ola-electric/">Ola Electric</a>
-          <a href="/brands/ather-energy/">Ather Energy</a>
-          <a href="/brands/tvs-motor/">TVS iQube</a>
-          <a href="/brands/bajaj-chetak/">Bajaj Chetak</a>
-          <a href="/brands/hero-vida/">Hero Vida</a>
-          <a href="/brands/ampere/">Ampere</a>
+          <a href="/brands/ola-electric">Ola Electric</a>
+          <a href="/brands/ather-energy">Ather Energy</a>
+          <a href="/brands/tvs-motor">TVS iQube</a>
+          <a href="/brands/bajaj-chetak">Bajaj Chetak</a>
+          <a href="/brands/hero-vida">Hero Vida</a>
+          <a href="/brands/ampere">Ampere</a>
         </div>
 
         <!-- Community -->

@@ -175,7 +175,7 @@ const avgRating=models.length?(models.reduce((a,s)=>a+s.rating,0)/models.length)
 
 document.getElementById('pgTitle').textContent=`${brand.name} Electric Scooters – All Models, Prices, Reviews 2026 | ScooterWale`;
 document.getElementById('pgDesc').setAttribute('content',`${brand.name} electric scooters in India 2025. ${models.length} models. Prices start at ₹${minPrice.toLocaleString('en-IN')}. Full specs, reviews & comparison.`);
-document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/brand?b=${bid}`);
+document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/brands/${bid}`);
 // Hero background: use first scooter image
 if(models[0]?.heroImg) document.getElementById('brandHeroBg').style.backgroundImage=`url('${models[0].heroImg}')`;
 
@@ -222,7 +222,7 @@ document.getElementById('brandModelsGrid').innerHTML=models.length
 
 // Other brands — use brandLogoHTML
 document.getElementById('otherBrandsStrip').innerHTML=BRANDS_DB.filter(b=>b.id!==bid).map(b=>`
-  <a href="/brands/${b.id}/" class="brand-chip">
+  <a href="/brands/${b.id}" class="brand-chip">
     ${brandLogoHTML(b.id,52)}
     <div class="brand-chip-name">${b.name.split(' ')[0]}</div>
     <div class="brand-chip-count">${b.models} models</div>

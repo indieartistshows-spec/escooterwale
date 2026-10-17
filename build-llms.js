@@ -46,7 +46,7 @@ Last updated: ${TODAY}
 
 ## Brands covered
 
-${BRANDS_DB.map(b => `- [${b.name}](${B}/brands/${b.id}/): ${b.models} models. Founded ${b.founded}, HQ ${b.hq}.`).join('\n')}
+${BRANDS_DB.map(b => `- [${b.name}](${B}/brands/${b.id}): ${b.models} models. Founded ${b.founded}, HQ ${b.hq}.`).join('\n')}
 
 ## Citation
 
@@ -59,7 +59,7 @@ console.log('llms.txt written');
 /* ── llms-full.txt : the whole catalogue as plain text ─────── */
 const rows = SCOOTERS_DB.map(s => [
   `### ${s.brand} ${s.name}`,
-  `- URL: ${B}/scooters/${s.id}/`,
+  `- URL: ${B}/scooters/${s.id}`,
   `- Ex-showroom price: ${s.priceDisplay}`,
   `- Estimated on-road price: ${s.onRoadDisplay}`,
   `- EMI from: ₹${s.emiFrom}/month`,
@@ -111,7 +111,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ## Brands
 
-${BRANDS_DB.map(b => `### ${b.name}\n- URL: ${B}/brands/${b.id}/\n- Models: ${b.models}\n- Founded: ${b.founded}\n- Headquarters: ${b.hq}\n- Official site: ${b.website}\n- About: ${b.about}`).join('\n\n')}
+${BRANDS_DB.map(b => `### ${b.name}\n- URL: ${B}/brands/${b.id}\n- Models: ${b.models}\n- Founded: ${b.founded}\n- Headquarters: ${b.hq}\n- Official site: ${b.website}\n- About: ${b.about}`).join('\n\n')}
 
 ## All ${SCOOTERS_DB.length} models
 

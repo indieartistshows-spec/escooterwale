@@ -6,8 +6,35 @@
 const fs = require('fs');
 const { SCOOTERS_DB, BRANDS_DB, CITIES_DB } = require('./data.js');
 
+const crypto = require('crypto');
+const path = require('path');
 const BASE = 'https://www.escooterwale.in';
 const TODAY = new Date().toISOString().slice(0, 10);
+
+/* lastmod is real: each URL keeps the date its file content last changed.
+   .lastmod.json stores {url: {hash, date}} and is committed with the site. */
+const LM_FILE = '.lastmod.json';
+let LM = {};
+try { LM = JSON.parse(fs.readFileSync(LM_FILE, 'utf8')); } catch (e) {}
+function fileFor(loc) {
+  const p = loc.replace(BASE, '').replace(/^\//, '');
+  if (!p) return 'index.html';
+  const candidates = [p + '.html', path.join(p, 'index.html'), p];
+  return candidates.find(c => fs.existsSync(c) && fs.statSync(c).isFile());
+}
+function stableContent(file) {
+  // ignore volatile bits (dates of generation) so lastmod only moves when content does
+  return fs.readFileSync(file, 'utf8').replace(/"generated":"[^"]*"/g, '');
+}
+function lastmodFor(loc) {
+  const f = fileFor(loc);
+  if (!f) return TODAY;
+  const hash = crypto.createHash('sha1').update(stableContent(f)).digest('hex');
+  const prev = LM[loc];
+  if (prev && prev.hash === hash) return prev.date;
+  LM[loc] = { hash, date: TODAY };
+  return TODAY;
+}
 
 const urls = [];
 const add = (loc, priority, changefreq) => urls.push({ loc, priority, changefreq });
@@ -37,16 +64,16 @@ add(`${BASE}/guide-service-network`,     '0.7', 'monthly');
 const BEST_CATS = ['daily-commute','under-1-lakh','under-1-5l','family','best-range','tier2-cities'];
 const ARTICLES  = ['ola-s1-pro-review','fame-3-guide','ev-running-costs'];
 
-SCOOTERS_DB.forEach(s => add(`${BASE}/scooters/${s.id}/`, '0.9', 'weekly'));
-BRANDS_DB.forEach(b   => add(`${BASE}/brands/${b.id}/`,   '0.8', 'weekly'));
-CITIES_DB.forEach(c   => add(`${BASE}/cities/${c.id}/`,   '0.7', 'monthly'));
-BEST_CATS.forEach(c   => add(`${BASE}/best/${c}/`,        '0.8', 'weekly'));
-ARTICLES.forEach(a    => add(`${BASE}/articles/${a}/`,    '0.7', 'monthly'));
+SCOOTERS_DB.forEach(s => add(`${BASE}/scooters/${s.id}`, '0.9', 'weekly'));
+BRANDS_DB.forEach(b   => add(`${BASE}/brands/${b.id}`,   '0.8', 'weekly'));
+CITIES_DB.forEach(c   => add(`${BASE}/cities/${c.id}`,   '0.7', 'monthly'));
+BEST_CATS.forEach(c   => add(`${BASE}/best/${c}`,        '0.8', 'weekly'));
+ARTICLES.forEach(a    => add(`${BASE}/articles/${a}`,    '0.7', 'monthly'));
 
 // Comparison pages, from the pre-render manifest so the two never drift apart
 try {
   const manifest = JSON.parse(fs.readFileSync('.prerender-manifest.json', 'utf8'));
-  (manifest.compare || []).forEach(slug => add(`${BASE}/compare/${slug}/`, '0.8', 'weekly'));
+  (manifest.compare || []).forEach(slug => add(`${BASE}/compare/${slug}`, '0.8', 'weekly'));
 } catch (e) {
   console.warn('  no .prerender-manifest.json found — run node prerender.js first to include comparison pages');
 }
@@ -58,7 +85,7 @@ const xml =
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url>
     <loc>${esc(u.loc)}</loc>
-    <lastmod>${TODAY}</lastmod>
+    <lastmod>${lastmodFor(u.loc)}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`).join('\n')}
@@ -66,4 +93,5 @@ ${urls.map(u => `  <url>
 `;
 
 fs.writeFileSync('sitemap.xml', xml);
-console.log(`sitemap.xml written — ${urls.length} URLs, lastmod ${TODAY}`);
+fs.writeFileSync(LM_FILE, JSON.stringify(LM, null, 1));
+console.log(`sitemap.xml written: ${urls.length} URLs`);

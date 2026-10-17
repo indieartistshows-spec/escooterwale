@@ -155,7 +155,7 @@ page({
    2. ELIGIBILITY — generated from the 41-model database
    ═══════════════════════════════════════════════════════════ */
 const eligibilityRows = rows.map(r => `      <tr>
-        <td><a href="/scooter-detail?id=${r.s.id}">${r.s.brand} ${r.s.name}</a></td>
+        <td><a href="/scooters/${r.s.id}">${r.s.brand} ${r.s.name}</a></td>
         <td>${inr(r.s.price)}</td>
         <td>~${inr(r.f)}</td>
         <td>${r.s.battery}</td>
@@ -199,7 +199,7 @@ page({
   <table class="subsidy-table">
     <thead><tr><th>Model</th><th>Ex-showroom</th><th>Approx ex-factory</th><th>Subsidy</th></tr></thead>
     <tbody>
-${ineligible.sort((a,b)=>b.f-a.f).map(r => `      <tr><td><a href="/scooter-detail?id=${r.s.id}">${r.s.brand} ${r.s.name}</a></td><td>${inr(r.s.price)}</td><td>~${inr(r.f)}</td><td class="amt">Nothing</td></tr>`).join('\n')}
+${ineligible.sort((a,b)=>b.f-a.f).map(r => `      <tr><td><a href="/scooters/${r.s.id}">${r.s.brand} ${r.s.name}</a></td><td>${inr(r.s.price)}</td><td>~${inr(r.f)}</td><td class="amt">Nothing</td></tr>`).join('\n')}
     </tbody>
   </table>
   <p>If a dealer quotes you a PM E-DRIVE subsidy on any of these, they are either describing their own discount or they are wrong. Ask to see the deduction as a line item on the invoice.</p>
@@ -209,7 +209,7 @@ ${ineligible.sort((a,b)=>b.f-a.f).map(r => `      <tr><td><a href="/scooter-deta
   <table class="subsidy-table">
     <thead><tr><th>Model</th><th>Approx ex-factory</th><th>Headroom before ineligible</th></tr></thead>
     <tbody>
-${nearLine.map(r => `      <tr><td><a href="/scooter-detail?id=${r.s.id}">${r.s.brand} ${r.s.name}</a></td><td>~${inr(r.f)}</td><td class="amt">~${inr(150000 - r.f)}</td></tr>`).join('\n')}
+${nearLine.map(r => `      <tr><td><a href="/scooters/${r.s.id}">${r.s.brand} ${r.s.name}</a></td><td>~${inr(r.f)}</td><td class="amt">~${inr(150000 - r.f)}</td></tr>`).join('\n')}
     </tbody>
   </table>
 
@@ -218,7 +218,7 @@ ${nearLine.map(r => `      <tr><td><a href="/scooter-detail?id=${r.s.id}">${r.s.
   <table class="subsidy-table">
     <thead><tr><th>Model</th><th>Battery</th><th>Calculation</th><th>Subsidy</th></tr></thead>
     <tbody>
-${partial.map(r => `      <tr><td><a href="/scooter-detail?id=${r.s.id}">${r.s.brand} ${r.s.name}</a></td><td>${r.s.battery}</td><td>${r.k} kWh × ₹2,500</td><td class="amt">${inr(r.sub.amount)}</td></tr>`).join('\n')}
+${partial.map(r => `      <tr><td><a href="/scooters/${r.s.id}">${r.s.brand} ${r.s.name}</a></td><td>${r.s.battery}</td><td>${r.k} kWh × ₹2,500</td><td class="amt">${inr(r.sub.amount)}</td></tr>`).join('\n')}
     </tbody>
   </table>
 
@@ -472,7 +472,7 @@ page({
 const priceRows = byPrice.map(r => {
   const sub = subsidyFor(r);
   return `      <tr>
-        <td><a href="/scooter-detail?id=${r.id}">${r.brand} ${r.name}</a></td>
+        <td><a href="/scooters/${r.id}">${r.brand} ${r.name}</a></td>
         <td class="amt">${inr(r.price)}</td>
         <td>${inr(r.onRoad)}</td>
         <td>₹${r.emiFrom.toLocaleString('en-IN')}/mo</td>
@@ -487,8 +487,8 @@ const band = (label, lo, hi) => {
   if (!list.length) return '';
   const cheapest = list[0], best = [...list].sort((a, b) => b.score - a.score)[0];
   return `  <h3>${label} <span style="font-weight:500;color:var(--ink-3);font-size:15px">(${list.length} models)</span></h3>
-  <p>Cheapest is the <a href="/scooter-detail?id=${cheapest.id}">${cheapest.brand} ${cheapest.name}</a> at ${inr(cheapest.price)}. Highest ScootScore in this band is the <a href="/scooter-detail?id=${best.id}">${best.brand} ${best.name}</a> at ${best.score}/10, ${inr(best.price)}.</p>
-  <ul>${list.map(s => `<li><a href="/scooter-detail?id=${s.id}">${s.brand} ${s.name}</a> — ${inr(s.price)} ex-showroom, ${s.realRange} real range, ScootScore ${s.score}</li>`).join('')}</ul>`;
+  <p>Cheapest is the <a href="/scooters/${cheapest.id}">${cheapest.brand} ${cheapest.name}</a> at ${inr(cheapest.price)}. Highest ScootScore in this band is the <a href="/scooters/${best.id}">${best.brand} ${best.name}</a> at ${best.score}/10, ${inr(best.price)}.</p>
+  <ul>${list.map(s => `<li><a href="/scooters/${s.id}">${s.brand} ${s.name}</a> — ${inr(s.price)} ex-showroom, ${s.realRange} real range, ScootScore ${s.score}</li>`).join('')}</ul>`;
 };
 
 page({
@@ -517,7 +517,7 @@ page({
         item: {
           '@type': 'Product',
           name: `${s.brand} ${s.name}`,
-          url: `${BASE}/scooter-detail?id=${s.id}`,
+          url: `${BASE}/scooters/${s.id}`,
           image: `${BASE}${s.cardImg}`,
           brand: { '@type': 'Brand', name: s.brand },
           offers: { '@type': 'Offer', price: s.price, priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: s.brandUrl }
@@ -571,7 +571,7 @@ ${band('Above ₹1.5 lakh', 150000, 99999999)}
   <p>From ${inr(byPrice[0].price)} to ${inr(byPrice[byPrice.length-1].price)} ex-showroom across the ${SCOOTERS_DB.length} models we track. The mainstream band is ₹90,000 to ₹1.5 lakh, where most buyers end up.</p>
 
   <h3>Which is the cheapest electric scooter in India?</h3>
-  <p>The <a href="/scooter-detail?id=${byPrice[0].id}">${byPrice[0].brand} ${byPrice[0].name}</a> at ${inr(byPrice[0].price)} ex-showroom, with a ${byPrice[0].battery} pack and around ${byPrice[0].realRange} of real range. Bear in mind that the cheapest models are often low-speed, which changes what you can legally do with them.</p>
+  <p>The <a href="/scooters/${byPrice[0].id}">${byPrice[0].brand} ${byPrice[0].name}</a> at ${inr(byPrice[0].price)} ex-showroom, with a ${byPrice[0].battery} pack and around ${byPrice[0].realRange} of real range. Bear in mind that the cheapest models are often low-speed, which changes what you can legally do with them.</p>
 
   <h3>What is the difference between ex-showroom and on-road price?</h3>
   <p>Ex-showroom includes GST but excludes registration, insurance and local levies. On-road adds those. For EVs the gap is smaller than for petrol because registration fees are waived nationwide and many states waive road tax too.</p>
@@ -626,14 +626,14 @@ const chemBadge = c => c === 'LFP' ? '<strong style="color:#16a663">LFP</strong>
   : '<span style="color:var(--ink-4)">Not published</span>';
 
 const chemRows = withChem.map(r => `      <tr>
-        <td><a href="/scooter-detail?id=${r.s.id}">${r.s.brand} ${r.s.name}</a></td>
+        <td><a href="/scooters/${r.s.id}">${r.s.brand} ${r.s.name}</a></td>
         <td>${r.s.battery}</td>
         <td>${chemBadge(r.c.chem)}</td>
         <td>${r.c.removable ? 'Yes' : 'No'}</td>
         <td>${r.c.warranty}</td>
       </tr>`).join('\n');
 
-const brandList = arr => arr.map(r => `<li><a href="/scooter-detail?id=${r.s.id}">${r.s.brand} ${r.s.name}</a> — ${r.s.battery}, ${r.c.warranty}</li>`).join('');
+const brandList = arr => arr.map(r => `<li><a href="/scooters/${r.s.id}">${r.s.brand} ${r.s.name}</a> — ${r.s.battery}, ${r.c.warranty}</li>`).join('');
 
 page({
   file: 'guide-battery-chemistry.html',

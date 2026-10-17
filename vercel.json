@@ -34,55 +34,55 @@
     {
       "source": "/scooter-detail",
       "has": [{ "type": "query", "key": "id", "value": "(?<sid>[^&]+)" }],
-      "destination": "/scooters/:sid/",
+      "destination": "/scooters/:sid",
       "permanent": true
     },
     {
       "source": "/scooter-detail.html",
       "has": [{ "type": "query", "key": "id", "value": "(?<sid>[^&]+)" }],
-      "destination": "/scooters/:sid/",
+      "destination": "/scooters/:sid",
       "permanent": true
     },
     {
       "source": "/brand",
       "has": [{ "type": "query", "key": "b", "value": "(?<bid>[^&]+)" }],
-      "destination": "/brands/:bid/",
+      "destination": "/brands/:bid",
       "permanent": true
     },
     {
       "source": "/brand.html",
       "has": [{ "type": "query", "key": "b", "value": "(?<bid>[^&]+)" }],
-      "destination": "/brands/:bid/",
+      "destination": "/brands/:bid",
       "permanent": true
     },
     {
       "source": "/city",
       "has": [{ "type": "query", "key": "city", "value": "(?<cid>[^&]+)" }],
-      "destination": "/cities/:cid/",
+      "destination": "/cities/:cid",
       "permanent": true
     },
     {
       "source": "/city.html",
       "has": [{ "type": "query", "key": "city", "value": "(?<cid>[^&]+)" }],
-      "destination": "/cities/:cid/",
+      "destination": "/cities/:cid",
       "permanent": true
     },
     {
       "source": "/best.html",
       "has": [{ "type": "query", "key": "cat", "value": "(?<cat>[^&]+)" }],
-      "destination": "/best/:cat/",
+      "destination": "/best/:cat",
       "permanent": true
     },
     {
       "source": "/article",
       "has": [{ "type": "query", "key": "id", "value": "(?<aid>[^&]+)" }],
-      "destination": "/articles/:aid/",
+      "destination": "/articles/:aid",
       "permanent": true
     },
     {
       "source": "/article.html",
       "has": [{ "type": "query", "key": "id", "value": "(?<aid>[^&]+)" }],
-      "destination": "/articles/:aid/",
+      "destination": "/articles/:aid",
       "permanent": true
     },
 
@@ -102,16 +102,16 @@
     { "source": "/best-for.html", "destination": "/best", "permanent": true },
     { "source": "/emi-calculator", "destination": "/emi", "permanent": true },
     { "source": "/emi-calculator.html", "destination": "/emi", "permanent": true },
-    { "source": "/best-electric-scooters-under-1-lakh.html", "destination": "/best/under-1-lakh/", "permanent": true },
-    { "source": "/best-electric-scooters-under-1-5-lakh.html", "destination": "/best/under-1-5l/", "permanent": true },
-    { "source": "/best-electric-scooters-for-daily-commute.html", "destination": "/best/daily-commute/", "permanent": true },
-    { "source": "/ola-electric-scooters.html", "destination": "/brands/ola-electric/", "permanent": true },
-    { "source": "/ather-electric-scooters.html", "destination": "/brands/ather-energy/", "permanent": true },
-    { "source": "/tvs-electric-scooters.html", "destination": "/brands/tvs-motor/", "permanent": true },
-    { "source": "/ola-s1-pro.html", "destination": "/scooters/ola-electric-s1-pro-4-kwh/", "permanent": true },
-    { "source": "/ather-450x.html", "destination": "/scooters/ather-energy-450x-3point7-kwh/", "permanent": true },
-    { "source": "/tvs-iqube.html", "destination": "/scooters/tvs-motor-iqube-st-5point3-kwh/", "permanent": true },
-    { "source": "/news/ola-vs-ather-comparison.html", "destination": "/compare/ola-electric-s1-pro-4-kwh-vs-ather-energy-450x-3point7-kwh/", "permanent": true },
+    { "source": "/best-electric-scooters-under-1-lakh.html", "destination": "/best/under-1-lakh", "permanent": true },
+    { "source": "/best-electric-scooters-under-1-5-lakh.html", "destination": "/best/under-1-5l", "permanent": true },
+    { "source": "/best-electric-scooters-for-daily-commute.html", "destination": "/best/daily-commute", "permanent": true },
+    { "source": "/ola-electric-scooters.html", "destination": "/brands/ola-electric", "permanent": true },
+    { "source": "/ather-electric-scooters.html", "destination": "/brands/ather-energy", "permanent": true },
+    { "source": "/tvs-electric-scooters.html", "destination": "/brands/tvs-motor", "permanent": true },
+    { "source": "/ola-s1-pro.html", "destination": "/scooters/ola-electric-s1-pro-4-kwh", "permanent": true },
+    { "source": "/ather-450x.html", "destination": "/scooters/ather-energy-450x-3point7-kwh", "permanent": true },
+    { "source": "/tvs-iqube.html", "destination": "/scooters/tvs-motor-iqube-st-5point3-kwh", "permanent": true },
+    { "source": "/news/ola-vs-ather-comparison.html", "destination": "/compare/ola-electric-s1-pro-4-kwh-vs-ather-energy-450x-3point7-kwh", "permanent": true },
     { "source": "/news/best-ev-scooters-india-2026.html", "destination": "/best", "permanent": true }
   ]
 }

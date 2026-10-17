@@ -295,7 +295,7 @@ function buildCmp(a,b){
       <div class="cmp-hero-img"><img src="${a.cardImg}" alt="${a.brand} ${a.name} electric scooter" loading="lazy" onerror="this.style.display='none'"/></div>
       <div class="cmp-col-price">${a.priceDisplay}</div>
       <div style="margin-bottom:12px">${renderStars(a.rating)}<span style="font-size:13px;font-weight:700;margin-left:4px">${a.rating}</span></div>
-      <a href="/scooters/${a.id}/" style="display:block;margin-bottom:8px"><button class="cmp-col-cta cmp-secondary" style="border:1.5px solid var(--border)">Full review →</button></a>
+      <a href="/scooters/${a.id}" style="display:block;margin-bottom:8px"><button class="cmp-col-cta cmp-secondary" style="border:1.5px solid var(--border)">Full review →</button></a>
       <a href="${a.brandUrl}" target="_blank" rel="noopener noreferrer"><button class="cmp-col-cta ${winIsA?'cmp-primary':'cmp-secondary'}" style="${winIsA?'':'border:1.5px solid var(--border)'}">
   <span style="display:flex;align-items:center;justify-content:center;gap:6px">${brandLogoHTML(a.brandSlug,18)} Buy on ${a.brand.split(' ')[0]} ↗</span>
 </button></a>
@@ -310,7 +310,7 @@ function buildCmp(a,b){
       <div class="cmp-hero-img"><img src="${b.cardImg}" alt="${b.brand} ${b.name} electric scooter" loading="lazy" onerror="this.style.display='none'"/></div>
       <div class="cmp-col-price">${b.priceDisplay}</div>
       <div style="margin-bottom:12px">${renderStars(b.rating)}<span style="font-size:13px;font-weight:700;margin-left:4px">${b.rating}</span></div>
-      <a href="/scooters/${b.id}/" style="display:block;margin-bottom:8px"><button class="cmp-col-cta cmp-secondary" style="border:1.5px solid var(--border)">Full review →</button></a>
+      <a href="/scooters/${b.id}" style="display:block;margin-bottom:8px"><button class="cmp-col-cta cmp-secondary" style="border:1.5px solid var(--border)">Full review →</button></a>
       <a href="${b.brandUrl}" target="_blank" rel="noopener noreferrer"><button class="cmp-col-cta ${!winIsA?'cmp-primary':'cmp-secondary'}" style="${!winIsA?'':'border:1.5px solid var(--border)'}">
   <span style="display:flex;align-items:center;justify-content:center;gap:6px">${brandLogoHTML(b.brandSlug,18)} Buy on ${b.brand.split(' ')[0]} ↗</span>
 </button></a>
@@ -373,8 +373,8 @@ function buildCmp(a,b){
   const others=SCOOTERS_DB.filter(s=>s.id!==a.id&&s.id!==b.id).slice(0,5);
   h+=`<div class="related-links"><h4>Also compare with</h4><div class="related-link-row">
     ${others.map(s=>`<a href="/compare?a=${a.id}&b=${s.id}" class="related-link">${a.name} vs ${s.name}</a>`).join('')}
-    <a href="/best/daily-commute/" class="related-link">Best for daily commute</a>
-    <a href="/best/under-1-5l/" class="related-link">Best under ₹1.5L</a>
+    <a href="/best/daily-commute" class="related-link">Best for daily commute</a>
+    <a href="/best/under-1-5l" class="related-link">Best under ₹1.5L</a>
     <a href="/listings" class="related-link">View all scooters →</a>
   </div></div>`;
 
@@ -388,7 +388,7 @@ function updateSEO(a,b){
   const desc=`${a.brand} ${a.name} vs ${b.brand} ${b.name}: Price, real range, specs, expert verdict. Find the winner in 2026.`;
   document.getElementById('pgTitle').textContent=title+' | ScooterWale';
   document.getElementById('pgDesc').setAttribute('content',desc);
-  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/compare?a=${a.id}&b=${b.id}`);
+  document.getElementById('pgCanon').setAttribute('href', window.__SW_A__ ? `https://www.escooterwale.in/compare/${a.id}-vs-${b.id}` : 'https://www.escooterwale.in/compare');
   document.getElementById('ogTitle').setAttribute('content',title);
   document.getElementById('ogDesc').setAttribute('content',desc);
   document.getElementById('cmpH1').textContent=`${a.name} vs ${b.name} (2026)`;
@@ -396,8 +396,8 @@ function updateSEO(a,b){
   const ex=document.querySelector('script[type="application/ld+json"]');if(ex)ex.remove();
   const ld=document.createElement('script');ld.type='application/ld+json';
   ld.textContent=JSON.stringify([
-    {"@context":"https://schema.org","@type":"Product","name":`${a.brand} ${a.name}`,"description":a.tagline,"offers":{"@type":"Offer","price":a.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":a.brandUrl},"aggregateRating":{"@type":"AggregateRating","ratingValue":a.rating,"reviewCount":a.reviews}},
-    {"@context":"https://schema.org","@type":"Product","name":`${b.brand} ${b.name}`,"description":b.tagline,"offers":{"@type":"Offer","price":b.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":b.brandUrl},"aggregateRating":{"@type":"AggregateRating","ratingValue":b.rating,"reviewCount":b.reviews}}
+    {"@context":"https://schema.org","@type":"Product","name":`${a.brand} ${a.name}`,"description":a.tagline,"offers":{"@type":"Offer","price":a.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":a.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":a.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}},
+    {"@context":"https://schema.org","@type":"Product","name":`${b.brand} ${b.name}`,"description":b.tagline,"offers":{"@type":"Offer","price":b.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":b.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":b.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}}
   ]);
   document.head.appendChild(ld);
 }

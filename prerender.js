@@ -99,8 +99,11 @@ function write(outDir, html) {
    pre-rendered content with the wrong scooter. */
 function bakeIdentity(html, inject) {
   if (!inject) return html;
+  // Also drop leftover query strings (e.g. ?id= carried over by old redirects)
+  // from the address bar, so shared links are always the clean URL.
+  const clean = "if(location.search&&/[?&](id|b|city|cat|a)=/.test(location.search)){try{history.replaceState(null,'',location.pathname)}catch(e){}}";
   return html.replace(/<head([^>]*)>/i,
-    `<head$1>\n<script>${inject}</script>`);
+    `<head$1>\n<script>${inject}${clean}</script>`);
 }
 
 async function renderOne(page, { url, inject, outDir, canonical }) {
@@ -125,7 +128,7 @@ async function renderOne(page, { url, inject, outDir, canonical }) {
     url: `${ORIGIN}/scooter-detail.html?id=${s.id}`,
     inject: `window.__SW_ID__=${JSON.stringify(s.id)};`,
     outDir: path.join('scooters', s.id),
-    canonical: `${BASE}/scooters/${s.id}/`
+    canonical: `${BASE}/scooters/${s.id}`
   }));
 
   BRANDS_DB.forEach(b => jobs.push({
@@ -133,7 +136,7 @@ async function renderOne(page, { url, inject, outDir, canonical }) {
     url: `${ORIGIN}/brand.html?b=${b.id}`,
     inject: `window.__SW_BRAND__=${JSON.stringify(b.id)};`,
     outDir: path.join('brands', b.id),
-    canonical: `${BASE}/brands/${b.id}/`
+    canonical: `${BASE}/brands/${b.id}`
   }));
 
   CITIES_DB.forEach(c => jobs.push({
@@ -141,7 +144,7 @@ async function renderOne(page, { url, inject, outDir, canonical }) {
     url: `${ORIGIN}/city.html?city=${c.id}`,
     inject: `window.__SW_CITY__=${JSON.stringify(c.id)};`,
     outDir: path.join('cities', c.id),
-    canonical: `${BASE}/cities/${c.id}/`
+    canonical: `${BASE}/cities/${c.id}`
   }));
 
   BEST_CATS.forEach(cat => jobs.push({
@@ -149,7 +152,7 @@ async function renderOne(page, { url, inject, outDir, canonical }) {
     url: `${ORIGIN}/best.html?cat=${cat}`,
     inject: `window.__SW_CAT__=${JSON.stringify(cat)};`,
     outDir: path.join('best', cat),
-    canonical: `${BASE}/best/${cat}/`
+    canonical: `${BASE}/best/${cat}`
   }));
 
   ARTICLES.forEach(a => jobs.push({
@@ -157,7 +160,7 @@ async function renderOne(page, { url, inject, outDir, canonical }) {
     url: `${ORIGIN}/article.html?id=${a}`,
     inject: `window.__SW_ART__=${JSON.stringify(a)};`,
     outDir: path.join('articles', a),
-    canonical: `${BASE}/articles/${a}/`
+    canonical: `${BASE}/articles/${a}`
   }));
 
   PAIRS.forEach(([a, b]) => {
@@ -167,7 +170,7 @@ async function renderOne(page, { url, inject, outDir, canonical }) {
       url: `${ORIGIN}/compare.html?a=${a.id}&b=${b.id}`,
       inject: `window.__SW_A__=${JSON.stringify(a.id)};window.__SW_B__=${JSON.stringify(b.id)};`,
       outDir: path.join('compare', slug),
-      canonical: `${BASE}/compare/${slug}/`
+      canonical: `${BASE}/compare/${slug}`
     });
   });
 

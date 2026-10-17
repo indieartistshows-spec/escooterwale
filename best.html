@@ -314,7 +314,7 @@ function renderPage(catSlug) {
   // Update SEO
   document.getElementById('pgTitle').textContent = cat.seoTitle + ' | ScooterWale';
   document.getElementById('pgDesc').setAttribute('content', cat.seoDesc);
-  document.getElementById('pgCanon').setAttribute('href', `https://www.escooterwale.in/best?cat=${catSlug}`);
+  document.getElementById('pgCanon').setAttribute('href', `https://www.escooterwale.in/best/${catSlug}`);
   document.getElementById('ogTitle').setAttribute('content', cat.seoTitle);
   document.getElementById('pgH1').textContent = cat.title;
   document.getElementById('pgSubtitle').textContent = cat.subtitle;
@@ -324,7 +324,7 @@ function renderPage(catSlug) {
   const ld = document.createElement('script');ld.type='application/ld+json';
   const picks = cat.picks.map(p=>SCOOTERS_DB.find(s=>s.id===p.id)).filter(Boolean);
   ld.textContent = JSON.stringify({"@context":"https://schema.org","@type":"ItemList","name":cat.seoTitle,"itemListElement":picks.map((s,i)=>({
-    "@type":"ListItem","position":i+1,"name":`${s.brand} ${s.name}`,"url":`https://www.escooterwale.in/scooter-detail?id=${s.id}`
+    "@type":"ListItem","position":i+1,"name":`${s.brand} ${s.name}`,"url":`https://www.escooterwale.in/scooters/${s.id}`
   }))});
   document.head.appendChild(ld);
 
@@ -373,7 +373,7 @@ function renderPage(catSlug) {
           ${pick.whoFor}
         </div>
         <div class="ranked-actions">
-          <a href="/scooters/${s.id}/"><button class="btn btn-outline" style="font-size:13px">Full review →</button></a>
+          <a href="/scooters/${s.id}"><button class="btn btn-outline" style="font-size:13px">Full review →</button></a>
           <a href="${s.brandUrl}" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary" style="font-size:13px">Buy on ${s.brand} ↗</button></a>
           <a href="/compare?a=${s.id}&b=${cat.picks.find(p=>p.rank===1)?.id===s.id?(cat.picks[1]?.id||s.id):cat.picks[0]?.id}">
             <button class="btn btn-ghost" style="font-size:13px">Compare →</button>
@@ -402,7 +402,7 @@ function renderPage(catSlug) {
     .filter(c => c !== catSlug)
     .map(c => {
       const other = CATEGORIES[c];
-      return `<a href="/best/${c}/" class="more-cat-card">
+      return `<a href="/best/${c}" class="more-cat-card">
         <div class="mc-icon">${other.icon}</div>
         <div class="mc-title">${other.label}</div>
         <div class="mc-sub">Top ${Object.keys(CATEGORIES[c].picks||{}).length||5} picks for ${other.label.toLowerCase()}</div>
