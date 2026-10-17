@@ -1,5 +1,5 @@
 {
-  "_note": "Homepage hero carousel. Order is fixed. automation/banners.js fills url/img/checked from each brand's own site (desktop and mobile hero banners) on every weekly run; a failed fetch keeps the last good image. Images live in /images/banners/.",
+  "_note": "Homepage hero carousel. Order is fixed. automation/banners.js fills url/img/checked from each brand's own site (desktop and mobile hero banners) on every weekly run; a failed fetch keeps the last good image. Images live in /images/banners/. Slides with a 'keep' region carry brand text in the original banner: tools/banner-clean.js rebuilds them from <id>-raw.jpg so only our own text ever shows. To use a newer brand banner for those, replace the -raw.jpg and adjust 'keep'.",
   "intervalMs": 3000,
   "slides": [
     {
@@ -23,7 +23,11 @@
         "m": "https://static.ampere-electric.com/magnus_gmax_pp_hero_banner_400px_3ece7cdb5c.webp"
       },
       "checked": "2026-10-17",
-      "desktopFocus": "100% 50%"
+      "keep": {
+        "x0": 0.51,
+        "x1": 1.0
+      },
+      "keepFor": "https://static.ampere-electric.com/magnus_gmax_pp_hero_banner_1440px_95032a2dcd.webp"
     },
     {
       "id": "ather-konarc",
@@ -70,8 +74,11 @@
         "m": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg"
       },
       "checked": "2026-10-17",
-      "mobileFromDesktop": true,
-      "mobileFocus": "22% 50%"
+      "keep": {
+        "x0": 0.0,
+        "x1": 0.41
+      },
+      "keepFor": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg"
     },
     {
       "id": "bajaj-chetak",

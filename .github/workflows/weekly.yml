@@ -81,6 +81,7 @@ jobs:
         run: |
           node automation/banners.js
           node automation/banners.js --file=data/launch-features.json
+          node tools/banner-clean.js
       - name: Outbound links
         if: env.SCRAPE == 'true'
         continue-on-error: true

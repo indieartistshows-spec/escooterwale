@@ -1,5 +1,5 @@
 {
-  "_note": "Featured launch banners on /launches, newest first. Facts come from the linked report and the brand's own page. automation/banners.js --file=data/launch-features.json refreshes the images from the brand site every week.",
+  "_note": "Featured launch banners on /launches, newest first. Facts come from the linked report and the brand's own page. automation/banners.js --file=data/launch-features.json refreshes the images from the brand site every week. Slides with a 'keep' region carry brand text in the original banner: tools/banner-clean.js rebuilds them from <id>-raw.jpg so only our own text ever shows. To use a newer brand banner for those, replace the -raw.jpg and adjust 'keep'.",
   "slides": [
     {
       "id": "launch-ather-konarc",
@@ -70,7 +70,13 @@
         "d": "https://static.ampere-electric.com/REO_VYB_1440px_5_1_d7babe86fd.webp",
         "m": "https://static.ampere-electric.com/VYB_400x_900px_with_text_2_1_cd7c35167d.webp"
       },
-      "checked": "2026-10-17"
+      "checked": "2026-10-17",
+      "keep": {
+        "x0": 0.605,
+        "x1": 0.79
+      },
+      "keepFor": "https://static.ampere-electric.com/REO_VYB_1440px_5_1_d7babe86fd.webp",
+      "keepMobile": "right"
     },
     {
       "id": "launch-ola-s1-pro-sport",

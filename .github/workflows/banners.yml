@@ -27,6 +27,7 @@ jobs:
         run: |
           node automation/banners.js
           node automation/banners.js --file=data/launch-features.json
+          node tools/banner-clean.js
       - name: Report
         run: cat automation/out/banners.json automation/out/launch-features.json
       - name: Commit
