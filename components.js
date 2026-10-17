@@ -214,6 +214,18 @@ function updateCompareTray(){
 function compareTrayHTML(){ return '<div id="compareTrayInner"></div>'; }
 
 // ── NAV HTML ─────────────────────────────────────────────────
+/* Language switcher: English base + 8 Indian languages. Goes to the same page in
+   the chosen language. No automatic redirect by browser language. */
+const SW_LANGS=[['en','English'],['hi','हिन्दी'],['mr','मराठी'],['ta','தமிழ்'],['te','తెలుగు'],['kn','ಕನ್ನಡ'],['gu','ગુજરાતી'],['bn','বাংলা'],['or','ଓଡ଼ିଆ']];
+function langSelectHTML(){
+  const cur=window.__SW_LANG__||'en';
+  return `<label class="lang-sel-wrap" translate="no"><span class="lang-sel-icon" aria-hidden="true">🌐</span><select class="lang-sel" aria-label="Language" onchange="swLang(this.value)">${SW_LANGS.map(([c,n])=>`<option value="${c}"${c===cur?' selected':''}>${n}</option>`).join('')}</select></label>`;
+}
+function swLang(l){
+  const path=location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/';
+  try{localStorage.setItem('sw_lang',l)}catch(e){}
+  location.href=(l==='en'?path:'/'+l+(path==='/'?'':path))+location.hash;
+}
 function navHTML(active='home'){
   const links=[
     {id:'home',label:'Home',href:'/'},
@@ -234,6 +246,7 @@ function navHTML(active='home'){
       <div class="nav-links" role="list">
         ${links.map(l=>`<a href="${l.href}" class="nav-link${l.id===active?' active':''}" role="listitem">${l.label}</a>`).join('')}
       </div>
+      ${langSelectHTML()}
       <button class="hamburger" id="navToggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>

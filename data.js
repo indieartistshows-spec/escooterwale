@@ -53,7 +53,7 @@ const SCOOTERS_DB = [
   "verdict": "The Ola S1 X (2 kWh) delivers 108 km claimed range at ₹89,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
   "bestFor": [
    "Tech-forward buyers in metro cities",
-   "Daily commutes needing 80–90 km km real range"
+   "Daily commutes needing 80–90 km real range"
   ],
   "avoidIf": [
    "Tier-2 city buyers without Ola service",
@@ -132,7 +132,7 @@ const SCOOTERS_DB = [
   "verdict": "The Ola S1 X (3 kWh) delivers 176 km claimed range at ₹107,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
   "bestFor": [
    "Tech-forward buyers in metro cities",
-   "Daily commutes needing 130–145 km km real range"
+   "Daily commutes needing 130–145 km real range"
   ],
   "avoidIf": [
    "Tier-2 city buyers without Ola service",
@@ -211,7 +211,7 @@ const SCOOTERS_DB = [
   "verdict": "The Ola S1 X+ (4 kWh) delivers 242 km claimed range at ₹124,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
   "bestFor": [
    "Tech-forward buyers in metro cities",
-   "Daily commutes needing 180–200 km km real range"
+   "Daily commutes needing 180–200 km real range"
   ],
   "avoidIf": [
    "Tier-2 city buyers without Ola service",
@@ -290,7 +290,7 @@ const SCOOTERS_DB = [
   "verdict": "The Ola S1 Pro (3 kWh) delivers 176 km claimed range at ₹129,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
   "bestFor": [
    "Tech-forward buyers in metro cities",
-   "Daily commutes needing 140–150 km km real range"
+   "Daily commutes needing 140–150 km real range"
   ],
   "avoidIf": [
    "Tier-2 city buyers without Ola service",
@@ -369,7 +369,7 @@ const SCOOTERS_DB = [
   "verdict": "The Ola S1 Pro (4 kWh) delivers 195 km claimed range at ₹149,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
   "bestFor": [
    "Tech-forward buyers in metro cities",
-   "Daily commutes needing 155–165 km km real range"
+   "Daily commutes needing 155–165 km real range"
   ],
   "avoidIf": [
    "Tier-2 city buyers without Ola service",
@@ -446,7 +446,7 @@ const SCOOTERS_DB = [
   "verdict": "The Ola S1 Pro+ (5.2 kWh) delivers 320 km claimed range at ₹174,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
   "bestFor": [
    "Tech-forward buyers in metro cities",
-   "Daily commutes needing 240–270 km km real range"
+   "Daily commutes needing 240–270 km real range"
   ],
   "avoidIf": [
    "Tier-2 city buyers without Ola service",

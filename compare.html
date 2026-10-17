@@ -328,7 +328,12 @@ function buildCmp(a,b){
         <div class="cmp-cell dat" style="background:var(--ink-2);padding:8px 16px"></div>
       </div>`;return;
     }
-    const vA2=row.fA(a),vB2=row.fB(b),w=row.win?row.win(a,b):null,note=row.note?row.note(a,b):'';
+    let vA2=row.fA(a),vB2=row.fB(b);
+    const empty=v=>v==null||v===''||v==='undefined';
+    if(empty(vA2)&&empty(vB2)) return;           // no data for either: skip the row
+    if(empty(vA2)) vA2='—'; if(empty(vB2)) vB2='—';
+    // a tie has no winner
+    const w=row.win&&String(vA2)!==String(vB2)?row.win(a,b):null, note=row.note&&w?row.note(a,b):'';
     h+=`<div class="cmp-cols">
       <div class="cmp-cell lbl">${row.lbl}</div>
       <div class="cmp-cell dat ${w==='a'?'win-cell':''}"><span class="cmp-val ${w==='a'?'win':''}">${vA2}</span>${w==='a'?'<span class="win-tag">✓ Winner</span>':''}${note&&w!=='a'?`<span style="font-size:10px;color:var(--ink-4)">${note}</span>`:''}</div>
