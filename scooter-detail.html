@@ -702,7 +702,7 @@ function hydratePage(id){
   document.getElementById('dBrand').textContent=s.brand;
   document.getElementById('dName').textContent=s.name;
   document.getElementById('dRatingRow').innerHTML=`${renderStars(s.rating)}<span style="font-weight:700;font-size:14px;margin-left:4px">${s.rating}</span><span style="font-size:13px;color:var(--ink-3);margin-left:4px">(${fmtNum(s.reviews)} reviews)</span>`;
-  document.getElementById('dBadgeStrip').innerHTML=(s.score>=8.5?`<span class="badge badge-dark">🏆 Editor's Pick</span>`:'')+(s.subsidy&&s.subsidy.eligible?`<span class="badge badge-green">PM E-DRIVE eligible</span>`:`<span class="badge badge-amber">No PM E-DRIVE subsidy</span>`)+((s.tags||[]).includes('best-range')?`<span class="badge badge-amber">Long range</span>`:'');
+  document.getElementById('dBadgeStrip').innerHTML=(s.discontinued?`<span class="badge badge-dark">Discontinued</span>`:'')+(s.score>=8.5?`<span class="badge badge-dark">🏆 Editor's Pick</span>`:'')+(s.subsidy&&s.subsidy.eligible?`<span class="badge badge-green">PM E-DRIVE eligible</span>`:`<span class="badge badge-amber">No PM E-DRIVE subsidy</span>`)+((s.tags||[]).includes('best-range')?`<span class="badge badge-amber">Long range</span>`:'');
 
   // Variants
   document.getElementById('variantRow').innerHTML=(s.variants||[]).map((v,i)=>`<div class="variant-pill ${i===s.variants.length-1?'active':''}" onclick="selectVariant(this,'${v.price}','${v.priceDisplay}','${v.range}')">${v.name}<br><small style="font-weight:400;color:inherit;opacity:.8">${v.priceDisplay}</small></div>`).join('');

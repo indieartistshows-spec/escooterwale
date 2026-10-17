@@ -221,6 +221,7 @@ function navHTML(active='home'){
     {id:'compare',label:'Compare',href:'/compare'},
     {id:'best',label:'Best For',href:'/best'},
     {id:'trending',label:'🔥 Trending',href:'/trending'},
+    {id:'launches',label:'🆕 Launches',href:'/launches'},
     {id:'emi',label:'EMI Calc',href:'/emi'},
     {id:'cases',label:'🛡️ Cases',href:'/cases'},
   ];

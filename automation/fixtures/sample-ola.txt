@@ -1,0 +1,6 @@
+S1 X
+Choose your battery
+S1 X 2kWh  ₹89,999  108 km IDC range  Top speed 90 km/h
+S1 X 3kWh ₹ 1,04,999 176 km IDC range Top speed 90 km/h  Charging time 0-80% 4.5 hrs
+S1 X+ 4kWh ₹1,24,999 242 km IDC Range Top speed 90 km/h Boot space 34 L Kerb weight 112 kg
+New: S1 Z 1.5 kWh ₹ 59,999

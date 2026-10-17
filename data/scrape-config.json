@@ -1,0 +1,335 @@
+{
+ "ola-electric-s1-x-2-kwh": {
+  "url": "https://www.olaelectric.com/s1x-gen3",
+  "match": [
+   "S1 X"
+  ],
+  "kwh": 2
+ },
+ "ola-electric-s1-x-3-kwh": {
+  "url": "https://www.olaelectric.com/s1x-gen3",
+  "match": [
+   "S1 X"
+  ],
+  "kwh": 3
+ },
+ "ola-electric-s1-xplus-4-kwh": {
+  "url": "https://www.olaelectric.com/s1x-gen3",
+  "match": [
+   "S1 X+"
+  ],
+  "kwh": 4
+ },
+ "ola-electric-s1-pro-3-kwh": {
+  "url": "https://www.olaelectric.com/s1pro-gen3",
+  "match": [
+   "S1 Pro"
+  ],
+  "kwh": 3
+ },
+ "ola-electric-s1-pro-4-kwh": {
+  "url": "https://www.olaelectric.com/s1pro-gen3",
+  "match": [
+   "S1 Pro"
+  ],
+  "kwh": 4
+ },
+ "ola-electric-s1-proplus-5point2-kwh": {
+  "url": "https://www.olaelectric.com/s1pro-sport",
+  "match": [
+   "S1 Pro+"
+  ],
+  "kwh": 5.2
+ },
+ "ather-energy-rizta-s-2point9-kwh": {
+  "url": "https://www.atherenergy.com/rizta",
+  "match": [
+   "Rizta S"
+  ],
+  "kwh": 2.9
+ },
+ "ather-energy-rizta-z-3point7-kwh": {
+  "url": "https://www.atherenergy.com/rizta",
+  "match": [
+   "Rizta Z"
+  ],
+  "kwh": 3.7
+ },
+ "ather-energy-450s-2point9-kwh": {
+  "url": "https://www.atherenergy.com/450",
+  "match": [
+   "450S"
+  ],
+  "kwh": 2.9
+ },
+ "ather-energy-450x-3point7-kwh": {
+  "url": "https://www.atherenergy.com/450",
+  "match": [
+   "450X"
+  ],
+  "kwh": 3.7
+ },
+ "ather-energy-450-apex-3point7-kwh": {
+  "url": "https://www.atherenergy.com/apex",
+  "match": [
+   "450 Apex"
+  ],
+  "kwh": 3.7
+ },
+ "tvs-motor-iqube-2point2-kwh": {
+  "url": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/tvs-iqube-2-2-kwh-variant-details",
+  "match": [
+   "iQube"
+  ],
+  "kwh": 2.2
+ },
+ "tvs-motor-iqube-s-3point5-kwh": {
+  "url": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/tvs-iqube-3-5-kwh-variant-details",
+  "match": [
+   "iQube S"
+  ],
+  "kwh": 3.5
+ },
+ "tvs-motor-iqube-st-3point5-kwh": {
+  "url": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/tvs-iqube-s-3-5-kwh-variant-details",
+  "match": [
+   "iQube ST"
+  ],
+  "kwh": 3.5
+ },
+ "tvs-motor-iqube-st-5point3-kwh": {
+  "url": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/tvs-iqube-st-5-3-kwh-variant-details",
+  "match": [
+   "iQube ST"
+  ],
+  "kwh": 5.3
+ },
+ "bajaj-chetak-chetak-c2501-2point5-kwh": {
+  "url": "https://www.chetak.com/book-now",
+  "match": [
+   "Chetak C2501"
+  ],
+  "kwh": 2.5
+ },
+ "bajaj-chetak-chetak-3001-3point0-kwh": {
+  "url": "https://www.chetak.com/book-now",
+  "match": [
+   "Chetak 3001"
+  ],
+  "kwh": 3
+ },
+ "bajaj-chetak-chetak-3501-3point5-kwh": {
+  "url": "https://www.chetak.com/book-now",
+  "match": [
+   "Chetak 3501"
+  ],
+  "kwh": 3.5
+ },
+ "bajaj-chetak-chetak-3502-3point5-kwh": {
+  "url": "https://www.chetak.com/book-now",
+  "match": [
+   "Chetak 3502"
+  ],
+  "kwh": 3.5
+ },
+ "bajaj-chetak-chetak-3503-3point5-kwh": {
+  "url": "https://www.chetak.com/book-now",
+  "match": [
+   "Chetak 3503"
+  ],
+  "kwh": 3.5
+ },
+ "hero-vida-vx2-go-2point2-kwh": {
+  "url": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+  "match": [
+   "VX2 Go"
+  ],
+  "kwh": 2.2
+ },
+ "hero-vida-vx2-plus-3point4-kwh": {
+  "url": "https://www.vidaworld.com/vx2-go-3-4-kwh-electric-scooter.html",
+  "match": [
+   "VX2 Plus"
+  ],
+  "kwh": 3.4
+ },
+ "hero-vida-v2-pro-3point94-kwh": {
+  "url": "https://www.vidaworld.com/vida-v2-pro.html",
+  "match": [
+   "V2 Pro"
+  ],
+  "kwh": 3.94
+ },
+ "ampere-reo-1point3-kwh": {
+  "url": "https://ampereev.app/enquiry",
+  "match": [
+   "Reo"
+  ],
+  "kwh": 1.3
+ },
+ "ampere-magnus-neo-2point3-kwh": {
+  "url": "https://ampereev.app/enquiry",
+  "match": [
+   "Magnus Neo"
+  ],
+  "kwh": 2.3
+ },
+ "ampere-magnus-g-max-3point0-kwh": {
+  "url": "https://ampereev.app/enquiry",
+  "match": [
+   "Magnus G Max"
+  ],
+  "kwh": 3
+ },
+ "ampere-nexus-ex-3-kwh": {
+  "url": "https://ampereev.app/enquiry",
+  "match": [
+   "Nexus EX"
+  ],
+  "kwh": 3
+ },
+ "ampere-nexus-st-3-kwh": {
+  "url": "https://ampereev.app/enquiry",
+  "match": [
+   "Nexus ST"
+  ],
+  "kwh": 3
+ },
+ "okinawa-r30-0point8-kwh": {
+  "url": "https://okinawascooters.com/scooters/r30",
+  "match": [
+   "R30"
+  ],
+  "kwh": 0.8
+ },
+ "okinawa-lite-1point2-kwh": {
+  "url": "https://okinawascooters.com/scooters/lite",
+  "match": [
+   "Lite"
+  ],
+  "kwh": 1.2
+ },
+ "okinawa-ipraiseplus-2point2-kwh": {
+  "url": "https://okinawascooters.com/scooters/ipraise-plus",
+  "match": [
+   "iPraise+"
+  ],
+  "kwh": 2.2
+ },
+ "okinawa-ridgeplus-2point8-kwh": {
+  "url": "https://okinawascooters.com/scooters/ridge-plus-gps",
+  "match": [
+   "Ridge+"
+  ],
+  "kwh": 2.8
+ },
+ "okinawa-okhi-90-2point8-kwh": {
+  "url": "https://okinawascooters.com/scooters/okhi-90",
+  "match": [
+   "Okhi-90"
+  ],
+  "kwh": 2.8
+ },
+ "pure-ev-epluto-7g-2point0-kwh": {
+  "url": "https://www.pureenergy.co.in/electric-scooters/epluto-7g",
+  "match": [
+   "EPluto 7G"
+  ],
+  "kwh": 2
+ },
+ "pure-ev-etranceplus-4point5-kwh": {
+  "url": "https://www.pureenergy.co.in/electric-scooters/etrance-neo",
+  "match": [
+   "ETrance+"
+  ],
+  "kwh": 4.5
+ },
+ "pure-ev-etron-plus-3point0-kwh": {
+  "url": "https://www.pureenergy.co.in",
+  "match": [
+   "Etron Plus"
+  ],
+  "kwh": 3
+ },
+ "bounce-infinity-infinity-e1-2point0-kwh": {
+  "url": "https://bounceinfinity.com/",
+  "match": [
+   "Infinity E1"
+  ],
+  "kwh": 2
+ },
+ "bounce-infinity-infinity-e1-plus-2point5-kwh": {
+  "url": "https://bounceinfinity.com/",
+  "match": [
+   "Infinity E1 Plus"
+  ],
+  "kwh": 2.5
+ },
+ "bgauss-c12i-2point0-kwh": {
+  "url": "https://www.bgauss.com/c12-overview/",
+  "match": [
+   "C12i"
+  ],
+  "kwh": 2
+ },
+ "bgauss-d15i-3point0-kwh": {
+  "url": "https://www.bgauss.com",
+  "match": [
+   "D15i"
+  ],
+  "kwh": 3
+ },
+ "bgauss-ruv-350i-3point0-kwh": {
+  "url": "https://www.bgauss.com/ruv-350/",
+  "match": [
+   "RUV 350i"
+  ],
+  "kwh": 3
+ },
+ "_brands": {
+  "ola-electric": {
+   "city": null
+  },
+  "ather-energy": {
+   "city": null
+  },
+  "tvs-motor": {
+   "city": null
+  },
+  "bajaj-chetak": {
+   "city": null
+  },
+  "hero-vida": {
+   "city": null
+  },
+  "ampere": {
+   "city": null
+  },
+  "okinawa": {
+   "city": null
+  },
+  "pure-ev": {
+   "city": null
+  },
+  "bounce-infinity": {
+   "city": null
+  },
+  "bgauss": {
+   "city": null
+  }
+ },
+ "_cityPincodes": {
+  "mumbai": "400001",
+  "delhi": "110001",
+  "bangalore": "560001",
+  "hyderabad": "500001",
+  "chennai": "600001",
+  "pune": "411001",
+  "ahmedabad": "380001",
+  "kolkata": "700001",
+  "jaipur": "302001",
+  "lucknow": "226001",
+  "surat": "395003",
+  "chandigarh": "160017"
+ }
+}
