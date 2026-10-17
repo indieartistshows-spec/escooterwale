@@ -885,9 +885,9 @@ const MONS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','D
 const fmtDay=iso=>{if(!iso)return '';const [y,m,d]=iso.slice(0,10).split('-').map(Number);return `${d} ${MONS[m-1]} ${y}`;};
 /* Every video ever added stays in the archive. Newest first, stable order. */
 function archiveVideos(){
-  return [...TRENDING.videos].sort((a,b)=>((b.published||b.added)||'').localeCompare((a.published||a.added)||'')).map(v=>({
+  return TRENDING.videos.filter(v=>!v.hidden).sort((a,b)=>((b.published||b.added)||'').localeCompare((a.published||a.added)||'')).map(v=>({
     ...v, url:'https://www.youtube.com/watch?v='+v.videoId,
-    thumb:v.customThumb?'/images/video-thumbs/'+v.videoId+'.jpg':'https://img.youtube.com/vi/'+v.videoId+'/hqdefault.jpg',
+    thumb:v.thumb||'https://i.ytimg.com/vi/'+v.videoId+'/hqdefault.jpg',
     brand:v.brandId||'other'
   }));
 }
@@ -898,7 +898,7 @@ function renderYT(filter='all'){
   grid.innerHTML = filtered.slice(0, ytShown).map(v=>`
     <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="yt-card" data-brand="${v.brand}" data-out="video">
       <div class="yt-thumb">
-        <img src="${v.thumb}" alt="${v.title}" loading="lazy" onerror="this.src='https://img.youtube.com/vi/${v.videoId}/hqdefault.jpg'"/>
+        <img src="${v.thumb}" alt="${v.title}" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.videoId}/hqdefault.jpg'"/>
         <div class="yt-play"><div class="yt-play-btn">▶</div></div>
         ${v.published?`<div class="yt-duration">${fmtDay(v.published)}</div>`:""}
       </div>

@@ -82,11 +82,11 @@ async function heroImage(ctx, url, kind) {
 }
 
 // crop with the browser itself: no image libraries needed
-async function render(browser, dataUrl, kind, dest) {
+async function render(browser, dataUrl, kind, dest, focus) {
   const { w, h } = SIZE[kind];
   const p = await browser.newPage({ viewport: { width: w, height: h } });
   try {
-    await p.setContent(`<html><body style="margin:0;background:#0b0f14"><img id="i" src="${dataUrl}" style="width:${w}px;height:${h}px;object-fit:cover;object-position:${kind === 'd' ? '60% 50%' : '50% 45%'};display:block"></body></html>`);
+    await p.setContent(`<html><body style="margin:0;background:#0b0f14"><img id="i" src="${dataUrl}" style="width:${w}px;height:${h}px;object-fit:cover;object-position:${focus || (kind === 'd' ? '60% 50%' : '50% 45%')};display:block"></body></html>`);
     const nat = await p.evaluate(() => new Promise(r => { const i = document.getElementById('i'); const f = () => r([i.naturalWidth, i.naturalHeight]); i.complete ? f() : (i.onload = f, i.onerror = () => r([0, 0])); }));
     if (nat[0] < (kind === 'd' ? 1000 : 380)) return false;
     const buf = await p.screenshot({ type: 'jpeg', quality: 78 });
@@ -127,12 +127,14 @@ function modelPhoto(s) {
       for (const kind of ['d', 'm']) {
         const ctx = kind === 'd' ? ctxD : ctxM;
         const tries = [];
+        if (kind === 'm' && s.mobileFromDesktop && s.source && s.source.d) { tries.push(s.source.d); } else {
         if (s.images && s.images[kind]) tries.push(s.images[kind]);
         if (url) { const h = await heroImage(ctx, url, kind); if (h) tries.push(h); }
         if (kind === 'm' && s.source && s.source.d) tries.push(s.source.d); // desktop banner, recropped
+        }
         for (const src of tries) {
           try {
-            if (await render(browser, await fetchAsDataUrl(ctx, src), kind, '.' + s.img[kind])) {
+            if (await render(browser, await fetchAsDataUrl(ctx, src), kind, '.' + s.img[kind], kind === 'm' && src === (s.source || {}).d ? s.mobileFocus : null)) {
               s.source = Object.assign({}, s.source, { [kind]: src }); r[kind] = src; break;
             }
           } catch (e) { r[kind + 'Error'] = String(e.message || e).slice(0, 120); }

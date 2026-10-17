@@ -22,6 +22,7 @@ function serve(port) {
 
 (async () => {
   run('node tools/build-data.js');
+  run('node tools/build-banners.js');
   run('node build-guide-pages.js');
   run('node tools/build-launches.js');
   run('node build-schema.js');

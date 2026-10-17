@@ -641,7 +641,7 @@ function buildSpecTable(s){
 // a clean search link with the scooter name pre-filled.
 function renderOwnerVoices(s) {
   const el = document.getElementById('amazonRatingBody');
-  const vids = (typeof TRENDING !== 'undefined' ? TRENDING.videos : []).filter(v => v.modelId === s.id)
+  const vids = (typeof TRENDING !== 'undefined' ? TRENDING.videos : []).filter(v => v.modelId === s.id && !v.hidden)
     .sort((a, b) => ((b.published || b.added) || '').localeCompare((a.published || a.added) || '')).slice(0, 4);
   const q = encodeURIComponent(s.fullName + ' electric scooter');
   const qOwner = encodeURIComponent(s.fullName + ' ownership review');
@@ -652,7 +652,7 @@ function renderOwnerVoices(s) {
   ];
   el.innerHTML = (vids.length ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px">${vids.map(v => `
       <a href="https://www.youtube.com/watch?v=${v.videoId}" target="_blank" rel="noopener" data-out="video" style="text-decoration:none;color:inherit">
-        <img src="${v.customThumb ? '/images/video-thumbs/' + v.videoId + '.jpg' : 'https://img.youtube.com/vi/' + v.videoId + '/hqdefault.jpg'}" alt="${v.title}" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px" onerror="this.src='https://img.youtube.com/vi/${v.videoId}/hqdefault.jpg'"/>
+        <img src="${v.thumb || 'https://i.ytimg.com/vi/' + v.videoId + '/hqdefault.jpg'}" alt="${v.title}" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px" onerror="this.src='https://img.youtube.com/vi/${v.videoId}/hqdefault.jpg'"/>
         <div style="font-size:12px;font-weight:600;margin-top:6px;line-height:1.35">${v.title}</div>
         ${v.channel ? `<div style="font-size:11px;color:var(--ink-3)">${v.channel}</div>` : ''}
       </a>`).join('')}</div>` : '') +

@@ -28,7 +28,7 @@
       const where = s.headlinePriceCity ? ` in ${cityName()}` : '';
       return {
         title: `${s.fullName} Price, Real Range and Review ${YEAR} | ScooterWale`,
-        desc: `${s.fullName} costs ${s.priceDisplay} ex-showroom${where}. We measured ${span(s.realRange)} of real range against the ${s.range} claimed. Specs, subsidy, EMI and who should skip it.`
+        desc: `${s.fullName} costs ${s.priceDisplay} ex-showroom${where}. ${s.realRangeEstimated ? 'We estimate' : 'We measured'} ${span(s.realRange)} of real range against the ${s.range} claimed. Specs, subsidy, EMI and who should skip it.`
       };
     },
 

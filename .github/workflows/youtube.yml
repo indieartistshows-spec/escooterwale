@@ -1,0 +1,32 @@
+# Re-check every YouTube video on the site against YouTube itself (title, channel,
+# thumbnail), hide dead ones and add fresh relevant reviews. Also runs weekly.
+name: YouTube videos
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [v2.1-build, main]
+    paths: ['automation/youtube-refresh.js', '.github/workflows/youtube.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  youtube:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Refresh videos from YouTube
+        env: { YT_API_KEY: '${{ secrets.YT_API_KEY }}' }
+        run: node automation/youtube-refresh.js
+      - name: Commit
+        run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add data/trending.json
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "YouTube videos re-verified from YouTube" -m "$(cat automation/out/youtube.json)"
+          git push

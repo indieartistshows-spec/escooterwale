@@ -67,6 +67,10 @@ jobs:
         if: env.SCRAPE == 'true'
         continue-on-error: true
         run: node automation/trending.js
+      - name: YouTube videos re-verified (titles, channels, exact thumbnails)
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: node automation/youtube-refresh.js
       - name: Headline city from Google Analytics
         if: env.SCRAPE == 'true'
         continue-on-error: true

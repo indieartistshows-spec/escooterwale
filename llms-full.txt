@@ -2,7 +2,7 @@
 
 Source: https://www.escooterwale.in
 Last updated: 2026-10-17
-Models: 41 | Brands: 10
+Models: 44 | Brands: 10
 
 Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the
 manufacturer figure under the Indian Driving Cycle. "Real-world range" is ScooterWale's
@@ -111,7 +111,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Official site: https://www.bgauss.com
 - About: RR Kabel backed Mumbai EV brand. Premium build quality above price. D15i and RUV 350i are flagship models.
 
-## All 41 models
+## All 44 models
 
 ### Ola Electric S1 X 2 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-2-kwh
@@ -321,6 +321,63 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Verdict: The Ather 450 Apex (3.7 kWh) is the most refined EV scooter at this price. Exceptional build quality, Ather Grid charging, and the best ride quality in India.
 - Best for: Premium buyers wanting refinement; Riders in Ather service cities; Fast charging priority (3.3 hrs)
 - Avoid if: Buyers needing large boot (>22L); Outside Ather service network
+
+### Ather Energy Konarc S 100 2.1 kWh
+- URL: https://www.escooterwale.in/scooters/ather-energy-konarc-s-100-2point1-kwh
+- Ex-showroom price: ₹99,999
+- Estimated on-road price: ₹1,05,800
+- EMI from: ₹2633/month
+- Battery: 2.1 kWh
+- Claimed range (IDC): 100 km
+- Real-world range (ScooterWale estimate): 72–82 km
+- Top speed: 70 km/h
+- Charging time: 4 hrs
+- Kerb weight: Not published
+- Boot space: 31 L
+- Ground clearance: Not published
+- Seat height: Not published
+- ScootScore: 7.4/10 (Range 4.8, Features 6.8, Value 8.4, Ride 8.6, Service 9)
+- Verdict: The Konarc S 100 is the cheapest way into an Ather, at ₹99,999. Drum brakes and a basic 4.2-inch screen keep the price down. Deliveries start in early 2027.
+- Best for: First-time EV buyers on a tight budget; Short city commutes; Riders who want Ather service at entry price
+- Avoid if: You need it before 2027; You want a front disc brake
+
+### Ather Energy Konarc S 125 2.7 kWh
+- URL: https://www.escooterwale.in/scooters/ather-energy-konarc-s-125-2point7-kwh
+- Ex-showroom price: ₹1,21,999
+- Estimated on-road price: ₹1,28,190
+- EMI from: ₹3213/month
+- Battery: 2.7 kWh
+- Claimed range (IDC): 125 km
+- Real-world range (ScooterWale estimate): 92–105 km
+- Top speed: 70 km/h
+- Charging time: 4.5 hrs
+- Kerb weight: 126.5 kg
+- Boot space: 31 L
+- Ground clearance: Not published
+- Seat height: Not published
+- ScootScore: 7.8/10 (Range 5.6, Features 8.2, Value 8, Ride 8.6, Service 9)
+- Verdict: The Konarc S 125 is Ather's new family scooter: metal body, 31 L boot, front disc and the full Ather app and Grid charging. Top speed is 70 km/h, so it suits the city more than the highway.
+- Best for: Family city use; Buyers who want a metal body; Riders near Ather Grid chargers
+- Avoid if: You ride on highways often (70 km/h top speed); You need more than 100 km a day
+
+### Ather Energy Konarc S 161 3.5 kWh
+- URL: https://www.escooterwale.in/scooters/ather-energy-konarc-s-161-3point5-kwh
+- Ex-showroom price: ₹1,44,999
+- Estimated on-road price: ₹1,51,610
+- EMI from: ₹3818/month
+- Battery: 3.5 kWh
+- Claimed range (IDC): 161 km
+- Real-world range (ScooterWale estimate): 120–135 km
+- Top speed: 70 km/h
+- Charging time: 5.7 hrs
+- Kerb weight: 129 kg
+- Boot space: 31 L
+- Ground clearance: Not published
+- Seat height: Not published
+- ScootScore: 8/10 (Range 6.8, Features 8.2, Value 7.6, Ride 8.6, Service 9)
+- Verdict: The Konarc S 161 has the biggest battery in the Konarc range, about 120 to 135 km in real use, and still sits under the PM E-DRIVE price cap. A second 450 W charger cuts home charging to about 3 hours.
+- Best for: Longer daily commutes; Families who want one scooter for everything; Ather buyers under ₹1.5 lakh
+- Avoid if: You ride on highways often (70 km/h top speed); You want the fastest Ather (450 series)
 
 ### TVS Motor iQube 2.2 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-2point2-kwh
