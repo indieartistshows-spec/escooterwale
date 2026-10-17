@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="styles.css"/>
 <script src="data.js"></script>
 <script src="seo.js"></script>
+<script src="outbound.js"></script>
 <script src="components.js"></script>
 <script src="videos-db.js"></script>
 <style>
@@ -4293,7 +4294,7 @@ function applyFilters() {
     if      (f.sort === 'price-asc')   results.sort((a,b) => a.price - b.price);
     else if (f.sort === 'price-desc')  results.sort((a,b) => b.price - a.price);
     else if (f.sort === 'range-desc')  results.sort((a,b) => parseInt(b.range) - parseInt(a.range));
-    else if (f.sort === 'rating')      results.sort((a,b) => b.rating - a.rating);
+    else if (f.sort === 'rating')      results.sort((a,b) => b.score - a.score);
     else if (f.sort === 'score-desc')  results.sort((a,b) => (b.score||0) - (a.score||0));
     else if (!f.q)                     results.sort((a,b) => b.views - a.views);
   }

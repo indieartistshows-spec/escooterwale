@@ -92,7 +92,7 @@
   <div class="art-sidebar-card">
     <h4>Share this article</h4>
     <div class="share-btns">
-      <button class="share-btn" onclick="navigator.share?navigator.share({title:document.title,url:location.href}):alert('Link copied!')">↗ Share</button>
+      <button class="share-btn" onclick="if(navigator.share){navigator.share({title:document.title,url:location.href})}else{navigator.clipboard&&navigator.clipboard.writeText(location.href).then(()=>{this.textContent='✓ Link copied'})}">↗ Share</button>
       <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href))">X / Twitter</button>
     </div>
   </div>
@@ -117,6 +117,7 @@
 
 <script src="data.js"></script>
 <script src="seo.js"></script>
+<script src="outbound.js"></script>
 <script src="components.js"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('news');

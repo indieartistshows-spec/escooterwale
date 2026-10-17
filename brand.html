@@ -114,7 +114,7 @@
         <div class="brand-stats">
           <div class="bs"><div class="bs-num" id="bsModels">6</div><div class="bs-lbl">Models</div></div>
           <div class="bs"><div class="bs-num" id="bsFrom">₹99,999</div><div class="bs-lbl">From</div></div>
-          <div class="bs"><div class="bs-num" id="bsRating">4.3★</div><div class="bs-lbl">Rating</div></div>
+          <div class="bs"><div class="bs-num" id="bsRating">4.3★</div><div class="bs-lbl">Avg ScootScore</div></div>
           <div class="bs"><div class="bs-num" id="bsFounded">2017</div><div class="bs-lbl">Founded</div></div>
         </div>
         <div class="brand-actions">
@@ -162,6 +162,7 @@
 
 <script src="data.js"></script>
 <script src="seo.js"></script>
+<script src="outbound.js"></script>
 <script src="components.js"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
@@ -172,7 +173,7 @@ const bid=window.__SW_BRAND__||new URLSearchParams(location.search).get('b')||'o
 const brand=BRANDS_DB.find(b=>b.id===bid)||BRANDS_DB[0];
 const models=SCOOTERS_DB.filter(s=>s.brandSlug===bid);
 const minPrice=models.length?Math.min(...models.map(s=>s.price)):0;
-const avgRating=models.length?(models.reduce((a,s)=>a+s.rating,0)/models.length).toFixed(1):0;
+const avgRating=models.length?(models.reduce((a,s)=>a+s.score,0)/models.length).toFixed(1):0;
 
 const _seo=SEO.brand(brand,models);
 document.getElementById('pgTitle').textContent=_seo.title;
@@ -193,7 +194,7 @@ document.getElementById('brandHeroTitle').textContent=brand.name;
 document.getElementById('brandHeroDesc').textContent=brand.about;
 document.getElementById('bsModels').textContent=models.length||brand.models;
 document.getElementById('bsFrom').textContent=minPrice?'₹'+minPrice.toLocaleString('en-IN'):'—';
-document.getElementById('bsRating').textContent=avgRating+'★';
+document.getElementById('bsRating').textContent=avgRating+'/10';
 document.getElementById('bsFounded').textContent=brand.founded;
 document.getElementById('bcBrand').textContent=brand.name;
 document.getElementById('brandAbout').textContent=brand.about;

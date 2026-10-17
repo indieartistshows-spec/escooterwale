@@ -22,6 +22,8 @@
 <link rel="stylesheet" href="styles.css"/>
 <script src="data.js"></script>
 <script src="seo.js"></script>
+<script src="outbound.js"></script>
+<script src="trending-data.js"></script>
 <script src="components.js"></script>
 <script src="videos-db.js"></script>
 <style>
@@ -278,29 +280,30 @@
     <div class="tab-panel active" id="tab-youtube">
       <div class="live-note">
         <div class="live-dot"></div>
-        <div>These are the most-watched EV scooter reviews from India's top tech creators. Click any card to watch on YouTube.</div>
+        <div>Electric scooter reviews from Indian YouTube creators, newest first. New videos are added every week and none are ever removed.</div>
       </div>
       
 
       <!-- Scooter filter -->
       <div class="filter-scooters" id="ytFilter">
         <button class="scooter-filter-btn active" onclick="filterYT('all',this)">All Scooters</button>
-        <button class="scooter-filter-btn" onclick="filterYT('ola',this)">Ola Electric</button>
-        <button class="scooter-filter-btn" onclick="filterYT('ather',this)">Ather</button>
-        <button class="scooter-filter-btn" onclick="filterYT('tvs',this)">TVS iQube</button>
-        <button class="scooter-filter-btn" onclick="filterYT('honda',this)">Honda Activa EV</button>
-        <button class="scooter-filter-btn" onclick="filterYT('ampere',this)">Greaves Ampere</button>
-        <button class="scooter-filter-btn" onclick="filterYT('simple',this)">Simple One</button>
+        <button class="scooter-filter-btn" onclick="filterYT('ola-electric',this)">Ola Electric</button>
+        <button class="scooter-filter-btn" onclick="filterYT('ather-energy',this)">Ather</button>
+        <button class="scooter-filter-btn" onclick="filterYT('tvs-motor',this)">TVS iQube</button>
+        <button class="scooter-filter-btn" onclick="filterYT('bajaj-chetak',this)">Bajaj Chetak</button>
+        <button class="scooter-filter-btn" onclick="filterYT('hero-vida',this)">Hero Vida</button>
+        <button class="scooter-filter-btn" onclick="filterYT('ampere',this)">Ampere</button>
       </div>
 
       <div class="yt-grid" id="ytGrid"></div>
+      <div style="text-align:center;margin-top:20px"><button class="btn btn-outline" id="ytMore" onclick="moreYT()">Load more videos</button></div>
     </div>
 
     <!-- ══ REDDIT TAB ════════════════════════════════════════ -->
     <div class="tab-panel" id="tab-reddit">
       <div class="live-note">
         <div class="live-dot"></div>
-        <div>Verified ownership reports, comparisons and industry data from Team-BHP and Autocar India. Every link goes directly to the exact article or thread.</div>
+        <div>News, subsidy updates, sales numbers and owner discussions, newest first. New articles are added every week and nothing is ever removed.</div>
       </div>
       
       <div class="reddit-list" id="redditList"></div>
@@ -865,34 +868,40 @@ function fmtViews(n){
 }
 
 let activeYTFilter = 'all';
+let ytShown = 12;
+const MONS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmtDay=iso=>{if(!iso)return '';const [y,m,d]=iso.slice(0,10).split('-').map(Number);return `${d} ${MONS[m-1]} ${y}`;};
+/* Every video ever added stays in the archive. Newest first, stable order. */
+function archiveVideos(){
+  return [...TRENDING.videos].sort((a,b)=>((b.published||b.added)||'').localeCompare((a.published||a.added)||'')).map(v=>({
+    ...v, url:'https://www.youtube.com/watch?v='+v.videoId,
+    thumb:v.customThumb?'/images/video-thumbs/'+v.videoId+'.jpg':'https://img.youtube.com/vi/'+v.videoId+'/hqdefault.jpg',
+    brand:v.brandId||'other'
+  }));
+}
 function renderYT(filter='all'){
   const grid = document.getElementById('ytGrid');
-  const filtered = filter==='all' ? YT_VIDEOS : YT_VIDEOS.filter(v=>v.brand===filter);
-  grid.innerHTML = filtered.map(v=>{
-    const hasVideo = !!v.videoId;
-    return `
-    <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="yt-card" data-brand="${v.brand}">
+  const all = archiveVideos();
+  const filtered = filter==='all' ? all : all.filter(v=>v.brand===filter || (filter==='ola'&&v.brand==='ola-electric') || (filter==='ather'&&v.brand==='ather-energy') || (filter==='tvs'&&v.brand==='tvs-motor') || (filter==='bajaj'&&v.brand==='bajaj-chetak') || (filter==='hero'&&v.brand==='hero-vida'));
+  grid.innerHTML = filtered.slice(0, ytShown).map(v=>`
+    <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="yt-card" data-brand="${v.brand}" data-out="video">
       <div class="yt-thumb">
-        <img src="${v.thumb}" alt="${v.title}" loading="lazy"
-          onerror="this.src='/images/Ola Electric S1 Pro 4 kWh.webp'"/>
-        <div class="yt-play">
-          <div class="yt-play-btn">${hasVideo ? '▶' : '🔍'}</div>
-        </div>
-        ${!hasVideo ? '<div style="position:absolute;top:10px;left:10px;background:rgba(0,0,0,.7);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:.04em">SEARCH ON YOUTUBE</div>' : ''}
-        <div class="yt-duration">${v.duration}</div>
+        <img src="${v.thumb}" alt="${v.title}" loading="lazy" onerror="this.src='https://img.youtube.com/vi/${v.videoId}/hqdefault.jpg'"/>
+        <div class="yt-play"><div class="yt-play-btn">▶</div></div>
+        <div class="yt-duration">${fmtDay(v.published||v.added)}</div>
       </div>
       <div class="yt-body">
-        <div class="yt-creator">
-          <div class="yt-creator-name">${v.creator}</div>
-        </div>
+        <div class="yt-creator"><div class="yt-creator-name">${v.channel||'YouTube'}</div></div>
         <div class="yt-title">${v.title}</div>
       </div>
-    </a>`;
-  }).join('');
+    </a>`).join('');
+  const more=document.getElementById('ytMore');
+  if(more) more.style.display = filtered.length > ytShown ? '' : 'none';
 }
+function moreYT(){ ytShown += 12; renderYT(activeYTFilter); }
 
 function filterYT(filter, btn){
-  activeYTFilter = filter;
+  activeYTFilter = filter; ytShown = 12;
   document.querySelectorAll('#ytFilter .scooter-filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderYT(filter);
@@ -901,27 +910,24 @@ function filterYT(filter, btn){
 // ── Render Reddit ───────────────────────────────────────
 function renderReddit(){
   const list = document.getElementById('redditList');
-  const FLAIR_COLORS = {
-    'Review Site':'#2563eb','Expert Review':'#7c3aed','Community':'#ff4500',
-    'Video':'#ff0000','Guide':'#16a663','News':'#f59e0b','Official':'#0ea5e9'
-  };
-  list.innerHTML = REDDIT_POSTS.map(function(p){
-    const flairColor = FLAIR_COLORS[p.flair] || '#64748b';
-    const icon = p._icon || '📄';
-    const iconColor = p._color || '#64748b';
-    return '<a href="'+p.url+'" target="_blank" rel="noopener noreferrer" class="reddit-card">'+
-      '<div class="reddit-top">'+
-        '<div style="flex-shrink:0;width:40px;height:40px;border-radius:10px;background:'+iconColor+'18;border:1px solid '+iconColor+'30;display:flex;align-items:center;justify-content:center;font-size:18px;margin-top:2px">'+icon+'</div>'+
-        '<div class="reddit-content">'+
-          '<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">'+
-            '<span style="font-size:10px;font-weight:800;padding:2px 8px;border-radius:4px;background:'+flairColor+';color:#fff">'+p.flair+'</span>'+
-            '<span style="font-size:11px;font-weight:700;color:'+iconColor+'">'+p.sub+'</span>'+
-          '</div>'+
-          '<div class="reddit-title">'+p.title+'</div>'+
-          '<div style="margin-top:8px;font-size:11px;color:var(--ink-4)">↗ Click to read</div>'+
-        '</div>'+
-      '</div>'+
-    '</a>';
+  const TOPIC = {subsidy:['Subsidy','#16a663','🏛️'],sales:['Sales','#2563eb','📊'],launch:['Launch','#f59e0b','🆕'],community:['Owners','#ff4500','💬'],review:['Review','#7c3aed','📝'],news:['News','#0ea5e9','📰']};
+  const items=[...TRENDING.articles].sort((a,b)=>((b.published||b.added)||'').localeCompare((a.published||a.added)||''));
+  list.innerHTML = items.map(p=>{
+    const [label,col,icon]=TOPIC[p.topic]||TOPIC.news;
+    return `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="reddit-card" data-out="article">
+      <div class="reddit-top">
+        <div style="flex-shrink:0;width:40px;height:40px;border-radius:10px;background:${col}18;border:1px solid ${col}30;display:flex;align-items:center;justify-content:center;font-size:18px;margin-top:2px">${icon}</div>
+        <div class="reddit-content">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">
+            <span style="font-size:10px;font-weight:800;padding:2px 8px;border-radius:4px;background:${col};color:#fff">${label}</span>
+            <span style="font-size:11px;font-weight:700;color:${col}">${p.source}</span>
+            ${p.published?`<span style="font-size:11px;color:var(--ink-4)">${fmtDay(p.published)}</span>`:''}
+          </div>
+          <div class="reddit-title">${p.title}</div>
+          <div style="margin-top:8px;font-size:11px;color:var(--ink-4)">↗ Read on ${p.source}</div>
+        </div>
+      </div>
+    </a>`;
   }).join('');
 }
 
@@ -1017,39 +1023,6 @@ function switchTab(tab, btn){
 
 // ── Init ────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded',()=>{
-  // Merge any real videos from videos-db.js into the trending grid
-  if(typeof getAllVideos === 'function'){
-    const realVideos = getAllVideos();
-    if(realVideos.length > 0){
-      // Build YT_VIDEOS entries from the real DB, mapped to scooter data
-      realVideos.forEach(function(v){
-        const scooter = SCOOTERS_DB.find(function(s){ return s.id === v.scooterId; });
-        if(!scooter) return;
-        // Check if this video is already in YT_VIDEOS (by videoId)
-        const exists = YT_VIDEOS.some(function(y){ return y.videoId === v.videoId; });
-        if(!exists){
-          YT_VIDEOS.unshift({
-            id: 'db-' + v.videoId,
-            brand: scooter.brandSlug,
-            scooter: scooter.name,
-            title: scooter.brand + ' ' + scooter.name + ' — ' + (v.type||'Review').replace(/_/g,' '),
-            creator: v.creator,
-            avatar: v.avatar || v.creator.substring(0,2).toUpperCase(),
-            avatarColor: v.avatarColor || '#16a663',
-            subs: '',
-            views: '',
-            duration: '',
-            daysAgo: null,
-            videoId: v.videoId,
-            url: v.url,
-            thumb: v.thumb,
-            scooterColor: scooter.color || '#16a663',
-            verdict: (v.type||'review').replace(/_/g,' ')
-          });
-        }
-      });
-    }
-  }
   document.getElementById('navMount').innerHTML = navHTML('trending');
   document.getElementById('footerMount').innerHTML = footerHTML();
   document.getElementById('compareTrayMount').innerHTML = compareTrayHTML();

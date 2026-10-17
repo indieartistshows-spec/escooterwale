@@ -692,6 +692,7 @@ h1,h2,h3,h4,.nav-logo-text,.sv2-num,.h-stat-num,.pick-name,.sc-name,.budget-rang
 
 <script src="data.js"></script>
 <script src="seo.js"></script>
+<script src="outbound.js"></script>
 <script src="components.js"></script>
 <script src="videos-db.js"></script>
 <script>
@@ -901,7 +902,7 @@ function renderPicks(key='default'){
       <div class="pick-body">
         <div class="pick-brand-row">${brandLogoHTML(s.brandSlug,20)}<span class="pick-brand">${s.brand}</span></div>
         <div class="pick-name">${s.name} <span style="font-size:13px;font-weight:400;color:var(--ink-3)">${s.battery||''}</span></div>
-        <div class="pick-stars">${renderStars(s.rating)}<span style="font-weight:700">${s.rating}</span><span style="color:var(--ink-3)">(${fmtNum(s.reviews)} reviews)</span></div>
+        <div class="pick-stars">${renderStars(s.score/2)}<span style="font-weight:700">${s.score}/10</span><span style="color:var(--ink-3)">ScootScore</span></div>
         <div class="pick-metrics">
           <div class="pm"><div class="pm-val">${s.realRange||s.range}</div><div class="pm-lbl">Real Range</div></div>
           <div class="pm"><div class="pm-val">${s.speed}</div><div class="pm-lbl">Speed</div></div>

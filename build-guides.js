@@ -82,6 +82,7 @@ ${sidebar}
 
 <script src="data.js"></script>
 <script src="seo.js"></script>
+<script src="outbound.js"></script>
 <script src="components.js"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('news');

@@ -112,4 +112,7 @@ function getBrandById(id)  { return BRANDS_DB.find(b=>b.id===id); }
 if(typeof module!=='undefined') module.exports={SCOOTERS_DB,BRANDS_DB,NEWS_DB,CITIES_DB,SUBSIDY,SW_CONFIG,EV_SALES,BRAND_LINKS};
 `;
 fs.writeFileSync('data.js', out);
+// Trending archive goes in its own file so data.js stays small as it grows
+const trending = J('data/trending.json');
+fs.writeFileSync('trending-data.js', `/* GENERATED from data/trending.json by tools/build-data.js. Append-only archive. */\nconst TRENDING = ${JSON.stringify({ videos: trending.videos, articles: trending.articles })};\nif(typeof module!=='undefined') module.exports={TRENDING};\n`);
 console.log(`data.js written: ${scooters.length} scooters, headline city ${headline}, ${Object.keys(cityPrices).length} models with city prices`);
