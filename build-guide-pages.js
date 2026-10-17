@@ -16,44 +16,67 @@ const nearLine = rows.filter(r => r.sub.eligible && r.f > 135000).sort((a, b) =>
 /* ═══════════════════════════════════════════════════════════
    1. SUBSIDY DEADLINES
    ═══════════════════════════════════════════════════════════ */
+const SD = JSON.parse(require('fs').readFileSync('data/subsidy.json', 'utf8'));
+const TODAY_ISO = SD.checked;
+const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmtD = (iso, approx) => { const [y, m, d] = iso.split('-').map(Number); return (approx ? '~' : '') + `${d} ${MON[m - 1]} ${y}`; };
+const withDeadline = Object.entries(SD.states).filter(([k, s]) => s.deadline && s.deadlineWhat)
+  .map(([k, s]) => ({ k, s, passed: s.deadline < TODAY_ISO })).sort((a, b) => a.s.deadline.localeCompare(b.s.deadline));
+const upcoming = withDeadline.filter(x => !x.passed), passed = withDeadline.filter(x => x.passed);
+const next = upcoming.slice(0, 3);
+const shortList = upcoming.slice(0, 3).map(x => `${x.s.name} ${fmtD(x.s.deadline, x.s.deadlineApprox)}`).join(', ');
+const deadlineRows = upcoming.map(({ s }) => `      <tr><td class="amt">${fmtD(s.deadline, s.deadlineApprox)}</td><td><strong>${s.name}</strong></td><td>${s.deadlineWhat}</td><td>${s.deadlineAdvice}</td></tr>`).join('\n');
+const passedRows = passed.map(({ s }) => `      <tr><td>${s.name}</td><td>${s.deadlineWhat}</td><td>Ended ${fmtD(s.deadline, s.deadlineApprox)}. ${s.deadlineAdvice}</td></tr>`).join('\n');
+const changeLog = SD.changelog.slice(0, 6).map(c => `<li><strong>${fmtD(c.date)}</strong><ul style="margin:4px 0 8px 16px">${c.items.map(i => `<li>${i}</li>`).join('')}</ul></li>`).join('');
+const srcLinks = [SD.central.sources, ...Object.values(SD.states).map(s => s.sources || [])].flat()
+  .filter((v, i, arr) => v && arr.findIndex(x => x.url === v.url) === i)
+  .map(s => `<li><a href="${s.url}" target="_blank" rel="noopener" data-out="source">${s.title}</a>${s.official ? ' (official)' : ''}</li>`).join('');
+
 page({
   file: 'guide-subsidy-deadlines.html',
   canon: '/guide-subsidy-deadlines',
   title: 'EV Subsidy Last Date 2026: Every Central and State Deadline | ScooterWale',
-  desc: 'PM E-DRIVE runs to 31 March 2028. State windows close much sooner: Assam around 4 Sep 2026, Odisha 30 Sep 2026, Telangana 31 Dec 2026. Every electric scooter subsidy deadline, verified 24 August 2026.',
+  desc: `PM E-DRIVE runs to 31 March 2028. State deadlines come sooner: ${shortList}. Every electric scooter subsidy deadline, checked ${VERIFIED}.`,
   eyebrow: 'Deadline Tracker',
   crumb: 'EV subsidy deadlines',
   h1: 'Electric scooter subsidy last date: every deadline that matters in 2026',
-  standfirst: 'The central scheme now runs to March 2028. Several state schemes expire within weeks. This page tracks every date and is re-checked monthly.',
+  standfirst: 'The central scheme runs to March 2028. Several state schemes end much sooner. This page tracks every date and is re-checked every week.',
   readTime: '6 min read',
   schema: { '@context': 'https://schema.org', '@graph': [
     ORG,
     crumbs([{ name: 'Home', url: `${BASE}/` }, { name: 'Guides', url: `${BASE}/trending` }, { name: 'EV subsidy deadlines' }]),
     article('/guide-subsidy-deadlines', 'Electric scooter subsidy last date: every deadline that matters in 2026',
-      'Central and state electric two-wheeler subsidy deadlines in India, verified August 2026.'),
+      `Central and state electric two-wheeler subsidy deadlines in India, checked ${VERIFIED}.`),
     faq('/guide-subsidy-deadlines', [
       ['What is the last date for the electric scooter subsidy in India?',
-       'The central PM E-DRIVE scheme for electric two-wheelers runs until 31 March 2028, extended by the Ministry of Heavy Industries amendment notification dated 10 August 2026. State deadlines are much earlier: the Assam EV Policy expires around 4 September 2026, the Odisha subsidy window closes on 30 September 2026, and the Telangana road tax exemption ends on 31 December 2026.'],
+       `The central PM E-DRIVE scheme for electric two-wheelers runs until 31 March 2028. State deadlines are earlier: ${shortList}.`],
       ['Is there a separate last date for the Bajaj Chetak or TVS iQube subsidy?',
-       'No. Subsidy deadlines belong to the government scheme, not to the brand. A Bajaj Chetak, TVS iQube, Ola or Ather buyer is all governed by the same PM E-DRIVE date of 31 March 2028, plus whatever state deadline applies where the scooter is registered. Any dealer presenting a brand-specific subsidy deadline is describing a sales offer, not a government scheme.'],
+       'No. Subsidy deadlines belong to the government scheme, not to the brand. A Bajaj Chetak, TVS iQube, Ola or Ather buyer is governed by the same PM E-DRIVE date of 31 March 2028, plus whatever state deadline applies where the scooter is registered. A brand-specific subsidy deadline is a sales offer, not a government scheme.'],
       ['What happens if the scheme ends before my scooter is delivered?',
-       'Eligibility is normally locked at the date of booking and advance payment rather than at delivery. If you book before the deadline you should keep the subsidy even if delivery is delayed. Get that confirmation in writing from the dealer, which matters most in Assam and Odisha where state windows close within weeks.'],
+       'Eligibility is normally locked at the date of booking and advance payment rather than at delivery. If you book before the deadline you should keep the subsidy even if delivery is delayed. Get that confirmation in writing from the dealer.'],
+      ['What is the Odisha EV subsidy last date?',
+       `${SD.states.odisha.notes} The state subsidy is ${SD.states.odisha.cash.text.toLowerCase()}`],
       ['Has the PM E-DRIVE subsidy been extended?',
-       'Yes. An amendment notification dated 10 August 2026 extended PM E-DRIVE for electric two-wheelers from 31 March 2026 to 31 March 2028, raised the total outlay to ₹11,900 crore, increased the two-wheeler allocation from ₹1,772 crore to ₹2,767 crore, and lifted the unit cap from 24.8 lakh to 45.8 lakh vehicles.']
+       'Yes. The Ministry of Heavy Industries extended PM E-DRIVE demand incentives for electric two-wheelers to 31 March 2028, raised the two-wheeler allocation from ₹1,772 crore to ₹2,767 crore and lifted the unit cap to about 45.8 lakh vehicles. The rate stays at ₹2,500/kWh, capped at ₹5,000.']
     ])
   ]},
   body: `
   <div class="callout-box green">
     <h4>💡 The short answer</h4>
-    <p style="margin:0;font-size:15px">The central <strong>PM E-DRIVE scheme runs to 31 March 2028</strong>, extended by the amendment notification of 10 August 2026. There is no rush on the central subsidy. The urgency is at state level: <strong>Assam expires around 4 September 2026</strong> and <strong>Odisha closes on 30 September 2026</strong>.</p>
+    <p style="margin:0;font-size:15px">The central <strong>PM E-DRIVE scheme runs to 31 March 2028</strong>, so there is no rush on the central ₹5,000. The dates that matter are at state level, soonest first: <strong>${shortList}</strong>.</p>
+  </div>
+
+  <div class="callout-box">
+    <h4>🆕 What changed recently</h4>
+    <ul style="margin:0 0 0 16px;font-size:14px">${changeLog}</ul>
   </div>
 
   <h2>Central deadline: 31 March 2028</h2>
-  <p>PM E-DRIVE for electric two-wheelers was due to end on 31 March 2026. The Ministry of Heavy Industries issued an amendment notification on <strong>10 August 2026</strong> extending it by two years to <strong>31 March 2028</strong>, alongside a larger budget.</p>
+  <p>PM E-DRIVE support for electric two-wheelers was due to lapse in 2026. The Ministry of Heavy Industries extended it to <strong>31 March 2028</strong> in August 2026, with a bigger budget. Claims have to be filed by 31 December 2027.</p>
   <table class="subsidy-table">
-    <thead><tr><th>What changed on 10 August 2026</th><th>Before</th><th>After</th></tr></thead>
+    <thead><tr><th>What changed in August 2026</th><th>Before</th><th>After</th></tr></thead>
     <tbody>
-      <tr><td>Terminal date for e-2W</td><td>31 Mar 2026</td><td class="amt">31 Mar 2028</td></tr>
+      <tr><td>End date for e-2W</td><td>2026</td><td class="amt">31 Mar 2028</td></tr>
       <tr><td>Two-wheeler allocation</td><td>₹1,772 crore</td><td class="amt">₹2,767 crore</td></tr>
       <tr><td>Subsidised units</td><td>24.8 lakh</td><td class="amt">45.8 lakh</td></tr>
       <tr><td>Total scheme outlay</td><td>₹10,900 crore</td><td class="amt">₹11,900 crore</td></tr>
@@ -63,22 +86,15 @@ page({
   <p>The rate itself did not change. It was halved from ₹5,000/kWh to ₹2,500/kWh on 1 April 2025 and has stayed there. The cap remains ₹5,000 per scooter.</p>
 
   <h2>Is there a separate deadline for Chetak, iQube, Ola or Ather?</h2>
-  <p>No, and this is worth being blunt about because it is one of the most-searched versions of this question. <strong>Subsidy deadlines belong to the government scheme, not to the brand.</strong> A Bajaj Chetak buyer, a TVS iQube buyer and an Ather buyer are all governed by the same central date of 31 March 2028, plus whatever state deadline applies where the scooter is registered.</p>
-  <p>If a dealer tells you the "Chetak subsidy ends this month", they are describing a manufacturer discount or a dealership sales target, not a government scheme. Ask them to name the notification. There is not one.</p>
-  <p>The one brand-adjacent thing that does change is <strong>eligibility</strong>. If a manufacturer raises a model's price above ₹1.5 lakh ex-factory, that model stops qualifying from the date of the price change. That is a price event, not a deadline. We track which models sit close to that line on our <a href="/guide-subsidy-eligibility">eligibility page</a>.</p>
+  <p>No. <strong>Subsidy deadlines belong to the government scheme, not to the brand.</strong> A Bajaj Chetak buyer, a TVS iQube buyer and an Ather buyer all work to the same central date of 31 March 2028, plus whatever state deadline applies where the scooter is registered.</p>
+  <p>If a dealer tells you the "Chetak subsidy ends this month", they are describing a manufacturer discount or a sales target, not a government scheme. Ask them to name the notification.</p>
+  <p>What can change by brand is <strong>eligibility</strong>. If a manufacturer raises a model's price above ₹1.5 lakh ex-factory, that model stops qualifying from the date of the price change. We track which models sit close to that line on our <a href="/guide-subsidy-eligibility">eligibility page</a>.</p>
 
   <h2>State deadlines, soonest first</h2>
   <table class="subsidy-table">
     <thead><tr><th>Date</th><th>State</th><th>What lapses</th><th>What to do</th></tr></thead>
     <tbody>
-      <tr><td class="amt">~4 Sep 2026</td><td><strong>Assam</strong></td><td>EV Policy 2021 expires, five years from notification on 4 September 2021. No successor policy announced</td><td>If you are buying in Assam, book now. Note that Down To Earth reported in July 2026 that buyers were struggling to actually receive the subsidy</td></tr>
-      <tr><td class="amt">30 Sep 2026</td><td><strong>Odisha</strong></td><td>Subsidy disbursal window closes. Already extended twice in three-month steps, from 31 Mar to 30 Jun to 30 Sep 2026</td><td>Another short extension is plausible given the pattern, but do not count on it</td></tr>
-      <tr><td class="amt">31 Dec 2026</td><td><strong>Telangana</strong></td><td>100% road tax and registration fee exemption under G.O.Ms.No.41 ends</td><td>The transport department was drafting an extension as of August 2026 with no decision announced</td></tr>
-      <tr><td class="amt">31 Dec 2027</td><td><strong>Tamil Nadu</strong></td><td>100% motor vehicle tax exemption ends. Already extended once, from 31 Dec 2025</td><td>No action needed yet</td></tr>
-      <tr><td class="amt">13 Oct 2027</td><td><strong>Uttar Pradesh</strong></td><td>Road tax and registration exemption, reinstated for purchases from 14 October 2025</td><td>The purchase subsidy already closed in October 2023 and is not coming back</td></tr>
-      <tr><td class="amt">~Sep 2027</td><td><strong>Rajasthan</strong></td><td>REVP 2022 reaches the end of its five-year term</td><td>Disbursement has been slow throughout. Confirm at the dealer</td></tr>
-      <tr><td class="amt">31 Mar 2030</td><td><strong>Delhi</strong></td><td>EV Policy 2026 runs its full term, but the subsidy <strong>tapers annually</strong></td><td>See below. The tapering matters more than the end date</td></tr>
-      <tr><td class="amt">31 Mar 2030</td><td><strong>Maharashtra</strong></td><td>EV Policy 2025 term ends</td><td>No action needed</td></tr>
+${deadlineRows}
     </tbody>
   </table>
 
@@ -93,10 +109,11 @@ page({
     <p style="margin:8px 0 0;font-size:14px">A Delhi buyer who waits twelve months loses ₹10,000. That is the deadline that actually costs money.</p>
   </div>
 
-  <h2>Already expired, so ignore anything that says otherwise</h2>
+  <h2>Already ended, so ignore anything that says otherwise</h2>
   <table class="subsidy-table">
     <thead><tr><th>State</th><th>What ended</th><th>When</th></tr></thead>
     <tbody>
+${passedRows}
       <tr><td>Gujarat</td><td>₹10,000/kWh purchase subsidy, capped at ₹20,000</td><td>Policy expired; subsidy pulled from the e-VEG portal around October 2023</td></tr>
       <tr><td>Uttar Pradesh</td><td>15% of ex-factory, capped at ₹5,000</td><td>One-year window closed 13 October 2023</td></tr>
       <tr><td>Goa</td><td>₹8,000/kWh, capped at ₹15,000</td><td>Window closed 31 December 2024</td></tr>
@@ -105,25 +122,29 @@ page({
       <tr><td>Punjab</td><td>₹3,000/kWh, capped at ₹10,000</td><td>Validity disputed. May have lapsed February 2026, and no working disbursement portal was ever confirmed</td></tr>
     </tbody>
   </table>
-  <p>Several large sites still list the Gujarat ₹20,000 and the UP ₹5,000 as current. Both have been dead for years. If a page quoting them has no verification date on it, treat every other figure on that page as suspect too.</p>
+  <p>Several large sites still list the Gujarat ₹20,000 and the UP ₹5,000 as current. Both ended years ago. If a page quoting them has no verification date, treat every other figure on that page as suspect too.</p>
 
   <h2>Common questions</h2>
 
   <h3>What is the last date for the electric scooter subsidy in India?</h3>
-  <p>31 March 2028 for the central PM E-DRIVE scheme, following the amendment notification of 10 August 2026. State deadlines are earlier and vary: Assam around 4 September 2026, Odisha 30 September 2026, Telangana 31 December 2026, Tamil Nadu 31 December 2027.</p>
+  <p>31 March 2028 for the central PM E-DRIVE scheme. State deadlines are earlier and vary: ${shortList}.</p>
+
+  <h3>What is the Odisha EV subsidy last date?</h3>
+  <p>${SD.states.odisha.notes} The state pays ${SD.states.odisha.cash.text.toLowerCase()}</p>
 
   <h3>Will PM E-DRIVE be extended again beyond 2028?</h3>
-  <p>Unknown. The scheme has now been extended once and the two-wheeler budget raised by 85%, which suggests continued government commitment. But the rate was also halved in April 2025, so the direction of travel on the amount is downward even as the timeline extends.</p>
+  <p>Nobody knows yet. The scheme has been extended and the two-wheeler budget raised by about 85%, which suggests continued support. But the rate was also halved in April 2025, so the amount per scooter is heading down even as the timeline stretches.</p>
 
   <h3>What happens if the scheme ends before my scooter is delivered?</h3>
-  <p>Eligibility is normally locked at booking and advance payment, not at delivery. Book before the deadline and you should keep the subsidy even if delivery slips. Get it in writing, particularly in Assam and Odisha.</p>
+  <p>Eligibility is normally locked at booking and advance payment, not at delivery. Book before the deadline and you should keep the subsidy even if delivery slips. Get it in writing.</p>
 
   <h3>Should I wait for a better subsidy?</h3>
-  <p>On the central scheme, no. The rate has already halved once and there is no indication of an increase. In Delhi, waiting actively costs you money because the incentive tapers each year. The only reason to wait is if your state is expected to announce a new policy, which currently applies to Uttarakhand and Goa.</p>
+  <p>On the central scheme, no. The rate has already halved once and there is no sign of an increase. In Delhi, waiting costs you money because the incentive tapers each year. The only reason to wait is if your state is about to announce a new policy, which currently applies to Uttarakhand, Goa and Assam.</p>
 
   <div class="callout-box">
-    <h4>📌 How we verify this page</h4>
-    <p style="margin:0;font-size:14px">Central dates are checked against the Ministry of Heavy Industries PM E-DRIVE portal and the amendment notification dated 10 August 2026. State dates come from state transport department notifications and government orders where published, and from trade press where not. Where a date could not be confirmed from a primary source we say so on the row. <strong>Last verified ${VERIFIED}. Re-checked monthly.</strong></p>
+    <h4>📌 How we check this page</h4>
+    <p style="margin:0 0 8px;font-size:14px">We re-check this page every week against the PM E-DRIVE portal, Ministry of Heavy Industries and PIB releases, state transport department notifications and trade press. A change goes on the page only when an official source or a named report backs it. <strong>Last checked ${VERIFIED}.</strong></p>
+    <ul style="margin:0 0 0 16px;font-size:13px">${srcLinks}</ul>
   </div>
 
   <div class="guide-nav">
@@ -138,12 +159,10 @@ page({
   </div>`,
   sidebar: `
   <div class="sidebar-card" style="background:var(--ink);border-color:rgba(22,166,99,.2)">
-    <h4 style="color:#fff">⏳ Next deadline</h4>
-    <div style="font-size:26px;font-weight:900;color:#16c964;font-family:var(--f-head);line-height:1.1;margin:6px 0 4px">~4 Sep 2026</div>
-    <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.5">Assam EV Policy 2021 expires. No successor announced.</div>
-    <div style="border-top:1px solid rgba(255,255,255,.1);margin:14px 0 12px"></div>
-    <div style="font-size:20px;font-weight:800;color:#16c964;font-family:var(--f-head)">30 Sep 2026</div>
-    <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.5;margin-top:2px">Odisha subsidy window closes.</div>
+    <h4 style="color:#fff">⏳ Next deadlines</h4>
+    ${next.map((x, i) => `${i ? '<div style="border-top:1px solid rgba(255,255,255,.1);margin:14px 0 12px"></div>' : ''}
+    <div style="font-size:${i ? 20 : 26}px;font-weight:${i ? 800 : 900};color:#16c964;font-family:var(--f-head);line-height:1.1;margin:6px 0 4px">${fmtD(x.s.deadline, x.s.deadlineApprox)}</div>
+    <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.5">${x.s.name}: ${x.s.deadlineWhat.split('.')[0]}.</div>`).join('')}
     <div style="border-top:1px solid rgba(255,255,255,.1);margin:14px 0 12px"></div>
     <div style="font-size:20px;font-weight:800;color:#16c964;font-family:var(--f-head)">31 Mar 2028</div>
     <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.5;margin-top:2px">Central PM E-DRIVE ends.</div>

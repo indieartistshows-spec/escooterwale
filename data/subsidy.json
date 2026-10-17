@@ -1,63 +1,440 @@
 {
-  "checked": "2026-10-17",
-  "central": {
-    "name": "PM E-DRIVE",
-    "ratePerKwh": 2500,
-    "cap": 5000,
-    "capPctExFactory": 15,
-    "exFactoryCeiling": 150000,
-    "gstPct": 5,
-    "validUntil": "2028-03-31",
-    "claimsDeadline": "2027-12-31",
-    "twoWheelerAllocationCr": 2767,
-    "outlayCr": 11900,
-    "eligibleUnits": 4579120,
-    "lastChange": "2026-08-12",
-    "lastChangeNote": "MHI notification extended electric two-wheeler demand incentives from 31 July 2026 to 31 March 2028 and raised the two-wheeler allocation to ₹2,767 crore. Rate and cap unchanged.",
-    "sources": [
-      {"title": "PM E-DRIVE portal, Ministry of Heavy Industries", "url": "https://pmedrive.heavyindustries.gov.in/", "official": true},
-      {"title": "Autocar India: PM E-Drive subsidy for electric two-wheelers extended to March 2028 (12 Aug 2026)", "url": "https://www.autocarindia.com/industry/pm-e-drive-subsidy-for-electric-two-wheelers-extended-to-march-2028-440459", "official": false},
-      {"title": "DriveSpark: PM E-Drive subsidy for electric two-wheelers extended till FY28 (13 Aug 2026)", "url": "https://www.drivespark.com/two-wheelers/2026/pm-e-drive-subsidy-electric-two-wheelers-extended-fy28-087949.html", "official": false}
-    ]
-  },
-  "onRoadModel": {
-    "note": "On-road estimate = ex-showroom + road tax (state rule) + registration (EVs exempt nationwide since MoRTH 2021) + insurance estimate + HSRP and handling.",
-    "insuranceBase": 2500,
-    "insurancePct": 1.8,
-    "handling": 1500,
-    "registration": 0
-  },
-  "emiModel": {"months": 48, "annualRatePct": 12, "on": "ex-showroom"},
-  "states": {
-    "delhi": {"name": "Delhi", "cash": {"amount": 30000, "text": "₹10,000/kWh capped at ₹30,000 in year one, plus ₹10,000 for scrapping a BS-IV or older two-wheeler. Price cap ₹2.25 lakh ex-showroom.", "maxWithScrap": 40000, "paidHow": "Apply within 30 days of RC; paid by bank transfer within 60 days"}, "roadTax": {"type": "exempt", "pct": 0}, "status": "active", "deadline": null, "notes": "Notified 1 July 2026.", "sources": [{"title": "Delhi EV Policy 2026 summary (evselect.in)", "url": "https://www.evselect.in/ev-subsidies-india/delhi", "official": false}]},
-    "assam": {"name": "Assam", "cash": {"amount": 0, "text": "The EV Policy 2021 paid ₹10,000/kWh up to ₹20,000 on scooters under ₹1.5 lakh ex-factory. Its five-year term ended around 4 September 2026 and no extension or successor policy had been notified as of 17 October 2026."}, "roadTax": {"type": "unconfirmed", "pct": null}, "status": "expired", "deadline": "2026-09-04", "notes": "Treat as no state subsidy until a new notification appears.", "sources": [{"title": "Assam Electric Vehicle Policy 2021 (Industries & Commerce Dept)", "url": "https://industries.assam.gov.in/sites/default/files/swf_utility_folder/departments/industries_com_oid_4/portlet/level_2/ilovepdf_merged.pdf", "official": true}]},
-    "madhya-pradesh": {"name": "Madhya Pradesh", "cash": {"amount": 10000, "text": "₹5,000/kWh, ex-factory under ₹1.5 lakh, first 1,00,000 units."}, "roadTax": {"type": "unconfirmed", "pct": null}, "status": "active", "deadline": null, "notes": "Policy notified 29 March 2025.", "sources": []},
-    "maharashtra": {"name": "Maharashtra", "cash": {"amount": 10000, "text": "10% of ex-factory price, up to ₹10,000."}, "roadTax": {"type": "exempt", "pct": 0}, "status": "active", "deadline": "2030-03-31", "notes": "Policy runs 1 April 2025 to 31 March 2030. Full road tax and registration waiver.", "sources": []},
-    "bihar": {"name": "Bihar", "cash": {"amount": 10000, "text": "₹10,000, or ₹12,000 for SC/ST buyers, for purchases from 15 May 2026 through the DBT portal."}, "roadTax": {"type": "unconfirmed", "pct": null}, "status": "active", "deadline": null, "notes": "New 2026 policy.", "sources": []},
-    "rajasthan": {"name": "Rajasthan", "cash": {"amount": 10000, "text": "₹5,000 to ₹10,000 by battery size slab, plus SGST reimbursement. Disbursement has been slow."}, "roadTax": {"type": "exempt", "pct": 0}, "status": "active", "deadline": null, "notes": "", "sources": []},
-    "odisha": {"name": "Odisha", "cash": {"amount": 5000, "text": "15% of ex-factory price capped at ₹5,000."}, "roadTax": {"type": "exempt", "pct": 0}, "status": "active", "deadline": "2026-12-31", "notes": "The Commerce and Transport Department extended the Odisha EV Policy 2021 to 31 December 2026 (reported 5 October 2026). This is the third extension, after 31 March and 30 September 2026.", "changed": "2026-10-05", "sources": [{"title": "The Hans India: Odisha extends EV policy validity till Dec 31 (5 Oct 2026)", "url": "https://www.thehansindia.com/odisha/odisha-extends-ev-policy-validity-till-dec-31-1128872", "official": false}]},
-    "andhra-pradesh": {"name": "Andhra Pradesh", "cash": {"amount": null, "text": "5% of price, plus 10% more with a scrapping certificate. Ex-showroom must be under ₹1 lakh."}, "roadTax": {"type": "unconfirmed", "pct": null}, "status": "active", "deadline": null, "notes": "", "sources": []},
-    "tamil-nadu": {"name": "Tamil Nadu", "cash": {"amount": 0, "text": "No cash subsidy."}, "roadTax": {"type": "exempt", "pct": 0, "until": "2027-12-31"}, "status": "tax-only", "deadline": "2027-12-31", "notes": "Road tax exemption extended to 31 December 2027.", "sources": []},
-    "karnataka": {"name": "Karnataka", "cash": {"amount": 0, "text": "No cash subsidy."}, "roadTax": {"type": "exempt", "pct": 0}, "status": "tax-only", "deadline": null, "notes": "The 2026 move to slab road tax on EVs covers cars. Electric two-wheelers stay exempt.", "sources": [{"title": "EV Auto India: state-wise EV incentives 2026 (updated 7 Oct 2026)", "url": "https://evautoindia.co.in/india-ev-subsidy-state-wise-guide-2026-karnataka-road-tax-pm-e-drive-ends", "official": false}]},
-    "telangana": {"name": "Telangana", "cash": {"amount": 0, "text": "No cash subsidy."}, "roadTax": {"type": "exempt", "pct": 0, "until": "2026-12-31"}, "status": "tax-only", "deadline": "2026-12-31", "notes": "100% road tax and registration waiver until 31 December 2026. No extension notified as of 17 October 2026.", "sources": [{"title": "ETV Bharat: Incentives fuel transition to EVs in Telangana (19 Aug 2026)", "url": "https://www.etvbharat.com/en/state/incentives-fuel-transition-to-electric-vehicles-in-telangana-enn26081904371", "official": false}]},
-    "haryana": {"name": "Haryana", "cash": {"amount": 0, "text": "No cash subsidy."}, "roadTax": {"type": "exempt", "pct": 0}, "status": "tax-only", "deadline": null, "notes": "Exemption broadened by Cabinet on 29 July 2026 to all EVs up to ₹30 lakh.", "sources": []},
-    "uttar-pradesh": {"name": "Uttar Pradesh", "cash": {"amount": 0, "text": "Purchase subsidy closed in October 2023."}, "roadTax": {"type": "exempt", "pct": 0, "until": "2027-10-13"}, "status": "tax-only", "deadline": "2027-10-13", "notes": "Road tax exemption reinstated to 13 October 2027.", "sources": []},
-    "gujarat": {"name": "Gujarat", "cash": {"amount": 0, "text": "No cash subsidy. The 2021 policy expired and the subsidy was removed from the e-VEG portal."}, "roadTax": {"type": "unconfirmed", "pct": null}, "status": "tax-unclear", "deadline": null, "notes": "The 1% concessional tax ran to 31 March 2026. No successor notification found as of 17 October 2026. Ask the RTO or dealer.", "sources": [{"title": "Gujarat e-VEG portal", "url": "https://e-veg.gujarat.gov.in/", "official": true}]},
-    "west-bengal": {"name": "West Bengal", "cash": {"amount": 0, "text": "No cash subsidy."}, "roadTax": {"type": "unconfirmed", "pct": null}, "status": "tax-unclear", "deadline": null, "notes": "Last confirmed road tax exemption ran to 31 March 2025. No successor policy notified.", "sources": []},
-    "kerala": {"name": "Kerala", "cash": {"amount": 0, "text": "No cash subsidy."}, "roadTax": {"type": "percent", "pct": 5}, "status": "tax-only", "deadline": null, "notes": "Concessional flat 5% one-time tax.", "sources": []},
-    "goa": {"name": "Goa", "cash": {"amount": 0, "text": "Subsidy scheme closed on 31 December 2024."}, "roadTax": {"type": "exempt", "pct": 0}, "status": "tax-only", "deadline": null, "notes": "New policy still being drafted.", "sources": []},
-    "punjab": {"name": "Punjab", "cash": {"amount": null, "text": "Uncertain. Policy validity is disputed and may have lapsed in February 2026."}, "roadTax": {"type": "exempt", "pct": 0}, "status": "uncertain", "deadline": null, "notes": "", "sources": []},
-    "chandigarh": {"name": "Chandigarh", "cash": {"amount": null, "text": "Uncertain. February 2026 reporting suggests cash incentives may not be paid for the rest of the policy period."}, "roadTax": {"type": "exempt", "pct": 0}, "status": "uncertain", "deadline": null, "notes": "", "sources": []},
-    "uttarakhand": {"name": "Uttarakhand", "cash": {"amount": 0, "text": "None confirmed."}, "roadTax": {"type": "unconfirmed", "pct": null}, "status": "uncertain", "deadline": null, "notes": "The 2026 policy is still a draft awaiting cabinet approval.", "sources": []}
-  },
-  "cityState": {"mumbai": "maharashtra", "pune": "maharashtra", "delhi": "delhi", "bangalore": "karnataka", "hyderabad": "telangana", "chennai": "tamil-nadu", "ahmedabad": "gujarat", "surat": "gujarat", "kolkata": "west-bengal", "jaipur": "rajasthan", "lucknow": "uttar-pradesh", "chandigarh": "chandigarh"},
-  "changelog": [
-    {"date": "2026-10-17", "items": [
-      "Odisha: EV Policy 2021 extended to 31 December 2026 by the Commerce and Transport Department (reported 5 October 2026). The ₹5,000 state subsidy continues.",
-      "Assam: the EV Policy 2021 term ended around 4 September 2026. No extension or new policy notified as of 17 October 2026, so we now list no Assam state subsidy.",
-      "PM E-DRIVE: no change since the 12 August 2026 extension to 31 March 2028. ₹2,500/kWh, capped at ₹5,000.",
-      "Telangana: road tax waiver still ends 31 December 2026. No extension notified yet."
-    ]},
-    {"date": "2026-08-24", "items": ["Full rewrite against the 10 August 2026 PM E-DRIVE amendment and state-by-state verification."]}
+ "checked": "2026-10-17",
+ "central": {
+  "name": "PM E-DRIVE",
+  "ratePerKwh": 2500,
+  "cap": 5000,
+  "capPctExFactory": 15,
+  "exFactoryCeiling": 150000,
+  "gstPct": 5,
+  "validUntil": "2028-03-31",
+  "claimsDeadline": "2027-12-31",
+  "twoWheelerAllocationCr": 2767,
+  "outlayCr": 11900,
+  "eligibleUnits": 4579120,
+  "lastChange": "2026-08-12",
+  "lastChangeNote": "MHI notification extended electric two-wheeler demand incentives from 31 July 2026 to 31 March 2028 and raised the two-wheeler allocation to ₹2,767 crore. Rate and cap unchanged.",
+  "sources": [
+   {
+    "title": "PM E-DRIVE portal, Ministry of Heavy Industries",
+    "url": "https://pmedrive.heavyindustries.gov.in/",
+    "official": true
+   },
+   {
+    "title": "Autocar India: PM E-Drive subsidy for electric two-wheelers extended to March 2028 (12 Aug 2026)",
+    "url": "https://www.autocarindia.com/industry/pm-e-drive-subsidy-for-electric-two-wheelers-extended-to-march-2028-440459",
+    "official": false
+   },
+   {
+    "title": "DriveSpark: PM E-Drive subsidy for electric two-wheelers extended till FY28 (13 Aug 2026)",
+    "url": "https://www.drivespark.com/two-wheelers/2026/pm-e-drive-subsidy-electric-two-wheelers-extended-fy28-087949.html",
+    "official": false
+   }
   ]
+ },
+ "onRoadModel": {
+  "note": "On-road estimate = ex-showroom + road tax (state rule) + registration (EVs exempt nationwide since MoRTH 2021) + insurance estimate + HSRP and handling.",
+  "insuranceBase": 2500,
+  "insurancePct": 1.8,
+  "handling": 1500,
+  "registration": 0
+ },
+ "emiModel": {
+  "months": 48,
+  "annualRatePct": 12,
+  "on": "ex-showroom"
+ },
+ "states": {
+  "delhi": {
+   "name": "Delhi",
+   "cash": {
+    "amount": 30000,
+    "text": "₹10,000/kWh capped at ₹30,000 in year one, plus ₹10,000 for scrapping a BS-IV or older two-wheeler. Price cap ₹2.25 lakh ex-showroom.",
+    "maxWithScrap": 40000,
+    "paidHow": "Apply within 30 days of RC; paid by bank transfer within 60 days"
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0
+   },
+   "status": "active",
+   "deadline": "2030-03-31",
+   "notes": "Notified 1 July 2026.",
+   "sources": [
+    {
+     "title": "Delhi EV Policy 2026 summary (evselect.in)",
+     "url": "https://www.evselect.in/ev-subsidies-india/delhi",
+     "official": false
+    }
+   ],
+   "deadlineWhat": "EV Policy 2026 runs its full term, but the subsidy tapers every year",
+   "deadlineAdvice": "See below. The yearly taper matters more than the end date"
+  },
+  "assam": {
+   "name": "Assam",
+   "cash": {
+    "amount": 0,
+    "text": "The EV Policy 2021 paid ₹10,000/kWh up to ₹20,000 on scooters under ₹1.5 lakh ex-factory. Its five-year term ended around 4 September 2026 and no extension or successor policy had been notified as of 17 October 2026."
+   },
+   "roadTax": {
+    "type": "unconfirmed",
+    "pct": null
+   },
+   "status": "expired",
+   "deadline": "2026-09-04",
+   "notes": "Treat as no state subsidy until a new notification appears.",
+   "sources": [
+    {
+     "title": "Assam Electric Vehicle Policy 2021 (Industries & Commerce Dept)",
+     "url": "https://industries.assam.gov.in/sites/default/files/swf_utility_folder/departments/industries_com_oid_4/portlet/level_2/ilovepdf_merged.pdf",
+     "official": true
+    }
+   ],
+   "deadlineWhat": "EV Policy 2021 ended, five years from notification on 4 September 2021. No successor policy notified",
+   "deadlineAdvice": "Treat Assam as having no state subsidy until a new notification appears. The central ₹5,000 still applies",
+   "deadlineApprox": true
+  },
+  "madhya-pradesh": {
+   "name": "Madhya Pradesh",
+   "cash": {
+    "amount": 10000,
+    "text": "₹5,000/kWh, ex-factory under ₹1.5 lakh, first 1,00,000 units."
+   },
+   "roadTax": {
+    "type": "unconfirmed",
+    "pct": null
+   },
+   "status": "active",
+   "deadline": null,
+   "notes": "Policy notified 29 March 2025.",
+   "sources": []
+  },
+  "maharashtra": {
+   "name": "Maharashtra",
+   "cash": {
+    "amount": 10000,
+    "text": "10% of ex-factory price, up to ₹10,000."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0
+   },
+   "status": "active",
+   "deadline": "2030-03-31",
+   "notes": "Policy runs 1 April 2025 to 31 March 2030. Full road tax and registration waiver.",
+   "sources": [],
+   "deadlineWhat": "EV Policy 2025 term ends",
+   "deadlineAdvice": "No action needed"
+  },
+  "bihar": {
+   "name": "Bihar",
+   "cash": {
+    "amount": 10000,
+    "text": "₹10,000, or ₹12,000 for SC/ST buyers, for purchases from 15 May 2026 through the DBT portal."
+   },
+   "roadTax": {
+    "type": "unconfirmed",
+    "pct": null
+   },
+   "status": "active",
+   "deadline": null,
+   "notes": "New 2026 policy.",
+   "sources": []
+  },
+  "rajasthan": {
+   "name": "Rajasthan",
+   "cash": {
+    "amount": 10000,
+    "text": "₹5,000 to ₹10,000 by battery size slab, plus SGST reimbursement. Disbursement has been slow."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0
+   },
+   "status": "active",
+   "deadline": "2027-09-30",
+   "notes": "",
+   "sources": [],
+   "deadlineWhat": "REVP 2022 reaches the end of its five-year term",
+   "deadlineAdvice": "Disbursement has been slow throughout. Confirm at the dealer",
+   "deadlineApprox": true
+  },
+  "odisha": {
+   "name": "Odisha",
+   "cash": {
+    "amount": 5000,
+    "text": "15% of ex-factory price capped at ₹5,000."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0
+   },
+   "status": "active",
+   "deadline": "2026-12-31",
+   "notes": "The Commerce and Transport Department extended the Odisha EV Policy 2021 to 31 December 2026 (reported 5 October 2026). This is the third extension, after 31 March and 30 September 2026.",
+   "changed": "2026-10-05",
+   "sources": [
+    {
+     "title": "The Hans India: Odisha extends EV policy validity till Dec 31 (5 Oct 2026)",
+     "url": "https://www.thehansindia.com/odisha/odisha-extends-ev-policy-validity-till-dec-31-1128872",
+     "official": false
+    }
+   ],
+   "deadlineWhat": "Odisha EV Policy 2021, including the ₹5,000 state subsidy and road tax waiver. Extended three times: 31 March, 30 September and now 31 December 2026",
+   "deadlineAdvice": "Book and register before 31 December 2026 if you want the state subsidy. Another extension is possible but not announced"
+  },
+  "andhra-pradesh": {
+   "name": "Andhra Pradesh",
+   "cash": {
+    "amount": null,
+    "text": "5% of price, plus 10% more with a scrapping certificate. Ex-showroom must be under ₹1 lakh."
+   },
+   "roadTax": {
+    "type": "unconfirmed",
+    "pct": null
+   },
+   "status": "active",
+   "deadline": null,
+   "notes": "",
+   "sources": []
+  },
+  "tamil-nadu": {
+   "name": "Tamil Nadu",
+   "cash": {
+    "amount": 0,
+    "text": "No cash subsidy."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0,
+    "until": "2027-12-31"
+   },
+   "status": "tax-only",
+   "deadline": "2027-12-31",
+   "notes": "Road tax exemption extended to 31 December 2027.",
+   "sources": [],
+   "deadlineWhat": "100% motor vehicle tax exemption. Already extended once, from 31 December 2025",
+   "deadlineAdvice": "No action needed yet"
+  },
+  "karnataka": {
+   "name": "Karnataka",
+   "cash": {
+    "amount": 0,
+    "text": "No cash subsidy."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0
+   },
+   "status": "tax-only",
+   "deadline": null,
+   "notes": "The 2026 move to slab road tax on EVs covers cars. Electric two-wheelers stay exempt.",
+   "sources": [
+    {
+     "title": "EV Auto India: state-wise EV incentives 2026 (updated 7 Oct 2026)",
+     "url": "https://evautoindia.co.in/india-ev-subsidy-state-wise-guide-2026-karnataka-road-tax-pm-e-drive-ends",
+     "official": false
+    }
+   ]
+  },
+  "telangana": {
+   "name": "Telangana",
+   "cash": {
+    "amount": 0,
+    "text": "No cash subsidy."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0,
+    "until": "2026-12-31"
+   },
+   "status": "tax-only",
+   "deadline": "2026-12-31",
+   "notes": "100% road tax and registration waiver until 31 December 2026. No extension notified as of 17 October 2026.",
+   "sources": [
+    {
+     "title": "ETV Bharat: Incentives fuel transition to EVs in Telangana (19 Aug 2026)",
+     "url": "https://www.etvbharat.com/en/state/incentives-fuel-transition-to-electric-vehicles-in-telangana-enn26081904371",
+     "official": false
+    }
+   ],
+   "deadlineWhat": "100% road tax and registration fee exemption under G.O.Ms.No.41",
+   "deadlineAdvice": "No extension notified yet. Registering before 31 December 2026 keeps the waiver"
+  },
+  "haryana": {
+   "name": "Haryana",
+   "cash": {
+    "amount": 0,
+    "text": "No cash subsidy."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0
+   },
+   "status": "tax-only",
+   "deadline": null,
+   "notes": "Exemption broadened by Cabinet on 29 July 2026 to all EVs up to ₹30 lakh.",
+   "sources": []
+  },
+  "uttar-pradesh": {
+   "name": "Uttar Pradesh",
+   "cash": {
+    "amount": 0,
+    "text": "Purchase subsidy closed in October 2023."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0,
+    "until": "2027-10-13"
+   },
+   "status": "tax-only",
+   "deadline": "2027-10-13",
+   "notes": "Road tax exemption reinstated to 13 October 2027.",
+   "sources": [],
+   "deadlineWhat": "Road tax and registration exemption, reinstated for purchases from 14 October 2025",
+   "deadlineAdvice": "The purchase subsidy closed in October 2023 and is not coming back"
+  },
+  "gujarat": {
+   "name": "Gujarat",
+   "cash": {
+    "amount": 0,
+    "text": "No cash subsidy. The 2021 policy expired and the subsidy was removed from the e-VEG portal."
+   },
+   "roadTax": {
+    "type": "unconfirmed",
+    "pct": null
+   },
+   "status": "tax-unclear",
+   "deadline": null,
+   "notes": "The 1% concessional tax ran to 31 March 2026. No successor notification found as of 17 October 2026. Ask the RTO or dealer.",
+   "sources": [
+    {
+     "title": "Gujarat e-VEG portal",
+     "url": "https://e-veg.gujarat.gov.in/",
+     "official": true
+    }
+   ]
+  },
+  "west-bengal": {
+   "name": "West Bengal",
+   "cash": {
+    "amount": 0,
+    "text": "No cash subsidy."
+   },
+   "roadTax": {
+    "type": "unconfirmed",
+    "pct": null
+   },
+   "status": "tax-unclear",
+   "deadline": null,
+   "notes": "Last confirmed road tax exemption ran to 31 March 2025. No successor policy notified.",
+   "sources": []
+  },
+  "kerala": {
+   "name": "Kerala",
+   "cash": {
+    "amount": 0,
+    "text": "No cash subsidy."
+   },
+   "roadTax": {
+    "type": "percent",
+    "pct": 5
+   },
+   "status": "tax-only",
+   "deadline": null,
+   "notes": "Concessional flat 5% one-time tax.",
+   "sources": []
+  },
+  "goa": {
+   "name": "Goa",
+   "cash": {
+    "amount": 0,
+    "text": "Subsidy scheme closed on 31 December 2024."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0
+   },
+   "status": "tax-only",
+   "deadline": null,
+   "notes": "New policy still being drafted.",
+   "sources": []
+  },
+  "punjab": {
+   "name": "Punjab",
+   "cash": {
+    "amount": null,
+    "text": "Uncertain. Policy validity is disputed and may have lapsed in February 2026."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0
+   },
+   "status": "uncertain",
+   "deadline": null,
+   "notes": "",
+   "sources": []
+  },
+  "chandigarh": {
+   "name": "Chandigarh",
+   "cash": {
+    "amount": null,
+    "text": "Uncertain. February 2026 reporting suggests cash incentives may not be paid for the rest of the policy period."
+   },
+   "roadTax": {
+    "type": "exempt",
+    "pct": 0
+   },
+   "status": "uncertain",
+   "deadline": null,
+   "notes": "",
+   "sources": []
+  },
+  "uttarakhand": {
+   "name": "Uttarakhand",
+   "cash": {
+    "amount": 0,
+    "text": "None confirmed."
+   },
+   "roadTax": {
+    "type": "unconfirmed",
+    "pct": null
+   },
+   "status": "uncertain",
+   "deadline": null,
+   "notes": "The 2026 policy is still a draft awaiting cabinet approval.",
+   "sources": []
+  }
+ },
+ "cityState": {
+  "mumbai": "maharashtra",
+  "pune": "maharashtra",
+  "delhi": "delhi",
+  "bangalore": "karnataka",
+  "hyderabad": "telangana",
+  "chennai": "tamil-nadu",
+  "ahmedabad": "gujarat",
+  "surat": "gujarat",
+  "kolkata": "west-bengal",
+  "jaipur": "rajasthan",
+  "lucknow": "uttar-pradesh",
+  "chandigarh": "chandigarh"
+ },
+ "changelog": [
+  {
+   "date": "2026-10-17",
+   "items": [
+    "Odisha: EV Policy 2021 extended to 31 December 2026 by the Commerce and Transport Department (reported 5 October 2026). The ₹5,000 state subsidy continues.",
+    "Assam: the EV Policy 2021 term ended around 4 September 2026. No extension or new policy notified as of 17 October 2026, so we now list no Assam state subsidy.",
+    "PM E-DRIVE: no change since the 12 August 2026 extension to 31 March 2028. ₹2,500/kWh, capped at ₹5,000.",
+    "Telangana: road tax waiver still ends 31 December 2026. No extension notified yet."
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "items": [
+    "Full rewrite against the 10 August 2026 PM E-DRIVE amendment and state-by-state verification."
+   ]
+  }
+ ]
 }

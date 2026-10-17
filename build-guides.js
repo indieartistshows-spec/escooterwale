@@ -8,7 +8,9 @@ const fs = require('fs');
 const { SCOOTERS_DB } = require('./data.js');
 
 const BASE = 'https://www.escooterwale.in';
-const VERIFIED = '24 August 2026';
+// "Verified" date comes from the subsidy data file, so it moves only when the facts are re-checked
+const SUBSIDY_DATA = JSON.parse(fs.readFileSync('data/subsidy.json', 'utf8'));
+const VERIFIED = new Date(SUBSIDY_DATA.checked).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const SHELL = fs.readFileSync('guide-shell.template', 'utf8');
 
 /* ── shared helpers ─────────────────────────────────────── */

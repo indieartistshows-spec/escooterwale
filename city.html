@@ -12,7 +12,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-<title id="pgTitle">Electric Scooters in Mumbai – Prices, Dealers & EV Incentives 2026 | ScooterWale</title>
+<title id="pgTitle">Electric Scooter Price in Mumbai 2026: On-Road Prices | ScooterWale</title>
 <meta name="description" id="pgDesc" content="Find electric scooters in Mumbai. Best EV prices, dealer locations, state government subsidies, charging stations map. Compare Ola, Ather, TVS in Mumbai."/>
 <meta name="keywords" content="electric scooter mumbai, ev scooter price mumbai, ev dealer mumbai, electric scooter bangalore, ev scooter delhi price"/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/city"/>
@@ -92,6 +92,12 @@
     <h3 id="subsidyTitle">EV subsidies in Maharashtra (Mumbai)</h3>
     <div id="subsidyRows"></div>
     <p style="font-size:12px;color:var(--g-dim);margin-top:12px;opacity:.7" id="subsidyNote">The central subsidy is taken off the price at the dealer. State cash subsidies are usually paid later by bank transfer.</p>
+  </div>
+
+  <!-- BUYING IN THIS CITY -->
+  <div class="card card-pad" style="margin-bottom:28px" id="cityGuideCard">
+    <div class="label-sm mb-12" id="cityGuideTitle">Buying an electric scooter here</div>
+    <div id="cityGuide" style="font-size:14px;color:var(--ink-2);line-height:1.7"></div>
   </div>
 
   <!-- ON-ROAD PRICES IN CITY -->
@@ -217,6 +223,11 @@ function loadCity(cityId){
   if(st.deadline) rows.push({lbl:'State scheme valid until',val:fmtDate(st.deadline)});
   document.getElementById('subsidyRows').innerHTML=rows.map(s=>`<div class="subsidy-row"><span class="subsidy-label">${s.lbl}</span><span class="subsidy-val">${s.val}</span></div>`).join('');
   document.getElementById('subsidyNote').textContent=`${cash.text||''} ${st.notes||''} Checked ${fmtDate(SUBSIDY.checked)}.`.trim();
+
+  // City buying notes
+  document.getElementById('cityGuideTitle').textContent=`Buying an electric scooter in ${c.name}`;
+  document.getElementById('cityGuide').innerHTML=(c.guide||[]).map(x=>`<p style="margin:0 0 10px">${x}</p>`).join('');
+  document.getElementById('cityGuideCard').style.display=(c.guide&&c.guide.length)?'':'none';
 
   // On-road price table, cheapest first
   document.getElementById('priceEy').textContent=`On-road prices in ${c.name}`;

@@ -85,6 +85,8 @@ for (const s of scooters) {
   s.onRoadDisplay = inr(headOn);
   s.emiFrom = emi(headEx);
   s.subsidy = centralSubsidy({ ...s, price: s.nationalPrice });
+  // internal tag name kept for the listings filter; shown as "PM E-DRIVE eligible"
+  s.tags = (s.tags || []).filter(x => x !== 'fame-eligible').concat(s.subsidy.eligible ? ['fame-eligible'] : []);
   s.tagline = `${s.fullName} | ${s.range} claimed | ${s.speed}`;
   if (s.variants) s.variants.forEach(v => { if (v.price) v.priceDisplay = inr(v.price); });
 }

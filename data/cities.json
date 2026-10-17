@@ -5,7 +5,11 @@
   "icon": "🌊",
   "subsidy": "₹5,000",
   "charging": "Good",
-  "state": "Maharashtra"
+  "state": "Maharashtra",
+  "guide": [
+   "Maharashtra adds up to ₹10,000 on top of the central subsidy and waives road tax and registration for EVs under its 2025 policy, which runs to March 2030.",
+   "Our real-world range tests are run on a fixed 10 km loop in Mumbai, so the range figures on this site are the closest match to what you will get here."
+  ]
  },
  {
   "id": "delhi",
@@ -13,7 +17,10 @@
   "icon": "🏛️",
   "subsidy": "₹30,000",
   "charging": "Excellent",
-  "state": "Delhi NCR"
+  "state": "Delhi NCR",
+  "guide": [
+   "Delhi has the biggest state subsidy in India: up to ₹30,000 in the first year of the 2026 policy, plus ₹10,000 more if you scrap an old petrol two-wheeler. The amount drops each year, so buying sooner is worth real money."
+  ]
  },
  {
   "id": "bangalore",
@@ -21,7 +28,12 @@
   "icon": "🌿",
   "subsidy": "₹10,000",
   "charging": "Excellent",
-  "state": "Karnataka"
+  "state": "Karnataka",
+  "guide": [
+   "Karnataka pays no cash subsidy, but electric two-wheelers remain fully road tax exempt even after the state moved electric cars to a slab tax in 2026. That keeps on-road prices close to ex-showroom.",
+   "Bengaluru is home to both Ather and Ola, so it has the densest network of brand showrooms, service centres and fast chargers in the country. Bounce Infinity's battery swap stations are also most common here, which makes the swappable E1 a realistic option.",
+   "Heavy traffic means lower average speeds, which usually helps real-world range. Most riders here get close to the upper end of our measured range figures."
+  ]
  },
  {
   "id": "hyderabad",
@@ -29,7 +41,12 @@
   "icon": "🍊",
   "subsidy": "₹5,000",
   "charging": "Good",
-  "state": "Telangana"
+  "state": "Telangana",
+  "guide": [
+   "Telangana gives no cash subsidy on electric scooters, but the 100% road tax and registration waiver makes on-road prices here among the lowest in India. That waiver is due to end on 31 December 2026, so registering before then saves you the road tax.",
+   "Telangana registers vehicles on its own system rather than VAHAN, so national sales tables undercount the city. On the road, Ather, Ola, TVS and Bajaj all have showrooms across Hyderabad and Secunderabad, and Hyderabad-based Pure EV has its strongest service presence here.",
+   "Hyderabad summers regularly cross 40°C. If your scooter will sit outside in the sun, battery chemistry and a good thermal warranty matter more here than in milder cities. Our LFP vs NMC guide lists which models use which cells."
+  ]
  },
  {
   "id": "chennai",
@@ -37,7 +54,10 @@
   "icon": "🌊",
   "subsidy": "₹5,000",
   "charging": "Good",
-  "state": "Tamil Nadu"
+  "state": "Tamil Nadu",
+  "guide": [
+   "Tamil Nadu pays no cash subsidy, but EVs are fully road tax exempt until 31 December 2027. TVS is based in Chennai-adjacent Hosur, and Ather and Ola build their scooters in Tamil Nadu, so service coverage is good."
+  ]
  },
  {
   "id": "pune",
@@ -45,7 +65,10 @@
   "icon": "🎓",
   "subsidy": "₹5,000",
   "charging": "Good",
-  "state": "Maharashtra"
+  "state": "Maharashtra",
+  "guide": [
+   "Maharashtra adds up to ₹10,000 on top of the central subsidy and waives road tax for EVs. Pune is Bajaj's home city, so Chetak sales and service are particularly strong here."
+  ]
  },
  {
   "id": "ahmedabad",
@@ -53,7 +76,10 @@
   "icon": "🪁",
   "subsidy": "₹20,000",
   "charging": "Moderate",
-  "state": "Gujarat"
+  "state": "Gujarat",
+  "guide": [
+   "Gujarat's purchase subsidy ended in 2023 and the 1% concessional road tax ran out on 31 March 2026. We could not confirm the current road tax rule, so our on-road figures here leave road tax out. Ask your dealer or RTO."
+  ]
  },
  {
   "id": "kolkata",
@@ -61,7 +87,10 @@
   "icon": "🎨",
   "subsidy": "₹0",
   "charging": "Moderate",
-  "state": "West Bengal"
+  "state": "West Bengal",
+  "guide": [
+   "West Bengal has no cash subsidy, and its last confirmed EV road tax exemption ran only to March 2025. Our on-road figures here leave road tax out because we could not confirm the current rule."
+  ]
  },
  {
   "id": "jaipur",
@@ -69,7 +98,10 @@
   "icon": "🏰",
   "subsidy": "₹10,000",
   "charging": "Developing",
-  "state": "Rajasthan"
+  "state": "Rajasthan",
+  "guide": [
+   "Rajasthan pays ₹5,000 to ₹10,000 depending on battery size, plus SGST reimbursement, though disbursement has been slow. EVs are road tax exempt."
+  ]
  },
  {
   "id": "lucknow",
@@ -77,7 +109,10 @@
   "icon": "🌹",
   "subsidy": "₹0",
   "charging": "Developing",
-  "state": "Uttar Pradesh"
+  "state": "Uttar Pradesh",
+  "guide": [
+   "Uttar Pradesh's purchase subsidy closed in October 2023, but road tax and registration are waived for EVs until 13 October 2027."
+  ]
  },
  {
   "id": "surat",
@@ -85,7 +120,10 @@
   "icon": "💎",
   "subsidy": "₹20,000",
   "charging": "Good",
-  "state": "Gujarat"
+  "state": "Gujarat",
+  "guide": [
+   "Gujarat's purchase subsidy ended in 2023 and the 1% concessional road tax ran out on 31 March 2026. We could not confirm the current road tax rule, so our on-road figures here leave road tax out. Ask your dealer or RTO."
+  ]
  },
  {
   "id": "chandigarh",
@@ -93,6 +131,9 @@
   "icon": "🌳",
   "subsidy": "₹0",
   "charging": "Good",
-  "state": "Punjab/Haryana"
+  "state": "Punjab/Haryana",
+  "guide": [
+   "Chandigarh waives road tax on EVs. Cash incentives are uncertain, with reports in early 2026 that they may not be paid for the rest of the policy period."
+  ]
  }
 ]

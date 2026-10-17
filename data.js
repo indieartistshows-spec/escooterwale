@@ -45,7 +45,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-lakh",
    "under-1-5l",
-   "performance"
+   "performance",
+   "fame-eligible"
   ],
   "heroImg": "/images/ola-electric-s1-x-2-kwh.webp",
   "cardImg": "/images/ola-electric-s1-x-2-kwh.webp",
@@ -123,7 +124,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-5l",
    "best-range",
-   "performance"
+   "performance",
+   "fame-eligible"
   ],
   "heroImg": "/images/ola-electric-s1-x-3-kwh.webp",
   "cardImg": "/images/ola-electric-s1-x-3-kwh.webp",
@@ -201,7 +203,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-5l",
    "best-range",
-   "performance"
+   "performance",
+   "fame-eligible"
   ],
   "heroImg": "/images/ola-electric-s1-x+-4-kwh.webp",
   "cardImg": "/images/ola-electric-s1-x+-4-kwh.webp",
@@ -279,7 +282,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-5l",
    "best-range",
-   "performance"
+   "performance",
+   "fame-eligible"
   ],
   "heroImg": "/images/ola-electric-s1-pro-3-kwh.webp",
   "cardImg": "/images/ola-electric-s1-pro-3-kwh.webp",
@@ -357,7 +361,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-5l",
    "best-range",
-   "performance"
+   "performance",
+   "fame-eligible"
   ],
   "heroImg": "/images/ola-electric-s1-pro-4-kwh.webp",
   "cardImg": "/images/ola-electric-s1-pro-4-kwh.webp",
@@ -512,7 +517,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-5l",
    "trusted-brand",
-   "family-friendly"
+   "family-friendly",
+   "fame-eligible"
   ],
   "heroImg": "/images/ather-energy-rizta-s-2.9-kwh.webp",
   "cardImg": "/images/ather-energy-rizta-s-2.9-kwh.webp",
@@ -591,7 +597,8 @@ const SCOOTERS_DB = [
   "tags": [
    "best-range",
    "trusted-brand",
-   "family-friendly"
+   "family-friendly",
+   "fame-eligible"
   ],
   "heroImg": "/images/ather-energy-rizta-z-3.7-kwh.webp",
   "cardImg": "/images/ather-energy-rizta-z-3.7-kwh.webp",
@@ -670,7 +677,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-5l",
    "performance",
-   "trusted-brand"
+   "trusted-brand",
+   "fame-eligible"
   ],
   "heroImg": "/images/ather-energy-450s-2.9-kwh.webp",
   "cardImg": "/images/ather-energy-450s-2.9-kwh.webp",
@@ -906,7 +914,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-5l",
-   "trusted-brand"
+   "trusted-brand",
+   "fame-eligible"
   ],
   "heroImg": "/images/tvs-motor-iqube-2.2-kwh.webp",
   "cardImg": "/images/tvs-motor-iqube-2.2-kwh.webp",
@@ -983,7 +992,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-5l",
-   "trusted-brand"
+   "trusted-brand",
+   "fame-eligible"
   ],
   "heroImg": "/images/tvs-motor-iqube-s-3.5-kwh.webp",
   "cardImg": "/images/tvs-motor-iqube-s-3.5-kwh.webp",
@@ -1060,7 +1070,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-5l",
-   "trusted-brand"
+   "trusted-brand",
+   "fame-eligible"
   ],
   "heroImg": "/images/tvs-motor-iqube-st-3.5-kwh.webp",
   "cardImg": "/images/tvs-motor-iqube-st-3.5-kwh.webp",
@@ -1216,7 +1227,8 @@ const SCOOTERS_DB = [
    "under-1-lakh",
    "under-1-5l",
    "trusted-brand",
-   "family-friendly"
+   "family-friendly",
+   "fame-eligible"
   ],
   "heroImg": "/images/bajaj-chetak-chetak-c2501-2.5-kwh.webp",
   "cardImg": "/images/bajaj-chetak-chetak-c2501-2.5-kwh.webp",
@@ -1295,7 +1307,8 @@ const SCOOTERS_DB = [
    "under-1-lakh",
    "under-1-5l",
    "trusted-brand",
-   "family-friendly"
+   "family-friendly",
+   "fame-eligible"
   ],
   "heroImg": "/images/bajaj-chetak-chetak-3001-3.0-kwh.webp",
   "cardImg": "/images/bajaj-chetak-chetak-3001-3.0-kwh.webp",
@@ -1374,7 +1387,8 @@ const SCOOTERS_DB = [
    "under-1-5l",
    "best-range",
    "trusted-brand",
-   "family-friendly"
+   "family-friendly",
+   "fame-eligible"
   ],
   "heroImg": "/images/bajaj-chetak-chetak-3501-3.5-kwh.webp",
   "cardImg": "/images/bajaj-chetak-chetak-3501-3.5-kwh.webp",
@@ -1453,7 +1467,8 @@ const SCOOTERS_DB = [
    "under-1-5l",
    "best-range",
    "trusted-brand",
-   "family-friendly"
+   "family-friendly",
+   "fame-eligible"
   ],
   "heroImg": "/images/bajaj-chetak-chetak-3502-3.5-kwh.webp",
   "cardImg": "/images/bajaj-chetak-chetak-3502-3.5-kwh.webp",
@@ -1532,7 +1547,8 @@ const SCOOTERS_DB = [
    "under-1-5l",
    "best-range",
    "trusted-brand",
-   "family-friendly"
+   "family-friendly",
+   "fame-eligible"
   ],
   "heroImg": "/images/bajaj-chetak-chetak-3503-3.5-kwh.webp",
   "cardImg": "/images/bajaj-chetak-chetak-3503-3.5-kwh.webp",
@@ -1610,7 +1626,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-lakh",
    "under-1-5l",
-   "trusted-brand"
+   "trusted-brand",
+   "fame-eligible"
   ],
   "heroImg": "/images/hero-vida-vx2-go-2.2-kwh.webp",
   "cardImg": "/images/hero-vida-vx2-go-2.2-kwh.webp",
@@ -1687,7 +1704,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-5l",
-   "trusted-brand"
+   "trusted-brand",
+   "fame-eligible"
   ],
   "heroImg": "/images/hero-vida-vx2-plus-3.4-kwh.webp",
   "cardImg": "/images/hero-vida-vx2-plus-3.4-kwh.webp",
@@ -1764,7 +1782,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-5l",
-   "trusted-brand"
+   "trusted-brand",
+   "fame-eligible"
   ],
   "heroImg": "/images/hero-vida-v2-pro-3.94-kwh.webp",
   "cardImg": "/images/hero-vida-v2-pro-3.94-kwh.webp",
@@ -1842,7 +1861,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-lakh",
    "under-1-5l",
-   "budget"
+   "budget",
+   "fame-eligible"
   ],
   "heroImg": "/images/ampere-reo-1.3-kwh.webp",
   "cardImg": "/images/ampere-reo-1.3-kwh.webp",
@@ -1919,7 +1939,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-lakh",
-   "under-1-5l"
+   "under-1-5l",
+   "fame-eligible"
   ],
   "heroImg": "/images/ampere-magnus-neo-2.3-kwh.webp",
   "cardImg": "/images/ampere-magnus-neo-2.3-kwh.webp",
@@ -1996,7 +2017,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-lakh",
-   "under-1-5l"
+   "under-1-5l",
+   "fame-eligible"
   ],
   "heroImg": "/images/ampere-magnus-g-max-3.0-kwh.webp",
   "cardImg": "/images/ampere-magnus-g-max-3.0-kwh.webp",
@@ -2073,7 +2095,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-5l",
-   "performance"
+   "performance",
+   "fame-eligible"
   ],
   "heroImg": "/images/ampere-nexus-ex-3-kwh.webp",
   "cardImg": "/images/ampere-nexus-ex-3-kwh.webp",
@@ -2150,7 +2173,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-5l",
-   "performance"
+   "performance",
+   "fame-eligible"
   ],
   "heroImg": "/images/ampere-nexus-st-3-kwh.webp",
   "cardImg": "/images/ampere-nexus-st-3-kwh.webp",
@@ -2228,7 +2252,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-lakh",
    "under-1-5l",
-   "budget"
+   "budget",
+   "fame-eligible"
   ],
   "heroImg": "/images/okinawa-r30-0.8-kwh.webp",
   "cardImg": "/images/okinawa-r30-0.8-kwh.webp",
@@ -2306,7 +2331,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-lakh",
    "under-1-5l",
-   "budget"
+   "budget",
+   "fame-eligible"
   ],
   "heroImg": "/images/okinawa-lite-1.2-kwh.webp",
   "cardImg": "/images/okinawa-lite-1.2-kwh.webp",
@@ -2383,7 +2409,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-lakh",
-   "under-1-5l"
+   "under-1-5l",
+   "fame-eligible"
   ],
   "heroImg": "/images/okinawa-ipraise+-2.2-kwh.webp",
   "cardImg": "/images/okinawa-ipraise+-2.2-kwh.webp",
@@ -2459,7 +2486,8 @@ const SCOOTERS_DB = [
    "Service": 5.5
   },
   "tags": [
-   "under-1-5l"
+   "under-1-5l",
+   "fame-eligible"
   ],
   "heroImg": "/images/okinawa-ridge+-2.8-kwh.webp",
   "cardImg": "/images/okinawa-ridge+-2.8-kwh.webp",
@@ -2536,7 +2564,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-5l",
-   "performance"
+   "performance",
+   "fame-eligible"
   ],
   "heroImg": "/images/okinawa-okhi-90-2.8-kwh.webp",
   "cardImg": "/images/okinawa-okhi-90-2.8-kwh.webp",
@@ -2614,7 +2643,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-lakh",
    "under-1-5l",
-   "swappable-battery"
+   "swappable-battery",
+   "fame-eligible"
   ],
   "heroImg": "/images/pure-ev-epluto-7g-2.0-kwh.webp",
   "cardImg": "/images/pure-ev-epluto-7g-2.0-kwh.webp",
@@ -2691,7 +2721,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-5l",
-   "best-range"
+   "best-range",
+   "fame-eligible"
   ],
   "heroImg": "/images/pure-ev-etrance+-4.5-kwh.webp",
   "cardImg": "/images/pure-ev-etrance+-4.5-kwh.webp",
@@ -2767,7 +2798,8 @@ const SCOOTERS_DB = [
    "Service": 5
   },
   "tags": [
-   "under-1-5l"
+   "under-1-5l",
+   "fame-eligible"
   ],
   "heroImg": "/images/pure-ev-etrance+-4.5-kwh.webp",
   "cardImg": "/images/pure-ev-etrance+-4.5-kwh.webp",
@@ -2846,7 +2878,8 @@ const SCOOTERS_DB = [
    "under-1-lakh",
    "under-1-5l",
    "budget",
-   "swappable-battery"
+   "swappable-battery",
+   "fame-eligible"
   ],
   "heroImg": "/images/bounce-infinity-infinity-e1-2.0-kwh.webp",
   "cardImg": "/images/bounce-infinity-infinity-e1-2.0-kwh.webp",
@@ -2924,7 +2957,8 @@ const SCOOTERS_DB = [
   "tags": [
    "under-1-lakh",
    "under-1-5l",
-   "swappable-battery"
+   "swappable-battery",
+   "fame-eligible"
   ],
   "heroImg": "/images/bounce-infinity-infinity-e1-plus-2.5-kwh.webp",
   "cardImg": "/images/bounce-infinity-infinity-e1-plus-2.5-kwh.webp",
@@ -3001,7 +3035,8 @@ const SCOOTERS_DB = [
   },
   "tags": [
    "under-1-lakh",
-   "under-1-5l"
+   "under-1-5l",
+   "fame-eligible"
   ],
   "heroImg": "/images/bgauss-c12i-2.0-kwh.webp",
   "cardImg": "/images/bgauss-c12i-2.0-kwh.webp",
@@ -3076,7 +3111,8 @@ const SCOOTERS_DB = [
    "Service": 5.5
   },
   "tags": [
-   "under-1-5l"
+   "under-1-5l",
+   "fame-eligible"
   ],
   "heroImg": "/images/bgauss-ruv-350i-3.0-kwh.webp",
   "cardImg": "/images/bgauss-ruv-350i-3.0-kwh.webp",
@@ -3151,7 +3187,8 @@ const SCOOTERS_DB = [
    "Service": 5.5
   },
   "tags": [
-   "under-1-5l"
+   "under-1-5l",
+   "fame-eligible"
   ],
   "heroImg": "/images/bgauss-ruv-350i-3.0-kwh.webp",
   "cardImg": "/images/bgauss-ruv-350i-3.0-kwh.webp",
@@ -3399,6 +3436,10 @@ const CITIES_DB = [
   "subsidy": "₹10,000",
   "charging": "Good",
   "state": "Maharashtra",
+  "guide": [
+   "Maharashtra adds up to ₹10,000 on top of the central subsidy and waives road tax and registration for EVs under its 2025 policy, which runs to March 2030.",
+   "Our real-world range tests are run on a fixed 10 km loop in Mumbai, so the range figures on this site are the closest match to what you will get here."
+  ],
   "stateId": "maharashtra"
  },
  {
@@ -3408,6 +3449,9 @@ const CITIES_DB = [
   "subsidy": "₹30,000",
   "charging": "Excellent",
   "state": "Delhi NCR",
+  "guide": [
+   "Delhi has the biggest state subsidy in India: up to ₹30,000 in the first year of the 2026 policy, plus ₹10,000 more if you scrap an old petrol two-wheeler. The amount drops each year, so buying sooner is worth real money."
+  ],
   "stateId": "delhi"
  },
  {
@@ -3417,6 +3461,11 @@ const CITIES_DB = [
   "subsidy": "₹0",
   "charging": "Excellent",
   "state": "Karnataka",
+  "guide": [
+   "Karnataka pays no cash subsidy, but electric two-wheelers remain fully road tax exempt even after the state moved electric cars to a slab tax in 2026. That keeps on-road prices close to ex-showroom.",
+   "Bengaluru is home to both Ather and Ola, so it has the densest network of brand showrooms, service centres and fast chargers in the country. Bounce Infinity's battery swap stations are also most common here, which makes the swappable E1 a realistic option.",
+   "Heavy traffic means lower average speeds, which usually helps real-world range. Most riders here get close to the upper end of our measured range figures."
+  ],
   "stateId": "karnataka"
  },
  {
@@ -3426,6 +3475,11 @@ const CITIES_DB = [
   "subsidy": "₹0",
   "charging": "Good",
   "state": "Telangana",
+  "guide": [
+   "Telangana gives no cash subsidy on electric scooters, but the 100% road tax and registration waiver makes on-road prices here among the lowest in India. That waiver is due to end on 31 December 2026, so registering before then saves you the road tax.",
+   "Telangana registers vehicles on its own system rather than VAHAN, so national sales tables undercount the city. On the road, Ather, Ola, TVS and Bajaj all have showrooms across Hyderabad and Secunderabad, and Hyderabad-based Pure EV has its strongest service presence here.",
+   "Hyderabad summers regularly cross 40°C. If your scooter will sit outside in the sun, battery chemistry and a good thermal warranty matter more here than in milder cities. Our LFP vs NMC guide lists which models use which cells."
+  ],
   "stateId": "telangana"
  },
  {
@@ -3435,6 +3489,9 @@ const CITIES_DB = [
   "subsidy": "₹0",
   "charging": "Good",
   "state": "Tamil Nadu",
+  "guide": [
+   "Tamil Nadu pays no cash subsidy, but EVs are fully road tax exempt until 31 December 2027. TVS is based in Chennai-adjacent Hosur, and Ather and Ola build their scooters in Tamil Nadu, so service coverage is good."
+  ],
   "stateId": "tamil-nadu"
  },
  {
@@ -3444,6 +3501,9 @@ const CITIES_DB = [
   "subsidy": "₹10,000",
   "charging": "Good",
   "state": "Maharashtra",
+  "guide": [
+   "Maharashtra adds up to ₹10,000 on top of the central subsidy and waives road tax for EVs. Pune is Bajaj's home city, so Chetak sales and service are particularly strong here."
+  ],
   "stateId": "maharashtra"
  },
  {
@@ -3453,6 +3513,9 @@ const CITIES_DB = [
   "subsidy": "₹0",
   "charging": "Moderate",
   "state": "Gujarat",
+  "guide": [
+   "Gujarat's purchase subsidy ended in 2023 and the 1% concessional road tax ran out on 31 March 2026. We could not confirm the current road tax rule, so our on-road figures here leave road tax out. Ask your dealer or RTO."
+  ],
   "stateId": "gujarat"
  },
  {
@@ -3462,6 +3525,9 @@ const CITIES_DB = [
   "subsidy": "₹0",
   "charging": "Moderate",
   "state": "West Bengal",
+  "guide": [
+   "West Bengal has no cash subsidy, and its last confirmed EV road tax exemption ran only to March 2025. Our on-road figures here leave road tax out because we could not confirm the current rule."
+  ],
   "stateId": "west-bengal"
  },
  {
@@ -3471,6 +3537,9 @@ const CITIES_DB = [
   "subsidy": "₹10,000",
   "charging": "Developing",
   "state": "Rajasthan",
+  "guide": [
+   "Rajasthan pays ₹5,000 to ₹10,000 depending on battery size, plus SGST reimbursement, though disbursement has been slow. EVs are road tax exempt."
+  ],
   "stateId": "rajasthan"
  },
  {
@@ -3480,6 +3549,9 @@ const CITIES_DB = [
   "subsidy": "₹0",
   "charging": "Developing",
   "state": "Uttar Pradesh",
+  "guide": [
+   "Uttar Pradesh's purchase subsidy closed in October 2023, but road tax and registration are waived for EVs until 13 October 2027."
+  ],
   "stateId": "uttar-pradesh"
  },
  {
@@ -3489,6 +3561,9 @@ const CITIES_DB = [
   "subsidy": "₹0",
   "charging": "Good",
   "state": "Gujarat",
+  "guide": [
+   "Gujarat's purchase subsidy ended in 2023 and the 1% concessional road tax ran out on 31 March 2026. We could not confirm the current road tax rule, so our on-road figures here leave road tax out. Ask your dealer or RTO."
+  ],
   "stateId": "gujarat"
  },
  {
@@ -3498,6 +3573,9 @@ const CITIES_DB = [
   "subsidy": "Unclear",
   "charging": "Good",
   "state": "Punjab/Haryana",
+  "guide": [
+   "Chandigarh waives road tax on EVs. Cash incentives are uncertain, with reports in early 2026 that they may not be paid for the rest of the policy period."
+  ],
   "stateId": "chandigarh"
  }
 ];
@@ -3562,7 +3640,7 @@ const SUBSIDY = {
     "pct": 0
    },
    "status": "active",
-   "deadline": null,
+   "deadline": "2030-03-31",
    "notes": "Notified 1 July 2026.",
    "sources": [
     {
@@ -3570,7 +3648,9 @@ const SUBSIDY = {
      "url": "https://www.evselect.in/ev-subsidies-india/delhi",
      "official": false
     }
-   ]
+   ],
+   "deadlineWhat": "EV Policy 2026 runs its full term, but the subsidy tapers every year",
+   "deadlineAdvice": "See below. The yearly taper matters more than the end date"
   },
   "assam": {
    "name": "Assam",
@@ -3591,7 +3671,10 @@ const SUBSIDY = {
      "url": "https://industries.assam.gov.in/sites/default/files/swf_utility_folder/departments/industries_com_oid_4/portlet/level_2/ilovepdf_merged.pdf",
      "official": true
     }
-   ]
+   ],
+   "deadlineWhat": "EV Policy 2021 ended, five years from notification on 4 September 2021. No successor policy notified",
+   "deadlineAdvice": "Treat Assam as having no state subsidy until a new notification appears. The central ₹5,000 still applies",
+   "deadlineApprox": true
   },
   "madhya-pradesh": {
    "name": "Madhya Pradesh",
@@ -3621,7 +3704,9 @@ const SUBSIDY = {
    "status": "active",
    "deadline": "2030-03-31",
    "notes": "Policy runs 1 April 2025 to 31 March 2030. Full road tax and registration waiver.",
-   "sources": []
+   "sources": [],
+   "deadlineWhat": "EV Policy 2025 term ends",
+   "deadlineAdvice": "No action needed"
   },
   "bihar": {
    "name": "Bihar",
@@ -3649,9 +3734,12 @@ const SUBSIDY = {
     "pct": 0
    },
    "status": "active",
-   "deadline": null,
+   "deadline": "2027-09-30",
    "notes": "",
-   "sources": []
+   "sources": [],
+   "deadlineWhat": "REVP 2022 reaches the end of its five-year term",
+   "deadlineAdvice": "Disbursement has been slow throughout. Confirm at the dealer",
+   "deadlineApprox": true
   },
   "odisha": {
    "name": "Odisha",
@@ -3673,7 +3761,9 @@ const SUBSIDY = {
      "url": "https://www.thehansindia.com/odisha/odisha-extends-ev-policy-validity-till-dec-31-1128872",
      "official": false
     }
-   ]
+   ],
+   "deadlineWhat": "Odisha EV Policy 2021, including the ₹5,000 state subsidy and road tax waiver. Extended three times: 31 March, 30 September and now 31 December 2026",
+   "deadlineAdvice": "Book and register before 31 December 2026 if you want the state subsidy. Another extension is possible but not announced"
   },
   "andhra-pradesh": {
    "name": "Andhra Pradesh",
@@ -3704,7 +3794,9 @@ const SUBSIDY = {
    "status": "tax-only",
    "deadline": "2027-12-31",
    "notes": "Road tax exemption extended to 31 December 2027.",
-   "sources": []
+   "sources": [],
+   "deadlineWhat": "100% motor vehicle tax exemption. Already extended once, from 31 December 2025",
+   "deadlineAdvice": "No action needed yet"
   },
   "karnataka": {
    "name": "Karnataka",
@@ -3747,7 +3839,9 @@ const SUBSIDY = {
      "url": "https://www.etvbharat.com/en/state/incentives-fuel-transition-to-electric-vehicles-in-telangana-enn26081904371",
      "official": false
     }
-   ]
+   ],
+   "deadlineWhat": "100% road tax and registration fee exemption under G.O.Ms.No.41",
+   "deadlineAdvice": "No extension notified yet. Registering before 31 December 2026 keeps the waiver"
   },
   "haryana": {
    "name": "Haryana",
@@ -3778,7 +3872,9 @@ const SUBSIDY = {
    "status": "tax-only",
    "deadline": "2027-10-13",
    "notes": "Road tax exemption reinstated to 13 October 2027.",
-   "sources": []
+   "sources": [],
+   "deadlineWhat": "Road tax and registration exemption, reinstated for purchases from 14 October 2025",
+   "deadlineAdvice": "The purchase subsidy closed in October 2023 and is not coming back"
   },
   "gujarat": {
    "name": "Gujarat",

@@ -16,7 +16,9 @@
   // "80–90 km" -> "80 to 90 km" (no dashes in copy)
   const span = v => String(v || '').replace(/\s*[–—-]\s*/g, ' to ').replace(/km km/g, 'km');
   const lakh = n => n >= 100000 ? '₹' + (n / 100000).toFixed(n % 100000 ? 2 : 0).replace(/\.?0+$/, '') + ' lakh' : inr(n);
-  const cityName = () => (root.SW_CONFIG && root.SW_CONFIG.headlineCityName) || '';
+  // data.js declares its globals with const, which are not window properties
+  const G = name => { try { return eval(name); } catch (e) { return root[name]; } };
+  const cityName = () => { const c = G('SW_CONFIG'); return (c && c.headlineCityName) || ''; };
   const clean = s => String(s).replace(/\s*[–—]\s*/g, ', ').replace(/\s{2,}/g, ' ').trim();
 
   const SEO = {
@@ -61,6 +63,27 @@
       return { title: clean(cat.seoTitle), desc: clean(cat.seoDescLead) + (list ? ` Our top picks: ${list}.` : '') };
     }
   };
+
+  /* Fill live facts into any element marked data-sw="...", so counts and
+     dates on static pages never go stale. */
+  SEO.fillFacts = function (doc) {
+    const S = G('SCOOTERS_DB'); if (!doc || !S) return;
+    const B = G('BRANDS_DB') || [], C = G('SW_CONFIG'), SU = G('SUBSIDY');
+    const num = v => parseFloat(String(v).match(/[\d.]+/)) || 0;
+    const facts = {
+      models: S.length,
+      brands: B.length,
+      updated: C ? new Date(C.dataUpdated).toLocaleDateString('en-IN', { month: 'long', year: 'numeric' }) : '',
+      bestRange: Math.max(...S.map(s => num(s.range))) + ' km',
+      fastestCharge: Math.min(...S.map(s => num(s.charging))) + ' hrs',
+      maxCentral: SU ? inr(SU.central.cap) : ''
+    };
+    doc.querySelectorAll('[data-sw]').forEach(el => { const v = facts[el.getAttribute('data-sw')]; if (v !== undefined && v !== '') el.textContent = v; });
+  };
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => SEO.fillFacts(document));
+    else SEO.fillFacts(document);
+  }
 
   root.SEO = SEO;
   if (typeof module !== 'undefined') module.exports = SEO;
