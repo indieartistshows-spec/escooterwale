@@ -66,8 +66,11 @@
         "m": "/images/banners/launch-ampere-reo-vyb-m.jpg"
       },
       "fallbackPhoto": "/images/ampere-reo-1.3-kwh.webp",
-      "source": null,
-      "checked": null
+      "source": {
+        "d": "https://static.ampere-electric.com/REO_VYB_1440px_5_1_d7babe86fd.webp",
+        "m": "https://static.ampere-electric.com/VYB_400x_900px_with_text_2_1_cd7c35167d.webp"
+      },
+      "checked": "2026-10-17"
     },
     {
       "id": "launch-ola-s1-pro-sport",
@@ -92,7 +95,7 @@
         "https://www.olaelectric.com/s1-pro"
       ],
       "find": "pro-sport|pro sport",
-      "url": "https://www.olaelectric.com/",
+      "url": "https://www.olaelectric.com/s1-pro",
       "article": {
         "url": "https://www.evoindia.com/news/bike-news/ola-s1-pro-sport-electric-scooter-launched-at-150-lakh-alongside-the-unveiling-of-the-updated-diamondhead-sports-electric-bike-ahead-of-launch-in-2027-587100",
         "source": "evo India"
@@ -102,8 +105,11 @@
         "m": "/images/banners/launch-ola-s1-pro-sport-m.jpg"
       },
       "fallbackPhoto": "/images/hero-scooter.webp",
-      "source": null,
-      "checked": null
+      "source": {
+        "d": "https://cdn.olaelectric.com/sites/evdp/pages/gen3/s1_pro_plus_banner_web_v2.webp",
+        "m": "https://cdn.olaelectric.com/sites/evdp/pages/s1pro/gen3_s1pro_plus_product_mweb_image.webp"
+      },
+      "checked": "2026-10-17"
     }
   ]
 }
