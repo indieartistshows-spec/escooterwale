@@ -1,0 +1,140 @@
+# Copy kept on the repo default branch only so GitHub fires the Monday schedule (schedules run from the
+# default branch). It checks out and publishes main. Once main is the default branch, delete this branch.
+# Weekly automatic update for escooterwale.in
+# Every Monday 06:00 IST: read brand sites, VAHAN, YouTube/news, Google Analytics,
+# rebuild the site, run the safety checks, publish to main (Vercel deploys it),
+# and open an issue with the summary and a one-click undo link.
+# Also runs when someone (or the weekly Claude subsidy check) commits to data/,
+# in which case it only rebuilds and checks, no scraping.
+name: Weekly update
+
+on:
+  schedule:
+    - cron: '30 0 * * 1'   # 00:30 UTC Monday = 06:00 IST
+  workflow_dispatch:
+    inputs:
+      scrape:
+        description: 'Read brand sites and other sources (no = rebuild only)'
+        type: boolean
+        default: true
+  push:
+    branches: [main]
+    paths: ['data/**']
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GA_SA_KEY: ${{ secrets.GA_SA_KEY }}
+      GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+      YT_API_KEY: ${{ secrets.YT_API_KEY }}
+      SCRAPE: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.scrape) }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2, ref: main }
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+
+      - name: Install
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Remember last week's site
+        id: prev
+        run: |
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          git worktree add ../prev-site HEAD
+
+      # each source is independent: one failing never stops the others
+      - name: Brand sites (prices, specs, city prices, launches)
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: node automation/scrape.js && node automation/merge.js
+      - name: VAHAN sales leaderboard
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: node automation/vahan.js
+      - name: Trending videos and articles
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: node automation/trending.js
+      - name: YouTube videos re-verified (titles, channels, exact thumbnails)
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: node automation/youtube-refresh.js
+      - name: Headline city from Google Analytics
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: node automation/ga-headline.js
+      - name: Homepage banners from brand sites
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: |
+          node automation/banners.js
+          node automation/banners.js --file=data/launch-features.json
+          node tools/banner-clean.js
+      - name: Outbound links
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: node automation/links-check.js
+
+      - name: Stamp data date
+        if: env.SCRAPE == 'true'
+        run: node -e "const f='data/site-config.json',c=require('./'+f);c.dataUpdated=new Date().toISOString().slice(0,10);require('fs').writeFileSync(f,JSON.stringify(c,null,2)+'\n')"
+
+      - name: Build data and check it
+        run: |
+          node tools/build-data.js
+          if ! node tools/weekly-guard.js data; then
+            echo "Data rejected, keeping last week's data"
+            git checkout HEAD -- data/
+            node tools/build-data.js
+          fi
+
+      - name: Build site
+        run: node tools/build-all.js
+
+      - name: Check pages (text and screenshots), keep last week's version of any failing page
+        run: node tools/weekly-guard.js pages ../prev-site
+
+      - name: Summary
+        run: |
+          node -e "const l=require('./tools/i18n-live.js');const c=l.coverage();require('fs').writeFileSync('automation/out/i18n.json',JSON.stringify({note:'Coverage '+Object.entries(c).map(([k,v])=>k+' '+Math.round(v*100)+'%').join(', ')+'. Live: '+(l.liveLangs().join(', ')||'none yet')}))"
+          node automation/summary.js "${{ github.repository }}" "${{ steps.prev.outputs.sha }}"
+
+      - name: Publish
+        id: publish
+        run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A -- . ':!automation/out' ':!shots-tmp'
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "Weekly update $(date -u +%F)" -m "Automatic. Summary: reports/weekly/$(date -u +%F).md"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push origin HEAD:main && break; sleep 10; done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Open summary issue
+        if: steps.publish.outputs.changed == 'true'
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: gh issue create --title "Weekly update $(date -u +%F)" --body-file automation/out/summary.md
+
+      - name: Keep the raw reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-reports
+          path: |
+            automation/out/
+            shots-tmp/guard/
+          retention-days: 30
