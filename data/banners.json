@@ -79,12 +79,8 @@
         "d": "/images/banners/bajaj-chetak-d.jpg",
         "m": "/images/banners/bajaj-chetak-m.jpg"
       },
-      "source": {
-        "d": "https://www.chetak.com/-/media/chetakv2/content-image/home-banner/chetak-updated-banner-web-1.webp"
-      },
-      "checked": "2026-10-17",
-      "mobileFromDesktop": true,
-      "mobileFocus": "55% 50%"
+      "checked": "2026-10-18",
+      "supplied": true
     },
     {
       "id": "tvs-iqube",
