@@ -455,13 +455,15 @@ function rank(){
   const seen=new Set(), perBrand={}, primary=[], rest=[];
   for(const r of out){
     if(seen.has(r.x.fam)){rest.push(r);continue}
-    if(r.fit&&primary.length<5&&(perBrand[r.x.brand]||0)<2){primary.push(r);seen.add(r.x.fam);perBrand[r.x.brand]=(perBrand[r.x.brand]||0)+1}
+    if(r.fit&&primary.length<5&&(perBrand[r.x.brand]||0)<1){primary.push(r);seen.add(r.x.fam);perBrand[r.x.brand]=(perBrand[r.x.brand]||0)+1}
     else rest.push(r);
   }
   const top=primary[0]?primary[0].p:(out[0]?out[0].p:1);
   out.forEach(r=>r.pct=Math.max(40,Math.min(r.fit?97:72,Math.round(55+42*r.p/top))));
   const fitN=primary.length;
   const reserve=rest.filter(r=>!primary.includes(r)).sort((a,b)=>(b.fit-a.fit)||(b.p-a.p));
+  // fill up to 5 with close matches, still one per brand where possible
+  for(const r of reserve.slice()){if(primary.length>=5)break;if(!primary.some(q=>q.x.brand===r.x.brand)){primary.push(r);reserve.splice(reserve.indexOf(r),1)}}
   while(primary.length<5&&reserve.length){const r=reserve.shift();if(!primary.some(q=>q.x.fam===r.x.fam)) primary.push(r)}
   return {deck:primary,reserve,fitN};
 }
@@ -537,7 +539,7 @@ $('mtPinGo').addEventListener('click',()=>{
 
 /* ---------- deck ---------- */
 let R=null, queue=[], shown=0, liked=[], skipped=[], bannedBrands=new Set(), cur=null;
-const MAXCARDS=10;
+const MAXCARDS=6, MAXLIKES=3; // never more than 6 cards, and 3 shortlisted ends the deck
 function finish(){
   $('mtBar').style.width='100%';
   try{const u=new URL(location.href);['budget','daily','riders','charging','priority','licence'].forEach(k=>u.searchParams.set(k,A[k]));history.replaceState(null,'',u)}catch(e){}
@@ -581,7 +583,7 @@ function decide(dir){
   if(!cur) return;
   const r=cur;cur=null;shown++;
   ev('match_swipe',{direction:dir==='yes'?'right':'left',model:r.x.id});
-  if(dir==='yes'){fly('yes',()=>{liked.push(r);queue.shift();bump();renderDeck()})}
+  if(dir==='yes'){fly('yes',()=>{liked.push(r);queue.shift();bump();if(liked.length>=MAXLIKES) return openForm();renderDeck()})}
   else fly('no',()=>{queue.shift();askReason(r)});
 }
 function askReason(r){
@@ -592,7 +594,8 @@ function askReason(r){
     if(why==='brand') bannedBrands.add(r.x.brand);
     if(shown+queue.length<MAXCARDS){
       const inDeck=new Set(queue.concat(liked).map(q=>q.x.fam).concat(skipped.map(k=>(F.find(f=>f.id===k.id)||{}).fam)));
-      const ok=q=>!inDeck.has(q.x.fam)&&!bannedBrands.has(q.x.brand)&&(why!=='price'||q.x.price<r.x.price)&&(why!=='range'||q.x.lo>r.x.lo);
+      const deckBrands=new Set(queue.concat(liked).map(q=>q.x.brand));
+      const ok=q=>!inDeck.has(q.x.fam)&&!bannedBrands.has(q.x.brand)&&!deckBrands.has(q.x.brand)&&(why!=='price'||q.x.price<r.x.price)&&(why!=='range'||q.x.lo>r.x.lo);
       const i=R.reserve.findIndex(ok);
       if(i>-1) queue.push(R.reserve.splice(i,1)[0]);
     }
@@ -609,7 +612,7 @@ $('mtYes').addEventListener('click',()=>decide('yes'));
 $('mtNo').addEventListener('click',()=>decide('no'));
 document.addEventListener('keydown',e=>{if($('mtDeck').hidden||$('mtSheet').classList.contains('on'))return;if(e.key==='ArrowRight')decide('yes');if(e.key==='ArrowLeft')decide('no')});
 $('mtCart').addEventListener('click',()=>{if(liked.length) openForm()});
-$('mtMore').addEventListener('click',()=>{const more=R.reserve.filter(q=>!bannedBrands.has(q.x.brand)).slice(0,3);R.reserve=R.reserve.filter(q=>!more.includes(q));queue=more;shown=0;$('mtEmpty').hidden=true;$('mtDeck').hidden=false;renderDeck()});
+$('mtMore').addEventListener('click',()=>{const more=R.reserve.filter(q=>!bannedBrands.has(q.x.brand)).slice(0,MAXCARDS-Math.min(shown,3)>3?3:3);R.reserve=R.reserve.filter(q=>!more.includes(q));queue=more;shown=0;$('mtEmpty').hidden=true;$('mtDeck').hidden=false;renderDeck()});
 const restart=()=>{Object.keys(A).forEach(k=>delete A[k]);document.querySelectorAll('.mt-opt.sel').forEach(o=>o.classList.remove('sel'));document.querySelectorAll('.mt-multi-go').forEach(g=>g.disabled=true);['mtDeck','mtEmpty','mtForm','mtList'].forEach(i=>$(i).hidden=true);$('mtQuiz').hidden=false;$('mtHead').hidden=false;document.body.classList.remove('mt-playing');liked=[];updateCart();history.replaceState(null,'',location.pathname);show(0);window.scrollTo({top:0})};
 $('mtRestart').addEventListener('click',restart);$('mtRestart2').addEventListener('click',restart);
 
