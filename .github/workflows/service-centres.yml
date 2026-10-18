@@ -1,0 +1,37 @@
+# Refreshes pincode locations and brand service points for "service nearby" in the match quiz.
+# Writes data/pincodes.json, data/service-centres.json and reports/service-centres.json.
+name: Service centres
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 22 * * 0'   # Monday 04:00 IST
+  push:
+    branches: [main]
+    paths: ['automation/service-centres.js', '.github/workflows/service-centres.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  service:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Download GeoNames pincodes
+        run: |
+          curl -sSfL -A "escooterwale.in (info@escooterwale.in)" -o IN.zip https://download.geonames.org/export/zip/IN.zip && unzip -o -q IN.zip IN.txt || echo "GeoNames download failed"
+      - name: Build pincode and service data
+        run: node automation/service-centres.js IN.txt
+      - name: Commit the result
+        run: |
+          rm -f IN.zip IN.txt
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add data/pincodes.json data/service-centres.json reports/service-centres.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "Service centres and pincode locations refreshed"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done
