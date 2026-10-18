@@ -20,6 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Wait for the new deployment, then send a test lead
         run: |
+          sleep 100   # let Vercel finish deploying this commit first
           URL=https://www.escooterwale.in/api/lead
           for i in $(seq 1 30); do
             code=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$URL" -H 'content-type: application/json' -d '{}')
