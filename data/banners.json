@@ -45,29 +45,21 @@
     },
     {
       "id": "hero-vida",
-      "brand": "Hero",
+      "brand": "Hero Vida",
       "brandId": "hero-vida",
-      "model": "Vida",
+      "model": "VX2",
       "modelId": "hero-vida-vx2-plus-3point4-kwh",
       "home": "https://www.vidaworld.com/",
       "pages": [
         "https://www.vidaworld.com/"
       ],
-      "url": "https://www.vidaworld.com/",
+      "url": "https://www.vidaworld.com/vida-kkr-knight-edition.html",
       "img": {
         "d": "/images/banners/hero-vida-d.jpg",
         "m": "/images/banners/hero-vida-m.jpg"
       },
-      "source": {
-        "d": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg",
-        "m": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg"
-      },
-      "checked": "2026-10-17",
-      "keep": {
-        "x0": 0.0,
-        "x1": 0.41
-      },
-      "keepFor": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg"
+      "checked": "2026-10-18",
+      "supplied": true
     },
     {
       "id": "bajaj-chetak",
