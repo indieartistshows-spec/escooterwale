@@ -10,9 +10,14 @@
    recalculated here so they can never drift from the price.
    ============================================================ */
 const fs = require('fs');
-const J = f => JSON.parse(fs.readFileSync(f, 'utf8'));
+// every data file passes the site's emoji rule (tools/emoji.js), so emoji in new video titles
+// or news from the weekly automation never reach the pages
+const { stripDeep } = require('./emoji');
+const J = f => stripDeep(JSON.parse(fs.readFileSync(f, 'utf8')));
 const scooters = J('data/scooters.json');
 // square thumbnails with the scooter in focus (tools/card-images.js); the full photo stays as heroImg
+// match quiz points per scooter (data/match-points.json), as s.mp = { range, performance, ... }
+{ const MP = JSON.parse(fs.readFileSync('data/match-points.json', 'utf8')); for (const s of scooters) { const v = MP.points[s.id]; if (v) s.mp = Object.fromEntries(MP.order.map((k, i) => [k, v[i]])); } }
 for (const s of scooters) { const sq = `/images/cards/${s.id}.webp`; if (fs.existsSync('.' + sq)) s.cardImg = sq + '?v=' + Math.round(fs.statSync('.' + sq).mtimeMs / 1000).toString(36); }
 const brands = J('data/brands.json');
 const news = J('data/news.json');

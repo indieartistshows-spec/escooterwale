@@ -94,7 +94,7 @@ page({
   ${F.map(fold).join('')}
 
   <div class="callout-box green">
-    <h4>💡 How this list works</h4>
+    <h4>How this list works</h4>
     <p style="margin:0;font-size:15px">A model counts as <strong>new</strong> once it has appeared on the brand's own website in two weekly checks in a row, so one-off test pages do not sneak in. It counts as <strong>discontinued</strong> after it has been missing for two checks in a row. Entries stay here permanently.</p>
   </div>
 

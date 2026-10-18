@@ -103,7 +103,7 @@ function scooterCardHTML(s, opts={}){
   const {showCompare=true, extraClass=''} = opts;
   const score = s.score||0;
   const scoreColor = score>=8.5?'#16c964':score>=7.5?'#22c55e':score>=6.5?'#f59e0b':'#ef4444';
-  const badgeMap = {'popular':'🔥 Popular','top-rated':'⭐ Top Rated','new':'✨ New','trending':'📈 Trending','editor-pick':'🏆 Editor Pick'};
+  const badgeMap = {'popular':'🔥 Popular','top-rated':'⭐ Top Rated','new':'New','trending':'Trending','editor-pick':'Editor Pick'};
   const badgeLabel = s.badge ? (badgeMap[s.badge]||s.badge) : null;
 
   return `
@@ -238,7 +238,7 @@ function navHTML(active='home'){
     {id:'compare',label:'Compare',href:'/compare'},
     {id:'best',label:'Best For',href:'/best'},
     {id:'trending',label:'🔥 Trending',href:'/trending'},
-    {id:'launches',label:'🆕 Launches',href:'/launches'},
+    {id:'launches',label:'Launches',href:'/launches'},
     {id:'emi',label:'EMI Calc',href:'/emi'},
   ];
   return `<nav class="nav" role="navigation" aria-label="Main navigation">
@@ -371,7 +371,7 @@ function footerHTML(){
         <!-- Community -->
         <div class="footer-col">
           <h3>Community</h3>
-          <a href="/yellow-brother" class="footer-yb-link">🟡 Yellow Brother</a>
+          <a href="/yellow-brother" class="footer-yb-link">Yellow Brother</a>
           <a href="/trending">Brand Socials</a>
           <a href="/trending">YouTube Reviews</a>
           <a href="/trending">Read Before You Buy</a>
@@ -385,7 +385,7 @@ function footerHTML(){
           <span>Not affiliated with any EV manufacturer.</span>
           <a href="/terms" style="color:rgba(255,255,255,.6);font-size:12px">Terms</a>
           <a href="/privacy" style="color:rgba(255,255,255,.6);font-size:12px">Privacy</a>
-          <a href="/yellow-brother" style="color:var(--amber);font-weight:700;font-size:12px;text-decoration:none">🟡 Yellow Brother Blog</a>
+          <a href="/yellow-brother" style="color:var(--amber);font-weight:700;font-size:12px;text-decoration:none">Yellow Brother Blog</a>
         </div>
       </div>
     </div>

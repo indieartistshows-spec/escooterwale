@@ -2,7 +2,7 @@
  {
   "id": "mumbai",
   "name": "Mumbai",
-  "icon": "🌊",
+  "icon": "",
   "subsidy": "₹5,000",
   "charging": "Good",
   "state": "Maharashtra",
@@ -14,7 +14,7 @@
  {
   "id": "delhi",
   "name": "Delhi",
-  "icon": "🏛️",
+  "icon": "",
   "subsidy": "₹30,000",
   "charging": "Excellent",
   "state": "Delhi NCR",
@@ -25,7 +25,7 @@
  {
   "id": "bangalore",
   "name": "Bengaluru",
-  "icon": "🌿",
+  "icon": "",
   "subsidy": "₹10,000",
   "charging": "Excellent",
   "state": "Karnataka",
@@ -38,7 +38,7 @@
  {
   "id": "hyderabad",
   "name": "Hyderabad",
-  "icon": "🍊",
+  "icon": "",
   "subsidy": "₹5,000",
   "charging": "Good",
   "state": "Telangana",
@@ -51,7 +51,7 @@
  {
   "id": "chennai",
   "name": "Chennai",
-  "icon": "🌊",
+  "icon": "",
   "subsidy": "₹5,000",
   "charging": "Good",
   "state": "Tamil Nadu",
@@ -62,7 +62,7 @@
  {
   "id": "pune",
   "name": "Pune",
-  "icon": "🎓",
+  "icon": "",
   "subsidy": "₹5,000",
   "charging": "Good",
   "state": "Maharashtra",
@@ -73,7 +73,7 @@
  {
   "id": "ahmedabad",
   "name": "Ahmedabad",
-  "icon": "🪁",
+  "icon": "",
   "subsidy": "₹20,000",
   "charging": "Moderate",
   "state": "Gujarat",
@@ -84,7 +84,7 @@
  {
   "id": "kolkata",
   "name": "Kolkata",
-  "icon": "🎨",
+  "icon": "",
   "subsidy": "₹0",
   "charging": "Moderate",
   "state": "West Bengal",
@@ -95,7 +95,7 @@
  {
   "id": "jaipur",
   "name": "Jaipur",
-  "icon": "🏰",
+  "icon": "",
   "subsidy": "₹10,000",
   "charging": "Developing",
   "state": "Rajasthan",
@@ -106,7 +106,7 @@
  {
   "id": "lucknow",
   "name": "Lucknow",
-  "icon": "🌹",
+  "icon": "",
   "subsidy": "₹0",
   "charging": "Developing",
   "state": "Uttar Pradesh",
@@ -117,7 +117,7 @@
  {
   "id": "surat",
   "name": "Surat",
-  "icon": "💎",
+  "icon": "",
   "subsidy": "₹20,000",
   "charging": "Good",
   "state": "Gujarat",
@@ -128,7 +128,7 @@
  {
   "id": "chandigarh",
   "name": "Chandigarh",
-  "icon": "🌳",
+  "icon": "",
   "subsidy": "₹0",
   "charging": "Good",
   "state": "Punjab/Haryana",

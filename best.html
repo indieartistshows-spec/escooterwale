@@ -19,10 +19,10 @@
 <meta property="og:title" id="ogTitle" content="Best Electric Scooters India 2026"/>
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="styles.css?v=eddef5d5"/>
-<script src="data.js?v=1642e79d"></script>
+<script src="data.js?v=cfac69f4"></script>
 <script src="seo.js?v=5e2f83ba"></script>
 <script src="outbound.js?v=f73b042f"></script>
-<script src="components.js?v=4d652ab0"></script>
+<script src="components.js?v=29cc6b56"></script>
 <style>
 /* ── PAGE HERO ──────────────────────────────────────────── */
 .best-hero{background:var(--ink);padding:52px 0 40px;border-bottom:1px solid rgba(255,255,255,.07)}
@@ -194,7 +194,7 @@ const CATEGORIES = {
     subtitle:'For riders covering 20 to 80 km a day: enough real range, an overnight charge at home and a service centre you can reach.',
     seoTitle:'Best Electric Scooter for Daily Commute in India 2026 | EScooterwale',
     seoDescLead:'The electric scooters we would pick for a 20 to 80 km daily commute, ranked on real-world range, home charging time and service reach.',
-    icon:'🏙️',
+    icon:'',
     label:'Daily Commute',
     intro:`<p>For a daily commute three things decide it: <strong>real-world range</strong> (not the brochure figure), <strong>charging at home overnight</strong>, and <strong>a service centre close enough</strong> that a breakdown does not cost you a week. This list weighs all three.</p>`,
     picks:[
@@ -217,7 +217,7 @@ const CATEGORIES = {
     subtitle:'Full-speed, registered electric scooters with an ex-showroom price below ₹1,00,000. No low-speed models.',
     seoTitle:'Best Electric Scooter Under 1 Lakh in India 2026 | EScooterwale',
     seoDescLead:'Registered, full-speed electric scooters under ₹1 lakh ex-showroom, ranked on real range, build and service network.',
-    icon:'💰',
+    icon:'',
     label:'Under ₹1 Lakh',
     intro:`<p>You no longer have to buy a low-speed, unregistered scooter to stay under ₹1 lakh. Every pick here is a registered scooter with a proper warranty and a top speed of at least 65 km/h. If a price moves above ₹1 lakh, it drops off this list automatically.</p>`,
     picks:[
@@ -240,7 +240,7 @@ const CATEGORIES = {
     subtitle:'The busiest part of the market. These are the scooters we would shortlist with an ex-showroom budget of ₹1.5 lakh.',
     seoTitle:'Best Electric Scooter Under 1.5 Lakh in India 2026 | EScooterwale',
     seoDescLead:'Our shortlist of electric scooters under ₹1.5 lakh ex-showroom, ranked on real range, ride, service and value.',
-    icon:'🎯',
+    icon:'',
     label:'Under ₹1.5L',
     intro:`<p>Between ₹1 lakh and ₹1.5 lakh is where Ola, Ather, TVS, Bajaj and Hero Vida fight hardest. The right pick depends on what you value most: range, ride quality or service reach. If a price moves above ₹1.5 lakh, it drops off this list automatically.</p>`,
     picks:[
@@ -262,7 +262,7 @@ const CATEGORIES = {
     subtitle:'A wide seat for two, a boot that takes the shopping, and a service network you can rely on every day.',
     seoTitle:'Best Family Electric Scooter in India 2026: Big Boot, Comfy Seat | EScooterwale',
     seoDescLead:'Electric scooters that work for a family: big boot, wide seat for two and dependable service.',
-    icon:'👨‍👩‍👧',
+    icon:'',
     label:'Family Scooter',
     intro:`<p>A family scooter needs <strong>a big, usable boot</strong> for groceries, school bags and a helmet, <strong>a wide seat for two adults</strong>, and <strong>service you can trust</strong> because it gets used every single day. Speed and maximum range come second.</p>`,
     picks:[
@@ -306,7 +306,7 @@ const CATEGORIES = {
     subtitle:'When the nearest service centre matters more than the spec sheet. These brands reach furthest across India.',
     seoTitle:'Best Electric Scooter for Tier 2 Cities in India 2026 | EScooterwale',
     seoDescLead:'Electric scooters for Tier 2 and Tier 3 cities, ranked on how far the brand service network actually reaches.',
-    icon:'🗺️',
+    icon:'',
     label:'Tier-2 Cities',
     intro:`<p>The most common mistake in smaller cities is buying the scooter that reviews best in Bengaluru or Delhi. <strong>Service reach is the number one factor outside the metros</strong>. A long-range scooter with no service centre within 100 km is worse than a simpler one with a workshop down the road.</p>`,
     picks:[
@@ -403,12 +403,12 @@ function renderPage(catSlug) {
           <div class="ranked-name">${s.name}</div>
           <div class="ranked-price">${s.priceDisplay} <span style="font-size:13px;font-weight:500;color:var(--ink-3)">ex-showroom</span></div>
         </div>
-        <div class="ranked-why">📌 ${fillTok(pick.why, s)}</div>
+        <div class="ranked-why">${fillTok(pick.why, s)}</div>
         <div class="ranked-specs">
           <span class="rspec">🔋 ${s.realRange} real range</span>
           <span class="rspec">⚡ ${s.speed}</span>
-          <span class="rspec">📦 ${s.bootSpace} boot</span>
-          <span class="rspec">⏱ ${s.charging} charge</span>
+          <span class="rspec">${s.bootSpace} boot</span>
+          <span class="rspec">${s.charging} charge</span>
         </div>
         <div class="who-tag">
           <strong>Who it's for</strong>
@@ -430,7 +430,7 @@ function renderPage(catSlug) {
   const recB = SCOOTERS_DB.find(s => s.id === cat.finalRec.scooterB);
   document.getElementById('finalRec').innerHTML = `
     <div class="final-rec">
-      <h3>🏆 Our Final Recommendation</h3>
+      <h3>Our Final Recommendation</h3>
       <p>${cat.finalRec.text}</p>
       <div class="final-rec-row">
         ${recA ? `<a href="${recA.brandUrl}" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary btn-lg">${recA.brand} ${recA.name} ↗</button></a>` : ''}
@@ -445,7 +445,7 @@ function renderPage(catSlug) {
     .map(c => {
       const other = CATEGORIES[c];
       return `<a href="/best/${c}" class="more-cat-card">
-        <div class="mc-icon">${other.icon}</div>
+        ${other.icon?`<div class="mc-icon">${other.icon}</div>`:''}
         <div class="mc-title">${other.label}</div>
         <div class="mc-sub">Top ${Object.keys(CATEGORIES[c].picks||{}).length||5} picks for ${other.label.toLowerCase()}</div>
       </a>`;
@@ -460,7 +460,7 @@ document.getElementById('compareTrayMount').innerHTML = compareTrayHTML();
 // Build category nav
 document.getElementById('catNav').innerHTML = CAT_ORDER.map(c => {
   const cat = CATEGORIES[c];
-  return `<button class="cat-link" data-cat="${c}" onclick="switchCat('${c}')">${cat.icon} ${cat.label}</button>`;
+  return `<button class="cat-link" data-cat="${c}" onclick="switchCat('${c}')">${cat.icon?cat.icon+' ':''}${cat.label}</button>`;
 }).join('');
 
 function switchCat(slug) {

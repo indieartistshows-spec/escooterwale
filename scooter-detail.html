@@ -421,11 +421,11 @@
   </a>
 </div>
 
-<script src="data.js?v=1642e79d"></script>
+<script src="data.js?v=cfac69f4"></script>
 <script src="seo.js?v=5e2f83ba"></script>
 <script src="outbound.js?v=f73b042f"></script>
-<script src="trending-data.js?v=7cc1bd21"></script>
-<script src="components.js?v=4d652ab0"></script>
+<script src="trending-data.js?v=ffb9b7c0"></script>
+<script src="components.js?v=29cc6b56"></script>
 <script src="videos-db.js?v=f29ab906"></script>
 <script>
 document.getElementById('navMount').innerHTML = navHTML('listings');
@@ -596,19 +596,19 @@ function buildSpecTable(s){
   if(s.groundClearance) dim['Ground Clearance'] = s.groundClearance;
   if(s.seatHeight) dim['Seat Height'] = s.seatHeight;
   if(s.specs?.dimensions) Object.assign(dim, s.specs.dimensions);
-  if(Object.keys(dim).length) sections.push({title:'📐 Dimensions & Build', rows: dim});
+  if(Object.keys(dim).length) sections.push({title:'Dimensions & Build', rows: dim});
 
   // 4. Features & Tech (from specs if present)
   const feat = s.specs?.features || s.specs?.technology || s.specs?.['features & tech'] || s.specs?.connectivity;
-  if(feat && Object.keys(feat).length) sections.push({title:'📱 Features & Tech', rows: feat});
+  if(feat && Object.keys(feat).length) sections.push({title:'Features & Tech', rows: feat});
 
   // 5. Brakes & Safety
   const brakes = s.specs?.brakes || s.specs?.safety || s.specs?.['brakes & safety'];
-  if(brakes && Object.keys(brakes).length) sections.push({title:'🛑 Brakes & Safety', rows: brakes});
+  if(brakes && Object.keys(brakes).length) sections.push({title:'Brakes & Safety', rows: brakes});
 
   // 6. Suspension
   const susp = s.specs?.suspension;
-  if(susp && Object.keys(susp).length) sections.push({title:'🔧 Suspension', rows: susp});
+  if(susp && Object.keys(susp).length) sections.push({title:'Suspension', rows: susp});
 
   // 7. Any other spec groups
   const knownGroups = new Set(['performance','battery','dimensions','features','technology','features & tech','connectivity','brakes','safety','brakes & safety','suspension']);
@@ -647,8 +647,8 @@ function renderOwnerVoices(s) {
   const qOwner = encodeURIComponent(s.fullName + ' ownership review');
   const links = [
     ['▶', 'Owner reviews on YouTube', `https://www.youtube.com/results?search_query=${qOwner}`, 'video'],
-    ['💬', 'Owner threads on Reddit', `https://www.reddit.com/search/?q=${q}`, 'community'],
-    ['🏍️', 'Ownership reports on Team-BHP', `https://www.team-bhp.com/forum/search.php?do=process&query=${encodeURIComponent(s.fullName)}`, 'community']
+    ['', 'Owner threads on Reddit', `https://www.reddit.com/search/?q=${q}`, 'community'],
+    ['', 'Ownership reports on Team-BHP', `https://www.team-bhp.com/forum/search.php?do=process&query=${encodeURIComponent(s.fullName)}`, 'community']
   ];
   el.innerHTML = (vids.length ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:14px">${vids.map(v => `
       <a href="https://www.youtube.com/watch?v=${v.videoId}" target="_blank" rel="noopener" data-out="video" style="text-decoration:none;color:inherit">
@@ -698,7 +698,7 @@ function hydratePage(id){
   document.getElementById('dBrand').textContent=s.brand;
   document.getElementById('dName').textContent=s.name;
   document.getElementById('dRatingRow').innerHTML=`${renderStars(s.score/2)}<span style="font-weight:700;font-size:14px;margin-left:4px">${s.score}/10</span><span style="font-size:13px;color:var(--ink-3);margin-left:4px">ScootScore</span>`;
-  document.getElementById('dBadgeStrip').innerHTML=(s.discontinued?`<span class="badge badge-dark">Discontinued</span>`:'')+(s.score>=8.5?`<span class="badge badge-dark">🏆 Editor's Pick</span>`:'')+(s.subsidy&&s.subsidy.eligible?`<span class="badge badge-green">PM E-DRIVE eligible</span>`:`<span class="badge badge-amber">No PM E-DRIVE subsidy</span>`)+((s.tags||[]).includes('best-range')?`<span class="badge badge-amber">Long range</span>`:'');
+  document.getElementById('dBadgeStrip').innerHTML=(s.discontinued?`<span class="badge badge-dark">Discontinued</span>`:'')+(s.score>=8.5?`<span class="badge badge-dark">Editor's Pick</span>`:'')+(s.subsidy&&s.subsidy.eligible?`<span class="badge badge-green">PM E-DRIVE eligible</span>`:`<span class="badge badge-amber">No PM E-DRIVE subsidy</span>`)+((s.tags||[]).includes('best-range')?`<span class="badge badge-amber">Long range</span>`:'');
 
   // Variants
   document.getElementById('variantRow').innerHTML=(s.variants||[]).map((v,i)=>`<div class="variant-pill ${i===s.variants.length-1?'active':''}" onclick="selectVariant(this,'${v.price}','${v.priceDisplay}','${v.range}')">${v.name}<br><small style="font-weight:400;color:inherit;opacity:.8">${v.priceDisplay}</small></div>`).join('');
@@ -760,13 +760,13 @@ function hydratePage(id){
   // Metrics
   document.getElementById('dMetrics').innerHTML=`
     <div class="metric"><div class="metric-icon">🔋</div><div class="metric-val">${s.range}</div><div class="metric-label">Claimed range</div></div>
-    <div class="metric"><div class="metric-icon">📍</div><div class="metric-val">${s.realRange}</div><div class="metric-label">Real-world range</div></div>
-    <div class="metric"><div class="metric-icon">🏎️</div><div class="metric-val">${s.speed}</div><div class="metric-label">Top speed</div></div>
-    <div class="metric"><div class="metric-icon">⏱</div><div class="metric-val">${s.charging}</div><div class="metric-label">Fast charge</div></div>
-    <div class="metric"><div class="metric-icon">🧳</div><div class="metric-val">${s.bootSpace||'—'}</div><div class="metric-label">Boot space</div></div>
-    <div class="metric"><div class="metric-icon">⚖️</div><div class="metric-val">${s.weight||'—'}</div><div class="metric-label">Kerb weight</div></div>
+    <div class="metric"><div class="metric-val">${s.realRange}</div><div class="metric-label">Real-world range</div></div>
+    <div class="metric"><div class="metric-val">${s.speed}</div><div class="metric-label">Top speed</div></div>
+    <div class="metric"><div class="metric-val">${s.charging}</div><div class="metric-label">Fast charge</div></div>
+    <div class="metric"><div class="metric-val">${s.bootSpace||'—'}</div><div class="metric-label">Boot space</div></div>
+    <div class="metric"><div class="metric-val">${s.weight||'—'}</div><div class="metric-label">Kerb weight</div></div>
     <div class="metric"><div class="metric-icon">🔌</div><div class="metric-val">${s.battery||'—'}</div><div class="metric-label">Battery</div></div>
-    <div class="metric"><div class="metric-icon">🏛️</div><div class="metric-val">${s.subsidy&&s.subsidy.eligible?'₹'+s.subsidy.amount.toLocaleString('en-IN'):'None'}</div><div class="metric-label">PM E-DRIVE subsidy</div></div>`;
+    <div class="metric"><div class="metric-val">${s.subsidy&&s.subsidy.eligible?'₹'+s.subsidy.amount.toLocaleString('en-IN'):'None'}</div><div class="metric-label">PM E-DRIVE subsidy</div></div>`;
 
   // Best For / Avoid If — redesigned
   const bestItems = (s.bestFor||[]).map(i=>`<div class="dbox-item"><span class="dbox-item-dot"></span><span>${i}</span></div>`).join('');

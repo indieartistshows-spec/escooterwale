@@ -55,9 +55,9 @@ function page({ file, title, desc, canon, eyebrow, h1, standfirst, readTime, cru
       <h1>${h1}</h1>
       <p>${standfirst}</p>
       <div class="guide-meta">
-        <div class="guide-meta-item">✍️ EScooterwale Editorial</div>
-        <div class="guide-meta-item">📅 Verified ${VERIFIED}</div>
-        <div class="guide-meta-item">⏱ ${readTime}</div>
+        <div class="guide-meta-item">EScooterwale Editorial</div>
+        <div class="guide-meta-item">Verified ${VERIFIED}</div>
+        <div class="guide-meta-item">${readTime}</div>
       </div>
     </div>
   </div>
@@ -120,20 +120,20 @@ const faq = (path, qs) => ({
 const SIDEBAR_SUBSIDY = `
   <div class="sidebar-card">
     <h4>Subsidy guides</h4>
-    <a href="/guide-subsidy" class="toc-link">💰 EV subsidy 2026, full guide</a>
-    <a href="/guide-subsidy-deadlines" class="toc-link">⏳ Subsidy deadlines 2026</a>
-    <a href="/guide-subsidy-eligibility" class="toc-link">✅ Which scooters qualify</a>
-    <a href="/guide-subsidy-claim" class="toc-link">📝 How to claim, step by step</a>
+    <a href="/guide-subsidy" class="toc-link">EV subsidy 2026, full guide</a>
+    <a href="/guide-subsidy-deadlines" class="toc-link">Subsidy deadlines 2026</a>
+    <a href="/guide-subsidy-eligibility" class="toc-link">Which scooters qualify</a>
+    <a href="/guide-subsidy-claim" class="toc-link">How to claim, step by step</a>
   </div>
   <div class="sidebar-card">
     <h4>Other guides</h4>
-    <a href="/guide-real-range" class="toc-link">📊 Real range test results</a>
+    <a href="/guide-real-range" class="toc-link">Real range test results</a>
     <a href="/guide-battery-types" class="toc-link">🔋 LFP vs NMC battery</a>
-    <a href="/guide-service-network" class="toc-link">🛠️ Service network guide</a>
-    <a href="/electric-scooter-price" class="toc-link">💸 All 41 scooter prices</a>
+    <a href="/guide-service-network" class="toc-link">Service network guide</a>
+    <a href="/electric-scooter-price" class="toc-link">All 41 scooter prices</a>
   </div>
   <div class="sidebar-card" style="text-align:center">
-    <div style="font-size:28px;margin-bottom:8px">⚖️</div>
+    
     <h4 class="mb-8">Compare scooters</h4>
     <p style="font-size:13px;color:var(--ink-3);margin-bottom:12px">See which subsidised scooter gives the best value after discounts.</p>
     <a href="/compare"><button class="btn btn-primary btn-full">Compare now →</button></a>

@@ -20,10 +20,10 @@
 <meta property="og:description" id="ogDesc" content="Side-by-side EV scooter comparison with a clear winner verdict."/>
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="styles.css?v=eddef5d5"/>
-<script src="data.js?v=1642e79d"></script>
+<script src="data.js?v=cfac69f4"></script>
 <script src="seo.js?v=5e2f83ba"></script>
 <script src="outbound.js?v=f73b042f"></script>
-<script src="components.js?v=4d652ab0"></script>
+<script src="components.js?v=29cc6b56"></script>
 <script src="videos-db.js?v=f29ab906"></script>
 <style>
 .cmp-header{background:var(--ink);padding:40px 0 32px;background-image:url('https://images.unsplash.com/photo-1571333250630-f0230c320b6d?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;position:relative}
@@ -243,7 +243,7 @@ function getScores(id){ const s=SCOOTERS_DB.find(x=>x.id===id); return s?.scores
 function totalScore(id){ const sc=getScores(id); return +(Object.values(sc).reduce((a,b)=>a+b,0)/Object.keys(sc).length).toFixed(1); }
 
 const CMP_ROWS=[
-  {sec:'💰 Price & Value'},
+  {sec:'Price & Value'},
   {lbl:'Ex-showroom price',fA:s=>s.priceDisplay,fB:s=>s.priceDisplay,win:(a,b)=>a.price<b.price?'a':'b',note:(a,b)=>`₹${Math.abs(a.price-b.price).toLocaleString('en-IN')} cheaper`},
   {lbl:'EMI from',fA:s=>`₹${(s.emiFrom||0).toLocaleString('en-IN')}/mo`,fB:s=>`₹${(s.emiFrom||0).toLocaleString('en-IN')}/mo`},
   {sec:'🔋 Range & Charging'},
@@ -255,7 +255,7 @@ const CMP_ROWS=[
   {lbl:'Top speed',fA:s=>s.speed,fB:s=>s.speed,win:(a,b)=>parseInt(a.speed)>=parseInt(b.speed)?'a':'b'},
   {lbl:'Motor power',fA:s=>s.motor,fB:s=>s.motor},
   {lbl:'Torque',fA:s=>s.torque,fB:s=>s.torque},
-  {sec:'📦 Practicality'},
+  {sec:'Practicality'},
   {lbl:'Boot space',fA:s=>s.bootSpace,fB:s=>s.bootSpace,win:(a,b)=>parseInt(a.bootSpace)>parseInt(b.bootSpace)?'a':'b'},
   {lbl:'Kerb weight',fA:s=>s.weight,fB:s=>s.weight,win:(a,b)=>parseInt(a.weight)<parseInt(b.weight)?'a':'b',note:()=>'Lighter = better'},
   {lbl:'Ground clearance',fA:s=>s.groundClearance,fB:s=>s.groundClearance,win:(a,b)=>parseInt(a.groundClearance)>parseInt(b.groundClearance)?'a':'b'},
@@ -279,7 +279,7 @@ function buildCmp(a,b){
   let h='';
 
   h+=`<div class="winner-banner mb-24">
-    <div style="font-size:44px;line-height:1;flex-shrink:0">🏆</div>
+    
     <div style="flex:1">
       <div class="winner-label">Our recommendation</div>
       <div class="winner-name">${winner.brand} ${winner.name}</div>
@@ -292,8 +292,8 @@ function buildCmp(a,b){
   </div>`;
 
   h+=`<div class="quick-wins mb-24">
-    <div class="qw-card"><div class="qw-label">🏅 Best overall</div><div class="qw-winner">${winner.brand} ${winner.name}</div><div class="qw-sub">Higher total score</div></div>
-    <div class="qw-card"><div class="qw-label">💰 Best value</div><div class="qw-winner">${cheaperName}</div><div class="qw-sub">Lower ex-showroom price</div></div>
+    <div class="qw-card"><div class="qw-label">Best overall</div><div class="qw-winner">${winner.brand} ${winner.name}</div><div class="qw-sub">Higher total score</div></div>
+    <div class="qw-card"><div class="qw-label">Best value</div><div class="qw-winner">${cheaperName}</div><div class="qw-sub">Lower ex-showroom price</div></div>
     <div class="qw-card"><div class="qw-label">🔋 Best range</div><div class="qw-winner">${longerName}</div><div class="qw-sub">Higher claimed range</div></div>
   </div>`;
 
@@ -369,23 +369,23 @@ function buildCmp(a,b){
   h+=`<div><h3 style="font-size:20px;font-weight:800;margin-bottom:4px">Which should you actually buy?</h3><p style="font-size:14px;color:var(--ink-3);margin-bottom:16px">Straight talk. No hedging.</p>
   <div class="verdict-cards">
     <div class="verdict-card"><div class="eyebrow mb-8">${a.brand}</div><h4>${a.name}</h4>
-      <div class="verdict-bullet"><span class="vc-icon">✅</span><span><strong>Buy if:</strong> ${vA.choose}</span></div>
-      <div class="verdict-bullet"><span class="vc-icon">❌</span><span><strong>Avoid if:</strong> ${vA.skip}</span></div>
+      <div class="verdict-bullet"><span><strong>Buy if:</strong> ${vA.choose}</span></div>
+      <div class="verdict-bullet"><span><strong>Avoid if:</strong> ${vA.skip}</span></div>
       <a href="${a.brandUrl}" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary btn-full mt-12">Buy on ${a.brand} ↗</button></a>
     </div>
     <div class="verdict-card"><div class="eyebrow mb-8">${b.brand}</div><h4>${b.name}</h4>
-      <div class="verdict-bullet"><span class="vc-icon">✅</span><span><strong>Buy if:</strong> ${vB.choose}</span></div>
-      <div class="verdict-bullet"><span class="vc-icon">❌</span><span><strong>Avoid if:</strong> ${vB.skip}</span></div>
+      <div class="verdict-bullet"><span><strong>Buy if:</strong> ${vB.choose}</span></div>
+      <div class="verdict-bullet"><span><strong>Avoid if:</strong> ${vB.skip}</span></div>
       <a href="${b.brandUrl}" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary btn-full mt-12">Buy on ${b.brand} ↗</button></a>
     </div>
   </div></div>`;
 
   h+=`<div class="not-for-section">
-    <h3 style="font-size:17px;font-weight:800;margin-bottom:4px">❌ Who should NOT buy each</h3>
+    <h3 style="font-size:17px;font-weight:800;margin-bottom:4px">Who should NOT buy each</h3>
     <p style="font-size:13px;color:var(--ink-3);margin-bottom:4px">Equally important as who should buy.</p>
     <div class="not-grid">
-      <div class="not-card"><h5>🚫 Don't buy ${a.name} if…</h5>${(a.avoidIf||[]).map(x=>`<div class="not-item">${x}</div>`).join('')}</div>
-      <div class="not-card"><h5>🚫 Don't buy ${b.name} if…</h5>${(b.avoidIf||[]).map(x=>`<div class="not-item">${x}</div>`).join('')}</div>
+      <div class="not-card"><h5>Don't buy ${a.name} if…</h5>${(a.avoidIf||[]).map(x=>`<div class="not-item">${x}</div>`).join('')}</div>
+      <div class="not-card"><h5>Don't buy ${b.name} if…</h5>${(b.avoidIf||[]).map(x=>`<div class="not-item">${x}</div>`).join('')}</div>
     </div>
   </div>`;
 

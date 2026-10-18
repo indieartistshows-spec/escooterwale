@@ -62,12 +62,12 @@ page({
   ]},
   body: `
   <div class="callout-box green">
-    <h4>💡 The short answer</h4>
+    <h4>The short answer</h4>
     <p style="margin:0;font-size:15px">The central <strong>PM E-DRIVE scheme runs to 31 March 2028</strong>, so there is no rush on the central ₹5,000. The dates that matter are at state level, soonest first: <strong>${shortList}</strong>.</p>
   </div>
 
   <div class="callout-box">
-    <h4>🆕 What changed recently</h4>
+    <h4>What changed recently</h4>
     <ul style="margin:0 0 0 16px;font-size:14px">${changeLog}</ul>
   </div>
 
@@ -99,7 +99,7 @@ ${deadlineRows}
   </table>
 
   <div class="callout-box">
-    <h4>⏳ Delhi tapers, so the real deadline is sooner than 2030</h4>
+    <h4>Delhi tapers, so the real deadline is sooner than 2030</h4>
     <p style="margin:0 0 8px;font-size:14px">Delhi's EV Policy 2026 was notified on 1 July 2026 and runs to March 2030, but the two-wheeler incentive drops every year:</p>
     <ul style="margin:0 0 0 16px;font-size:14px">
       <li><strong>Year 1</strong> (to roughly 30 June 2027): ₹10,000/kWh, capped at ₹30,000</li>
@@ -142,7 +142,7 @@ ${passedRows}
   <p>On the central scheme, no. The rate has already halved once and there is no sign of an increase. In Delhi, waiting costs you money because the incentive tapers each year. The only reason to wait is if your state is about to announce a new policy, which currently applies to Uttarakhand, Goa and Assam.</p>
 
   <div class="callout-box">
-    <h4>📌 How we check this page</h4>
+    <h4>How we check this page</h4>
     <p style="margin:0 0 8px;font-size:14px">We re-check this page every week against the PM E-DRIVE portal, Ministry of Heavy Industries and PIB releases, state transport department notifications and trade press. A change goes on the page only when an official source or a named report backs it. <strong>Last checked ${VERIFIED}.</strong></p>
     <ul style="margin:0 0 0 16px;font-size:13px">${srcLinks}</ul>
   </div>
@@ -159,7 +159,7 @@ ${passedRows}
   </div>`,
   sidebar: `
   <div class="sidebar-card" style="background:var(--ink);border-color:rgba(22,166,99,.2)">
-    <h4 style="color:#fff">⏳ Next deadlines</h4>
+    <h4 style="color:#fff">Next deadlines</h4>
     ${next.map((x, i) => `${i ? '<div style="border-top:1px solid rgba(255,255,255,.1);margin:14px 0 12px"></div>' : ''}
     <div style="font-size:${i ? 20 : 26}px;font-weight:${i ? 800 : 900};color:#16c964;font-family:var(--f-head);line-height:1.1;margin:6px 0 4px">${fmtD(x.s.deadline, x.s.deadlineApprox)}</div>
     <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.5">${x.s.name}: ${x.s.deadlineWhat.split('.')[0]}.</div>`).join('')}
@@ -209,7 +209,7 @@ page({
   ]},
   body: `
   <div class="callout-box green">
-    <h4>💡 The short answer</h4>
+    <h4>The short answer</h4>
     <p style="margin:0;font-size:15px">PM E-DRIVE pays <strong>₹2,500 per kWh, capped at ₹5,000</strong>, only on scooters with an ex-factory price at or below <strong>₹1.5 lakh</strong>. Because the cap is reached at a 2 kWh battery, <strong>${full.length} of our ${SCOOTERS_DB.length} models receive exactly ₹5,000</strong>, ${partial.length} receive less because their packs are small, and <strong>${ineligible.length} receive nothing</strong> because they are too expensive.</p>
   </div>
 
@@ -242,7 +242,7 @@ ${partial.map(r => `      <tr><td><a href="/scooters/${r.s.id}">${r.s.brand} ${r
   </table>
 
   <div class="callout-box">
-    <h4>🧮 Why battery size mostly does not matter</h4>
+    <h4>Why battery size mostly does not matter</h4>
     <p style="margin:0;font-size:14px">At ₹2,500 per kWh, a 2 kWh battery already produces ₹5,000, which is the cap. Every scooter above 2 kWh therefore receives the identical ₹5,000. A 5.2 kWh Ola S1 Pro+ would receive the same as a 2 kWh Ola S1 X, if the Pro+ were eligible at all. The per-kWh framing that dealers and manufacturers use makes the scheme sound more generous on large batteries than it is.</p>
   </div>
 
@@ -256,7 +256,7 @@ ${eligibilityRows}
   </table>
 
   <div class="callout-box">
-    <h4>⚠️ How we calculate ex-factory, and why it is an estimate</h4>
+    <h4>How we calculate ex-factory, and why it is an estimate</h4>
     <p style="margin:0;font-size:14px">The ₹1.5 lakh eligibility test uses <strong>ex-factory</strong> price, which manufacturers do not publish. We derive it from ex-showroom price by removing the 5% GST that applies to electric vehicles. Real ex-factory also excludes dealer margin, so true figures are a little lower than ours and the models we show near the line may in fact clear it comfortably. Treat this table as a strong guide, and confirm the ex-factory figure on your invoice before assuming a subsidy. Where a model's status is genuinely borderline, ask the dealer to show you its Ministry of Heavy Industries empanelment.</p>
   </div>
 
@@ -296,7 +296,7 @@ ${eligibilityRows}
   </div>`,
   sidebar: `
   <div class="sidebar-card" style="background:var(--ink);border-color:rgba(22,166,99,.2)">
-    <h4 style="color:#fff">📊 At a glance</h4>
+    <h4 style="color:#fff">At a glance</h4>
     <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">
       <span style="font-size:13px;color:rgba(255,255,255,.6)">Models checked</span><strong style="color:#fff">${SCOOTERS_DB.length}</strong></div>
     <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">
@@ -360,7 +360,7 @@ page({
   ]},
   body: `
   <div class="callout-box green">
-    <h4>💡 The short answer</h4>
+    <h4>The short answer</h4>
     <p style="margin:0;font-size:15px">You do <strong>not</strong> apply for the central PM E-DRIVE subsidy. The dealer applies it and it appears as a deduction on your invoice. What you do have to watch is the <strong>state</strong> subsidy, where Delhi gives you <strong>30 days from RC generation</strong> to apply and Bihar runs its own portal. That is where buyers lose money.</p>
   </div>
 
@@ -430,7 +430,7 @@ page({
   </table>
 
   <div class="callout-box">
-    <h4>🔧 Delhi scrappage: get the certificate first</h4>
+    <h4>Delhi scrappage: get the certificate first</h4>
     <p style="margin:0;font-size:14px">Delhi's ₹10,000 scrappage bonus requires you to trade in a Delhi-registered BS-IV or older two-wheeler and buy the new EV <strong>within six months of the Certificate of Deposit being issued</strong>. Get the certificate before you buy, not after. Buying first and scrapping later does not work.</p>
   </div>
 
@@ -555,7 +555,7 @@ page({
   ]},
   body: `
   <div class="callout-box green">
-    <h4>💡 The short answer</h4>
+    <h4>The short answer</h4>
     <p style="margin:0;font-size:15px">Electric scooters in India run from <strong>${inr(byPrice[0].price)}</strong> to <strong>${inr(byPrice[byPrice.length-1].price)}</strong> ex-showroom. The mainstream band is ₹90,000 to ₹1.5 lakh. On-road adds roughly 8 to 10%, less than for petrol scooters because registration fees are waived nationwide and many states also waive road tax. Most eligible scooters get <strong>₹5,000 off</strong> via PM E-DRIVE.</p>
   </div>
 
@@ -579,7 +579,7 @@ ${band('₹1.25 lakh to ₹1.5 lakh', 125000, 150000)}
 ${band('Above ₹1.5 lakh', 150000, 99999999)}
 
   <div class="callout-box">
-    <h4>💸 The price you pay is not the price advertised</h4>
+    <h4>The price you pay is not the price advertised</h4>
     <p style="margin:0;font-size:14px">Three things move the number between the advertisement and your invoice. <strong>The central subsidy</strong> takes ₹5,000 off most eligible scooters at the point of sale. <strong>State subsidies</strong> can take up to ₹30,000 more off in Delhi, ₹10,000 in Maharashtra, Madhya Pradesh and Bihar, and nothing at all in most other states. <strong>Road tax</strong> is waived in most states, which is why the on-road gap is smaller than for petrol. Our <a href="/guide-subsidy">subsidy guide</a> has the verified state-by-state position.</p>
   </div>
 
@@ -609,7 +609,7 @@ ${band('Above ₹1.5 lakh', 150000, 99999999)}
   </div>`,
   sidebar: `
   <div class="sidebar-card" style="background:var(--ink);border-color:rgba(22,166,99,.2)">
-    <h4 style="color:#fff">💸 Price range</h4>
+    <h4 style="color:#fff">Price range</h4>
     <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">
       <span style="font-size:13px;color:rgba(255,255,255,.6)">Cheapest</span><strong style="color:#16c964">${inr(byPrice[0].price)}</strong></div>
     <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">
@@ -619,10 +619,10 @@ ${band('Above ₹1.5 lakh', 150000, 99999999)}
   </div>
   <div class="sidebar-card">
     <h4>Filter by budget</h4>
-    <a href="/listings?tag=under-1-lakh" class="toc-link">💰 Under ₹1 lakh</a>
-    <a href="/listings?tag=under-1-5l" class="toc-link">💰 Under ₹1.5 lakh</a>
+    <a href="/listings?tag=under-1-lakh" class="toc-link">Under ₹1 lakh</a>
+    <a href="/listings?tag=under-1-5l" class="toc-link">Under ₹1.5 lakh</a>
     <a href="/best?cat=best-range" class="toc-link">🔋 Best range</a>
-    <a href="/best?cat=daily-commute" class="toc-link">🛵 Best for commuting</a>
+    <a href="/best?cat=daily-commute" class="toc-link">Best for commuting</a>
   </div>
   ${SIDEBAR_SUBSIDY}`
 });
@@ -683,7 +683,7 @@ page({
   ]},
   body: `
   <div class="callout-box green">
-    <h4>💡 The short answer</h4>
+    <h4>The short answer</h4>
     <p style="margin:0;font-size:15px">Of the ${SCOOTERS_DB.length} scooters we track, <strong>${nmc.length} use NMC</strong>, <strong>${lfp.length} use LFP</strong>, ${mixed.length} may be either depending on supply, and <strong>${undisclosed.length} come from brands that do not publish the chemistry at all</strong>. LFP handles Indian heat better and lasts more cycles. NMC packs more range into the same space. Ampere and BGauss are the LFP brands. Ola, Ather, TVS, Okinawa and Bounce are NMC.</p>
   </div>
 
@@ -745,7 +745,7 @@ ${chemRows}
   <p>LFP, other things being equal. It degrades more slowly at high ambient temperatures and tolerates more charge cycles. Other things are rarely equal though, so read the warranty as well as the chemistry.</p>
 
   <div class="callout-box">
-    <h4>📌 How we verify this page</h4>
+    <h4>How we verify this page</h4>
     <p style="margin:0;font-size:14px">Chemistry is taken from manufacturer specification sheets where published, and from Autocar India, Autocar Professional, EVreporter or Rushlane where the manufacturer is silent but credible technical coverage exists. Where neither is available we print "Not published" rather than inferring. Okinawa's NMC entry is a brand-level statement rather than a per-model spec line, and TVS's NMC confirmation comes from TVS Motor's own FAQ. <strong>Last verified ${VERIFIED}.</strong></p>
   </div>
 
@@ -776,12 +776,12 @@ ${chemRows}
   <div class="sidebar-card">
     <h4>Battery guides</h4>
     <a href="/guide-battery-types" class="toc-link">🔋 LFP vs NMC explained</a>
-    <a href="/guide-real-range" class="toc-link">📊 Real range test results</a>
-    <a href="/guide-service-network" class="toc-link">🛠️ Service network guide</a>
-    <a href="/electric-scooter-price" class="toc-link">💸 All ${SCOOTERS_DB.length} scooter prices</a>
+    <a href="/guide-real-range" class="toc-link">Real range test results</a>
+    <a href="/guide-service-network" class="toc-link">Service network guide</a>
+    <a href="/electric-scooter-price" class="toc-link">All ${SCOOTERS_DB.length} scooter prices</a>
   </div>
   <div class="sidebar-card" style="text-align:center">
-    <div style="font-size:28px;margin-bottom:8px">⚖️</div>
+    
     <h4 class="mb-8">Compare scooters</h4>
     <p style="font-size:13px;color:var(--ink-3);margin-bottom:12px">Put any two head to head on battery, range and price.</p>
     <a href="/compare"><button class="btn btn-primary btn-full">Compare now →</button></a>

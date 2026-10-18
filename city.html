@@ -88,7 +88,7 @@
 <div>
   <!-- SUBSIDY CARD -->
   <div class="subsidy-card">
-    <div class="eyebrow" style="color:var(--g-dim);margin-bottom:6px">🏛️ Government incentives</div>
+    <div class="eyebrow" style="color:var(--g-dim);margin-bottom:6px">Government incentives</div>
     <h3 id="subsidyTitle">EV subsidies in Maharashtra (Mumbai)</h3>
     <div id="subsidyRows"></div>
     <p style="font-size:12px;color:var(--g-dim);margin-top:12px;opacity:.7" id="subsidyNote">The central subsidy is taken off the price at the dealer. State cash subsidies are usually paid later by bank transfer.</p>
@@ -123,7 +123,7 @@
   <div style="margin-top:28px">
     <div class="sec-hd"><div><div class="eyebrow">Dealers & charging</div><h2 class="mt-8" id="dealersTitle">EV dealers in Mumbai</h2></div></div>
     <div class="map-placeholder">
-      <div style="font-size:48px">🗺️</div>
+      
       <div style="font-size:15px;font-weight:700;color:var(--ink-2)" id="mapTitle">Dealers and chargers near you</div>
       <p style="font-size:13px;color:var(--ink-3);text-align:center;max-width:280px" id="mapDesc">See every electric scooter showroom and public charger on the map, or use each brand's own dealer finder below.</p>
       <a id="mapLink" href="https://www.google.com/maps/search/electric+scooter+dealer+mumbai" target="_blank" rel="noopener"><button class="btn btn-primary">Open in Google Maps ↗</button></a>
@@ -156,10 +156,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="data.js?v=1642e79d"></script>
+<script src="data.js?v=cfac69f4"></script>
 <script src="seo.js?v=5e2f83ba"></script>
 <script src="outbound.js?v=f73b042f"></script>
-<script src="components.js?v=4d652ab0"></script>
+<script src="components.js?v=29cc6b56"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -189,7 +189,7 @@ function roadTaxLabel(st){
 }
 const fmtDate=d=>new Date(d).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
 
-document.getElementById('citySelector').innerHTML=CITIES_DB.map(c=>`<a class="city-sel-btn" href="/cities/${c.id}" data-city="${c.id}">${c.icon} ${c.name}</a>`).join('');
+document.getElementById('citySelector').innerHTML=CITIES_DB.map(c=>`<a class="city-sel-btn" href="/cities/${c.id}" data-city="${c.id}">${c.icon?c.icon+' ':''}${c.name}</a>`).join('');
 
 function loadCity(cityId){
   const c=CITIES_DB.find(x=>x.id===cityId)||CITIES_DB[0];
@@ -278,9 +278,9 @@ function loadCity(cityId){
   document.getElementById('cityNameInline').textContent=c.name;
   document.getElementById('runningCosts').innerHTML=`
     <div style="display:flex;flex-direction:column;gap:6px">
-      <div class="trust-item"><span class="trust-icon">⛽</span><span style="font-size:13px">Monthly fuel savings: <strong>${inrC(save)}</strong></span></div>
-      <div class="trust-item"><span class="trust-icon">📅</span><span style="font-size:13px">Annual savings: <strong>${inrC(save*12)}</strong></span></div>
-      <div class="trust-item"><span class="trust-icon">⏱</span><span style="font-size:13px">Five-year savings: <strong>${inrC(save*60)}</strong></span></div>
+      <div class="trust-item"><span style="font-size:13px">Monthly fuel savings: <strong>${inrC(save)}</strong></span></div>
+      <div class="trust-item"><span style="font-size:13px">Annual savings: <strong>${inrC(save*12)}</strong></span></div>
+      <div class="trust-item"><span style="font-size:13px">Five-year savings: <strong>${inrC(save*60)}</strong></span></div>
       <div style="font-size:11px;color:var(--ink-3);margin-top:4px">Assumes ${RUN.kmPerDay} km a day, petrol at ₹${RUN.petrolPerL}/L in a ${RUN.petrolKmPerL} km/L scooter, and home charging at ₹${RUN.tariff}/unit.</div>
     </div>`;
 

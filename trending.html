@@ -20,11 +20,11 @@
 <meta property="og:description" content="YouTube reviews, Reddit threads and brand news, added every week."/>
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="styles.css?v=eddef5d5"/>
-<script src="data.js?v=1642e79d"></script>
+<script src="data.js?v=cfac69f4"></script>
 <script src="seo.js?v=5e2f83ba"></script>
 <script src="outbound.js?v=f73b042f"></script>
-<script src="trending-data.js?v=7cc1bd21"></script>
-<script src="components.js?v=4d652ab0"></script>
+<script src="trending-data.js?v=ffb9b7c0"></script>
+<script src="components.js?v=29cc6b56"></script>
 <script src="videos-db.js?v=f29ab906"></script>
 <style>
 /* ── PAGE HERO ──────────────────────────────────────────── */
@@ -143,7 +143,7 @@
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .reddit-meta{display:flex;align-items:center;gap:14px;font-size:12px;color:var(--ink-4)}
 .reddit-sub{color:#c0392b;font-weight:600}
-.reddit-comments::before{content:'💬 '}
+.reddit-comments::before{content:''}
 .reddit-hot{
   background:#fff3e0;color:#e65100;border:1px solid #ffcc80;
   font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;
@@ -284,8 +284,8 @@
     <!-- Tab Switcher -->
     <div class="tab-row" id="tabRow">
       <button class="tab-btn active" onclick="switchTab('youtube',this)" data-label="▶ YouTube Reviews" data-short="▶ YouTube">▶ YouTube Reviews</button>
-      <button class="tab-btn" onclick="switchTab('reddit',this)" data-label="📖 Read Before You Buy" data-short="📖 Read First">📖 Read Before You Buy</button>
-      <button class="tab-btn" onclick="switchTab('social',this)" data-label="📸 Brand Socials" data-short="📸 Socials">📸 Brand Socials</button>
+      <button class="tab-btn" onclick="switchTab('reddit',this)" data-label="Read Before You Buy" data-short="Read First">Read Before You Buy</button>
+      <button class="tab-btn" onclick="switchTab('social',this)" data-label="Brand Socials" data-short="Socials">Brand Socials</button>
     </div>
 
     <!-- ══ YOUTUBE TAB ══════════════════════════════════════ -->
@@ -474,7 +474,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — BikeDekho",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.bikedekho.com/electric-scooters",
-    _icon:"🏍️", _color:"#ef4444"
+    _icon:"", _color:"#ef4444"
   },
   {
     id:"r2", sub:"BikeWale", flair:"Review Site", hot:true,
@@ -482,7 +482,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — BikeWale",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.bikewale.com/electric-scooters/",
-    _icon:"🛵", _color:"#f97316"
+    _icon:"", _color:"#f97316"
   },
   {
     id:"r3", sub:"ZigWheels", flair:"Review Site", hot:true,
@@ -498,7 +498,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Tata AIG",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.tataaig.com/knowledge-center/two-wheeler-insurance/top-electric-scooters-in-india",
-    _icon:"🛡️", _color:"#16a663"
+    _icon:"", _color:"#16a663"
   },
   {
     id:"r5", sub:"Bajaj Finserv", flair:"Guide", hot:true,
@@ -506,7 +506,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Bajaj Finserv",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.bajajfinserv.in/top-10-electric-scooters",
-    _icon:"💰", _color:"#16a663"
+    _icon:"", _color:"#16a663"
   },
   {
     id:"r6", sub:"OLX Blog", flair:"Guide", hot:false,
@@ -514,7 +514,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — OLX Blog",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.olx.in/blog/bikes/ev-scooter-brands-in-india/",
-    _icon:"🛒", _color:"#f59e0b"
+    _icon:"", _color:"#f59e0b"
   },
   {
     id:"r7", sub:"DriveSpark", flair:"News", hot:true,
@@ -522,7 +522,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — DriveSpark",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.drivespark.com/two-wheelers/2025/best-electric-scooters-in-india-in-2025-budget-performance-premium-family-segment-080080.html",
-    _icon:"📡", _color:"#0ea5e9"
+    _icon:"", _color:"#0ea5e9"
   },
   {
     id:"r8", sub:"BikeAdvice", flair:"Guide", hot:true,
@@ -530,7 +530,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — BikeAdvice",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://bikeadvice.in/top-5-electric-scooters-launched-in-2025-in-india/",
-    _icon:"💡", _color:"#8b5cf6"
+    _icon:"", _color:"#8b5cf6"
   },
   {
     id:"r9", sub:"Gyroor", flair:"Guide", hot:false,
@@ -538,7 +538,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Gyroor",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://gyroorboard.com/blogs/learn-with-gyroor/best-electric-scooters-india-2025-comparison-top-picks-and-buying-guide",
-    _icon:"📋", _color:"#6366f1"
+    _icon:"", _color:"#6366f1"
   },
   {
     id:"r10", sub:"ErideHero", flair:"Guide", hot:false,
@@ -554,7 +554,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — BikeDekho",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.bikedekho.com/compare-scooters",
-    _icon:"🏍️", _color:"#ef4444"
+    _icon:"", _color:"#ef4444"
   },
   {
     id:"r12", sub:"BikeWale", flair:"Review Site", hot:false,
@@ -562,7 +562,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — BikeWale",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.bikewale.com/compare-bikes/",
-    _icon:"🛵", _color:"#f97316"
+    _icon:"", _color:"#f97316"
   },
   {
     id:"r13", sub:"ZigWheels", flair:"Review Site", hot:false,
@@ -578,7 +578,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — CarandBike",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.carandbike.com/compare-bikes",
-    _icon:"🚗", _color:"#64748b"
+    _icon:"", _color:"#64748b"
   },
   {
     id:"r15", sub:"Autocar India", flair:"Expert Review", hot:true,
@@ -586,7 +586,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Autocar India",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.autocarindia.com/bike-reviews",
-    _icon:"📰", _color:"#2563eb"
+    _icon:"", _color:"#2563eb"
   },
   {
     id:"r16", sub:"YouTube", flair:"Video", hot:true,
@@ -618,7 +618,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reddit (r/indianbikes)",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reddit.com/r/indianbikes/comments/1hjs42r/which_ev_scooter_to_buy_in_india/",
-    _icon:"💬", _color:"#ff4500"
+    _icon:"", _color:"#ff4500"
   },
   {
     id:"r20", sub:"Reddit (r/indianbikes)", flair:"Community", hot:true,
@@ -626,7 +626,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reddit (r/indianbikes)",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reddit.com/r/indianbikes/comments/1nqzaoe/guide_me_for_buying_the_best_scooter_performance/",
-    _icon:"💬", _color:"#ff4500"
+    _icon:"", _color:"#ff4500"
   },
   {
     id:"r21", sub:"Reddit", flair:"Community", hot:false,
@@ -634,7 +634,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reddit",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reddit.com/r/electricvehicles/",
-    _icon:"💬", _color:"#ff4500"
+    _icon:"", _color:"#ff4500"
   },
   {
     id:"r22", sub:"Reddit", flair:"Community", hot:false,
@@ -642,7 +642,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reddit",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reddit.com/r/ElectricScooters/",
-    _icon:"💬", _color:"#ff4500"
+    _icon:"", _color:"#ff4500"
   },
   {
     id:"r23", sub:"Reddit", flair:"Community", hot:false,
@@ -650,7 +650,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reddit",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reddit.com/r/india/search/?q=ev%20scooter",
-    _icon:"💬", _color:"#ff4500"
+    _icon:"", _color:"#ff4500"
   },
   {
     id:"r24", sub:"Reddit", flair:"Community", hot:false,
@@ -658,7 +658,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reddit",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reddit.com/r/CarsIndia/",
-    _icon:"💬", _color:"#ff4500"
+    _icon:"", _color:"#ff4500"
   },
   {
     id:"r25", sub:"Reddit", flair:"Community", hot:false,
@@ -666,7 +666,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reddit",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reddit.com/search/?q=ola%20s1%20pro%20review",
-    _icon:"💬", _color:"#ff4500"
+    _icon:"", _color:"#ff4500"
   },
   {
     id:"r26", sub:"Reddit", flair:"Community", hot:false,
@@ -674,7 +674,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reddit",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reddit.com/search/?q=ather%20450x%20review",
-    _icon:"💬", _color:"#ff4500"
+    _icon:"", _color:"#ff4500"
   },
   {
     id:"r27", sub:"Reddit", flair:"Community", hot:false,
@@ -682,7 +682,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reddit",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reddit.com/search/?q=tvs%20iqube%20review",
-    _icon:"💬", _color:"#ff4500"
+    _icon:"", _color:"#ff4500"
   },
   {
     id:"r28", sub:"Facebook", flair:"Community", hot:false,
@@ -690,7 +690,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Facebook",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.facebook.com/groups/662724451304068/posts/1788073718769130/",
-    _icon:"👥", _color:"#1877f2"
+    _icon:"", _color:"#1877f2"
   },
   {
     id:"r29", sub:"Team-BHP", flair:"Community", hot:true,
@@ -698,7 +698,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Team-BHP",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.team-bhp.com/forum/motorbikes/",
-    _icon:"🏁", _color:"#c0392b"
+    _icon:"", _color:"#c0392b"
   },
   {
     id:"r30", sub:"Quora", flair:"Community", hot:false,
@@ -706,7 +706,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Quora",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.quora.com/Which-electric-scooter-is-best-in-India",
-    _icon:"❓", _color:"#b92b27"
+    _icon:"", _color:"#b92b27"
   },
   {
     id:"r31", sub:"Quora", flair:"Community", hot:false,
@@ -714,7 +714,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Quora",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.quora.com/Is-Ola-S1-Pro-worth-buying",
-    _icon:"❓", _color:"#b92b27"
+    _icon:"", _color:"#b92b27"
   },
   {
     id:"r32", sub:"Quora", flair:"Community", hot:false,
@@ -722,7 +722,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Quora",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.quora.com/Ather-450X-vs-Ola-S1-Pro",
-    _icon:"❓", _color:"#b92b27"
+    _icon:"", _color:"#b92b27"
   },
   {
     id:"r33", sub:"Facebook", flair:"Community", hot:false,
@@ -730,7 +730,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Facebook",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.facebook.com/groups/electricvehiclesindia",
-    _icon:"👥", _color:"#1877f2"
+    _icon:"", _color:"#1877f2"
   },
   {
     id:"r34", sub:"Facebook", flair:"Community", hot:false,
@@ -738,7 +738,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Facebook",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.facebook.com/groups/evownersindia",
-    _icon:"👥", _color:"#1877f2"
+    _icon:"", _color:"#1877f2"
   },
   {
     id:"r35", sub:"Car and Driver", flair:"Expert Review", hot:false,
@@ -746,7 +746,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Car and Driver",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.caranddriver.com/car-accessories/g62530668/best-electric-scooters-tested/",
-    _icon:"🏎️", _color:"#374151"
+    _icon:"", _color:"#374151"
   },
   {
     id:"r36", sub:"Autocar India", flair:"Expert Review", hot:false,
@@ -754,7 +754,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Autocar India",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.autocarindia.com/bike-reviews",
-    _icon:"📰", _color:"#2563eb"
+    _icon:"", _color:"#2563eb"
   },
   {
     id:"r37", sub:"Overdrive", flair:"Expert Review", hot:false,
@@ -762,7 +762,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Overdrive",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.overdrive.in/reviews/",
-    _icon:"🏁", _color:"#7c3aed"
+    _icon:"", _color:"#7c3aed"
   },
   {
     id:"r38", sub:"ZigWheels", flair:"Review Site", hot:false,
@@ -778,7 +778,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — BikeDekho",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.bikedekho.com/reviews",
-    _icon:"🏍️", _color:"#ef4444"
+    _icon:"", _color:"#ef4444"
   },
   {
     id:"r40", sub:"BikeWale", flair:"Review Site", hot:false,
@@ -786,7 +786,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — BikeWale",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.bikewale.com/reviews/",
-    _icon:"🛵", _color:"#f97316"
+    _icon:"", _color:"#f97316"
   },
   {
     id:"r41", sub:"Times of India", flair:"News", hot:false,
@@ -794,7 +794,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Times of India",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://timesofindia.indiatimes.com/auto",
-    _icon:"📰", _color:"#dc2626"
+    _icon:"", _color:"#dc2626"
   },
   {
     id:"r42", sub:"Reuters", flair:"News", hot:false,
@@ -802,7 +802,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Reuters",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.reuters.com/business/autos-transportation/",
-    _icon:"📡", _color:"#f59e0b"
+    _icon:"", _color:"#f59e0b"
   },
   {
     id:"r43", sub:"Economic Times", flair:"News", hot:false,
@@ -810,7 +810,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Economic Times",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://economictimes.indiatimes.com/industry/auto",
-    _icon:"📈", _color:"#1e40af"
+    _icon:"", _color:"#1e40af"
   },
   {
     id:"r44", sub:"DriveSpark", flair:"News", hot:false,
@@ -818,7 +818,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — DriveSpark",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.drivespark.com/",
-    _icon:"📡", _color:"#0ea5e9"
+    _icon:"", _color:"#0ea5e9"
   },
   {
     id:"r45", sub:"Financial Express", flair:"News", hot:false,
@@ -826,7 +826,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Financial Express",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.financialexpress.com/auto/",
-    _icon:"📊", _color:"#0f766e"
+    _icon:"", _color:"#0f766e"
   },
   {
     id:"r46", sub:"Times of India", flair:"News", hot:true,
@@ -834,7 +834,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Times of India",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://timesofindia.indiatimes.com/auto/bikes/simple-one-gen-2-first-ride-review-small-smart-changes/articleshow/128378955.cms",
-    _icon:"📰", _color:"#dc2626"
+    _icon:"", _color:"#dc2626"
   },
   {
     id:"r47", sub:"Times of India", flair:"News", hot:true,
@@ -842,7 +842,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Times of India",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://timesofindia.indiatimes.com/auto/electric-bikes/bajaj-chetak-3001-launched-at-rs-99990-range-features-more/articleshow/121906304.cms",
-    _icon:"📰", _color:"#dc2626"
+    _icon:"", _color:"#dc2626"
   },
   {
     id:"r48", sub:"Bajaj", flair:"Official", hot:false,
@@ -850,7 +850,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Bajaj",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.chetak.com/",
-    _icon:"🏢", _color:"#7c3aed"
+    _icon:"", _color:"#7c3aed"
   },
   {
     id:"r49", sub:"Ola Electric", flair:"Official", hot:true,
@@ -858,7 +858,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Ola Electric",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.olaelectric.com/",
-    _icon:"🟢", _color:"#16a663"
+    _icon:"", _color:"#16a663"
   },
   {
     id:"r50", sub:"Ather Energy", flair:"Official", hot:true,
@@ -866,7 +866,7 @@ const REDDIT_POSTS = [
     excerpt:"Click to read — Ather Energy",
     votes:"0", comments:"0", daysAgo:0,
     url:"https://www.atherenergy.com/",
-    _icon:"🔵", _color:"#2563eb"
+    _icon:"", _color:"#2563eb"
   }
 ];
 
@@ -922,7 +922,7 @@ function filterYT(filter, btn){
 // ── Render Reddit ───────────────────────────────────────
 function renderReddit(){
   const list = document.getElementById('redditList');
-  const TOPIC = {subsidy:['Subsidy','#16a663','🏛️'],sales:['Sales','#2563eb','📊'],launch:['Launch','#f59e0b','🆕'],community:['Owners','#ff4500','💬'],review:['Review','#7c3aed','📝'],news:['News','#0ea5e9','📰']};
+  const TOPIC = {subsidy:['Subsidy','#16a663',''],sales:['Sales','#2563eb',''],launch:['Launch','#f59e0b',''],community:['Owners','#ff4500',''],review:['Review','#7c3aed',''],news:['News','#0ea5e9','']};
   const items=[...TRENDING.articles].sort((a,b)=>((b.published||b.added)||'').localeCompare((a.published||a.added)||''));
   list.innerHTML = items.map(p=>{
     const [label,col,icon]=TOPIC[p.topic]||TOPIC.news;
@@ -944,7 +944,7 @@ function renderReddit(){
 }
 
 // ── Render Social ───────────────────────────────────────
-const PLATFORM_ICONS = {instagram:'📷',twitter:'🐦',youtube:'▶',linkedin:'💼'};
+const PLATFORM_ICONS = {instagram:'',twitter:'',youtube:'▶',linkedin:''};
 const PLATFORM_CLASSES = {instagram:'sp-instagram',twitter:'sp-twitter',youtube:'sp-youtube',linkedin:'sp-linkedin'};
 
 function renderSocial(){
@@ -1019,7 +1019,7 @@ function renderSocial(){
       '<div class="insta-overlay">'+
         '<div class="insta-brand-name">'+b.name+'</div>'+
         '<div class="insta-handle">'+b.handle+'</div>'+
-        '<div class="insta-ig-pill">📸 Instagram</div>'+
+        '<div class="insta-ig-pill">Instagram</div>'+
       '</div>'+
     '</a>';
   }).join('');
