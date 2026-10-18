@@ -41,13 +41,15 @@ async function token() {
 }
 
 const API = 'https://sheets.googleapis.com/v4/spreadsheets/';
+// accepts the bare id, or the whole Sheet link, with any stray spaces or quotes around it
+const sheetId = () => { const v = String(process.env.LEADS_SHEET_ID || ''); const m = v.match(/\/d\/([A-Za-z0-9_-]{20,})/) || v.match(/[A-Za-z0-9_-]{20,}/); return m ? (m[1] || m[0]) : ''; };
 async function sheets(path, opts = {}) {
-  const r = await fetch(API + process.env.LEADS_SHEET_ID + path, {
+  const r = await fetch(API + sheetId() + path, {
     ...opts, headers: { authorization: 'Bearer ' + await token(), 'content-type': 'application/json', ...(opts.headers || {}) }
   });
   const txt = await r.text();
   let j = {}; try { j = JSON.parse(txt); } catch (e) { /* not JSON */ }
-  if (!r.ok) throw new Error('sheets ' + r.status + ' on ' + path.split('?')[0].slice(0, 60) + ': ' + ((j.error && (j.error.message || j.error.status)) || txt.slice(0, 200)));
+  if (!r.ok) throw new Error('sheets ' + r.status + ' on ' + (path.split('?')[0].slice(0, 60) || 'spreadsheet') + ' (id length ' + sheetId().length + ', raw length ' + String(process.env.LEADS_SHEET_ID || '').length + '): ' + ((j.error && (j.error.message || j.error.status)) || txt.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').slice(0, 160)));
   return j;
 }
 
