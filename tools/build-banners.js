@@ -53,8 +53,7 @@ const build = () => slides.map((s, k) => {
   return `<a class="hero-slide${first ? ' on' : ''}" href="${esc(u.toString())}" target="_blank" rel="noopener" data-out="brand" data-brand="${s.brandId}" aria-hidden="${first ? 'false' : 'true'}"${first ? '' : ' tabindex="-1"'}>` +
     `<picture><source media="(max-width:768px)" type="image/webp" ${at(v(mW), !first)}/><source media="(max-width:768px)" ${at(v(m), !first)}/>` +
     `<source type="image/webp" ${at(dSet, !first)} sizes="100vw"/>` +
-    `<img ${first ? `src="${s.img.d}?v=${ver(s.img.d)}" fetchpriority="high" loading="eager"` : `src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" ${at(v(s.img.d), true)} loading="lazy"`} alt="${esc(s.brand + ' ' + s.model)}" width="1920" height="760"${s.desktopFocus ? ` style="object-position:${s.desktopFocus}"` : ''}/></picture>` +
-    `<span class="hero-slide-cap"><b>${esc(s.brand)} ${esc(s.model)}</b>${from ? ` <span>from ${inr(from)}</span>` : ''} <span class="hsc-go">${esc(host)} ↗</span></span></a>`;
+    `<img ${first ? `src="${s.img.d}?v=${ver(s.img.d)}" fetchpriority="high" loading="eager"` : `src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" ${at(v(s.img.d), true)} loading="lazy"`} alt="${esc(s.brand + ' ' + s.model)}" width="1920" height="760"${s.desktopFocus ? ` style="object-position:${s.desktopFocus}"` : ''}/></picture>` + '</a>';
 }).join('');
 const dots = slides.map((s, k) => `<button class="hero-dot${k ? '' : ' on'}" type="button" aria-label="${esc(s.brand + ' ' + s.model)}"></button>`).join('');
 (async () => {
