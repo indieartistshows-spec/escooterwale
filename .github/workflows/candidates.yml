@@ -1,0 +1,31 @@
+# Collects candidate product photos from brand websites into images/candidates/ for review.
+name: Product photo candidates
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['automation/product-candidates.js', '.github/workflows/candidates.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  candidates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - run: node automation/product-candidates.js
+      - run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add images/candidates
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "Product photo candidates from brand websites"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done

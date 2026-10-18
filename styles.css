@@ -842,7 +842,7 @@ img.lazy.loaded{opacity:1}
 .seo-links .sl-model{color:rgba(255,255,255,.75);font-weight:600}
 
 /* speed: skip layout and paint of the footer and the buy and compare directory until they scroll near */
-.footer,.seo-links{content-visibility:auto;contain-intrinsic-size:auto 900px}
+.footer,.seo-links{content-visibility:auto;contain-intrinsic-height:auto 900px}
 /* accessibility: small green labels on light backgrounds use a darker green (4.5:1); dark panels keep the brand green */
 .eyebrow,.sec-hd-right{color:#0b7a45}
 .dmh-section .eyebrow,.listings-hero .eyebrow,[class*="hero"] .eyebrow,.verdict-box .eyebrow,.footer .eyebrow{color:var(--g)}
