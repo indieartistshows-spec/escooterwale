@@ -383,6 +383,8 @@ function footerHTML(){
         <span>© 2026 EScooterwale. Prices are ex-showroom<span data-sw="priceCityIn"></span>. Data updated <span data-sw="updated">October 2026</span>.</span>
         <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
           <span>Not affiliated with any EV manufacturer.</span>
+          <a href="/terms" style="color:rgba(255,255,255,.6);font-size:12px">Terms</a>
+          <a href="/privacy" style="color:rgba(255,255,255,.6);font-size:12px">Privacy</a>
           <a href="/yellow-brother" style="color:var(--amber);font-weight:700;font-size:12px;text-decoration:none">🟡 Yellow Brother Blog</a>
         </div>
       </div>
