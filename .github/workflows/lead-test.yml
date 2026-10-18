@@ -1,0 +1,43 @@
+# Sends one test lead to the live /api/lead endpoint and commits the reply to reports/lead-test.json,
+# so the Google Sheet connection can be checked without anyone's real details. The test row lands
+# in the Sheet's "Tests" tab, never in "Leads". Run it from Actions after changing the Vercel keys.
+name: Lead form test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/lead-test.yml', 'api/lead.js']
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the new deployment, then send a test lead
+        run: |
+          URL=https://www.escooterwale.in/api/lead
+          for i in $(seq 1 30); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$URL" -H 'content-type: application/json' -d '{}')
+            echo "attempt $i: $code"
+            [ "$code" = "400" ] || [ "$code" = "500" ] && break
+            sleep 10
+          done
+          mkdir -p reports
+          curl -s -X POST "$URL" -H 'content-type: application/json' -H 'origin: https://www.escooterwale.in' \
+            -d '{"test":true,"name":"Connection Test","mobile":"9999999999","email":"test@escooterwale.in","pincode":"400001","city":"Mumbai","state":"Maharashtra","consent":true,"consentText":"test","shortlist":["test-model"],"answers":{"budget":"test"},"lang":"en","source":"github-action","page":"/match"}' \
+            | tee reports/lead-test.json
+          echo
+          echo "{\"ranAt\":\"$(date -u +%FT%TZ)\"}" > reports/lead-test-ran.json
+      - name: Commit the reply
+        run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add reports/lead-test.json reports/lead-test-ran.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Lead form connection test result"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done
