@@ -4,6 +4,8 @@
      drops the dead Typekit placeholder
    - cache busting: every local .js/.css gets ?v=<content hash>, so vercel.json can cache
      them for a year and a new build is still picked up straight away
+   - GA and Clarity load after the page load event
+   - homepages get styles.css inlined (no render-blocking request on the most tested page)
    - images in page markup below the first screen get loading="lazy" decoding="async"
    Safe to run more than once. Usage: node tools/optimize-html.js */
 const fs = require('fs'), path = require('path'), crypto = require('crypto');
@@ -13,6 +15,9 @@ const SKIP = new Set(['node_modules', '.git', 'automation', 'i18n', 'tools', '.g
 // fonts are self-hosted (see @font-face at the top of styles.css). They are not preloaded on
 // purpose: on slow mobile a preload competes with the hero banner and costs about 0.4 s of LCP.
 
+let _css = null;
+const inlineCss = () => _css || (_css = fs.readFileSync(path.join(ROOT, 'styles.css'), 'utf8')
+  .replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{}:;,>])\s*/g, '$1').replace(/;}/g, '}').trim());
 const hashes = {};
 const hashOf = f => hashes[f] || (hashes[f] = crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0, 8));
 
@@ -38,6 +43,20 @@ for (const file of pages) {
     .replace(/<!--[^>]*(Proxima Nova via Adobe|typekit)[^>]*-->\s*/g, '')
     .replace(/<link rel="preload" href="\/fonts\/[^"]+"[^>]*>/g, '');
   if (!/fonts\.googleapis\.com\/css2/.test(h)) h = h.replace(/<link rel="(dns-prefetch|preconnect)" href="(https:)?\/\/fonts\.(googleapis|gstatic)\.com"[^>]*>\s*/g, '');
+
+  // analytics load after the page has: GA and Clarity were the biggest downloads competing
+  // with the hero banner on mobile. gtag() calls made before then are queued and sent.
+  h = h.replace(/<script async src="(https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=[^"]+)"><\/script>/,
+    (m, src) => `<script data-late-ga>addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=1;s.src='${src}';document.head.appendChild(s)},1)})</script>`);
+  h = h.replace(/\(function\(c,l,a,r,i,t,y\)\{([\s\S]*?)\}\)\(window, document, "clarity", "script", "([a-z0-9]+)"\);/,
+    (m, body, id) => `addEventListener('load',function(){setTimeout(function(){(function(c,l,a,r,i,t,y){${body}})(window, document, "clarity", "script", "${id}")},1500)});`);
+
+  // homepages: styles inlined, so the first paint does not wait for styles.css
+  if (/^(index\.html|[a-z]{2}\/index\.html)$/.test(path.relative(ROOT, file).split(path.sep).join('/'))) {
+    const css = `<style data-inline-css>${inlineCss()}</style>`;
+    h = h.includes('data-inline-css') ? h.replace(/<style data-inline-css>[\s\S]*?<\/style>/, () => css)
+      : h.replace(/<link rel="stylesheet" href="\/?styles\.css(\?v=[a-z0-9]+)?"\s*\/?>/, () => css);
+  }
 
   // cache busting for local scripts and styles
   h = h.replace(/(<(?:script|link)\b[^>]*?\s(?:src|href)=")([^":?#]+\.(?:js|css))(\?v=[a-z0-9]+)?(")/g, (m, a, ref, _v, z) => {

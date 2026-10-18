@@ -243,7 +243,7 @@ function navHTML(active='home'){
   ];
   return `<nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="/" class="nav-logo" aria-label="ScooterWale Home">
+      <a href="/" class="nav-logo" aria-label="E-ScooterWale home">
         <img src="/images/escooterwale_logo-72.webp" alt="E-ScooterWale logo" class="nav-logo-img" width="36" height="36" />
         <span class="nav-logo-text"><strong>E-Scooter</strong><em>Wale</em></span>
       </a>
@@ -339,7 +339,7 @@ function footerHTML(){
 
         <!-- Explore -->
         <div class="footer-col">
-          <h5>Explore</h5>
+          <h3>Explore</h3>
           <a href="/listings">All Scooters</a>
           <a href="/compare">Compare Models</a>
           <a href="/best">Best For You</a>
@@ -349,7 +349,7 @@ function footerHTML(){
 
         <!-- Tools & Guides -->
         <div class="footer-col">
-          <h5>Tools & Guides</h5>
+          <h3>Tools & Guides</h3>
           <a href="/emi">EMI Calculator</a>
           <a href="/guide-real-range">Real Range Guide</a>
           <a href="/guide-battery-types">Battery Types</a>
@@ -359,7 +359,7 @@ function footerHTML(){
 
         <!-- Top Brands -->
         <div class="footer-col">
-          <h5>Top Brands</h5>
+          <h3>Top Brands</h3>
           <a href="/brands/ola-electric">Ola Electric</a>
           <a href="/brands/ather-energy">Ather Energy</a>
           <a href="/brands/tvs-motor">TVS iQube</a>
@@ -370,7 +370,7 @@ function footerHTML(){
 
         <!-- Community -->
         <div class="footer-col">
-          <h5>Community</h5>
+          <h3>Community</h3>
           <a href="/yellow-brother" class="footer-yb-link">🟡 Yellow Brother</a>
           <a href="/trending">Brand Socials</a>
           <a href="/trending">YouTube Reviews</a>
