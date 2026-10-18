@@ -621,7 +621,7 @@ ${band('Above ₹1.5 lakh', 150000, 99999999)}
     <h4>Filter by budget</h4>
     <a href="/listings?tag=under-1-lakh" class="toc-link">Under ₹1 lakh</a>
     <a href="/listings?tag=under-1-5l" class="toc-link">Under ₹1.5 lakh</a>
-    <a href="/best?cat=best-range" class="toc-link">🔋 Best range</a>
+    <a href="/best?cat=best-range" class="toc-link">Best range</a>
     <a href="/best?cat=daily-commute" class="toc-link">Best for commuting</a>
   </div>
   ${SIDEBAR_SUBSIDY}`
@@ -717,7 +717,7 @@ ${chemRows}
   <ul>${brandList(removable)}</ul>
 
   <div class="callout-box">
-    <h4>🔋 Which chemistry should you actually pick?</h4>
+    <h4>Which chemistry should you actually pick?</h4>
     <p style="margin:0 0 8px;font-size:14px">Chemistry is a weaker signal than most buying guides suggest. A well-engineered NMC pack with proper thermal management will outlast a badly managed LFP one. What we would actually weight, in order:</p>
     <ul style="margin:0 0 0 16px;font-size:14px">
       <li><strong>Warranty length</strong>. Ampere's 5 years and 75,000 km is the strongest on this list and tells you more than the chemistry label does</li>
@@ -761,7 +761,7 @@ ${chemRows}
   </div>`,
   sidebar: `
   <div class="sidebar-card" style="background:var(--ink);border-color:rgba(22,166,99,.2)">
-    <h4 style="color:#fff">🔋 Chemistry split</h4>
+    <h4 style="color:#fff">Chemistry split</h4>
     <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">
       <span style="font-size:13px;color:rgba(255,255,255,.6)">NMC</span><strong style="color:#60a5fa">${nmc.length}</strong></div>
     <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)">
@@ -775,7 +775,7 @@ ${chemRows}
   </div>
   <div class="sidebar-card">
     <h4>Battery guides</h4>
-    <a href="/guide-battery-types" class="toc-link">🔋 LFP vs NMC explained</a>
+    <a href="/guide-battery-types" class="toc-link">LFP vs NMC explained</a>
     <a href="/guide-real-range" class="toc-link">Real range test results</a>
     <a href="/guide-service-network" class="toc-link">Service network guide</a>
     <a href="/electric-scooter-price" class="toc-link">All ${SCOOTERS_DB.length} scooter prices</a>

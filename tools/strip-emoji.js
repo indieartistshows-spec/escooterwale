@@ -14,6 +14,7 @@ const WRAP = new RegExp(`<(span|i|div|em|b|small)(\\s[^<>]*)?>\\s*((?:${E}\\s*)+
 const WORD = /[\p{L}\p{N}\p{M}]/u;
 const LEAD = new RegExp(`(${E}) (?=\\S)`, 'gu'), TRAIL = new RegExp(` (${E})(?=\\s*(?:<|['"\`]|$))`, 'gmu'), ANY = new RegExp(E, 'gu');
 function clean(s) {
+  s = s.replace(/\u2122|&trade;/g, '');
   return s.replace(WRAP, (m, t, a, inner) => [...inner.matchAll(ANY)].every(x => isDropped(x[0])) ? '' : m)
     .replace(LEAD, (m, e) => isDropped(e) ? '' : m)
     .replace(TRAIL, (m, e) => isDropped(e) ? '' : m)
@@ -35,7 +36,7 @@ for (const f of glob('i18n').filter(f => /\/[a-z]{2}\.json$/.test(f))) {
   const d = JSON.parse(fs.readFileSync(f, 'utf8'));
   for (const [k, v] of Object.entries(d)) {
     const nk = strip(k);
-    if (nk !== k && nk.trim() && d[nk] == null) { d[nk] = strip(v); added++; }
+    if (nk !== k && nk.trim() && (d[nk] == null || d[nk] === nk)) { d[nk] = strip(v); added++; }
   }
   fs.writeFileSync(f, JSON.stringify(d));
 }

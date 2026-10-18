@@ -19,6 +19,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
 <title>All Electric Scooter Prices in India 2026: 41 Models | EScooterwale</title>
+<meta property="og:image" content="https://www.escooterwale.in/images/og/listings.jpg?v=ae41b26c"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="All 41 Electric Scooters in India 2026 | EScooterwale"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.escooterwale.in/images/og/listings.jpg?v=ae41b26c"/>
 <meta name="description" content="Every electric scooter on sale in India: 41 models from 10 brands with ex-showroom and on-road prices, real range from our tests and ScootScore. Filter by budget, range and brand."/>
 <meta name="keywords" content="electric scooter list india 2026, all ev scooters, ev bike price india, electric scooter under 1 lakh, best range electric scooter india, greaves ampere, honda activa electric"/>
 <link rel="canonical" href="https://www.escooterwale.in/listings"/>
@@ -4123,6 +4129,7 @@
     <div class="listings-count">Showing <strong id="resultCount">0</strong> electric scooters</div>
     <div style="display:flex;gap:10px;align-items:center">
       <select class="sort-select" id="sortSelect" onchange="applyFilters()">
+        <option value="best" selected>Best first</option>
         <option value="views">Most Popular</option>
         <option value="price-asc">Price: Low → High</option>
         <option value="price-desc">Price: High → Low</option>
@@ -4541,6 +4548,11 @@ function getFilters() {
   };
 }
 
+function bestRank(s) {
+  const m = s.mp; if (!m) return (s.score || 0) / 10;
+  const avg = (m.range + m.performance + m.comfort + m.family + m.build + m.brandTrust + m.value + m.features + m.charging) / 9;
+  return avg + m.editorBoost / 1000 + (s.score || 0) / 100000;
+}
 function applyFilters() {
   _currentPage = 1;
   const f = getFilters();
@@ -4560,13 +4572,16 @@ function applyFilters() {
   if (f.maxRange < 9999)results = results.filter(s => parseInt(s.range) <= f.maxRange);
 
   // Sidebar sort (only when no search q driving the sort)
-  if (!f.q || f.sort !== 'views') {
+  if (!f.q || f.sort !== 'best') {
     if      (f.sort === 'price-asc')   results.sort((a,b) => a.price - b.price);
     else if (f.sort === 'price-desc')  results.sort((a,b) => b.price - a.price);
     else if (f.sort === 'range-desc')  results.sort((a,b) => parseInt(b.range) - parseInt(a.range));
     else if (f.sort === 'rating')      results.sort((a,b) => b.score - a.score);
     else if (f.sort === 'score-desc')  results.sort((a,b) => (b.score||0) - (a.score||0));
-    else if (!f.q)                     results.sort((a,b) => b.views - a.views);
+    else if (f.sort === 'views')       results.sort((a,b) => b.views - a.views);
+    // default: best first, by GK's match points (data/match-points.json): the average of
+    // factors 1 to 9, then the editor boost, then our ScootScore
+    else if (!f.q)                     results.sort((a,b) => bestRank(b) - bestRank(a));
   }
 
   _lastResults = results;

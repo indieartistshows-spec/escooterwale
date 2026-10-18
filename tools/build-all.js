@@ -34,6 +34,7 @@ function serve(port) {
     run('node tools/i18n-patterns.js');
     run('node tools/i18n-build.js');
   }
+  run('node tools/build-og.js'); // share image per page (screenshot), og:image on every page
   run('node tools/optimize-html.js'); // fonts, cache busting, lazy images on every finished page
   run('node build-sitemap.js'); // after languages, so live language URLs get real lastmod dates
   console.log('\n✓ site built');
