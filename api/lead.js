@@ -45,8 +45,9 @@ async function sheets(path, opts = {}) {
   const r = await fetch(API + process.env.LEADS_SHEET_ID + path, {
     ...opts, headers: { authorization: 'Bearer ' + await token(), 'content-type': 'application/json', ...(opts.headers || {}) }
   });
-  const j = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error('sheets ' + r.status + ': ' + ((j.error && j.error.message) || 'error'));
+  const txt = await r.text();
+  let j = {}; try { j = JSON.parse(txt); } catch (e) { /* not JSON */ }
+  if (!r.ok) throw new Error('sheets ' + r.status + ' on ' + path.split('?')[0].slice(0, 60) + ': ' + ((j.error && (j.error.message || j.error.status)) || txt.slice(0, 200)));
   return j;
 }
 
