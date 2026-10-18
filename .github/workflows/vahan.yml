@@ -1,6 +1,6 @@
 # Monthly "Demand Mein Hai" refresh: reads last month's electric two-wheeler registrations by
 # maker from VAHAN (automation/vahan.js) and commits data/ev-sales.json. The commit to data/
-# triggers the weekly workflow's rebuild-only path, which republishes the homepage.
+# then starts the weekly workflow in rebuild-only mode, which republishes the homepage.
 # Started by the monthly scheduled task on the 1st; can also be run by hand from Actions.
 name: VAHAN monthly sales
 
@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   vahan:
@@ -25,11 +26,18 @@ jobs:
       - name: Read VAHAN
         run: node automation/vahan.js
       - name: Commit the result
+        id: commit
         run: |
           mkdir -p reports && cp automation/out/vahan.json reports/vahan.json
           git config user.name "escooterwale-bot"
           git config user.email "bot@escooterwale.in"
           git add data/ev-sales.json reports/vahan.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
+          git diff --cached --quiet -- data/ev-sales.json || echo "changed=true" >> "$GITHUB_OUTPUT"
           git commit -m "Demand Mein Hai: VAHAN monthly sales"
           for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done
+      # a bot commit does not start other workflows by itself, so ask for the rebuild directly
+      - name: Rebuild and republish the site
+        if: steps.commit.outputs.changed == 'true'
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: gh workflow run weekly.yml --ref main -f scrape=false
