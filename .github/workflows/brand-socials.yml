@@ -1,0 +1,28 @@
+# Finds and checks brand social accounts from the brands' own websites (reports/brand-socials.json).
+name: Brand socials check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['automation/brand-socials.js', '.github/workflows/brand-socials.yml']
+permissions:
+  contents: write
+jobs:
+  socials:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - run: node automation/brand-socials.js
+      - run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add reports/brand-socials.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Brand socials check result"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done
