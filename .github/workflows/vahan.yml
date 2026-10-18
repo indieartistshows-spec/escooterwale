@@ -1,0 +1,35 @@
+# Monthly "Demand Mein Hai" refresh: reads last month's electric two-wheeler registrations by
+# maker from VAHAN (automation/vahan.js) and commits data/ev-sales.json. The commit to data/
+# triggers the weekly workflow's rebuild-only path, which republishes the homepage.
+# Started by the monthly scheduled task on the 1st; can also be run by hand from Actions.
+name: VAHAN monthly sales
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  vahan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Read VAHAN
+        run: node automation/vahan.js
+      - name: Commit the result
+        run: |
+          mkdir -p reports && cp automation/out/vahan.json reports/vahan.json
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add data/ev-sales.json reports/vahan.json
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "Demand Mein Hai: VAHAN monthly sales"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done
