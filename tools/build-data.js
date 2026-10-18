@@ -125,5 +125,18 @@ if(typeof module!=='undefined') module.exports={BRAND_VIDEOS,AGG_LINKS,SCOOTERS_
 fs.writeFileSync('data.js', out);
 // Trending archive goes in its own file so data.js stays small as it grows
 const trending = J('data/trending.json');
+// nothing ever leaves the site: anything in last build's archive that is missing from
+// data/trending.json is put back (articles by url, videos by videoId), and the data file is saved
+{
+  let prev = null; try { prev = require(require('path').resolve('trending-data.js')).TRENDING; } catch (e) {}
+  if (prev) {
+    const raw = JSON.parse(fs.readFileSync('data/trending.json', 'utf8')); let back = 0;
+    for (const [list, key] of [['articles', 'url'], ['videos', 'videoId']]) {
+      const have = new Set((raw[list] || []).map(x => x[key]));
+      for (const x of prev[list] || []) if (x[key] && !have.has(x[key])) { raw[list].push(x); trending[list].push(x); have.add(x[key]); back++; }
+    }
+    if (back) { fs.writeFileSync('data/trending.json', JSON.stringify(raw, null, 1) + '\n'); console.log(`trending: put back ${back} items that had gone missing`); }
+  }
+}
 fs.writeFileSync('trending-data.js', `/* GENERATED from data/trending.json by tools/build-data.js. Append-only archive. */\nconst TRENDING = ${JSON.stringify({ videos: trending.videos, articles: trending.articles })};\nif(typeof module!=='undefined') module.exports={TRENDING};\n`);
 console.log(`data.js written: ${scooters.length} scooters, headline city ${headline}, ${Object.keys(cityPrices).length} models with city prices`);
