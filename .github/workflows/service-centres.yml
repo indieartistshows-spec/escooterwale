@@ -25,6 +25,8 @@ jobs:
         run: |
           curl -sSfL -A "escooterwale.in (info@escooterwale.in)" -o IN.zip https://download.geonames.org/export/zip/IN.zip && unzip -o -q IN.zip IN.txt || echo "GeoNames download failed"
       - name: Build pincode and service data
+        env:
+          PLACES_API_KEY: ${{ secrets.PLACES_API_KEY || secrets.YT_API_KEY }}
         run: node automation/service-centres.js IN.txt
       - name: Commit the result
         run: |
