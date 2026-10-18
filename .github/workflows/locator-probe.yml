@@ -1,0 +1,28 @@
+# One-off: records how each brand's dealer locator loads its data (reports/locator-probe.json).
+name: Locator probe
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['automation/locator-probe.js', '.github/workflows/locator-probe.yml']
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - run: node automation/locator-probe.js
+      - run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add reports/locator-probe.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Locator probe result"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done
