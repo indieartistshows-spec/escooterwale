@@ -1,0 +1,34 @@
+# Marks key events and registers custom dimensions in Google Analytics (automation/ga-setup.js).
+# Commits what it did to reports/ga-setup.json. Safe to re-run from Actions at any time.
+name: GA setup
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['automation/ga-setup.js', '.github/workflows/ga-setup.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  ga:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Set up key events and custom dimensions
+        env:
+          GA_SA_KEY: ${{ secrets.GA_SA_KEY }}
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+        run: node automation/ga-setup.js
+      - name: Commit the result
+        run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add reports/ga-setup.json
+          git diff --cached --quiet && exit 0
+          git commit -m "GA setup result"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done

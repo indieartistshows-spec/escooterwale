@@ -497,7 +497,7 @@
 
 <script src="/data.js?v=1642e79d"></script>
 <script src="/seo.js?v=5e2f83ba"></script>
-<script src="/outbound.js?v=0e59e930"></script>
+<script src="/outbound.js?v=f73b042f"></script>
 <script src="/components.js?v=4d652ab0"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('match');
@@ -653,6 +653,7 @@ function finish(){
   try{const u=new URL(location.href);['budget','daily','riders','charging','priority','licence'].forEach(k=>u.searchParams.set(k,A[k]));history.replaceState(null,'',u)}catch(e){}
   R=rank();queue=R.deck.slice();shown=0;liked=[];skipped=[];bannedBrands=new Set();
   ev('match_shown',{matches:queue.map(r=>r.x.id).join(','),fit:R.fitN});
+  ev('quiz_complete',{matches:queue.length,fit:R.fitN,budget:A.budget,daily:A.daily,riders:A.riders,charging:A.charging,priority:A.priority,licence:A.licence});
   $('mtQuiz').hidden=true;$('mtHead').hidden=true;$('mtDeck').hidden=false;$('mtEmpty').hidden=true;document.body.classList.add('mt-playing');
   const few=$('mtFew');few.hidden=R.fitN>=5;if(R.fitN<5) few.textContent=`Only ${R.fitN} scooters fit everything you asked for. The rest are close matches.`;
   window.scrollTo({top:0,behavior:'smooth'});

@@ -21,7 +21,9 @@
   Object.entries(links).forEach(([id, l]) => ['testRide', 'dealer'].forEach(k => { if (l && l[k]) brandHosts[host(l[k])] = id; }));
   const brandFor = h => brandHosts[h] || Object.entries(brandHosts).find(([k]) => h.endsWith('.' + k))?.[1];
 
-  const p = location.pathname;
+  // language pages (/hi/scooters/...) are tracked the same as English ones, with lang set
+  const LANG = (location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/) || [, 'en'])[1];
+  const p = location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/, '') || '/';
   const pageType = p === '/' ? 'home' : (p.match(/^\/(scooters|brands|cities|best|compare|articles)\b/) || [])[1] || p.replace(/^\/|\.html$/g, '').split('/')[0] || 'home';
   const pageEntity = (p.match(/^\/(?:scooters|brands|cities|best|compare|articles)\/([^/]+)/) || [])[1] || '';
 
@@ -47,6 +49,27 @@
   }
   function tagAll(root) { (root || document).querySelectorAll('a[href^="http"]').forEach(tag); }
 
+  const send = (name, params) => { try { if (typeof gtag === 'function') gtag('event', name, Object.assign({ page_type: pageType, page_entity: pageEntity, lang: LANG }, params)); } catch (e) {} };
+
+  // browses: which scooter model pages people open
+  if (pageType === 'scooters' && pageEntity) {
+    const s = scooters.find(x => x.id === pageEntity);
+    send('scooter_view', { model: pageEntity, brand: s ? s.brandSlug : '' });
+  }
+
+  // clicks inside the site: buttons and links that stay on escooterwale.in
+  document.addEventListener('click', e => {
+    const el = e.target.closest && e.target.closest('a[href],button');
+    if (!el || el.closest('.mt-opt,.mt-chip,.hero-dot,.mt-step,[data-no-cta]')) return;
+    const ext = el.closest('a[href^="http"]');
+    if (ext && host(ext.href) !== location.hostname.replace(/^www\./, '') && host(ext.href) !== 'escooterwale.in') return; // counted as outbound_click
+    const link = el.closest('a[href]'), href = (link && link.getAttribute('href')) || '';
+    if (/^https?:/.test(href) && host(href) !== location.hostname.replace(/^www\./, '') && host(href) !== 'escooterwale.in') return;
+    const where = el.closest('nav,.nav,.mobile-menu,.bottom-nav') ? 'nav' : el.closest('.seo-links') ? 'directory' : el.closest('footer,.footer') ? 'footer' : el.closest('.hero,.hero-content') ? 'hero' : 'content';
+    const text = (el.getAttribute('aria-label') || el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60);
+    send('cta_click', { cta_text: text, cta_location: where, link_url: href ? href.split('?')[0].slice(0, 100) : '' });
+  }, true);
+
   document.addEventListener('click', e => {
     const a = e.target.closest && e.target.closest('a[href^="http"]');
     if (!a) return;
@@ -54,7 +77,7 @@
     const h = host(a.href);
     if (!h || h === location.hostname.replace(/^www\./, '')) return;
     const type = a.dataset.out || 'external';
-    const params = { link_type: type, link_domain: h, link_url: a.href.split('?')[0], brand: a.dataset.brand || '', page_type: pageType, page_entity: pageEntity };
+    const params = { link_type: type, link_domain: h, link_url: a.href.split('?')[0], brand: a.dataset.brand || '', page_type: pageType, page_entity: pageEntity, lang: LANG };
     if (typeof gtag === 'function') {
       gtag('event', 'outbound_click', params);
       if (type === 'brand' || type === 'test-ride' || type === 'dealer') gtag('event', 'brand_click', params);
