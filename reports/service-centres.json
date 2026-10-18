@@ -1,13 +1,7 @@
 {
- "ranAt": "2026-10-18T15:03:58.737Z",
+ "ranAt": "2026-10-18T21:46:59.060Z",
  "pincodes": 19238,
- "places": {
-  "districts": 110,
-  "from": "Kerala | Thrissur",
-  "calls": 0,
-  "fails": 5,
-  "error": "Places 403 Places API (New) has not been used in project 908290727189 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/places"
- },
+ "places": "skipped: no PLACES_API_KEY",
  "osm": {
   "source": "https://overpass-api.de/api/interpreter",
   "elements": 11193,
