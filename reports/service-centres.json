@@ -1,0 +1,18 @@
+{
+ "ranAt": "2026-10-18T14:55:21.133Z",
+ "pincodes": 19238,
+ "source": "https://overpass-api.de/api/interpreter",
+ "osmElements": 11193,
+ "counts": {
+  "ola-electric": 26,
+  "ather-energy": 27,
+  "tvs-motor": 268,
+  "bajaj-chetak": 229,
+  "hero-vida": 94,
+  "ampere": 4,
+  "okinawa": 4,
+  "pure-ev": 1,
+  "bounce-infinity": 1,
+  "bgauss": 3
+ }
+}
