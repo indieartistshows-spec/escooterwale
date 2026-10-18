@@ -1,0 +1,638 @@
+{
+ "ranAt": "2026-10-18T19:15:51.439Z",
+ "brands": {
+  "ola-electric": {
+   "tried": [
+    {
+     "url": "https://www.olaelectric.com",
+     "status": 200,
+     "final": "https://www.olaelectric.com/",
+     "links": 325
+    }
+   ],
+   "socials": [
+    {
+     "href": "https://youtu.be/Qz7zYNMVsCU",
+     "text": "Watch Product Video",
+     "status": 429,
+     "final": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DQz7zYNMVsCU%26feature%3Dyoutu.be&q=EgQ06gFhGOq21NYGIjDF0PgIhgRgnCEDg3n4mPuD5U8l4kO_JE_1pU-kD2POQOOjsu_sDIGxJ4p4hoM8mOUyAnJSWgFDYJXSg--J9_7IAw",
+     "title": "https://www.youtube.com/watch?v=Qz7zYNMVsCU&feature=youtu.be",
+     "dead": false
+    },
+    {
+     "href": "https://www.instagram.com/olaelectric",
+     "text": "",
+     "status": 200,
+     "final": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Folaelectric&is_from_rle",
+     "title": "Instagram",
+     "dead": false
+    },
+    {
+     "href": "https://www.youtube.com/channel/UCq0Gj5tEf6xwvPTzx0ZxABQ",
+     "text": "",
+     "status": 200,
+     "final": "https://www.youtube.com/channel/UCq0Gj5tEf6xwvPTzx0ZxABQ",
+     "title": "Ola Electric - YouTube",
+     "dead": false
+    },
+    {
+     "href": "https://twitter.com/OlaElectric",
+     "text": "",
+     "status": 403,
+     "final": "https://x.com/OlaElectric",
+     "title": "Just a moment...",
+     "dead": true
+    },
+    {
+     "href": "https://m.facebook.com/Ola-Electric-104817894981469",
+     "text": "",
+     "status": 200,
+     "final": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FOla-Electric-104817894981469",
+     "title": "Facebook",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/company/olaelectric",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQF_0vPcEA79-QAAAaFQc1CoEivbEkRAcfc7D3e05JYPyMZThzy2xJ72De2jh2etKPsHBjbkJRlgsOhxjWxaHTQIMXcsyNrfDkRIEXBhoGIMhy3tLdnNd9Yewuz_bNm0Chk69Nc=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Folaelectric",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    }
+   ]
+  },
+  "ather-energy": {
+   "tried": [
+    {
+     "url": "https://www.atherenergy.com",
+     "status": 200,
+     "final": "https://www.atherenergy.com/",
+     "links": 22
+    }
+   ],
+   "socials": []
+  },
+  "tvs-motor": {
+   "tried": [
+    {
+     "url": "https://www.tvsmotor.com",
+     "status": 200,
+     "final": "https://www.tvsmotor.com/",
+     "links": 613
+    },
+    {
+     "url": "https://www.tvsmotor.com/electric-scooters/tvs-iqube",
+     "status": 200,
+     "final": "https://www.tvsmotor.com/electric-scooters/tvs-iqube",
+     "links": 308
+    }
+   ],
+   "socials": [
+    {
+     "href": "https://twitter.com/tvsmotorcompany",
+     "text": "",
+     "status": 403,
+     "final": "https://x.com/tvsmotorcompany",
+     "title": "Just a moment...",
+     "dead": true
+    },
+    {
+     "href": "https://www.linkedin.com/company/tvs-motor-company",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFSl8ixKjXrWwAAAaFQc2gYZK4lig3GCiytM1TqVNqqYokXfQJswiEzF_tlY7B8qr3-HId3dryTWeWSyiClXQ14lbD3jNr89MrHyCIJSZ3lmeBh4vqdq8QBne1FfmT-Ob4ARog=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Ftvs-motor-company",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.facebook.com/tvsmotorcompany",
+     "text": "",
+     "status": 200,
+     "final": "https://www.facebook.com/tvsmotorcompany",
+     "title": "TVS Motor Company | Facebook",
+     "dead": false,
+     "followers": "452K followers"
+    },
+    {
+     "href": "https://www.instagram.com/tvsmotorcompany",
+     "text": "",
+     "status": 200,
+     "final": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ftvsmotorcompany&is_from_rle",
+     "title": "Instagram",
+     "dead": false
+    },
+    {
+     "href": "https://www.youtube.com/channel/UCmXFdsJtTAbbYrH7zz-lkkw",
+     "text": "",
+     "status": 200,
+     "final": "https://www.youtube.com/channel/UCmXFdsJtTAbbYrH7zz-lkkw",
+     "title": "TVS Motor Company - YouTube",
+     "dead": false
+    },
+    {
+     "href": "https://twitter.com/tvsiqube",
+     "text": "",
+     "status": 403,
+     "final": "https://x.com/tvsiqube",
+     "title": "Just a moment...",
+     "dead": true
+    },
+    {
+     "href": "https://www.instagram.com/tvsiqube",
+     "text": "",
+     "status": 200,
+     "final": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ftvsiqube&is_from_rle",
+     "title": "Instagram",
+     "dead": false
+    },
+    {
+     "href": "https://www.youtube.com/channel/UC4fKev1G3JNyBUs_y0hz7-g",
+     "text": "",
+     "status": 200,
+     "final": "https://www.youtube.com/channel/UC4fKev1G3JNyBUs_y0hz7-g",
+     "title": "TVS iQube Electric - YouTube",
+     "dead": false,
+     "followers": "14.1K subscribers"
+    }
+   ]
+  },
+  "bajaj-chetak": {
+   "tried": [
+    {
+     "url": "https://www.chetak.com",
+     "status": 200,
+     "final": "https://www.chetak.com/",
+     "links": 265
+    },
+    {
+     "url": "https://www.chetak.com",
+     "status": 200,
+     "final": "https://www.chetak.com/",
+     "links": 265
+    }
+   ],
+   "socials": [
+    {
+     "href": "https://www.facebook.com/profile.php",
+     "text": "facebook",
+     "status": 200,
+     "final": "https://www.facebook.com/",
+     "title": "Facebook",
+     "dead": false
+    },
+    {
+     "href": "https://www.instagram.com/chetak_official",
+     "text": "instagram",
+     "status": 200,
+     "final": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fchetak_official&is_from_rle",
+     "title": "Instagram",
+     "dead": false
+    },
+    {
+     "href": "https://www.youtube.com/channel/UCDqZ3x0gNt3EBIT7tNv2A4g",
+     "text": "youtube",
+     "status": 200,
+     "final": "https://www.youtube.com/channel/UCDqZ3x0gNt3EBIT7tNv2A4g",
+     "title": "Chetak Official - YouTube",
+     "dead": false,
+     "followers": "31.4K subscribers"
+    },
+    {
+     "href": "https://x.com/chetakofficial",
+     "text": "twitter-x",
+     "status": 403,
+     "final": "https://x.com/chetakofficial",
+     "title": "Just a moment...",
+     "dead": true
+    },
+    {
+     "href": "https://www.linkedin.com/company/bajaj-auto-ltd",
+     "text": "linkedin",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGzhl931KC6xwAAAaFQc-zodICDd-FiciFwL_r3UzjgzxBCb4mJ6To5OJr3qAaRIqzIrb9fLRIJZMLKgKgSNnI2vFRy5lDtDCdejGMutT8Y_z7g8-AEzRA7hWXnPssO96TYmw8=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbajaj-auto-ltd",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    }
+   ]
+  },
+  "hero-vida": {
+   "tried": [
+    {
+     "url": "https://www.vidaworld.com",
+     "status": 200,
+     "final": "https://www.vidaworld.com/",
+     "links": 75
+    },
+    {
+     "url": "https://www.vidaworld.com",
+     "status": 200,
+     "final": "https://www.vidaworld.com/",
+     "links": 75
+    }
+   ],
+   "socials": [
+    {
+     "href": "https://www.linkedin.com/company/vidaworldofficial",
+     "text": "",
+     "status": 200,
+     "final": "https://www.linkedin.com/company/vidaworldofficial",
+     "title": "VIDA World | LinkedIn",
+     "dead": false,
+     "followers": "24,251 followers"
+    },
+    {
+     "href": "https://x.com/VidaDotWorld",
+     "text": "",
+     "status": 403,
+     "final": "https://x.com/VidaDotWorld",
+     "title": "Just a moment...",
+     "dead": true
+    },
+    {
+     "href": "https://youtube.com/@vidaworldofficial",
+     "text": "",
+     "status": 200,
+     "final": "https://www.youtube.com/@vidaworldofficial",
+     "title": "VIDA World - YouTube",
+     "dead": false,
+     "followers": "55.6K subscribers"
+    },
+    {
+     "href": "https://www.instagram.com/vidaworldofficial",
+     "text": "",
+     "status": 200,
+     "final": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fvidaworldofficial&is_from_rle",
+     "title": "Instagram",
+     "dead": false
+    }
+   ]
+  },
+  "ampere": {
+   "tried": [
+    {
+     "url": "https://www.greavesamperev.com",
+     "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.greavesamperev.com/\nCall log:\n  - navigating to \"https://www.greave"
+    },
+    {
+     "url": "https://ampere.greaveselectricmobility.com",
+     "status": 200,
+     "final": "https://ampere-electric.com/",
+     "links": 51
+    },
+    {
+     "url": "https://www.greaveselectricmobility.com",
+     "status": 200,
+     "final": "https://greaveselectricmobility.com/",
+     "links": 107
+    }
+   ],
+   "socials": [
+    {
+     "href": "https://youtu.be/EKUMgeJDQeE",
+     "text": "Watch: International Record | First Ever",
+     "status": 429,
+     "final": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DEKUMgeJDQeE%26feature%3Dyoutu.be&q=EgQ06gFhGLG31NYGIjAWm00WGkbePg7936vk99RW7z2DTKkL4H_fVr_fU6gbNiCEPRst0Xc4cCROQKNFCPUyAnJSWgFDYPTk9Nrw5JCCiwE",
+     "title": "https://www.youtube.com/watch?v=EKUMgeJDQeE&feature=youtu.be",
+     "dead": false
+    },
+    {
+     "href": "https://youtu.be/zKcJjUpdLO0",
+     "text": "Watch: First EV Ever to conquer the migh",
+     "status": 429,
+     "final": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3DzKcJjUpdLO0%26feature%3Dyoutu.be&q=EgQ06gFhGLS31NYGIjAVmASak9hfm6IpL5RA9HsSJ_lLIUwTknWN9YWER3DsSxZ5YjxgFnGrFFP6cDbbQiAyAnJSWgFDYKmVrc220_bR6wE",
+     "title": "https://www.youtube.com/watch?v=zKcJjUpdLO0&feature=youtu.be",
+     "dead": false
+    },
+    {
+     "href": "https://youtu.be/w-MxZd_DNFA",
+     "text": "Watch: Covered 10,000 km from Kashmir to",
+     "status": 429,
+     "final": "https://www.google.com/sorry/index?continue=https://www.youtube.com/watch%3Fv%3Dw-MxZd_DNFA%26feature%3Dyoutu.be&q=EgQ06gFhGLe31NYGIjBqk6d2wZW-mG0ms_vrVm95MzkwxbK_81GUrpniM-7Bao62AIMJBOsUm_ro8NMkp4AyAnJSWgFDYPyqjLC8uKXiJg",
+     "title": "https://www.youtube.com/watch?v=w-MxZd_DNFA&feature=youtu.be",
+     "dead": false
+    },
+    {
+     "href": "https://www.youtube.com/c/ampereelectricvehicles",
+     "text": "YouTube",
+     "status": 200,
+     "final": "https://www.youtube.com/c/ampereelectricvehicles",
+     "title": "Ampere Electric Vehicles - YouTube",
+     "dead": false
+    },
+    {
+     "href": "https://in.linkedin.com/company/ampere-vehicles-pvt-ltd",
+     "text": "LinkedIn",
+     "status": 200,
+     "final": "https://in.linkedin.com/company/ampere-vehicles-pvt-ltd",
+     "title": "Ampere Electric Vehicles | LinkedIn",
+     "dead": true,
+     "followers": "114,468 followers"
+    },
+    {
+     "href": "https://www.facebook.com/amperevehicles",
+     "text": "Facebook",
+     "status": 200,
+     "final": "https://www.facebook.com/amperevehicles",
+     "title": "Ampere Electric Vehicles | Facebook",
+     "dead": false,
+     "followers": "48K followers"
+    },
+    {
+     "href": "https://x.com/ampere_ev",
+     "text": "X",
+     "status": 403,
+     "final": "https://x.com/ampere_ev",
+     "title": "Just a moment...",
+     "dead": true
+    },
+    {
+     "href": "ttps://www.instagram.com/ampere_ev_",
+     "text": "Instagram",
+     "error": "page.goto: net::ERR_ABORTED at ttps://www.instagram.com/ampere_ev_\nCall log:\n  - navigating to \"ttps"
+    },
+    {
+     "href": "https://www.linkedin.com/in/vikas-singh-0700872",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFeQDc9Tz8eTwAAAaFQdH1wsP40GbFOpdrXm3yOY9KSvS8LT0oIdZe5D6h6Zy0UAOMIYCdGlPoC6BbgfRew4ITy_aW2_Zvssjp4SL8278_iGxEnQd8NHSDVY5fYedacD_boHOw=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvikas-singh-0700872",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/in/vijayamahantesh-khannur-73378810",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHoNXQA5jcM4wAAAaFQdIVAwyVKB2_H9hgAhVq1dXLnaYq-tOZ9aTF-7fHbmsyxiSTu7N6fHQ0nTUvlEdyCA3vZVGRErxyJsVJlH5QTYTt8Bj8vFSFWQUOARGZA47EGI6YUxP4=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvijayamahantesh-khannur-73378810",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/in/ramrajappa",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEaANq4OJmmSgAAAaFQdJD4YHDYCYoHXJBNX4PyBrRrVSx5c0eY0jQd5M_PSI60ouG2XkVDER_aXMfK8K_mXrXUTJR51eTNI2e2RvDeo8aNRaAt2NE_qn8WgNB-O0cXObY0ZcI=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Framrajappa",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/in/mpmanoj",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFZteP-HmCcGgAAAaFQdJywnvKESJ19C0j1yJhlHyncGhGchfA7283i_Z34g9UAZmz0N5o7Yh5q49Zr5lA2EV3TriHyuN_kAv9DKeV2slFZikNLJiWdNMEF5W_hFpkFrPglmwA=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmpmanoj",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/in/punnaivanam-sankaramoorthy-bb35a616",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGFfyrFKrcBdQAAAaFQdKSAoWn2FNO_yd8oosKA-UKczlBD126Ra5_GGyB4fzPPefvwxEpiGcxQxl3f6XYhGJFqtQwlJeR-Dr6sCiEYT0Je8LoAwSYLX_4S_nD-BkMfqyiYnWI=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fpunnaivanam-sankaramoorthy-bb35a616",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/in/praneshurs",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHVHvkzYUba8wAAAaFQdLA4W1Dz5V4ae_CeS_1ctwLe4msgNUOFyaTfKwlquqKo-GwqV0OcRqAd0K0ZqaGnRl7I7zezKsEcKCXsp7QInQTvhz8ZwBHECdp_25fIZUE277WHpUg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fpraneshurs",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/in/samarpita-banerjee-03b19a10",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHlxhksM3kejwAAAaFQdLgIx633xiJNBKmA_ncLya53CVJsGjgDyyRaj6HU0m_Bg-uBot6FFLI6bPZuI2jvTsw-G-YQoKa3W4AuleVeNH3KJesUNzd9E-ZrH2tS0mcj1LKVf48=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fsamarpita-banerjee-03b19a10",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/company/greaves-electric-mobility",
+     "text": "LinkedIn",
+     "status": 200,
+     "final": "https://www.linkedin.com/company/greaves-electric-mobility",
+     "title": "Greaves Electric Mobility | LinkedIn",
+     "dead": false,
+     "followers": "157,522 followers"
+    }
+   ]
+  },
+  "okinawa": {
+   "tried": [
+    {
+     "url": "https://www.okinawa.co.in",
+     "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.okinawa.co.in/\nCall log:\n  - navigating to \"https://www.okinawa.co."
+    },
+    {
+     "url": "https://okinawascooters.com",
+     "error": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/\nCall log:\n  - navigating to \"https://okinawas"
+    }
+   ],
+   "socials": []
+  },
+  "pure-ev": {
+   "tried": [
+    {
+     "url": "https://pureev.in",
+     "status": 200,
+     "final": "https://www.pureenergy.co.in/",
+     "links": 477
+    },
+    {
+     "url": "https://pureev.in",
+     "status": 403,
+     "final": "https://www.pureenergy.co.in/",
+     "links": 2
+    },
+    {
+     "url": "https://www.pureenergy.co.in",
+     "status": 403,
+     "final": "https://www.pureenergy.co.in/",
+     "links": 2
+    }
+   ],
+   "socials": [
+    {
+     "href": "https://api.whatsapp.com/send",
+     "text": "Whatsapp",
+     "status": 200,
+     "final": "https://api.whatsapp.com/send",
+     "title": "Share on WhatsApp",
+     "dead": false
+    },
+    {
+     "href": "https://www.facebook.com/pureenergyindia",
+     "text": "",
+     "status": 200,
+     "final": "https://www.facebook.com/pureenergyindia",
+     "title": "PURE EV | Sangareddy | Facebook",
+     "dead": false,
+     "followers": "60K followers"
+    },
+    {
+     "href": "https://x.com/pureenergyindia",
+     "text": "",
+     "status": 403,
+     "final": "https://x.com/pureenergyindia",
+     "title": "Just a moment...",
+     "dead": true
+    },
+    {
+     "href": "https://www.instagram.com/pureenergy_india",
+     "text": "",
+     "status": 200,
+     "final": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpureenergy_india&is_from_rle",
+     "title": "Instagram",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/company/pureenergyindia",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFLOEih4i_N3AAAAaFQdP5Yjzac0YX9PVyuGL5rucfNKMOYey123Sv_QLVNCSr_Qba_dZipcO7NkjFrN8GGyZAxwzAP_uygp4NSn3bERlrVNr9ZJi-4sZOqCCEZF_CcPVMAy9U=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpureenergyindia",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.youtube.com/@pureenergyindia",
+     "text": "",
+     "status": 200,
+     "final": "https://www.youtube.com/@pureenergyindia",
+     "title": "PuREEnergy India - YouTube",
+     "dead": false,
+     "followers": "39.3K subscribers"
+    }
+   ]
+  },
+  "bounce-infinity": {
+   "tried": [
+    {
+     "url": "https://www.bounceev.com",
+     "status": 200,
+     "final": "https://www.bounceev.com/",
+     "links": 137
+    },
+    {
+     "url": "https://bounceinfinity.com",
+     "status": 200,
+     "final": "https://bounceinfinity.com/",
+     "links": 28
+    }
+   ],
+   "socials": [
+    {
+     "href": "https://www.facebook.com/profile.php",
+     "text": "",
+     "status": 200,
+     "final": "https://www.facebook.com/",
+     "title": "Facebook",
+     "dead": false
+    },
+    {
+     "href": "https://www.linkedin.com/company/bounceev",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGsdNNCTFv7CAAAAaFQdSGA-21LzrrqlD_XIUSongDZx_xuhF67rHR3Z_mziiM184e994X835vUUSaL6tSL_KFGLL24MeSu3Ga_lcPjya70Rnb7iWsTPEp6lMPbjjjWtow72-I=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbounceev",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.instagram.com/bounce.ev",
+     "text": "",
+     "status": 200,
+     "final": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbounce.ev&is_from_rle",
+     "title": "Instagram",
+     "dead": false
+    },
+    {
+     "href": "https://www.facebook.com/bounceinfinityIndia",
+     "text": "",
+     "status": 200,
+     "final": "https://www.facebook.com/bounceinfinityIndia",
+     "title": "Bounce Infinity | Facebook",
+     "dead": false,
+     "followers": "19K followers"
+    },
+    {
+     "href": "https://www.linkedin.com/company/bounceinfinity",
+     "text": "",
+     "status": 999,
+     "final": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFfNVEHNPf26gAAAaFQdUSoTSMUSNjYeUgVy-QnGG25rCQtC4Jirjxr7dV8gBH9CyV6AbS0doas28aP5g0UiwAwYCNyG9_Qy74v9F3phnQ8IzItlkJ_GLHnQtbrpkyjEZnPKnQ=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbounceinfinity",
+     "title": "Sign Up | LinkedIn",
+     "dead": false
+    },
+    {
+     "href": "https://www.instagram.com/bounce_infinity",
+     "text": "",
+     "status": 200,
+     "final": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbounce_infinity&is_from_rle",
+     "title": "Instagram",
+     "dead": false
+    },
+    {
+     "href": "https://x.com/bounce_infinity",
+     "text": "",
+     "status": 403,
+     "final": "https://x.com/bounce_infinity",
+     "title": "Just a moment...",
+     "dead": true
+    }
+   ]
+  },
+  "bgauss": {
+   "tried": [
+    {
+     "url": "https://www.bgauss.com",
+     "status": 200,
+     "final": "https://www.bgauss.com/",
+     "links": 190
+    }
+   ],
+   "socials": [
+    {
+     "href": "https://x.com/BGaussOfficial",
+     "text": "",
+     "status": 403,
+     "final": "https://x.com/BGaussOfficial",
+     "title": "Just a moment...",
+     "dead": true
+    },
+    {
+     "href": "https://www.instagram.com/bgauss_official",
+     "text": "",
+     "status": 200,
+     "final": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbgauss_official&is_from_rle",
+     "title": "Instagram",
+     "dead": false
+    },
+    {
+     "href": "https://www.facebook.com/bgauss.official",
+     "text": "",
+     "status": 200,
+     "final": "https://www.facebook.com/bgauss.official",
+     "title": "BGauss | Mumbai | Facebook",
+     "dead": false,
+     "followers": "23K followers"
+    },
+    {
+     "href": "https://www.youtube.com/@bgaussofficial2049",
+     "text": "",
+     "status": 200,
+     "final": "https://www.youtube.com/@bgaussofficial2049",
+     "title": "BGauss Official - YouTube",
+     "dead": false,
+     "followers": "1.66K subscribers"
+    },
+    {
+     "href": "https://www.linkedin.com/company/bgauss",
+     "text": "",
+     "status": 200,
+     "final": "https://www.linkedin.com/company/bgauss",
+     "title": "BGAUSS | LinkedIn",
+     "dead": false,
+     "followers": "14,929 followers"
+    }
+   ]
+  }
+ }
+}
