@@ -12,6 +12,8 @@
 const fs = require('fs');
 const J = f => JSON.parse(fs.readFileSync(f, 'utf8'));
 const scooters = J('data/scooters.json');
+// square thumbnails with the scooter in focus (tools/card-images.js); the full photo stays as heroImg
+for (const s of scooters) { const sq = `/images/cards/${s.id}.webp`; if (fs.existsSync('.' + sq)) s.cardImg = sq + '?v=' + Math.round(fs.statSync('.' + sq).mtimeMs / 1000).toString(36); }
 const brands = J('data/brands.json');
 const news = J('data/news.json');
 const cities = J('data/cities.json');

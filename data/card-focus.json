@@ -1,0 +1,50 @@
+{
+ "_note": "Square thumbnail focus for model photos with a scene behind the scooter. x and y are the centre of the square as a share of the photo's width and height (0 to 1); zoom above 1 crops tighter. Photos on a plain background are trimmed and centred automatically. See tools/card-images.js.",
+ "ola-electric-s1-x-2-kwh": {
+  "x": 0.5
+ },
+ "ola-electric-s1-x-3-kwh": {
+  "x": 0.5
+ },
+ "ola-electric-s1-xplus-4-kwh": {
+  "x": 0.55
+ },
+ "ola-electric-s1-pro-3-kwh": {
+  "x": 0.5
+ },
+ "ola-electric-s1-pro-4-kwh": {
+  "x": 0.52
+ },
+ "ola-electric-s1-proplus-5point2-kwh": {
+  "x": 0.52
+ },
+ "ather-energy-konarc-s-100-2point1-kwh": {
+  "x": 0.66
+ },
+ "ather-energy-konarc-s-125-2point7-kwh": {
+  "x": 0.66
+ },
+ "ather-energy-konarc-s-161-3point5-kwh": {
+  "x": 0.66
+ },
+ "ather-energy-450s-2point9-kwh": {
+  "x": 0.5,
+  "y": 0.62,
+  "zoom": 1.3
+ },
+ "ather-energy-450x-3point7-kwh": {
+  "x": 0.5,
+  "y": 0.62,
+  "zoom": 1.3
+ },
+ "pure-ev-etranceplus-4point5-kwh": {
+  "x": 0.5,
+  "y": 0.5,
+  "zoom": 1.3
+ },
+ "pure-ev-etron-plus-3point0-kwh": {
+  "x": 0.5,
+  "y": 0.5,
+  "zoom": 1.3
+ }
+}

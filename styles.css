@@ -848,3 +848,23 @@ img.lazy.loaded{opacity:1}
 .dmh-section .eyebrow,.listings-hero .eyebrow,[class*="hero"] .eyebrow,.verdict-box .eyebrow,.footer .eyebrow{color:var(--g)}
 .pm-lbl{color:var(--ink-3)!important}
 .pick-actions a{min-height:32px;display:inline-flex;align-items:center;justify-content:center}
+
+/* thumbnails are square everywhere, the image itself keeps the scooter centred (tools/card-images.js) */
+.sc-img-wrap,.pick-img{aspect-ratio:1/1!important;height:auto!important;padding-top:0!important}
+.ranked-img{aspect-ratio:1/1;height:auto!important;min-height:0!important;align-self:start}
+/* scooter card body: these classes had no styles, so the card text stacked as a plain list */
+.sc-body{display:flex;flex-direction:column;gap:6px;padding:14px 16px 16px}
+.sc-brand-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-3);font-weight:600}
+.sc-brand-name{text-transform:uppercase;letter-spacing:.06em}
+.sc-variant-pill{margin-left:auto;font-size:11px;background:var(--surf-2);border:1px solid var(--border);border-radius:99px;padding:2px 8px;color:var(--ink-2)}
+.sc-tagline{font-size:12.5px;color:var(--ink-3);line-height:1.45}
+.sc-price-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.sc-price{font-size:18px;font-weight:800;color:var(--ink)}
+.sc-emi{font-size:12px;color:var(--ink-3)}
+.sc-specs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:4px 0}
+.sc-spec-item{background:var(--surf-2);border-radius:8px;padding:7px 4px;text-align:center;min-width:0}
+.sc-spec-val{font-size:12.5px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sc-spec-key{font-size:10px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+.sc-verdict-preview{font-size:12.5px;color:var(--ink-2);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sc-score-corner{color:#fff}
+.sc-score-corner .sc-score-num,.sc-score-corner .sc-score-label{color:#fff}

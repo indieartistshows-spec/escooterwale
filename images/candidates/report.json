@@ -90,7 +90,7 @@
      "file": "/images/candidates/hero-vida-vx2-go-2point2-kwh/1.webp",
      "src": "https://www.vidaworld.com/content/dam/vida2-0/go-2-2-rq/banner/3-1-desktop-banner.jpeg",
      "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
-     "alt": "<div style=\"display: none;\">VIDA VX2 Go kWh– Lightweight Electric Scooter Built for Smart City Commutes</div>",
+     "alt": "<div style=\"display: none;\">VIDA VX2 Go kWh\u2013 Lightweight Electric Scooter Built for Smart City Commutes</div>",
      "size": "2880x1734",
      "score": 8
     },
@@ -187,7 +187,7 @@
      "file": "/images/candidates/hero-vida-vx2-plus-3point4-kwh/4.webp",
      "src": "https://www.vidaworld.com/content/dam/vida2-0/vx2-plus-4-4/banner/VX2-Plus-Banner-DESKTOP.jpeg",
      "page": "https://www.vidaworld.com/vx2-plus-electric-scooter.html",
-     "alt": "<div style=\"display:none;\">VIDA VX2 Plus Electric Scooter – Power, Range & Performance Redefined</div>",
+     "alt": "<div style=\"display:none;\">VIDA VX2 Plus Electric Scooter \u2013 Power, Range & Performance Redefined</div>",
      "size": "1440x864",
      "score": 6.24
     },
@@ -312,5 +312,13 @@
    ],
    "saved": []
   }
+ },
+ "chosen": {
+  "hero-vida-vx2-go-2point2-kwh": "5.webp",
+  "hero-vida-vx2-plus-3point4-kwh": "3.webp",
+  "pure-ev-epluto-7g-2point0-kwh": "2.webp",
+  "ather-energy-450s-2point9-kwh": "none, brand site blocks automated visits; current photo cropped around the scooter",
+  "pure-ev-etranceplus-4point5-kwh": "none, brand site blocked; cropped",
+  "pure-ev-etron-plus-3point0-kwh": "none, brand site blocked; cropped"
  }
 }
