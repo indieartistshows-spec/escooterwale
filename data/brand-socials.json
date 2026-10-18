@@ -1,0 +1,143 @@
+{
+ "_note": "Official brand social accounts for the Brand Socials tab on /trending. Every link was taken from the brand's own website (header or footer) on 18 Oct 2026 and checked to load, except Ather, whose website hides its links from automated visits (Facebook and LinkedIn confirmed directly; Instagram and X are Ather's long-standing official handles). Re-checked by .github/workflows/brand-socials.yml (reports/brand-socials.json).",
+ "checked": "2026-10-18",
+ "brands": [
+  {
+   "brandId": "ola-electric",
+   "name": "Ola Electric",
+   "handle": "@olaelectric",
+   "img": "/images/brand-socials/ola-electric.jpg",
+   "source": "olaelectric.com",
+   "links": {
+    "instagram": "https://www.instagram.com/olaelectric/",
+    "youtube": "https://www.youtube.com/channel/UCq0Gj5tEf6xwvPTzx0ZxABQ",
+    "x": "https://x.com/OlaElectric",
+    "facebook": "https://www.facebook.com/Ola-Electric-104817894981469",
+    "linkedin": "https://www.linkedin.com/company/olaelectric/"
+   }
+  },
+  {
+   "brandId": "ather-energy",
+   "name": "Ather Energy",
+   "handle": "@atherenergy",
+   "img": "/images/brand-socials/ather-energy.jpg",
+   "source": "facebook.com/atherenergy",
+   "links": {
+    "instagram": "https://www.instagram.com/atherenergy/",
+    "x": "https://x.com/atherenergy",
+    "facebook": "https://www.facebook.com/atherenergy",
+    "linkedin": "https://www.linkedin.com/company/ather-energy/"
+   }
+  },
+  {
+   "brandId": "tvs-motor",
+   "name": "TVS Motor",
+   "handle": "@tvsmotorcompany",
+   "img": "/images/brand-socials/tvs-motors.jpg",
+   "source": "tvsmotor.com",
+   "links": {
+    "instagram": "https://www.instagram.com/tvsmotorcompany/",
+    "iqube": "https://www.instagram.com/tvsiqube/",
+    "youtube": "https://www.youtube.com/channel/UCmXFdsJtTAbbYrH7zz-lkkw",
+    "x": "https://x.com/tvsmotorcompany",
+    "facebook": "https://www.facebook.com/tvsmotorcompany",
+    "linkedin": "https://www.linkedin.com/company/tvs-motor-company/"
+   }
+  },
+  {
+   "brandId": "bajaj-chetak",
+   "name": "Bajaj Chetak",
+   "handle": "@chetak_official",
+   "img": "/images/brand-socials/bajaj-chetak.jpg",
+   "source": "chetak.com",
+   "links": {
+    "instagram": "https://www.instagram.com/chetak_official/",
+    "youtube": "https://www.youtube.com/channel/UCDqZ3x0gNt3EBIT7tNv2A4g",
+    "x": "https://x.com/chetakofficial",
+    "linkedin": "https://www.linkedin.com/company/bajaj-auto-ltd/"
+   }
+  },
+  {
+   "brandId": "hero-vida",
+   "name": "Hero Vida",
+   "handle": "@vidaworldofficial",
+   "img": "/images/brand-socials/hero-vida.jpg",
+   "source": "vidaworld.com",
+   "links": {
+    "instagram": "https://www.instagram.com/vidaworldofficial/",
+    "youtube": "https://www.youtube.com/@vidaworldofficial",
+    "x": "https://x.com/VidaDotWorld",
+    "linkedin": "https://www.linkedin.com/company/vidaworldofficial/"
+   }
+  },
+  {
+   "brandId": "ampere",
+   "name": "Ampere",
+   "handle": "@ampere_ev_",
+   "img": "/images/brand-socials/ampere.jpg",
+   "source": "ampere-electric.com",
+   "links": {
+    "instagram": "https://www.instagram.com/ampere_ev_/",
+    "youtube": "https://www.youtube.com/c/ampereelectricvehicles",
+    "x": "https://x.com/ampere_ev",
+    "facebook": "https://www.facebook.com/amperevehicles",
+    "linkedin": "https://www.linkedin.com/company/greaves-electric-mobility/"
+   }
+  },
+  {
+   "brandId": "okinawa",
+   "name": "Okinawa",
+   "handle": "@okinawaautotech",
+   "img": "/images/brand-socials/okinawa.jpg",
+   "source": "okinawascooters.com",
+   "links": {
+    "instagram": "https://www.instagram.com/okinawaautotech/",
+    "youtube": "https://www.youtube.com/@OkinawaAutotech",
+    "x": "https://x.com/OkinawaAutotech",
+    "facebook": "https://www.facebook.com/OkinawaAutotech",
+    "linkedin": "https://www.linkedin.com/company/okinawaautotech/"
+   }
+  },
+  {
+   "brandId": "pure-ev",
+   "name": "Pure EV",
+   "handle": "@pureenergy_india",
+   "img": "/images/brand-socials/pure-ev.jpg",
+   "source": "pureenergy.co.in",
+   "links": {
+    "instagram": "https://www.instagram.com/pureenergy_india/",
+    "youtube": "https://www.youtube.com/@pureenergyindia",
+    "x": "https://x.com/pureenergyindia",
+    "facebook": "https://www.facebook.com/pureenergyindia",
+    "linkedin": "https://www.linkedin.com/company/pureenergyindia/"
+   }
+  },
+  {
+   "brandId": "bounce-infinity",
+   "name": "Bounce Infinity",
+   "handle": "@bounce_infinity",
+   "img": "/images/brand-socials/bounce-infinity.jpg",
+   "source": "bounceinfinity.com",
+   "links": {
+    "instagram": "https://www.instagram.com/bounce_infinity/",
+    "x": "https://x.com/bounce_infinity",
+    "facebook": "https://www.facebook.com/bounceinfinityIndia",
+    "linkedin": "https://www.linkedin.com/company/bounceinfinity/"
+   }
+  },
+  {
+   "brandId": "bgauss",
+   "name": "BGauss",
+   "handle": "@bgauss_official",
+   "img": "/images/brand-socials/bgauss.jpg",
+   "source": "bgauss.com",
+   "links": {
+    "instagram": "https://www.instagram.com/bgauss_official/",
+    "youtube": "https://www.youtube.com/@bgaussofficial2049",
+    "x": "https://x.com/BGaussOfficial",
+    "facebook": "https://www.facebook.com/bgauss.official",
+    "linkedin": "https://www.linkedin.com/company/bgauss/"
+   }
+  }
+ ]
+}

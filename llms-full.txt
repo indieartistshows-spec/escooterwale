@@ -76,7 +76,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Models: 5
 - Founded: 2008
 - Headquarters: Coimbatore
-- Official site: https://www.greavesamperev.com
+- Official site: https://ampere-electric.com
 - About: India's oldest EV brand (2008). 5000+ dealers in 500+ cities. LFP batteries in Nexus range. Tier-2/3 India's most accessible EV.
 
 ### Okinawa
@@ -84,7 +84,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Models: 5
 - Founded: 2015
 - Headquarters: Gurugram
-- Official site: https://www.okinawa.co.in
+- Official site: https://okinawascooters.com
 - About: 10 years EV experience. 700+ dealers. Budget to mid-range. Okhi-90 is only Okinawa with 90 km/h. Entry R30 starts at ₹61,998.
 
 ### Pure EV

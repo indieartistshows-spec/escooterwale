@@ -26,7 +26,7 @@
 <meta property="og:description" content="YouTube reviews, Reddit threads and brand news, added every week."/>
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="styles.css?v=eddef5d5"/>
-<script src="data.js?v=cfac69f4"></script>
+<script src="data.js?v=06ea7c33"></script>
 <script src="seo.js?v=5e2f83ba"></script>
 <script src="outbound.js?v=f73b042f"></script>
 <script src="trending-data.js?v=9a264011"></script>
@@ -156,6 +156,24 @@
   margin-left:auto
 }
 
+/* ── BRAND SOCIALS ────────────────────────────────────────── */
+.soc-card{background:var(--surf);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.soc-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.12)}
+.soc-shot{display:block;aspect-ratio:4/5;overflow:hidden;background:var(--surf-2)}
+.soc-shot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.soc-body{padding:12px 12px 14px;display:flex;flex-direction:column;gap:10px;flex:1}
+.soc-head{display:flex;align-items:center;gap:10px;min-width:0}
+.soc-name{font-weight:800;font-size:14px;color:var(--ink);line-height:1.2}
+.soc-handle{font-size:12px;color:var(--ink-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.soc-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.soc-pill{font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:99px;text-decoration:none;color:#fff;line-height:1}
+.soc-instagram{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888)}
+.soc-iqube{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888)}
+.soc-youtube{background:#e00000}
+.soc-facebook{background:#1877f2}
+.soc-x{background:#111}
+.soc-linkedin{background:#0a66c2}
+.soc-pill:hover{filter:brightness(1.1)}
 /* ── BRAND INSTAGRAM GRID ────────────────────────────────── */
 .social-brands{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 @media(max-width:1100px){.social-brands{grid-template-columns:repeat(4,1fr)}}
@@ -331,7 +349,7 @@
     <div class="tab-panel" id="tab-social">
       <div class="live-note">
         <div class="live-dot"></div>
-        <div>Latest posts from EV scooter brand official accounts. New launches, offers, and updates — directly from the brands.</div>
+        <div>Official accounts of every brand we list, for new launches, offers and updates straight from the brand. Each link is taken from the brand's own website and checked to work.</div>
       </div>
       
       <div class="social-brands" id="socialBrands"></div>
@@ -955,80 +973,18 @@ const PLATFORM_CLASSES = {instagram:'sp-instagram',twitter:'sp-twitter',youtube:
 
 function renderSocial(){
   const container = document.getElementById('socialBrands');
-
-  const brands = [
-    {
-      name:'Ola Electric',
-      handle:'@olaelectric',
-      img:'/images/brand-socials/ola-electric.jpg',
-      insta:'https://www.instagram.com/olaelectric/'
-    },
-    {
-      name:'Ather Energy',
-      handle:'@atherenergy',
-      img:'/images/brand-socials/ather-energy.jpg',
-      insta:'https://www.instagram.com/atherenergy/'
-    },
-    {
-      name:'TVS Motor',
-      handle:'@tvsmotorcompany',
-      img:'/images/brand-socials/tvs-motors.jpg',
-      insta:'https://www.instagram.com/tvsmotorcompany/'
-    },
-    {
-      name:'Bajaj Chetak',
-      handle:'@bajajchetak',
-      img:'/images/brand-socials/bajaj-chetak.jpg',
-      insta:'https://www.instagram.com/bajajchetak/'
-    },
-    {
-      name:'Hero Vida',
-      handle:'@herovida_official',
-      img:'/images/brand-socials/hero-vida.jpg',
-      insta:'https://www.instagram.com/herovida_official/'
-    },
-    {
-      name:'Greaves Ampere',
-      handle:'@greavesamperev',
-      img:'/images/brand-socials/ampere.jpg',
-      insta:'https://www.instagram.com/greavesamperev/'
-    },
-    {
-      name:'Okinawa',
-      handle:'@okinawaautotech',
-      img:'/images/brand-socials/okinawa.jpg',
-      insta:'https://www.instagram.com/okinawaautotech/'
-    },
-    {
-      name:'Pure EV',
-      handle:'@pureev_india',
-      img:'/images/brand-socials/pure-ev.jpg',
-      insta:'https://www.instagram.com/pureev_india/'
-    },
-    {
-      name:'Bounce Infinity',
-      handle:'@bounce_infinity',
-      img:'/images/brand-socials/bounce-infinity.jpg',
-      insta:'https://www.instagram.com/bounce_infinity/'
-    },
-    {
-      name:'BGauss',
-      handle:'@bgauss_official',
-      img:'/images/brand-socials/bgauss.jpg',
-      insta:'https://www.instagram.com/bgauss_official/'
-    }
-  ];
-
-  container.innerHTML = brands.map(function(b){
-    return '<a href="'+b.insta+'" target="_blank" rel="noopener noreferrer" class="insta-card">'+
-      '<img class="insta-screenshot" src="'+b.img+'" alt="'+b.name+' Instagram" loading="lazy"/>'+
-      '<div class="insta-overlay">'+
-        '<div class="insta-brand-name">'+b.name+'</div>'+
-        '<div class="insta-handle">'+b.handle+'</div>'+
-        '<div class="insta-ig-pill">Instagram</div>'+
-      '</div>'+
-    '</a>';
-  }).join('');
+  const NETS = [['instagram','Instagram'],['iqube','iQube Instagram'],['youtube','YouTube'],['facebook','Facebook'],['x','X'],['linkedin','LinkedIn']];
+  const list = (typeof BRAND_SOCIALS!=='undefined' && BRAND_SOCIALS) || [];
+  container.innerHTML = list.map(b => `
+    <div class="soc-card">
+      <a class="soc-shot" href="${b.links.instagram||Object.values(b.links)[0]}" target="_blank" rel="noopener noreferrer" data-out="social" data-brand="${b.brandId}">
+        <img src="${b.img}" alt="${b.name} on Instagram" loading="lazy"/>
+      </a>
+      <div class="soc-body">
+        <div class="soc-head">${typeof brandLogoHTML==='function'?brandLogoHTML(b.brandId,32):''}<div><div class="soc-name" translate="no">${b.name}</div><div class="soc-handle" translate="no">${b.handle}</div></div></div>
+        <div class="soc-links">${NETS.filter(([k])=>b.links[k]).map(([k,label])=>`<a class="soc-pill soc-${k}" href="${b.links[k]}" target="_blank" rel="noopener noreferrer" data-out="social" data-brand="${b.brandId}" translate="no">${label}</a>`).join('')}</div>
+      </div>
+    </div>`).join('');
 }
 
 // ── Tab Switching// ── Tab Switching// ── Tab Switching ───────────────────────────────────────

@@ -107,6 +107,7 @@ const header = `/* ============================================================
    ============================================================ */\n\n`;
 const out = header +
   `const SCOOTERS_DB = ${JSON.stringify(scooters)};\n\n` +
+  `const BRAND_SOCIALS = ${JSON.stringify(J('data/brand-socials.json').brands)};\n\n` +
   `const BRANDS_DB = ${JSON.stringify(brands)};\n\n` +
   `const NEWS_DB = ${JSON.stringify(news)};\n\n` +
   `const CITIES_DB = ${JSON.stringify(cities)};\n\n` +
@@ -120,7 +121,7 @@ const out = header +
 function getByBrand(slug)  { return SCOOTERS_DB.filter(s=>s.brandSlug===slug); }
 function getSorted(by)     { return [...SCOOTERS_DB].sort((a,b)=>b[by]-a[by]); }
 function getBrandById(id)  { return BRANDS_DB.find(b=>b.id===id); }
-if(typeof module!=='undefined') module.exports={BRAND_VIDEOS,AGG_LINKS,SCOOTERS_DB,BRANDS_DB,NEWS_DB,CITIES_DB,SUBSIDY,SW_CONFIG,EV_SALES,BRAND_LINKS};
+if(typeof module!=='undefined') module.exports={BRAND_SOCIALS,BRAND_VIDEOS,AGG_LINKS,SCOOTERS_DB,BRANDS_DB,NEWS_DB,CITIES_DB,SUBSIDY,SW_CONFIG,EV_SALES,BRAND_LINKS};
 `;
 fs.writeFileSync('data.js', out);
 // Trending archive goes in its own file so data.js stays small as it grows
