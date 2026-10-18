@@ -1,6 +1,7 @@
 /* tools/optimize-html.js  |  last step of the build, run over every finished page
-   - fonts: one non-blocking Google Fonts request (only the weights we use) instead of
-     render-blocking @imports and duplicate links; drops the dead Typekit placeholder
+   - fonts: self-hosted and preloaded (no Google Fonts request, no render-blocking @import),
+     not preloaded so the hero banner gets the bandwidth;
+     drops the dead Typekit placeholder
    - cache busting: every local .js/.css gets ?v=<content hash>, so vercel.json can cache
      them for a year and a new build is still picked up straight away
    - images in page markup below the first screen get loading="lazy" decoding="async"
@@ -9,8 +10,8 @@ const fs = require('fs'), path = require('path'), crypto = require('crypto');
 const ROOT = path.resolve(__dirname, '..');
 const SKIP = new Set(['node_modules', '.git', 'automation', 'i18n', 'tools', '.github', 'images', 'data']);
 
-const FONT = 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&family=Open+Sans:wght@400;500;600;700;800&display=swap';
-const FONT_TAGS = `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="${FONT}" media="print" onload="this.media='all'" data-fonts><noscript><link rel="stylesheet" href="${FONT}"></noscript>`;
+// fonts are self-hosted (see @font-face at the top of styles.css). They are not preloaded on
+// purpose: on slow mobile a preload competes with the hero banner and costs about 0.4 s of LCP.
 
 const hashes = {};
 const hashOf = f => hashes[f] || (hashes[f] = crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0, 8));
@@ -30,12 +31,13 @@ const pages = walk(ROOT);
 for (const file of pages) {
   let h = fs.readFileSync(file, 'utf8');
   const before = h;
-  // fonts: strip every old Google Fonts / Typekit tag, then add the single async one
-  h = h.replace(/<noscript>\s*<link[^>]*fonts\.googleapis\.com\/css2[^>]*>\s*<\/noscript>/g, '')
-    .replace(/<link[^>]*(fonts\.googleapis\.com\/css2|use\.typekit\.net)[^>]*>\s*/g, '')
-    .replace(/<link rel="(dns-prefetch|preconnect)" href="(https:)?\/\/fonts\.(googleapis|gstatic)\.com"[^>]*>\s*/g, '')
-    .replace(/<!--[^>]*(Proxima Nova via Adobe|typekit)[^>]*-->\s*/g, '');
-  if (!h.includes('data-fonts')) h = h.replace(/(<link rel="stylesheet" href="[^"]*styles\.css[^"]*"\s*\/?>)/, FONT_TAGS + '$1');
+  // fonts: strip every old Google Fonts / Typekit tag, the self-hosted ones load from styles.css
+  // only our two families: other pages (yellow-brother) keep their own Google fonts
+  h = h.replace(/<noscript>\s*<link[^>]*fonts\.googleapis\.com\/css2\?family=(Open\+Sans|Nunito)[^>]*>\s*<\/noscript>/g, '')
+    .replace(/<link[^>]*(fonts\.googleapis\.com\/css2\?family=(Open\+Sans|Nunito)|use\.typekit\.net)[^>]*>\s*/g, '')
+    .replace(/<!--[^>]*(Proxima Nova via Adobe|typekit)[^>]*-->\s*/g, '')
+    .replace(/<link rel="preload" href="\/fonts\/[^"]+"[^>]*>/g, '');
+  if (!/fonts\.googleapis\.com\/css2/.test(h)) h = h.replace(/<link rel="(dns-prefetch|preconnect)" href="(https:)?\/\/fonts\.(googleapis|gstatic)\.com"[^>]*>\s*/g, '');
 
   // cache busting for local scripts and styles
   h = h.replace(/(<(?:script|link)\b[^>]*?\s(?:src|href)=")([^":?#]+\.(?:js|css))(\?v=[a-z0-9]+)?(")/g, (m, a, ref, _v, z) => {
