@@ -38,7 +38,7 @@ jobs:
       SCRAPE: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.scrape) }}
     steps:
       - uses: actions/checkout@v4
-        with: { fetch-depth: 2 }
+        with: { fetch-depth: 2, ref: main }
 
       - uses: actions/setup-node@v4
         with: { node-version: 20, cache: npm }
@@ -119,7 +119,7 @@ jobs:
           git add -A -- . ':!automation/out' ':!shots-tmp'
           if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git commit -m "Weekly update $(date -u +%F)" -m "Automatic. Summary: reports/weekly/$(date -u +%F).md"
-          git push origin HEAD:main
+          for i in 1 2 3; do git pull --rebase -q origin main && git push origin HEAD:main && break; sleep 10; done
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Open summary issue

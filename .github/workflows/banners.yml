@@ -37,4 +37,4 @@ jobs:
           git add images/banners data/banners.json data/launch-features.json
           git diff --cached --quiet && { echo "no change"; exit 0; }
           git commit -m "Homepage banners refreshed from brand sites"
-          git push
+          for i in 1 2 3; do git pull --rebase -q origin "$GITHUB_REF_NAME" && git push && break; sleep 10; done
