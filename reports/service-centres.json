@@ -1,18 +1,69 @@
 {
- "ranAt": "2026-10-18T14:55:21.133Z",
+ "ranAt": "2026-10-18T15:03:58.737Z",
  "pincodes": 19238,
- "source": "https://overpass-api.de/api/interpreter",
- "osmElements": 11193,
- "counts": {
-  "ola-electric": 26,
-  "ather-energy": 27,
-  "tvs-motor": 268,
-  "bajaj-chetak": 229,
-  "hero-vida": 94,
-  "ampere": 4,
-  "okinawa": 4,
-  "pure-ev": 1,
-  "bounce-infinity": 1,
-  "bgauss": 3
+ "places": {
+  "districts": 110,
+  "from": "Kerala | Thrissur",
+  "calls": 0,
+  "fails": 5,
+  "error": "Places 403 Places API (New) has not been used in project 908290727189 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/places"
+ },
+ "osm": {
+  "source": "https://overpass-api.de/api/interpreter",
+  "elements": 11193,
+  "counts": {
+   "ola-electric": 26,
+   "ather-energy": 27,
+   "tvs-motor": 268,
+   "bajaj-chetak": 229,
+   "hero-vida": 94,
+   "ampere": 4,
+   "okinawa": 4,
+   "pure-ev": 1,
+   "bounce-infinity": 1,
+   "bgauss": 3
+  }
+ },
+ "merged": {
+  "ola-electric": {
+   "points": 26,
+   "regions": 0
+  },
+  "ather-energy": {
+   "points": 27,
+   "regions": 0
+  },
+  "tvs-motor": {
+   "points": 265,
+   "regions": 0
+  },
+  "bajaj-chetak": {
+   "points": 229,
+   "regions": 0
+  },
+  "hero-vida": {
+   "points": 93,
+   "regions": 0
+  },
+  "ampere": {
+   "points": 4,
+   "regions": 0
+  },
+  "okinawa": {
+   "points": 4,
+   "regions": 0
+  },
+  "pure-ev": {
+   "points": 1,
+   "regions": 0
+  },
+  "bounce-infinity": {
+   "points": 1,
+   "regions": 0
+  },
+  "bgauss": {
+   "points": 3,
+   "regions": 0
+  }
  }
 }
