@@ -152,7 +152,7 @@ not to move anything. Say the word and it is a two-minute job.
 
 ## G. Not code, and worth more than most code
 
-- **Named authors.** Everything is bylined "ScooterWale Editorial" or "ScooterWale Test
+- **Named authors.** Everything is bylined "EScooterwale Editorial" or "EScooterwale Test
   Team". Answer engines weight named people with stated credentials. One page introducing
   who runs the range tests would feed `Person` schema and help more than a month of
   technical work.

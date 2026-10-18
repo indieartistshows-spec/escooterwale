@@ -12,19 +12,19 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-<title id="pgTitle">Compare Electric Scooters Side by Side 2026 | ScooterWale</title>
+<title id="pgTitle">Compare Electric Scooters Side by Side 2026 | EScooterwale</title>
 <meta id="pgDesc" name="description" content="Put any two electric scooters side by side: price, real-world range, specs and our verdict on which to buy."/>
 <meta name="keywords" content="electric scooter comparison india 2026, compare ev scooters, ola s1 pro vs ather 450x, best ev scooter comparison"/>
 <link id="pgCanon" rel="canonical" href="https://www.escooterwale.in/compare"/>
-<meta property="og:title" id="ogTitle" content="Compare Electric Scooters Side by Side | ScooterWale"/>
+<meta property="og:title" id="ogTitle" content="Compare Electric Scooters Side by Side | EScooterwale"/>
 <meta property="og:description" id="ogDesc" content="Side-by-side EV scooter comparison with a clear winner verdict."/>
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="styles.css?v=ffe87cc3"/>
-<script src="data.js?v=3a72efcf"></script>
-<script src="seo.js?v=55c5bc26"></script>
+<script src="data.js?v=4f7d3eee"></script>
+<script src="seo.js?v=5e2f83ba"></script>
 <script src="outbound.js?v=0e59e930"></script>
-<script src="components.js?v=a436435d"></script>
-<script src="videos-db.js?v=7796fe7e"></script>
+<script src="components.js?v=4d652ab0"></script>
+<script src="videos-db.js?v=f29ab906"></script>
 <style>
 .cmp-header{background:var(--ink);padding:40px 0 32px;background-image:url('https://images.unsplash.com/photo-1571333250630-f0230c320b6d?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;position:relative}
 .cmp-header::before{content:'';position:absolute;inset:0;background:rgba(13,17,23,.88)}
@@ -404,7 +404,7 @@ function buildCmp(a,b){
 
 function updateSEO(a,b){
   const _seo=SEO.compare(a,b), title=_seo.title, desc=_seo.desc;
-  document.getElementById('pgTitle').textContent=title+' | ScooterWale';
+  document.getElementById('pgTitle').textContent=title+' | EScooterwale';
   document.getElementById('pgDesc').setAttribute('content',desc);
   document.getElementById('pgCanon').setAttribute('href', window.__SW_A__ ? `https://www.escooterwale.in/compare/${a.id}-vs-${b.id}` : 'https://www.escooterwale.in/compare');
   document.getElementById('ogTitle').setAttribute('content',title);
@@ -414,8 +414,8 @@ function updateSEO(a,b){
   const ex=document.querySelector('script[type="application/ld+json"]');if(ex)ex.remove();
   const ld=document.createElement('script');ld.type='application/ld+json';
   ld.textContent=JSON.stringify([
-    {"@context":"https://schema.org","@type":"Product","name":a.fullName,"description":a.tagline,"offers":{"@type":"Offer","price":a.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":a.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":a.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}},
-    {"@context":"https://schema.org","@type":"Product","name":b.fullName,"description":b.tagline,"offers":{"@type":"Offer","price":b.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":b.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"ScooterWale"},"reviewRating":{"@type":"Rating","ratingValue":b.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}}
+    {"@context":"https://schema.org","@type":"Product","name":a.fullName,"description":a.tagline,"offers":{"@type":"Offer","price":a.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":a.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"EScooterwale"},"reviewRating":{"@type":"Rating","ratingValue":a.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}},
+    {"@context":"https://schema.org","@type":"Product","name":b.fullName,"description":b.tagline,"offers":{"@type":"Offer","price":b.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":b.brandUrl},"review":{"@type":"Review","author":{"@type":"Organization","name":"EScooterwale"},"reviewRating":{"@type":"Rating","ratingValue":b.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}}
   ]);
   document.head.appendChild(ld);
 }
@@ -430,7 +430,7 @@ function runCompare(opts){
   const idA=document.getElementById('pickA').value,idB=document.getElementById('pickB').value;
   if(idA===idB){alert('Please select two different scooters.');return;}
   const a=SCOOTERS_DB.find(s=>s.id===idA),b=SCOOTERS_DB.find(s=>s.id===idB);
-  if(!a||!b){console.warn('ScooterWale: unknown scooter id',idA,idB);return;}
+  if(!a||!b){console.warn('EScooterwale: unknown scooter id',idA,idB);return;}
   document.getElementById('cmpOutput').innerHTML=buildCmp(a,b);
   updateSEO(a,b);
   if(scroll) document.querySelector('.cmp-body').scrollIntoView({behavior:'smooth',block:'start'});

@@ -35,7 +35,7 @@ const srcLinks = [SD.central.sources, ...Object.values(SD.states).map(s => s.sou
 page({
   file: 'guide-subsidy-deadlines.html',
   canon: '/guide-subsidy-deadlines',
-  title: 'EV Subsidy Last Date 2026: Every Central and State Deadline | ScooterWale',
+  title: 'EV Subsidy Last Date 2026: Every Central and State Deadline | EScooterwale',
   desc: `PM E-DRIVE runs to 31 March 2028. State deadlines come sooner: ${shortList}. Every electric scooter subsidy deadline, checked ${VERIFIED}.`,
   eyebrow: 'Deadline Tracker',
   crumb: 'EV subsidy deadlines',
@@ -184,7 +184,7 @@ const eligibilityRows = rows.map(r => `      <tr>
 page({
   file: 'guide-subsidy-eligibility.html',
   canon: '/guide-subsidy-eligibility',
-  title: 'Which Electric Scooters Qualify for PM E-DRIVE Subsidy? All 44 Models Checked | ScooterWale',
+  title: 'Which Electric Scooters Qualify for PM E-DRIVE Subsidy? All 44 Models Checked | EScooterwale',
   desc: 'Four of the 44 electric scooters sold in India get no PM E-DRIVE subsidy because they exceed the ₹1.5 lakh ex-factory cap. Model-by-model subsidy amounts, verified 24 August 2026.',
   eyebrow: 'Eligibility Check',
   crumb: 'Which scooters qualify',
@@ -315,7 +315,7 @@ ${eligibilityRows}
 page({
   file: 'guide-subsidy-claim.html',
   canon: '/guide-subsidy-claim',
-  title: 'How to Claim the PM E-DRIVE Subsidy: Documents, Portal and Timeline | ScooterWale',
+  title: 'How to Claim the PM E-DRIVE Subsidy: Documents, Portal and Timeline | EScooterwale',
   desc: 'Step-by-step process to claim your electric scooter subsidy in India: what the dealer does, what you do, the 30-day RC window, the document list, state-by-state application routes and what to do if the money never arrives.',
   eyebrow: 'Process Guide',
   crumb: 'How to claim',
@@ -512,7 +512,7 @@ const band = (label, lo, hi) => {
 page({
   file: 'electric-scooter-price.html',
   canon: '/electric-scooter-price',
-  title: `Electric Scooter Price in India 2026: All ${SCOOTERS_DB.length} Models Compared | ScooterWale`,
+  title: `Electric Scooter Price in India 2026: All ${SCOOTERS_DB.length} Models Compared | EScooterwale`,
   desc: `Complete electric scooter price list for India 2026. Ex-showroom and on-road prices, EMI, real-world range and subsidy for all ${SCOOTERS_DB.length} models from 10 brands. Updated 24 August 2026.`,
   eyebrow: 'Price List',
   crumb: 'Electric scooter prices',
@@ -656,7 +656,7 @@ const brandList = arr => arr.map(r => `<li><a href="/scooters/${r.s.id}">${r.s.b
 page({
   file: 'guide-battery-chemistry.html',
   canon: '/guide-battery-chemistry',
-  title: 'Which Electric Scooters Use LFP vs NMC Batteries in India? All 44 Models | ScooterWale',
+  title: 'Which Electric Scooters Use LFP vs NMC Batteries in India? All 44 Models | EScooterwale',
   desc: 'Battery cell chemistry for every electric scooter sold in India. Which use LFP, which use NMC, which brands refuse to say, and which have removable packs. Verified 24 August 2026.',
   eyebrow: 'Battery Guide',
   crumb: 'LFP vs NMC by model',

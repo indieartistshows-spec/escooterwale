@@ -12,8 +12,8 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-<title id="pgTitle">EV Scooter Reviews, Tests & News | ScooterWale</title>
-<meta name="description" id="pgDesc" content="Independent electric scooter reviews, real-world range tests and India EV news from the ScooterWale editorial team."/>
+<title id="pgTitle">EV Scooter Reviews, Tests & News | EScooterwale</title>
+<meta name="description" id="pgDesc" content="Independent electric scooter reviews, real-world range tests and India EV news from the EScooterwale editorial team."/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/article"/>
 <link rel="stylesheet" href="styles.css?v=ffe87cc3"/>
 <script type="application/ld+json" id="artSchema"></script>
@@ -78,7 +78,7 @@
       <div class="art-tag" id="artTag">Review</div>
       <h1 class="art-title" id="artTitle"></h1>
       <div class="art-meta">
-        <div class="art-author"><div class="art-author-avatar">SW</div><span>ScooterWale Editorial</span></div>
+        <div class="art-author"><div class="art-author-avatar">SW</div><span>EScooterwale Editorial</span></div>
         <span id="artDate">Apr 6, 2026</span>
         <span id="artRead">8 min read</span>
       </div>
@@ -114,10 +114,10 @@
 <div id="footerMount"></div>
 </div>
 
-<script src="data.js?v=3a72efcf"></script>
-<script src="seo.js?v=55c5bc26"></script>
+<script src="data.js?v=4f7d3eee"></script>
+<script src="seo.js?v=5e2f83ba"></script>
 <script src="outbound.js?v=0e59e930"></script>
-<script src="components.js?v=a436435d"></script>
+<script src="components.js?v=4d652ab0"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('news');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -140,7 +140,7 @@ const ARTICLES={
     <div class="callout"><h4>💡 Our tip after 12 months</h4><p>Carry the Ola fast charger in the boot. A mid-day 30-minute charge at an Ola Hypercharger point gives you an extra 60–70 km. This makes range anxiety completely disappear for most users.</p></div>
     <h2>Verdict: Still the best, but with caveats</h2>
     <p>After 10,000 km, the Ola S1 Pro Gen 2 remains India's best electric scooter on paper. The range, the boot, the features — nothing else matches it. But 'best on paper' and 'best ownership experience' are different things, and the gap between them is Ola's service network. If you live in a city with a good Ola Experience Centre, buy it without hesitation. If you don't, read the Ather 450X review first.</p>
-    <div class="verdict-inline"><div class="eyebrow">ScooterWale Verdict</div><p>India's most capable EV scooter. Buy it if you're in a metro. Think twice if you're not.</p></div>`
+    <div class="verdict-inline"><div class="eyebrow">EScooterwale Verdict</div><p>India's most capable EV scooter. Buy it if you're in a metro. Think twice if you're not.</p></div>`
   },
   'fame-3-guide':{
     tag:'Buying Guide',img:(NEWS_DB.find(n=>n.id==='fame-3-guide')||{}).img||'/images/hero-scooter.webp',
@@ -168,10 +168,10 @@ const id=window.__SW_ART__||new URLSearchParams(location.search).get('id')||'ola
 const art=ARTICLES[id]||ARTICLES['ola-s1-pro-review'];
 const dbItem=NEWS_DB.find(n=>n.id===id);
 
-document.getElementById('pgTitle').textContent=art.title+' | ScooterWale';
+document.getElementById('pgTitle').textContent=art.title+' | EScooterwale';
 document.getElementById('pgDesc').setAttribute('content',(dbItem?.excerpt||art.title).substring(0,160));
 document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/articles/${id}`);
-document.getElementById('artSchema').textContent=JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":art.title,"datePublished":art.date,"author":{"@type":"Organization","name":"ScooterWale Editorial"},"publisher":{"@type":"Organization","name":"ScooterWale","logo":"https://escooterwale.in/logo.png"}});
+document.getElementById('artSchema').textContent=JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":art.title,"datePublished":art.date,"author":{"@type":"Organization","name":"EScooterwale Editorial"},"publisher":{"@type":"Organization","name":"EScooterwale","logo":"https://escooterwale.in/logo.png"}});
 
 document.getElementById('bcTitle').textContent=art.title.substring(0,50)+'...';
 document.getElementById('artImg').src=art.img;

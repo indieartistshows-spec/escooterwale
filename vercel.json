@@ -5,121 +5,323 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/(.*)\\.(js|css|woff2)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/(.*)\\.(png|jpg|jpeg|webp|avif|svg|ico)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=604800" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=604800"
+        }
       ]
     },
     {
       "source": "/(robots.txt|sitemap.xml|llms.txt|llms-full.txt)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/scooters", "destination": "/listings.html" },
-    { "source": "/compare", "destination": "/compare.html" },
-    { "source": "/best", "destination": "/best.html" },
-    { "source": "/emi", "destination": "/emi.html" }
+    {
+      "source": "/scooters",
+      "destination": "/listings.html"
+    },
+    {
+      "source": "/compare",
+      "destination": "/compare.html"
+    },
+    {
+      "source": "/best",
+      "destination": "/best.html"
+    },
+    {
+      "source": "/emi",
+      "destination": "/emi.html"
+    }
   ],
   "redirects": [
     {
+      "source": "/:lang(hi|mr|ta|te|kn|gu|bn|or)/:page(terms|privacy)",
+      "destination": "/:page",
+      "permanent": true
+    },
+    {
       "source": "/scooter-detail",
-      "has": [{ "type": "query", "key": "id", "value": "(?<sid>[^&]+)" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<sid>[^&]+)"
+        }
+      ],
       "destination": "/scooters/:sid",
       "permanent": true
     },
     {
       "source": "/scooter-detail.html",
-      "has": [{ "type": "query", "key": "id", "value": "(?<sid>[^&]+)" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<sid>[^&]+)"
+        }
+      ],
       "destination": "/scooters/:sid",
       "permanent": true
     },
     {
       "source": "/brand",
-      "has": [{ "type": "query", "key": "b", "value": "(?<bid>[^&]+)" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "b",
+          "value": "(?<bid>[^&]+)"
+        }
+      ],
       "destination": "/brands/:bid",
       "permanent": true
     },
     {
       "source": "/brand.html",
-      "has": [{ "type": "query", "key": "b", "value": "(?<bid>[^&]+)" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "b",
+          "value": "(?<bid>[^&]+)"
+        }
+      ],
       "destination": "/brands/:bid",
       "permanent": true
     },
     {
       "source": "/city",
-      "has": [{ "type": "query", "key": "city", "value": "(?<cid>[^&]+)" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "city",
+          "value": "(?<cid>[^&]+)"
+        }
+      ],
       "destination": "/cities/:cid",
       "permanent": true
     },
     {
       "source": "/city.html",
-      "has": [{ "type": "query", "key": "city", "value": "(?<cid>[^&]+)" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "city",
+          "value": "(?<cid>[^&]+)"
+        }
+      ],
       "destination": "/cities/:cid",
       "permanent": true
     },
     {
       "source": "/best.html",
-      "has": [{ "type": "query", "key": "cat", "value": "(?<cat>[^&]+)" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "cat",
+          "value": "(?<cat>[^&]+)"
+        }
+      ],
       "destination": "/best/:cat",
       "permanent": true
     },
     {
       "source": "/article",
-      "has": [{ "type": "query", "key": "id", "value": "(?<aid>[^&]+)" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<aid>[^&]+)"
+        }
+      ],
       "destination": "/articles/:aid",
       "permanent": true
     },
     {
       "source": "/article.html",
-      "has": [{ "type": "query", "key": "id", "value": "(?<aid>[^&]+)" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<aid>[^&]+)"
+        }
+      ],
       "destination": "/articles/:aid",
       "permanent": true
     },
-
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/listings.html", "destination": "/listings", "permanent": true },
-    { "source": "/trending.html", "destination": "/trending", "permanent": true },
-    { "source": "/yellow-brother.html", "destination": "/yellow-brother", "permanent": true },
-    { "source": "/cases.html", "destination": "/", "permanent": true },
-    { "source": "/cases", "destination": "/", "permanent": true },
-    { "source": "/:lang(hi|mr|ta|te|kn|gu|bn|or)/cases", "destination": "/:lang", "permanent": true },
-    { "source": "/guide-subsidy.html", "destination": "/guide-subsidy", "permanent": true },
-    { "source": "/guide-real-range.html", "destination": "/guide-real-range", "permanent": true },
-    { "source": "/guide-battery-types.html", "destination": "/guide-battery-types", "permanent": true },
-    { "source": "/guide-service-network.html", "destination": "/guide-service-network", "permanent": true },
-
-    { "source": "/all-scooters", "destination": "/listings", "permanent": true },
-    { "source": "/all-scooters.html", "destination": "/listings", "permanent": true },
-    { "source": "/best-for", "destination": "/best", "permanent": true },
-    { "source": "/best-for.html", "destination": "/best", "permanent": true },
-    { "source": "/emi-calculator", "destination": "/emi", "permanent": true },
-    { "source": "/emi-calculator.html", "destination": "/emi", "permanent": true },
-    { "source": "/best-electric-scooters-under-1-lakh.html", "destination": "/best/under-1-lakh", "permanent": true },
-    { "source": "/best-electric-scooters-under-1-5-lakh.html", "destination": "/best/under-1-5l", "permanent": true },
-    { "source": "/best-electric-scooters-for-daily-commute.html", "destination": "/best/daily-commute", "permanent": true },
-    { "source": "/ola-electric-scooters.html", "destination": "/brands/ola-electric", "permanent": true },
-    { "source": "/ather-electric-scooters.html", "destination": "/brands/ather-energy", "permanent": true },
-    { "source": "/tvs-electric-scooters.html", "destination": "/brands/tvs-motor", "permanent": true },
-    { "source": "/ola-s1-pro.html", "destination": "/scooters/ola-electric-s1-pro-4-kwh", "permanent": true },
-    { "source": "/ather-450x.html", "destination": "/scooters/ather-energy-450x-3point7-kwh", "permanent": true },
-    { "source": "/tvs-iqube.html", "destination": "/scooters/tvs-motor-iqube-st-5point3-kwh", "permanent": true },
-    { "source": "/news/ola-vs-ather-comparison.html", "destination": "/compare/ola-electric-s1-pro-4-kwh-vs-ather-energy-450x-3point7-kwh", "permanent": true },
-    { "source": "/news/best-ev-scooters-india-2026.html", "destination": "/best", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/listings.html",
+      "destination": "/listings",
+      "permanent": true
+    },
+    {
+      "source": "/trending.html",
+      "destination": "/trending",
+      "permanent": true
+    },
+    {
+      "source": "/yellow-brother.html",
+      "destination": "/yellow-brother",
+      "permanent": true
+    },
+    {
+      "source": "/cases.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cases",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:lang(hi|mr|ta|te|kn|gu|bn|or)/cases",
+      "destination": "/:lang",
+      "permanent": true
+    },
+    {
+      "source": "/guide-subsidy.html",
+      "destination": "/guide-subsidy",
+      "permanent": true
+    },
+    {
+      "source": "/guide-real-range.html",
+      "destination": "/guide-real-range",
+      "permanent": true
+    },
+    {
+      "source": "/guide-battery-types.html",
+      "destination": "/guide-battery-types",
+      "permanent": true
+    },
+    {
+      "source": "/guide-service-network.html",
+      "destination": "/guide-service-network",
+      "permanent": true
+    },
+    {
+      "source": "/all-scooters",
+      "destination": "/listings",
+      "permanent": true
+    },
+    {
+      "source": "/all-scooters.html",
+      "destination": "/listings",
+      "permanent": true
+    },
+    {
+      "source": "/best-for",
+      "destination": "/best",
+      "permanent": true
+    },
+    {
+      "source": "/best-for.html",
+      "destination": "/best",
+      "permanent": true
+    },
+    {
+      "source": "/emi-calculator",
+      "destination": "/emi",
+      "permanent": true
+    },
+    {
+      "source": "/emi-calculator.html",
+      "destination": "/emi",
+      "permanent": true
+    },
+    {
+      "source": "/best-electric-scooters-under-1-lakh.html",
+      "destination": "/best/under-1-lakh",
+      "permanent": true
+    },
+    {
+      "source": "/best-electric-scooters-under-1-5-lakh.html",
+      "destination": "/best/under-1-5l",
+      "permanent": true
+    },
+    {
+      "source": "/best-electric-scooters-for-daily-commute.html",
+      "destination": "/best/daily-commute",
+      "permanent": true
+    },
+    {
+      "source": "/ola-electric-scooters.html",
+      "destination": "/brands/ola-electric",
+      "permanent": true
+    },
+    {
+      "source": "/ather-electric-scooters.html",
+      "destination": "/brands/ather-energy",
+      "permanent": true
+    },
+    {
+      "source": "/tvs-electric-scooters.html",
+      "destination": "/brands/tvs-motor",
+      "permanent": true
+    },
+    {
+      "source": "/ola-s1-pro.html",
+      "destination": "/scooters/ola-electric-s1-pro-4-kwh",
+      "permanent": true
+    },
+    {
+      "source": "/ather-450x.html",
+      "destination": "/scooters/ather-energy-450x-3point7-kwh",
+      "permanent": true
+    },
+    {
+      "source": "/tvs-iqube.html",
+      "destination": "/scooters/tvs-motor-iqube-st-5point3-kwh",
+      "permanent": true
+    },
+    {
+      "source": "/news/ola-vs-ather-comparison.html",
+      "destination": "/compare/ola-electric-s1-pro-4-kwh-vs-ather-energy-450x-3point7-kwh",
+      "permanent": true
+    },
+    {
+      "source": "/news/best-ev-scooters-india-2026.html",
+      "destination": "/best",
+      "permanent": true
+    }
   ]
 }

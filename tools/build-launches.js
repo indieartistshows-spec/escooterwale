@@ -79,7 +79,7 @@ ${list.map(row).join('\n')}
 page({
   file: 'launches.html',
   canon: '/launches',
-  title: 'New Electric Scooter Launches in India 2026 | ScooterWale',
+  title: 'New Electric Scooter Launches in India 2026 | EScooterwale',
   desc: `Every new electric scooter and battery variant that appears on a brand's official website, and every model that quietly disappears. Checked weekly across ${new Set(S.map(s => s.brandSlug)).size} brands.`,
   eyebrow: 'Launch tracker',
   crumb: 'Launches and discontinued models',

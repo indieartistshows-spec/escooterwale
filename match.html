@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script data-late-ga>addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id=G-NZ5QX4MXYX';document.head.appendChild(s)},1)})</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NZ5QX4MXYX');
+</script>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Match with your Dream Scooter: Find the Right EV for You | EScooterwale</title>
+<meta name="description" content="Answer 7 quick questions about how you ride and get matched with the electric scooters that fit you, using our real-world range tests and on-road prices for your city."/>
+<link rel="canonical" href="https://www.escooterwale.in/match"/>
+<meta property="og:title" content="Match with your Dream Scooter | EScooterwale"/>
+<meta property="og:description" content="7 quick questions, then swipe through the electric scooters that fit how you ride."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.escooterwale.in/match"/>
+<meta property="og:image" content="https://www.escooterwale.in/og-image.jpg"/>
+<meta property="og:site_name" content="EScooterwale"/>
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css?v=ffe87cc3"/>
+<style>
+.mt-wrap{max-width:620px;margin:0 auto;padding:28px 16px 120px}
+.mt-head{text-align:center;margin-bottom:22px}
+.mt-head h1{font-size:30px;line-height:1.2;margin:6px 0 8px}
+.mt-head p{color:var(--ink-3);font-size:15px;line-height:1.55}
+.mt-progress{height:6px;background:var(--surf-3);border-radius:99px;overflow:hidden;margin:18px 0 6px}
+.mt-progress i{display:block;height:100%;width:0;background:var(--g);border-radius:99px;transition:width .3s}
+.mt-count{font-size:12px;color:var(--ink-3);text-align:right;font-weight:600}
+.mt-step{display:none;animation:mtIn .25s ease}
+.mt-step.on{display:block}
+@keyframes mtIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.mt-q{font-size:21px;font-weight:800;margin:14px 0 4px;font-family:var(--f-serif)}
+.mt-hint{font-size:13.5px;color:var(--ink-3);margin-bottom:14px}
+.mt-opts{display:grid;gap:10px}
+.mt-opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:15px 16px;border:1.5px solid var(--border);border-radius:var(--r);background:var(--surf);font:600 15px var(--f);color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.mt-opt:hover{border-color:var(--g)}
+.mt-opt.sel{border-color:var(--g);background:var(--g-tint)}
+.mt-opt .ic{font-size:20px;width:28px;text-align:center;flex-shrink:0}
+.mt-opt small{display:block;font-weight:400;color:var(--ink-3);font-size:12.5px;margin-top:2px}
+.mt-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.mt-back{background:none;border:0;color:var(--ink-3);font:600 14px var(--f);cursor:pointer;padding:10px 4px}
+.mt-back[hidden]{display:none}
+.mt-pin{display:flex;gap:8px}
+.mt-pin input,.mt-field input{flex:1;width:100%;padding:14px;border:1.5px solid var(--border);border-radius:var(--r);font:500 16px var(--f);color:var(--ink)}
+.mt-pin input:focus,.mt-field input:focus{outline:none;border-color:var(--g)}
+.mt-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border:0;border-radius:var(--r);background:#0b7a45;color:#fff;font:700 15px var(--f);cursor:pointer;text-decoration:none;min-height:48px}
+.mt-btn:disabled{opacity:.45;cursor:not-allowed}
+.mt-btn.ghost{background:var(--surf);color:var(--ink);border:1.5px solid var(--border)}
+.mt-pinmsg{font-size:13.5px;margin-top:8px;color:var(--ink-3);min-height:20px}
+.mt-pinmsg.ok{color:#0b7a45;font-weight:600}
+.mt-pinmsg.err{color:#b42318}
+/* deck */
+.mt-stack{position:relative;height:470px;margin:6px auto 0;max-width:420px;touch-action:pan-y}
+.mt-card{position:absolute;inset:0;background:var(--surf);border:1px solid var(--border);border-radius:var(--r-xl);box-shadow:var(--sh-lg);overflow:hidden;display:flex;flex-direction:column;user-select:none;will-change:transform;transition:transform .3s ease,opacity .3s ease}
+.mt-card.back{transform:scale(.95) translateY(14px);opacity:.7}
+.mt-card.drag{transition:none}
+.mt-card .ph{height:280px;background:var(--surf-2);display:flex;align-items:center;justify-content:center;position:relative}
+.mt-card .ph img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.mt-pct{position:absolute;top:12px;left:12px;background:var(--ink);color:#fff;font:800 13px var(--f);padding:6px 11px;border-radius:99px}
+.mt-close{position:absolute;top:12px;right:12px;background:#fff3cd;color:#7a5200;font:700 11.5px var(--f);padding:5px 10px;border-radius:99px}
+.mt-stamp{position:absolute;top:22px;font:800 22px var(--f);padding:6px 14px;border:3px solid;border-radius:10px;opacity:0;transform:rotate(-12deg)}
+.mt-stamp.yes{left:18px;color:#0b7a45;border-color:#0b7a45}
+.mt-stamp.no{right:18px;color:#b42318;border-color:#b42318;transform:rotate(12deg)}
+.mt-card .bd{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+.mt-brand{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.mt-name{text-align:center;font-size:22px;font-weight:800;line-height:1.2;font-family:var(--f-serif)}
+.mt-price{font-size:14px;color:var(--ink-2);font-weight:600}
+.mt-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
+.mt-specs div{background:var(--surf-2);border-radius:12px;padding:12px 6px;text-align:center}
+.mt-specs b{display:block;font-size:15px;white-space:nowrap;font-weight:800;color:var(--ink);line-height:1.2}
+.mt-specs span{display:block;font-size:11.5px;color:var(--ink-3);margin-top:3px;text-transform:uppercase;letter-spacing:.04em}
+.mt-why{list-style:none;padding:0;margin:2px 0 0;display:grid;gap:6px}
+.mt-why li{font-size:13.5px;line-height:1.45;padding-left:22px;position:relative;color:var(--ink-2)}
+.mt-why li::before{content:"✓";position:absolute;left:2px;color:#0b7a45;font-weight:800}
+.mt-skipif{font-size:13px;line-height:1.45;color:#7a3d00;background:#fff7ed;border-radius:8px;padding:8px 10px;margin-top:auto}
+.mt-skipif b{font-weight:700}
+.mt-ctrl{display:flex;justify-content:center;gap:22px;margin-top:20px}
+.mt-ctrl button{width:64px;height:64px;border-radius:50%;border:2px solid var(--border);background:var(--surf);font-size:26px;cursor:pointer;box-shadow:var(--sh);display:flex;align-items:center;justify-content:center}
+.mt-ctrl .no{color:#b42318}.mt-ctrl .yes{color:#0b7a45;border-color:#0b7a45}
+.mt-ctrl-lbl{display:flex;justify-content:center;gap:22px;font-size:12px;color:var(--ink-3);margin-top:6px}
+.mt-ctrl-lbl span{width:64px;text-align:center}
+.mt-tip{text-align:center;font-size:13.5px;color:var(--ink-3);margin-bottom:6px}
+.mt-sheet{position:fixed;left:0;right:0;bottom:0;background:var(--surf);border-radius:20px 20px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.18);padding:20px 16px 26px;z-index:400;transform:translateY(110%);transition:transform .25s ease;max-width:620px;margin:0 auto}
+.mt-sheet.on{transform:none}
+.mt-sheet h3{font-size:17px;margin:0 0 12px}
+.mt-chips{display:flex;flex-wrap:wrap;gap:8px}
+.mt-chip{padding:11px 14px;border:1.5px solid var(--border);border-radius:99px;background:var(--surf);font:600 14px var(--f);cursor:pointer;color:var(--ink)}
+.mt-chip:hover{border-color:var(--g)}
+.mt-cart{position:fixed;right:16px;bottom:84px;z-index:350;display:none;align-items:center;gap:8px;background:var(--ink);color:#fff;border:0;border-radius:99px;padding:13px 18px;font:700 14.5px var(--f);box-shadow:var(--sh-xl);cursor:pointer}
+.mt-cart.on{display:inline-flex}
+.mt-cart b{background:var(--g);color:#fff;border-radius:99px;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;padding:0 6px}
+.mt-cart.pop{animation:mtPop .35s ease}
+@keyframes mtPop{50%{transform:scale(1.12)}}
+@media(min-width:769px){.mt-cart{bottom:28px;right:28px}}
+/* form */
+.mt-formcard{background:var(--surf);border:1px solid var(--border);border-radius:var(--r-xl);padding:24px 20px;box-shadow:var(--sh)}
+.mt-formcard h2{font-size:22px;line-height:1.3;margin:0 0 6px}
+.mt-formcard .sub{font-size:14px;color:var(--ink-3);margin-bottom:16px}
+.mt-field{margin-bottom:12px}
+.mt-field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px;color:var(--ink-2)}
+.mt-field.bad input{border-color:#b42318}
+.mt-err{font-size:12.5px;color:#b42318;margin-top:4px;display:none}
+.mt-field.bad .mt-err{display:block}
+.mt-consent{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:var(--ink-2);margin:14px 0 8px;cursor:pointer}
+.mt-consent input{width:20px;height:20px;margin-top:2px;flex-shrink:0;accent-color:#0b7a45}
+.mt-consent.bad{color:#b42318}
+.mt-legal{font-size:12.5px;color:var(--ink-3);margin:6px 0 16px}
+.mt-legal a{color:#0b7a45;font-weight:600}
+.mt-formerr{font-size:13.5px;color:#b42318;margin:10px 0 0;min-height:18px}
+.mt-explore{display:block;text-align:center;margin-top:16px;font-size:14px;color:var(--ink-3);font-weight:600}
+.mt-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.mt-picks{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.mt-picks span{font-size:12.5px;background:var(--g-tint);color:#0b5c36;border-radius:99px;padding:5px 10px;font-weight:600}
+/* shortlist */
+.mt-list{display:grid;gap:14px;margin-top:10px}
+.mt-li{display:grid;grid-template-columns:110px 1fr;gap:14px;background:var(--surf);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px;box-shadow:var(--sh-sm)}
+.mt-li img{width:110px;height:90px;object-fit:contain;background:var(--surf-2);border-radius:10px}
+.mt-li .nm{font-weight:800;font-size:16px;line-height:1.25}
+.mt-li .meta{font-size:13px;color:var(--ink-3);margin:4px 0 8px;line-height:1.5}
+.mt-li .acts{display:flex;gap:8px;flex-wrap:wrap}
+.mt-li .acts a{font-size:13px;font-weight:700;padding:8px 12px;border-radius:8px;text-decoration:none;min-height:36px;display:inline-flex;align-items:center}
+.mt-li .acts .p{background:#0b7a45;color:#fff}
+.mt-li .acts .s{border:1.5px solid var(--border);color:var(--ink)}
+.mt-top{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px}
+.mt-share{margin-top:22px;background:var(--ink);color:#fff;border-radius:var(--r-xl);padding:20px;text-align:center}
+.mt-share p{color:rgba(255,255,255,.75);font-size:14px;margin:6px 0 14px}
+.mt-share .big{font-size:19px;font-weight:800}
+.mt-empty{text-align:center;padding:30px 10px}
+.mt-empty .mt-btn{margin:6px}
+.mt-strings{display:none}
+@media(max-width:420px){.mt-stack{height:420px}.mt-head h1{font-size:26px}.mt-li{grid-template-columns:86px 1fr}.mt-li img{width:86px;height:76px}}
+</style>
+<!--hreflang-->
+<link rel="alternate" hreflang="en-IN" href="https://www.escooterwale.in/match"/>
+<link rel="alternate" hreflang="hi-IN" href="https://www.escooterwale.in/hi/match"/>
+<link rel="alternate" hreflang="mr-IN" href="https://www.escooterwale.in/mr/match"/>
+<link rel="alternate" hreflang="ta-IN" href="https://www.escooterwale.in/ta/match"/>
+<link rel="alternate" hreflang="te-IN" href="https://www.escooterwale.in/te/match"/>
+<link rel="alternate" hreflang="kn-IN" href="https://www.escooterwale.in/kn/match"/>
+<link rel="alternate" hreflang="gu-IN" href="https://www.escooterwale.in/gu/match"/>
+<link rel="alternate" hreflang="bn-IN" href="https://www.escooterwale.in/bn/match"/>
+<link rel="alternate" hreflang="or-IN" href="https://www.escooterwale.in/or/match"/>
+<link rel="alternate" hreflang="x-default" href="https://www.escooterwale.in/match"/>
+<!--/hreflang-->
+</head>
+<body>
+<div id="navMount"></div>
+<div class="page-wrap" role="main">
+<div class="mt-wrap">
+
+  <div class="mt-head" id="mtHead">
+    <div class="eyebrow">Scooter match</div>
+    <h1>Match with your Dream Scooter</h1>
+    <p>Answer 7 quick questions. We match you with the electric scooters that fit how you actually ride, using our own real-world range tests.</p>
+    <div class="mt-progress" aria-hidden="true"><i id="mtBar"></i></div>
+    <div class="mt-count" id="mtCount">Question 1 of 7</div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="mtQuiz">
+    <div class="mt-step on" data-q="budget">
+      <h2 class="mt-q">What is your budget?</h2>
+      <p class="mt-hint">Ex-showroom price. We show the on-road price for your city later.</p>
+      <div class="mt-opts">
+        <button class="mt-opt" data-v="u100"><span class="ic">💰</span><span>Under ₹1 lakh</span></button>
+        <button class="mt-opt" data-v="100-130"><span class="ic">💰</span><span>₹1 lakh to ₹1.3 lakh</span></button>
+        <button class="mt-opt" data-v="130-160"><span class="ic">💰</span><span>₹1.3 lakh to ₹1.6 lakh</span></button>
+        <button class="mt-opt" data-v="o160"><span class="ic">💎</span><span>Above ₹1.6 lakh</span></button>
+        <button class="mt-opt" data-v="any"><span class="ic">🤔</span><span>Not sure yet<small>Show me the best fit at any price</small></span></button>
+      </div>
+    </div>
+
+    <div class="mt-step" data-q="daily">
+      <h2 class="mt-q">How far do you ride on a normal day?</h2>
+      <p class="mt-hint">Add up the whole day: office, errands, the ride back.</p>
+      <div class="mt-opts">
+        <button class="mt-opt" data-v="20"><span class="ic">🏘️</span><span>Under 20 km</span></button>
+        <button class="mt-opt" data-v="40"><span class="ic">🏙️</span><span>20 to 40 km</span></button>
+        <button class="mt-opt" data-v="70"><span class="ic">🛣️</span><span>40 to 70 km</span></button>
+        <button class="mt-opt" data-v="100"><span class="ic">🚀</span><span>More than 70 km</span></button>
+      </div>
+    </div>
+
+    <div class="mt-step" data-q="riders">
+      <h2 class="mt-q">Who will ride it?</h2>
+      <p class="mt-hint">Pick the one that fits most days.</p>
+      <div class="mt-opts">
+        <button class="mt-opt" data-v="solo"><span class="ic">🧍</span><span>Mostly just me</span></button>
+        <button class="mt-opt" data-v="pillion"><span class="ic">👫</span><span>Me and a pillion, often</span></button>
+        <button class="mt-opt" data-v="family"><span class="ic">👨‍👩‍👧</span><span>Family use<small>School runs, groceries, the whole household</small></span></button>
+        <button class="mt-opt" data-v="work"><span class="ic">📦</span><span>Work or deliveries</span></button>
+      </div>
+    </div>
+
+    <div class="mt-step" data-q="pincode">
+      <h2 class="mt-q">Where will you ride?</h2>
+      <p class="mt-hint">Your pincode sets the on-road price, road tax and subsidy for your area.</p>
+      <div class="mt-pin">
+        <input id="mtPin" type="tel" inputmode="numeric" maxlength="6" placeholder="6 digit pincode" aria-label="Pincode" autocomplete="postal-code"/>
+        <button class="mt-btn" id="mtPinGo" disabled>Continue</button>
+      </div>
+      <div class="mt-pinmsg" id="mtPinMsg" aria-live="polite"></div>
+    </div>
+
+    <div class="mt-step" data-q="charging">
+      <h2 class="mt-q">Where will you charge it?</h2>
+      <p class="mt-hint">This decides how much range and charging speed matter.</p>
+      <div class="mt-opts">
+        <button class="mt-opt" data-v="home"><span class="ic">🏠</span><span>At home, I have my own parking</span></button>
+        <button class="mt-opt" data-v="office"><span class="ic">🏢</span><span>At office or public chargers</span></button>
+        <button class="mt-opt" data-v="none"><span class="ic">❔</span><span>No fixed spot yet<small>I need fewer charges a week</small></span></button>
+      </div>
+    </div>
+
+    <div class="mt-step" data-q="priority">
+      <h2 class="mt-q">What matters most to you?</h2>
+      <p class="mt-hint">Only one. The rest still count, this one counts more.</p>
+      <div class="mt-opts">
+        <button class="mt-opt" data-v="range"><span class="ic">🔋</span><span>Longest real range</span></button>
+        <button class="mt-opt" data-v="speed"><span class="ic">⚡</span><span>Speed and pickup</span></button>
+        <button class="mt-opt" data-v="boot"><span class="ic">🧳</span><span>Boot space and comfort</span></button>
+        <button class="mt-opt" data-v="brand"><span class="ic">🛠️</span><span>Trusted brand and service</span></button>
+        <button class="mt-opt" data-v="price"><span class="ic">🏷️</span><span>Lowest price</span></button>
+      </div>
+    </div>
+
+    <div class="mt-step" data-q="licence">
+      <h2 class="mt-q">Do you have a two-wheeler licence?</h2>
+      <p class="mt-hint">Scooters capped at 25 km/h need no licence or registration.</p>
+      <div class="mt-opts">
+        <button class="mt-opt" data-v="yes"><span class="ic">🪪</span><span>Yes, I have one</span></button>
+        <button class="mt-opt" data-v="no"><span class="ic">🚲</span><span>No, show me low-speed scooters</span></button>
+      </div>
+    </div>
+
+    <div class="mt-nav"><button class="mt-back" id="mtBack" hidden>← Back</button><span></span></div>
+  </div>
+
+  <!-- DECK -->
+  <div id="mtDeck" hidden>
+    <p class="mt-tip" id="mtTip">Swipe right to shortlist, left to skip.</p>
+    <p class="mt-tip" id="mtFew" hidden></p>
+    <div class="mt-stack" id="mtStack" aria-live="polite"></div>
+    <div class="mt-ctrl">
+      <button class="no" id="mtNo" aria-label="Skip this scooter">✕</button>
+      <button class="yes" id="mtYes" aria-label="Add to my shortlist">♥</button>
+    </div>
+    <div class="mt-ctrl-lbl"><span>Skip</span><span>Shortlist</span></div>
+  </div>
+
+  <div class="mt-sheet" id="mtSheet" role="dialog" aria-label="Why skip">
+    <h3>Why skip this one?</h3>
+    <div class="mt-chips">
+      <button class="mt-chip" data-r="price">Too expensive</button>
+      <button class="mt-chip" data-r="range">Not enough range</button>
+      <button class="mt-chip" data-r="brand">Not my brand</button>
+      <button class="mt-chip" data-r="look">Don't like the look</button>
+      <button class="mt-chip" data-r="other">Just not for me</button>
+    </div>
+  </div>
+
+  <button class="mt-cart" id="mtCart" type="button">My shortlist <b id="mtCartN">0</b></button>
+
+  <!-- NOTHING LIKED -->
+  <div id="mtEmpty" class="mt-empty" hidden>
+    <h2 class="mt-q">Nothing caught your eye?</h2>
+    <p class="mt-hint">That is useful too. We can show a few more, or you can browse everything.</p>
+    <button class="mt-btn" id="mtMore">Show me more matches</button>
+    <a class="mt-btn ghost" href="/listings">Explore on my own</a>
+    <p><button class="mt-back" id="mtRestart">Start over</button></p>
+  </div>
+
+  <!-- LEAD FORM -->
+  <div id="mtForm" hidden>
+    <div class="mt-formcard">
+      <h2>Save my shortlist and get on-road prices for <span id="mtFormPlace" translate="no"></span></h2>
+      <p class="sub">We will send your shortlist with on-road prices, and partner dealers can reach you with test ride offers.</p>
+      <div class="mt-picks" id="mtPicks" translate="no"></div>
+      <form id="mtLead" novalidate>
+        <div class="mt-field" data-f="name"><label for="fName">Full name</label><input id="fName" name="name" autocomplete="name" required/><div class="mt-err">Please enter your name.</div></div>
+        <div class="mt-field" data-f="mobile"><label for="fMobile">Mobile number</label><input id="fMobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="14" placeholder="10 digit mobile" required/><div class="mt-err">Please enter a valid 10 digit mobile number.</div></div>
+        <div class="mt-field" data-f="email"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" autocomplete="email" required/><div class="mt-err">Please enter a valid email.</div></div>
+        <div class="mt-field" data-f="pincode"><label for="fPin">Pincode</label><input id="fPin" name="pincode" type="tel" inputmode="numeric" maxlength="6" autocomplete="postal-code" required/><div class="mt-err">Please enter a valid 6 digit pincode.</div></div>
+        <div class="mt-hp" aria-hidden="true"><label for="fWeb">Website</label><input id="fWeb" name="website" tabindex="-1" autocomplete="off"/></div>
+        <label class="mt-consent" id="mtConsentRow"><input type="checkbox" id="fConsent"/><span id="mtConsentText">I agree that EScooterwale and its partner scooter brands and dealers may contact me about on-road prices, test rides, offers and the EScooterwale newsletter. I can unsubscribe any time.</span></label>
+        <p class="mt-legal">By continuing you agree to our <a href="/terms" target="_blank">Terms</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.</p>
+        <button class="mt-btn" type="submit" id="mtSubmit" style="width:100%">Show my shortlist</button>
+        <p class="mt-formerr" id="mtFormErr" aria-live="polite"></p>
+      </form>
+      <a class="mt-explore" href="/listings" id="mtExplore">Explore on my own</a>
+    </div>
+  </div>
+
+  <!-- SHORTLIST -->
+  <div id="mtList" hidden>
+    <h2 class="mt-q">Your shortlist</h2>
+    <p class="mt-hint">On-road prices for <span id="mtListPlace" translate="no"></span>. Prices are estimates, the dealer quote is final.</p>
+    <div class="mt-top" id="mtTopActs"></div>
+    <div class="mt-list" id="mtListItems"></div>
+    <div class="mt-share">
+      <div class="big">Share your match</div>
+      <p>Send it to whoever you are buying with, or dare a friend to take the quiz.</p>
+      <button class="mt-btn" id="mtShare">Share my match</button>
+    </div>
+    <p style="text-align:center;margin-top:18px"><a href="/listings" class="mt-explore" style="display:inline">See all electric scooters</a> · <button class="mt-back" id="mtRestart2">Take the quiz again</button></p>
+  </div>
+
+</div>
+</div>
+<div id="footerMount"></div>
+
+<!-- phrases the page builds in script, listed here so every language has them -->
+<div class="mt-strings" aria-hidden="true">
+  <span>Question 1 of 7</span><span>Real range</span><span>Top speed</span><span>Boot space</span><span>120 to 135 km</span><span>90 km/h</span><span>22 L</span><span>Real range 120 to 135 km, enough for your 40 km day</span><span>Real range 120 to 135 km, about 3 days of your riding per charge</span>
+  <span>On-road about ₹1,12,000 in</span><span>One of the longest real ranges in your budget</span><span>Top speed 90 km/h</span>
+  <span>22 L boot, room for a helmet and groceries</span><span>Service score 8.5 out of 10</span><span>Among the lowest prices for what it offers</span>
+  <span>Charges fully in 3.3 hours</span><span>Comfortable for two, rated 9.5 out of 10 for ride</span><span>90% match</span><span>Close match</span>
+  <span>Skip if:</span><span>Smaller 22 L boot</span><span>Top speed only 25 km/h</span><span>Real range is tight for your day</span><span>Ex-showroom ₹1,12,000</span>
+  <span>Only 3 scooters fit everything you asked for. The rest are close matches.</span><span>No licence needed, top speed 25 km/h</span>
+  <span>Checking your pincode</span><span>Please enter a valid 6 digit pincode.</span><span>Found:</span><span>We could not place this pincode. We will use national prices.</span>
+  <span>Real range 120 to 135 km</span><span>Read full review</span><span>Book a test ride</span><span>Compare</span><span>Compare your top two</span><span>On-road about ₹1,12,000</span>
+  <span>Saving your shortlist</span><span>Please tick the box to continue.</span><span>Could not save right now. Please try again.</span><span>Too many tries. Please wait a few minutes.</span><span>Copied. Paste it anywhere to share.</span><span>India</span>
+</div>
+
+<script src="data.js?v=4f7d3eee"></script>
+<script src="seo.js?v=5e2f83ba"></script>
+<script src="outbound.js?v=0e59e930"></script>
+<script src="components.js?v=4d652ab0"></script>
+<script>
+document.getElementById('navMount').innerHTML=navHTML('match');
+document.getElementById('footerMount').innerHTML=footerHTML();
+if(window.SEO&&SEO.fillFacts) SEO.fillFacts(document);
+
+(function(){
+const $=id=>document.getElementById(id);
+const ev=(n,p)=>{try{window.gtag&&gtag('event',n,p||{})}catch(e){}};
+const inr=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const LANG=(document.documentElement.lang||'en').slice(0,2);
+const LP=LANG==='en'?'':'/'+LANG;
+const Q=['budget','daily','riders','pincode','charging','priority','licence'];
+const LABEL={budget:{u100:'Under 1 lakh','100-130':'1 to 1.3 lakh','130-160':'1.3 to 1.6 lakh',o160:'Above 1.6 lakh',any:'Not sure'},daily:{20:'Under 20 km',40:'20 to 40 km',70:'40 to 70 km',100:'Over 70 km'},riders:{solo:'Just me',pillion:'With pillion',family:'Family',work:'Work or delivery'},charging:{home:'Home',office:'Office or public',none:'No fixed spot'},priority:{range:'Range',speed:'Speed',boot:'Boot and comfort',brand:'Brand and service',price:'Lowest price'},licence:{yes:'Has licence',no:'No licence'}};
+const BUDGET={u100:[0,100000],'100-130':[100000,130000],'130-160':[130000,160000],o160:[160000,1e9],any:[0,1e9]};
+const A={};let step=0;
+
+/* ---------- pincode to state and city ---------- */
+const P2={11:'delhi',12:'haryana',13:'haryana',14:'punjab',15:'punjab',16:'punjab',17:'himachal-pradesh',18:'jammu-kashmir',19:'jammu-kashmir',20:'uttar-pradesh',21:'uttar-pradesh',22:'uttar-pradesh',23:'uttar-pradesh',24:'uttar-pradesh',25:'uttar-pradesh',26:'uttar-pradesh',27:'uttar-pradesh',28:'uttar-pradesh',30:'rajasthan',31:'rajasthan',32:'rajasthan',33:'rajasthan',34:'rajasthan',36:'gujarat',37:'gujarat',38:'gujarat',39:'gujarat',40:'maharashtra',41:'maharashtra',42:'maharashtra',43:'maharashtra',44:'maharashtra',45:'madhya-pradesh',46:'madhya-pradesh',47:'madhya-pradesh',48:'madhya-pradesh',49:'chhattisgarh',50:'telangana',51:'andhra-pradesh',52:'andhra-pradesh',53:'andhra-pradesh',56:'karnataka',57:'karnataka',58:'karnataka',59:'karnataka',60:'tamil-nadu',61:'tamil-nadu',62:'tamil-nadu',63:'tamil-nadu',64:'tamil-nadu',67:'kerala',68:'kerala',69:'kerala',70:'west-bengal',71:'west-bengal',72:'west-bengal',73:'west-bengal',74:'west-bengal',75:'odisha',76:'odisha',77:'odisha',78:'assam',79:'north-east',80:'bihar',81:'jharkhand',82:'jharkhand',83:'jharkhand',84:'bihar',85:'bihar'};
+const P3={160:'chandigarh',403:'goa',605:'puducherry',737:'sikkim',744:'andaman',246:'uttarakhand',247:'uttarakhand',248:'uttarakhand',249:'uttarakhand',262:'uttarakhand',263:'uttarakhand',500:'telangana',501:'telangana',502:'telangana',503:'telangana',504:'telangana',505:'telangana',506:'telangana',507:'telangana',508:'telangana',509:'telangana',814:'jharkhand',815:'jharkhand',816:'jharkhand'};
+const CITY3={400:'mumbai',401:'mumbai',411:'pune',412:'pune',110:'delhi',560:'bangalore',562:'bangalore',500:'hyderabad',501:'hyderabad',502:'hyderabad',600:'chennai',601:'chennai',602:'chennai',603:'chennai',380:'ahmedabad',382:'ahmedabad',394:'surat',395:'surat',700:'kolkata',711:'kolkata',302:'jaipur',303:'jaipur',226:'lucknow',227:'lucknow',160:'chandigarh'};
+const SNAME={'himachal-pradesh':'Himachal Pradesh','jammu-kashmir':'Jammu and Kashmir',chhattisgarh:'Chhattisgarh',puducherry:'Puducherry',sikkim:'Sikkim',andaman:'Andaman and Nicobar',jharkhand:'Jharkhand','north-east':'North East India'};
+function place(pin){
+  if(!/^[1-9]\d{5}$/.test(pin)) return null;
+  const p3=+pin.slice(0,3), p2=+pin.slice(0,2);
+  const state=P3[p3]||P2[p2]; if(!state) return null;
+  const cityId=CITY3[p3]||null, city=cityId&&(CITIES_DB.find(c=>c.id===cityId)||{}).name;
+  const sname=(SUBSIDY.states[state]||{}).name||SNAME[state]||state;
+  return {pin,state,stateName:sname,cityId,city:city||'',label:city||sname};
+}
+
+/* ---------- scooter facts ---------- */
+const nums=s=>(String(s||'').match(/\d+(\.\d+)?/g)||[]).map(Number);
+const fam=s=>(s.shortBrand||s.brand)+' '+s.name.replace(/\s*[\d.]+\s*kWh$/i,'');
+const F=SCOOTERS_DB.filter(s=>!s.discontinued).map(s=>{const r=nums(s.realRange);return {s,id:s.id,price:s.nationalPrice||s.price,lo:r[0]||nums(s.range)[0]*0.75,hi:r[1]||r[0]||0,speed:nums(s.speed)[0]||0,boot:nums(s.bootSpace)[0]||0,chg:nums(s.charging)[0]||5,score:s.score||7,sc:s.scores||{},brand:s.brandSlug,fam:fam(s)}});
+const MAX={lo:Math.max(...F.map(x=>x.lo)),speed:Math.max(...F.map(x=>x.speed)),boot:Math.max(...F.map(x=>x.boot)),pmin:Math.min(...F.map(x=>x.price)),pmax:Math.max(...F.map(x=>x.price))};
+function onRoad(x){
+  const pl=A.place, cp=pl&&pl.cityId&&x.s.cityPrices&&x.s.cityPrices[pl.cityId];
+  if(cp&&cp.onRoad) return cp.onRoad;
+  const m=SUBSIDY.onRoadModel, rt=pl&&(SUBSIDY.states[pl.state]||{}).roadTax||{}, ex=(cp&&cp.ex)||x.price;
+  const tax=rt.type==='percent'?ex*rt.pct/100:0;
+  return Math.round((ex+tax+m.insuranceBase+ex*m.insurancePct/100+m.handling+m.registration)/10)*10;
+}
+
+/* ---------- matching ---------- */
+function rank(){
+  const [bmin,bmax]=BUDGET[A.budget]||BUDGET.any, need=+A.daily||40;
+  const pool=F.filter(x=>A.licence==='no'?x.speed<=25:x.speed>25);
+  const out=pool.map(x=>{
+    let p=x.score*4;
+    p+=Math.min(x.lo/(need*2),1)*15;
+    const pr={range:x.lo/MAX.lo,speed:x.speed/MAX.speed,boot:x.boot/MAX.boot,brand:(x.sc.Service||6)/10,price:1-(x.price-MAX.pmin)/(MAX.pmax-MAX.pmin)}[A.priority]||0.5;
+    p+=pr*25;
+    p+={solo:(x.sc.Ride||7)/10*10,pillion:(x.speed>=70?6:3)+(x.sc.Ride||7)/10*4,family:x.boot/MAX.boot*10,work:x.lo/MAX.lo*5+(x.sc.Value||7)/10*5}[A.riders]||5;
+    p+={home:7,office:Math.max(0,Math.min(1,1-(x.chg-3)/4))*10,none:x.lo/MAX.lo*10}[A.charging]||5;
+    if(A.budget!=='any'&&x.price<bmin*0.85) p-=6;
+    const fitsBudget=x.price<=bmax*1.05, fitsRange=x.lo>=need*1.1;
+    return {x,p,fit:fitsBudget&&fitsRange,why:{fitsBudget,fitsRange}};
+  }).sort((a,b)=>b.p-a.p);
+  // one card per model family, at most two per brand among the first five
+  const seen=new Set(), perBrand={}, primary=[], rest=[];
+  for(const r of out){
+    if(seen.has(r.x.fam)){rest.push(r);continue}
+    if(r.fit&&primary.length<5&&(perBrand[r.x.brand]||0)<2){primary.push(r);seen.add(r.x.fam);perBrand[r.x.brand]=(perBrand[r.x.brand]||0)+1}
+    else rest.push(r);
+  }
+  const top=primary[0]?primary[0].p:(out[0]?out[0].p:1);
+  out.forEach(r=>r.pct=Math.max(40,Math.min(r.fit?97:72,Math.round(55+42*r.p/top))));
+  const fitN=primary.length;
+  const reserve=rest.filter(r=>!primary.includes(r)).sort((a,b)=>(b.fit-a.fit)||(b.p-a.p));
+  while(primary.length<5&&reserve.length){const r=reserve.shift();if(!primary.some(q=>q.x.fam===r.x.fam)) primary.push(r)}
+  return {deck:primary,reserve,fitN};
+}
+
+function whyLines(r){
+  const x=r.x, need=+A.daily||40, L=[];
+  if(A.charging==='none') L.push(`Real range ${x.lo} to ${x.hi} km, about ${Math.max(1,Math.floor(x.lo/need))} days of your riding per charge`);
+  else if(x.lo>=need) L.push(`Real range ${x.lo} to ${x.hi} km, enough for your ${need} km day`);
+  else L.push(`Real range ${x.lo} to ${x.hi} km`);
+  const pri={range:r.p&&x.lo>=MAX.lo*0.7?'One of the longest real ranges in your budget':null,speed:`Top speed ${x.speed} km/h`,boot:`${x.boot} L boot, room for a helmet and groceries`,brand:`Service score ${x.sc.Service||'7'} out of 10`,price:x.price<=MAX.pmin+(MAX.pmax-MAX.pmin)*0.35?'Among the lowest prices for what it offers':null}[A.priority];
+  if(pri) L.push(pri);
+  if(A.licence==='no') L.push('No licence needed, top speed 25 km/h');
+  else if(A.riders==='family'||A.riders==='work') L.push(`${x.boot} L boot, room for a helmet and groceries`);
+  else if(A.riders==='pillion') L.push(`Comfortable for two, rated ${x.sc.Ride||7} out of 10 for ride`);
+  else if(A.charging==='office') L.push(`Charges fully in ${x.chg} hours`);
+  else L.push(`Top speed ${x.speed} km/h`);
+  return [...new Set(L)].slice(0,3);
+}
+function skipIf(r){
+  const x=r.x, need=+A.daily||40;
+  if(x.lo<need*1.1) return 'Real range is tight for your day';
+  if(x.s.avoidIf&&x.s.avoidIf[0]) return x.s.avoidIf[0];
+  if(x.boot<24) return `Smaller ${x.boot} L boot`;
+  if(x.speed<=25) return 'Top speed only 25 km/h';
+  return '';
+}
+
+/* ---------- quiz ---------- */
+const steps=[...document.querySelectorAll('.mt-step')];
+function show(i){
+  step=i;steps.forEach((s,k)=>s.classList.toggle('on',k===i));
+  $('mtBar').style.width=Math.round(i/Q.length*100)+'%';
+  $('mtCount').textContent=`Question ${i+1} of ${Q.length}`;
+  $('mtBack').hidden=i===0;
+  if(Q[i]==='pincode') setTimeout(()=>$('mtPin').focus(),50);
+}
+steps.forEach((st,i)=>st.querySelectorAll('.mt-opt').forEach(b=>b.addEventListener('click',()=>{
+  st.querySelectorAll('.mt-opt').forEach(o=>o.classList.toggle('sel',o===b));
+  A[Q[i]]=b.dataset.v; ev('quiz_answer',{question:Q[i],answer:b.dataset.v});
+  if(i===0) ev('quiz_start');
+  setTimeout(()=>i<Q.length-1?show(i+1):finish(),180);
+})));
+$('mtBack').addEventListener('click',()=>show(Math.max(0,step-1)));
+const pinIn=$('mtPin');
+pinIn.addEventListener('input',()=>{
+  pinIn.value=pinIn.value.replace(/\D/g,'').slice(0,6);
+  const pl=place(pinIn.value), m=$('mtPinMsg');
+  $('mtPinGo').disabled=pinIn.value.length!==6;
+  if(pinIn.value.length<6){m.textContent='';m.className='mt-pinmsg';return}
+  if(pl){m.className='mt-pinmsg ok';m.innerHTML='Found: <span translate="no">'+esc(pl.city?pl.city+', '+pl.stateName:pl.stateName)+'</span>'}
+  else{m.className='mt-pinmsg err';m.textContent='We could not place this pincode. We will use national prices.'}
+});
+pinIn.addEventListener('keydown',e=>{if(e.key==='Enter'&&!$('mtPinGo').disabled)$('mtPinGo').click()});
+$('mtPinGo').addEventListener('click',()=>{
+  if(!/^[1-9]\d{5}$/.test(pinIn.value)){const m=$('mtPinMsg');m.className='mt-pinmsg err';m.textContent='Please enter a valid 6 digit pincode.';return}
+  A.pincode=pinIn.value;A.place=place(pinIn.value)||{pin:pinIn.value,state:'',stateName:'India',label:'India',city:''};
+  ev('quiz_answer',{question:'pincode',answer:A.place.state||'unknown'});
+  show(step+1);
+});
+
+/* ---------- deck ---------- */
+let R=null, queue=[], shown=0, liked=[], skipped=[], bannedBrands=new Set(), cur=null;
+const MAXCARDS=10;
+function finish(){
+  $('mtBar').style.width='100%';
+  try{const u=new URL(location.href);['budget','daily','riders','charging','priority','licence'].forEach(k=>u.searchParams.set(k,A[k]));history.replaceState(null,'',u)}catch(e){}
+  R=rank();queue=R.deck.slice();shown=0;liked=[];skipped=[];bannedBrands=new Set();
+  ev('match_shown',{matches:queue.map(r=>r.x.id).join(','),fit:R.fitN});
+  $('mtQuiz').hidden=true;$('mtHead').hidden=true;$('mtDeck').hidden=false;$('mtEmpty').hidden=true;
+  const few=$('mtFew');few.hidden=R.fitN>=5;if(R.fitN<5) few.textContent=`Only ${R.fitN} scooters fit everything you asked for. The rest are close matches.`;
+  window.scrollTo({top:0,behavior:'smooth'});
+  renderDeck();
+}
+function card(r,back){
+  const x=r.x,s=x.s,el=document.createElement('div');
+  el.className='mt-card'+(back?' back':'');
+  el.innerHTML=`<div class="ph"><img src="${esc(s.cardImg||s.heroImg)}" alt="${esc(s.fullName)}" draggable="false"/><span class="mt-stamp yes">♥</span><span class="mt-stamp no">✕</span></div>
+  <div class="bd"><div class="mt-name" translate="no">${esc(s.fullName)}</div>
+  <div class="mt-specs"><div><b>${x.lo} to ${x.hi} km</b><span>Real range</span></div><div><b>${x.speed} km/h</b><span>Top speed</span></div><div><b>${x.boot} L</b><span>Boot space</span></div></div></div>`;
+  return el;
+}
+function renderDeck(){
+  const st=$('mtStack');st.innerHTML='';
+  if(!queue.length) return deckDone();
+  cur=queue[0];const el=card(cur,false);st.appendChild(el);drag(el);
+  updateCart();
+}
+function drag(el){
+  let x0=null,y0=0,dx=0,id=null;
+  el.addEventListener('pointerdown',e=>{if(e.button>0)return;x0=e.clientX;y0=e.clientY;dx=0;id=e.pointerId;el.setPointerCapture(id);el.classList.add('drag')});
+  el.addEventListener('pointermove',e=>{if(x0==null)return;dx=e.clientX-x0;const dy=(e.clientY-y0)*0.2;el.style.transform=`translate(${dx}px,${dy}px) rotate(${dx/18}deg)`;
+    el.querySelector('.mt-stamp.yes').style.opacity=Math.max(0,Math.min(1,dx/90));el.querySelector('.mt-stamp.no').style.opacity=Math.max(0,Math.min(1,-dx/90))});
+  const up=()=>{if(x0==null)return;x0=null;el.classList.remove('drag');
+    if(dx>90) decide('yes');else if(dx<-90) decide('no');else{el.style.transform='';el.querySelectorAll('.mt-stamp').forEach(s=>s.style.opacity=0)}};
+  el.addEventListener('pointerup',up);el.addEventListener('pointercancel',up);
+}
+function fly(dir,done){
+  const el=$('mtStack').lastElementChild;if(!el) return done();
+  el.style.transform=`translate(${dir==='yes'?560:-560}px,40px) rotate(${dir==='yes'?24:-24}deg)`;el.style.opacity='0';
+  setTimeout(done,260);
+}
+function decide(dir){
+  if(!cur) return;
+  const r=cur;cur=null;shown++;
+  ev('match_swipe',{direction:dir==='yes'?'right':'left',model:r.x.id});
+  if(dir==='yes'){fly('yes',()=>{liked.push(r);queue.shift();bump();renderDeck()})}
+  else fly('no',()=>{queue.shift();askReason(r)});
+}
+function askReason(r){
+  const sh=$('mtSheet');sh.classList.add('on');
+  sh.querySelectorAll('.mt-chip').forEach(c=>c.onclick=()=>{
+    sh.classList.remove('on');const why=c.dataset.r;skipped.push({id:r.x.id,reason:c.textContent.trim()});
+    ev('match_skip_reason',{model:r.x.id,reason:why});
+    if(why==='brand') bannedBrands.add(r.x.brand);
+    if(shown+queue.length<MAXCARDS){
+      const inDeck=new Set(queue.concat(liked).map(q=>q.x.fam).concat(skipped.map(k=>(F.find(f=>f.id===k.id)||{}).fam)));
+      const ok=q=>!inDeck.has(q.x.fam)&&!bannedBrands.has(q.x.brand)&&(why!=='price'||q.x.price<r.x.price)&&(why!=='range'||q.x.lo>r.x.lo);
+      const i=R.reserve.findIndex(ok);
+      if(i>-1) queue.push(R.reserve.splice(i,1)[0]);
+    }
+    renderDeck();
+  });
+}
+function bump(){const c=$('mtCart');c.classList.remove('pop');void c.offsetWidth;c.classList.add('pop');updateCart()}
+function updateCart(){$('mtCartN').textContent=liked.length;$('mtCart').classList.toggle('on',liked.length>0&&!$('mtDeck').hidden)}
+function deckDone(){
+  if(liked.length) return openForm();
+  $('mtDeck').hidden=true;$('mtEmpty').hidden=false;updateCart();
+}
+$('mtYes').addEventListener('click',()=>decide('yes'));
+$('mtNo').addEventListener('click',()=>decide('no'));
+document.addEventListener('keydown',e=>{if($('mtDeck').hidden||$('mtSheet').classList.contains('on'))return;if(e.key==='ArrowRight')decide('yes');if(e.key==='ArrowLeft')decide('no')});
+$('mtCart').addEventListener('click',()=>{if(liked.length) openForm()});
+$('mtMore').addEventListener('click',()=>{const more=R.reserve.filter(q=>!bannedBrands.has(q.x.brand)).slice(0,3);R.reserve=R.reserve.filter(q=>!more.includes(q));queue=more;shown=0;$('mtEmpty').hidden=true;$('mtDeck').hidden=false;renderDeck()});
+const restart=()=>{Object.keys(A).forEach(k=>delete A[k]);document.querySelectorAll('.mt-opt.sel').forEach(o=>o.classList.remove('sel'));['mtDeck','mtEmpty','mtForm','mtList'].forEach(i=>$(i).hidden=true);$('mtQuiz').hidden=false;$('mtHead').hidden=false;liked=[];updateCart();history.replaceState(null,'',location.pathname);show(0);window.scrollTo({top:0})};
+$('mtRestart').addEventListener('click',restart);$('mtRestart2').addEventListener('click',restart);
+
+/* ---------- lead form ---------- */
+let formShownAt=0;
+function openForm(){
+  $('mtDeck').hidden=true;$('mtCart').classList.remove('on');$('mtForm').hidden=false;
+  $('mtFormPlace').textContent=A.place?A.place.label:'India';
+  $('mtPicks').innerHTML=liked.map(r=>`<span>${esc(r.x.s.fullName)}</span>`).join('');
+  if(A.pincode) $('fPin').value=A.pincode;
+  formShownAt=Date.now();ev('lead_form_shown',{shortlist:liked.length});
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+$('mtExplore').addEventListener('click',()=>ev('lead_form_explore'));
+const field=f=>document.querySelector(`.mt-field[data-f="${f}"]`);
+$('fMobile').addEventListener('input',e=>e.target.value=e.target.value.replace(/[^\d+\s]/g,''));
+$('fPin').addEventListener('input',e=>e.target.value=e.target.value.replace(/\D/g,'').slice(0,6));
+$('mtLead').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const v={name:$('fName').value.trim(),mobile:$('fMobile').value.replace(/[\s-]/g,'').replace(/^(\+?91|0)(?=[6-9]\d{9}$)/,''),email:$('fEmail').value.trim(),pincode:$('fPin').value.trim()};
+  const ok={name:v.name.length>=2,mobile:/^[6-9]\d{9}$/.test(v.mobile),email:/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v.email),pincode:/^[1-9]\d{5}$/.test(v.pincode)};
+  Object.keys(ok).forEach(k=>field(k).classList.toggle('bad',!ok[k]));
+  const consent=$('fConsent').checked;$('mtConsentRow').classList.toggle('bad',!consent);
+  const err=$('mtFormErr');err.textContent='';
+  if(Object.values(ok).includes(false)){const k=Object.keys(ok).find(k=>!ok[k]);field(k).querySelector('input').focus();return}
+  if(!consent){err.textContent='Please tick the box to continue.';return}
+  const pl=place(v.pincode)||A.place||{};
+  const btn=$('mtSubmit');btn.disabled=true;btn.textContent='Saving your shortlist';
+  const qs=new URLSearchParams(location.search), src=['utm_source','utm_medium','utm_campaign'].map(k=>qs.get(k)).filter(Boolean).join(' / ')||document.referrer||'direct';
+  try{
+    const r=await fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({...v,city:pl.city||'',state:pl.stateName||'',consent:true,consentText:$('mtConsentText').textContent.trim(),
+      shortlist:liked.map(q=>q.x.s.fullName),skipped:skipped.map(k=>({id:(F.find(f=>f.id===k.id)||{s:{}}).s.fullName||k.id,reason:k.reason})),
+      answers:Object.fromEntries(['budget','daily','riders','charging','priority','licence'].map(k=>[k,(LABEL[k]||{})[A[k]]||A[k]||''])),
+      lang:LANG,source:src,page:location.pathname,hp:$('fWeb').value,t:formShownAt})});
+    const j=await r.json().catch(()=>({}));
+    if(!r.ok||!j.ok) throw new Error(j.error||'Could not save right now. Please try again.');
+    ev('lead_submitted',{shortlist:liked.length,lang:LANG});
+    if(pl.state) A.place=pl;
+    showList();
+  }catch(x){err.textContent=x.message==='Failed to fetch'?'Could not save right now. Please try again.':x.message}
+  finally{btn.disabled=false;btn.textContent='Show my shortlist'}
+});
+
+/* ---------- shortlist ---------- */
+function showList(){
+  $('mtForm').hidden=true;$('mtList').hidden=false;
+  $('mtListPlace').textContent=A.place?A.place.label:'India';
+  try{sessionStorage.setItem('swShortlist',JSON.stringify(liked.map(r=>r.x.id)))}catch(e){}
+  const top=$('mtTopActs');
+  top.innerHTML=liked.length>1?`<a class="mt-btn" href="${LP}/compare?a=${liked[0].x.id}&b=${liked[1].x.id}">Compare your top two</a>`:'';
+  $('mtListItems').innerHTML=liked.map(r=>{const x=r.x,s=x.s;return `<div class="mt-li"><img src="${esc(s.cardImg||s.heroImg)}" alt="${esc(s.fullName)}" loading="lazy"/><div>
+    <div class="nm" translate="no">${esc(s.fullName)}</div>
+    <div class="meta"><span>On-road about ${inr(onRoad(x))}</span><br><span>Real range ${x.lo} to ${x.hi} km</span> · <span>Top speed ${x.speed} km/h</span></div>
+    <div class="acts"><a class="p" href="${LP}/scooters/${x.id}">Read full review</a><a class="s" href="${esc(((typeof BRAND_LINKS!=='undefined'&&BRAND_LINKS[s.brandSlug])||{}).testRide||s.brandUrl||'#')}" target="_blank" rel="noopener" data-out="test-ride" data-brand="${esc(s.brandSlug)}">Book a test ride</a><a class="s" href="${LP}/compare?a=${x.id}">Compare</a></div></div></div>`}).join('');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+$('mtShare').addEventListener('click',async()=>{
+  const name=liked[0]?liked[0].x.s.fullName:'my next scooter';
+  const text=`My dream scooter match is the ${name}. Find yours on EScooterwale:`, url='https://www.escooterwale.in/match';
+  ev('match_share');
+  try{if(navigator.share){await navigator.share({title:'Match with your Dream Scooter',text,url});return}}catch(e){return}
+  location.href='https://wa.me/?text='+encodeURIComponent(text+' '+url);
+});
+
+/* ---------- reopen from a shared link ---------- */
+try{
+  const u=new URL(location.href), ks=['budget','daily','riders','charging','priority','licence'];
+  if(ks.every(k=>u.searchParams.get(k))){ks.forEach(k=>A[k]=u.searchParams.get(k));A.place=null;finish()}
+  else show(0);
+}catch(e){show(0)}
+})();
+</script>
+</body>
+</html>

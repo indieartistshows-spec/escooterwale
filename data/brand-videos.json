@@ -1,0 +1,13 @@
+{
+ "_note": "Banner video for each brand page, supplied by GK. YouTube video ids from the brand's own channel (checked 2026-10-18). A brand without an entry keeps its image banner.",
+ "videos": {
+  "ola-electric": {"id": "bpb4I1lL5z0", "title": "Zyada Range. Zyada Value. Meet the Ola S1 Z", "channel": "Ola Electric"},
+  "ather-energy": {"id": "gb9d9fJ1ktM", "title": "Ather Konarc | Solid, Smooth, Sophisticated", "channel": "Ather Energy"},
+  "tvs-motor": {"id": "xeWJO9DTXqY", "title": "Behind Every Journey Is a Family | TVS iQube", "channel": "TVS iQube Electric"},
+  "bajaj-chetak": {"id": "tGZYc47c9_8", "title": "Bajaj Chetak - Fully Lifeproof", "channel": "Chetak Official"},
+  "hero-vida": {"id": "0qUEFrtrbrc", "title": "VIDA Unveils in Colombia", "channel": "VIDA World"},
+  "ampere": {"id": "I_FkmBh6KMo", "title": "The All-New Magnus G Max (NxG.io)", "channel": "Ampere Electric Vehicles"},
+  "bounce-infinity": {"id": "IzvK5HPQADA", "title": "Introducing Bounce Infinity E1+", "channel": "Bounce Infinity"},
+  "bgauss": {"id": "SdH5B9N7y0g", "title": "BGauss Max C12", "channel": "BGauss Official"}
+ }
+}
