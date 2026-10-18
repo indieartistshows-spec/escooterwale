@@ -100,8 +100,8 @@
         "d": "/images/banners/tvs-iqube-d.jpg",
         "m": "/images/banners/tvs-iqube-m.jpg"
       },
-      "source": null,
-      "checked": null
+      "checked": "2026-10-18",
+      "supplied": true
     }
   ],
   "overlay": 0.5,
