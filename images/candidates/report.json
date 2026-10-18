@@ -1,0 +1,316 @@
+{
+ "ranAt": "2026-10-18T13:17:54.584Z",
+ "models": {
+  "ather-energy-450s-2point9-kwh": {
+   "tried": [
+    "https://www.atherenergy.com/450 200",
+    "https://www.atherenergy.com/450s 403"
+   ],
+   "saved": [
+    {
+     "file": "/images/candidates/ather-energy-450s-2point9-kwh/1.webp",
+     "src": "https://media.atherenergy.com/ather-450-overtones-new-d.webp",
+     "page": "https://www.atherenergy.com/450",
+     "alt": "",
+     "size": "4320x2124",
+     "score": 6
+    },
+    {
+     "file": "/images/candidates/ather-energy-450s-2point9-kwh/2.webp",
+     "src": "https://media.atherenergy.com/Ather-450-motor-d.webp",
+     "page": "https://www.atherenergy.com/450",
+     "alt": "",
+     "size": "5420x2890",
+     "score": 6
+    },
+    {
+     "file": "/images/candidates/ather-energy-450s-2point9-kwh/3.webp",
+     "src": "https://media.atherenergy.com/Ather-450-dash-Bad-road-alert.webp",
+     "page": "https://www.atherenergy.com/450",
+     "alt": "",
+     "size": "3080x1468",
+     "score": 6
+    },
+    {
+     "file": "/images/candidates/ather-energy-450s-2point9-kwh/4.webp",
+     "src": "https://media.atherenergy.com/450%20-%20Live%20Cricket%20Scores%20desktop%20450.webp",
+     "page": "https://www.atherenergy.com/450",
+     "alt": "",
+     "size": "3080x1468",
+     "score": 6
+    },
+    {
+     "file": "/images/candidates/ather-energy-450s-2point9-kwh/5.webp",
+     "src": "https://media.atherenergy.com/Ather-450-dash-Google-Map-Platform.webp",
+     "page": "https://www.atherenergy.com/450",
+     "alt": "",
+     "size": "3080x1468",
+     "score": 6
+    },
+    {
+     "file": "/images/candidates/ather-energy-450s-2point9-kwh/6.webp",
+     "src": "https://media.atherenergy.com/Ather-450-dash-Call-%26-Music-Control.webp",
+     "page": "https://www.atherenergy.com/450",
+     "alt": "",
+     "size": "3080x1468",
+     "score": 6
+    },
+    {
+     "file": "/images/candidates/ather-energy-450s-2point9-kwh/7.webp",
+     "src": "https://media.atherenergy.com/Ather-450-dash-WhatsApp-on-Dash.webp",
+     "page": "https://www.atherenergy.com/450",
+     "alt": "",
+     "size": "3080x1468",
+     "score": 6
+    },
+    {
+     "file": "/images/candidates/ather-energy-450s-2point9-kwh/8.webp",
+     "src": "https://media.atherenergy.com/Ather-450-dash-Live-Location-Sharing.webp",
+     "page": "https://www.atherenergy.com/450",
+     "alt": "",
+     "size": "3080x1468",
+     "score": 6
+    }
+   ]
+  },
+  "ather-energy-450x-3point7-kwh": {
+   "tried": [
+    "https://www.atherenergy.com/450 403",
+    "https://www.atherenergy.com/450x 403"
+   ],
+   "saved": []
+  },
+  "hero-vida-vx2-go-2point2-kwh": {
+   "tried": [
+    "https://www.vidaworld.com/vx2-go-electric-scooter.html 200",
+    "https://www.vidaworld.com/vx2.html 404"
+   ],
+   "saved": [
+    {
+     "file": "/images/candidates/hero-vida-vx2-go-2point2-kwh/1.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/go-2-2-rq/banner/3-1-desktop-banner.jpeg",
+     "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+     "alt": "<div style=\"display: none;\">VIDA VX2 Go kWh– Lightweight Electric Scooter Built for Smart City Commutes</div>",
+     "size": "2880x1734",
+     "score": 8
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-go-2point2-kwh/2.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/go-2-2-rq/toggle/go-3-4-desktop.png",
+     "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+     "alt": "VX2 Go 3.4 features",
+     "size": "1312x613",
+     "score": 6.8
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-go-2point2-kwh/3.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/go-2-2-rq/breeze/Accl-go-2-2-desktop.png",
+     "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+     "alt": "",
+     "size": "1312x900",
+     "score": 4.18
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-go-2point2-kwh/4.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/convenience/Frunk%20IMG.png",
+     "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+     "alt": "Large Footboard",
+     "size": "960x601",
+     "score": 3.58
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-go-2point2-kwh/5.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/global/vida-2-0/vida-vx2/V2%20Pro%20-%20Side%20-%20Orange.png",
+     "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+     "alt": "V2 Pro",
+     "size": "832x568",
+     "score": 3.47
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-go-2point2-kwh/6.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/convenience/service-desktop%20(2).png",
+     "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+     "alt": "Service Stations",
+     "size": "682x683",
+     "score": 3.47
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-go-2point2-kwh/7.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/global/vida-2-0/vida-vx2/V2%20Plus%20-%20Side%20-%20Black.png",
+     "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+     "alt": "V2 Plus",
+     "size": "832x536",
+     "score": 3.45
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-go-2point2-kwh/8.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/ride-experience/reverse-desk.png",
+     "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+     "alt": "VX2 Reverse Parking",
+     "size": "640x401",
+     "score": 3.26
+    }
+   ]
+  },
+  "hero-vida-vx2-plus-3point4-kwh": {
+   "tried": [
+    "https://www.vidaworld.com/vx2-go-3-4-kwh-electric-scooter.html 200",
+    "https://www.vidaworld.com/vx2-plus-electric-scooter.html 200",
+    "https://www.vidaworld.com/vx2.html 404"
+   ],
+   "saved": [
+    {
+     "file": "/images/candidates/hero-vida-vx2-plus-3point4-kwh/1.webp",
+     "src": "https://www.vidaworld.com/content/dam/global-vida/global-master-page/vx2-plus/convenience-section/long-seat-desktop.jpg",
+     "page": "https://www.vidaworld.com/vx2-go-3-4-kwh-electric-scooter.html",
+     "alt": "",
+     "size": "1312x901",
+     "score": 7.18
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-plus-3point4-kwh/2.webp",
+     "src": "https://www.vidaworld.com/content/dam/global-vida/global-master-page/vx2-plus/convenience-section/storage.jpg",
+     "page": "https://www.vidaworld.com/vx2-go-3-4-kwh-electric-scooter.html",
+     "alt": "",
+     "size": "1312x900",
+     "score": 7.18
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-plus-3point4-kwh/3.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/global/vida-2-0/vida-vx2/V2%20Plus%20-%20Side%20-%20Black.png",
+     "page": "https://www.vidaworld.com/vx2-go-3-4-kwh-electric-scooter.html",
+     "alt": "V2 Plus",
+     "size": "832x536",
+     "score": 6.45
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-plus-3point4-kwh/4.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/vx2-plus-4-4/banner/VX2-Plus-Banner-DESKTOP.jpeg",
+     "page": "https://www.vidaworld.com/vx2-plus-electric-scooter.html",
+     "alt": "<div style=\"display:none;\">VIDA VX2 Plus Electric Scooter – Power, Range & Performance Redefined</div>",
+     "size": "1440x864",
+     "score": 6.24
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-plus-3point4-kwh/5.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/convenience/new/vx2-4.4-storage.png",
+     "page": "https://www.vidaworld.com/vx2-plus-electric-scooter.html",
+     "alt": "",
+     "size": "1312x900",
+     "score": 4.18
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-plus-3point4-kwh/6.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/ride-experience/new/breeze-desktop-image.png",
+     "page": "https://www.vidaworld.com/vx2-plus-electric-scooter.html",
+     "alt": "",
+     "size": "1312x900",
+     "score": 4.18
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-plus-3point4-kwh/7.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/ride-experience/new/acc-desktop.jpeg",
+     "page": "https://www.vidaworld.com/vx2-plus-electric-scooter.html",
+     "alt": "",
+     "size": "1312x900",
+     "score": 4.18
+    },
+    {
+     "file": "/images/candidates/hero-vida-vx2-plus-3point4-kwh/8.webp",
+     "src": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/convenience/Frunk%20IMG.png",
+     "page": "https://www.vidaworld.com/vx2-go-3-4-kwh-electric-scooter.html",
+     "alt": "Large Footboard",
+     "size": "960x601",
+     "score": 3.58
+    }
+   ]
+  },
+  "pure-ev-epluto-7g-2point0-kwh": {
+   "tried": [
+    "https://www.pureenergy.co.in/electric-scooters/epluto-7g 200",
+    "https://www.pureenergy.co.in/epluto-7g 403"
+   ],
+   "saved": [
+    {
+     "file": "/images/candidates/pure-ev-epluto-7g-2point0-kwh/1.webp",
+     "src": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/product_card_bg.png",
+     "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g",
+     "alt": "background",
+     "size": "1440x1047",
+     "score": 7.77
+    },
+    {
+     "file": "/images/candidates/pure-ev-epluto-7g-2point0-kwh/2.webp",
+     "src": "https://www.pureenergy.co.in/assets/frontend/images/color_variants/epluto/red.webp",
+     "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g",
+     "alt": "Epluto Red",
+     "size": "1008x778",
+     "score": 6.78
+    },
+    {
+     "file": "/images/candidates/pure-ev-epluto-7g-2point0-kwh/3.webp",
+     "src": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/views/view1.png",
+     "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g",
+     "alt": "Epluto Right View",
+     "size": "600x600",
+     "score": 6.36
+    },
+    {
+     "file": "/images/candidates/pure-ev-epluto-7g-2point0-kwh/4.webp",
+     "src": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/views/view2.png",
+     "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g",
+     "alt": "Epluto Rear View",
+     "size": "600x600",
+     "score": 6.36
+    },
+    {
+     "file": "/images/candidates/pure-ev-epluto-7g-2point0-kwh/5.webp",
+     "src": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/views/view3.png",
+     "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g",
+     "alt": "Epluto Straight View",
+     "size": "600x600",
+     "score": 6.36
+    },
+    {
+     "file": "/images/candidates/pure-ev-epluto-7g-2point0-kwh/6.webp",
+     "src": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/views/view4.png",
+     "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g",
+     "alt": "Epluto Front View",
+     "size": "600x600",
+     "score": 6.36
+    },
+    {
+     "file": "/images/candidates/pure-ev-epluto-7g-2point0-kwh/7.webp",
+     "src": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/views/view5.png",
+     "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g",
+     "alt": "Epluto Left View",
+     "size": "600x600",
+     "score": 6.36
+    },
+    {
+     "file": "/images/candidates/pure-ev-epluto-7g-2point0-kwh/8.webp",
+     "src": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/views/view6.png",
+     "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g",
+     "alt": "Epluto Left View",
+     "size": "600x600",
+     "score": 6.36
+    }
+   ]
+  },
+  "pure-ev-etranceplus-4point5-kwh": {
+   "tried": [
+    "https://www.pureenergy.co.in/electric-scooters/etrance-neo 403",
+    "https://www.pureenergy.co.in/electric-scooters/etrance-plus 403"
+   ],
+   "saved": []
+  },
+  "pure-ev-etron-plus-3point0-kwh": {
+   "tried": [
+    "https://www.pureenergy.co.in/electric-scooters/etron-plus 403",
+    "https://www.pureenergy.co.in/electric-scooters/etron 403",
+    "https://www.pureenergy.co.in 403"
+   ],
+   "saved": []
+  }
+ }
+}
