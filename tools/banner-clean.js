@@ -37,6 +37,6 @@ async function clean(s) {
   const files = process.argv.slice(2).length ? process.argv.slice(2) : ['data/banners.json', 'data/launch-features.json'];
   for (const f of files) {
     const cfg = JSON.parse(fs.readFileSync(f, 'utf8'));
-    for (const s of cfg.slides) if (s.keep && s.img && fs.existsSync('.' + s.img.d)) console.log(await clean(s));
+    for (const s of cfg.slides) if (s.keep && !s.supplied && s.img && fs.existsSync('.' + s.img.d)) console.log(await clean(s));
   }
 })();

@@ -33,6 +33,7 @@ function serve(port) {
     run('node tools/i18n-patterns.js');
     run('node tools/i18n-build.js');
   }
+  run('node tools/optimize-html.js'); // fonts, cache busting, lazy images on every finished page
   run('node build-sitemap.js'); // after languages, so live language URLs get real lastmod dates
   console.log('\n✓ site built');
 })().catch(e => { console.error(e); process.exit(1); });

@@ -16,14 +16,16 @@ const launches = ev.filter(e => e.type === 'launch'), gone = ev.filter(e => e.ty
 const onSale = S.filter(s => !s.discontinued).length;
 const F = JSON.parse(fs.readFileSync('data/launch-features.json', 'utf8')).slides.filter(f => f.img && fs.existsSync('.' + f.img.d) || f.img && fs.existsSync('.' + f.img.m));
 const host = u => new URL(u).hostname.replace(/^www\./, '');
-const fold = f => {
+// WebP copies made by tools/build-banners.js, used when present
+const wp = (f, w) => { const o = f.replace(/\.jpg$/, w ? `-${w}.webp` : '.webp'); return o !== f && fs.existsSync('.' + o) ? o : null; };
+const fold = (f, k) => {
   const brandUrl = UTM(f.url) + '&utm_content=' + f.id;
   const d = fs.existsSync('.' + f.img.d) ? f.img.d : f.img.m, m = fs.existsSync('.' + f.img.m) ? f.img.m : d;
   const inCat = f.modelId && S.some(x => x.id === f.modelId) && /konarc/i.test(f.model) ? `<a class="lf-btn ghost" href="/scooters/${f.modelId}">Konarc specs and review</a>` : '';
   return `
   <section class="launch-fold">
     <a class="lf-img" href="${brandUrl}" target="_blank" rel="noopener" data-out="brand" data-brand="${f.brandId}" aria-label="${f.brand} ${f.model} on ${host(f.url)}">
-      <picture><source media="(max-width:640px)" srcset="${m}"/><img src="${d}" alt="${f.brand} ${f.model}" loading="lazy" width="1920" height="760"/></picture>
+      <picture>${wp(m, 0) ? `<source media="(max-width:640px)" type="image/webp" srcset="${wp(m, 0)}"/>` : ''}<source media="(max-width:640px)" srcset="${m}"/>${wp(d, 1280) ? `<source type="image/webp" srcset="${wp(d, 1280)} 1280w, ${wp(d, 1920)} 1920w" sizes="(max-width:1200px) 100vw, 1160px"/>` : ''}<img src="${d}" alt="${f.brand} ${f.model}" ${k ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async" width="1920" height="760"/></picture>
       <span class="lf-tag">${f.status} · ${fmt(f.date)}</span>${f.imageNote ? `<span class="lf-note">${f.imageNote}</span>` : ''}
     </a>
     <div class="lf-body">

@@ -122,6 +122,8 @@ function modelPhoto(s) {
 
   for (const s of CFG.slides) {
     const r = { id: s.id, url: s.url, d: 'kept', m: 'kept' };
+    // images supplied by us ("supplied": true) are never replaced by the weekly fetch
+    if (s.supplied) { report.slides.push({ id: s.id, url: s.url, d: 'supplied, not fetched', m: 'supplied, not fetched' }); continue; }
     if (!OFFLINE) {
       const url = await resolveUrl(ctxD, s);
       if (url) { s.url = url; r.url = url; } else r.urlNote = 'no page loaded, kept ' + s.url;

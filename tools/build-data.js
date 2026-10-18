@@ -99,13 +99,13 @@ const header = `/* ============================================================
    ${brands.length} brands, ${scooters.length} scooters. Headline price city: ${headline}.
    ============================================================ */\n\n`;
 const out = header +
-  `const SCOOTERS_DB = ${JSON.stringify(scooters, null, 1)};\n\n` +
-  `const BRANDS_DB = ${JSON.stringify(brands, null, 1)};\n\n` +
-  `const NEWS_DB = ${JSON.stringify(news, null, 1)};\n\n` +
-  `const CITIES_DB = ${JSON.stringify(cities, null, 1)};\n\n` +
-  `const SUBSIDY = ${JSON.stringify(subsidy, null, 1)};\n\n` +
-  `const BRAND_LINKS = ${JSON.stringify(brandLinks, null, 1)};\n\n` +
-  `const EV_SALES = ${JSON.stringify(evSales, null, 1)};\n\n` +
+  `const SCOOTERS_DB = ${JSON.stringify(scooters)};\n\n` +
+  `const BRANDS_DB = ${JSON.stringify(brands)};\n\n` +
+  `const NEWS_DB = ${JSON.stringify(news)};\n\n` +
+  `const CITIES_DB = ${JSON.stringify(cities)};\n\n` +
+  `const SUBSIDY = ${JSON.stringify(subsidy)};\n\n` +
+  `const BRAND_LINKS = ${JSON.stringify(brandLinks)};\n\n` +
+  `const EV_SALES = ${JSON.stringify(evSales)};\n\n` +
   `const AGG_LINKS = ${JSON.stringify((() => { try { return J('data/aggregator-links.json'); } catch (e) { return { families: {} }; } })())};\n\n` +
   `const SW_CONFIG = ${JSON.stringify({ headlineCity: headline, headlineCityName: (cities.find(c => c.id === headline) || {}).name, dataUpdated: config.dataUpdated, langsLive: (() => { try { return require('./i18n-live.js').liveLangs(); } catch (e) { return []; } })() }, null, 1)};\n\n` +
 `function getById(id)       { return SCOOTERS_DB.find(s=>s.id===id); }

@@ -1,5 +1,5 @@
 {
-  "_note": "Homepage hero carousel. Order is fixed. automation/banners.js fills url/img/checked from each brand's own site (desktop and mobile hero banners) on every weekly run; a failed fetch keeps the last good image. Images live in /images/banners/. Slides with a 'keep' region carry brand text in the original banner: tools/banner-clean.js rebuilds them from <id>-raw.jpg so only our own text ever shows. To use a newer brand banner for those, replace the -raw.jpg and adjust 'keep'.",
+  "_note": "Homepage hero carousel. Order is fixed. automation/banners.js fills url/img/checked from each brand's own site (desktop and mobile hero banners) on every weekly run; a failed fetch keeps the last good image. Images live in /images/banners/. Slides with a 'keep' region carry brand text in the original banner: tools/banner-clean.js rebuilds them from <id>-raw.jpg so only our own text ever shows. To use a newer brand banner for those, replace the -raw.jpg and adjust 'keep'. Slides with \"supplied\": true use images we were given directly; the weekly fetch and the text clean-up leave them alone.",
   "intervalMs": 3000,
   "slides": [
     {
@@ -18,16 +18,8 @@
         "d": "/images/banners/ampere-magnus-g-max-d.jpg",
         "m": "/images/banners/ampere-magnus-g-max-m.jpg"
       },
-      "source": {
-        "d": "https://static.ampere-electric.com/magnus_gmax_pp_hero_banner_1440px_95032a2dcd.webp",
-        "m": "https://static.ampere-electric.com/magnus_gmax_pp_hero_banner_400px_3ece7cdb5c.webp"
-      },
-      "checked": "2026-10-17",
-      "keep": {
-        "x0": 0.51,
-        "x1": 1
-      },
-      "keepFor": "https://static.ampere-electric.com/magnus_gmax_pp_hero_banner_1440px_95032a2dcd.webp"
+      "checked": "2026-10-18",
+      "supplied": true
     },
     {
       "id": "ather-konarc",
@@ -48,11 +40,8 @@
         "d": "/images/banners/ather-konarc-d.jpg",
         "m": "/images/banners/ather-konarc-m.jpg"
       },
-      "source": {
-        "d": "https://media.atherenergy.com/PDPKVDesktop.webp",
-        "m": "https://media.atherenergy.com/PDPKVDesktop.webp"
-      },
-      "checked": "2026-10-17"
+      "checked": "2026-10-18",
+      "supplied": true
     },
     {
       "id": "hero-vida",
@@ -71,11 +60,11 @@
       },
       "source": {
         "d": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg",
-        "m": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(M).jpg"
+        "m": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg"
       },
       "checked": "2026-10-17",
       "keep": {
-        "x0": 0,
+        "x0": 0.0,
         "x1": 0.41
       },
       "keepFor": "https://www.vidaworld.com/content/dam/vida/vida-vx2-banners/Banner%20Desktop%20(W).jpg"
@@ -127,5 +116,6 @@
       "checked": null
     }
   ],
-  "overlay": 0.5
+  "overlay": 0.5,
+  "overlayMobile": 0.65
 }

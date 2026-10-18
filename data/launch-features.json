@@ -32,7 +32,8 @@
         "m": "/images/banners/ather-konarc-m.jpg"
       },
       "source": null,
-      "checked": null
+      "checked": null,
+      "supplied": true
     },
     {
       "id": "launch-ampere-reo-vyb",
