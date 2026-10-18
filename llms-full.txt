@@ -1,13 +1,13 @@
-# ScooterWale — full electric scooter dataset for India
+# EScooterwale — full electric scooter dataset for India
 
 Source: https://www.escooterwale.in
 Last updated: 2026-10-18
 Models: 44 | Brands: 10
 
 Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the
-manufacturer figure under the Indian Driving Cycle. "Real-world range" is ScooterWale's
+manufacturer figure under the Indian Driving Cycle. "Real-world range" is EScooterwale's
 own estimate for Normal/City mode with a single rider in mixed Indian city traffic, and
-is consistently lower than the IDC claim. ScootScore is ScooterWale's independent 0-10
+is consistently lower than the IDC claim. ScootScore is EScooterwale's independent 0-10
 rating averaged across five published components.
 
 ## Real range test results (measured, March 2026)
@@ -120,7 +120,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2370/month
 - Battery: 2 kWh
 - Claimed range (IDC): 108 km
-- Real-world range (ScooterWale estimate): 80–90 km
+- Real-world range (EScooterwale estimate): 80–90 km
 - Top speed: 90 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
@@ -139,7 +139,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2844/month
 - Battery: 3 kWh
 - Claimed range (IDC): 176 km
-- Real-world range (ScooterWale estimate): 130–145 km
+- Real-world range (EScooterwale estimate): 130–145 km
 - Top speed: 90 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
@@ -158,7 +158,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3292/month
 - Battery: 4 kWh
 - Claimed range (IDC): 242 km
-- Real-world range (ScooterWale estimate): 180–200 km
+- Real-world range (EScooterwale estimate): 180–200 km
 - Top speed: 90 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
@@ -177,7 +177,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3423/month
 - Battery: 3 kWh
 - Claimed range (IDC): 176 km
-- Real-world range (ScooterWale estimate): 140–150 km
+- Real-world range (EScooterwale estimate): 140–150 km
 - Top speed: 117 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
@@ -196,7 +196,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3950/month
 - Battery: 4 kWh
 - Claimed range (IDC): 195 km
-- Real-world range (ScooterWale estimate): 155–165 km
+- Real-world range (EScooterwale estimate): 155–165 km
 - Top speed: 117 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
@@ -215,7 +215,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹4608/month
 - Battery: 5.2 kWh
 - Claimed range (IDC): 320 km
-- Real-world range (ScooterWale estimate): 240–270 km
+- Real-world range (EScooterwale estimate): 240–270 km
 - Top speed: 117 km/h
 - Charging time: 4 hrs
 - Kerb weight: 108 kg
@@ -234,7 +234,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2963/month
 - Battery: 2.9 kWh
 - Claimed range (IDC): 123 km
-- Real-world range (ScooterWale estimate): 90–105 km
+- Real-world range (EScooterwale estimate): 90–105 km
 - Top speed: 80 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -253,7 +253,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹4003/month
 - Battery: 3.7 kWh
 - Claimed range (IDC): 159 km
-- Real-world range (ScooterWale estimate): 120–135 km
+- Real-world range (EScooterwale estimate): 120–135 km
 - Top speed: 80 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
@@ -272,7 +272,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3182/month
 - Battery: 2.9 kWh
 - Claimed range (IDC): 122 km
-- Real-world range (ScooterWale estimate): 90–105 km
+- Real-world range (EScooterwale estimate): 90–105 km
 - Top speed: 90 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -291,7 +291,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹4161/month
 - Battery: 3.7 kWh
 - Claimed range (IDC): 161 km
-- Real-world range (ScooterWale estimate): 120–135 km
+- Real-world range (EScooterwale estimate): 120–135 km
 - Top speed: 90 km/h
 - Charging time: 3.3 hrs
 - Kerb weight: 108 kg
@@ -310,7 +310,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹4872/month
 - Battery: 3.7 kWh
 - Claimed range (IDC): 161 km
-- Real-world range (ScooterWale estimate): 120–135 km
+- Real-world range (EScooterwale estimate): 120–135 km
 - Top speed: 90 km/h
 - Charging time: 3.3 hrs
 - Kerb weight: 108 kg
@@ -329,7 +329,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2633/month
 - Battery: 2.1 kWh
 - Claimed range (IDC): 100 km
-- Real-world range (ScooterWale estimate): 72–82 km
+- Real-world range (EScooterwale estimate): 72–82 km
 - Top speed: 70 km/h
 - Charging time: 4 hrs
 - Kerb weight: Not published
@@ -348,7 +348,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3213/month
 - Battery: 2.7 kWh
 - Claimed range (IDC): 125 km
-- Real-world range (ScooterWale estimate): 92–105 km
+- Real-world range (EScooterwale estimate): 92–105 km
 - Top speed: 70 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 126.5 kg
@@ -367,7 +367,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3818/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 161 km
-- Real-world range (ScooterWale estimate): 120–135 km
+- Real-world range (EScooterwale estimate): 120–135 km
 - Top speed: 70 km/h
 - Charging time: 5.7 hrs
 - Kerb weight: 129 kg
@@ -386,7 +386,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2879/month
 - Battery: 2.2 kWh
 - Claimed range (IDC): 94 km
-- Real-world range (ScooterWale estimate): 70–82 km
+- Real-world range (EScooterwale estimate): 70–82 km
 - Top speed: 82 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -405,7 +405,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3370/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 145 km
-- Real-world range (ScooterWale estimate): 100–118 km
+- Real-world range (EScooterwale estimate): 100–118 km
 - Top speed: 82 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -424,7 +424,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3950/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 145 km
-- Real-world range (ScooterWale estimate): 100–118 km
+- Real-world range (EScooterwale estimate): 100–118 km
 - Top speed: 82 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -443,7 +443,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹4450/month
 - Battery: 5.3 kWh
 - Claimed range (IDC): 212 km
-- Real-world range (ScooterWale estimate): 155–175 km
+- Real-world range (EScooterwale estimate): 155–175 km
 - Top speed: 82 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -462,7 +462,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2407/month
 - Battery: 2.5 kWh
 - Claimed range (IDC): 113 km
-- Real-world range (ScooterWale estimate): 85–98 km
+- Real-world range (EScooterwale estimate): 85–98 km
 - Top speed: 73 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -481,7 +481,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2633/month
 - Battery: 3.0 kWh
 - Claimed range (IDC): 127 km
-- Real-world range (ScooterWale estimate): 95–108 km
+- Real-world range (EScooterwale estimate): 95–108 km
 - Top speed: 73 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -500,7 +500,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3018/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
-- Real-world range (ScooterWale estimate): 115–130 km
+- Real-world range (EScooterwale estimate): 115–130 km
 - Top speed: 73 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -519,7 +519,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3361/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
-- Real-world range (ScooterWale estimate): 115–130 km
+- Real-world range (EScooterwale estimate): 115–130 km
 - Top speed: 73 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -538,7 +538,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3676/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
-- Real-world range (ScooterWale estimate): 115–130 km
+- Real-world range (EScooterwale estimate): 115–130 km
 - Top speed: 73 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -557,7 +557,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2620/month
 - Battery: 2.2 kWh
 - Claimed range (IDC): 92 km
-- Real-world range (ScooterWale estimate): 68–78 km
+- Real-world range (EScooterwale estimate): 68–78 km
 - Top speed: 70 km/h
 - Charging time: 3.5 hrs
 - Kerb weight: 108 kg
@@ -576,7 +576,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3172/month
 - Battery: 3.4 kWh
 - Claimed range (IDC): 142 km
-- Real-world range (ScooterWale estimate): 105–120 km
+- Real-world range (EScooterwale estimate): 105–120 km
 - Top speed: 80 km/h
 - Charging time: 5.3 hrs
 - Kerb weight: 108 kg
@@ -595,7 +595,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3412/month
 - Battery: 3.94 kWh
 - Claimed range (IDC): 143 km
-- Real-world range (ScooterWale estimate): 108–122 km
+- Real-world range (EScooterwale estimate): 108–122 km
 - Top speed: 80 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -614,7 +614,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹1577/month
 - Battery: 1.3 kWh
 - Claimed range (IDC): 80 km
-- Real-world range (ScooterWale estimate): 55–65 km
+- Real-world range (EScooterwale estimate): 55–65 km
 - Top speed: 45 km/h
 - Charging time: 6 hrs
 - Kerb weight: 108 kg
@@ -633,7 +633,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2107/month
 - Battery: 2.3 kWh
 - Claimed range (IDC): 85 km
-- Real-world range (ScooterWale estimate): 60–72 km
+- Real-world range (EScooterwale estimate): 60–72 km
 - Top speed: 65 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -652,7 +652,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2502/month
 - Battery: 3.0 kWh
 - Claimed range (IDC): 142 km
-- Real-world range (ScooterWale estimate): 105–120 km
+- Real-world range (EScooterwale estimate): 105–120 km
 - Top speed: 65 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -671,7 +671,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3157/month
 - Battery: 3 kWh
 - Claimed range (IDC): 100 km
-- Real-world range (ScooterWale estimate): 78–90 km
+- Real-world range (EScooterwale estimate): 78–90 km
 - Top speed: 93 km/h
 - Charging time: 3.3 hrs
 - Kerb weight: 108 kg
@@ -690,7 +690,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3421/month
 - Battery: 3 kWh
 - Claimed range (IDC): 105 km
-- Real-world range (ScooterWale estimate): 80–95 km
+- Real-world range (EScooterwale estimate): 80–95 km
 - Top speed: 93 km/h
 - Charging time: 3.3 hrs
 - Kerb weight: 108 kg
@@ -709,7 +709,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹1633/month
 - Battery: 0.8 kWh
 - Claimed range (IDC): 60 km
-- Real-world range (ScooterWale estimate): 42–50 km
+- Real-world range (EScooterwale estimate): 42–50 km
 - Top speed: 25 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -728,7 +728,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹1819/month
 - Battery: 1.2 kWh
 - Claimed range (IDC): 70 km
-- Real-world range (ScooterWale estimate): 50–58 km
+- Real-world range (EScooterwale estimate): 50–58 km
 - Top speed: 25 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -747,7 +747,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2370/month
 - Battery: 2.2 kWh
 - Claimed range (IDC): 100 km
-- Real-world range (ScooterWale estimate): 72–84 km
+- Real-world range (EScooterwale estimate): 72–84 km
 - Top speed: 55 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -766,7 +766,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2817/month
 - Battery: 2.8 kWh
 - Claimed range (IDC): 120 km
-- Real-world range (ScooterWale estimate): 88–100 km
+- Real-world range (EScooterwale estimate): 88–100 km
 - Top speed: 58 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -785,7 +785,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3950/month
 - Battery: 2.8 kWh
 - Claimed range (IDC): 100 km
-- Real-world range (ScooterWale estimate): 72–84 km
+- Real-world range (EScooterwale estimate): 72–84 km
 - Top speed: 90 km/h
 - Charging time: 4 hrs
 - Kerb weight: 108 kg
@@ -804,7 +804,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2107/month
 - Battery: 2.0 kWh
 - Claimed range (IDC): 90 km
-- Real-world range (ScooterWale estimate): 65–76 km
+- Real-world range (EScooterwale estimate): 65–76 km
 - Top speed: 55 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -823,7 +823,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2897/month
 - Battery: 4.5 kWh
 - Claimed range (IDC): 171 km
-- Real-world range (ScooterWale estimate): 130–148 km
+- Real-world range (EScooterwale estimate): 130–148 km
 - Top speed: 75 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -842,7 +842,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3423/month
 - Battery: 3.0 kWh
 - Claimed range (IDC): 120 km
-- Real-world range (ScooterWale estimate): 90–105 km
+- Real-world range (EScooterwale estimate): 90–105 km
 - Top speed: 70 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
@@ -861,7 +861,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹1817/month
 - Battery: 2.0 kWh
 - Claimed range (IDC): 85 km
-- Real-world range (ScooterWale estimate): 60–72 km
+- Real-world range (EScooterwale estimate): 60–72 km
 - Top speed: 65 km/h
 - Charging time: 4 hrs
 - Kerb weight: 108 kg
@@ -880,7 +880,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2238/month
 - Battery: 2.5 kWh
 - Claimed range (IDC): 105 km
-- Real-world range (ScooterWale estimate): 78–90 km
+- Real-world range (EScooterwale estimate): 78–90 km
 - Top speed: 65 km/h
 - Charging time: 4 hrs
 - Kerb weight: 108 kg
@@ -899,7 +899,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹2579/month
 - Battery: 2.0 kWh
 - Claimed range (IDC): 110 km
-- Real-world range (ScooterWale estimate): 82–95 km
+- Real-world range (EScooterwale estimate): 82–95 km
 - Top speed: 72 km/h
 - Charging time: 4 hrs
 - Kerb weight: 108 kg
@@ -918,7 +918,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3015/month
 - Battery: 3.0 kWh
 - Claimed range (IDC): 120 km
-- Real-world range (ScooterWale estimate): 90–105 km
+- Real-world range (EScooterwale estimate): 90–105 km
 - Top speed: 82 km/h
 - Charging time: 4 hrs
 - Kerb weight: 108 kg
@@ -937,7 +937,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - EMI from: ₹3289/month
 - Battery: 3.0 kWh
 - Claimed range (IDC): 100 km
-- Real-world range (ScooterWale estimate): 75–88 km
+- Real-world range (EScooterwale estimate): 75–88 km
 - Top speed: 75 km/h
 - Charging time: 4 hrs
 - Kerb weight: 108 kg

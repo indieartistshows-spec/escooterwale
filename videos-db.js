@@ -1,6 +1,6 @@
 /**
  * ╔══════════════════════════════════════════════════════════════╗
- * ║  ScooterWale — Video Database                               ║
+ * ║  EScooterwale — Video Database                               ║
  * ║  Real YouTube video IDs — thumbnails auto-fetched from YT  ║
  * ║                                                             ║
  * ║  CUSTOM THUMBNAILS (optional):                              ║

@@ -1,6 +1,6 @@
 /* ============================================================
    build-guides.js — generates the new guide pages from the
-   shared ScooterWale guide shell (same CSS, same nav/footer).
+   shared EScooterwale guide shell (same CSS, same nav/footer).
    Run:  node build-guides.js
    Regenerate whenever data.js or the figures below change.
    ============================================================ */
@@ -55,7 +55,7 @@ function page({ file, title, desc, canon, eyebrow, h1, standfirst, readTime, cru
       <h1>${h1}</h1>
       <p>${standfirst}</p>
       <div class="guide-meta">
-        <div class="guide-meta-item">✍️ ScooterWale Editorial</div>
+        <div class="guide-meta-item">✍️ EScooterwale Editorial</div>
         <div class="guide-meta-item">📅 Verified ${VERIFIED}</div>
         <div class="guide-meta-item">⏱ ${readTime}</div>
       </div>
@@ -97,7 +97,7 @@ document.getElementById('footerMount').innerHTML=footerHTML();
   console.log('built', file, '(' + Math.round(html.length / 1024) + ' KB)');
 }
 
-const ORG = { '@type': 'Organization', '@id': `${BASE}/#organization`, name: 'ScooterWale', url: `${BASE}/` };
+const ORG = { '@type': 'Organization', '@id': `${BASE}/#organization`, name: 'EScooterwale', url: `${BASE}/` };
 const crumbs = items => ({
   '@type': 'BreadcrumbList',
   itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.name, ...(it.url ? { item: it.url } : {}) }))
@@ -108,7 +108,7 @@ const article = (path, headline, description) => ({
   headline, description,
   url: `${BASE}${path}`,
   datePublished: '2026-08-24', dateModified: '2026-08-24',
-  author: { '@type': 'Organization', name: 'ScooterWale Editorial', url: `${BASE}/` },
+  author: { '@type': 'Organization', name: 'EScooterwale Editorial', url: `${BASE}/` },
   publisher: { '@id': `${BASE}/#organization` },
   inLanguage: 'en-IN'
 });

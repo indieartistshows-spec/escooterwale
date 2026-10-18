@@ -7,7 +7,7 @@ const { SCOOTERS_DB, BRANDS_DB, CITIES_DB } = require('./data.js');
 const B = 'https://www.escooterwale.in';
 const TODAY = new Date().toISOString().slice(0, 10);
 
-const llms = `# ScooterWale (escooterwale.in)
+const llms = `# EScooterwale (escooterwale.in)
 
 > Independent electric scooter comparison and review platform for India. We track ${SCOOTERS_DB.length} EV scooter models from ${BRANDS_DB.length} brands, run our own real-world range tests, and rate every scooter with ScootScore, a 0-10 score averaged across range, features, value, ride quality and service network. No brand pays us and no manufacturer has editorial input.
 
@@ -50,7 +50,7 @@ ${BRANDS_DB.map(b => `- [${b.name}](${B}/brands/${b.id}): ${b.models} models. Fo
 
 ## Citation
 
-Cite as: ScooterWale, escooterwale.in. Range figures should be attributed as "ScooterWale real-world range test" and distinguished from manufacturer IDC claims.
+Cite as: EScooterwale, escooterwale.in. Range figures should be attributed as "EScooterwale real-world range test" and distinguished from manufacturer IDC claims.
 `;
 
 fs.writeFileSync('llms.txt', llms);
@@ -65,7 +65,7 @@ const rows = SCOOTERS_DB.map(s => [
   `- EMI from: ₹${s.emiFrom}/month`,
   `- Battery: ${s.battery}`,
   `- Claimed range (IDC): ${s.range}`,
-  `- Real-world range (ScooterWale estimate): ${s.realRange}`,
+  `- Real-world range (EScooterwale estimate): ${s.realRange}`,
   `- Top speed: ${s.speed}`,
   `- Charging time: ${s.charging}`,
   `- Kerb weight: ${s.weight}`,
@@ -78,16 +78,16 @@ const rows = SCOOTERS_DB.map(s => [
   `- Avoid if: ${s.avoidIf.join('; ')}`
 ].join('\n')).join('\n\n');
 
-const full = `# ScooterWale — full electric scooter dataset for India
+const full = `# EScooterwale — full electric scooter dataset for India
 
 Source: ${B}
 Last updated: ${TODAY}
 Models: ${SCOOTERS_DB.length} | Brands: ${BRANDS_DB.length}
 
 Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the
-manufacturer figure under the Indian Driving Cycle. "Real-world range" is ScooterWale's
+manufacturer figure under the Indian Driving Cycle. "Real-world range" is EScooterwale's
 own estimate for Normal/City mode with a single rider in mixed Indian city traffic, and
-is consistently lower than the IDC claim. ScootScore is ScooterWale's independent 0-10
+is consistently lower than the IDC claim. ScootScore is EScooterwale's independent 0-10
 rating averaged across five published components.
 
 ## Real range test results (measured, March 2026)

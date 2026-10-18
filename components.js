@@ -1,6 +1,6 @@
 /* ============================================================
    components.js — Shared UI Helpers v6
-   ScooterWale · CarWale-inspired · Mobile-first
+   EScooterwale · CarWale-inspired · Mobile-first
    ============================================================ */
 
 // ── RENDER HELPERS ─────────────────────────────────────────
@@ -243,9 +243,9 @@ function navHTML(active='home'){
   ];
   return `<nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="/" class="nav-logo" aria-label="E-ScooterWale home">
-        <img src="/images/escooterwale_logo-72.webp" alt="E-ScooterWale logo" class="nav-logo-img" width="36" height="36" />
-        <span class="nav-logo-text"><strong>E-Scooter</strong><em>Wale</em></span>
+      <a href="/" class="nav-logo" aria-label="EScooterwale home">
+        <img src="/images/escooterwale_logo-72.webp" alt="EScooterwale logo" class="nav-logo-img" width="36" height="36" />
+        <span class="nav-logo-text"><strong>EScooter</strong><em>wale</em></span>
       </a>
       <div class="nav-links" role="list">
         ${links.map(l=>`<a href="${l.href}" class="nav-link${l.id===active?' active':''}" role="listitem">${l.label}</a>`).join('')}
@@ -293,7 +293,7 @@ function toggleMenu(){
 
 // ── SEO LINK DIRECTORY (below the footer) ────────────────────
 // Every model, grouped by brand: buy from the brand, on BikeDekho, on BikeWale,
-// compare on EVIndia and on ScooterWale. Links come from data/aggregator-links.json,
+// compare on EVIndia and on EScooterwale. Links come from data/aggregator-links.json,
 // which the weekly job checks; a model without a checked page uses the site's brand page.
 function seoLinksHTML(){
   if(typeof SCOOTERS_DB==='undefined')return '';
@@ -314,7 +314,7 @@ function seoLinksHTML(){
       return `<li><a class="sl-model" translate="no" href="/scooters/${s.id}">${nm}</a>: `+
         (s.brandUrl?ext(utm(s.brandUrl,s.id),'Buy from '+bname,'brand',bid)+' · ':'')+
         ext(bd,'Buy on BikeDekho','aggregator')+' · '+ext(bw,'Buy on BikeWale','aggregator')+' · '+
-        ext(ev,'Compare on EVIndia','aggregator')+' · '+`<a href="/compare?a=${s.id}">Compare on ScooterWale</a></li>`;
+        ext(ev,'Compare on EVIndia','aggregator')+' · '+`<a href="/compare?a=${s.id}">Compare on EScooterwale</a></li>`;
     }).join('');
     return `<div class="sl-brand"><h4><a href="/brands/${bid}">${bname} electric scooters</a></h4><ul>${rows}</ul></div>`;
   }).join('');
@@ -330,8 +330,8 @@ function footerHTML(){
         <!-- Brand column -->
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="/images/escooterwale_logo-72.webp" alt="E-ScooterWale" class="footer-logo-img" loading="lazy" width="32" height="32" />
-            <span><strong>E-Scooter</strong><em>Wale</em></span>
+            <img src="/images/escooterwale_logo-72.webp" alt="EScooterwale" class="footer-logo-img" loading="lazy" width="32" height="32" />
+            <span><strong>EScooter</strong><em>wale</em></span>
           </div>
           <p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.45);max-width:240px;margin:10px 0 12px">India's most honest EV scooter platform. Real-world range tests, zero brand bias, independent editorial.</p>
           <div class="footer-tagline">₹0 commission · 100% independent</div>
@@ -380,7 +380,7 @@ function footerHTML(){
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 E-ScooterWale. Prices are ex-showroom<span data-sw="priceCityIn"></span>. Data updated <span data-sw="updated">October 2026</span>.</span>
+        <span>© 2026 EScooterwale. Prices are ex-showroom<span data-sw="priceCityIn"></span>. Data updated <span data-sw="updated">October 2026</span>.</span>
         <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
           <span>Not affiliated with any EV manufacturer.</span>
           <a href="/yellow-brother" style="color:var(--amber);font-weight:700;font-size:12px;text-decoration:none">🟡 Yellow Brother Blog</a>

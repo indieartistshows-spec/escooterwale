@@ -12,7 +12,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-<title id="pgTitle">Best Electric Scooters in India 2026 | ScooterWale</title>
+<title id="pgTitle">Best Electric Scooters in India 2026 | EScooterwale</title>
 <meta id="pgDesc" name="description" content="The best electric scooter for how you ride: daily commute, family, long range, under ₹1 lakh or ₹1.5 lakh, and smaller cities."/>
 <meta name="keywords" content="best electric scooter india 2026, best ev scooter under 1.5 lakh, best ev scooter for daily commute, best ev scooter family"/>
 <link id="pgCanon" rel="canonical" href="https://www.escooterwale.in/best"/>
@@ -192,7 +192,7 @@ const CATEGORIES = {
     slug:'daily-commute',
     title:'Best Electric Scooters for Daily Commute in India 2026',
     subtitle:'For riders covering 20 to 80 km a day: enough real range, an overnight charge at home and a service centre you can reach.',
-    seoTitle:'Best Electric Scooter for Daily Commute in India 2026 | ScooterWale',
+    seoTitle:'Best Electric Scooter for Daily Commute in India 2026 | EScooterwale',
     seoDescLead:'The electric scooters we would pick for a 20 to 80 km daily commute, ranked on real-world range, home charging time and service reach.',
     icon:'🏙️',
     label:'Daily Commute',
@@ -215,7 +215,7 @@ const CATEGORIES = {
     cap:100000,
     title:'Best Electric Scooters Under ₹1 Lakh in India 2026',
     subtitle:'Full-speed, registered electric scooters with an ex-showroom price below ₹1,00,000. No low-speed models.',
-    seoTitle:'Best Electric Scooter Under 1 Lakh in India 2026 | ScooterWale',
+    seoTitle:'Best Electric Scooter Under 1 Lakh in India 2026 | EScooterwale',
     seoDescLead:'Registered, full-speed electric scooters under ₹1 lakh ex-showroom, ranked on real range, build and service network.',
     icon:'💰',
     label:'Under ₹1 Lakh',
@@ -238,7 +238,7 @@ const CATEGORIES = {
     cap:150000,
     title:'Best Electric Scooters Under ₹1.5 Lakh in India 2026',
     subtitle:'The busiest part of the market. These are the scooters we would shortlist with an ex-showroom budget of ₹1.5 lakh.',
-    seoTitle:'Best Electric Scooter Under 1.5 Lakh in India 2026 | ScooterWale',
+    seoTitle:'Best Electric Scooter Under 1.5 Lakh in India 2026 | EScooterwale',
     seoDescLead:'Our shortlist of electric scooters under ₹1.5 lakh ex-showroom, ranked on real range, ride, service and value.',
     icon:'🎯',
     label:'Under ₹1.5L',
@@ -260,7 +260,7 @@ const CATEGORIES = {
     slug:'family',
     title:'Best Family Electric Scooters in India 2026',
     subtitle:'A wide seat for two, a boot that takes the shopping, and a service network you can rely on every day.',
-    seoTitle:'Best Family Electric Scooter in India 2026: Big Boot, Comfy Seat | ScooterWale',
+    seoTitle:'Best Family Electric Scooter in India 2026: Big Boot, Comfy Seat | EScooterwale',
     seoDescLead:'Electric scooters that work for a family: big boot, wide seat for two and dependable service.',
     icon:'👨‍👩‍👧',
     label:'Family Scooter',
@@ -282,7 +282,7 @@ const CATEGORIES = {
     sortByRealRange:true,
     title:'Highest Range Electric Scooters in India 2026',
     subtitle:'For long commutes and riders who hate charging. Ranked by real-world range, not the claimed figure.',
-    seoTitle:'Highest Range Electric Scooter in India 2026: Real Range Ranked | ScooterWale',
+    seoTitle:'Highest Range Electric Scooter in India 2026: Real Range Ranked | EScooterwale',
     seoDescLead:'Electric scooters with the longest real-world range in India, ranked by what they actually do on the road, not by IDC claims.',
     icon:'🔋',
     label:'Best Range',
@@ -304,7 +304,7 @@ const CATEGORIES = {
     slug:'tier2-cities',
     title:'Best Electric Scooters for Tier-2 and Tier-3 Cities in India 2026',
     subtitle:'When the nearest service centre matters more than the spec sheet. These brands reach furthest across India.',
-    seoTitle:'Best Electric Scooter for Tier 2 Cities in India 2026 | ScooterWale',
+    seoTitle:'Best Electric Scooter for Tier 2 Cities in India 2026 | EScooterwale',
     seoDescLead:'Electric scooters for Tier 2 and Tier 3 cities, ranked on how far the brand service network actually reaches.',
     icon:'🗺️',
     label:'Tier-2 Cities',
@@ -357,7 +357,7 @@ function renderPage(catSlug) {
   document.getElementById('pgTitle').textContent = seo.title;
   document.getElementById('pgDesc').setAttribute('content', seo.desc);
   document.getElementById('pgCanon').setAttribute('href', `https://www.escooterwale.in/best/${catSlug}`);
-  document.getElementById('ogTitle').setAttribute('content', seo.title.replace(' | ScooterWale',''));
+  document.getElementById('ogTitle').setAttribute('content', seo.title.replace(' | EScooterwale',''));
   document.getElementById('pgH1').textContent = cat.title;
   document.getElementById('pgSubtitle').textContent = cat.subtitle;
 
@@ -365,7 +365,7 @@ function renderPage(catSlug) {
   const ex = document.querySelector('script[type="application/ld+json"]');if(ex)ex.remove();
   const ld = document.createElement('script');ld.type='application/ld+json';
   const picks = cat.picks.map(p=>SCOOTERS_DB.find(s=>s.id===p.id)).filter(Boolean);
-  ld.textContent = JSON.stringify({"@context":"https://schema.org","@type":"ItemList","name":seo.title.replace(' | ScooterWale',''),"itemListElement":picks.map((s,i)=>({
+  ld.textContent = JSON.stringify({"@context":"https://schema.org","@type":"ItemList","name":seo.title.replace(' | EScooterwale',''),"itemListElement":picks.map((s,i)=>({
     "@type":"ListItem","position":i+1,"name":s.fullName,"url":`https://www.escooterwale.in/scooters/${s.id}`
   }))});
   document.head.appendChild(ld);

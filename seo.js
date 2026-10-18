@@ -27,7 +27,7 @@
     scooter(s) {
       const where = s.headlinePriceCity ? ` in ${cityName()}` : '';
       return {
-        title: `${s.fullName} Price, Real Range and Review ${YEAR} | ScooterWale`,
+        title: `${s.fullName} Price, Real Range and Review ${YEAR} | EScooterwale`,
         desc: `${s.fullName} costs ${s.priceDisplay} ex-showroom${where}. ${s.realRangeEstimated ? 'We estimate' : 'We measured'} ${span(s.realRange)} of real range against the ${s.range} claimed. Specs, subsidy, EMI and who should skip it.`
       };
     },
@@ -37,7 +37,7 @@
       const short = b.shortName || b.name;
       const lo = prices[0], hi = prices[prices.length - 1];
       return {
-        title: `${short} Electric Scooter Price ${YEAR}: All ${models.length} Models | ScooterWale`,
+        title: `${short} Electric Scooter Price ${YEAR}: All ${models.length} Models | EScooterwale`,
         desc: `Every ${short} electric scooter on sale in India, ${models.length} models from ${inr(lo)} to ${inr(hi)}. Real-world range from our own tests, ScootScore, subsidy and on-road price for each.`
       };
     },
@@ -45,7 +45,7 @@
     city(c, opts) {
       const o = opts || {};
       return {
-        title: `Electric Scooter Price in ${c.name} ${YEAR}: On-Road Prices | ScooterWale`,
+        title: `Electric Scooter Price in ${c.name} ${YEAR}: On-Road Prices | EScooterwale`,
         desc: `On-road prices for ${o.count || 41} electric scooters in ${c.name}, plus what ${o.state || c.state} gives you in subsidy and road tax${o.taxLine ? ' (' + o.taxLine + ')' : ''}. Dealers, charging and real range.`
       };
     },
