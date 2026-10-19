@@ -116,12 +116,21 @@ jobs:
       - name: Publish
         id: publish
         run: |
+          set -o pipefail
+          # any failure is written as an annotation, so the reason shows in the run summary
+          fail(){ echo "::error title=Publish::$1: $(tail -c 600 /tmp/pub.log | tr '\n' ' ')"; exit 1; }
           git config user.name "escooterwale-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A -- . ':!automation/out' ':!shots-tmp'
+          git add -A > /tmp/pub.log 2>&1 || fail "git add"
           if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
-          git commit -m "Weekly update $(date -u +%F)" -m "Automatic. Summary: reports/weekly/$(date -u +%F).md"
-          for i in 1 2 3; do git pull --rebase -q origin main && git push origin HEAD:main && break; sleep 10; done
+          git commit -q -m "Weekly update $(date -u +%F)" -m "Automatic. Summary: reports/weekly/$(date -u +%F).md" > /tmp/pub.log 2>&1 || fail "git commit"
+          ok=no
+          for i in 1 2 3; do
+            if git pull --rebase -q -X theirs origin main > /tmp/pub.log 2>&1 && git push origin HEAD:main >> /tmp/pub.log 2>&1; then ok=yes; break; fi
+            git rebase --abort > /dev/null 2>&1 || true
+            sleep 10
+          done
+          [ "$ok" = yes ] || fail "push to main"
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Open summary issue
