@@ -119,7 +119,7 @@ jobs:
           fail(){ echo "::error title=Publish::$1: $(tail -c 600 /tmp/pub.log | tr '\n' ' ')"; exit 1; }
           git config user.name "escooterwale-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A -- . ':!automation/out' ':!shots-tmp' > /tmp/pub.log 2>&1 || fail "git add"
+          git add -A > /tmp/pub.log 2>&1 || fail "git add"
           if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git commit -q -m "Weekly update $(date -u +%F)" -m "Automatic. Summary: reports/weekly/$(date -u +%F).md" > /tmp/pub.log 2>&1 || fail "git commit"
           ok=no
