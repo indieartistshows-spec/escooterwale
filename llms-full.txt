@@ -115,9 +115,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 X 2 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-2-kwh
-- Ex-showroom price: ₹89,999
-- Estimated on-road price: ₹95,620
-- EMI from: ₹2370/month
+- Ex-showroom price: ₹80,499
+- Estimated on-road price: ₹85,950
+- EMI from: ₹2120/month
 - Battery: 2 kWh
 - Claimed range (IDC): 108 km
 - Real-world range (EScooterwale estimate): 80–90 km
@@ -172,9 +172,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 Pro 3 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-3-kwh
-- Ex-showroom price: ₹1,29,999
-- Estimated on-road price: ₹1,36,340
-- EMI from: ₹3423/month
+- Ex-showroom price: ₹1,53,499
+- Estimated on-road price: ₹1,60,260
+- EMI from: ₹4042/month
 - Battery: 3 kWh
 - Claimed range (IDC): 176 km
 - Real-world range (EScooterwale estimate): 140–150 km
@@ -191,14 +191,14 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 Pro 4 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-4-kwh
-- Ex-showroom price: ₹1,49,999
-- Estimated on-road price: ₹1,56,700
-- EMI from: ₹3950/month
+- Ex-showroom price: ₹1,53,499
+- Estimated on-road price: ₹1,60,260
+- EMI from: ₹4042/month
 - Battery: 4 kWh
 - Claimed range (IDC): 195 km
 - Real-world range (EScooterwale estimate): 155–165 km
-- Top speed: 117 km/h
-- Charging time: 4.5 hrs
+- Top speed: 130 km/h
+- Charging time: 4 hrs
 - Kerb weight: 108 kg
 - Boot space: 36 L
 - Ground clearance: 155 mm
@@ -381,9 +381,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### TVS Motor iQube 2.2 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-2point2-kwh
-- Ex-showroom price: ₹1,09,319
-- Estimated on-road price: ₹1,15,290
-- EMI from: ₹2879/month
+- Ex-showroom price: ₹94,434
+- Estimated on-road price: ₹1,00,130
+- EMI from: ₹2487/month
 - Battery: 2.2 kWh
 - Claimed range (IDC): 94 km
 - Real-world range (EScooterwale estimate): 70–82 km
@@ -400,9 +400,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### TVS Motor iQube S 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-s-3point5-kwh
-- Ex-showroom price: ₹1,27,990
-- Estimated on-road price: ₹1,34,290
-- EMI from: ₹3370/month
+- Ex-showroom price: ₹1,08,993
+- Estimated on-road price: ₹1,14,950
+- EMI from: ₹2870/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 145 km
 - Real-world range (EScooterwale estimate): 100–118 km
@@ -419,9 +419,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### TVS Motor iQube ST 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-st-3point5-kwh
-- Ex-showroom price: ₹1,49,990
-- Estimated on-road price: ₹1,56,690
-- EMI from: ₹3950/month
+- Ex-showroom price: ₹1,17,642
+- Estimated on-road price: ₹1,23,760
+- EMI from: ₹3098/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 145 km
 - Real-world range (EScooterwale estimate): 100–118 km
@@ -438,9 +438,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### TVS Motor iQube ST 5.3 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-st-5point3-kwh
-- Ex-showroom price: ₹1,69,000
-- Estimated on-road price: ₹1,76,040
-- EMI from: ₹4450/month
+- Ex-showroom price: ₹1,58,834
+- Estimated on-road price: ₹1,65,690
+- EMI from: ₹4183/month
 - Battery: 5.3 kWh
 - Claimed range (IDC): 212 km
 - Real-world range (EScooterwale estimate): 155–175 km
@@ -590,13 +590,13 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Hero Vida V2 Pro 3.94 kWh
 - URL: https://www.escooterwale.in/scooters/hero-vida-v2-pro-3point94-kwh
-- Ex-showroom price: ₹1,29,566
-- Estimated on-road price: ₹1,35,900
-- EMI from: ₹3412/month
+- Ex-showroom price: ₹1,15,300
+- Estimated on-road price: ₹1,21,380
+- EMI from: ₹3036/month
 - Battery: 3.94 kWh
-- Claimed range (IDC): 143 km
+- Claimed range (IDC): 165 km
 - Real-world range (EScooterwale estimate): 108–122 km
-- Top speed: 80 km/h
+- Top speed: 90 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
 - Boot space: 26 L

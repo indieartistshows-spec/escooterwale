@@ -6,7 +6,7 @@
   "name": "S1 X 2 kWh",
   "slug": "ola-electric-s1-x-2-kwh",
   "tagline": "Ola Electric S1 X — 2 kWh | 108 km claimed | 90 km/h",
-  "price": 89999,
+  "price": 80499,
   "priceDisplay": "₹89,999",
   "onRoad": 98998,
   "onRoadDisplay": "₹98,998",
@@ -207,7 +207,7 @@
   "name": "S1 Pro 3 kWh",
   "slug": "ola-electric-s1-pro-3-kwh",
   "tagline": "Ola Electric S1 Pro — 3 kWh | 176 km claimed | 117 km/h",
-  "price": 129999,
+  "price": 153499,
   "priceDisplay": "₹129,999",
   "onRoad": 142998,
   "onRoadDisplay": "₹142,998",
@@ -274,15 +274,15 @@
   "name": "S1 Pro 4 kWh",
   "slug": "ola-electric-s1-pro-4-kwh",
   "tagline": "Ola Electric S1 Pro — 4 kWh | 195 km claimed | 117 km/h",
-  "price": 149999,
+  "price": 153499,
   "priceDisplay": "₹149,999",
   "onRoad": 164998,
   "onRoadDisplay": "₹164,998",
   "emiFrom": 3900,
   "range": "195 km",
   "realRange": "155–165 km",
-  "speed": "117 km/h",
-  "charging": "4.5 hrs",
+  "speed": "130 km/h",
+  "charging": "4 hrs",
   "battery": "4 kWh",
   "bootSpace": "36 L",
   "weight": "108 kg",
@@ -323,14 +323,14 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "117 km/h",
+    "Top speed": "130 km/h",
     "Battery capacity": "4 kWh",
-    "Charging time": "4.5 hrs"
+    "Charging time": "4 hrs"
    },
    "battery": {
     "Claimed range": "195 km",
     "Real-world range": "155–165 km",
-    "Charge time": "4.5 hrs"
+    "Charge time": "4 hrs"
    }
   }
  },
@@ -964,7 +964,7 @@
   "name": "iQube 2.2 kWh",
   "slug": "tvs-motor-iqube-2point2-kwh",
   "tagline": "TVS Motor iQube — 2.2 kWh | 94 km claimed | 82 km/h",
-  "price": 109319,
+  "price": 94434,
   "priceDisplay": "₹109,319",
   "onRoad": 120250,
   "onRoadDisplay": "₹120,250",
@@ -1030,7 +1030,7 @@
   "name": "iQube S 3.5 kWh",
   "slug": "tvs-motor-iqube-s-3point5-kwh",
   "tagline": "TVS Motor iQube S — 3.5 kWh | 145 km claimed | 82 km/h",
-  "price": 127990,
+  "price": 108993,
   "priceDisplay": "₹127,990",
   "onRoad": 140789,
   "onRoadDisplay": "₹140,789",
@@ -1096,7 +1096,7 @@
   "name": "iQube ST 3.5 kWh",
   "slug": "tvs-motor-iqube-st-3point5-kwh",
   "tagline": "TVS Motor iQube ST — 3.5 kWh | 145 km claimed | 82 km/h",
-  "price": 149990,
+  "price": 117642,
   "priceDisplay": "₹149,990",
   "onRoad": 164989,
   "onRoadDisplay": "₹164,989",
@@ -1162,7 +1162,7 @@
   "name": "iQube ST 5.3 kWh",
   "slug": "tvs-motor-iqube-st-5point3-kwh",
   "tagline": "TVS Motor iQube ST — 5.3 kWh | 212 km claimed | 82 km/h",
-  "price": 169000,
+  "price": 158834,
   "priceDisplay": "₹169,000",
   "onRoad": 185900,
   "onRoadDisplay": "₹185,900",
@@ -1701,14 +1701,14 @@
   "name": "V2 Pro 3.94 kWh",
   "slug": "hero-vida-v2-pro-3point94-kwh",
   "tagline": "Hero Vida V2 Pro — 3.94 kWh | 143 km claimed | 80 km/h",
-  "price": 129566,
+  "price": 115300,
   "priceDisplay": "₹129,566",
   "onRoad": 142522,
   "onRoadDisplay": "₹142,522",
   "emiFrom": 3369,
-  "range": "143 km",
+  "range": "165 km",
   "realRange": "108–122 km",
-  "speed": "80 km/h",
+  "speed": "90 km/h",
   "charging": "5 hrs",
   "battery": "3.94 kWh",
   "bootSpace": "26 L",
@@ -1749,12 +1749,12 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "80 km/h",
+    "Top speed": "90 km/h",
     "Battery capacity": "3.94 kWh",
     "Charging time": "5 hrs"
    },
    "battery": {
-    "Claimed range": "143 km",
+    "Claimed range": "165 km",
     "Real-world range": "108–122 km",
     "Charge time": "5 hrs"
    }
