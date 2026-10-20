@@ -14,6 +14,18 @@ const PATHS = ['/', '/compare', '/match', '/scooters/ather-energy-rizta-s-2point
       out.plain.push({ path: p, ua: ua.slice(0, 12), status: r.status, mitigated: r.headers.get('x-vercel-mitigated'), challenge: /challenge|Vercel Security Checkpoint/i.test(body.slice(0, 3000)), bytes: body.length });
     } catch (e) { out.plain.push({ path: p, ua: ua.slice(0, 12), error: e.message }); }
   }
+  // link-preview apps should get the real page (custom Bypass rule), with the share image tags
+  out.previews = [];
+  for (const ua of ['WhatsApp/2.24.20.80 A', 'TelegramBot (like TwitterBot)', 'Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)', 'Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)', 'facebookexternalhit/1.1']) {
+    for (const p of ['/scooters/ather-energy-rizta-s-2point9-kwh', '/match']) {
+      try {
+        const r = await fetch(BASE + p, { headers: { 'user-agent': ua } }), body = await r.text();
+        const og = (body.match(/<meta property="og:image" content="([^"]+)"/) || [])[1] || null;
+        let img = null; if (og) { const ir = await fetch(og, { headers: { 'user-agent': ua } }); img = ir.status + ' ' + ir.headers.get('content-type'); }
+        out.previews.push({ ua: ua.split(/[ /]/)[0], path: p, status: r.status, mitigated: r.headers.get('x-vercel-mitigated'), title: (body.match(/<title>([^<]*)/) || [])[1], og, img });
+      } catch (e) { out.previews.push({ ua, path: p, error: e.message }); }
+    }
+  }
   const b = await chromium.launch();
   const page = await b.newPage({ viewport: { width: 390, height: 844 }, userAgent: 'Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0 Mobile Safari/537.36' });
   for (const p of ['/', '/match', '/listings', '/trending']) {
