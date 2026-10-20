@@ -1,0 +1,28 @@
+# Checks how the live site answers scripts and real browsers (reports/firewall-check.json). Run by hand.
+name: Firewall check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['automation/firewall-check.js', '.github/workflows/firewall-check.yml']
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - run: node automation/firewall-check.js
+      - run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add reports/firewall-check.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Firewall check result"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done
