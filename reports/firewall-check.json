@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-10-20T19:19:34.709Z",
+ "ranAt": "2026-10-20T19:26:00.018Z",
  "plain": [
   {
    "path": "/",
@@ -7,7 +7,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/",
@@ -15,7 +15,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/compare",
@@ -23,7 +23,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/compare",
@@ -31,7 +31,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/match",
@@ -39,7 +39,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/match",
@@ -47,7 +47,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
@@ -55,7 +55,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
@@ -63,7 +63,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/hi/",
@@ -71,7 +71,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/hi/",
@@ -79,7 +79,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/sitemap.xml",
@@ -87,7 +87,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/sitemap.xml",
@@ -95,7 +95,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/robots.txt",
@@ -103,7 +103,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/robots.txt",
@@ -111,7 +111,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/api/service?pin=400050",
@@ -119,7 +119,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   },
   {
    "path": "/api/service?pin=400050",
@@ -127,7 +127,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31427
+   "bytes": 31432
   }
  ],
  "browser": [
@@ -162,6 +162,96 @@
    "final": "https://www.escooterwale.in/trending",
    "checkpoint": true,
    "h1": null
+  }
+ ],
+ "previews": [
+  {
+   "ua": "WhatsApp",
+   "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
+   "status": 200,
+   "mitigated": null,
+   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=fdf6232d",
+   "img": "200 image/jpeg"
+  },
+  {
+   "ua": "WhatsApp",
+   "path": "/match",
+   "status": 200,
+   "mitigated": null,
+   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+   "og": "https://www.escooterwale.in/images/og/match.jpg?v=727885da",
+   "img": "200 image/jpeg"
+  },
+  {
+   "ua": "TelegramBot",
+   "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
+   "status": 200,
+   "mitigated": null,
+   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=fdf6232d",
+   "img": "200 image/jpeg"
+  },
+  {
+   "ua": "TelegramBot",
+   "path": "/match",
+   "status": 200,
+   "mitigated": null,
+   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+   "og": "https://www.escooterwale.in/images/og/match.jpg?v=727885da",
+   "img": "200 image/jpeg"
+  },
+  {
+   "ua": "Slackbot-LinkExpanding",
+   "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
+  },
+  {
+   "ua": "Slackbot-LinkExpanding",
+   "path": "/match",
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
+  },
+  {
+   "ua": "Mozilla",
+   "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
+  },
+  {
+   "ua": "Mozilla",
+   "path": "/match",
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
+  },
+  {
+   "ua": "facebookexternalhit",
+   "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
+  },
+  {
+   "ua": "facebookexternalhit",
+   "path": "/match",
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   }
  ],
  "apiFromPage": "429 text/html; charset=utf-8"
