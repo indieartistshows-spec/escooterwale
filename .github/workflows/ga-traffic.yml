@@ -1,0 +1,28 @@
+# Traffic quality check from Google Analytics (reports/ga-traffic.json). Run by hand from Actions.
+name: GA traffic check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['automation/ga-traffic.js', '.github/workflows/ga-traffic.yml']
+permissions:
+  contents: write
+jobs:
+  ga:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - env:
+          GA_SA_KEY: ${{ secrets.GA_SA_KEY }}
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+        run: node automation/ga-traffic.js
+      - run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add reports/ga-traffic.json
+          git diff --cached --quiet && exit 0
+          git commit -m "GA traffic check result"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done
