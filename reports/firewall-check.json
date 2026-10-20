@@ -1,0 +1,168 @@
+{
+ "ranAt": "2026-10-20T19:19:34.709Z",
+ "plain": [
+  {
+   "path": "/",
+   "ua": "curl/8.5",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/",
+   "ua": "Mozilla/5.0 ",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/compare",
+   "ua": "curl/8.5",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/compare",
+   "ua": "Mozilla/5.0 ",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/match",
+   "ua": "curl/8.5",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/match",
+   "ua": "Mozilla/5.0 ",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
+   "ua": "curl/8.5",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
+   "ua": "Mozilla/5.0 ",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/hi/",
+   "ua": "curl/8.5",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/hi/",
+   "ua": "Mozilla/5.0 ",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/sitemap.xml",
+   "ua": "curl/8.5",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/sitemap.xml",
+   "ua": "Mozilla/5.0 ",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/robots.txt",
+   "ua": "curl/8.5",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/robots.txt",
+   "ua": "Mozilla/5.0 ",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/api/service?pin=400050",
+   "ua": "curl/8.5",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  },
+  {
+   "path": "/api/service?pin=400050",
+   "ua": "Mozilla/5.0 ",
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 31427
+  }
+ ],
+ "browser": [
+  {
+   "path": "/",
+   "status": 429,
+   "title": "Vercel Security Checkpoint",
+   "final": "https://www.escooterwale.in/",
+   "checkpoint": true,
+   "h1": null
+  },
+  {
+   "path": "/match",
+   "status": 429,
+   "title": "Vercel Security Checkpoint",
+   "final": "https://www.escooterwale.in/match",
+   "checkpoint": true,
+   "h1": null
+  },
+  {
+   "path": "/listings",
+   "status": 429,
+   "title": "Vercel Security Checkpoint",
+   "final": "https://www.escooterwale.in/listings",
+   "checkpoint": true,
+   "h1": null
+  },
+  {
+   "path": "/trending",
+   "status": 429,
+   "title": "Vercel Security Checkpoint",
+   "final": "https://www.escooterwale.in/trending",
+   "checkpoint": true,
+   "h1": null
+  }
+ ],
+ "apiFromPage": "429 text/html; charset=utf-8"
+}
