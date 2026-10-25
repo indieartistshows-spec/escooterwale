@@ -26,6 +26,10 @@ function jwt(sa) {
         dimensionFilter: { filter: { fieldName: 'country', inListFilter: { values: ['Singapore', 'South Korea'] } } } }))
     };
   }
+  // week by week since the start of September: all users, India users, and Google organic
+  out.weekly = flat(await run({ dateRanges: [{ startDate: '2026-08-31', endDate: 'yesterday' }], dimensions: [{ name: 'isoYearIsoWeek' }, { name: 'country' }, { name: 'sessionDefaultChannelGroup' }],
+    metrics: ['activeUsers', 'sessions', 'engagedSessions', 'screenPageViews', 'keyEvents'].map(name => ({ name })), limit: 5000 }));
+  out.events = flat(await run({ dateRanges: [{ startDate: '2026-10-19', endDate: 'yesterday' }], dimensions: [{ name: 'eventName' }], metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }], limit: 50 }));
   fs.mkdirSync('reports', { recursive: true });
   fs.writeFileSync('reports/ga-traffic.json', JSON.stringify(out, null, 1));
   console.log('done');
