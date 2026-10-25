@@ -1,9 +1,50 @@
 {
- "ranAt": "2026-10-25T21:00:35.320Z",
+ "ranAt": "2026-10-25T21:46:23.858Z",
  "reports": {
   "today": {
-   "byCountry": [],
-   "detail": [],
+   "byCountry": [
+    {
+     "country": "India",
+     "activeUsers": 1,
+     "sessions": 2,
+     "screenPageViews": 2,
+     "engagementRate": 0,
+     "averageSessionDuration": 3.572,
+     "newUsers": 1
+    }
+   ],
+   "detail": [
+    {
+     "country": "India",
+     "city": "Muzaffarpur",
+     "sessionSourceMedium": "google / organic",
+     "deviceCategory": "mobile",
+     "browser": "Chrome",
+     "operatingSystem": "Android",
+     "screenResolution": "393x876",
+     "activeUsers": 1,
+     "sessions": 1,
+     "screenPageViews": 1,
+     "engagementRate": 0,
+     "averageSessionDuration": 7.144,
+     "newUsers": 1
+    },
+    {
+     "country": "India",
+     "city": "Ahmedabad",
+     "sessionSourceMedium": "google / organic",
+     "deviceCategory": "mobile",
+     "browser": "Chrome",
+     "operatingSystem": "Android",
+     "screenResolution": "360x800",
+     "activeUsers": 0,
+     "sessions": 1,
+     "screenPageViews": 1,
+     "engagementRate": 0,
+     "averageSessionDuration": 0,
+     "newUsers": 0
+    }
+   ],
    "landing": [],
    "byHour": []
   },
@@ -11,12 +52,12 @@
    "byCountry": [
     {
      "country": "India",
-     "activeUsers": 688,
-     "sessions": 743,
-     "screenPageViews": 1305,
-     "engagementRate": 0.651,
-     "averageSessionDuration": 145.305,
-     "newUsers": 686
+     "activeUsers": 690,
+     "sessions": 747,
+     "screenPageViews": 1308,
+     "engagementRate": 0.648,
+     "averageSessionDuration": 144.544,
+     "newUsers": 688
     },
     {
      "country": "Singapore",
@@ -371,10 +412,10 @@
      "operatingSystem": "Android",
      "screenResolution": "360x800",
      "activeUsers": 4,
-     "sessions": 4,
-     "screenPageViews": 6,
-     "engagementRate": 0.5,
-     "averageSessionDuration": 30.656,
+     "sessions": 5,
+     "screenPageViews": 7,
+     "engagementRate": 0.4,
+     "averageSessionDuration": 24.525,
      "newUsers": 4
     },
     {
@@ -4271,7 +4312,7 @@
      "operatingSystem": "Windows",
      "screenResolution": "1536x864",
      "activeUsers": 1,
-     "sessions": 1,
+     "sessions": 2,
      "screenPageViews": 1,
      "engagementRate": 0,
      "averageSessionDuration": 0,
@@ -5169,10 +5210,10 @@
    "isoYearIsoWeek": "202643",
    "country": "India",
    "sessionDefaultChannelGroup": "Organic Search",
-   "activeUsers": 540,
-   "sessions": 586,
+   "activeUsers": 541,
+   "sessions": 588,
    "engagedSessions": 381,
-   "screenPageViews": 939,
+   "screenPageViews": 940,
    "keyEvents": 41
   },
   {
@@ -5359,8 +5400,8 @@
    "isoYearIsoWeek": "202643",
    "country": "India",
    "sessionDefaultChannelGroup": "Unassigned",
-   "activeUsers": 22,
-   "sessions": 22,
+   "activeUsers": 23,
+   "sessions": 23,
    "engagedSessions": 0,
    "screenPageViews": 12,
    "keyEvents": 0
@@ -7109,23 +7150,23 @@
  "events": [
   {
    "eventName": "page_view",
-   "eventCount": 1600,
-   "totalUsers": 968
+   "eventCount": 1601,
+   "totalUsers": 969
   },
   {
    "eventName": "session_start",
-   "eventCount": 1034,
-   "totalUsers": 968
+   "eventCount": 1036,
+   "totalUsers": 969
   },
   {
    "eventName": "first_visit",
-   "eventCount": 968,
-   "totalUsers": 963
+   "eventCount": 969,
+   "totalUsers": 964
   },
   {
    "eventName": "user_engagement",
-   "eventCount": 837,
-   "totalUsers": 532
+   "eventCount": 840,
+   "totalUsers": 535
   },
   {
    "eventName": "cta_click",
