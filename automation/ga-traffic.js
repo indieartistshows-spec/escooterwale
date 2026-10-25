@@ -30,6 +30,10 @@ function jwt(sa) {
   out.weekly = flat(await run({ dateRanges: [{ startDate: '2026-08-31', endDate: 'yesterday' }], dimensions: [{ name: 'isoYearIsoWeek' }, { name: 'country' }, { name: 'sessionDefaultChannelGroup' }],
     metrics: ['activeUsers', 'sessions', 'engagedSessions', 'screenPageViews', 'keyEvents'].map(name => ({ name })), limit: 5000 }));
   out.events = flat(await run({ dateRanges: [{ startDate: '2026-10-19', endDate: 'yesterday' }], dimensions: [{ name: 'eventName' }], metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }], limit: 50 }));
+  // which scooters and brands people actually opened (scooter_view carries model and brand)
+  out.scooterViews = flat(await run({ dateRanges: [{ startDate: '2026-10-19', endDate: '2026-10-25' }], dimensions: [{ name: 'customEvent:brand' }, { name: 'customEvent:model' }],
+    metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }], limit: 200,
+    dimensionFilter: { filter: { fieldName: 'eventName', stringFilter: { value: 'scooter_view' } } }, orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }] }));
   fs.mkdirSync('reports', { recursive: true });
   fs.writeFileSync('reports/ga-traffic.json', JSON.stringify(out, null, 1));
   console.log('done');
