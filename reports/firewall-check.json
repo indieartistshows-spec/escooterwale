@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-10-20T19:33:02.658Z",
+ "ranAt": "2026-10-25T21:46:48.363Z",
  "plain": [
   {
    "path": "/",
@@ -7,7 +7,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31438
   },
   {
    "path": "/",
@@ -15,7 +15,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31427
   },
   {
    "path": "/compare",
@@ -23,7 +23,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31438
   },
   {
    "path": "/compare",
@@ -31,7 +31,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31427
   },
   {
    "path": "/match",
@@ -39,7 +39,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31438
   },
   {
    "path": "/match",
@@ -47,7 +47,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31427
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
@@ -55,7 +55,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31438
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
@@ -63,7 +63,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31427
   },
   {
    "path": "/hi/",
@@ -71,7 +71,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31438
   },
   {
    "path": "/hi/",
@@ -79,7 +79,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31427
   },
   {
    "path": "/sitemap.xml",
@@ -87,7 +87,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31438
   },
   {
    "path": "/sitemap.xml",
@@ -95,7 +95,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31427
   },
   {
    "path": "/robots.txt",
@@ -103,7 +103,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31438
   },
   {
    "path": "/robots.txt",
@@ -111,7 +111,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31427
   },
   {
    "path": "/api/service?pin=400050",
@@ -119,7 +119,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31438
   },
   {
    "path": "/api/service?pin=400050",
@@ -127,7 +127,7 @@
    "status": 429,
    "mitigated": "challenge",
    "challenge": true,
-   "bytes": 31430
+   "bytes": 31427
   }
  ],
  "browser": [
@@ -250,6 +250,48 @@
    "title": "Vercel Security Checkpoint",
    "og": null,
    "img": null
+  }
+ ],
+ "redirects": [
+  {
+   "path": "/best?cat=family",
+   "status": 301,
+   "to": "/best/family"
+  },
+  {
+   "path": "/city?city=pune",
+   "status": 308,
+   "to": "/cities/pune?city=pune"
+  },
+  {
+   "path": "/city",
+   "status": 301,
+   "to": "/cities/hyderabad"
+  },
+  {
+   "path": "/scooters/bajaj-chetak-chetak-3501-3point5-kwh?id=bajaj-chetak-chetak-3501-3point5-kwh",
+   "status": 301,
+   "to": "/scooters/bajaj-chetak-chetak-3501-3point5-kwh"
+  },
+  {
+   "path": "/compare?a=bajaj-chetak-chetak-3501-3point5-kwh&b=ola-electric-s1-x-3-kwh",
+   "status": 301,
+   "to": "/compare/bajaj-chetak-chetak-3501-3point5-kwh-vs-ola-electric-s1-x-3-kwh"
+  },
+  {
+   "path": "/hi/best?cat=family",
+   "status": 301,
+   "to": "/hi/best/family"
+  },
+  {
+   "path": "/best/family",
+   "status": 200,
+   "to": null
+  },
+  {
+   "path": "/listings",
+   "status": 200,
+   "to": null
   }
  ],
  "apiFromPage": "429 text/html; charset=utf-8"
