@@ -1,23 +1,8 @@
 {
- "ranAt": "2026-10-18T21:46:59.060Z",
+ "ranAt": "2026-10-25T21:46:25.537Z",
  "pincodes": 19238,
  "places": "skipped: no PLACES_API_KEY",
- "osm": {
-  "source": "https://overpass-api.de/api/interpreter",
-  "elements": 11193,
-  "counts": {
-   "ola-electric": 26,
-   "ather-energy": 27,
-   "tvs-motor": 268,
-   "bajaj-chetak": 229,
-   "hero-vida": 94,
-   "ampere": 4,
-   "okinawa": 4,
-   "pure-ev": 1,
-   "bounce-infinity": 1,
-   "bgauss": 3
-  }
- },
+ "osmError": "https://maps.mail.ru/osm/tools/overpass/api/interpreter 504",
  "merged": {
   "ola-electric": {
    "points": 26,
