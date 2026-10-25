@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   youtube:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # pinned: Playwright browser deps fail on the new Ubuntu 26 image
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4

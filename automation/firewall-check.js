@@ -26,6 +26,15 @@ const PATHS = ['/', '/compare', '/match', '/scooters/ather-energy-rizta-s-2point
       } catch (e) { out.previews.push({ ua, path: p, error: e.message }); }
     }
   }
+  // old addresses should 301 to the clean page (middleware.js); a preview user agent gets past the firewall
+  out.redirects = [];
+  for (const p of ['/best?cat=family', '/city?city=pune', '/city', '/scooters/bajaj-chetak-chetak-3501-3point5-kwh?id=bajaj-chetak-chetak-3501-3point5-kwh',
+    '/compare?a=bajaj-chetak-chetak-3501-3point5-kwh&b=ola-electric-s1-x-3-kwh', '/hi/best?cat=family', '/best/family', '/listings']) {
+    try {
+      const r = await fetch(BASE + p, { headers: { 'user-agent': 'WhatsApp/2.24.20.80 A' }, redirect: 'manual' });
+      out.redirects.push({ path: p, status: r.status, to: r.headers.get('location') });
+    } catch (e) { out.redirects.push({ path: p, error: e.message }); }
+  }
   const b = await chromium.launch();
   const page = await b.newPage({ viewport: { width: 390, height: 844 }, userAgent: 'Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0 Mobile Safari/537.36' });
   for (const p of ['/', '/match', '/listings', '/trending']) {

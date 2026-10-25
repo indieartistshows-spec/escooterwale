@@ -29,7 +29,7 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # pinned: Playwright browser deps fail on the new Ubuntu 26 image
     timeout-minutes: 90
     env:
       GA_SA_KEY: ${{ secrets.GA_SA_KEY }}
