@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-10-25T20:52:47.621Z",
+ "ranAt": "2026-10-25T21:00:35.320Z",
  "reports": {
   "today": {
    "byCountry": [],
@@ -7199,6 +7199,266 @@
   },
   {
    "eventName": "lead_form_explore",
+   "eventCount": 1,
+   "totalUsers": 1
+  }
+ ],
+ "scooterViews": [
+  {
+   "customEvent:brand": "bajaj-chetak",
+   "customEvent:model": "bajaj-chetak-chetak-3501-3point5-kwh",
+   "eventCount": 46,
+   "totalUsers": 39
+  },
+  {
+   "customEvent:brand": "tvs-motor",
+   "customEvent:model": "tvs-motor-iqube-st-5point3-kwh",
+   "eventCount": 27,
+   "totalUsers": 20
+  },
+  {
+   "customEvent:brand": "ather-energy",
+   "customEvent:model": "ather-energy-450x-3point7-kwh",
+   "eventCount": 22,
+   "totalUsers": 16
+  },
+  {
+   "customEvent:brand": "tvs-motor",
+   "customEvent:model": "tvs-motor-iqube-s-3point5-kwh",
+   "eventCount": 21,
+   "totalUsers": 19
+  },
+  {
+   "customEvent:brand": "ampere",
+   "customEvent:model": "ampere-magnus-g-max-3point0-kwh",
+   "eventCount": 20,
+   "totalUsers": 17
+  },
+  {
+   "customEvent:brand": "hero-vida",
+   "customEvent:model": "hero-vida-vx2-plus-3point4-kwh",
+   "eventCount": 19,
+   "totalUsers": 17
+  },
+  {
+   "customEvent:brand": "ola-electric",
+   "customEvent:model": "ola-electric-s1-x-3-kwh",
+   "eventCount": 16,
+   "totalUsers": 13
+  },
+  {
+   "customEvent:brand": "ather-energy",
+   "customEvent:model": "ather-energy-rizta-z-3point7-kwh",
+   "eventCount": 13,
+   "totalUsers": 12
+  },
+  {
+   "customEvent:brand": "hero-vida",
+   "customEvent:model": "hero-vida-vx2-go-2point2-kwh",
+   "eventCount": 11,
+   "totalUsers": 11
+  },
+  {
+   "customEvent:brand": "ampere",
+   "customEvent:model": "ampere-magnus-neo-2point3-kwh",
+   "eventCount": 10,
+   "totalUsers": 8
+  },
+  {
+   "customEvent:brand": "ather-energy",
+   "customEvent:model": "ather-energy-konarc-s-161-3point5-kwh",
+   "eventCount": 10,
+   "totalUsers": 8
+  },
+  {
+   "customEvent:brand": "ather-energy",
+   "customEvent:model": "ather-energy-konarc-s-125-2point7-kwh",
+   "eventCount": 9,
+   "totalUsers": 9
+  },
+  {
+   "customEvent:brand": "bajaj-chetak",
+   "customEvent:model": "bajaj-chetak-chetak-3503-3point5-kwh",
+   "eventCount": 9,
+   "totalUsers": 9
+  },
+  {
+   "customEvent:brand": "hero-vida",
+   "customEvent:model": "hero-vida-v2-pro-3point94-kwh",
+   "eventCount": 9,
+   "totalUsers": 8
+  },
+  {
+   "customEvent:brand": "ola-electric",
+   "customEvent:model": "ola-electric-s1-xplus-4-kwh",
+   "eventCount": 9,
+   "totalUsers": 9
+  },
+  {
+   "customEvent:brand": "bgauss",
+   "customEvent:model": "bgauss-c12i-2point0-kwh",
+   "eventCount": 8,
+   "totalUsers": 6
+  },
+  {
+   "customEvent:brand": "ola-electric",
+   "customEvent:model": "ola-electric-s1-x-2-kwh",
+   "eventCount": 8,
+   "totalUsers": 7
+  },
+  {
+   "customEvent:brand": "tvs-motor",
+   "customEvent:model": "tvs-motor-iqube-2point2-kwh",
+   "eventCount": 8,
+   "totalUsers": 8
+  },
+  {
+   "customEvent:brand": "ampere",
+   "customEvent:model": "ampere-nexus-ex-3-kwh",
+   "eventCount": 7,
+   "totalUsers": 7
+  },
+  {
+   "customEvent:brand": "ather-energy",
+   "customEvent:model": "ather-energy-konarc-s-100-2point1-kwh",
+   "eventCount": 7,
+   "totalUsers": 6
+  },
+  {
+   "customEvent:brand": "ather-energy",
+   "customEvent:model": "ather-energy-rizta-s-2point9-kwh",
+   "eventCount": 7,
+   "totalUsers": 6
+  },
+  {
+   "customEvent:brand": "bajaj-chetak",
+   "customEvent:model": "bajaj-chetak-chetak-3001-3point0-kwh",
+   "eventCount": 7,
+   "totalUsers": 7
+  },
+  {
+   "customEvent:brand": "bounce-infinity",
+   "customEvent:model": "bounce-infinity-infinity-e1-2point0-kwh",
+   "eventCount": 7,
+   "totalUsers": 6
+  },
+  {
+   "customEvent:brand": "ampere",
+   "customEvent:model": "ampere-reo-1point3-kwh",
+   "eventCount": 6,
+   "totalUsers": 5
+  },
+  {
+   "customEvent:brand": "bajaj-chetak",
+   "customEvent:model": "bajaj-chetak-chetak-c2501-2point5-kwh",
+   "eventCount": 6,
+   "totalUsers": 6
+  },
+  {
+   "customEvent:brand": "ola-electric",
+   "customEvent:model": "ola-electric-s1-proplus-5point2-kwh",
+   "eventCount": 6,
+   "totalUsers": 6
+  },
+  {
+   "customEvent:brand": "pure-ev",
+   "customEvent:model": "pure-ev-etranceplus-4point5-kwh",
+   "eventCount": 6,
+   "totalUsers": 5
+  },
+  {
+   "customEvent:brand": "bgauss",
+   "customEvent:model": "bgauss-d15i-3point0-kwh",
+   "eventCount": 5,
+   "totalUsers": 4
+  },
+  {
+   "customEvent:brand": "bgauss",
+   "customEvent:model": "bgauss-ruv-350i-3point0-kwh",
+   "eventCount": 4,
+   "totalUsers": 2
+  },
+  {
+   "customEvent:brand": "okinawa",
+   "customEvent:model": "okinawa-r30-0point8-kwh",
+   "eventCount": 4,
+   "totalUsers": 4
+  },
+  {
+   "customEvent:brand": "okinawa",
+   "customEvent:model": "okinawa-ridgeplus-2point8-kwh",
+   "eventCount": 4,
+   "totalUsers": 4
+  },
+  {
+   "customEvent:brand": "ather-energy",
+   "customEvent:model": "ather-energy-450-apex-3point7-kwh",
+   "eventCount": 3,
+   "totalUsers": 2
+  },
+  {
+   "customEvent:brand": "ather-energy",
+   "customEvent:model": "ather-energy-450s-2point9-kwh",
+   "eventCount": 3,
+   "totalUsers": 3
+  },
+  {
+   "customEvent:brand": "bajaj-chetak",
+   "customEvent:model": "bajaj-chetak-chetak-3502-3point5-kwh",
+   "eventCount": 3,
+   "totalUsers": 3
+  },
+  {
+   "customEvent:brand": "okinawa",
+   "customEvent:model": "okinawa-ipraiseplus-2point2-kwh",
+   "eventCount": 3,
+   "totalUsers": 2
+  },
+  {
+   "customEvent:brand": "ola-electric",
+   "customEvent:model": "ola-electric-s1-pro-3-kwh",
+   "eventCount": 3,
+   "totalUsers": 3
+  },
+  {
+   "customEvent:brand": "ola-electric",
+   "customEvent:model": "ola-electric-s1-pro-4-kwh",
+   "eventCount": 3,
+   "totalUsers": 2
+  },
+  {
+   "customEvent:brand": "pure-ev",
+   "customEvent:model": "pure-ev-epluto-7g-2point0-kwh",
+   "eventCount": 3,
+   "totalUsers": 3
+  },
+  {
+   "customEvent:brand": "tvs-motor",
+   "customEvent:model": "tvs-motor-iqube-st-3point5-kwh",
+   "eventCount": 3,
+   "totalUsers": 3
+  },
+  {
+   "customEvent:brand": "ampere",
+   "customEvent:model": "ampere-nexus-st-3-kwh",
+   "eventCount": 2,
+   "totalUsers": 2
+  },
+  {
+   "customEvent:brand": "bounce-infinity",
+   "customEvent:model": "bounce-infinity-infinity-e1-plus-2point5-kwh",
+   "eventCount": 1,
+   "totalUsers": 1
+  },
+  {
+   "customEvent:brand": "okinawa",
+   "customEvent:model": "okinawa-okhi-90-2point8-kwh",
+   "eventCount": 1,
+   "totalUsers": 1
+  },
+  {
+   "customEvent:brand": "pure-ev",
+   "customEvent:model": "pure-ev-etron-plus-3point0-kwh",
    "eventCount": 1,
    "totalUsers": 1
   }
