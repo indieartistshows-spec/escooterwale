@@ -411,8 +411,68 @@ function initLazyImages(){
   }
 }
 
+/* "Most viewed this week": top 5 scooters by real views last week (data/most-viewed.json,
+   refreshed every Monday from Google Analytics). Pages add <div data-most-viewed></div>. */
+function mostViewedHTML(n=5){
+  const mv=(typeof MOST_VIEWED!=='undefined'&&MOST_VIEWED.models)||[];
+  const list=mv.map(m=>SCOOTERS_DB.find(s=>s.id===m.id&&!s.discontinued)).filter(Boolean).slice(0,n);
+  if(!list.length) return '';
+  const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0];
+  return `<div class="mv-strip"><div class="mv-hd"><div><div class="eyebrow">Most viewed this week</div><div class="mv-sub">What buyers opened most on EScooterwale last week</div></div></div>
+    <div class="mv-row">${list.map((s,i)=>`<a class="mv-card" href="${lp}/scooters/${s.id}"><span class="mv-rank">${i+1}</span><img src="${s.cardImg||s.heroImg}" alt="${s.fullName||s.name}" loading="lazy" width="120" height="120"/><span class="mv-brand" translate="no">${s.shortBrand||s.brand}</span><span class="mv-name" translate="no">${s.name}</span><span class="mv-price">${s.priceDisplay||''}</span></a>`).join('')}</div></div>`;
+}
+function initMostViewed(){ document.querySelectorAll('[data-most-viewed]').forEach(el=>{ if(!el.innerHTML.trim()) el.innerHTML=mostViewedHTML(+el.dataset.mostViewed||5); }); }
+
+/* "Which one should you buy?": every model of a brand side by side with quick picks, worked
+   out from the data, plus short family notes and FAQs from data/model-notes.json.
+   Used on brand pages and on model pages of brands with 3 or more models. */
+function lineupHTML(brandSlug, currentId){
+  const ms=SCOOTERS_DB.filter(s=>s.brandSlug===brandSlug&&!s.discontinued).sort((a,b)=>a.price-b.price);
+  if(ms.length<3) return '';
+  const N=(typeof MODEL_NOTES!=='undefined'&&MODEL_NOTES[brandSlug])||{};
+  const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0];
+  const num=v=>parseFloat(String(v||'').match(/[\d.]+/))||0, lo=s=>num(s.realRange)||num(s.range)*0.75;
+  const bn=(typeof BRANDS_DB!=='undefined'&&(BRANDS_DB.find(b=>b.id===brandSlug)||{}).shortName)||ms[0].brand;
+  const link=s=>`<a href="${lp}/scooters/${s.id}" translate="no">${s.name}</a>`;
+  const best=(f,dir=1)=>ms.reduce((a,b)=>(f(b)-f(a))*dir>0?b:a);
+  const picks=[['Lowest price',best(s=>s.price,-1)],['Longest real range',best(lo)],['Fastest',best(s=>num(s.speed))],['Biggest boot',best(s=>num(s.bootSpace))]];
+  if(ms[0].mp) picks.push(['Best value for money',best(s=>s.mp?s.mp.value:0)]);
+  const seen=new Set(), quick=picks.filter(([l,s])=>{const k=l+s.id;if(seen.has(k))return false;seen.add(k);return true});
+  for(const d of [30,60,90]){const s=ms.find(x=>lo(x)>=d*1.1);if(s) quick.push([`For rides up to ${d} km a day`,s]);}
+  const fam=(N.families||[]).filter(f=>ms.some(s=>s.id.includes(f.match)));
+  return `<section class="lu"><h2 class="lu-h">Which ${bn} should you buy?</h2><p class="lu-sub">Every model side by side, with our real range figures. Pick by the way you ride.</p>
+  <div class="lu-scroll"><table class="lu-t"><thead><tr><th>Model</th><th>Ex-showroom</th><th>Real range</th><th>Top speed</th><th>Boot</th></tr></thead><tbody>
+  ${ms.map(s=>`<tr${s.id===currentId?' class="lu-cur"':''}><td>${link(s)}</td><td>${s.priceDisplay}</td><td>${(s.realRange||'').replace(/\s*[–—-]\s*/,' to ')}</td><td>${s.speed}</td><td>${s.bootSpace}</td></tr>`).join('')}
+  </tbody></table></div>
+  <div class="lu-picks">${quick.map(([l,s])=>`<div class="lu-pick"><span>${l}</span>${link(s)}</div>`).join('')}</div>
+  ${fam.length?`<div class="lu-fam">${fam.map(f=>`<div class="lu-fam-i"><b translate="no">${f.name}</b><span>${f.text}</span></div>`).join('')}</div>`:''}
+  ${(N.faq||[]).length?`<div class="lu-faq">${N.faq.map(x=>`<details><summary>${x.q}</summary><p>${x.a}</p></details>`).join('')}</div>`:''}
+  </section>`;
+}
+
+/* Chat-style quiz button: round, bottom right, on every page except the quiz itself.
+   The first time someone visits, a small label "Match with your scooter" shows above it for a
+   few seconds and fades. Not added in the build's own browser, so it never gets baked into pages. */
+function initMatchFab(){
+  if(navigator.webdriver||document.getElementById('swMatchFab')) return;
+  const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0];
+  if(/^\/(?:(?:hi|mr|ta|te|kn|gu|bn|or)\/)?match(?:\.html)?\/?$/.test(location.pathname)) return;
+  const a=document.createElement('a');
+  a.id='swMatchFab';a.className='sw-fab';a.href=lp+'/match';a.dataset.ctaLocation='match-fab';
+  a.setAttribute('aria-label','Match with your scooter');
+  a.innerHTML='<span class="sw-fab-tip" aria-hidden="true">Match with your scooter</span><span class="sw-fab-ic" aria-hidden="true">❤️</span>';
+  document.body.appendChild(a);
+  // keep clear of the compare tray when it is open
+  const tray=document.querySelector('.compare-tray');
+  if(tray){const up=()=>a.classList.toggle('lift',tray.classList.contains('visible'));up();new MutationObserver(up).observe(tray,{attributes:true,attributeFilter:['class']});}
+  let seen=false;try{seen=localStorage.getItem('sw_fab_seen')==='1';localStorage.setItem('sw_fab_seen','1')}catch(e){}
+  if(!seen){setTimeout(()=>a.classList.add('tip-on'),1200);setTimeout(()=>a.classList.remove('tip-on'),6200);}
+}
+
 document.addEventListener('DOMContentLoaded', ()=>{
   initLazyImages();
+  initMostViewed();
+  initMatchFab();
   updateCompareTray();
   document.querySelectorAll('img').forEach(img=>{
     img.addEventListener('error',function(){

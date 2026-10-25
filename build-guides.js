@@ -130,7 +130,7 @@ const SIDEBAR_SUBSIDY = `
     <a href="/guide-real-range" class="toc-link">Real range test results</a>
     <a href="/guide-battery-types" class="toc-link">LFP vs NMC battery</a>
     <a href="/guide-service-network" class="toc-link">Service network guide</a>
-    <a href="/electric-scooter-price" class="toc-link">All 41 scooter prices</a>
+    <a href="/electric-scooter-price" class="toc-link">All 44 scooter prices</a>
   </div>
   <div class="sidebar-card" style="text-align:center">
     

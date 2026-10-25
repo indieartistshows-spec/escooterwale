@@ -1,7 +1,7 @@
 # EScooterwale — full electric scooter dataset for India
 
 Source: https://www.escooterwale.in
-Last updated: 2026-10-19
+Last updated: 2026-10-25
 Models: 44 | Brands: 10
 
 Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the
@@ -495,9 +495,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Bajaj Chetak Chetak 3501 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3501-3point5-kwh
-- Ex-showroom price: ₹1,14,611
-- Estimated on-road price: ₹1,20,670
-- EMI from: ₹3018/month
+- Ex-showroom price: ₹1,34,000
+- Estimated on-road price: ₹1,40,410
+- EMI from: ₹3529/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
 - Real-world range (EScooterwale estimate): 115–130 km
@@ -514,9 +514,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Bajaj Chetak Chetak 3502 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3502-3point5-kwh
-- Ex-showroom price: ₹1,27,626
-- Estimated on-road price: ₹1,33,920
-- EMI from: ₹3361/month
+- Ex-showroom price: ₹1,22,499
+- Estimated on-road price: ₹1,28,700
+- EMI from: ₹3226/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
 - Real-world range (EScooterwale estimate): 115–130 km
@@ -533,13 +533,13 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Bajaj Chetak Chetak 3503 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3503-3point5-kwh
-- Ex-showroom price: ₹1,39,603
-- Estimated on-road price: ₹1,46,120
-- EMI from: ₹3676/month
+- Ex-showroom price: ₹1,09,500
+- Estimated on-road price: ₹1,15,470
+- EMI from: ₹2884/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
 - Real-world range (EScooterwale estimate): 115–130 km
-- Top speed: 73 km/h
+- Top speed: 63 km/h
 - Charging time: 5 hrs
 - Kerb weight: 108 kg
 - Boot space: 35 L

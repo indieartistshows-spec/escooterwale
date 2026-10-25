@@ -1,0 +1,36 @@
+# Monthly buyer-interest report per brand (views, quiz shortlists, brand clicks, comparisons).
+# Writes reports/brand-interest/<YYYY-MM>.json and .md for last month. Run by hand with a month to backfill.
+name: Brand interest report
+
+on:
+  workflow_dispatch:
+    inputs:
+      month: { description: 'Month as YYYY-MM (blank = last month)', required: false, default: '' }
+  schedule:
+    - cron: '30 3 2 * *'   # 2nd of every month, 09:00 IST
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Build the report
+        env:
+          GA_SA_KEY: ${{ secrets.GA_SA_KEY }}
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+        run: node automation/brand-interest.js ${{ github.event.inputs.month }}
+      - name: Commit the report
+        run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add reports/brand-interest
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "Brand interest report"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 10; done

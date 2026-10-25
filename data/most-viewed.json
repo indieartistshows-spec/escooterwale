@@ -1,0 +1,223 @@
+{
+ "_note": "Scooters opened most on the site last week (GA4 scooter_view). Refreshed every Monday by automation/ga-most-viewed.js. Shown in the Most viewed this week strip; also adds comparison pages for the top models.",
+ "from": "2026-10-19",
+ "to": "2026-10-25",
+ "updated": "2026-10-26",
+ "models": [
+  {
+   "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+   "views": 46,
+   "people": 39
+  },
+  {
+   "id": "tvs-motor-iqube-st-5point3-kwh",
+   "views": 27,
+   "people": 20
+  },
+  {
+   "id": "ather-energy-450x-3point7-kwh",
+   "views": 22,
+   "people": 16
+  },
+  {
+   "id": "tvs-motor-iqube-s-3point5-kwh",
+   "views": 21,
+   "people": 19
+  },
+  {
+   "id": "ampere-magnus-g-max-3point0-kwh",
+   "views": 20,
+   "people": 17
+  },
+  {
+   "id": "hero-vida-vx2-plus-3point4-kwh",
+   "views": 19,
+   "people": 17
+  },
+  {
+   "id": "ola-electric-s1-x-3-kwh",
+   "views": 16,
+   "people": 13
+  },
+  {
+   "id": "ather-energy-rizta-z-3point7-kwh",
+   "views": 13,
+   "people": 12
+  },
+  {
+   "id": "hero-vida-vx2-go-2point2-kwh",
+   "views": 11,
+   "people": 11
+  },
+  {
+   "id": "ampere-magnus-neo-2point3-kwh",
+   "views": 10,
+   "people": 8
+  },
+  {
+   "id": "ather-energy-konarc-s-161-3point5-kwh",
+   "views": 10,
+   "people": 8
+  },
+  {
+   "id": "ather-energy-konarc-s-125-2point7-kwh",
+   "views": 9,
+   "people": 9
+  },
+  {
+   "id": "bajaj-chetak-chetak-3503-3point5-kwh",
+   "views": 9,
+   "people": 9
+  },
+  {
+   "id": "hero-vida-v2-pro-3point94-kwh",
+   "views": 9,
+   "people": 8
+  },
+  {
+   "id": "ola-electric-s1-xplus-4-kwh",
+   "views": 9,
+   "people": 9
+  },
+  {
+   "id": "bgauss-c12i-2point0-kwh",
+   "views": 8,
+   "people": 6
+  },
+  {
+   "id": "ola-electric-s1-x-2-kwh",
+   "views": 8,
+   "people": 7
+  },
+  {
+   "id": "tvs-motor-iqube-2point2-kwh",
+   "views": 8,
+   "people": 8
+  },
+  {
+   "id": "ampere-nexus-ex-3-kwh",
+   "views": 7,
+   "people": 7
+  },
+  {
+   "id": "ather-energy-konarc-s-100-2point1-kwh",
+   "views": 7,
+   "people": 6
+  },
+  {
+   "id": "ather-energy-rizta-s-2point9-kwh",
+   "views": 7,
+   "people": 6
+  },
+  {
+   "id": "bajaj-chetak-chetak-3001-3point0-kwh",
+   "views": 7,
+   "people": 7
+  },
+  {
+   "id": "bounce-infinity-infinity-e1-2point0-kwh",
+   "views": 7,
+   "people": 6
+  },
+  {
+   "id": "ampere-reo-1point3-kwh",
+   "views": 6,
+   "people": 5
+  },
+  {
+   "id": "bajaj-chetak-chetak-c2501-2point5-kwh",
+   "views": 6,
+   "people": 6
+  },
+  {
+   "id": "ola-electric-s1-proplus-5point2-kwh",
+   "views": 6,
+   "people": 6
+  },
+  {
+   "id": "pure-ev-etranceplus-4point5-kwh",
+   "views": 6,
+   "people": 5
+  },
+  {
+   "id": "bgauss-d15i-3point0-kwh",
+   "views": 5,
+   "people": 4
+  },
+  {
+   "id": "bgauss-ruv-350i-3point0-kwh",
+   "views": 4,
+   "people": 2
+  },
+  {
+   "id": "okinawa-r30-0point8-kwh",
+   "views": 4,
+   "people": 4
+  },
+  {
+   "id": "okinawa-ridgeplus-2point8-kwh",
+   "views": 4,
+   "people": 4
+  },
+  {
+   "id": "ather-energy-450-apex-3point7-kwh",
+   "views": 3,
+   "people": 2
+  },
+  {
+   "id": "ather-energy-450s-2point9-kwh",
+   "views": 3,
+   "people": 3
+  },
+  {
+   "id": "bajaj-chetak-chetak-3502-3point5-kwh",
+   "views": 3,
+   "people": 3
+  },
+  {
+   "id": "okinawa-ipraiseplus-2point2-kwh",
+   "views": 3,
+   "people": 2
+  },
+  {
+   "id": "ola-electric-s1-pro-3-kwh",
+   "views": 3,
+   "people": 3
+  },
+  {
+   "id": "ola-electric-s1-pro-4-kwh",
+   "views": 3,
+   "people": 2
+  },
+  {
+   "id": "pure-ev-epluto-7g-2point0-kwh",
+   "views": 3,
+   "people": 3
+  },
+  {
+   "id": "tvs-motor-iqube-st-3point5-kwh",
+   "views": 3,
+   "people": 3
+  },
+  {
+   "id": "ampere-nexus-st-3-kwh",
+   "views": 2,
+   "people": 2
+  },
+  {
+   "id": "bounce-infinity-infinity-e1-plus-2point5-kwh",
+   "views": 1,
+   "people": 1
+  },
+  {
+   "id": "okinawa-okhi-90-2point8-kwh",
+   "views": 1,
+   "people": 1
+  },
+  {
+   "id": "pure-ev-etron-plus-3point0-kwh",
+   "views": 1,
+   "people": 1
+  }
+ ]
+}

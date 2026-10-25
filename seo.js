@@ -27,8 +27,9 @@
     scooter(s) {
       const where = s.headlinePriceCity ? ` in ${cityName()}` : '';
       return {
-        title: `${s.fullName} Price, Real Range and Review ${YEAR} | EScooterwale`,
-        desc: `${s.fullName} costs ${s.priceDisplay} ex-showroom${where}. ${s.realRangeEstimated ? 'We estimate' : 'We measured'} ${span(s.realRange)} of real range against the ${s.range} claimed. Specs, subsidy, EMI and who should skip it.`
+        // price searches dominate (Search Console, Oct 2026): price and on-road price up front
+        title: `${s.fullName} Price ${s.priceDisplay}: On-Road Price and Real Range ${YEAR} | EScooterwale`,
+        desc: `${s.fullName} costs ${s.priceDisplay} ex-showroom${where}. See the on-road price in your city, real range of ${span(s.realRange)} (${s.range} claimed), EMI, subsidy and who should skip it.`
       };
     },
 
@@ -37,7 +38,7 @@
       const short = b.shortName || b.name;
       const lo = prices[0], hi = prices[prices.length - 1];
       return {
-        title: `${short} Electric Scooter Price ${YEAR}: All ${models.length} Models | EScooterwale`,
+        title: `${short} Electric Scooter Price ${YEAR}: ${inr(lo)} to ${inr(hi)}, All ${models.length} Models | EScooterwale`,
         desc: `Every ${short} electric scooter on sale in India, ${models.length} models from ${inr(lo)} to ${inr(hi)}. Real-world range from our own tests, ScootScore, subsidy and on-road price for each.`
       };
     },

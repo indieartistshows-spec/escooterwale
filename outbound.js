@@ -65,7 +65,7 @@
     if (ext && host(ext.href) !== location.hostname.replace(/^www\./, '') && host(ext.href) !== 'escooterwale.in') return; // counted as outbound_click
     const link = el.closest('a[href]'), href = (link && link.getAttribute('href')) || '';
     if (/^https?:/.test(href) && host(href) !== location.hostname.replace(/^www\./, '') && host(href) !== 'escooterwale.in') return;
-    const where = el.closest('nav,.nav,.mobile-menu,.bottom-nav') ? 'nav' : el.closest('.seo-links') ? 'directory' : el.closest('footer,.footer') ? 'footer' : el.closest('.hero,.hero-content') ? 'hero' : 'content';
+    const where = el.closest('[data-cta-location]') ? el.closest('[data-cta-location]').dataset.ctaLocation : el.closest('nav,.nav,.mobile-menu,.bottom-nav') ? 'nav' : el.closest('.seo-links') ? 'directory' : el.closest('footer,.footer') ? 'footer' : el.closest('.hero,.hero-content') ? 'hero' : 'content';
     const text = (el.getAttribute('aria-label') || el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60);
     send('cta_click', { cta_text: text, cta_location: where, link_url: href ? href.split('?')[0].slice(0, 100) : '' });
   }, true);

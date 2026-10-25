@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="https://www.escooterwale.in/images/og/brand.jpg?v=ff303845"/>
 <meta name="description" id="pgDesc" content="Every electric scooter model from India's leading EV brands. Prices, real-world range, specs and independent ScootScore ratings."/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/brand"/>
-<link rel="stylesheet" href="styles.css?v=eddef5d5"/>
+<link rel="stylesheet" href="styles.css?v=0e6d7888"/>
 <style>
 .brand-video{position:relative;background:#000;aspect-ratio:16/9;max-height:78vh;width:100%;overflow:hidden}
 .brand-video .bv-poster,.brand-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
@@ -168,6 +168,7 @@
 
   <div class="sec-hd"><div><div class="eyebrow" id="modelsEyebrow">All models</div><h2 class="mt-8" id="modelsTitle">Ola Electric scooters 2026</h2></div></div>
   <div class="grid-3" id="brandModelsGrid"></div>
+  <div id="lineupMount"></div>
 
   <div style="margin-top:40px">
     <div class="sec-hd"><div><div class="eyebrow">Compare all brands</div><h2 class="mt-8">Browse other EV brands in India</h2></div></div>
@@ -179,10 +180,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="data.js?v=65d5ff1d"></script>
-<script src="seo.js?v=5e2f83ba"></script>
-<script src="outbound.js?v=f73b042f"></script>
-<script src="components.js?v=29cc6b56"></script>
+<script src="data.js?v=b073b5f5"></script>
+<script src="seo.js?v=52f32e86"></script>
+<script src="outbound.js?v=e9ecae44"></script>
+<script src="components.js?v=0c9287bb"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -266,6 +267,7 @@ document.getElementById('brandScores').innerHTML=Object.entries(sc).map(([k,v])=
   </div>`).join('');
 
 // Models grid
+{ const lm=document.getElementById('lineupMount'); if(lm&&typeof lineupHTML==='function') lm.innerHTML=lineupHTML(bid,null); }
 document.getElementById('brandModelsGrid').innerHTML=models.length
   ?models.map(s=>scooterCardHTML(s)).join('')
   :`<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--ink-3)"><div style="font-size:40px;margin-bottom:12px">🔍</div><p>No models found for this brand yet. Check back soon.</p></div>`;

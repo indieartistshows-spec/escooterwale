@@ -75,6 +75,10 @@ jobs:
         if: env.SCRAPE == 'true'
         continue-on-error: true
         run: node automation/ga-headline.js
+      - name: Most viewed scooters and new comparison pages from Google Analytics
+        if: env.SCRAPE == 'true'
+        continue-on-error: true
+        run: node automation/ga-most-viewed.js
       - name: Homepage banners from brand sites
         if: env.SCRAPE == 'true'
         continue-on-error: true

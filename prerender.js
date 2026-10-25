@@ -37,13 +37,12 @@ const BASE = 'https://www.escooterwale.in';
 const BEST_CATS = ['daily-commute', 'under-1-lakh', 'under-1-5l', 'family', 'best-range', 'tier2-cities'];
 const ARTICLES = ['ola-s1-pro-review', 'fame-3-guide', 'ev-running-costs'];
 
-/* Top comparison pairs: every combination among the 12 most-viewed
-   models, which is what people actually search for. */
-const TOP = [...SCOOTERS_DB].sort((a, b) => b.views - a.views).slice(0, 12);
-const PAIRS = [];
-for (let i = 0; i < TOP.length; i++)
-  for (let j = i + 1; j < TOP.length; j++)
-    PAIRS.push([TOP[i], TOP[j]]);
+/* Comparison pages: data/compare-pairs.json is the append-only list (the original 66 pairs
+   among the 12 most-viewed models, plus pairs added from real GA views every week). */
+const BYID = Object.fromEntries(SCOOTERS_DB.map(s => [s.id, s]));
+const PAIRS = JSON.parse(fs.readFileSync('data/compare-pairs.json', 'utf8')).pairs
+  .map(k => { const i = k.indexOf('-vs-'); return [BYID[k.slice(0, i)], BYID[k.slice(i + 4)]]; })
+  .filter(([a, b]) => a && b);
 
 /* ── path rewriting ──────────────────────────────────────────
    Pages move from the root into /scooters/<id>/, so relative asset

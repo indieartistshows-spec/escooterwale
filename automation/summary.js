@@ -32,6 +32,7 @@ sec('New launches', (ch.launches || []).map(e => `${e.brand || ''} ${e.name || '
 sec('Marked discontinued', (ch.discontinued || []).map(d => `${d.brand} ${d.name}`), '- None');
 if (head) sec('Headline price city (Google Analytics)', [head.note]);
 if (vahan) sec('Demand Mein Hai (VAHAN)', [vahan.note]);
+{ let mvr = null; try { mvr = JSON.parse(require('fs').readFileSync('automation/out/most-viewed.json', 'utf8')); } catch (e) {} if (mvr) sec('Most viewed this week (GA)', [mvr.note]); }
 if (trend) sec('Trending', [`${trend.videos || 0} videos and ${trend.articles || 0} articles added`, ...(trend.notes || [])]);
 if (sub) sec('Subsidy', (sub.changes || []).map(c => `${c.what} (source: ${c.source})`), '- No official change found this week');
 if (links) sec('Outbound links', [`${links.checked || 0} checked`, ...(links.fixed || []).map(f => `fixed: ${f.what || JSON.stringify(f)}`), ...(links.broken || []).map(b => `broken: ${b.url || JSON.stringify(b)}`)]);

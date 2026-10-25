@@ -1,0 +1,31 @@
+{
+ "_note": "Brand line-up notes for the 'Which one should you buy?' block on brand and model pages. Numbers in the tables come from scooters.json; these notes only describe each family. Chetak variant features checked against Autocar India (17 Oct 2026), TimesDrive (26 Oct 2026) and BikeDekho variant guides.",
+ "brands": {
+  "ather-energy": {
+   "families": [
+    { "name": "Rizta", "match": "rizta", "text": "The family pick of the range: the biggest boot of any Ather and the most room for two." },
+    { "name": "450", "match": "450", "text": "The quickest Athers, built for riders who want pickup. The boot is the smallest in the range." },
+    { "name": "Konarc", "match": "konarc", "text": "The most affordable Athers, with a large boot and a lower top speed." }
+   ]
+  },
+  "ola-electric": {
+   "families": [
+    { "name": "S1 X", "match": "s1-x", "text": "The value end of Ola's range, with the same 90 km/h top speed across battery sizes." },
+    { "name": "S1 Pro", "match": "s1-pro", "text": "The faster Olas with the largest batteries Ola sells, for long daily rides." }
+   ]
+  },
+  "bajaj-chetak": {
+   "families": [
+    { "name": "Chetak 3501", "match": "3501", "text": "The top variant: touch TFT screen with Google Maps navigation, keyless start, reverse mode and the fastest charging of the 35 series." },
+    { "name": "Chetak 3502", "match": "3502", "text": "The middle variant: TFT screen with turn-by-turn navigation and a front disc brake, but a regular key." },
+    { "name": "Chetak 3503", "match": "3503", "text": "The base 35 series variant: same 3.5 kWh battery, with a basic LCD, no navigation, a front drum brake and a lower top speed." },
+    { "name": "Chetak 3001", "match": "3001", "text": "A 3 kWh Chetak with a colour LCD, for shorter daily rides at a lower price." },
+    { "name": "Chetak C2501", "match": "c2501", "text": "The entry Chetak with a 2.5 kWh battery, for short city trips." }
+   ],
+   "faq": [
+    { "q": "Is the Chetak battery LFP or NMC?", "a": "Bajaj does not publish the cell chemistry. Its FAQs only say the Chetak uses advanced chemistry lithium-ion cells. What you can count on is the 3 year or 50,000 km battery warranty, and the real range we list for each variant." },
+    { "q": "Which Chetak should I buy?", "a": "If you want navigation and keyless start, the 3501. If you want the same battery and range for less, the 3503 is the value pick. The 3502 sits in between with a TFT screen and a front disc brake." }
+   ]
+  }
+ }
+}

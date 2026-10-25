@@ -22,7 +22,7 @@
 <meta name="description" id="pgDesc" content="Find electric scooters in Mumbai. Best EV prices, dealer locations, state government subsidies, charging stations map. Compare Ola, Ather, TVS in Mumbai."/>
 <meta name="keywords" content="electric scooter mumbai, ev scooter price mumbai, ev dealer mumbai, electric scooter bangalore, ev scooter delhi price"/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/city"/>
-<link rel="stylesheet" href="styles.css?v=eddef5d5"/>
+<link rel="stylesheet" href="styles.css?v=0e6d7888"/>
 <style>
 .city-hero{background:var(--ink);padding:48px 0 36px;background-size:cover;background-position:center;position:relative}
 .city-hero::before{content:'';position:absolute;inset:0;background:rgba(13,17,23,.85)}
@@ -106,6 +106,9 @@
     <div id="cityGuide" style="font-size:14px;color:var(--ink-2);line-height:1.7"></div>
   </div>
 
+  <!-- POPULAR WITH BUYERS HERE -->
+  <div id="cityPopular"></div>
+
   <!-- ON-ROAD PRICES IN CITY -->
   <div class="sec-hd" style="margin-bottom:12px">
     <div>
@@ -162,10 +165,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="data.js?v=65d5ff1d"></script>
-<script src="seo.js?v=5e2f83ba"></script>
-<script src="outbound.js?v=f73b042f"></script>
-<script src="components.js?v=29cc6b56"></script>
+<script src="data.js?v=b073b5f5"></script>
+<script src="seo.js?v=52f32e86"></script>
+<script src="outbound.js?v=e9ecae44"></script>
+<script src="components.js?v=0c9287bb"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -248,6 +251,13 @@ function loadCity(cityId){
   document.getElementById('cityPriceTable').innerHTML=`<thead><tr><th>Model</th><th>Ex-showroom</th><th>On-road (approx.)</th><th>Real range</th></tr></thead><tbody>`+
     rowsP.map(r=>`<tr><td><a href="/scooters/${r.s.id}">${r.s.fullName}</a></td><td>${inrC(r.ex)}</td><td class="amt">${inrC(r.on)}</td><td>${r.s.realRange}</td></tr>`).join('')+`</tbody>`;
   document.getElementById('priceNote').textContent=`On-road is our estimate for ${c.name}: ex-showroom plus ${rtLabel==='Exempt'?'no road tax (EVs are exempt in '+st.name+')':(rtLabel==='Unconfirmed'?'road tax, which we could not confirm for '+st.name+' (ask the RTO or dealer)':rtLabel+' road tax')}, first-year insurance and handling. Registration is free for EVs. Prices updated ${fmtDate(SW_CONFIG.dataUpdated)}.`;
+
+  // Popular with buyers here: the city's featured models (Chetak and Vida where that demand is), else last week's most viewed
+  { const ids=(c.featured&&c.featured.length?c.featured:((typeof MOST_VIEWED!=='undefined'&&MOST_VIEWED.models)||[]).map(m=>m.id)).slice(0,5);
+    const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/)/)||[''])[0];
+    const rows=ids.map(i=>rowsP.find(r=>r.s.id===i)).filter(Boolean);
+    document.getElementById('cityPopular').innerHTML=rows.length?`<div class="mv-strip"><div class="mv-hd"><div><div class="eyebrow">Popular with buyers in ${c.name}</div><div class="mv-sub">With the approximate on-road price here</div></div></div><div class="mv-row">${rows.map(r=>`<a class="mv-card" href="${lp}/scooters/${r.s.id}"><img src="${r.s.cardImg||r.s.heroImg}" alt="${r.s.fullName}" loading="lazy" width="120" height="120"/><span class="mv-brand" translate="no">${r.s.shortBrand||r.s.brand}</span><span class="mv-name" translate="no">${r.s.name}</span><span class="mv-price">${inrC(r.on)} <small>on-road</small></span></a>`).join('')}</div></div>`:'';
+  }
 
   // Picks: strong service first, then ScootScore
   document.getElementById('cityPicksEy').textContent=`Best electric scooters in ${c.name}`;

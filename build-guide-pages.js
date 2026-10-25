@@ -513,7 +513,7 @@ page({
   file: 'electric-scooter-price.html',
   canon: '/electric-scooter-price',
   title: `Electric Scooter Price in India 2026: All ${SCOOTERS_DB.length} Models Compared | EScooterwale`,
-  desc: `Complete electric scooter price list for India 2026. Ex-showroom and on-road prices, EMI, real-world range and subsidy for all ${SCOOTERS_DB.length} models from 10 brands. Updated 24 August 2026.`,
+  desc: `Complete electric scooter price list for India 2026. Ex-showroom and on-road prices, EMI, real-world range and subsidy for all ${SCOOTERS_DB.length} models from 10 brands. Prices updated every week.`,
   eyebrow: 'Price List',
   crumb: 'Electric scooter prices',
   h1: `Electric scooter price in India 2026: all ${SCOOTERS_DB.length} models`,

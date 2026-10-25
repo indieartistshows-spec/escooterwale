@@ -41,5 +41,16 @@
   ],
   "dataUpdated": "2026-10-19",
   "langMinCoverage": 0.98,
-  "langsLive_note": "A language goes live automatically once 98% of site text is translated. langsForceLive / langsBlocked override."
+  "langsLive_note": "A language goes live automatically once 98% of site text is translated. langsForceLive / langsBlocked override.",
+  "langsForceLive": [
+    "hi",
+    "mr",
+    "ta",
+    "te",
+    "kn",
+    "gu",
+    "bn",
+    "or"
+  ],
+  "_langsForceLiveNote": "All 8 languages stay live even when a few new strings (fresh news or video titles) are not translated yet; those show in English until the Monday content task translates them. Without this, one week of new headlines took every language offline (Oct 2026)."
 }

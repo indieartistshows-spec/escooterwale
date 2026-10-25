@@ -24,11 +24,11 @@
 <link id="pgCanon" rel="canonical" href="https://www.escooterwale.in/best"/>
 <meta property="og:title" id="ogTitle" content="Best Electric Scooters India 2026"/>
 <meta property="og:type" content="website"/>
-<link rel="stylesheet" href="styles.css?v=eddef5d5"/>
-<script src="data.js?v=65d5ff1d"></script>
-<script src="seo.js?v=5e2f83ba"></script>
-<script src="outbound.js?v=f73b042f"></script>
-<script src="components.js?v=29cc6b56"></script>
+<link rel="stylesheet" href="styles.css?v=0e6d7888"/>
+<script src="data.js?v=b073b5f5"></script>
+<script src="seo.js?v=52f32e86"></script>
+<script src="outbound.js?v=e9ecae44"></script>
+<script src="components.js?v=0c9287bb"></script>
 <style>
 /* ── PAGE HERO ──────────────────────────────────────────── */
 .best-hero{background:var(--ink);padding:52px 0 40px;border-bottom:1px solid rgba(255,255,255,.07)}
@@ -471,7 +471,7 @@ document.getElementById('catNav').innerHTML = CAT_ORDER.map(c => {
 
 function switchCat(slug) {
   renderPage(slug);
-  if(!window.__SW_CAT__) history.replaceState({}, '', `/best?cat=${slug}`);
+  if(!window.__SW_CAT__) history.replaceState({}, '', `${location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)\//)?location.pathname.match(/^\/[a-z]{2}/)[0]:''}/best/${slug}`);
 }
 
 const p = new URLSearchParams(location.search);
