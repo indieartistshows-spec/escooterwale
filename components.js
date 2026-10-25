@@ -460,7 +460,7 @@ function initMatchFab(){
   const a=document.createElement('a');
   a.id='swMatchFab';a.className='sw-fab';a.href=lp+'/match';a.dataset.ctaLocation='match-fab';
   a.setAttribute('aria-label','Match with your scooter');
-  a.innerHTML='<span class="sw-fab-tip" aria-hidden="true">Match with your scooter</span><span class="sw-fab-ic" aria-hidden="true">❤️</span>';
+  a.innerHTML='<span class="sw-fab-tip" aria-hidden="true">Match with your scooter</span><span class="sw-fab-ic" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="22.5" r="3.5"/><circle cx="24.5" cy="22.5" r="3.5"/><path d="M11 22.5h7.5l3-9.5h-4"/><path d="M21.5 13 19.5 6.5h-3"/><path d="M6 17.5h7.5l1.5 5"/><path d="M8 15h5"/></svg></span>';
   document.body.appendChild(a);
   // keep clear of the compare tray when it is open
   const tray=document.querySelector('.compare-tray');
