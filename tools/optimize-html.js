@@ -51,6 +51,10 @@ for (const file of pages) {
   h = h.replace(/\(function\(c,l,a,r,i,t,y\)\{([\s\S]*?)\}\)\(window, document, "clarity", "script", "([a-z0-9]+)"\);/,
     (m, body, id) => `addEventListener('load',function(){setTimeout(function(){(function(c,l,a,r,i,t,y){${body}})(window, document, "clarity", "script", "${id}")},1500)});`);
 
+  // Google AdSense site tag (GK, Oct 2026): in the <head> of every page, as AdSense asks
+  if (!h.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))
+    h = h.replace(/<head(\s[^>]*)?>/i, m => `${m}\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2946997043388287" crossorigin="anonymous"></script>`);
+
   // homepages: styles inlined, so the first paint does not wait for styles.css
   if (/^(index\.html|[a-z]{2}\/index\.html)$/.test(path.relative(ROOT, file).split(path.sep).join('/'))) {
     const css = `<style data-inline-css>${inlineCss()}</style>`;
