@@ -55,6 +55,7 @@ const byId = Object.fromEntries(S.map(s => [s.id, s])), bname = id => (B.find(b 
 
   fs.mkdirSync('reports/brand-interest', { recursive: true });
   fs.writeFileSync(`reports/brand-interest/${ym}.json`, JSON.stringify({ month: ym, label, from: start, to: end, totalViews: total, brands: list, notes: missing }, null, 1) + '\n');
+  const pl = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`;
   const top = o => Object.entries(o).sort((a, b) => b[1] - a[1]);
   let md = `# Buyer interest by brand, ${label}\n\nFrom EScooterwale's Google Analytics, ${start} to ${end}. ${total} scooter views across ${list.length} brands. Bot traffic is blocked at the firewall.\n\n`;
   md += `| # | Brand | Scooter views | Share | Shortlisted in the quiz | Clicks to brand site | Test ride and dealer clicks | Comparison page views |\n|---|---|---|---|---|---|---|---|\n`;
@@ -62,9 +63,9 @@ const byId = Object.fromEntries(S.map(s => [s.id, s])), bname = id => (B.find(b 
   for (const b of list) {
     md += `\n## ${b.name}\n\n- Ranked ${b.rank} of ${list.length} brands for scooter views (${b.views}, ${b.share}% of all views, about ${b.viewers} people).\n`;
     const tm = top(b.models).slice(0, 3); if (tm.length) md += `- Most viewed models: ${tm.map(([n, v]) => `${n} (${v})`).join(', ')}.\n`;
-    if (b.shortlisted || b.skipped) md += `- In the match quiz, buyers shortlisted its scooters ${b.shortlisted} times and skipped them ${b.skipped} times.\n`;
-    md += `- ${b.brandSiteClicks} clicks to the brand's own website and ${b.testRideDealerClicks} to test ride or dealer pages.\n`;
-    const tr = top(b.rivals).slice(0, 3); if (tr.length) md += `- Most compared against: ${tr.map(([n, v]) => `${n} (${v} views)`).join(', ')}.\n`;
+    if (b.shortlisted || b.skipped) md += `- In the match quiz, buyers shortlisted its scooters ${pl(b.shortlisted, 'time')} and skipped them ${pl(b.skipped, 'time')}.\n`;
+    md += `- ${pl(b.brandSiteClicks, 'click')} to the brand's own website and ${b.testRideDealerClicks} to test ride or dealer pages.\n`;
+    const tr = top(b.rivals).slice(0, 3); if (tr.length) md += `- Most compared against: ${tr.map(([n, v]) => `${n} (${pl(v, 'view')})`).join(', ')}.\n`;
   }
   fs.writeFileSync(`reports/brand-interest/${ym}.md`, md);
   if (missing.length) console.log('::warning::Some GA queries failed: ' + missing.join(' | '));
