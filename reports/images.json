@@ -34,15 +34,11 @@
   },
   "tvs-motor-orbiter-v1-1point8-kwh": {
    "ok": true,
-   "url": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/booktestridenew/requestcallback/750-x-960--yellow-and-copperbike-01_v1.webp",
-   "w": 750,
-   "h": 960
+   "kept": true
   },
   "tvs-motor-orbiter-v2-3point1-kwh": {
    "ok": true,
-   "url": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/booktestridenew/requestcallback/750-x-960--yellow-and-copperbike-01_v1.webp",
-   "w": 750,
-   "h": 960
+   "kept": true
   },
   "tvs-motor-x-4point44-kwh": {
    "ok": true,
@@ -94,22 +90,13 @@
   },
   "pure-ev-epluto-7g-pro-3point0-kwh": {
    "ok": true,
+   "kept": true
+  },
+  "pure-ev-epluto-7g-max-3point5-kwh": {
+   "ok": true,
    "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/banner-1.webp",
    "w": 1400,
    "h": 780
-  },
-  "pure-ev-epluto-7g-max-3point5-kwh": {
-   "ok": false,
-   "tried": [
-    {
-     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/views/card_image_max.png",
-     "err": "too small (219x210)"
-    },
-    {
-     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/7gpro1.png",
-     "err": "too small (380x300)"
-    }
-   ]
   },
   "pure-ev-etrance-neo-sx-1point8-kwh": {
    "ok": true,
@@ -189,34 +176,5 @@
    "kept": true
   }
  },
- "logos": {
-  "honda": {
-   "ok": true,
-   "kept": true
-  },
-  "suzuki": {
-   "ok": true,
-   "kept": true
-  },
-  "simple-energy": {
-   "ok": true,
-   "kept": true
-  },
-  "kinetic-watts-volts": {
-   "ok": true,
-   "kept": true
-  },
-  "lectrix": {
-   "ok": true,
-   "kept": true
-  },
-  "okaya-ev": {
-   "ok": true,
-   "kept": true
-  },
-  "vlf": {
-   "ok": true,
-   "kept": true
-  }
- }
+ "logos": {}
 }
