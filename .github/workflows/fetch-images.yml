@@ -1,8 +1,11 @@
 # Download model photos and brand logos listed in automation/image-sources.json from the brands' own sites.
-# Run by hand (Actions > Fetch images > Run workflow). New files only, unless "force" is ticked.
+# Runs when automation/image-sources.json changes on main, or by hand. New files only, unless "force" is ticked.
 name: Fetch images
 
 on:
+  push:
+    branches: [main]
+    paths: ['automation/image-sources.json', 'automation/fetch-images.js']
   workflow_dispatch:
     inputs:
       force:
