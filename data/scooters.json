@@ -6,7 +6,7 @@
   "name": "S1 X 2 kWh",
   "slug": "ola-electric-s1-x-2-kwh",
   "tagline": "Ola Electric S1 X — 2 kWh | 108 km claimed | 90 km/h",
-  "price": 89999,
+  "price": 80499,
   "priceDisplay": "₹89,999",
   "onRoad": 98998,
   "onRoadDisplay": "₹98,998",
@@ -73,7 +73,7 @@
   "name": "S1 X 3 kWh",
   "slug": "ola-electric-s1-x-3-kwh",
   "tagline": "Ola Electric S1 X — 3 kWh | 176 km claimed | 90 km/h",
-  "price": 103999,
+  "price": 80499,
   "priceDisplay": "₹107,999",
   "onRoad": 118798,
   "onRoadDisplay": "₹118,798",
@@ -207,7 +207,7 @@
   "name": "S1 Pro 3 kWh",
   "slug": "ola-electric-s1-pro-3-kwh",
   "tagline": "Ola Electric S1 Pro — 3 kWh | 176 km claimed | 117 km/h",
-  "price": 129999,
+  "price": 153499,
   "priceDisplay": "₹129,999",
   "onRoad": 142998,
   "onRoadDisplay": "₹142,998",
@@ -274,14 +274,14 @@
   "name": "S1 Pro 4 kWh",
   "slug": "ola-electric-s1-pro-4-kwh",
   "tagline": "Ola Electric S1 Pro — 4 kWh | 195 km claimed | 117 km/h",
-  "price": 149999,
+  "price": 153499,
   "priceDisplay": "₹149,999",
   "onRoad": 164998,
   "onRoadDisplay": "₹164,998",
   "emiFrom": 3900,
   "range": "242 km",
   "realRange": "155–165 km",
-  "speed": "125 km/h",
+  "speed": "130 km/h",
   "charging": "4 hrs",
   "battery": "4 kWh",
   "bootSpace": "34 L",
@@ -323,7 +323,7 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "125 km/h",
+    "Top speed": "130 km/h",
     "Battery capacity": "4 kWh",
     "Charging time": "4 hrs"
    },
@@ -398,7 +398,8 @@
     "Real-world range": "240–270 km",
     "Charge time": "4 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ather-energy-rizta-s-2point9-kwh",
@@ -466,7 +467,8 @@
     "Real-world range": "90–105 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ather-energy-rizta-z-3point7-kwh",
@@ -534,7 +536,8 @@
     "Real-world range": "120–135 km",
     "Charge time": "4.5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ather-energy-450s-2point9-kwh",
@@ -602,7 +605,8 @@
     "Real-world range": "90–105 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ather-energy-450x-3point7-kwh",
@@ -670,7 +674,8 @@
     "Real-world range": "120–135 km",
     "Charge time": "3.3 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ather-energy-450-apex-3point7-kwh",
@@ -738,7 +743,8 @@
     "Real-world range": "120–135 km",
     "Charge time": "3.3 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ather-energy-konarc-s-100-2point1-kwh",
@@ -810,7 +816,8 @@
     "Charge time": "4 hrs"
    }
   },
-  "realRangeEstimated": true
+  "realRangeEstimated": true,
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ather-energy-konarc-s-125-2point7-kwh",
@@ -882,7 +889,8 @@
     "Charge time": "4.5 hrs"
    }
   },
-  "realRangeEstimated": true
+  "realRangeEstimated": true,
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ather-energy-konarc-s-161-3point5-kwh",
@@ -955,7 +963,8 @@
     "Charge time": "5.7 hrs"
    }
   },
-  "realRangeEstimated": true
+  "realRangeEstimated": true,
+  "discontinued": "2026-10-26"
  },
  {
   "id": "tvs-motor-iqube-2point2-kwh",
@@ -1287,7 +1296,8 @@
     "Real-world range": "85–98 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "bajaj-chetak-chetak-3001-3point0-kwh",
@@ -1355,7 +1365,8 @@
     "Real-world range": "95–108 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "bajaj-chetak-chetak-3501-3point5-kwh",
@@ -1423,7 +1434,8 @@
     "Real-world range": "115–130 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "bajaj-chetak-chetak-3502-3point5-kwh",
@@ -1491,7 +1503,8 @@
     "Real-world range": "115–130 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "bajaj-chetak-chetak-3503-3point5-kwh",
@@ -1559,7 +1572,8 @@
     "Real-world range": "115–130 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "hero-vida-vx2-go-2point2-kwh",
@@ -1692,7 +1706,8 @@
     "Real-world range": "105–120 km",
     "Charge time": "5.3 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "hero-vida-v2-pro-3point94-kwh",
@@ -1825,7 +1840,8 @@
     "Real-world range": "55–65 km",
     "Charge time": "6 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ampere-magnus-neo-2point3-kwh",
@@ -1891,7 +1907,8 @@
     "Real-world range": "60–72 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ampere-magnus-g-max-3point0-kwh",
@@ -1957,7 +1974,8 @@
     "Real-world range": "105–120 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ampere-nexus-ex-3-kwh",
@@ -2023,7 +2041,8 @@
     "Real-world range": "78–90 km",
     "Charge time": "3.3 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "ampere-nexus-st-3-kwh",
@@ -2089,7 +2108,8 @@
     "Real-world range": "80–95 km",
     "Charge time": "3.3 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "okinawa-r30-0point8-kwh",
@@ -2487,7 +2507,8 @@
     "Real-world range": "65–76 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "pure-ev-etranceplus-4point5-kwh",
@@ -2553,7 +2574,8 @@
     "Real-world range": "130–148 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "pure-ev-etron-plus-3point0-kwh",
@@ -2618,7 +2640,8 @@
     "Real-world range": "90–105 km",
     "Charge time": "5 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "bounce-infinity-infinity-e1-2point0-kwh",
@@ -2686,7 +2709,8 @@
     "Real-world range": "60–72 km",
     "Charge time": "4 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "bounce-infinity-infinity-e1-plus-2point5-kwh",
@@ -2753,7 +2777,8 @@
     "Real-world range": "78–90 km",
     "Charge time": "4 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "bgauss-c12i-2point0-kwh",
@@ -2882,7 +2907,8 @@
     "Real-world range": "90–105 km",
     "Charge time": "4 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  },
  {
   "id": "bgauss-ruv-350i-3point0-kwh",
@@ -2946,6 +2972,7 @@
     "Real-world range": "75–88 km",
     "Charge time": "4 hrs"
    }
-  }
+  },
+  "discontinued": "2026-10-26"
  }
 ]

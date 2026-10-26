@@ -3,6 +3,24 @@
   "headlineCityReason": "Most active users in GA, 17 Sep to 16 Oct 2026 (Hyderabad 129, Bengaluru 114, Delhi 93, Mumbai 51)",
   "headlineHistory": [
     {
+      "week": "2026-10-26",
+      "leader": "hyderabad",
+      "users": {
+        "hyderabad": 202,
+        "bangalore": 111,
+        "mumbai": 79,
+        "delhi": 91,
+        "chennai": 69,
+        "pune": 68,
+        "ahmedabad": 49,
+        "jaipur": 42,
+        "kolkata": 40,
+        "lucknow": 35,
+        "surat": 19,
+        "chandigarh": 12
+      }
+    },
+    {
       "week": "2026-10-19",
       "leader": "hyderabad",
       "users": {
@@ -39,7 +57,7 @@
       }
     }
   ],
-  "dataUpdated": "2026-10-19",
+  "dataUpdated": "2026-10-26",
   "langMinCoverage": 0.98,
   "langsLive_note": "A language goes live automatically once 98% of site text is translated. langsForceLive / langsBlocked override.",
   "langsForceLive": [

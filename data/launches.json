@@ -1,3 +1,258 @@
 {
- "events": []
+ "events": [
+  {
+   "date": "2026-10-26",
+   "type": "launch",
+   "key": "bgauss|ARAI Certified Range|2.7",
+   "brand": "BGauss",
+   "brandId": "bgauss",
+   "name": "ARAI Certified Range 2.7 kWh",
+   "price": 128990,
+   "url": "https://www.bgauss.com",
+   "note": "Spotted on the official brand website. Full review and ScootScore to follow."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "bgauss-ruv-350i-3point0-kwh",
+   "brand": "Bgauss",
+   "brandId": "bgauss",
+   "name": "RUV 350i 3.0 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "bgauss-d15i-3point0-kwh",
+   "brand": "Bgauss",
+   "brandId": "bgauss",
+   "name": "D15i 3.0 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "bounce-infinity-infinity-e1-plus-2point5-kwh",
+   "brand": "Bounce Infinity",
+   "brandId": "bounce-infinity",
+   "name": "Infinity E1 Plus 2.5 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "bounce-infinity-infinity-e1-2point0-kwh",
+   "brand": "Bounce Infinity",
+   "brandId": "bounce-infinity",
+   "name": "Infinity E1 2.0 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "pure-ev-etron-plus-3point0-kwh",
+   "brand": "Pure EV",
+   "brandId": "pure-ev",
+   "name": "Etron Plus 3.0 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "pure-ev-etranceplus-4point5-kwh",
+   "brand": "Pure EV",
+   "brandId": "pure-ev",
+   "name": "ETrance+ 4.5 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "pure-ev-epluto-7g-2point0-kwh",
+   "brand": "Pure EV",
+   "brandId": "pure-ev",
+   "name": "EPluto 7G 2.0 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ampere-nexus-st-3-kwh",
+   "brand": "Ampere",
+   "brandId": "ampere",
+   "name": "Nexus ST 3 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ampere-nexus-ex-3-kwh",
+   "brand": "Ampere",
+   "brandId": "ampere",
+   "name": "Nexus EX 3 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ampere-magnus-g-max-3point0-kwh",
+   "brand": "Ampere",
+   "brandId": "ampere",
+   "name": "Magnus G Max 3.0 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ampere-magnus-neo-2point3-kwh",
+   "brand": "Ampere",
+   "brandId": "ampere",
+   "name": "Magnus Neo 2.3 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ampere-reo-1point3-kwh",
+   "brand": "Ampere",
+   "brandId": "ampere",
+   "name": "Reo 1.3 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "hero-vida-vx2-plus-3point4-kwh",
+   "brand": "Hero Vida",
+   "brandId": "hero-vida",
+   "name": "VX2 Plus 3.4 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "bajaj-chetak-chetak-3503-3point5-kwh",
+   "brand": "Bajaj Chetak",
+   "brandId": "bajaj-chetak",
+   "name": "Chetak 3503 3.5 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "bajaj-chetak-chetak-3502-3point5-kwh",
+   "brand": "Bajaj Chetak",
+   "brandId": "bajaj-chetak",
+   "name": "Chetak 3502 3.5 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+   "brand": "Bajaj Chetak",
+   "brandId": "bajaj-chetak",
+   "name": "Chetak 3501 3.5 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "bajaj-chetak-chetak-3001-3point0-kwh",
+   "brand": "Bajaj Chetak",
+   "brandId": "bajaj-chetak",
+   "name": "Chetak 3001 3.0 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "bajaj-chetak-chetak-c2501-2point5-kwh",
+   "brand": "Bajaj Chetak",
+   "brandId": "bajaj-chetak",
+   "name": "Chetak C2501 2.5 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ather-energy-konarc-s-161-3point5-kwh",
+   "brand": "Ather Energy",
+   "brandId": "ather-energy",
+   "name": "Konarc S 161 3.5 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ather-energy-konarc-s-125-2point7-kwh",
+   "brand": "Ather Energy",
+   "brandId": "ather-energy",
+   "name": "Konarc S 125 2.7 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ather-energy-konarc-s-100-2point1-kwh",
+   "brand": "Ather Energy",
+   "brandId": "ather-energy",
+   "name": "Konarc S 100 2.1 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ather-energy-450-apex-3point7-kwh",
+   "brand": "Ather Energy",
+   "brandId": "ather-energy",
+   "name": "450 Apex 3.7 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ather-energy-450x-3point7-kwh",
+   "brand": "Ather Energy",
+   "brandId": "ather-energy",
+   "name": "450X 3.7 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ather-energy-450s-2point9-kwh",
+   "brand": "Ather Energy",
+   "brandId": "ather-energy",
+   "name": "450S 2.9 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ather-energy-rizta-z-3point7-kwh",
+   "brand": "Ather Energy",
+   "brandId": "ather-energy",
+   "name": "Rizta Z 3.7 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ather-energy-rizta-s-2point9-kwh",
+   "brand": "Ather Energy",
+   "brandId": "ather-energy",
+   "name": "Rizta S 2.9 kWh",
+   "note": "No longer listed on the official brand website."
+  },
+  {
+   "date": "2026-10-26",
+   "type": "discontinued",
+   "id": "ola-electric-s1-proplus-5point2-kwh",
+   "brand": "Ola Electric",
+   "brandId": "ola-electric",
+   "name": "S1 Pro+ 5.2 kWh",
+   "note": "No longer listed on the official brand website."
+  }
+ ]
 }

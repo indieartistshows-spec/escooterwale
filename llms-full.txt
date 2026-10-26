@@ -115,9 +115,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 X 2 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-2-kwh
-- Ex-showroom price: ₹89,999
-- Estimated on-road price: ₹95,620
-- EMI from: ₹2370/month
+- Ex-showroom price: ₹80,499
+- Estimated on-road price: ₹85,950
+- EMI from: ₹2120/month
 - Battery: 2 kWh
 - Claimed range (IDC): 108 km
 - Real-world range (EScooterwale estimate): 80–90 km
@@ -134,9 +134,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 X 3 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-3-kwh
-- Ex-showroom price: ₹1,03,999
-- Estimated on-road price: ₹1,09,870
-- EMI from: ₹2739/month
+- Ex-showroom price: ₹80,499
+- Estimated on-road price: ₹85,950
+- EMI from: ₹2120/month
 - Battery: 3 kWh
 - Claimed range (IDC): 176 km
 - Real-world range (EScooterwale estimate): 130–145 km
@@ -172,9 +172,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 Pro 3 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-3-kwh
-- Ex-showroom price: ₹1,29,999
-- Estimated on-road price: ₹1,36,340
-- EMI from: ₹3423/month
+- Ex-showroom price: ₹1,53,499
+- Estimated on-road price: ₹1,60,260
+- EMI from: ₹4042/month
 - Battery: 3 kWh
 - Claimed range (IDC): 176 km
 - Real-world range (EScooterwale estimate): 140–150 km
@@ -191,13 +191,13 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 Pro 4 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-4-kwh
-- Ex-showroom price: ₹1,49,999
-- Estimated on-road price: ₹1,56,700
-- EMI from: ₹3950/month
+- Ex-showroom price: ₹1,53,499
+- Estimated on-road price: ₹1,60,260
+- EMI from: ₹4042/month
 - Battery: 4 kWh
 - Claimed range (IDC): 242 km
 - Real-world range (EScooterwale estimate): 155–165 km
-- Top speed: 125 km/h
+- Top speed: 130 km/h
 - Charging time: 4 hrs
 - Kerb weight: 113 kg
 - Boot space: 34 L
