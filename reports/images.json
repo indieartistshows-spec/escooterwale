@@ -34,27 +34,23 @@
   },
   "tvs-motor-orbiter-v1-1point8-kwh": {
    "ok": true,
-   "url": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Home/Review/web3.webp",
-   "w": 3242,
-   "h": 1900
+   "url": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/booktestridenew/requestcallback/750-x-960--yellow-and-copperbike-01_v1.webp",
+   "w": 750,
+   "h": 960
   },
   "tvs-motor-orbiter-v2-3point1-kwh": {
    "ok": true,
-   "url": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Home/Review/web3.webp",
-   "w": 3242,
-   "h": 1900
+   "url": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/booktestridenew/requestcallback/750-x-960--yellow-and-copperbike-01_v1.webp",
+   "w": 750,
+   "h": 960
   },
   "tvs-motor-x-4point44-kwh": {
    "ok": true,
-   "url": "https://www.tvsmotor.com/U388_Assets/images/360images/1.webp",
-   "w": 592,
-   "h": 482
+   "kept": true
   },
   "bgauss-max-c12-2point7-kwh": {
    "ok": true,
-   "url": "https://www.bgauss.com/wp-content/uploads/2025/03/Graphite-Silk-1.png",
-   "w": 600,
-   "h": 698
+   "kept": true
   },
   "bgauss-c12-maxr-3point8-kwh": {
    "ok": true,
@@ -70,21 +66,15 @@
   },
   "hero-vida-vx2-go-fb-3point1-kwh": {
    "ok": true,
-   "url": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/color-picker/go/go-3-1/blue-go-desktop.svg",
-   "w": 1440,
-   "h": 952
+   "kept": true
   },
   "hero-vida-vx2-go-3point4-kwh": {
    "ok": true,
-   "url": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/color-picker/go/blue_go-1.svg",
-   "w": 1440,
-   "h": 770
+   "kept": true
   },
   "hero-vida-vx2-plus-4point4-kwh": {
    "ok": true,
-   "url": "https://www.vidaworld.com/content/dam/vida2-0/vida-vx2/desktop/color-picker/VX2-Plus-Blue.svg",
-   "w": 1440,
-   "h": 770
+   "kept": true
   },
   "ampere-reo-vyb-1point44-kwh": {
    "ok": true,
@@ -96,24 +86,17 @@
   },
   "okinawa-ridge-100-3point12-kwh": {
    "ok": true,
-   "url": "https://okinawascooters.com/uploads/ProductsImage/11pdctimg_Ridge+GPS_Banner.png",
-   "w": 1591,
-   "h": 762
+   "kept": true
   },
   "pure-ev-epluto-7g-cx-1point8-kwh": {
    "ok": true,
-   "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/banner.webp",
-   "w": 1440,
-   "h": 779
+   "kept": true
   },
   "pure-ev-epluto-7g-pro-3point0-kwh": {
-   "ok": false,
-   "tried": [
-    {
-     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/views/card_image_pro.png",
-     "err": "too small (219x210)"
-    }
-   ]
+   "ok": true,
+   "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/banner-1.webp",
+   "w": 1400,
+   "h": 780
   },
   "pure-ev-epluto-7g-max-3point5-kwh": {
    "ok": false,
@@ -163,9 +146,7 @@
   },
   "simple-energy-ultra-6point5-kwh": {
    "ok": true,
-   "url": "https://d36ko614e7sbdn.cloudfront.net/assets/Ultra_FLQ_1_2_png_1c3eb9ec6c.webp",
-   "w": 876,
-   "h": 816
+   "kept": true
   },
   "simple-energy-waves-2point2-kwh": {
    "ok": true,
