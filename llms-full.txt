@@ -1,7 +1,7 @@
 # EScooterwale — full electric scooter dataset for India
 
 Source: https://www.escooterwale.in
-Last updated: 2026-10-25
+Last updated: 2026-10-26
 Models: 44 | Brands: 10
 
 Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the
@@ -115,13 +115,13 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 X 2 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-2-kwh
-- Ex-showroom price: ₹80,499
-- Estimated on-road price: ₹85,950
-- EMI from: ₹2120/month
+- Ex-showroom price: ₹89,999
+- Estimated on-road price: ₹95,620
+- EMI from: ₹2370/month
 - Battery: 2 kWh
 - Claimed range (IDC): 108 km
 - Real-world range (EScooterwale estimate): 80–90 km
-- Top speed: 90 km/h
+- Top speed: 101 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
 - Boot space: 34 L
@@ -134,20 +134,20 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 X 3 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-3-kwh
-- Ex-showroom price: ₹1,07,999
-- Estimated on-road price: ₹1,13,940
-- EMI from: ₹2844/month
+- Ex-showroom price: ₹1,03,999
+- Estimated on-road price: ₹1,09,870
+- EMI from: ₹2739/month
 - Battery: 3 kWh
 - Claimed range (IDC): 176 km
 - Real-world range (EScooterwale estimate): 130–145 km
-- Top speed: 90 km/h
+- Top speed: 115 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
 - Boot space: 34 L
 - Ground clearance: 155 mm
 - Seat height: 785 mm
 - ScootScore: 8.3/10 (Range 8, Features 9, Value 7.6, Ride 7.5, Service 6.5)
-- Verdict: The Ola S1 X (3 kWh) delivers 176 km claimed range at ₹107,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
+- Verdict: The Ola S1 X (3 kWh) delivers 176 km claimed range at ₹103,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
 - Best for: Tech-forward buyers in metro cities; Daily commutes needing 130–145 km real range
 - Avoid if: Tier-2 city buyers without Ola service; Buyers who prefer physical controls
 
@@ -159,7 +159,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Battery: 4 kWh
 - Claimed range (IDC): 242 km
 - Real-world range (EScooterwale estimate): 180–200 km
-- Top speed: 90 km/h
+- Top speed: 125 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
 - Boot space: 34 L
@@ -172,9 +172,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 Pro 3 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-3-kwh
-- Ex-showroom price: ₹1,53,499
-- Estimated on-road price: ₹1,60,260
-- EMI from: ₹4042/month
+- Ex-showroom price: ₹1,29,999
+- Estimated on-road price: ₹1,36,340
+- EMI from: ₹3423/month
 - Battery: 3 kWh
 - Claimed range (IDC): 176 km
 - Real-world range (EScooterwale estimate): 140–150 km
@@ -191,20 +191,20 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Ola Electric S1 Pro 4 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-4-kwh
-- Ex-showroom price: ₹1,53,499
-- Estimated on-road price: ₹1,60,260
-- EMI from: ₹4042/month
+- Ex-showroom price: ₹1,49,999
+- Estimated on-road price: ₹1,56,700
+- EMI from: ₹3950/month
 - Battery: 4 kWh
-- Claimed range (IDC): 195 km
+- Claimed range (IDC): 242 km
 - Real-world range (EScooterwale estimate): 155–165 km
-- Top speed: 130 km/h
+- Top speed: 125 km/h
 - Charging time: 4 hrs
-- Kerb weight: 108 kg
-- Boot space: 36 L
+- Kerb weight: 113 kg
+- Boot space: 34 L
 - Ground clearance: 155 mm
 - Seat height: 785 mm
 - ScootScore: 8.3/10 (Range 8.9, Features 9, Value 5.3, Ride 7.5, Service 6.5)
-- Verdict: The Ola S1 Pro (4 kWh) delivers 195 km claimed range at ₹149,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
+- Verdict: The Ola S1 Pro (4 kWh) delivers 242 km claimed range at ₹149,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.
 - Best for: Tech-forward buyers in metro cities; Daily commutes needing 155–165 km real range
 - Avoid if: Tier-2 city buyers without Ola service; Buyers who prefer physical controls
 
@@ -216,10 +216,10 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Battery: 5.2 kWh
 - Claimed range (IDC): 320 km
 - Real-world range (EScooterwale estimate): 240–270 km
-- Top speed: 117 km/h
+- Top speed: 130 km/h
 - Charging time: 4 hrs
-- Kerb weight: 108 kg
-- Boot space: 36 L
+- Kerb weight: 118 kg
+- Boot space: 34 L
 - Ground clearance: 155 mm
 - Seat height: 785 mm
 - ScootScore: 8.5/10 (Range 10, Features 9, Value 5, Ride 7.5, Service 6.5)
@@ -237,7 +237,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Real-world range (EScooterwale estimate): 90–105 km
 - Top speed: 80 km/h
 - Charging time: 5 hrs
-- Kerb weight: 108 kg
+- Kerb weight: 125 kg
 - Boot space: 34 L
 - Ground clearance: 155 mm
 - Seat height: 785 mm
@@ -256,7 +256,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Real-world range (EScooterwale estimate): 120–135 km
 - Top speed: 80 km/h
 - Charging time: 4.5 hrs
-- Kerb weight: 108 kg
+- Kerb weight: 125 kg
 - Boot space: 34 L
 - Ground clearance: 155 mm
 - Seat height: 785 mm
@@ -294,7 +294,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Real-world range (EScooterwale estimate): 120–135 km
 - Top speed: 90 km/h
 - Charging time: 3.3 hrs
-- Kerb weight: 108 kg
+- Kerb weight: 111.6 kg
 - Boot space: 22 L
 - Ground clearance: 155 mm
 - Seat height: 785 mm
@@ -309,9 +309,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price: ₹1,92,330
 - EMI from: ₹4872/month
 - Battery: 3.7 kWh
-- Claimed range (IDC): 161 km
+- Claimed range (IDC): 165 km
 - Real-world range (EScooterwale estimate): 120–135 km
-- Top speed: 90 km/h
+- Top speed: 100 km/h
 - Charging time: 3.3 hrs
 - Kerb weight: 108 kg
 - Boot space: 22 L
@@ -556,7 +556,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price: ₹1,05,280
 - EMI from: ₹2620/month
 - Battery: 2.2 kWh
-- Claimed range (IDC): 92 km
+- Claimed range (IDC): 93 km
 - Real-world range (EScooterwale estimate): 68–78 km
 - Top speed: 70 km/h
 - Charging time: 3.5 hrs
@@ -575,7 +575,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price: ₹1,26,610
 - EMI from: ₹3172/month
 - Battery: 3.4 kWh
-- Claimed range (IDC): 142 km
+- Claimed range (IDC): 146 km
 - Real-world range (EScooterwale estimate): 105–120 km
 - Top speed: 80 km/h
 - Charging time: 5.3 hrs
@@ -723,11 +723,11 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Okinawa Lite 1.2 kWh
 - URL: https://www.escooterwale.in/scooters/okinawa-lite-1point2-kwh
-- Ex-showroom price: ₹69,090
-- Estimated on-road price: ₹74,330
+- Ex-showroom price: ₹69,093
+- Estimated on-road price: ₹74,340
 - EMI from: ₹1819/month
 - Battery: 1.2 kWh
-- Claimed range (IDC): 70 km
+- Claimed range (IDC): 60 km
 - Real-world range (EScooterwale estimate): 50–58 km
 - Top speed: 25 km/h
 - Charging time: 5 hrs
@@ -894,11 +894,11 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Bgauss C12i 2.0 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-c12i-2point0-kwh
-- Ex-showroom price: ₹97,950
-- Estimated on-road price: ₹1,03,710
-- EMI from: ₹2579/month
+- Ex-showroom price: ₹1,09,990
+- Estimated on-road price: ₹1,15,970
+- EMI from: ₹2896/month
 - Battery: 2.0 kWh
-- Claimed range (IDC): 110 km
+- Claimed range (IDC): 85 km
 - Real-world range (EScooterwale estimate): 82–95 km
 - Top speed: 72 km/h
 - Charging time: 4 hrs
