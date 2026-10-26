@@ -1,0 +1,300 @@
+{
+ "models": {
+  "ola-electric-s1-x-4-kwh": {
+   "ok": true,
+   "url": "https://cdn.olaelectric.com/sites/evdp/pages/gen3/s1_x_gen3_product_web_image_v2.webp",
+   "w": 1839,
+   "h": 900
+  },
+  "ola-electric-s1-proplus-4-kwh": {
+   "ok": true,
+   "url": "https://cdn.olaelectric.com/sites/evdp/pages/gen3/s1_pro_plus_gen3_product_web_image_v3.webp",
+   "w": 1839,
+   "h": 900
+  },
+  "ather-energy-rizta-s-3point5-kwh": {
+   "ok": true,
+   "url": "https://media.atherenergy.com/Ather-Rizta-family-electric-scooter.webp",
+   "w": 1842,
+   "h": 1200
+  },
+  "ather-energy-rizta-z-2point9-kwh": {
+   "ok": true,
+   "url": "https://media.atherenergy.com/Ather-Rizta-family-electric-scooter.webp",
+   "w": 1842,
+   "h": 1200
+  },
+  "ather-energy-450s-3point5-kwh": {
+   "ok": true,
+   "url": "https://media.atherenergy.com/Ather-450-electric-scooter-model.webp",
+   "w": 3300,
+   "h": 1380
+  },
+  "ather-energy-450x-2point9-kwh": {
+   "ok": true,
+   "url": "https://media.atherenergy.com/Ather-450-electric-scooter-model.webp",
+   "w": 3300,
+   "h": 1380
+  },
+  "tvs-motor-iqube-3point1-kwh": {
+   "ok": true,
+   "url": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube-3-0-KW/Color-Images/Titanium-Grey/3-kw-titanium-grey-01.webp",
+   "w": 870,
+   "h": 680
+  },
+  "tvs-motor-iqube-s-4point7-kwh": {
+   "ok": true,
+   "url": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube-S/Color_Images/Copper-Bronze-Glossy/copper-bronze-c45-01.webp",
+   "w": 870,
+   "h": 680
+  },
+  "tvs-motor-orbiter-v1-1point8-kwh": {
+   "ok": true,
+   "url": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Home/Review/web3.webp",
+   "w": 3242,
+   "h": 1900
+  },
+  "tvs-motor-orbiter-v2-3point1-kwh": {
+   "ok": true,
+   "url": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Home/Review/web3.webp",
+   "w": 3242,
+   "h": 1900
+  },
+  "tvs-motor-x-4point44-kwh": {
+   "ok": true,
+   "url": "https://www.tvsmotor.com/U388_Assets/images/bike.webp",
+   "w": 2130,
+   "h": 1510
+  },
+  "bgauss-max-c12-2point7-kwh": {
+   "ok": true,
+   "url": "https://www.bgauss.com/wp-content/uploads/2025/03/C12.png",
+   "w": 1019,
+   "h": 1080
+  },
+  "bgauss-c12-maxr-3point8-kwh": {
+   "ok": true,
+   "url": "https://www.bgauss.com/wp-content/plugins/bgauss-c12-maxr/assets/images/scooter-white.webp",
+   "w": 1830,
+   "h": 1388
+  },
+  "bgauss-oowah-ex-2point3-kwh": {
+   "ok": true,
+   "url": "https://www.bgauss.com/wp-content/uploads/2025/09/Sage-Green-min.png",
+   "w": 1500,
+   "h": 1804
+  },
+  "bgauss-oowah-max-plus-3point0-kwh": {
+   "ok": true,
+   "url": "https://www.bgauss.com/wp-content/plugins/oowah-landing/assets/img/bike-plus-jamun-punch.png",
+   "w": 1536,
+   "h": 1152
+  },
+  "hero-vida-vx2-go-fb-3point1-kwh": {
+   "ok": true,
+   "url": "https://www.vidaworld.com/content/dam/vida2-0/go-2-2-rq/banner/3-1-desktop-banner.jpeg",
+   "w": 2880,
+   "h": 1734
+  },
+  "hero-vida-vx2-go-3point4-kwh": {
+   "ok": true,
+   "url": "https://media.vidaworld.com/is/image/heromotocorp/Vehicle%20Stats?fmt=webp&fmt=webp-alpha",
+   "w": 1280,
+   "h": 1216
+  },
+  "hero-vida-vx2-plus-4point4-kwh": {
+   "ok": true,
+   "url": "https://media.vidaworld.com/is/image/heromotocorp/Vehicle%20Stats?fmt=webp&fmt=webp-alpha",
+   "w": 1280,
+   "h": 1216
+  },
+  "ampere-reo-vyb-1point44-kwh": {
+   "ok": true,
+   "url": "https://static.ampere-electric.com/REO_VYB_1_ae6f19a6ac.webp",
+   "w": 1440,
+   "h": 800
+  },
+  "okinawa-praisepro-2point08-kwh": {
+   "ok": true,
+   "url": "https://okinawascooters.com/Uploads/ProductsImage/product-banner01.png",
+   "w": 1488,
+   "h": 1201
+  },
+  "okinawa-ridge-100-3point12-kwh": {
+   "ok": true,
+   "url": "https://okinawascooters.com/Uploads/banner/7hbanner_Praisepro-banner.jpg",
+   "w": 1920,
+   "h": 1048
+  },
+  "pure-ev-epluto-7g-cx-1point8-kwh": {
+   "ok": true,
+   "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/banner.webp",
+   "w": 1440,
+   "h": 779
+  },
+  "pure-ev-epluto-7g-pro-3point0-kwh": {
+   "ok": false,
+   "tried": [
+    {
+     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/views/card_image_pro.png",
+     "err": "too small (219x210)"
+    }
+   ]
+  },
+  "pure-ev-epluto-7g-max-3point5-kwh": {
+   "ok": false,
+   "tried": [
+    {
+     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/views/card_image_max.png",
+     "err": "too small (219x210)"
+    },
+    {
+     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/7gpro1.png",
+     "err": "too small (380x300)"
+    }
+   ]
+  },
+  "pure-ev-etrance-neo-sx-1point8-kwh": {
+   "ok": true,
+   "url": "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/product-card/etrance%20neo%20sx.png",
+   "w": 1146,
+   "h": 1465
+  },
+  "pure-ev-etrance-neo-2point4-kwh": {
+   "ok": false,
+   "tried": [
+    {
+     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/product-card/etrance-neo.png",
+     "err": "too small (195x212)"
+    },
+    {
+     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/etrance_silver.png",
+     "err": "too small (316x442)"
+    }
+   ]
+  },
+  "pure-ev-etrance-neoplus-3point0-kwh": {
+   "ok": true,
+   "url": "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/neo_plus.png",
+   "w": 600,
+   "h": 600
+  },
+  "honda-qc1-1point5-kwh": {
+   "ok": true,
+   "url": "https://www.honda2wheelersindia.com/content/dam/e2w/apac/india/products/qc1/desktop/Banner%201280x853%20%283%29.png",
+   "w": 1280,
+   "h": 853
+  },
+  "suzuki-e-access-3point07-kwh": {
+   "ok": true,
+   "url": "https://s3.ap-south-1.amazonaws.com/suzuki-website-s3/public-live/uploads/media-images/original/1_67ac478806e6d.png",
+   "w": 651,
+   "h": 429
+  },
+  "simple-energy-one-5-kwh": {
+   "ok": true,
+   "url": "https://d36ko614e7sbdn.cloudfront.net/assets/3_Simple_ONE_Brazen_Black_117_1_png_e3b638cf41.webp",
+   "w": 2260,
+   "h": 1272
+  },
+  "simple-energy-ultra-6point5-kwh": {
+   "ok": true,
+   "url": "https://www.simpleenergy.in/_next/image?url=https%3A%2F%2Fd36ko614e7sbdn.cloudfront.net%2Fassets%2FMask_group_32_png_c1131b22cf.webp&w=3840&q=75",
+   "w": 3840,
+   "h": 2137
+  },
+  "simple-energy-waves-2point2-kwh": {
+   "ok": true,
+   "url": "https://d36ko614e7sbdn.cloudfront.net/assets/Group_2087329191_png_fa20e802d6.webp",
+   "w": 706,
+   "h": 562
+  },
+  "kinetic-watts-volts-dx-2point6-kwh": {
+   "ok": true,
+   "url": "https://www.kineticev.in/-/images/variant/dx/black-dx-kineticev.jpg",
+   "w": 2667,
+   "h": 1500
+  },
+  "kinetic-watts-volts-dxplus-2point6-kwh": {
+   "ok": true,
+   "url": "https://www.kineticev.in/-/images/variant/dx-plus/red-dx-plus-kineticev.jpg",
+   "w": 2667,
+   "h": 1500
+  },
+  "lectrix-lxs-2point0-2point3-kwh": {
+   "ok": true,
+   "url": "https://cdn.lectrixev.com/prod/574b9b25-bacb-4d20-4837-785552053500.webp",
+   "w": 1366,
+   "h": 768
+  },
+  "lectrix-nduro-3point0-3-kwh": {
+   "ok": true,
+   "url": "https://cdn.lectrixev.com/prod/b5c6848d-2889-454a-fb4d-6c667448d200.webp",
+   "w": 1366,
+   "h": 768
+  },
+  "okaya-ev-faast-f4-4point4-kwh": {
+   "ok": true,
+   "url": "https://opgmobility.com/wp-content/uploads/2025/01/FaastF4-BLUE1.png",
+   "w": 970,
+   "h": 675
+  },
+  "okaya-ev-faast-f2f-2point19-kwh": {
+   "ok": true,
+   "url": "https://opgmobility.com/wp-content/uploads/2025/04/f2f.webp",
+   "w": 1704,
+   "h": 958
+  },
+  "okaya-ev-freedum-li-1point44-kwh": {
+   "ok": true,
+   "url": "https://opgmobility.com/wp-content/uploads/2025/02/Freedom-Blue.png",
+   "w": 600,
+   "h": 500
+  },
+  "vlf-strada-city-2point16-kwh": {
+   "ok": true,
+   "url": "https://motohaus.in/wp-content/uploads/2026/10/Black-scaled.png",
+   "w": 1600,
+   "h": 1067
+  },
+  "vlf-strada-max-4point32-kwh": {
+   "ok": true,
+   "url": "https://motohaus.in/wp-content/uploads/2026/10/Black-scaled.png",
+   "w": 1600,
+   "h": 1067
+  }
+ },
+ "logos": {
+  "honda": {
+   "ok": true,
+   "from": "initials badge"
+  },
+  "suzuki": {
+   "ok": true,
+   "url": "https://s3.ap-south-1.amazonaws.com/suzuki-website-s3/public-live/images/website/favicon.png",
+   "from": "site icon"
+  },
+  "simple-energy": {
+   "ok": true,
+   "from": "initials badge"
+  },
+  "kinetic-watts-volts": {
+   "ok": true,
+   "from": "initials badge"
+  },
+  "lectrix": {
+   "ok": true,
+   "from": "initials badge"
+  },
+  "okaya-ev": {
+   "ok": true,
+   "url": "https://opgmobility.com/wp-content/uploads/2025/01/cropped-Untitled-design-19-1-180x180.png",
+   "from": "site icon"
+  },
+  "vlf": {
+   "ok": true,
+   "url": "https://motohaus.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-05-at-17.27.51_513e79f2.jpg",
+   "from": "site icon"
+  }
+ }
+}
