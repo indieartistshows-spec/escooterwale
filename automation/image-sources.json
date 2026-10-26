@@ -66,31 +66,29 @@
   },
   "tvs-motor-orbiter-v1-1point8-kwh": {
    "name": "TVS Orbiter V1 1.8 kWh",
-   "urls": [
-    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Variant/TVSOrbiterV1/Selected_Images/StellarSliver/web400313.webp",
-    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Variant/TVSOrbiterV1/Selected_Images/StratosBlue/web400313.webp"
-   ],
-   "page": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter"
+   "urls": [],
+   "page": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter",
+   "prefer": "colou?r|variant|360"
   },
   "tvs-motor-orbiter-v2-3point1-kwh": {
    "name": "TVS Orbiter V2 3.1 kWh",
-   "urls": [
-    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Variant/TVSOrbiterV1/Selected_Images/StellarSliver/web400313.webp",
-    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Variant/TVSOrbiterV1/Selected_Images/StratosBlue/web400313.webp"
-   ],
-   "page": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter"
+   "urls": [],
+   "page": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter",
+   "prefer": "colou?r|variant|360"
   },
   "tvs-motor-x-4point44-kwh": {
    "name": "TVS X 4.44 kWh",
    "urls": [
-    "https://www.tvsmotor.com/electric-scooters/tvs-x/-/media/Vehicles/Feature/TVSX/Variant/TVS-X/Color_Images/Hellkat-Red/left.png"
+    "https://www.tvsmotor.com/electric-scooters/tvs-x/-/media/Vehicles/Feature/TVSX/Variant/TVS-X/Color_Images/Hellkat-Red/left.png",
+    "https://www.tvsmotor.com/U388_Assets/images/360images/1.webp"
    ],
    "page": "https://www.tvsmotor.com/electric-scooters/tvs-x"
   },
   "bgauss-max-c12-2point7-kwh": {
    "name": "BGauss MAX C12 2.7 kWh",
    "urls": [
-    "https://www.bgauss.com/wp-content/uploads/2025/03/C12.png"
+    "https://www.bgauss.com/wp-content/uploads/2025/03/Graphite-Silk-1.png",
+    "https://www.bgauss.com/wp-content/uploads/2026/04/Monolith-Grey.png"
    ],
    "page": "https://www.bgauss.com/c12-overview/"
   },
@@ -120,17 +118,20 @@
   "hero-vida-vx2-go-fb-3point1-kwh": {
    "name": "Hero Vida VX2 Go FB 3.1 kWh",
    "urls": [],
-   "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html"
+   "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html",
+   "prefer": "colou?r|variant|vehicle-?colou?r|360|side"
   },
   "hero-vida-vx2-go-3point4-kwh": {
    "name": "Hero Vida VX2 Go 3.4 kWh",
    "urls": [],
-   "page": "https://www.vidaworld.com/vx2-go-3-4-kwh-electric-scooter.html"
+   "page": "https://www.vidaworld.com/vx2-go-3-4-kwh-electric-scooter.html",
+   "prefer": "colou?r|variant|vehicle-?colou?r|360|side"
   },
   "hero-vida-vx2-plus-4point4-kwh": {
    "name": "Hero Vida VX2 Plus 4.4 kWh",
    "urls": [],
-   "page": "https://www.vidaworld.com/vx2-plus-electric-scooter.html"
+   "page": "https://www.vidaworld.com/vx2-plus-electric-scooter.html",
+   "prefer": "colou?r|variant|vehicle-?colou?r|360|side"
   },
   "ampere-reo-vyb-1point44-kwh": {
    "name": "Ampere Reo Vyb 1.44 kWh",
@@ -148,7 +149,8 @@
   "okinawa-ridge-100-3point12-kwh": {
    "name": "Okinawa Ridge 100 3.12 kWh",
    "urls": [],
-   "page": "https://okinawascooters.com/"
+   "page": "https://okinawascooters.com/scooters/ridge-100",
+   "prefer": "ridge"
   },
   "pure-ev-epluto-7g-cx-1point8-kwh": {
    "name": "Pure EV ePluto 7G CX 1.8 kWh",
@@ -220,6 +222,7 @@
   "simple-energy-ultra-6point5-kwh": {
    "name": "Simple Ultra 6.5 kWh",
    "urls": [
+    "https://d36ko614e7sbdn.cloudfront.net/assets/Ultra_FLQ_1_2_png_1c3eb9ec6c.webp",
     "https://d36ko614e7sbdn.cloudfront.net/assets/Ultra_home_responsive_png_a24c157e4d.webp"
    ],
    "page": "https://www.simpleenergy.in/product/simpleultra"

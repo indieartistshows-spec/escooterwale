@@ -6,7 +6,8 @@
        "logos":  { "<brand id>":   { "urls": [...], "page": "brand homepage", "initials": "OLA", "color": "#16a663" } } }
    Model photo -> images/<id>.webp (max 1800 px wide). Tries the direct urls first, then the
    page's og:image, then the largest product-looking <img> on the page (in a real browser, so
-   pages built by JavaScript work). Images under 500 px wide, or that look like logos/icons, are skipped.
+   pages built by JavaScript work; an entry's "prefer" regex ranks matching image paths first, e.g. colour-picker
+   shots). Images under 500 px wide, or that look like logos/icons, are skipped.
    Logo -> images/logos/<id>-48.png from the site's apple-touch-icon / icon, else a plain
    initials badge in the brand colour.
    Existing files are kept unless --force. Report: automation/out/images.json
@@ -37,25 +38,26 @@ async function toPhoto(buf) {
   return { out: await img.resize({ width: Math.min(1800, m.width), withoutEnlargement: true }).webp({ quality: 82 }).toBuffer(), w: m.width, h: m.height };
 }
 
-async function pageCandidates(ctx, url, nameHint) {
+async function pageCandidates(ctx, url, nameHint, prefer) {
   const page = await ctx.newPage();
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
     await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
     for (let y = 0; y < 6; y++) { await page.mouse.wheel(0, 1200); await page.waitForTimeout(300); }
-    return await page.evaluate(hint => {
+    return await page.evaluate(([hint, prefer]) => {
       const out = [];
       const meta = n => (document.querySelector(`meta[property="${n}"],meta[name="${n}"]`) || {}).content;
       const words = (hint || '').toLowerCase().split(/\s+/).filter(w => w.length > 2);
       const imgs = [...document.images].map(i => ({ src: i.currentSrc || i.src, w: i.naturalWidth, h: i.naturalHeight, alt: (i.alt || '').toLowerCase() }))
         .filter(i => i.src && /^https?:/.test(i.src) && i.w >= 500 && i.h >= 250 && i.h <= i.w * 1.4);
-      const score = i => i.w * i.h * (words.some(w => i.alt.includes(w) || i.src.toLowerCase().includes(w)) ? 3 : 1);
+      const pre = prefer ? new RegExp(prefer, 'i') : null;
+      const score = i => i.w * i.h * (words.some(w => i.alt.includes(w) || i.src.toLowerCase().includes(w)) ? 3 : 1) * (pre && pre.test(i.src) ? 20 : 1);
       imgs.sort((a, b) => score(b) - score(a));
       out.push(...imgs.slice(0, 4).map(i => i.src));
       const og = meta('og:image') || meta('twitter:image');
       if (og) out.push(new URL(og, location.href).href);
       return out;
-    }, nameHint);
+    }, [nameHint, prefer || null]);
   } finally { await page.close(); }
 }
 
@@ -94,7 +96,7 @@ function initialsSvg(text, color) {
       }
     };
     await tryUrls(s.urls || []);
-    if (!done && s.page) { try { await tryUrls(await pageCandidates(ctx, s.page, s.name || id)); } catch (e) { tried.push({ url: s.page, err: 'page: ' + String(e.message || e).slice(0, 100) }); } }
+    if (!done && s.page) { try { await tryUrls(await pageCandidates(ctx, s.page, s.name || id, s.prefer)); } catch (e) { tried.push({ url: s.page, err: 'page: ' + String(e.message || e).slice(0, 100) }); } }
     report.models[id] = done ? { ok: true, ...done } : { ok: false, tried };
     console.log(`${done ? 'ok  ' : 'FAIL'} ${id} ${done ? done.url : ''}`);
   }
