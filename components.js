@@ -462,6 +462,8 @@ function initMatchFab(){
   a.setAttribute('aria-label','Match with your scooter');
   a.innerHTML='<span class="sw-fab-tip" aria-hidden="true">Match with your scooter</span><span class="sw-fab-ic" aria-hidden="true"><img src="/images/icon-scooter-white.png" width="38" height="38" alt="" decoding="async"></span>';
   document.body.appendChild(a);
+  // GA event for this button: icon_click (the general cta_click still fires too)
+  a.addEventListener('click',()=>{try{if(typeof gtag==='function'){const p=location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/';gtag('event','icon_click',{icon_name:'match-fab',link_url:a.getAttribute('href'),page_path:p,lang:lp?lp.slice(1):'en'});}}catch(e){}});
   // keep clear of the compare tray when it is open
   const tray=document.querySelector('.compare-tray');
   if(tray){const up=()=>a.classList.toggle('lift',tray.classList.contains('visible'));up();new MutationObserver(up).observe(tray,{attributes:true,attributeFilter:['class']});}
