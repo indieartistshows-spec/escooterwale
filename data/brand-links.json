@@ -54,5 +54,40 @@
   "testRide": null,
   "dealer": null,
   "verified": []
+ },
+ "honda": {
+  "testRide": "https://www.honda2wheelersindia.com/e2w/enquire-now",
+  "dealer": "https://www.honda2wheelersindia.com/e2w/dealer-locator",
+  "verified": []
+ },
+ "suzuki": {
+  "testRide": "https://www.suzukimotorcycle.co.in/book-test-ride/ev/e-access",
+  "dealer": "https://www.suzukimotorcycle.co.in/find-dealer",
+  "verified": []
+ },
+ "simple-energy": {
+  "testRide": "https://www.simpleenergy.in/test-ride",
+  "dealer": "https://www.simpleenergy.in/store",
+  "verified": []
+ },
+ "kinetic-watts-volts": {
+  "testRide": "https://www.kineticev.in/test-ride",
+  "dealer": "https://www.kineticev.in/dealer-locater",
+  "verified": []
+ },
+ "lectrix": {
+  "testRide": "https://www.lectrixev.com/campaigns/book-test-ride",
+  "dealer": "https://dealers.lectrixev.com/",
+  "verified": []
+ },
+ "okaya-ev": {
+  "testRide": null,
+  "dealer": "https://opgmobility.com/#dealership",
+  "verified": []
+ },
+ "vlf": {
+  "testRide": null,
+  "dealer": null,
+  "verified": []
  }
 }
