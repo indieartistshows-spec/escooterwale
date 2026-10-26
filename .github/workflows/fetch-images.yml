@@ -1,0 +1,40 @@
+# Download model photos and brand logos listed in automation/image-sources.json from the brands' own sites.
+# Run by hand (Actions > Fetch images > Run workflow). New files only, unless "force" is ticked.
+name: Fetch images
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Re-download images that already exist'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  images:
+    runs-on: ubuntu-24.04   # pinned: Playwright browser deps fail on the new Ubuntu 26 image
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - name: Install
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Fetch images
+        run: node automation/fetch-images.js ${{ inputs.force && '--force' || '' }}
+      - name: Report
+        run: mkdir -p reports && cp automation/out/images.json reports/images.json && cat reports/images.json
+      - name: Commit
+        run: |
+          git config user.name "escooterwale-bot"
+          git config user.email "bot@escooterwale.in"
+          git add images/*.webp images/logos reports/images.json
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "Model photos and brand logos fetched from brand sites"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push origin HEAD:main && break; sleep 10; done

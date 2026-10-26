@@ -1,0 +1,343 @@
+{
+ "models": {
+  "ola-electric-s1-x-4-kwh": {
+   "name": "Ola S1 X 4 kWh",
+   "urls": [
+    "https://cdn.olaelectric.com/sites/evdp/pages/gen3/s1_x_gen3_product_web_image_v2.webp",
+    "https://cdn.olaelectric.com/sites/evdp/pages/pricing/ev_scooter_product_x_web_image.webp"
+   ],
+   "page": "https://www.olaelectric.com/s1x-gen3"
+  },
+  "ola-electric-s1-proplus-4-kwh": {
+   "name": "Ola S1 Pro+ 4 kWh",
+   "urls": [
+    "https://cdn.olaelectric.com/sites/evdp/pages/gen3/s1_pro_plus_gen3_product_web_image_v3.webp",
+    "https://cdn.olaelectric.com/sites/evdp/pages/gen3/s1_pro_plus_scooter_image.webp",
+    "https://cdn.olaelectric.com/sites/evdp/pages/pricing/ev_scooter_product_proplus_web_image.webp"
+   ],
+   "page": "https://www.olaelectric.com/s1pro-gen3"
+  },
+  "ather-energy-rizta-s-3point5-kwh": {
+   "name": "Ather Rizta S 3.5 kWh",
+   "urls": [
+    "https://media.atherenergy.com/Ather-Rizta-family-electric-scooter.webp",
+    "https://media.atherenergy.com/Ather-Rizta-scooter-colors.webp"
+   ],
+   "page": "https://www.atherenergy.com/rizta"
+  },
+  "ather-energy-rizta-z-2point9-kwh": {
+   "name": "Ather Rizta Z 2.9 kWh",
+   "urls": [
+    "https://media.atherenergy.com/Ather-Rizta-family-electric-scooter.webp",
+    "https://media.atherenergy.com/Ather-Rizta-scooter-colors.webp"
+   ],
+   "page": "https://www.atherenergy.com/rizta"
+  },
+  "ather-energy-450s-3point5-kwh": {
+   "name": "Ather 450S 3.5 kWh",
+   "urls": [
+    "https://media.atherenergy.com/Ather-450-electric-scooter-model.webp",
+    "https://media.atherenergy.com/Ather-450X-vs-Ather-450S-electric-scooter-model.webp"
+   ],
+   "page": "https://www.atherenergy.com/450"
+  },
+  "ather-energy-450x-2point9-kwh": {
+   "name": "Ather 450X 2.9 kWh",
+   "urls": [
+    "https://media.atherenergy.com/Ather-450-electric-scooter-model.webp",
+    "https://media.atherenergy.com/Ather-450X-vs-Ather-450S-electric-scooter-model.webp"
+   ],
+   "page": "https://www.atherenergy.com/450"
+  },
+  "tvs-motor-iqube-3point1-kwh": {
+   "name": "TVS iQube 3.1 kWh",
+   "urls": [
+    "https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube-3-0-KW/Color-Images/Titanium-Grey/3-kw-titanium-grey-01.webp"
+   ],
+   "page": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/tvs-iqube-3-1-kwh-variant-details"
+  },
+  "tvs-motor-iqube-s-4point7-kwh": {
+   "name": "TVS iQube S 4.7 kWh",
+   "urls": [
+    "https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube-S/Color_Images/Copper-Bronze-Glossy/copper-bronze-c45-01.webp",
+    "https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube-S/Color_Images/Mercury-Grey-New/dark_grey_01.webp"
+   ],
+   "page": "https://www.tvsmotor.com/electric-scooters/tvs-iqube/tvs-iqube-s-4-7-kwh-variant-details"
+  },
+  "tvs-motor-orbiter-v1-1point8-kwh": {
+   "name": "TVS Orbiter V1 1.8 kWh",
+   "urls": [
+    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Variant/TVSOrbiterV1/Selected_Images/StellarSliver/web400313.webp",
+    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Variant/TVSOrbiterV1/Selected_Images/StratosBlue/web400313.webp"
+   ],
+   "page": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter"
+  },
+  "tvs-motor-orbiter-v2-3point1-kwh": {
+   "name": "TVS Orbiter V2 3.1 kWh",
+   "urls": [
+    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Variant/TVSOrbiterV1/Selected_Images/StellarSliver/web400313.webp",
+    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/Variant/TVSOrbiterV1/Selected_Images/StratosBlue/web400313.webp"
+   ],
+   "page": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter"
+  },
+  "tvs-motor-x-4point44-kwh": {
+   "name": "TVS X 4.44 kWh",
+   "urls": [
+    "https://www.tvsmotor.com/electric-scooters/tvs-x/-/media/Vehicles/Feature/TVSX/Variant/TVS-X/Color_Images/Hellkat-Red/left.png"
+   ],
+   "page": "https://www.tvsmotor.com/electric-scooters/tvs-x"
+  },
+  "bgauss-max-c12-2point7-kwh": {
+   "name": "BGauss MAX C12 2.7 kWh",
+   "urls": [
+    "https://www.bgauss.com/wp-content/uploads/2025/03/C12.png"
+   ],
+   "page": "https://www.bgauss.com/c12-overview/"
+  },
+  "bgauss-c12-maxr-3point8-kwh": {
+   "name": "BGauss C12 MaxR 3.8 kWh",
+   "urls": [
+    "https://www.bgauss.com/wp-content/plugins/bgauss-c12-maxr/assets/images/scooter-white.webp",
+    "https://www.bgauss.com/wp-content/plugins/bgauss-c12-maxr/assets/images/scooter-black.webp",
+    "https://www.bgauss.com/wp-content/plugins/bgauss-c12-maxr/assets/images/scooter-terra-green.webp"
+   ],
+   "page": "https://www.bgauss.com/bg-c12-maxr/"
+  },
+  "bgauss-oowah-ex-2point3-kwh": {
+   "name": "BGauss OoWah EX 2.3 kWh",
+   "urls": [
+    "https://www.bgauss.com/wp-content/uploads/2025/09/Sage-Green-min.png"
+   ],
+   "page": "https://www.bgauss.com/bg-oowah/"
+  },
+  "bgauss-oowah-max-plus-3point0-kwh": {
+   "name": "BGauss OoWah MAX Plus 3.0 kWh",
+   "urls": [
+    "https://www.bgauss.com/wp-content/plugins/oowah-landing/assets/img/bike-plus-jamun-punch.png"
+   ],
+   "page": "https://www.bgauss.com/bg-oowah/"
+  },
+  "hero-vida-vx2-go-fb-3point1-kwh": {
+   "name": "Hero Vida VX2 Go FB 3.1 kWh",
+   "urls": [],
+   "page": "https://www.vidaworld.com/vx2-go-electric-scooter.html"
+  },
+  "hero-vida-vx2-go-3point4-kwh": {
+   "name": "Hero Vida VX2 Go 3.4 kWh",
+   "urls": [],
+   "page": "https://www.vidaworld.com/vx2-go-3-4-kwh-electric-scooter.html"
+  },
+  "hero-vida-vx2-plus-4point4-kwh": {
+   "name": "Hero Vida VX2 Plus 4.4 kWh",
+   "urls": [],
+   "page": "https://www.vidaworld.com/vx2-plus-electric-scooter.html"
+  },
+  "ampere-reo-vyb-1point44-kwh": {
+   "name": "Ampere Reo Vyb 1.44 kWh",
+   "urls": [
+    "https://static.ampere-electric.com/REO_VYB_1_ae6f19a6ac.webp",
+    "https://static.ampere-electric.com/REO_VYB_44fab41e45.webp"
+   ],
+   "page": "https://ampere-electric.com/reovyb"
+  },
+  "okinawa-praisepro-2point08-kwh": {
+   "name": "Okinawa PraisePro 2.08 kWh",
+   "urls": [],
+   "page": "https://okinawascooters.com/scooters/praisepro"
+  },
+  "okinawa-ridge-100-3point12-kwh": {
+   "name": "Okinawa Ridge 100 3.12 kWh",
+   "urls": [],
+   "page": "https://okinawascooters.com/"
+  },
+  "pure-ev-epluto-7g-cx-1point8-kwh": {
+   "name": "Pure EV ePluto 7G CX 1.8 kWh",
+   "urls": [
+    "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/views/card_image1.png"
+   ],
+   "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g"
+  },
+  "pure-ev-epluto-7g-pro-3point0-kwh": {
+   "name": "Pure EV ePluto 7G PRO 3.0 kWh",
+   "urls": [
+    "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/views/card_image_pro.png"
+   ],
+   "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max"
+  },
+  "pure-ev-epluto-7g-max-3point5-kwh": {
+   "name": "Pure EV ePluto 7G MAX 3.5 kWh",
+   "urls": [
+    "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/views/card_image_max.png",
+    "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/7gpro1.png"
+   ],
+   "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max"
+  },
+  "pure-ev-etrance-neo-sx-1point8-kwh": {
+   "name": "Pure EV eTrance Neo SX 1.8 kWh",
+   "urls": [
+    "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/product-card/etrance%20neo%20sx.png"
+   ],
+   "page": "https://www.pureenergy.co.in/electric-scooters/etrance-neo"
+  },
+  "pure-ev-etrance-neo-2point4-kwh": {
+   "name": "Pure EV eTrance Neo 2.4 kWh",
+   "urls": [
+    "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/product-card/etrance-neo.png",
+    "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/etrance_silver.png"
+   ],
+   "page": "https://www.pureenergy.co.in/electric-scooters/etrance-neo"
+  },
+  "pure-ev-etrance-neoplus-3point0-kwh": {
+   "name": "Pure EV eTrance Neo+ 3.0 kWh",
+   "urls": [
+    "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/neo_plus.png"
+   ],
+   "page": "https://www.pureenergy.co.in/electric-scooters/etrance-neo"
+  },
+  "honda-qc1-1point5-kwh": {
+   "name": "Honda QC1 1.5 kWh",
+   "urls": [
+    "https://www.honda2wheelersindia.com/adobe/dynamicmedia/deliver/dm-aid--9d446c86-0545-408e-9fe6-59d42cea50db/qc1.png?quality=85&preferwebp=true",
+    "https://www.honda2wheelersindia.com/content/dam/e2w/apac/india/products/qc1/desktop/Banner%201280x853%20%283%29.png"
+   ],
+   "page": "https://www.honda2wheelersindia.com/e2w/products/qc1"
+  },
+  "suzuki-e-access-3point07-kwh": {
+   "name": "Suzuki e-Access 3.07 kWh",
+   "urls": [
+    "https://s3.ap-south-1.amazonaws.com/suzuki-website-s3/public-live/uploads/media-images/original/1_67ac478806e6d.png",
+    "https://s3.ap-south-1.amazonaws.com/suzuki-website-s3/public-live/uploads/media-images/original/1_67ac478806e6d_(1)_69452ee7ca132.png"
+   ],
+   "page": "https://www.suzukimotorcycle.co.in/product-details/e-access"
+  },
+  "simple-energy-one-5-kwh": {
+   "name": "Simple One 5 kWh",
+   "urls": [
+    "https://d36ko614e7sbdn.cloudfront.net/assets/3_Simple_ONE_Brazen_Black_117_1_png_e3b638cf41.webp"
+   ],
+   "page": "https://www.simpleenergy.in/product/simpleone"
+  },
+  "simple-energy-ultra-6point5-kwh": {
+   "name": "Simple Ultra 6.5 kWh",
+   "urls": [
+    "https://d36ko614e7sbdn.cloudfront.net/assets/Ultra_home_responsive_png_a24c157e4d.webp"
+   ],
+   "page": "https://www.simpleenergy.in/product/simpleultra"
+  },
+  "simple-energy-waves-2point2-kwh": {
+   "name": "Simple WaveS 2.2 kWh",
+   "urls": [
+    "https://d36ko614e7sbdn.cloudfront.net/assets/Group_2087329191_png_fa20e802d6.webp"
+   ],
+   "page": "https://www.simpleenergy.in/product/simplewave"
+  },
+  "kinetic-watts-volts-dx-2point6-kwh": {
+   "name": "Kinetic DX 2.6 kWh",
+   "urls": [
+    "https://www.kineticev.in/-/images/variant/dx/black-dx-kineticev.jpg",
+    "https://www.kineticev.in/-/images/variant/dx/grey-dx-kineticev.jpg"
+   ],
+   "page": "https://www.kineticev.in/"
+  },
+  "kinetic-watts-volts-dxplus-2point6-kwh": {
+   "name": "Kinetic DX+ 2.6 kWh",
+   "urls": [
+    "https://www.kineticev.in/-/images/variant/dx-plus/red-dx-plus-kineticev.jpg",
+    "https://www.kineticev.in/-/images/variant/dx-plus/blue-dx-plus-kineticev.jpg",
+    "https://www.kineticev.in/-/images/variant/dx-plus/white-dx-plus-kineticev.jpg"
+   ],
+   "page": "https://www.kineticev.in/"
+  },
+  "lectrix-lxs-2point0-2point3-kwh": {
+   "name": "Lectrix LXS 2.0 2.3 kWh",
+   "urls": [
+    "https://cdn.lectrixev.com/prod/ea39ce40-ed79-4a82-ea9d-33276b953700.webp",
+    "https://cdn.lectrixev.com/prod/b9cfd8bb-5560-4151-f33c-c40688299900.webp"
+   ],
+   "page": "https://www.lectrixev.com/products/lxs2"
+  },
+  "lectrix-nduro-3point0-3-kwh": {
+   "name": "Lectrix NDuro 3.0 3 kWh",
+   "urls": [
+    "https://cdn.lectrixev.com/prod/b5c6848d-2889-454a-fb4d-6c667448d200.webp"
+   ],
+   "page": "https://www.lectrixev.com/products/NDuro"
+  },
+  "okaya-ev-faast-f4-4point4-kwh": {
+   "name": "Okaya Faast F4 4.4 kWh",
+   "urls": [
+    "https://opgmobility.com/wp-content/uploads/2025/01/FaastF4-BLUE1.png",
+    "https://opgmobility.com/wp-content/uploads/2025/01/f4.png"
+   ],
+   "page": "https://opgmobility.com/product/faast-f4/"
+  },
+  "okaya-ev-faast-f2f-2point19-kwh": {
+   "name": "Okaya Faast F2F 2.19 kWh",
+   "urls": [
+    "https://opgmobility.com/wp-content/uploads/2025/04/f2f.webp"
+   ],
+   "page": "https://opgmobility.com/product/faast-f2f/"
+  },
+  "okaya-ev-freedum-li-1point44-kwh": {
+   "name": "Okaya Freedum LI 1.44 kWh",
+   "urls": [
+    "https://opgmobility.com/wp-content/uploads/2025/02/Freedom-Blue.png"
+   ],
+   "page": "https://opgmobility.com/product/opg-mobility-freedum-li/"
+  },
+  "vlf-strada-city-2point16-kwh": {
+   "name": "VLF Strada City 2.16 kWh",
+   "urls": [
+    "https://motohaus.in/wp-content/uploads/2026/10/Black-scaled.png",
+    "https://motohaus.in/wp-content/uploads/2026/10/White-scaled.png",
+    "https://motohaus.in/wp-content/uploads/2026/10/Silver-scaled.png"
+   ],
+   "page": "https://motohaus.in/product/vlf-strada/"
+  },
+  "vlf-strada-max-4point32-kwh": {
+   "name": "VLF Strada Max 4.32 kWh",
+   "urls": [
+    "https://motohaus.in/wp-content/uploads/2026/10/Black-scaled.png",
+    "https://motohaus.in/wp-content/uploads/2026/10/Grey-1-scaled.png"
+   ],
+   "page": "https://motohaus.in/product/vlf-strada/"
+  }
+ },
+ "logos": {
+  "honda": {
+   "page": "https://www.honda2wheelersindia.com",
+   "initials": "HON",
+   "color": "#cc0000"
+  },
+  "suzuki": {
+   "page": "https://www.suzukimotorcycle.co.in",
+   "initials": "SUZ",
+   "color": "#1d4ed8"
+  },
+  "simple-energy": {
+   "page": "https://www.simpleenergy.in",
+   "initials": "SIM",
+   "color": "#0f766e"
+  },
+  "kinetic-watts-volts": {
+   "page": "https://www.kineticev.in",
+   "initials": "KIN",
+   "color": "#d97706"
+  },
+  "lectrix": {
+   "page": "https://www.lectrixev.com",
+   "initials": "LEC",
+   "color": "#16a34a"
+  },
+  "okaya-ev": {
+   "page": "https://opgmobility.com",
+   "initials": "OKA",
+   "color": "#0369a1"
+  },
+  "vlf": {
+   "page": "https://motohaus.in/product-category/vlf",
+   "initials": "VLF",
+   "color": "#b91c1c"
+  }
+ }
+}
