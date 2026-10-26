@@ -152,46 +152,10 @@
    "urls": [],
    "page": "https://okinawascooters.com/scooters/praisepro"
   },
-  "okinawa-ridge-100-3point12-kwh": {
-   "name": "Okinawa Ridge 100 3.12 kWh",
-   "urls": [],
-   "page": "https://okinawascooters.com/scooters/ridge-100",
-   "prefer": "ridge"
-  },
-  "pure-ev-epluto-7g-cx-1point8-kwh": {
-   "name": "Pure EV ePluto 7G CX 1.8 kWh",
-   "urls": [
-    "https://www.pureenergy.co.in/assets/frontend/images/products/epluto/views/card_image1.png"
-   ],
-   "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g"
-  },
-  "pure-ev-epluto-7g-pro-3point0-kwh": {
-   "name": "Pure EV ePluto 7G PRO 3.0 kWh",
-   "urls": [
-    "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/views/card_image_pro.png"
-   ],
-   "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max"
-  },
-  "pure-ev-epluto-7g-max-3point5-kwh": {
-   "name": "Pure EV ePluto 7G MAX 3.5 kWh",
-   "urls": [
-    "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/views/card_image_max.png",
-    "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/7gpro1.png"
-   ],
-   "page": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max"
-  },
   "pure-ev-etrance-neo-sx-1point8-kwh": {
    "name": "Pure EV eTrance Neo SX 1.8 kWh",
    "urls": [
     "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/product-card/etrance%20neo%20sx.png"
-   ],
-   "page": "https://www.pureenergy.co.in/electric-scooters/etrance-neo"
-  },
-  "pure-ev-etrance-neo-2point4-kwh": {
-   "name": "Pure EV eTrance Neo 2.4 kWh",
-   "urls": [
-    "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/product-card/etrance-neo.png",
-    "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/etrance_silver.png"
    ],
    "page": "https://www.pureenergy.co.in/electric-scooters/etrance-neo"
   },
