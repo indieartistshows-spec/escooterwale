@@ -66,14 +66,20 @@
   },
   "tvs-motor-orbiter-v1-1point8-kwh": {
    "name": "TVS Orbiter V1 1.8 kWh",
-   "urls": [],
-   "page": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter",
+   "urls": [
+    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/booktestridenew/requestcallback/750-x-960--yellow-and-copperbike-01_v1.webp",
+    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/18.webp"
+   ],
+   "page": null,
    "prefer": "colou?r|variant|360"
   },
   "tvs-motor-orbiter-v2-3point1-kwh": {
    "name": "TVS Orbiter V2 3.1 kWh",
-   "urls": [],
-   "page": "https://www.tvsmotor.com/electric-scooters/tvs-orbiter",
+   "urls": [
+    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/TVSOrbiter/booktestridenew/requestcallback/750-x-960--yellow-and-copperbike-01_v1.webp",
+    "https://www.tvsmotor.com/electric-scooters/tvs-orbiter/-/media/Vehicles/Feature/18.webp"
+   ],
+   "page": null,
    "prefer": "colou?r|variant|360"
   },
   "tvs-motor-x-4point44-kwh": {
