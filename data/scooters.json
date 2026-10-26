@@ -6,14 +6,14 @@
   "name": "S1 X 2 kWh",
   "slug": "ola-electric-s1-x-2-kwh",
   "tagline": "Ola Electric S1 X — 2 kWh | 108 km claimed | 90 km/h",
-  "price": 80499,
+  "price": 89999,
   "priceDisplay": "₹89,999",
   "onRoad": 98998,
   "onRoadDisplay": "₹98,998",
   "emiFrom": 2340,
   "range": "108 km",
   "realRange": "80–90 km",
-  "speed": "90 km/h",
+  "speed": "101 km/h",
   "charging": "4.5 hrs",
   "battery": "2 kWh",
   "bootSpace": "34 L",
@@ -55,7 +55,7 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "90 km/h",
+    "Top speed": "101 km/h",
     "Battery capacity": "2 kWh",
     "Charging time": "4.5 hrs"
    },
@@ -73,14 +73,14 @@
   "name": "S1 X 3 kWh",
   "slug": "ola-electric-s1-x-3-kwh",
   "tagline": "Ola Electric S1 X — 3 kWh | 176 km claimed | 90 km/h",
-  "price": 107999,
+  "price": 103999,
   "priceDisplay": "₹107,999",
   "onRoad": 118798,
   "onRoadDisplay": "₹118,798",
   "emiFrom": 2808,
   "range": "176 km",
   "realRange": "130–145 km",
-  "speed": "90 km/h",
+  "speed": "115 km/h",
   "charging": "4.5 hrs",
   "battery": "3 kWh",
   "bootSpace": "34 L",
@@ -110,7 +110,7 @@
   ],
   "heroImg": "/images/ola-electric-s1-x-3-kwh.webp",
   "cardImg": "/images/ola-electric-s1-x-3-kwh.webp",
-  "verdict": "The Ola S1 X (3 kWh) delivers 176 km claimed range at ₹107,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
+  "verdict": "The Ola S1 X (3 kWh) delivers 176 km claimed range at ₹103,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
   "bestFor": [
    "Tech-forward buyers in metro cities",
    "Daily commutes needing 130–145 km real range"
@@ -122,7 +122,7 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "90 km/h",
+    "Top speed": "115 km/h",
     "Battery capacity": "3 kWh",
     "Charging time": "4.5 hrs"
    },
@@ -147,7 +147,7 @@
   "emiFrom": 3250,
   "range": "242 km",
   "realRange": "180–200 km",
-  "speed": "90 km/h",
+  "speed": "125 km/h",
   "charging": "4.5 hrs",
   "battery": "4 kWh",
   "bootSpace": "34 L",
@@ -189,7 +189,7 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "90 km/h",
+    "Top speed": "125 km/h",
     "Battery capacity": "4 kWh",
     "Charging time": "4.5 hrs"
    },
@@ -207,7 +207,7 @@
   "name": "S1 Pro 3 kWh",
   "slug": "ola-electric-s1-pro-3-kwh",
   "tagline": "Ola Electric S1 Pro — 3 kWh | 176 km claimed | 117 km/h",
-  "price": 153499,
+  "price": 129999,
   "priceDisplay": "₹129,999",
   "onRoad": 142998,
   "onRoadDisplay": "₹142,998",
@@ -274,18 +274,18 @@
   "name": "S1 Pro 4 kWh",
   "slug": "ola-electric-s1-pro-4-kwh",
   "tagline": "Ola Electric S1 Pro — 4 kWh | 195 km claimed | 117 km/h",
-  "price": 153499,
+  "price": 149999,
   "priceDisplay": "₹149,999",
   "onRoad": 164998,
   "onRoadDisplay": "₹164,998",
   "emiFrom": 3900,
-  "range": "195 km",
+  "range": "242 km",
   "realRange": "155–165 km",
-  "speed": "130 km/h",
+  "speed": "125 km/h",
   "charging": "4 hrs",
   "battery": "4 kWh",
-  "bootSpace": "36 L",
-  "weight": "108 kg",
+  "bootSpace": "34 L",
+  "weight": "113 kg",
   "groundClearance": "155 mm",
   "seatHeight": "785 mm",
   "rating": 4.3,
@@ -311,7 +311,7 @@
   ],
   "heroImg": "/images/ola-electric-s1-pro-4-kwh.webp",
   "cardImg": "/images/ola-electric-s1-pro-4-kwh.webp",
-  "verdict": "The Ola S1 Pro (4 kWh) delivers 195 km claimed range at ₹149,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
+  "verdict": "The Ola S1 Pro (4 kWh) delivers 242 km claimed range at ₹149,999. MoveOS 5 software, 7-inch touchscreen, and Ola's performance heritage. Service in metros is solid; Tier-2 still improving.",
   "bestFor": [
    "Tech-forward buyers in metro cities",
    "Daily commutes needing 155–165 km real range"
@@ -323,12 +323,12 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "130 km/h",
+    "Top speed": "125 km/h",
     "Battery capacity": "4 kWh",
     "Charging time": "4 hrs"
    },
    "battery": {
-    "Claimed range": "195 km",
+    "Claimed range": "242 km",
     "Real-world range": "155–165 km",
     "Charge time": "4 hrs"
    }
@@ -348,11 +348,11 @@
   "emiFrom": 4550,
   "range": "320 km",
   "realRange": "240–270 km",
-  "speed": "117 km/h",
+  "speed": "130 km/h",
   "charging": "4 hrs",
   "battery": "5.2 kWh",
-  "bootSpace": "36 L",
-  "weight": "108 kg",
+  "bootSpace": "34 L",
+  "weight": "118 kg",
   "groundClearance": "155 mm",
   "seatHeight": "785 mm",
   "rating": 4.3,
@@ -389,7 +389,7 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "117 km/h",
+    "Top speed": "130 km/h",
     "Battery capacity": "5.2 kWh",
     "Charging time": "4 hrs"
    },
@@ -418,7 +418,7 @@
   "charging": "5 hrs",
   "battery": "2.9 kWh",
   "bootSpace": "34 L",
-  "weight": "108 kg",
+  "weight": "125 kg",
   "groundClearance": "155 mm",
   "seatHeight": "785 mm",
   "rating": 4.5,
@@ -486,7 +486,7 @@
   "charging": "4.5 hrs",
   "battery": "3.7 kWh",
   "bootSpace": "34 L",
-  "weight": "108 kg",
+  "weight": "125 kg",
   "groundClearance": "155 mm",
   "seatHeight": "785 mm",
   "rating": 4.5,
@@ -622,7 +622,7 @@
   "charging": "3.3 hrs",
   "battery": "3.7 kWh",
   "bootSpace": "22 L",
-  "weight": "108 kg",
+  "weight": "111.6 kg",
   "groundClearance": "155 mm",
   "seatHeight": "785 mm",
   "rating": 4.5,
@@ -684,9 +684,9 @@
   "onRoad": 203498,
   "onRoadDisplay": "₹203,498",
   "emiFrom": 4810,
-  "range": "161 km",
+  "range": "165 km",
   "realRange": "120–135 km",
-  "speed": "90 km/h",
+  "speed": "100 km/h",
   "charging": "3.3 hrs",
   "battery": "3.7 kWh",
   "bootSpace": "22 L",
@@ -729,12 +729,12 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "90 km/h",
+    "Top speed": "100 km/h",
     "Battery capacity": "3.7 kWh",
     "Charging time": "3.3 hrs"
    },
    "battery": {
-    "Claimed range": "161 km",
+    "Claimed range": "165 km",
     "Real-world range": "120–135 km",
     "Charge time": "3.3 hrs"
    }
@@ -1573,7 +1573,7 @@
   "onRoad": 109439,
   "onRoadDisplay": "₹109,439",
   "emiFrom": 2587,
-  "range": "92 km",
+  "range": "93 km",
   "realRange": "68–78 km",
   "speed": "70 km/h",
   "charging": "3.5 hrs",
@@ -1622,7 +1622,7 @@
     "Charging time": "3.5 hrs"
    },
    "battery": {
-    "Claimed range": "92 km",
+    "Claimed range": "93 km",
     "Real-world range": "68–78 km",
     "Charge time": "3.5 hrs"
    }
@@ -1640,7 +1640,7 @@
   "onRoad": 132484,
   "onRoadDisplay": "₹132,484",
   "emiFrom": 3131,
-  "range": "142 km",
+  "range": "146 km",
   "realRange": "105–120 km",
   "speed": "80 km/h",
   "charging": "5.3 hrs",
@@ -1688,7 +1688,7 @@
     "Charging time": "5.3 hrs"
    },
    "battery": {
-    "Claimed range": "142 km",
+    "Claimed range": "146 km",
     "Real-world range": "105–120 km",
     "Charge time": "5.3 hrs"
    }
@@ -2165,12 +2165,12 @@
   "name": "Lite 1.2 kWh",
   "slug": "okinawa-lite-1point2-kwh",
   "tagline": "Okinawa Lite — 1.2 kWh | 70 km claimed | 25 km/h",
-  "price": 69090,
+  "price": 69093,
   "priceDisplay": "₹69,090",
   "onRoad": 75999,
   "onRoadDisplay": "₹75,999",
   "emiFrom": 1796,
-  "range": "70 km",
+  "range": "60 km",
   "realRange": "50–58 km",
   "speed": "25 km/h",
   "charging": "5 hrs",
@@ -2219,7 +2219,7 @@
     "Charging time": "5 hrs"
    },
    "battery": {
-    "Claimed range": "70 km",
+    "Claimed range": "60 km",
     "Real-world range": "50–58 km",
     "Charge time": "5 hrs"
    }
@@ -2762,12 +2762,12 @@
   "name": "C12i 2.0 kWh",
   "slug": "bgauss-c12i-2point0-kwh",
   "tagline": "Bgauss C12i — 2.0 kWh | 110 km claimed | 72 km/h",
-  "price": 97950,
+  "price": 109990,
   "priceDisplay": "₹97,950",
   "onRoad": 107745,
   "onRoadDisplay": "₹107,745",
   "emiFrom": 2547,
-  "range": "110 km",
+  "range": "85 km",
   "realRange": "82–95 km",
   "speed": "72 km/h",
   "charging": "4 hrs",
@@ -2814,7 +2814,7 @@
     "Charging time": "4 hrs"
    },
    "battery": {
-    "Claimed range": "110 km",
+    "Claimed range": "85 km",
     "Real-world range": "82–95 km",
     "Charge time": "4 hrs"
    }
