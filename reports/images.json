@@ -80,40 +80,9 @@
    "ok": true,
    "kept": true
   },
-  "okinawa-ridge-100-3point12-kwh": {
-   "ok": true,
-   "kept": true
-  },
-  "pure-ev-epluto-7g-cx-1point8-kwh": {
-   "ok": true,
-   "kept": true
-  },
-  "pure-ev-epluto-7g-pro-3point0-kwh": {
-   "ok": true,
-   "kept": true
-  },
-  "pure-ev-epluto-7g-max-3point5-kwh": {
-   "ok": true,
-   "url": "https://www.pureenergy.co.in/assets/frontend/images/products/epluto7gpro/banner-1.webp",
-   "w": 1400,
-   "h": 780
-  },
   "pure-ev-etrance-neo-sx-1point8-kwh": {
    "ok": true,
    "kept": true
-  },
-  "pure-ev-etrance-neo-2point4-kwh": {
-   "ok": false,
-   "tried": [
-    {
-     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/product-card/etrance-neo.png",
-     "err": "too small (195x212)"
-    },
-    {
-     "url": "https://www.pureenergy.co.in/assets/frontend/images/products/etrance/etrance_silver.png",
-     "err": "too small (316x442)"
-    }
-   ]
   },
   "pure-ev-etrance-neoplus-3point0-kwh": {
    "ok": true,
