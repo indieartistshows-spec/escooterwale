@@ -30,7 +30,7 @@
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
-const { SCOOTERS_DB, BRANDS_DB, CITIES_DB } = require('./data.js');
+const { SCOOTERS_ALL: SCOOTERS_DB, BRANDS_DB, CITIES_DB } = require('./data.js'); // every model page, discontinued ones too
 
 const ORIGIN = 'http://127.0.0.1:8877';   // local static server for the source files
 const BASE = 'https://www.escooterwale.in';

@@ -31,14 +31,17 @@ function checkData() {
   delete require.cache[require.resolve('../data.js')];
   const D = require('../data.js');
   const problems = [];
-  for (const s of D.SCOOTERS_DB) {
+  const ALL = D.SCOOTERS_ALL || D.SCOOTERS_DB;
+  for (const s of ALL) {
     if (!s.id || !s.name) problems.push(`scooter without id or name: ${JSON.stringify(s).slice(0, 80)}`);
     if (!(typeof s.price === 'number' && s.price > 10000 && s.price < 1000000)) problems.push(`${s.id}: price ${s.price}`);
     for (const f of ['range', 'speed', 'battery']) if (s[f] != null && /undefined|NaN/.test(String(s[f]))) problems.push(`${s.id}: ${f} "${s[f]}"`);
   }
   let prevCount = null;
   try { prevCount = JSON.parse(sh('git show HEAD:data/scooters.json')).length; } catch (e) {}
-  if (prevCount && D.SCOOTERS_DB.length < prevCount * 0.8) problems.push(`catalogue shrank from ${prevCount} to ${D.SCOOTERS_DB.length} models`);
+  if (prevCount && ALL.length < prevCount * 0.8) problems.push(`catalogue shrank from ${prevCount} to ${ALL.length} models`);
+  const onSale = D.SCOOTERS_DB.length;
+  if (prevCount && onSale < prevCount * 0.6) problems.push(`only ${onSale} of ${ALL.length} models still on sale; too many marked discontinued at once`);
   report.data = { ok: !problems.length, problems };
   save();
   console.log(problems.length ? `data check FAILED:\n  ${problems.join('\n  ')}` : 'data check ok');

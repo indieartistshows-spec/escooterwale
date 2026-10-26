@@ -29,7 +29,7 @@ sec('Held back (looked wrong, old value kept)', (ch.held || []).map(h => `${nm(h
 if (ch.cityPrices) L.push(`- ${ch.cityPrices} city prices updated`);
 sec('Brand sites that could not be read (skipped, data unchanged)', (ch.skippedBrands || []).map(b => `${b.brand}: ${(b.errors || []).join('; ').slice(0, 160)}`), '- None');
 sec('New launches', (ch.launches || []).map(e => `${e.brand || ''} ${e.name || ''} ${e.price ? inr(e.price) : ''}`.trim()), '- None');
-sec('Marked discontinued', (ch.discontinued || []).map(d => `${d.brand} ${d.name}`), '- None');
+sec('Possibly discontinued (not changed; check the brand site)', (ch.discontinued || []).map(d => `${d.brand} ${d.name}: missing ${d.weeks} weeks running${d.url ? ` ([page](${d.url}))` : ''}`), '- None');
 if (head) sec('Headline price city (Google Analytics)', [head.note]);
 if (vahan) sec('Demand Mein Hai (VAHAN)', [vahan.note]);
 { let mvr = null; try { mvr = JSON.parse(require('fs').readFileSync('automation/out/most-viewed.json', 'utf8')); } catch (e) {} if (mvr) sec('Most viewed this week (GA)', [mvr.note]); }

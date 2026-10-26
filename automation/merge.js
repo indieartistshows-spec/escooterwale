@@ -17,8 +17,15 @@
    - battery size changes           -> keep old, report (usually a
                                        variant mix-up, not a change)
    - brand whose pages failed       -> skipped, reported
-   - model missing from brand page in 2 runs in a row -> marked
-     discontinued (page stays up with a badge)
+   - model missing from brand page in 2 weekly runs (at least 6 days
+     apart) -> reported as "possibly discontinued" for a person to
+     check against the brand's site. Never marked automatically: a
+     page that changed layout looks exactly like a dropped model.
+   - over 40% of a brand's models missing in one run -> treated as a
+     page the extractor could not read; nothing counted for that brand
+   - fields listed in scrape-config "<id>": { "lock": ["price"] } are
+     never written (brand pages whose banner shows a "starting at"
+     price instead of the variant's own ex-showroom price)
    - unknown model on a brand page in 2 runs in a row -> logged as
      a new launch on /launches
    ============================================================ */
@@ -46,28 +53,35 @@ const changes = { applied: [], held: [], skippedBrands: [], kept: [], discontinu
 for (const [b, info] of Object.entries(scrape.brands || {})) if (!info.ok) changes.skippedBrands.push({ brand: b, errors: info.errors });
 const failedBrands = new Set(changes.skippedBrands.map(x => x.brand));
 
+const CFG = J('data/scrape-config.json', {});
+const isFound = r => Object.keys(r.fields || {}).length > 0 && !(r.notes || []).includes('model name not found on page');
+// a brand where many models "vanish" at once is a page the extractor could not read, not a line-up change
+const unreadable = new Set();
+{ const per = {};
+  for (const s of scooters) { const r = (scrape.models || {})[s.id]; if (!r || s.discontinued) continue; const b = (per[s.brandSlug] = per[s.brandSlug] || { n: 0, miss: 0 }); b.n++; if (!isFound(r)) b.miss++; }
+  for (const [b, x] of Object.entries(per)) if (x.n >= 2 && x.miss / x.n > 0.4) { unreadable.add(b); changes.skippedBrands.push({ brand: b, errors: [`${x.miss} of ${x.n} models not found on the page; treated as unreadable, nothing counted`] }); } }
+const DAY = 864e5;
 for (const s of scooters) {
-  if (failedBrands.has(s.brandSlug)) continue;
+  if (failedBrands.has(s.brandSlug) || unreadable.has(s.brandSlug) || s.discontinued) continue;
   const r = (scrape.models || {})[s.id];
   if (!r) continue;
-  const found = Object.keys(r.fields || {}).length > 0 && !(r.notes || []).includes('model name not found on page');
+  const found = isFound(r);
 
-  // discontinued detection (only when the brand page itself loaded fine)
+  // possibly discontinued: missing in two weekly runs at least 6 days apart. Reported, never applied.
   if (!found) {
-    state.missing[s.id] = (state.missing[s.id] || 0) + 1;
-    if (state.missing[s.id] >= 2 && !s.discontinued) {
-      s.discontinued = TODAY;
-      changes.discontinued.push({ id: s.id, name: s.name, brand: s.brand });
-      launches.events.unshift({ date: TODAY, type: 'discontinued', id: s.id, brand: s.brand, brandId: s.brandSlug, name: s.name, note: 'No longer listed on the official brand website.' });
-    }
+    let m = state.missing[s.id];
+    if (typeof m !== 'object' || !m) m = { n: 0, last: null };
+    if (!m.last || (new Date(TODAY) - new Date(m.last)) >= 6 * DAY) { m.n++; m.last = TODAY; }
+    state.missing[s.id] = m;
+    if (m.n >= 2) changes.discontinued.push({ id: s.id, name: s.name, brand: s.brand, weeks: m.n, url: r.url });
     continue;
   }
   if (state.missing[s.id]) delete state.missing[s.id];
-  if (s.discontinued) { delete s.discontinued; changes.applied.push({ id: s.id, field: 'status', from: 'discontinued', to: 'back on sale' }); }
+  const lock = new Set((CFG[s.id] || {}).lock || []);
 
   for (const [k, field] of Object.entries(MAP)) {
     const v = r.fields[k];
-    if (v == null || Number.isNaN(v)) continue;
+    if (v == null || Number.isNaN(v) || lock.has(field)) continue;
     const oldNum = field === 'price' ? s.price : num(s[field]);
     if (oldNum && Math.abs(v - oldNum) < 1e-9) continue;
     if (field === 'battery') { changes.held.push({ id: s.id, field, from: s.battery, to: FMT.battery(v), why: 'battery size differs; usually a variant mix-up' }); continue; }

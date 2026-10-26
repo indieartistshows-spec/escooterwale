@@ -312,41 +312,5 @@
    "page": "https://motohaus.in/product/vlf-strada/"
   }
  },
- "logos": {
-  "honda": {
-   "page": "https://www.honda2wheelersindia.com",
-   "initials": "HON",
-   "color": "#cc0000"
-  },
-  "suzuki": {
-   "page": "https://www.suzukimotorcycle.co.in",
-   "initials": "SUZ",
-   "color": "#1d4ed8"
-  },
-  "simple-energy": {
-   "page": "https://www.simpleenergy.in",
-   "initials": "SIM",
-   "color": "#0f766e"
-  },
-  "kinetic-watts-volts": {
-   "page": "https://www.kineticev.in",
-   "initials": "KIN",
-   "color": "#d97706"
-  },
-  "lectrix": {
-   "page": "https://www.lectrixev.com",
-   "initials": "LEC",
-   "color": "#16a34a"
-  },
-  "okaya-ev": {
-   "page": "https://opgmobility.com",
-   "initials": "OKA",
-   "color": "#0369a1"
-  },
-  "vlf": {
-   "page": "https://motohaus.in/product-category/vlf",
-   "initials": "VLF",
-   "color": "#b91c1c"
-  }
- }
+ "logos": {}
 }

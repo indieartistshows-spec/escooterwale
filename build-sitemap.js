@@ -4,7 +4,7 @@
    Re-run whenever data.js changes.
    ============================================================ */
 const fs = require('fs');
-const { SCOOTERS_DB, BRANDS_DB, CITIES_DB } = require('./data.js');
+const { SCOOTERS_ALL: SCOOTERS_DB, BRANDS_DB, CITIES_DB } = require('./data.js'); // discontinued model pages stay in the sitemap
 
 const crypto = require('crypto');
 const path = require('path');

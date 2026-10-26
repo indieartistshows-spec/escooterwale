@@ -75,6 +75,11 @@ const BRAND_LOGO_DATA = {
   'okinawa':{accent:'#0ea5e9',short:'OKI',bg:'light',circle:'#ffffff',src48:'/images/logos/okinawa-48.webp',src96:'/images/logos/okinawa-96.webp'},
   'simple-energy':{accent:'#a78bfa',short:'SIM',bg:'dark',circle:'#4c1d95',src48:null,src96:null},
   'okaya-ev':      {accent:'#38bdf8',short:'OKY',bg:'dark',circle:'#0c4a6e',src48:null,src96:null},
+  'honda':         {accent:'#ef4444',short:'HON',bg:'dark',circle:'#991b1b',src48:null,src96:null},
+  'suzuki':        {accent:'#60a5fa',short:'SUZ',bg:'dark',circle:'#1e3a8a',src48:null,src96:null},
+  'kinetic-watts-volts':{accent:'#fbbf24',short:'KIN',bg:'dark',circle:'#92400e',src48:null,src96:null},
+  'lectrix':       {accent:'#4ade80',short:'LEC',bg:'dark',circle:'#14532d',src48:null,src96:null},
+  'vlf':           {accent:'#f87171',short:'VLF',bg:'dark',circle:'#7f1d1d',src48:null,src96:null},
 };
 
 function brandLogoHTML(slug, sz=28){
@@ -188,8 +193,9 @@ function updateCompareTray(){
   if(!compareList.length){ tray.innerHTML=''; return; }
   const a=compareList[0]||null, b=compareList[1]||null;
   if(typeof SCOOTERS_DB==='undefined') return;
-  const sa=a?SCOOTERS_DB.find(x=>x.id===a):null;
-  const sb=b?SCOOTERS_DB.find(x=>x.id===b):null;
+  const ALL=typeof SCOOTERS_ALL!=='undefined'?SCOOTERS_ALL:SCOOTERS_DB;
+  const sa=a?ALL.find(x=>x.id===a):null;
+  const sb=b?ALL.find(x=>x.id===b):null;
   tray.innerHTML=`<div class="compare-tray">
     <div class="ct-slots">
       <div class="ct-slot ${sa?'filled':''}">

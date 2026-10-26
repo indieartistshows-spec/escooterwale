@@ -26,11 +26,11 @@
 <meta property="og:title" id="ogTitle" content="Compare Electric Scooters Side by Side | EScooterwale"/>
 <meta property="og:description" id="ogDesc" content="Side-by-side EV scooter comparison with a clear winner verdict."/>
 <meta property="og:type" content="website"/>
-<link rel="stylesheet" href="styles.css?v=6016591e"/>
-<script src="data.js?v=48a1696a"></script>
-<script src="seo.js?v=52f32e86"></script>
+<link rel="stylesheet" href="styles.css?v=53f7eb23"/>
+<script src="data.js?v=c1eaa72e"></script>
+<script src="seo.js?v=6b580009"></script>
 <script src="outbound.js?v=e9ecae44"></script>
-<script src="components.js?v=a392c679"></script>
+<script src="components.js?v=c5f5ffcb"></script>
 <script src="videos-db.js?v=f29ab906"></script>
 <style>
 .cmp-header{background:var(--ink);padding:40px 0 32px;background-image:url('https://images.unsplash.com/photo-1571333250630-f0230c320b6d?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;position:relative}
@@ -246,7 +246,7 @@ const VERDICTS = {
   'raptee-t30':{'choose':"India's first CCS2 motorcycle — 1.5 hr fast charge anywhere, 17 kW, 100 km/h. Future-proof.",'skip':"Avoid if budget is under ₹2L or CCS2 chargers aren't on your routes."}
 };
 
-function getScores(id){ const s=SCOOTERS_DB.find(x=>x.id===id); return s?.scores||{Range:7,Features:7,Value:7,Ride:7,Service:7}; }
+function getScores(id){ const s=(typeof SCOOTERS_ALL!=='undefined'?SCOOTERS_ALL:SCOOTERS_DB).find(x=>x.id===id); return s?.scores||{Range:7,Features:7,Value:7,Ride:7,Service:7}; }
 function totalScore(id){ const sc=getScores(id); return +(Object.values(sc).reduce((a,b)=>a+b,0)/Object.keys(sc).length).toFixed(1); }
 
 const CMP_ROWS=[
@@ -436,7 +436,7 @@ function runCompare(opts){
   const scroll = !(opts && opts.silent);
   const idA=document.getElementById('pickA').value,idB=document.getElementById('pickB').value;
   if(idA===idB){alert('Please select two different scooters.');return;}
-  const a=SCOOTERS_DB.find(s=>s.id===idA),b=SCOOTERS_DB.find(s=>s.id===idB);
+  const ALL=typeof SCOOTERS_ALL!=='undefined'?SCOOTERS_ALL:SCOOTERS_DB, a=ALL.find(s=>s.id===idA),b=ALL.find(s=>s.id===idB);
   if(!a||!b){console.warn('EScooterwale: unknown scooter id',idA,idB);return;}
   document.getElementById('cmpOutput').innerHTML=buildCmp(a,b);
   updateSEO(a,b);

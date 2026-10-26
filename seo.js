@@ -76,7 +76,7 @@
       brands: B.length,
       updated: C ? new Date(C.dataUpdated).toLocaleDateString('en-IN', { month: 'long', year: 'numeric' }) : '',
       bestRange: Math.max(...S.map(s => num(s.range))) + ' km',
-      fastestCharge: Math.min(...S.map(s => num(s.charging))) + ' hrs',
+      fastestCharge: Math.min(...S.map(s => num(s.charging)).filter(x => x > 0)) + ' hrs',
       maxCentral: SU ? inr(SU.central.cap) : '',
       priceCityIn: C && C.headlineCityName && S.some(s => s.headlinePriceCity) ? ' in ' + C.headlineCityName + ' unless a city is shown' : ''
     };

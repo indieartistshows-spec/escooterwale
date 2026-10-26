@@ -653,7 +653,7 @@ img.lazy.loaded{opacity:1}
  .sc-price{font-size:16px}
  .spec-pill{font-size:11px;padding:3px 8px}
  .news-featured-grid{grid-template-columns:1fr}
- .listings-layout{grid-template-columns:1fr!important}
+ .listings-layout{grid-template-columns:minmax(0,1fr)!important}
  .listings-grid{grid-template-columns:1fr 1fr!important;gap:12px}
  .footer-grid{grid-template-columns:1fr 1fr!important;gap:20px}
  .footer-brand{grid-column:1/-1}

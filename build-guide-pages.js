@@ -184,8 +184,8 @@ const eligibilityRows = rows.map(r => `      <tr>
 page({
   file: 'guide-subsidy-eligibility.html',
   canon: '/guide-subsidy-eligibility',
-  title: 'Which Electric Scooters Qualify for PM E-DRIVE Subsidy? All 44 Models Checked | EScooterwale',
-  desc: 'Four of the 44 electric scooters sold in India get no PM E-DRIVE subsidy because they exceed the ₹1.5 lakh ex-factory cap. Model-by-model subsidy amounts, verified 24 August 2026.',
+  title: `Which Electric Scooters Qualify for PM E-DRIVE Subsidy? All ${SCOOTERS_DB.length} Models Checked | EScooterwale`,
+  desc: `${ineligible.length} of the ${SCOOTERS_DB.length} electric scooters sold in India get no PM E-DRIVE subsidy because they exceed the ₹1.5 lakh ex-factory cap. Model-by-model subsidy amounts, verified 24 August 2026.`,
   eyebrow: 'Eligibility Check',
   crumb: 'Which scooters qualify',
   h1: 'Which electric scooters actually qualify for the PM E-DRIVE subsidy?',
@@ -513,7 +513,7 @@ page({
   file: 'electric-scooter-price.html',
   canon: '/electric-scooter-price',
   title: `Electric Scooter Price in India 2026: All ${SCOOTERS_DB.length} Models Compared | EScooterwale`,
-  desc: `Complete electric scooter price list for India 2026. Ex-showroom and on-road prices, EMI, real-world range and subsidy for all ${SCOOTERS_DB.length} models from 10 brands. Prices updated every week.`,
+  desc: `Complete electric scooter price list for India 2026. Ex-showroom and on-road prices, EMI, real-world range and subsidy for all ${SCOOTERS_DB.length} models from ${new Set(SCOOTERS_DB.map(s => s.brandSlug)).size} brands. Prices updated every week.`,
   eyebrow: 'Price List',
   crumb: 'Electric scooter prices',
   h1: `Electric scooter price in India 2026: all ${SCOOTERS_DB.length} models`,
@@ -631,7 +631,8 @@ ${band('Above ₹1.5 lakh', 150000, 99999999)}
    5. BATTERY CHEMISTRY — which scooter uses LFP vs NMC
    ═══════════════════════════════════════════════════════════ */
 const { CHEM } = require('./battery-chemistry.js');
-const withChem = byPrice.map(s => ({ s, c: CHEM[s.id] }));
+// only models whose chemistry we have actually checked (new models are added to battery-chemistry.js as they are researched)
+const withChem = byPrice.filter(s => CHEM[s.id]).map(s => ({ s, c: CHEM[s.id] }));
 const lfp = withChem.filter(r => r.c.chem === 'LFP');
 const nmc = withChem.filter(r => r.c.chem === 'NMC');
 const mixed = withChem.filter(r => r.c.chem === 'LFP or NMC');
@@ -656,18 +657,18 @@ const brandList = arr => arr.map(r => `<li><a href="/scooters/${r.s.id}">${r.s.b
 page({
   file: 'guide-battery-chemistry.html',
   canon: '/guide-battery-chemistry',
-  title: 'Which Electric Scooters Use LFP vs NMC Batteries in India? All 44 Models | EScooterwale',
+  title: `Which Electric Scooters Use LFP vs NMC Batteries in India? All ${withChem.length} Models | EScooterwale`,
   desc: 'Battery cell chemistry for every electric scooter sold in India. Which use LFP, which use NMC, which brands refuse to say, and which have removable packs. Verified 24 August 2026.',
   eyebrow: 'Battery Guide',
   crumb: 'LFP vs NMC by model',
   h1: 'Which electric scooters use LFP batteries, and which use NMC?',
-  standfirst: `We checked cell chemistry for all ${SCOOTERS_DB.length} models against manufacturer spec sheets and trade press. ${lfp.length} confirmed LFP, ${nmc.length} confirmed NMC, and ${undisclosed.length} where the brand simply will not say.`,
+  standfirst: `We checked cell chemistry for all ${withChem.length} models against manufacturer spec sheets and trade press. ${lfp.length} confirmed LFP, ${nmc.length} confirmed NMC, and ${undisclosed.length} where the brand simply will not say.`,
   readTime: '6 min read',
   schema: { '@context': 'https://schema.org', '@graph': [
     ORG,
     crumbs([{ name: 'Home', url: `${BASE}/` }, { name: 'Guides', url: `${BASE}/trending` }, { name: 'LFP vs NMC by model' }]),
     article('/guide-battery-chemistry', 'Which electric scooters use LFP batteries, and which use NMC',
-      `Cell chemistry, pack removability and battery warranty for ${SCOOTERS_DB.length} electric scooters sold in India.`),
+      `Cell chemistry, pack removability and battery warranty for ${withChem.length} electric scooters sold in India.`),
     faq('/guide-battery-chemistry', [
       ['What battery type does the Bajaj Chetak use, NMC or LFP?',
        'Bajaj does not publish the cell chemistry for any Chetak variant. Its FAQs say only "advanced chemistry Lithium Ion cells sourced from reputed manufacturers". The widely repeated claim that the Chetak uses NMC traces to aggregator websites rather than to Bajaj, so we do not state it as fact.'],
@@ -684,7 +685,7 @@ page({
   body: `
   <div class="callout-box green">
     <h4>The short answer</h4>
-    <p style="margin:0;font-size:15px">Of the ${SCOOTERS_DB.length} scooters we track, <strong>${nmc.length} use NMC</strong>, <strong>${lfp.length} use LFP</strong>, ${mixed.length} may be either depending on supply, and <strong>${undisclosed.length} come from brands that do not publish the chemistry at all</strong>. LFP handles Indian heat better and lasts more cycles. NMC packs more range into the same space. Ampere and BGauss are the LFP brands. Ola, Ather, TVS, Okinawa and Bounce are NMC.</p>
+    <p style="margin:0;font-size:15px">Of the ${withChem.length} scooters we track, <strong>${nmc.length} use NMC</strong>, <strong>${lfp.length} use LFP</strong>, ${mixed.length} may be either depending on supply, and <strong>${undisclosed.length} come from brands that do not publish the chemistry at all</strong>. LFP handles Indian heat better and lasts more cycles. NMC packs more range into the same space. Ampere and BGauss are the LFP brands. Ola, Ather, TVS, Okinawa and Bounce are NMC.</p>
   </div>
 
   <h2>Every model, by chemistry</h2>
@@ -708,12 +709,12 @@ ${chemRows}
   <ul>${brandList(nmc)}</ul>
 
   <h2>The brands that will not tell you</h2>
-  <p>This is the honest part of the page, and the reason it exists. <strong>${undisclosed.length} of ${SCOOTERS_DB.length} models</strong> come from manufacturers who do not publish cell chemistry anywhere in their public specifications.</p>
+  <p>This is the honest part of the page, and the reason it exists. <strong>${undisclosed.length} of ${withChem.length} models</strong> come from manufacturers who do not publish cell chemistry anywhere in their public specifications.</p>
   <ul>${brandList(undisclosed)}</ul>
   <p>Bajaj is the most notable. Its FAQs say only "advanced chemistry Lithium Ion cells sourced from reputed manufacturers". Plenty of websites will confidently tell you the Chetak uses NMC. That claim traces back to aggregator sites copying each other, not to Bajaj, so we will not repeat it. Hero Vida and Pure EV are the same. If chemistry matters to your purchase, ask the dealer to put the answer in writing on the invoice.</p>
 
   <h2>Scooters with removable or swappable batteries</h2>
-  <p>${removable.length} of the ${SCOOTERS_DB.length} models have a pack you can take out, whether to charge indoors in a flat with no parking-bay socket, or to swap at a station.</p>
+  <p>${removable.length} of the ${withChem.length} models have a pack you can take out, whether to charge indoors in a flat with no parking-bay socket, or to swap at a station.</p>
   <ul>${brandList(removable)}</ul>
 
   <div class="callout-box">

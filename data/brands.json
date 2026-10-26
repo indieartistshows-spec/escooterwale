@@ -90,7 +90,7 @@
     "short": "OKI",
     "color": "#0ea5e9",
     "bg": "#f0f9ff",
-    "models": 7,
+    "models": 6,
     "founded": 2015,
     "hq": "Gurugram",
     "website": "https://okinawascooters.com",
@@ -141,7 +141,7 @@
   },
   {
     "id": "honda",
-    "logo": "/images/logos/honda-48.png",
+    "logo": null,
     "name": "Honda",
     "short": "HON",
     "color": "#cc0000",
@@ -155,7 +155,7 @@
   },
   {
     "id": "suzuki",
-    "logo": "/images/logos/suzuki-48.png",
+    "logo": null,
     "name": "Suzuki",
     "short": "SUZ",
     "color": "#1d4ed8",
@@ -169,7 +169,7 @@
   },
   {
     "id": "simple-energy",
-    "logo": "/images/logos/simple-energy-48.png",
+    "logo": null,
     "name": "Simple Energy",
     "short": "SIM",
     "color": "#0f766e",
@@ -183,7 +183,7 @@
   },
   {
     "id": "kinetic-watts-volts",
-    "logo": "/images/logos/kinetic-watts-volts-48.png",
+    "logo": null,
     "name": "Kinetic",
     "short": "KIN",
     "color": "#d97706",
@@ -197,7 +197,7 @@
   },
   {
     "id": "lectrix",
-    "logo": "/images/logos/lectrix-48.png",
+    "logo": null,
     "name": "Lectrix",
     "short": "LEC",
     "color": "#16a34a",
@@ -211,7 +211,7 @@
   },
   {
     "id": "okaya-ev",
-    "logo": "/images/logos/okaya-ev-48.png",
+    "logo": null,
     "name": "OPG Mobility (Okaya)",
     "short": "OKA",
     "color": "#0369a1",
@@ -225,7 +225,7 @@
   },
   {
     "id": "vlf",
-    "logo": "/images/logos/vlf-48.png",
+    "logo": null,
     "name": "VLF",
     "short": "VLF",
     "color": "#b91c1c",

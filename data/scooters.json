@@ -4560,72 +4560,6 @@
   "realRangeEstimated": true
  },
  {
-  "id": "okinawa-ridge-100-3point12-kwh",
-  "brand": "Okinawa",
-  "brandSlug": "okinawa",
-  "name": "Ridge 100 3.12 kWh",
-  "slug": "okinawa-ridge-100-3point12-kwh",
-  "tagline": "",
-  "price": 115311,
-  "priceDisplay": "₹1,15,311",
-  "onRoad": 0,
-  "onRoadDisplay": "",
-  "emiFrom": 0,
-  "range": "149 km",
-  "realRange": "110–125 km",
-  "speed": "45 km/h",
-  "charging": "5.5 hrs",
-  "battery": "3.12 kWh",
-  "bootSpace": "Not published",
-  "weight": "Not published",
-  "groundClearance": "160 mm",
-  "seatHeight": "735 mm",
-  "rating": null,
-  "reviews": 0,
-  "views": 0,
-  "badge": false,
-  "accentColor": "#0ea5e9",
-  "brandColor": "#0ea5e9",
-  "brandUrl": "https://okinawascooters.com/",
-  "detailUrl": "scooter-detail.html",
-  "score": 6.4,
-  "scores": {
-   "Range": 6.8,
-   "Features": 6,
-   "Value": 6.7,
-   "Ride": 7,
-   "Service": 5.5
-  },
-  "tags": [
-   "under-1-5l"
-  ],
-  "heroImg": "/images/okinawa-ridge-100-3point12-kwh.webp",
-  "cardImg": "/images/okinawa-ridge-100-3point12-kwh.webp",
-  "verdict": "Claimed range is 149 km from a 3.12 kWh battery, at ₹115,311 ex-showroom. Top speed is 45 km/h. A full charge takes about 5.5 hours at home.",
-  "bestFor": [
-   "Daily city commutes",
-   "Buyers who want something different from the big brands"
-  ],
-  "avoidIf": [
-   "You need to keep up with fast traffic",
-   "There is no brand dealer near you"
-  ],
-  "variants": [],
-  "specs": {
-   "performance": {
-    "Top speed": "45 km/h",
-    "Battery capacity": "3.12 kWh",
-    "Charging time": "5.5 hrs"
-   },
-   "battery": {
-    "Claimed range": "149 km",
-    "Real-world range": "110–125 km",
-    "Charge time": "5.5 hrs"
-   }
-  },
-  "realRangeEstimated": true
- },
- {
   "id": "pure-ev-epluto-7g-cx-1point8-kwh",
   "brand": "Pure EV",
   "brandSlug": "pure-ev",
@@ -4666,8 +4600,8 @@
    "under-1-lakh",
    "under-1-5l"
   ],
-  "heroImg": "/images/pure-ev-epluto-7g-cx-1point8-kwh.webp",
-  "cardImg": "/images/pure-ev-epluto-7g-cx-1point8-kwh.webp",
+  "heroImg": "/images/pure-ev-epluto-7g-2.0-kwh.webp",
+  "cardImg": "/images/pure-ev-epluto-7g-2.0-kwh.webp",
   "verdict": "Claimed range is 101 km from a 1.8 kWh battery, at ₹86,089 ex-showroom. Top speed is 47 km/h.",
   "bestFor": [
    "Daily city commutes",
@@ -4733,8 +4667,8 @@
    "under-1-5l",
    "best-range"
   ],
-  "heroImg": "/images/pure-ev-epluto-7g-pro-3point0-kwh.webp",
-  "cardImg": "/images/pure-ev-epluto-7g-pro-3point0-kwh.webp",
+  "heroImg": "/images/pure-ev-epluto-7g-2.0-kwh.webp",
+  "cardImg": "/images/pure-ev-epluto-7g-2.0-kwh.webp",
   "verdict": "Claimed range is 171 km from a 3 kWh battery, at ₹112,279 ex-showroom. Top speed is 60 km/h.",
   "bestFor": [
    "Long daily commutes",
@@ -4800,8 +4734,8 @@
    "under-1-5l",
    "best-range"
   ],
-  "heroImg": "/images/pure-ev-epluto-7g-max-3point5-kwh.webp",
-  "cardImg": "/images/pure-ev-epluto-7g-max-3point5-kwh.webp",
+  "heroImg": "/images/pure-ev-epluto-7g-2.0-kwh.webp",
+  "cardImg": "/images/pure-ev-epluto-7g-2.0-kwh.webp",
   "verdict": "Claimed range is 211 km from a 3.5 kWh battery, at ₹123,948 ex-showroom. Top speed is 60 km/h.",
   "bestFor": [
    "Long daily commutes",
@@ -4934,8 +4868,8 @@
    "under-1-5l",
    "best-range"
   ],
-  "heroImg": "/images/pure-ev-etrance-neo-2point4-kwh.webp",
-  "cardImg": "/images/pure-ev-etrance-neo-2point4-kwh.webp",
+  "heroImg": "/images/pure-ev-etrance-neoplus-3point0-kwh.webp",
+  "cardImg": "/images/pure-ev-etrance-neoplus-3point0-kwh.webp",
   "verdict": "Claimed range is 151 km from a 2.4 kWh battery, at ₹106,105 ex-showroom. Top speed is 60 km/h.",
   "bestFor": [
    "Long daily commutes",
