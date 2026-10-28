@@ -1,6 +1,6 @@
 {
  "_note": "Every comparison page on the site, append only (nothing is ever removed). The build makes one page per pair; middleware.js sends old /compare?a=&b= links to them; the Monday GA job adds pairs among the most viewed models.",
- "headlineCity": "hyderabad",
+ "headlineCity": null,
  "cities": [
   "mumbai",
   "delhi",

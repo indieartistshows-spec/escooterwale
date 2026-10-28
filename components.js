@@ -82,6 +82,20 @@ const BRAND_LOGO_DATA = {
   'vlf':           {accent:'#f87171',short:'VLF',bg:'dark',circle:'#7f1d1d',src48:null,src96:null},
 };
 
+/* The visitor's city. There is no default city: prices are national ex-showroom until the
+   visitor picks one (scooter page city list, a city page, or the quiz pincode). The pick is
+   remembered in this browser and sent to GA as "city_selected" (city, page, how). */
+function swGetCity(){ try{ const c=localStorage.getItem('sw_city'); return c&&typeof CITIES_DB!=='undefined'&&CITIES_DB.some(x=>x.id===c)?c:null; }catch(e){ return null; } }
+function swSetCity(id, how, quiet){
+  if(!id) return;
+  const prev=swGetCity();
+  try{ localStorage.setItem('sw_city',id); }catch(e){}
+  if(prev!==id){
+    try{ if(typeof gtag==='function') gtag('event','city_selected',{city:id,previous_city:prev||'none',how:how||'picker',page_path:location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/'}); }catch(e){}
+  }
+  try{ document.dispatchEvent(new CustomEvent('sw-city',{detail:{city:id,how}})); }catch(e){}
+}
+
 function brandLogoHTML(slug, sz=28){
   const d = BRAND_LOGO_DATA[slug];
   if(!d){
@@ -457,24 +471,23 @@ function lineupHTML(brandSlug, currentId){
 }
 
 /* Chat-style quiz button: round, bottom right, on every page except the quiz itself.
-   The first time someone visits, a small label "Match with your scooter" shows above it for a
-   few seconds and fades. Not added in the build's own browser, so it never gets baked into pages. */
+   A small white label beside it always reads "Match with your dream scooter".
+   Not added in the build's own browser, so it never gets baked into pages. */
 function initMatchFab(){
   if(navigator.webdriver||document.getElementById('swMatchFab')) return;
   const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0];
   if(/^\/(?:(?:hi|mr|ta|te|kn|gu|bn|or)\/)?match(?:\.html)?\/?$/.test(location.pathname)) return;
   const a=document.createElement('a');
   a.id='swMatchFab';a.className='sw-fab';a.href=lp+'/match';a.dataset.ctaLocation='match-fab';
-  a.setAttribute('aria-label','Match with your scooter');
-  a.innerHTML='<span class="sw-fab-tip" aria-hidden="true">Match with your scooter</span><span class="sw-fab-ic" aria-hidden="true"><img src="/images/icon-scooter-white.png" width="38" height="38" alt="" decoding="async"></span>';
+  a.setAttribute('aria-label','Match with your dream scooter');
+  // a permanent label beside the icon: visitors did not know what the round icon was for (GK, Oct 2026)
+  a.innerHTML='<span class="sw-fab-label" aria-hidden="true">Match with your dream scooter</span><span class="sw-fab-ic" aria-hidden="true"><img src="/images/icon-scooter-white.png" width="38" height="38" alt="" decoding="async"></span>';
   document.body.appendChild(a);
   // GA event for this button: icon_click (the general cta_click still fires too)
   a.addEventListener('click',()=>{try{if(typeof gtag==='function'){const p=location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/';gtag('event','icon_click',{icon_name:'match-fab',link_url:a.getAttribute('href'),page_path:p,lang:lp?lp.slice(1):'en'});}}catch(e){}});
   // keep clear of the compare tray when it is open
   const tray=document.querySelector('.compare-tray');
   if(tray){const up=()=>a.classList.toggle('lift',tray.classList.contains('visible'));up();new MutationObserver(up).observe(tray,{attributes:true,attributeFilter:['class']});}
-  let seen=false;try{seen=localStorage.getItem('sw_fab_seen')==='1';localStorage.setItem('sw_fab_seen','1')}catch(e){}
-  if(!seen){setTimeout(()=>a.classList.add('tip-on'),1200);setTimeout(()=>a.classList.remove('tip-on'),6200);}
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{

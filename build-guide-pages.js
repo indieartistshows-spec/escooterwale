@@ -560,10 +560,10 @@ page({
   </div>
 
   <h2>Full price list, cheapest first</h2>
-  <p>All ${SCOOTERS_DB.length} models we track, with ex-showroom price, our estimated on-road price, the starting EMI, battery size, our measured or estimated real-world range, and the central subsidy each attracts.</p>
+  <p>All ${SCOOTERS_DB.length} models we track, with ex-showroom price, our estimated on-road price in the cheapest of our cities (pick a city on any model page for yours), the starting EMI, battery size, our measured or estimated real-world range, and the central subsidy each attracts.</p>
   <div style="overflow-x:auto">
   <table class="subsidy-table">
-    <thead><tr><th>Model</th><th>Ex-showroom</th><th>On-road (est.)</th><th>EMI from</th><th>Battery</th><th>Real range</th><th>Subsidy</th></tr></thead>
+    <thead><tr><th>Model</th><th>Ex-showroom</th><th>On-road from (est.)</th><th>EMI from</th><th>Battery</th><th>Real range</th><th>Subsidy</th></tr></thead>
     <tbody>
 ${priceRows}
     </tbody>

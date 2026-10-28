@@ -1,7 +1,7 @@
 # EScooterwale — full electric scooter dataset for India
 
 Source: https://www.escooterwale.in
-Last updated: 2026-10-26
+Last updated: 2026-10-28
 Models: 78 | Brands: 17
 
 Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the
@@ -172,7 +172,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ola Electric S1 X 2 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-2-kwh
 - Ex-showroom price: ₹89,999
-- Estimated on-road price: ₹95,620
+- Estimated on-road price from: ₹95,620 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2370/month
 - Battery: 2 kWh
 - Claimed range (IDC): 108 km
@@ -191,7 +191,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ola Electric S1 X 3 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-3-kwh
 - Ex-showroom price: ₹1,03,999
-- Estimated on-road price: ₹1,09,870
+- Estimated on-road price from: ₹1,09,870 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2739/month
 - Battery: 3 kWh
 - Claimed range (IDC): 176 km
@@ -210,7 +210,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ola Electric S1 X+ 4 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-xplus-4-kwh
 - Ex-showroom price: ₹1,24,999
-- Estimated on-road price: ₹1,31,250
+- Estimated on-road price from: ₹1,31,250 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3292/month
 - Battery: 4 kWh
 - Claimed range (IDC): 242 km
@@ -229,7 +229,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ola Electric S1 Pro 3 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-3-kwh
 - Ex-showroom price: ₹1,29,999
-- Estimated on-road price: ₹1,36,340
+- Estimated on-road price from: ₹1,36,340 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3423/month
 - Battery: 3 kWh
 - Claimed range (IDC): 176 km
@@ -248,7 +248,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ola Electric S1 Pro 4 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-pro-4-kwh
 - Ex-showroom price: ₹1,49,999
-- Estimated on-road price: ₹1,56,700
+- Estimated on-road price from: ₹1,56,700 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3950/month
 - Battery: 4 kWh
 - Claimed range (IDC): 242 km
@@ -267,7 +267,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ola Electric S1 Pro+ 5.2 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-proplus-5point2-kwh
 - Ex-showroom price: ₹1,74,999
-- Estimated on-road price: ₹1,82,150
+- Estimated on-road price from: ₹1,82,150 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4608/month
 - Battery: 5.2 kWh
 - Claimed range (IDC): 320 km
@@ -286,7 +286,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy Rizta S 2.9 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-rizta-s-2point9-kwh
 - Ex-showroom price: ₹1,21,999
-- Estimated on-road price: ₹1,28,190
+- Estimated on-road price from: ₹1,28,190 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3213/month
 - Battery: 2.9 kWh
 - Claimed range (IDC): 123 km
@@ -305,7 +305,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy Rizta Z 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-rizta-z-3point7-kwh
 - Ex-showroom price: ₹1,56,999
-- Estimated on-road price: ₹1,63,820
+- Estimated on-road price from: ₹1,63,820 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4134/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 161 km
@@ -324,7 +324,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy 450S 2.9 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-450s-2point9-kwh
 - Ex-showroom price: ₹1,35,999
-- Estimated on-road price: ₹1,42,450
+- Estimated on-road price from: ₹1,42,450 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3581/month
 - Battery: 2.9 kWh
 - Claimed range (IDC): 122 km
@@ -343,7 +343,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy 450X 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-450x-3point7-kwh
 - Ex-showroom price: ₹1,62,999
-- Estimated on-road price: ₹1,69,930
+- Estimated on-road price from: ₹1,69,930 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4292/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 161 km
@@ -362,7 +362,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy 450 Apex 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-450-apex-3point7-kwh
 - Ex-showroom price: ₹1,94,999
-- Estimated on-road price: ₹2,02,510
+- Estimated on-road price from: ₹2,02,510 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹5135/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 165 km
@@ -381,7 +381,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy Konarc S 100 2.1 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-konarc-s-100-2point1-kwh
 - Ex-showroom price: ₹99,999
-- Estimated on-road price: ₹1,05,800
+- Estimated on-road price from: ₹1,05,800 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2633/month
 - Battery: 2.1 kWh
 - Claimed range (IDC): 100 km
@@ -400,7 +400,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy Konarc S 125 2.7 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-konarc-s-125-2point7-kwh
 - Ex-showroom price: ₹1,21,999
-- Estimated on-road price: ₹1,28,190
+- Estimated on-road price from: ₹1,28,190 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3213/month
 - Battery: 2.7 kWh
 - Claimed range (IDC): 125 km
@@ -419,7 +419,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy Konarc S 161 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-konarc-s-161-3point5-kwh
 - Ex-showroom price: ₹1,44,999
-- Estimated on-road price: ₹1,51,610
+- Estimated on-road price from: ₹1,51,610 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3818/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 161 km
@@ -438,7 +438,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### TVS Motor iQube 2.3 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-2point2-kwh
 - Ex-showroom price: ₹1,16,560
-- Estimated on-road price: ₹1,22,660
+- Estimated on-road price from: ₹1,22,660 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3069/month
 - Battery: 2.3 kWh
 - Claimed range (IDC): 114 km
@@ -457,7 +457,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### TVS Motor iQube 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-s-3point5-kwh
 - Ex-showroom price: ₹1,43,586
-- Estimated on-road price: ₹1,50,170
+- Estimated on-road price from: ₹1,50,170 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3781/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 145 km
@@ -476,7 +476,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### TVS Motor iQube ST 5.3 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-st-5point3-kwh
 - Ex-showroom price: ₹1,78,877
-- Estimated on-road price: ₹1,86,100
+- Estimated on-road price from: ₹1,86,100 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4711/month
 - Battery: 5.3 kWh
 - Claimed range (IDC): 212 km
@@ -495,7 +495,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Bajaj Chetak Chetak C2501 2.5 kWh
 - URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-c2501-2point5-kwh
 - Ex-showroom price: ₹99,802
-- Estimated on-road price: ₹1,05,600
+- Estimated on-road price from: ₹1,05,600 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2628/month
 - Battery: 2.5 kWh
 - Claimed range (IDC): 113 km
@@ -514,7 +514,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Bajaj Chetak Chetak C3001 3.0 kWh
 - URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3001-3point0-kwh
 - Ex-showroom price: ₹1,15,483
-- Estimated on-road price: ₹1,21,560
+- Estimated on-road price from: ₹1,21,560 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3041/month
 - Battery: 3 kWh
 - Claimed range (IDC): 127 km
@@ -533,7 +533,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Bajaj Chetak Chetak C3501 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3501-3point5-kwh
 - Ex-showroom price: ₹1,53,850
-- Estimated on-road price: ₹1,60,620
+- Estimated on-road price from: ₹1,60,620 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4051/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
@@ -552,7 +552,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Bajaj Chetak Chetak C3502 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3502-3point5-kwh
 - Ex-showroom price: ₹1,38,588
-- Estimated on-road price: ₹1,45,080
+- Estimated on-road price from: ₹1,45,080 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3650/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
@@ -571,7 +571,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Bajaj Chetak Chetak C3503 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3503-3point5-kwh
 - Ex-showroom price: ₹1,25,698
-- Estimated on-road price: ₹1,31,960
+- Estimated on-road price from: ₹1,31,960 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3310/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 151 km
@@ -590,7 +590,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Hero Vida VX2 Go 2.2 kWh
 - URL: https://www.escooterwale.in/scooters/hero-vida-vx2-go-2point2-kwh
 - Ex-showroom price: ₹1,09,990
-- Estimated on-road price: ₹1,15,970
+- Estimated on-road price from: ₹1,15,970 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2896/month
 - Battery: 2.2 kWh
 - Claimed range (IDC): 93 km
@@ -609,7 +609,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Hero Vida VX2 Plus 3.4 kWh
 - URL: https://www.escooterwale.in/scooters/hero-vida-vx2-plus-3point4-kwh
 - Ex-showroom price: ₹1,40,990
-- Estimated on-road price: ₹1,47,530
+- Estimated on-road price from: ₹1,47,530 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3713/month
 - Battery: 3.4 kWh
 - Claimed range (IDC): 146 km
@@ -628,7 +628,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Hero Vida V2 Pro 3.94 kWh
 - URL: https://www.escooterwale.in/scooters/hero-vida-v2-pro-3point94-kwh
 - Ex-showroom price: ₹1,15,300
-- Estimated on-road price: ₹1,21,380
+- Estimated on-road price from: ₹1,21,380 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3036/month
 - Battery: 3.94 kWh
 - Claimed range (IDC): 165 km
@@ -647,7 +647,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ampere Magnus Neo 2.3 kWh
 - URL: https://www.escooterwale.in/scooters/ampere-magnus-neo-2point3-kwh
 - Ex-showroom price: ₹90,999
-- Estimated on-road price: ₹96,640
+- Estimated on-road price from: ₹96,640 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2396/month
 - Battery: 2.3 kWh
 - Claimed range (IDC): 125 km
@@ -666,7 +666,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ampere Magnus G Max 3 kWh
 - URL: https://www.escooterwale.in/scooters/ampere-magnus-g-max-3point0-kwh
 - Ex-showroom price: ₹1,02,999
-- Estimated on-road price: ₹1,08,850
+- Estimated on-road price from: ₹1,08,850 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2712/month
 - Battery: 3 kWh
 - Claimed range (IDC): 142 km
@@ -685,7 +685,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ampere Nexus EX+ 3 kWh
 - URL: https://www.escooterwale.in/scooters/ampere-nexus-ex-3-kwh
 - Ex-showroom price: ₹1,29,999
-- Estimated on-road price: ₹1,36,340
+- Estimated on-road price from: ₹1,36,340 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3423/month
 - Battery: 3 kWh
 - Claimed range (IDC): 136 km
@@ -704,7 +704,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Okinawa R30 1.25 kWh
 - URL: https://www.escooterwale.in/scooters/okinawa-r30-0point8-kwh
 - Ex-showroom price: ₹61,998
-- Estimated on-road price: ₹67,110
+- Estimated on-road price from: ₹67,110 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹1633/month
 - Battery: 1.25 kWh
 - Claimed range (IDC): 60 km
@@ -723,7 +723,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Okinawa Lite 1.25 kWh
 - URL: https://www.escooterwale.in/scooters/okinawa-lite-1point2-kwh
 - Ex-showroom price: ₹69,093
-- Estimated on-road price: ₹74,340
+- Estimated on-road price from: ₹74,340 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹1819/month
 - Battery: 1.25 kWh
 - Claimed range (IDC): 60 km
@@ -742,7 +742,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Okinawa iPraise+ 3.3 kWh
 - URL: https://www.escooterwale.in/scooters/okinawa-ipraiseplus-2point2-kwh
 - Ex-showroom price: ₹1,22,955
-- Estimated on-road price: ₹1,29,170
+- Estimated on-road price from: ₹1,29,170 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3238/month
 - Battery: 3.3 kWh
 - Claimed range (IDC): 139 km
@@ -761,7 +761,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Okinawa Ridge+ 1.7 kWh
 - URL: https://www.escooterwale.in/scooters/okinawa-ridgeplus-2point8-kwh
 - Ex-showroom price: ₹90,606
-- Estimated on-road price: ₹96,240
+- Estimated on-road price from: ₹96,240 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2386/month
 - Battery: 1.7 kWh
 - Claimed range (IDC): 81 km
@@ -780,7 +780,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Okinawa OKHI-90 3.6 kWh
 - URL: https://www.escooterwale.in/scooters/okinawa-okhi-90-2point8-kwh
 - Ex-showroom price: ₹1,49,991
-- Estimated on-road price: ₹1,56,690
+- Estimated on-road price from: ₹1,56,690 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3950/month
 - Battery: 3.6 kWh
 - Claimed range (IDC): 161 km
@@ -799,7 +799,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Pure EV ePluto 7G 2.4 kWh
 - URL: https://www.escooterwale.in/scooters/pure-ev-epluto-7g-2point0-kwh
 - Ex-showroom price: ₹1,03,865
-- Estimated on-road price: ₹1,09,730
+- Estimated on-road price from: ₹1,09,730 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2735/month
 - Battery: 2.4 kWh
 - Claimed range (IDC): 151 km
@@ -818,7 +818,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Bounce Infinity Infinity E1 2.5 kWh
 - URL: https://www.escooterwale.in/scooters/bounce-infinity-infinity-e1-2point0-kwh
 - Ex-showroom price: ₹1,18,125
-- Estimated on-road price: ₹1,24,250
+- Estimated on-road price from: ₹1,24,250 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3111/month
 - Battery: 2.5 kWh
 - Claimed range (IDC): 100 km
@@ -837,7 +837,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Bounce Infinity Infinity E1+ 1.9 kWh
 - URL: https://www.escooterwale.in/scooters/bounce-infinity-infinity-e1-plus-2point5-kwh
 - Ex-showroom price: ₹1,15,605
-- Estimated on-road price: ₹1,21,690
+- Estimated on-road price from: ₹1,21,690 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3044/month
 - Battery: 1.9 kWh
 - Claimed range (IDC): 70 km
@@ -856,7 +856,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Bgauss C12i EX 2.0 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-c12i-2point0-kwh
 - Ex-showroom price: ₹1,09,990
-- Estimated on-road price: ₹1,15,970
+- Estimated on-road price from: ₹1,15,970 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2896/month
 - Battery: 2 kWh
 - Claimed range (IDC): 85 km
@@ -875,7 +875,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Bgauss RUV 350 MAX 3.0 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-ruv-350i-3point0-kwh
 - Ex-showroom price: ₹1,43,990
-- Estimated on-road price: ₹1,50,580
+- Estimated on-road price from: ₹1,50,580 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3792/month
 - Battery: 3 kWh
 - Claimed range (IDC): 145 km
@@ -894,7 +894,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ola Electric S1 X 4 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-x-4-kwh
 - Ex-showroom price: ₹1,19,999
-- Estimated on-road price: ₹1,26,160
+- Estimated on-road price from: ₹1,26,160 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3160/month
 - Battery: 4 kWh
 - Claimed range (IDC): 242 km
@@ -913,7 +913,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ola Electric S1 Pro+ 4 kWh
 - URL: https://www.escooterwale.in/scooters/ola-electric-s1-proplus-4-kwh
 - Ex-showroom price: ₹1,59,999
-- Estimated on-road price: ₹1,66,880
+- Estimated on-road price from: ₹1,66,880 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4213/month
 - Battery: 4 kWh
 - Claimed range (IDC): 242 km
@@ -932,7 +932,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy Rizta S 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-rizta-s-3point5-kwh
 - Ex-showroom price: ₹1,44,999
-- Estimated on-road price: ₹1,51,610
+- Estimated on-road price from: ₹1,51,610 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3818/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 161 km
@@ -951,7 +951,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy Rizta Z 2.9 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-rizta-z-2point9-kwh
 - Ex-showroom price: ₹1,36,999
-- Estimated on-road price: ₹1,43,460
+- Estimated on-road price from: ₹1,43,460 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3608/month
 - Battery: 2.9 kWh
 - Claimed range (IDC): 123 km
@@ -970,7 +970,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy 450S 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-450s-3point5-kwh
 - Ex-showroom price: ₹1,49,999
-- Estimated on-road price: ₹1,56,700
+- Estimated on-road price from: ₹1,56,700 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3950/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 161 km
@@ -989,7 +989,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ather Energy 450X 2.9 kWh
 - URL: https://www.escooterwale.in/scooters/ather-energy-450x-2point9-kwh
 - Ex-showroom price: ₹1,48,998
-- Estimated on-road price: ₹1,55,680
+- Estimated on-road price from: ₹1,55,680 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3924/month
 - Battery: 2.9 kWh
 - Claimed range (IDC): 126 km
@@ -1008,7 +1008,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### TVS Motor iQube 3.1 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-3point1-kwh
 - Ex-showroom price: ₹1,35,756
-- Estimated on-road price: ₹1,42,200
+- Estimated on-road price from: ₹1,42,200 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3575/month
 - Battery: 3.1 kWh
 - Claimed range (IDC): 123 km
@@ -1027,7 +1027,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### TVS Motor iQube S 4.7 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-iqube-s-4point7-kwh
 - Ex-showroom price: ₹1,61,490
-- Estimated on-road price: ₹1,68,400
+- Estimated on-road price from: ₹1,68,400 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4253/month
 - Battery: 4.7 kWh
 - Claimed range (IDC): 175 km
@@ -1046,7 +1046,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### TVS Motor Orbiter V1 1.8 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-orbiter-v1-1point8-kwh
 - Ex-showroom price: ₹1,03,650
-- Estimated on-road price: ₹1,09,520
+- Estimated on-road price from: ₹1,09,520 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2730/month
 - Battery: 1.8 kWh
 - Claimed range (IDC): 92 km
@@ -1065,7 +1065,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### TVS Motor Orbiter V2 3.1 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-orbiter-v2-3point1-kwh
 - Ex-showroom price: ₹1,14,830
-- Estimated on-road price: ₹1,20,900
+- Estimated on-road price from: ₹1,20,900 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3024/month
 - Battery: 3.1 kWh
 - Claimed range (IDC): 158 km
@@ -1084,7 +1084,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### TVS Motor X 4.44 kWh
 - URL: https://www.escooterwale.in/scooters/tvs-motor-x-4point44-kwh
 - Ex-showroom price: ₹2,66,141
-- Estimated on-road price: ₹2,74,930
+- Estimated on-road price from: ₹2,74,930 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹7009/month
 - Battery: 4.44 kWh
 - Claimed range (IDC): 159 km
@@ -1103,7 +1103,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### BGauss MAX C12 2.7 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-max-c12-2point7-kwh
 - Ex-showroom price: ₹1,28,990
-- Estimated on-road price: ₹1,35,310
+- Estimated on-road price from: ₹1,35,310 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3397/month
 - Battery: 2.7 kWh
 - Claimed range (IDC): 123 km
@@ -1122,7 +1122,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### BGauss C12 MaxR 3.8 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-c12-maxr-3point8-kwh
 - Ex-showroom price: ₹1,59,990
-- Estimated on-road price: ₹1,66,870
+- Estimated on-road price from: ₹1,66,870 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4213/month
 - Battery: 3.8 kWh
 - Claimed range (IDC): 178 km
@@ -1141,7 +1141,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### BGauss OoWah EX 2.3 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-oowah-ex-2point3-kwh
 - Ex-showroom price: ₹94,990
-- Estimated on-road price: ₹1,00,700
+- Estimated on-road price from: ₹1,00,700 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2501/month
 - Battery: 2.3 kWh
 - Claimed range (IDC): 105 km
@@ -1160,7 +1160,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### BGauss OoWah MAX Plus 3.0 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-oowah-max-plus-3point0-kwh
 - Ex-showroom price: ₹1,22,990
-- Estimated on-road price: ₹1,29,200
+- Estimated on-road price from: ₹1,29,200 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3239/month
 - Battery: 3 kWh
 - Claimed range (IDC): 145 km
@@ -1179,7 +1179,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Hero Vida VX2 Go FB 3.1 kWh
 - URL: https://www.escooterwale.in/scooters/hero-vida-vx2-go-fb-3point1-kwh
 - Ex-showroom price: ₹1,13,000
-- Estimated on-road price: ₹1,19,030
+- Estimated on-road price from: ₹1,19,030 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2976/month
 - Battery: 3.1 kWh
 - Claimed range (IDC): 128 km
@@ -1198,7 +1198,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Hero Vida VX2 Go 3.4 kWh
 - URL: https://www.escooterwale.in/scooters/hero-vida-vx2-go-3point4-kwh
 - Ex-showroom price: ₹1,30,990
-- Estimated on-road price: ₹1,37,350
+- Estimated on-road price from: ₹1,37,350 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3449/month
 - Battery: 3.4 kWh
 - Claimed range (IDC): 146 km
@@ -1217,7 +1217,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Hero Vida VX2 Plus 4.4 kWh
 - URL: https://www.escooterwale.in/scooters/hero-vida-vx2-plus-4point4-kwh
 - Ex-showroom price: ₹1,60,990
-- Estimated on-road price: ₹1,67,890
+- Estimated on-road price from: ₹1,67,890 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4239/month
 - Battery: 4.4 kWh
 - Claimed range (IDC): 187 km
@@ -1236,7 +1236,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Ampere Reo Vyb 1.44 kWh
 - URL: https://www.escooterwale.in/scooters/ampere-reo-vyb-1point44-kwh
 - Ex-showroom price: ₹71,999
-- Estimated on-road price: ₹77,290
+- Estimated on-road price from: ₹77,290 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹1896/month
 - Battery: 1.44 kWh
 - Claimed range (IDC): 80 km
@@ -1255,7 +1255,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Okinawa PraisePro 2.08 kWh
 - URL: https://www.escooterwale.in/scooters/okinawa-praisepro-2point08-kwh
 - Ex-showroom price: ₹84,443
-- Estimated on-road price: ₹89,960
+- Estimated on-road price from: ₹89,960 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2224/month
 - Battery: 2.08 kWh
 - Claimed range (IDC): 81 km
@@ -1274,7 +1274,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Pure EV ePluto 7G CX 1.8 kWh
 - URL: https://www.escooterwale.in/scooters/pure-ev-epluto-7g-cx-1point8-kwh
 - Ex-showroom price: ₹86,089
-- Estimated on-road price: ₹91,640
+- Estimated on-road price from: ₹91,640 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2267/month
 - Battery: 1.8 kWh
 - Claimed range (IDC): 101 km
@@ -1293,7 +1293,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Pure EV ePluto 7G PRO 3.0 kWh
 - URL: https://www.escooterwale.in/scooters/pure-ev-epluto-7g-pro-3point0-kwh
 - Ex-showroom price: ₹1,12,279
-- Estimated on-road price: ₹1,18,300
+- Estimated on-road price from: ₹1,18,300 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2957/month
 - Battery: 3 kWh
 - Claimed range (IDC): 171 km
@@ -1312,7 +1312,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Pure EV ePluto 7G MAX 3.5 kWh
 - URL: https://www.escooterwale.in/scooters/pure-ev-epluto-7g-max-3point5-kwh
 - Ex-showroom price: ₹1,23,948
-- Estimated on-road price: ₹1,30,180
+- Estimated on-road price from: ₹1,30,180 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3264/month
 - Battery: 3.5 kWh
 - Claimed range (IDC): 211 km
@@ -1331,7 +1331,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Pure EV eTrance Neo SX 1.8 kWh
 - URL: https://www.escooterwale.in/scooters/pure-ev-etrance-neo-sx-1point8-kwh
 - Ex-showroom price: ₹84,836
-- Estimated on-road price: ₹90,360
+- Estimated on-road price from: ₹90,360 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2234/month
 - Battery: 1.8 kWh
 - Claimed range (IDC): 101 km
@@ -1350,7 +1350,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Pure EV eTrance Neo 2.4 kWh
 - URL: https://www.escooterwale.in/scooters/pure-ev-etrance-neo-2point4-kwh
 - Ex-showroom price: ₹1,06,105
-- Estimated on-road price: ₹1,12,010
+- Estimated on-road price from: ₹1,12,010 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2794/month
 - Battery: 2.4 kWh
 - Claimed range (IDC): 151 km
@@ -1369,7 +1369,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Pure EV eTrance Neo+ 3.0 kWh
 - URL: https://www.escooterwale.in/scooters/pure-ev-etrance-neoplus-3point0-kwh
 - Ex-showroom price: ₹1,12,995
-- Estimated on-road price: ₹1,19,030
+- Estimated on-road price from: ₹1,19,030 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2976/month
 - Battery: 3 kWh
 - Claimed range (IDC): 171 km
@@ -1388,7 +1388,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Honda QC1 1.5 kWh
 - URL: https://www.escooterwale.in/scooters/honda-qc1-1point5-kwh
 - Ex-showroom price: ₹90,708
-- Estimated on-road price: ₹96,340
+- Estimated on-road price from: ₹96,340 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2389/month
 - Battery: 1.5 kWh
 - Claimed range (IDC): 80 km
@@ -1407,7 +1407,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Suzuki e-Access 3.07 kWh
 - URL: https://www.escooterwale.in/scooters/suzuki-e-access-3point07-kwh
 - Ex-showroom price: ₹1,88,490
-- Estimated on-road price: ₹1,95,880
+- Estimated on-road price from: ₹1,95,880 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4964/month
 - Battery: 3.072 kWh
 - Claimed range (IDC): 95 km
@@ -1426,7 +1426,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Simple Energy One 5 kWh
 - URL: https://www.escooterwale.in/scooters/simple-energy-one-5-kwh
 - Ex-showroom price: ₹2,04,999
-- Estimated on-road price: ₹2,12,690
+- Estimated on-road price from: ₹2,12,690 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹5398/month
 - Battery: 5 kWh
 - Claimed range (IDC): 265 km
@@ -1445,7 +1445,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Simple Energy Ultra 6.5 kWh
 - URL: https://www.escooterwale.in/scooters/simple-energy-ultra-6point5-kwh
 - Ex-showroom price: ₹2,44,999
-- Estimated on-road price: ₹2,53,410
+- Estimated on-road price from: ₹2,53,410 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹6452/month
 - Battery: 6.5 kWh
 - Claimed range (IDC): 400 km
@@ -1464,7 +1464,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Simple Energy WaveS 2.2 kWh
 - URL: https://www.escooterwale.in/scooters/simple-energy-waves-2point2-kwh
 - Ex-showroom price: ₹1,09,999
-- Estimated on-road price: ₹1,15,980
+- Estimated on-road price from: ₹1,15,980 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2897/month
 - Battery: 2.2 kWh
 - Claimed range (IDC): 110 km
@@ -1483,7 +1483,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Kinetic DX 2.6 kWh
 - URL: https://www.escooterwale.in/scooters/kinetic-watts-volts-dx-2point6-kwh
 - Ex-showroom price: ₹1,16,499
-- Estimated on-road price: ₹1,22,600
+- Estimated on-road price from: ₹1,22,600 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3068/month
 - Battery: 2.6 kWh
 - Claimed range (IDC): 102 km
@@ -1502,7 +1502,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Kinetic DX+ 2.6 kWh
 - URL: https://www.escooterwale.in/scooters/kinetic-watts-volts-dxplus-2point6-kwh
 - Ex-showroom price: ₹1,26,174
-- Estimated on-road price: ₹1,32,450
+- Estimated on-road price from: ₹1,32,450 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3323/month
 - Battery: 2.6 kWh
 - Claimed range (IDC): 105 km
@@ -1521,7 +1521,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Lectrix LXS 2.0 2.3 kWh
 - URL: https://www.escooterwale.in/scooters/lectrix-lxs-2point0-2point3-kwh
 - Ex-showroom price: ₹84,990
-- Estimated on-road price: ₹90,520
+- Estimated on-road price from: ₹90,520 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2238/month
 - Battery: 2.3 kWh
 - Claimed range (IDC): 98 km
@@ -1540,7 +1540,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### Lectrix NDuro 3.0 3 kWh
 - URL: https://www.escooterwale.in/scooters/lectrix-nduro-3point0-3-kwh
 - Ex-showroom price: ₹1,04,990
-- Estimated on-road price: ₹1,10,880
+- Estimated on-road price from: ₹1,10,880 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2765/month
 - Battery: 3 kWh
 - Claimed range (IDC): 142 km
@@ -1559,7 +1559,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### OPG Mobility (Okaya) Faast F4 4.4 kWh
 - URL: https://www.escooterwale.in/scooters/okaya-ev-faast-f4-4point4-kwh
 - Ex-showroom price: ₹1,27,482
-- Estimated on-road price: ₹1,33,780
+- Estimated on-road price from: ₹1,33,780 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3357/month
 - Battery: 4.4 kWh
 - Claimed range (IDC): 162 km
@@ -1578,7 +1578,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### OPG Mobility (Okaya) Faast F2F 2.19 kWh
 - URL: https://www.escooterwale.in/scooters/okaya-ev-faast-f2f-2point19-kwh
 - Ex-showroom price: ₹81,999
-- Estimated on-road price: ₹87,470
+- Estimated on-road price from: ₹87,470 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹2159/month
 - Battery: 2.19 kWh
 - Claimed range (IDC): 90 km
@@ -1597,7 +1597,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### OPG Mobility (Okaya) Freedum LI 1.44 kWh
 - URL: https://www.escooterwale.in/scooters/okaya-ev-freedum-li-1point44-kwh
 - Ex-showroom price: ₹61,999
-- Estimated on-road price: ₹67,110
+- Estimated on-road price from: ₹67,110 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹1633/month
 - Battery: 1.44 kWh
 - Claimed range (IDC): 75 km
@@ -1616,7 +1616,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### VLF Strada City 2.16 kWh
 - URL: https://www.escooterwale.in/scooters/vlf-strada-city-2point16-kwh
 - Ex-showroom price: ₹1,19,999
-- Estimated on-road price: ₹1,26,160
+- Estimated on-road price from: ₹1,26,160 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3160/month
 - Battery: 2.16 kWh
 - Claimed range (IDC): 130 km
@@ -1635,7 +1635,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 ### VLF Strada Max 4.32 kWh
 - URL: https://www.escooterwale.in/scooters/vlf-strada-max-4point32-kwh
 - Ex-showroom price: ₹1,55,499
-- Estimated on-road price: ₹1,62,300
+- Estimated on-road price from: ₹1,62,300 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹4095/month
 - Battery: 4.32 kWh
 - Claimed range (IDC): 250 km

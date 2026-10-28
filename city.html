@@ -23,7 +23,7 @@
 <meta name="description" id="pgDesc" content="Find electric scooters in Mumbai. Best EV prices, dealer locations, state government subsidies, charging stations map. Compare Ola, Ather, TVS in Mumbai."/>
 <meta name="keywords" content="electric scooter mumbai, ev scooter price mumbai, ev dealer mumbai, electric scooter bangalore, ev scooter delhi price"/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/city"/>
-<link rel="stylesheet" href="styles.css?v=53f7eb23"/>
+<link rel="stylesheet" href="styles.css?v=e08dcda1"/>
 <style>
 .city-hero{background:var(--ink);padding:48px 0 36px;background-size:cover;background-position:center;position:relative}
 .city-hero::before{content:'';position:absolute;inset:0;background:rgba(13,17,23,.85)}
@@ -166,10 +166,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="data.js?v=ca8788c8"></script>
+<script src="data.js?v=8f63dae4"></script>
 <script src="seo.js?v=6b580009"></script>
 <script src="outbound.js?v=e9ecae44"></script>
-<script src="components.js?v=c5f5ffcb"></script>
+<script src="components.js?v=9ef23386"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -253,11 +253,14 @@ function loadCity(cityId){
     rowsP.map(r=>`<tr><td><a href="/scooters/${r.s.id}">${r.s.fullName}</a></td><td>${inrC(r.ex)}</td><td class="amt">${inrC(r.on)}</td><td>${r.s.realRange}</td></tr>`).join('')+`</tbody>`;
   document.getElementById('priceNote').textContent=`On-road is our estimate for ${c.name}: ex-showroom plus ${rtLabel==='Exempt'?'no road tax (EVs are exempt in '+st.name+')':(rtLabel==='Unconfirmed'?'road tax, which we could not confirm for '+st.name+' (ask the RTO or dealer)':rtLabel+' road tax')}, first-year insurance and handling. Registration is free for EVs. Prices updated ${fmtDate(SW_CONFIG.dataUpdated)}.`;
 
-  // Popular with buyers here: the city's featured models (Chetak and Vida where that demand is), else last week's most viewed
-  { const ids=(c.featured&&c.featured.length?c.featured:((typeof MOST_VIEWED!=='undefined'&&MOST_VIEWED.models)||[]).map(m=>m.id)).slice(0,5);
+  // This city's most visited scooters (GA, by city) come first, when there is enough data; then the city's
+  // featured models (Chetak and Vida where that demand is), then last week's most viewed across India
+  const CMV=(typeof CITY_MOST_VIEWED!=='undefined'&&CITY_MOST_VIEWED)||{cities:{}}, cmv=(CMV.cities[c.id]||[]).filter(m=>SCOOTERS_DB.some(s=>s.id===m.id));
+  const localTop=cmv.length&&cmv[0].visits>=(CMV.minVisits||2)?cmv.filter(m=>m.visits>=(CMV.minVisits||2)).map(m=>m.id):[];
+  { const ids=[...new Set(localTop.concat(c.featured&&c.featured.length?c.featured:[],((typeof MOST_VIEWED!=='undefined'&&MOST_VIEWED.models)||[]).map(m=>m.id)))].slice(0,5);
     const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/)/)||[''])[0];
     const rows=ids.map(i=>rowsP.find(r=>r.s.id===i)).filter(Boolean);
-    document.getElementById('cityPopular').innerHTML=rows.length?`<div class="mv-strip"><div class="mv-hd"><div><div class="eyebrow">Popular with buyers in ${c.name}</div><div class="mv-sub">With the approximate on-road price here</div></div></div><div class="mv-row">${rows.map(r=>`<a class="mv-card" href="${lp}/scooters/${r.s.id}"><img src="${r.s.cardImg||r.s.heroImg}" alt="${r.s.fullName}" loading="lazy" width="120" height="120"/><span class="mv-brand" translate="no">${r.s.shortBrand||r.s.brand}</span><span class="mv-name" translate="no">${r.s.name}</span><span class="mv-price">${inrC(r.on)} <small>on-road</small></span></a>`).join('')}</div></div>`:'';
+    document.getElementById('cityPopular').innerHTML=rows.length?`<div class="mv-strip"><div class="mv-hd"><div><div class="eyebrow">${localTop.length?'Most viewed by visitors in '+c.name:'Popular with buyers in '+c.name}</div><div class="mv-sub">With the approximate on-road price here</div></div></div><div class="mv-row">${rows.map(r=>`<a class="mv-card" href="${lp}/scooters/${r.s.id}"><img src="${r.s.cardImg||r.s.heroImg}" alt="${r.s.fullName}" loading="lazy" width="120" height="120"/><span class="mv-brand" translate="no">${r.s.shortBrand||r.s.brand}</span><span class="mv-name" translate="no">${r.s.name}</span><span class="mv-price">${inrC(r.on)} <small>on-road</small></span></a>`).join('')}</div></div>`:'';
   }
 
   // Picks: strong service first, then ScootScore
@@ -265,6 +268,8 @@ function loadCity(cityId){
   document.getElementById('cityPicksTitle').textContent=`Top picks for ${c.name} commuters`;
   const picks=[...SCOOTERS_DB].filter(s=>s.scores&&s.scores.Service>=8).sort((a,b)=>b.score-a.score);
   const seen=new Set(), top=[];
+  // the city's most visited scooter is always the first pick
+  const first=localTop.length&&SCOOTERS_DB.find(s=>s.id===localTop[0]); if(first){ top.push(first); seen.add(first.brandSlug); }
   for(const s of picks){ if(!seen.has(s.brandSlug)){ seen.add(s.brandSlug); top.push(s); } if(top.length===3) break; }
   document.getElementById('cityPicksGrid').innerHTML=top.map(s=>scooterCardHTML(s)).join('');
 
@@ -313,6 +318,8 @@ function loadCity(cityId){
 // Init from URL
 const initCity=window.__SW_CITY__||new URLSearchParams(location.search).get('city')||SW_CONFIG.headlineCity||'mumbai';
 loadCity(initCity);
+// opening a city page counts as choosing that city (prices elsewhere follow it)
+if(window.__SW_CITY__&&typeof swSetCity==='function'&&!navigator.webdriver) swSetCity(window.__SW_CITY__,'city_page',true);
 </script>
 </body>
 </html>

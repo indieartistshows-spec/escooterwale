@@ -877,6 +877,8 @@ img.lazy.loaded{opacity:1}
 .sw-fab-tip{position:absolute;bottom:calc(100% + 10px);right:0;white-space:nowrap;background:var(--ink,#0d1117);color:#fff;font:700 13px var(--f,sans-serif);padding:8px 12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.25);opacity:0;transform:translateY(6px);pointer-events:none;transition:opacity .35s,transform .35s}
 .sw-fab-tip::after{content:"";position:absolute;top:100%;right:22px;border:6px solid transparent;border-top-color:var(--ink,#0d1117)}
 .sw-fab.tip-on .sw-fab-tip{opacity:1;transform:none}
+.sw-fab-label{position:absolute;right:calc(100% + 8px);top:50%;transform:translateY(-50%);width:max-content;max-width:150px;background:#fff;color:var(--ink,#0d1117);font:700 11.5px/1.25 var(--f,sans-serif);padding:6px 10px;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.18);border:1px solid rgba(0,0,0,.06);text-align:right;pointer-events:none}
+@media(min-width:901px){.sw-fab-label{max-width:none;white-space:nowrap;font-size:12px}}
 .sw-fab.lift{bottom:calc(150px + env(safe-area-inset-bottom))}
 @media(min-width:901px){.sw-fab{right:28px;bottom:28px}.sw-fab.lift{bottom:104px}}
 @media(prefers-reduced-motion:reduce){.sw-fab,.sw-fab-tip{transition:none}}

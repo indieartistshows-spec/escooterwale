@@ -1,6 +1,6 @@
 {
-  "headlineCity": "hyderabad",
-  "headlineCityReason": "Most active users in GA, 17 Sep to 16 Oct 2026 (Hyderabad 129, Bengaluru 114, Delhi 93, Mumbai 51)",
+  "headlineCity": null,
+  "headlineCityReason": "No default city since 28 Oct 2026 (GK): prices show national ex-showroom until the visitor picks a city, so city demand in GA is not skewed by a default.",
   "headlineHistory": [
     {
       "week": "2026-10-26",

@@ -18,7 +18,7 @@ const scooters = J('data/scooters.json');
 // square thumbnails with the scooter in focus (tools/card-images.js); the full photo stays as heroImg
 // keep middleware.js's copy of the headline city and city list current (pairs are append only)
 { const f = 'data/compare-pairs.json', cp = JSON.parse(fs.readFileSync(f, 'utf8')), cfg = JSON.parse(fs.readFileSync('data/site-config.json', 'utf8'));
-  const cities = JSON.parse(fs.readFileSync('data/cities.json', 'utf8')).map(c => c.id), hc = cfg.headlineCity || 'hyderabad';
+  const cities = JSON.parse(fs.readFileSync('data/cities.json', 'utf8')).map(c => c.id), hc = cfg.headlineCity || null;
   if (cp.headlineCity !== hc || JSON.stringify(cp.cities) !== JSON.stringify(cities)) { cp.headlineCity = hc; cp.cities = cities; fs.writeFileSync(f, JSON.stringify(cp, null, 1) + '\n'); } }
 // match quiz points per scooter (data/match-points.json), as s.mp = { range, performance, ... }
 { const MP = JSON.parse(fs.readFileSync('data/match-points.json', 'utf8')); for (const s of scooters) { const v = MP.points[s.id]; if (v) s.mp = Object.fromEntries(MP.order.map((k, i) => [k, v[i]])); } }
@@ -90,7 +90,8 @@ for (const s of scooters) {
   // headline price = headline city when we have it, else national
   const h = s.cityPrices[headline] && s.cityPrices[headline].exConfirmed ? s.cityPrices[headline] : null;
   const headEx = h ? h.ex : s.price;
-  const headOn = h ? h.onRoad : onRoadFor(s.price, subsidy.cityState[headline]).onRoad;
+  // no headline city: the national figure is the lowest on-road across our cities ("on-road from")
+  const headOn = h ? h.onRoad : headline ? onRoadFor(s.price, subsidy.cityState[headline]).onRoad : Math.min(...Object.values(s.cityPrices).map(c => c.onRoad));
   s.headlinePriceCity = h ? headline : null;
   s.price = headEx;
   s.priceDisplay = inr(headEx);
@@ -117,6 +118,7 @@ const out = header +
   `const MODEL_NOTES = ${JSON.stringify(J('data/model-notes.json').brands)};\n\n` +
   `const COMPARE_PAIRS = ${JSON.stringify(J('data/compare-pairs.json').pairs)};\n\n` +
   `const MOST_VIEWED = ${JSON.stringify((({ from, to, models }) => ({ from, to, models }))(J('data/most-viewed.json')))};\n\n` +
+  `const CITY_MOST_VIEWED = ${JSON.stringify((() => { try { const c = J('data/city-most-viewed.json'); return { minVisits: c.minVisits || 2, from: c.from, to: c.to, cities: c.cities || {} }; } catch (e) { return { minVisits: 2, cities: {} }; } })())};\n\n` +
   `const BRANDS_DB = ${JSON.stringify(brands)};\n\n` +
   `const NEWS_DB = ${JSON.stringify(news)};\n\n` +
   `const CITIES_DB = ${JSON.stringify(cities)};\n\n` +
@@ -130,7 +132,7 @@ const out = header +
 function getByBrand(slug)  { return SCOOTERS_DB.filter(s=>s.brandSlug===slug); }
 function getSorted(by)     { return [...SCOOTERS_DB].sort((a,b)=>b[by]-a[by]); }
 function getBrandById(id)  { return BRANDS_DB.find(b=>b.id===id); }
-if(typeof module!=='undefined') module.exports={SCOOTERS_ALL,MODEL_NOTES,COMPARE_PAIRS,MOST_VIEWED,BRAND_SOCIALS,BRAND_VIDEOS,AGG_LINKS,SCOOTERS_DB,BRANDS_DB,NEWS_DB,CITIES_DB,SUBSIDY,SW_CONFIG,EV_SALES,BRAND_LINKS};
+if(typeof module!=='undefined') module.exports={CITY_MOST_VIEWED,SCOOTERS_ALL,MODEL_NOTES,COMPARE_PAIRS,MOST_VIEWED,BRAND_SOCIALS,BRAND_VIDEOS,AGG_LINKS,SCOOTERS_DB,BRANDS_DB,NEWS_DB,CITIES_DB,SUBSIDY,SW_CONFIG,EV_SALES,BRAND_LINKS};
 `;
 fs.writeFileSync('data.js', out);
 // Trending archive goes in its own file so data.js stays small as it grows

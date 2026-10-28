@@ -23,7 +23,7 @@
 <meta name="description" id="pgDesc" content="Price, real-world range from our tests, specs, subsidy and our verdict for every electric scooter sold in India."/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/scooter-detail"/>
 <meta property="og:type" content="product"/>
-<link rel="stylesheet" href="styles.css?v=53f7eb23"/>
+<link rel="stylesheet" href="styles.css?v=e08dcda1"/>
 <script type="application/ld+json" id="pgSchema"></script>
 <style>
 .detail-layout{display:grid;grid-template-columns:1fr 340px;gap:28px;padding:28px 0 64px;align-items:start}
@@ -458,11 +458,11 @@
   </a>
 </div>
 
-<script src="data.js?v=ca8788c8"></script>
+<script src="data.js?v=8f63dae4"></script>
 <script src="seo.js?v=6b580009"></script>
 <script src="outbound.js?v=e9ecae44"></script>
 <script src="trending-data.js?v=9d728f01"></script>
-<script src="components.js?v=c5f5ffcb"></script>
+<script src="components.js?v=9ef23386"></script>
 <script src="videos-db.js?v=f29ab906"></script>
 <script>
 document.getElementById('navMount').innerHTML = navHTML('listings');
@@ -543,33 +543,31 @@ function calcEMI(price,down,tenure,rate){
    Picking a city updates every price figure on the page. */
 function renderCityPrices(s){
   const box=document.getElementById('cityPriceBox');
-  const cities=Object.entries(s.cityPrices||{});
-  const head=SW_CONFIG.headlineCity;
-  cities.sort((a,b)=>(a[0]===head?-1:b[0]===head?1:a[1].city.localeCompare(b[1].city)));
+  const cities=Object.entries(s.cityPrices||{}).sort((a,b)=>a[1].city.localeCompare(b[1].city));
   let html=`<div class="cp-row cp-national"><span>National ex-showroom</span><strong>${s.nationalPriceDisplay}</strong></div>`;
   if(cities.length){
     const anyCity=cities.some(([,c])=>c.exConfirmed);
-    html+=`<div class="cp-head">Check price by city</div>`+cities.map(([id,c])=>
+    html+=`<div class="cp-head">Select your city for the on-road price</div>`+cities.map(([id,c])=>
       `<button type="button" class="cp-row cp-city" data-city="${id}" onclick="setPriceCity('${id}')"><span>${c.city}</span>${anyCity?`<span>${c.exConfirmed?c.exDisplay:'national'}</span>`:''}<span class="cp-on">on-road ${c.roadTaxKnown?'':'≈ '}${c.onRoadDisplay}</span></button>`).join('')+
       `<div class="cp-foot">On-road is our estimate: ex-showroom plus that city's road tax, first-year insurance and handling.</div>`;
   }
   box.innerHTML=html;
-  let pick=null; try{pick=localStorage.getItem('sw_city')}catch(e){}
+  const pick=typeof swGetCity==='function'?swGetCity():null;
   setPriceCity(pick&&s.cityPrices&&s.cityPrices[pick]?pick:(s.headlinePriceCity||SW_CONFIG.headlineCity||null), true);
 }
 function setPriceCity(cityId, initial){
   const s=window.__SW_CUR__; if(!s) return;
   const c=cityId&&s.cityPrices?s.cityPrices[cityId]:null;
   const ex=c?c.ex:s.nationalPrice, exD=c?c.exDisplay:s.nationalPriceDisplay;
-  const on=c?c.onRoadDisplay:s.onRoadDisplay, emi=c?c.emi:s.emiFrom;
+  const emi=c?c.emi:s.emiFrom;
   document.getElementById('buyPriceLabel').textContent=c&&c.exConfirmed?`Ex-showroom price in ${c.city}`:'Ex-showroom price';
   document.getElementById('buyPrice').textContent=exD;
-  document.getElementById('buyNote').innerHTML=`On-road${c?' in '+c.city:''} approx. ${on} · EMI from <span id="buyEMI">₹${emi.toLocaleString('en-IN')}</span>/mo`;
+  document.getElementById('buyNote').innerHTML=c?`On-road in ${c.city} approx. ${c.onRoadDisplay} · EMI from <span id="buyEMI">₹${emi.toLocaleString('en-IN')}</span>/mo`:`On-road from ${s.onRoadDisplay}, select your city below · EMI from <span id="buyEMI">₹${emi.toLocaleString('en-IN')}</span>/mo`;
   document.getElementById('emiStrip').innerHTML=`₹${emi.toLocaleString('en-IN')} <span style="font-size:14px;font-weight:400;color:var(--ink-3)">/month</span>`;
   const sp=document.getElementById('sbarPrice'); if(sp) sp.textContent=exD;
   const se=document.getElementById('sbarEmi'); if(se) se.textContent='EMI from ₹'+emi.toLocaleString('en-IN')+'/mo';
   document.querySelectorAll('.cp-city').forEach(b=>b.classList.toggle('active',b.dataset.city===cityId));
-  if(!initial){ try{localStorage.setItem('sw_city',cityId)}catch(e){} if(typeof hydrateEMI==='function') hydrateEMI(Object.assign({},s,{price:ex,priceDisplay:exD})); }
+  if(!initial){ if(typeof swSetCity==='function') swSetCity(cityId,'scooter_page'); if(typeof hydrateEMI==='function') hydrateEMI(Object.assign({},s,{price:ex,priceDisplay:exD})); }
 }
 
 function hydrateEMI(s){

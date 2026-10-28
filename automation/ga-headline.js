@@ -11,6 +11,8 @@
 
    Needs env: GA_SA_KEY (service account JSON), GA_PROPERTY_ID.
    Without them it leaves the current city unchanged.
+   When headlineCity is empty (no default city, GK Oct 2026) it only records
+   the weekly leader in headlineHistory and never sets one.
    ============================================================ */
 const fs = require('fs'), crypto = require('crypto');
 const CFG_FILE = 'data/site-config.json';
@@ -65,12 +67,12 @@ async function usersByCity() {
       hist.unshift({ week: new Date().toISOString().slice(0, 10), leader, users: tally });
       cfg.headlineHistory = hist.slice(0, 12);
       const ledLastWeek = hist[1] && hist[1].leader === leader;
-      if (leader && leader !== cur && ledLastWeek && lUsers >= curUsers * 1.10) {
+      if (cur && leader && leader !== cur && ledLastWeek && lUsers >= curUsers * 1.10) {
         cfg.headlineCity = leader; out.changed = true; out.to = leader;
         cfg.headlineCityReason = `Most active users in GA for two weeks running (${leader} ${lUsers} vs ${cur} ${curUsers}, last 28 days)`;
         out.note = `Headline city switched from ${cur} to ${leader}`;
       } else {
-        out.note = leader === cur ? `${cur} still leads` : `${leader} leads this week but the switch rule (2 weeks, 10%) is not met yet`;
+        out.note = !cur ? `No headline city by choice; ${leader} leads GA this week (recorded only)` : leader === cur ? `${cur} still leads` : `${leader} leads this week but the switch rule (2 weeks, 10%) is not met yet`;
       }
     } catch (e) { out.note = 'GA check failed, headline city unchanged: ' + String(e.message || e).slice(0, 160); }
   }

@@ -1,0 +1,231 @@
+{
+ "_note": "Most visited scooters per city, ranked (ties broken by ScootScore). A city page shows its #1 first only when it has at least minVisits visits; otherwise it keeps the default order. Seeded from the GA export of 22 to 28 Oct 2026 (sessions landing on a model or comparison page, by city); refreshed every Monday from GA scooter_view events by city (automation/ga-most-viewed.js).",
+ "minVisits": 2,
+ "from": "2026-10-22",
+ "to": "2026-10-28",
+ "updated": "2026-10-28",
+ "cities": {
+  "ahmedabad": [
+   {
+    "id": "ola-electric-s1-x-3-kwh",
+    "visits": 3
+   },
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 3
+   },
+   {
+    "id": "tvs-motor-iqube-2point2-kwh",
+    "visits": 3
+   },
+   {
+    "id": "ola-electric-s1-pro-4-kwh",
+    "visits": 2
+   },
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 1
+   }
+  ],
+  "bangalore": [
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-xplus-4-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-x-3-kwh",
+    "visits": 1
+   },
+   {
+    "id": "tvs-motor-iqube-s-3point5-kwh",
+    "visits": 1
+   }
+  ],
+  "chennai": [
+   {
+    "id": "hero-vida-vx2-plus-3point4-kwh",
+    "visits": 4
+   },
+   {
+    "id": "ola-electric-s1-xplus-4-kwh",
+    "visits": 3
+   },
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 3
+   },
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 2
+   },
+   {
+    "id": "tvs-motor-iqube-s-3point5-kwh",
+    "visits": 2
+   }
+  ],
+  "delhi": [
+   {
+    "id": "ola-electric-s1-x-3-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-x-2-kwh",
+    "visits": 1
+   },
+   {
+    "id": "bajaj-chetak-chetak-3503-3point5-kwh",
+    "visits": 1
+   },
+   {
+    "id": "bajaj-chetak-chetak-c2501-2point5-kwh",
+    "visits": 1
+   },
+   {
+    "id": "tvs-motor-iqube-2point2-kwh",
+    "visits": 1
+   }
+  ],
+  "hyderabad": [
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 8
+   },
+   {
+    "id": "tvs-motor-iqube-2point2-kwh",
+    "visits": 6
+   },
+   {
+    "id": "hero-vida-vx2-plus-3point4-kwh",
+    "visits": 4
+   },
+   {
+    "id": "ola-electric-s1-x-3-kwh",
+    "visits": 3
+   },
+   {
+    "id": "hero-vida-vx2-go-2point2-kwh",
+    "visits": 2
+   }
+  ],
+  "jaipur": [
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-x-2-kwh",
+    "visits": 1
+   },
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 1
+   },
+   {
+    "id": "bajaj-chetak-chetak-3001-3point0-kwh",
+    "visits": 1
+   }
+  ],
+  "kolkata": [
+   {
+    "id": "ampere-magnus-g-max-3point0-kwh",
+    "visits": 1
+   },
+   {
+    "id": "okinawa-r30-0point8-kwh",
+    "visits": 1
+   }
+  ],
+  "lucknow": [
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-xplus-4-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-pro-4-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ather-energy-rizta-s-2point9-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ather-energy-konarc-s-125-2point7-kwh",
+    "visits": 1
+   }
+  ],
+  "mumbai": [
+   {
+    "id": "tvs-motor-iqube-st-5point3-kwh",
+    "visits": 1
+   },
+   {
+    "id": "hero-vida-vx2-go-2point2-kwh",
+    "visits": 1
+   },
+   {
+    "id": "hero-vida-vx2-plus-3point4-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ampere-magnus-g-max-3point0-kwh",
+    "visits": 1
+   },
+   {
+    "id": "bgauss-ruv-350i-3point0-kwh",
+    "visits": 1
+   }
+  ],
+  "pune": [
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 6
+   },
+   {
+    "id": "hero-vida-vx2-plus-3point4-kwh",
+    "visits": 3
+   },
+   {
+    "id": "bajaj-chetak-chetak-3502-3point5-kwh",
+    "visits": 2
+   },
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-proplus-5point2-kwh",
+    "visits": 1
+   }
+  ],
+  "surat": [
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 2
+   },
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-xplus-4-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-x-2-kwh",
+    "visits": 1
+   }
+  ]
+ }
+}

@@ -2,7 +2,7 @@
 
 > Independent electric scooter comparison and review platform for India. We track 78 EV scooter models from 17 brands, run our own real-world range tests, and rate every scooter with ScootScore, a 0-10 score averaged across range, features, value, ride quality and service network. No brand pays us and no manufacturer has editorial input.
 
-Last updated: 2026-10-26
+Last updated: 2026-10-28
 
 ## What makes this source citable
 

@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="EScooterwale"/>
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=53f7eb23"/>
+<link rel="stylesheet" href="styles.css?v=e08dcda1"/>
 <style>
 .mt-wrap{max-width:620px;margin:0 auto;padding:28px 16px 120px}
 .mt-head{text-align:center;margin-bottom:22px}
@@ -236,13 +236,18 @@
     </div>
 
     <div class="mt-step" data-q="pincode">
-      <h2 class="mt-q">Where will you ride?</h2>
-      <p class="mt-hint">Your pincode sets the on-road price, road tax and subsidy for your area.</p>
-      <div class="mt-pin">
-        <input id="mtPin" type="tel" inputmode="numeric" maxlength="6" placeholder="6 digit pincode" aria-label="Pincode" autocomplete="postal-code"/>
-        <button class="mt-btn" id="mtPinGo" disabled>Continue</button>
-      </div>
-      <div class="mt-pinmsg" id="mtPinMsg" aria-live="polite"></div>
+      <h2 class="mt-q">Where will you ride, and where should we send your matches?</h2>
+      <p class="mt-hint">Your pincode sets the on-road price, road tax and subsidy for your area. We save your matches to your number.</p>
+      <form id="mtContact" novalidate>
+        <div class="mt-field" data-f="pincode"><label for="mtPin">Pincode</label><input id="mtPin" type="tel" inputmode="numeric" maxlength="6" placeholder="6 digit pincode" autocomplete="postal-code"/><div class="mt-pinmsg" id="mtPinMsg" aria-live="polite"></div></div>
+        <div class="mt-field" data-f="name"><label for="fName">Your name</label><input id="fName" name="name" autocomplete="name"/><div class="mt-err">Please enter your name.</div></div>
+        <div class="mt-field" data-f="mobile"><label for="fMobile">Mobile number</label><input id="fMobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="14" placeholder="10 digit mobile"/><div class="mt-err">Please enter a valid 10 digit mobile number.</div></div>
+        <div class="mt-hp" aria-hidden="true"><label for="fWeb">Website</label><input id="fWeb" name="website" tabindex="-1" autocomplete="off"/></div>
+        <label class="mt-consent" id="mtConsentRow"><input type="checkbox" id="fConsent"/><span id="mtConsentText">I agree that EScooterwale and its partner scooter brands and dealers may contact me about on-road prices, test rides, offers and the EScooterwale newsletter. I can unsubscribe any time.</span></label>
+        <p class="mt-legal">By continuing you agree to our <a href="/terms" target="_blank">Terms</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.</p>
+        <button class="mt-btn" type="submit" id="mtPinGo" style="width:100%">Continue</button>
+        <p class="mt-formerr" id="mtFormErr" aria-live="polite"></p>
+      </form>
     </div>
 
     <div class="mt-step" data-q="charging">
@@ -339,28 +344,6 @@
     <p><button class="mt-back" id="mtRestart">Start over</button></p>
   </div>
 
-  <!-- LEAD FORM -->
-  <div id="mtForm" hidden>
-    <div class="mt-formcard">
-      <h2>Save my shortlist and get on-road prices for <span id="mtFormPlace" translate="no"></span></h2>
-      <p class="sub">We will send your shortlist with on-road prices, and partner dealers can reach you with test ride offers.</p>
-      <div class="mt-picks" id="mtPicks" translate="no"></div>
-      <form id="mtLead" novalidate>
-        <div class="mt-field" data-f="name"><label for="fName">Full name</label><input id="fName" name="name" autocomplete="name" required/><div class="mt-err">Please enter your name.</div></div>
-        <div class="mt-field" data-f="mobile"><label for="fMobile">Mobile number</label><input id="fMobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="14" placeholder="10 digit mobile" required/><div class="mt-err">Please enter a valid 10 digit mobile number.</div></div>
-        <div class="mt-field" data-f="email"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" autocomplete="email" required/><div class="mt-err">Please enter a valid email.</div></div>
-        <div class="mt-field" data-f="pincode"><label for="fPin">Pincode</label><input id="fPin" name="pincode" type="tel" inputmode="numeric" maxlength="6" autocomplete="postal-code" required/><div class="mt-err">Please enter a valid 6 digit pincode.</div></div>
-        <div class="mt-hp" aria-hidden="true"><label for="fWeb">Website</label><input id="fWeb" name="website" tabindex="-1" autocomplete="off"/></div>
-        <label class="mt-consent" id="mtConsentRow"><input type="checkbox" id="fConsent"/><span id="mtConsentText">I agree that EScooterwale and its partner scooter brands and dealers may contact me about on-road prices, test rides, offers and the EScooterwale newsletter. I can unsubscribe any time.</span></label>
-        <p class="mt-legal">By continuing you agree to our <a href="/terms" target="_blank">Terms</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.</p>
-        <button class="mt-btn" type="submit" id="mtSubmit" style="width:100%">Show my shortlist</button>
-        <p class="mt-formerr" id="mtFormErr" aria-live="polite"></p>
-      </form>
-      <a class="mt-explore" href="/listings" id="mtExplore">Explore on my own</a>
-    </div>
-  </div>
-
-  <!-- SHORTLIST -->
   <div id="mtList" hidden>
     <h2 class="mt-q">Your shortlist</h2>
     <p class="mt-hint">On-road prices for <span id="mtListPlace" translate="no"></span>. Prices are estimates, the dealer quote is final.</p>
@@ -391,10 +374,10 @@
   <span>Saving your shortlist</span><span>Please tick the box to continue.</span><span>Could not save right now. Please try again.</span><span>Too many tries. Please wait a few minutes.</span><span>Copied. Paste it anywhere to share.</span><span>India</span>
 </div>
 
-<script src="data.js?v=ca8788c8"></script>
+<script src="data.js?v=8f63dae4"></script>
 <script src="seo.js?v=6b580009"></script>
 <script src="outbound.js?v=e9ecae44"></script>
-<script src="components.js?v=c5f5ffcb"></script>
+<script src="components.js?v=9ef23386"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('match');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -520,7 +503,7 @@ function show(i){
   $('mtBar').style.width=Math.round(i/Q.length*100)+'%';
   $('mtCount').textContent=`Question ${i+1} of ${Q.length}`;
   $('mtBack').hidden=i===0;
-  if(Q[i]==='pincode') setTimeout(()=>$('mtPin').focus(),50);
+  if(Q[i]==='pincode'){ if(!contactShownAt) contactShownAt=Date.now(); setTimeout(()=>$('mtPin').focus(),50); }
 }
 steps.forEach((st,i)=>{
   const multi=st.dataset.multi, go=st.querySelector('.mt-multi-go');
@@ -546,18 +529,50 @@ const pinIn=$('mtPin');
 pinIn.addEventListener('input',()=>{
   pinIn.value=pinIn.value.replace(/\D/g,'').slice(0,6);
   const pl=place(pinIn.value), m=$('mtPinMsg');
-  $('mtPinGo').disabled=pinIn.value.length!==6;
   if(pinIn.value.length<6){m.textContent='';m.className='mt-pinmsg';return}
   if(pl){m.className='mt-pinmsg ok';m.innerHTML='Found: <span translate="no">'+esc(pl.city?pl.city+', '+pl.stateName:pl.stateName)+'</span>'}
   else{m.className='mt-pinmsg err';m.textContent='We could not place this pincode. We will use national prices.'}
 });
-pinIn.addEventListener('keydown',e=>{if(e.key==='Enter'&&!$('mtPinGo').disabled)$('mtPinGo').click()});
-$('mtPinGo').addEventListener('click',()=>{
-  if(!/^[1-9]\d{5}$/.test(pinIn.value)){const m=$('mtPinMsg');m.className='mt-pinmsg err';m.textContent='Please enter a valid 6 digit pincode.';return}
-  A.pincode=pinIn.value;A.place=place(pinIn.value)||{pin:pinIn.value,state:'',stateName:'India',label:'India',city:''};
+/* ---------- contact (asked with the pincode, so a lead is saved even if the visitor stops later) ---------- */
+const field=f=>document.querySelector(`.mt-field[data-f="${f}"]`);
+$('fMobile').addEventListener('input',e=>e.target.value=e.target.value.replace(/[^\d+\s]/g,''));
+let contactShownAt=0, LEAD=null; // LEAD = { id, mobile } once saved
+const answersNow=()=>Object.fromEntries(['budget','daily','riders','charging','priority','licence'].filter(k=>A[k]).map(k=>[k,String(A[k]).split(',').map(v=>(LABEL[k]||{})[v]||v).join(', ')]));
+const leadSource=()=>{const qs=new URLSearchParams(location.search);return ['utm_source','utm_medium','utm_campaign'].map(k=>qs.get(k)).filter(Boolean).join(' / ')||document.referrer||'direct'};
+async function saveLead(extra){
+  const r=await fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(extra)});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok||!j.ok) throw new Error(j.error||'Could not save right now. Please try again.');
+  return j;
+}
+let contactTries=0;
+$('mtContact').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const v={name:$('fName').value.trim(),mobile:$('fMobile').value.replace(/[\s-]/g,'').replace(/^(\+?91|0)(?=[6-9]\d{9}$)/,''),pincode:pinIn.value.trim()};
+  const ok={pincode:/^[1-9]\d{5}$/.test(v.pincode),name:v.name.length>=2,mobile:/^[6-9]\d{9}$/.test(v.mobile)};
+  Object.keys(ok).forEach(k=>field(k).classList.toggle('bad',!ok[k]));
+  if(!ok.pincode){const m=$('mtPinMsg');m.className='mt-pinmsg err';m.textContent='Please enter a valid 6 digit pincode.'}
+  const consent=$('fConsent').checked;$('mtConsentRow').classList.toggle('bad',!consent);
+  const err=$('mtFormErr');err.textContent='';
+  if(Object.values(ok).includes(false)){const k=Object.keys(ok).find(k=>!ok[k]);(k==='pincode'?pinIn:field(k).querySelector('input')).focus();return}
+  if(!consent){err.textContent='Please tick the box to continue.';return}
+  A.pincode=v.pincode;A.place=place(v.pincode)||{pin:v.pincode,state:'',stateName:'India',label:'India',city:''};
+  if(A.place.cityId&&typeof swSetCity==='function') swSetCity(A.place.cityId,'pincode');
   ev('quiz_answer',{question:'pincode',answer:A.place.state||'unknown'});
   SVC=null;svcP=fetch('/api/service?pin='+A.pincode).then(r=>r.ok?r.json():null).then(j=>{SVC=j&&j.found?j:null}).catch(()=>{});
-  show(step+1);
+  const btn=$('mtPinGo');btn.disabled=true;btn.textContent='Saving';
+  contactTries++;
+  try{
+    const j=await saveLead({...v,city:A.place.city||'',state:A.place.stateName||'',consent:true,consentText:$('mtConsentText').textContent.trim(),
+      answers:answersNow(),lang:LANG,source:leadSource(),page:location.pathname,hp:$('fWeb').value,t:contactShownAt,stage:'contact'});
+    LEAD={id:j.id,mobile:v.mobile};
+    ev('lead_submitted',{stage:'contact',lang:LANG});
+    show(step+1);
+  }catch(x){
+    // a second failure never blocks the quiz: the full lead is sent again at the end
+    if(contactTries>=2){LEAD={id:null,mobile:v.mobile,pending:{...v}};show(step+1)}
+    else err.textContent=x.message==='Failed to fetch'?'Could not save right now. Please try again.':x.message;
+  }finally{btn.disabled=false;btn.textContent='Continue'}
 });
 
 /* ---------- deck ---------- */
@@ -614,7 +629,7 @@ function decide(dir){
   if(!cur) return;
   const r=cur;cur=null;shown++;
   ev('match_swipe',{direction:dir==='yes'?'right':'left',model:r.x.id});
-  if(dir==='yes'){fly('yes',()=>{liked.push(r);queue.shift();bump();if(liked.length>=MAXLIKES) return openForm();renderDeck()})}
+  if(dir==='yes'){fly('yes',()=>{liked.push(r);queue.shift();bump();if(liked.length>=MAXLIKES) return finishLead();renderDeck()})}
   else fly('no',()=>{queue.shift();skipNext(r)});
 }
 // a skip moves straight on (no reason asked); a fresh scooter from another brand takes its place
@@ -631,63 +646,31 @@ function skipNext(r){
 function bump(){const c=$('mtCart');c.classList.remove('pop');void c.offsetWidth;c.classList.add('pop');updateCart()}
 function updateCart(){$('mtCartN').textContent=liked.length;$('mtCart').classList.toggle('on',liked.length>0&&!$('mtDeck').hidden)}
 function deckDone(){
-  if(liked.length) return openForm();
+  if(liked.length) return finishLead();
   $('mtDeck').hidden=true;$('mtEmpty').hidden=false;updateCart();
+  if(LEAD&&LEAD.id) saveLead({leadId:LEAD.id,mobile:LEAD.mobile,shortlist:[],skipped:skipped.map(k=>({id:(F.find(f=>f.id===k.id)||{s:{}}).s.fullName||k.id,reason:k.reason})),answers:answersNow(),lang:LANG,page:location.pathname}).catch(()=>{});
 }
 $('mtYes').addEventListener('click',()=>decide('yes'));
 $('mtNo').addEventListener('click',()=>decide('no'));
 document.addEventListener('keydown',e=>{if($('mtDeck').hidden)return;if(e.key==='ArrowRight')decide('yes');if(e.key==='ArrowLeft')decide('no')});
-$('mtCart').addEventListener('click',()=>{if(liked.length) openForm()});
+$('mtCart').addEventListener('click',()=>{if(liked.length) finishLead()});
 $('mtMore').addEventListener('click',()=>{const more=R.reserve.filter(q=>!bannedBrands.has(q.x.brand)).slice(0,MAXCARDS-Math.min(shown,3)>3?3:3);R.reserve=R.reserve.filter(q=>!more.includes(q));queue=more;shown=0;$('mtEmpty').hidden=true;$('mtDeck').hidden=false;renderDeck()});
-const restart=()=>{Object.keys(A).forEach(k=>delete A[k]);document.querySelectorAll('.mt-opt.sel').forEach(o=>o.classList.remove('sel'));document.querySelectorAll('.mt-multi-go').forEach(g=>g.disabled=true);['mtDeck','mtEmpty','mtForm','mtList'].forEach(i=>$(i).hidden=true);$('mtQuiz').hidden=false;$('mtHead').hidden=false;document.body.classList.remove('mt-playing');liked=[];updateCart();history.replaceState(null,'',location.pathname);show(0);window.scrollTo({top:0})};
+const restart=()=>{Object.keys(A).forEach(k=>delete A[k]);document.querySelectorAll('.mt-opt.sel').forEach(o=>o.classList.remove('sel'));document.querySelectorAll('.mt-multi-go').forEach(g=>g.disabled=true);['mtDeck','mtEmpty','mtList'].forEach(i=>$(i).hidden=true);$('mtQuiz').hidden=false;$('mtHead').hidden=false;document.body.classList.remove('mt-playing');liked=[];updateCart();history.replaceState(null,'',location.pathname);show(0);window.scrollTo({top:0})};
 $('mtRestart').addEventListener('click',restart);$('mtRestart2').addEventListener('click',restart);
 
-/* ---------- lead form ---------- */
-let formShownAt=0;
-function openForm(){
-  $('mtDeck').hidden=true;$('mtCart').classList.remove('on');$('mtForm').hidden=false;
-  $('mtFormPlace').textContent=A.place?A.place.label:'India';
-  $('mtPicks').innerHTML=liked.map(r=>`<span>${esc(r.x.s.fullName)}</span>`).join('');
-  // the pincode was already asked in the quiz, so the form only asks for it when it is missing
-  const pinField=document.querySelector('.mt-field[data-f="pincode"]'), havePin=/^[1-9]\d{5}$/.test(A.pincode||'');
-  if(havePin) $('fPin').value=A.pincode;
-  pinField.style.display=havePin?'none':'';
-  formShownAt=Date.now();ev('lead_form_shown',{shortlist:liked.length});
-  window.scrollTo({top:0,behavior:'smooth'});
+/* ---------- end of the deck: shortlist straight away, and add it to the saved lead ---------- */
+function finishLead(){
+  $('mtDeck').hidden=true;$('mtCart').classList.remove('on');
+  ev('shortlist_shown',{shortlist:liked.length,lang:LANG});
+  const rest={shortlist:liked.map(q=>q.x.s.fullName),skipped:skipped.map(k=>({id:(F.find(f=>f.id===k.id)||{s:{}}).s.fullName||k.id,reason:k.reason})),answers:answersNow(),lang:LANG,page:location.pathname};
+  if(LEAD&&LEAD.id) saveLead({leadId:LEAD.id,mobile:LEAD.mobile,...rest}).catch(()=>{});
+  else if(LEAD&&LEAD.pending) saveLead({...LEAD.pending,city:(A.place||{}).city||'',state:(A.place||{}).stateName||'',consent:true,consentText:$('mtConsentText').textContent.trim(),source:leadSource(),hp:$('fWeb').value,t:contactShownAt,stage:'final',...rest}).then(j=>{LEAD={id:j.id,mobile:LEAD.mobile};ev('lead_submitted',{stage:'final',lang:LANG})}).catch(()=>{});
+  showList();
 }
-$('mtExplore').addEventListener('click',()=>ev('lead_form_explore'));
-const field=f=>document.querySelector(`.mt-field[data-f="${f}"]`);
-$('fMobile').addEventListener('input',e=>e.target.value=e.target.value.replace(/[^\d+\s]/g,''));
-$('fPin').addEventListener('input',e=>e.target.value=e.target.value.replace(/\D/g,'').slice(0,6));
-$('mtLead').addEventListener('submit',async e=>{
-  e.preventDefault();
-  const v={name:$('fName').value.trim(),mobile:$('fMobile').value.replace(/[\s-]/g,'').replace(/^(\+?91|0)(?=[6-9]\d{9}$)/,''),email:$('fEmail').value.trim(),pincode:$('fPin').value.trim()};
-  const ok={name:v.name.length>=2,mobile:/^[6-9]\d{9}$/.test(v.mobile),email:/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v.email),pincode:/^[1-9]\d{5}$/.test(v.pincode)};
-  Object.keys(ok).forEach(k=>field(k).classList.toggle('bad',!ok[k]));
-  const consent=$('fConsent').checked;$('mtConsentRow').classList.toggle('bad',!consent);
-  const err=$('mtFormErr');err.textContent='';
-  if(Object.values(ok).includes(false)){const k=Object.keys(ok).find(k=>!ok[k]);field(k).querySelector('input').focus();return}
-  if(!consent){err.textContent='Please tick the box to continue.';return}
-  const pl=place(v.pincode)||A.place||{};
-  const btn=$('mtSubmit');btn.disabled=true;btn.textContent='Saving your shortlist';
-  const qs=new URLSearchParams(location.search), src=['utm_source','utm_medium','utm_campaign'].map(k=>qs.get(k)).filter(Boolean).join(' / ')||document.referrer||'direct';
-  try{
-    const r=await fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({...v,city:pl.city||'',state:pl.stateName||'',consent:true,consentText:$('mtConsentText').textContent.trim(),
-      shortlist:liked.map(q=>q.x.s.fullName),skipped:skipped.map(k=>({id:(F.find(f=>f.id===k.id)||{s:{}}).s.fullName||k.id,reason:k.reason})),
-      answers:Object.fromEntries(['budget','daily','riders','charging','priority','licence'].map(k=>[k,String(A[k]||'').split(',').map(v=>(LABEL[k]||{})[v]||v).join(', ')])),
-      lang:LANG,source:src,page:location.pathname,hp:$('fWeb').value,t:formShownAt})});
-    const j=await r.json().catch(()=>({}));
-    if(!r.ok||!j.ok) throw new Error(j.error||'Could not save right now. Please try again.');
-    ev('lead_submitted',{shortlist:liked.length,lang:LANG});
-    if(pl.state) A.place=pl;
-    showList();
-  }catch(x){err.textContent=x.message==='Failed to fetch'?'Could not save right now. Please try again.':x.message}
-  finally{btn.disabled=false;btn.textContent='Show my shortlist'}
-});
 
 /* ---------- shortlist ---------- */
 function showList(){
-  $('mtForm').hidden=true;$('mtList').hidden=false;
+  $('mtList').hidden=false;
   $('mtListPlace').textContent=A.place?A.place.label:'India';
   try{sessionStorage.setItem('swShortlist',JSON.stringify(liked.map(r=>r.x.id)))}catch(e){}
   const top=$('mtTopActs');

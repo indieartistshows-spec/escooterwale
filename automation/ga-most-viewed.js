@@ -2,7 +2,9 @@
    Reads GA4 scooter_view counts by model for the last full Monday to Sunday week and writes
    data/most-viewed.json (the "Most viewed this week" strip). Adds a comparison page for every
    pair among the top 8 models to data/compare-pairs.json (append only, nothing removed).
-   Needs GA_SA_KEY and GA_PROPERTY_ID; without them it leaves both files as they are. */
+   Also writes data/city-most-viewed.json: each of our cities' most opened scooters over the last
+   28 days (GA city x model), which the city pages show first.
+   Needs GA_SA_KEY and GA_PROPERTY_ID; without them it leaves the files as they are. */
 const fs = require('fs'), crypto = require('crypto');
 const report = { ok: false, note: '' };
 function jwt(sa) {
@@ -37,6 +39,30 @@ function jwt(sa) {
     }
     if (added) fs.writeFileSync(pf, JSON.stringify(cp, null, 1) + '\n');
     report.ok = true; report.note = `${d(mon)} to ${d(sun)}: top ${models.slice(0, 3).map(m => m.id + ' ' + m.views).join(', ')}; ${added} new comparison pages`;
+
+    // per city: which scooters visitors from each of our cities opened most (last 28 days), for the city pages
+    try {
+      const from = new Date(sun.getTime() - 27 * 864e5);
+      const rc = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${pid}:runReport`, { method: 'POST', headers: { authorization: `Bearer ${tok.access_token}`, 'content-type': 'application/json' }, body: JSON.stringify({
+        dateRanges: [{ startDate: d(from), endDate: d(sun) }], dimensions: [{ name: 'city' }, { name: 'customEvent:model' }], metrics: [{ name: 'totalUsers' }], limit: 5000,
+        dimensionFilter: { filter: { fieldName: 'eventName', stringFilter: { value: 'scooter_view' } } } }) }).then(r => r.json());
+      const ALIAS = { bengaluru: 'bangalore', 'new delhi': 'delhi', gurugram: 'delhi', noida: 'delhi', ghaziabad: 'delhi', faridabad: 'delhi', secunderabad: 'hyderabad', 'pimpri-chinchwad': 'pune', thane: 'mumbai', 'navi mumbai': 'mumbai', 'vasai-virar': 'mumbai', howrah: 'kolkata', panchkula: 'chandigarh', 'sahibzada ajit singh nagar': 'chandigarh', mohali: 'chandigarh' };
+      const ours = new Set(JSON.parse(fs.readFileSync('data/cities.json', 'utf8')).map(c => c.id));
+      const all = JSON.parse(fs.readFileSync('data/scooters.json', 'utf8')), score = Object.fromEntries(all.map(s => [s.id, s.score || 0])), onSale = new Set(all.filter(s => !s.discontinued).map(s => s.id));
+      const tally = {};
+      for (const r of rc.rows || []) {
+        const name = r.dimensionValues[0].value.toLowerCase(), id = r.dimensionValues[1].value, cid = ALIAS[name] || name;
+        if (!ours.has(cid) || !onSale.has(id)) continue;
+        const t = (tally[cid] = tally[cid] || {}); t[id] = (t[id] || 0) + +r.metricValues[0].value;
+      }
+      const cities = Object.fromEntries(Object.entries(tally).map(([c, t]) => [c, Object.entries(t).sort((a, b) => b[1] - a[1] || score[b[0]] - score[a[0]]).slice(0, 5).map(([id, visits]) => ({ id, visits }))]));
+      if (Object.keys(cities).length) {
+        const cf = 'data/city-most-viewed.json', cm = JSON.parse(fs.readFileSync(cf, 'utf8'));
+        Object.assign(cm, { from: d(from), to: d(sun), updated: d(new Date()), cities });
+        fs.writeFileSync(cf, JSON.stringify(cm, null, 1) + '\n');
+        report.note += `; city favourites: ${Object.entries(cities).slice(0, 4).map(([c, l]) => c + ' ' + l[0].id).join(', ')}`;
+      }
+    } catch (e) { report.note += '; city favourites unchanged: ' + String(e.message || e).slice(0, 120); }
   } catch (e) { report.note = e.message; }
   fs.mkdirSync('automation/out', { recursive: true });
   fs.writeFileSync('automation/out/most-viewed.json', JSON.stringify(report, null, 1));

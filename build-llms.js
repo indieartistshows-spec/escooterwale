@@ -61,7 +61,7 @@ const rows = SCOOTERS_DB.map(s => [
   `### ${s.brand} ${s.name}`,
   `- URL: ${B}/scooters/${s.id}`,
   `- Ex-showroom price: ${s.priceDisplay}`,
-  `- Estimated on-road price: ${s.onRoadDisplay}`,
+  `- Estimated on-road price from: ${s.onRoadDisplay} (lowest across our 12 cities; varies by state road tax)`,
   `- EMI from: ₹${s.emiFrom}/month`,
   `- Battery: ${s.battery}`,
   `- Claimed range (IDC): ${s.range}`,
