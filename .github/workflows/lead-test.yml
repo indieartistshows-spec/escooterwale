@@ -1,4 +1,5 @@
-# Sends one test lead to the live /api/lead endpoint and commits the reply to reports/lead-test.json,
+# Sends one test lead to the live /api/lead endpoint (from a real browser, automation/lead-test.js) and
+# commits the reply to reports/lead-test.json,
 # so the Google Sheet connection can be checked without anyone's real details. The test row lands
 # in the Sheet's "Tests" tab, never in "Leads". Run it from Actions after changing the Vercel keys.
 name: Lead form test
@@ -7,7 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['.github/workflows/lead-test.yml', 'api/lead.js']
+    paths: ['.github/workflows/lead-test.yml', 'api/lead.js', 'automation/lead-test.js']
 
 permissions:
   contents: write
@@ -18,30 +19,16 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Wait for the new deployment, then send a test lead
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - name: Install
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Wait for the new deployment, then send a test lead from a real browser
         run: |
           sleep 100   # let Vercel finish deploying this commit first
-          URL=https://www.escooterwale.in/api/lead
-          for i in $(seq 1 30); do
-            code=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$URL" -H 'content-type: application/json' -d '{}')
-            echo "attempt $i: $code"
-            [ "$code" = "400" ] || [ "$code" = "500" ] && break
-            sleep 10
-          done
-          mkdir -p reports
-          # 1) contact step (name, mobile, pincode; no email), 2) end of quiz adds the shortlist to the same row
-          curl -s -X POST "$URL" -H 'content-type: application/json' -H 'origin: https://www.escooterwale.in' \
-            -d '{"test":true,"stage":"contact","name":"Connection Test","mobile":"9999999999","pincode":"400001","city":"Mumbai","state":"Maharashtra","consent":true,"consentText":"test","answers":{"budget":"test"},"lang":"en","source":"github-action","page":"/match"}' \
-            | tee /tmp/lead1.json
-          echo
-          ID=$(jq -r '.id // empty' /tmp/lead1.json 2>/dev/null || true)
-          curl -s -X POST "$URL" -H 'content-type: application/json' -H 'origin: https://www.escooterwale.in' \
-            -d "{\"test\":true,\"leadId\":\"$ID\",\"mobile\":\"9999999999\",\"shortlist\":[\"test-model\"],\"answers\":{\"budget\":\"test\",\"licence\":\"yes\"},\"lang\":\"en\",\"page\":\"/match\"}" \
-            | tee /tmp/lead2.json
-          echo
-          # keep the raw replies even when one is not JSON, so a failure can be read from the repo
-          { echo '{"contact":'; cat /tmp/lead1.json; echo ',"final":'; cat /tmp/lead2.json; echo '}'; } > reports/lead-test.json
-          cat reports/lead-test.json
+          node automation/lead-test.js
           echo "{\"ranAt\":\"$(date -u +%FT%TZ)\"}" > reports/lead-test-ran.json
       - name: Commit the reply
         run: |
