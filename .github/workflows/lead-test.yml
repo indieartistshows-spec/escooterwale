@@ -34,12 +34,13 @@ jobs:
             -d '{"test":true,"stage":"contact","name":"Connection Test","mobile":"9999999999","pincode":"400001","city":"Mumbai","state":"Maharashtra","consent":true,"consentText":"test","answers":{"budget":"test"},"lang":"en","source":"github-action","page":"/match"}' \
             | tee /tmp/lead1.json
           echo
-          ID=$(jq -r '.id // empty' /tmp/lead1.json)
+          ID=$(jq -r '.id // empty' /tmp/lead1.json 2>/dev/null || true)
           curl -s -X POST "$URL" -H 'content-type: application/json' -H 'origin: https://www.escooterwale.in' \
             -d "{\"test\":true,\"leadId\":\"$ID\",\"mobile\":\"9999999999\",\"shortlist\":[\"test-model\"],\"answers\":{\"budget\":\"test\",\"licence\":\"yes\"},\"lang\":\"en\",\"page\":\"/match\"}" \
             | tee /tmp/lead2.json
           echo
-          jq -s '{contact: .[0], final: .[1]}' /tmp/lead1.json /tmp/lead2.json > reports/lead-test.json
+          # keep the raw replies even when one is not JSON, so a failure can be read from the repo
+          { echo '{"contact":'; cat /tmp/lead1.json; echo ',"final":'; cat /tmp/lead2.json; echo '}'; } > reports/lead-test.json
           cat reports/lead-test.json
           echo "{\"ranAt\":\"$(date -u +%FT%TZ)\"}" > reports/lead-test-ran.json
       - name: Commit the reply
