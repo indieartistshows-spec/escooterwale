@@ -70,6 +70,14 @@ for (const c of cities) {
   c.subsidy = amt ? inr(amt) : (amt === null ? 'Unclear' : '₹0');
   c.stateId = subsidy.cityState[c.id];
 }
+// GA event name per model (data/scooters.json gaEvent): letters, digits and _ only, max 40, unique.
+// A model added without one gets a code made from its id, so tracking never silently stops.
+{ const seen = new Set();
+  for (const s of scooters) {
+    if (!s.gaEvent || !/^[a-z][a-z0-9_]{0,39}$/.test(s.gaEvent)) { s.gaEvent = ('m_' + s.id.replace(/-kwh$/, '').replace(/point/g, '').replace(/[^a-z0-9]+/g, '_')).slice(0, 40); console.warn(`gaEvent missing for ${s.id}, using ${s.gaEvent}`); }
+    if (seen.has(s.gaEvent)) throw new Error('duplicate gaEvent ' + s.gaEvent);
+    seen.add(s.gaEvent);
+  } }
 for (const s of scooters) {
   s.shortBrand = (brandById[s.brandSlug] || {}).shortName || s.brand;
   s.fullName = fullName(s);

@@ -465,9 +465,9 @@
   <span>உங்கள் ஷார்ட்லிஸ்ட் சேமிக்கப்படுகிறது</span><span>தொடர பெட்டியில் டிக் செய்யவும்.</span><span>இப்போது சேமிக்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.</span><span>அதிக முயற்சிகள். சில நிமிடங்கள் காத்திருக்கவும்.</span><span>நகலெடுக்கப்பட்டது. எங்கும் ஒட்டி பகிருங்கள்.</span><span>இந்தியா</span>
 </div>
 
-<script src="/data.js?v=8f63dae4"></script>
+<script src="/data.js?v=18c77026"></script>
 <script src="/seo.js?v=6b580009"></script>
-<script src="/outbound.js?v=e9ecae44"></script>
+<script src="/outbound.js?v=3f21bbce"></script>
 <script src="/components.js?v=89a51694"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('match');
@@ -695,6 +695,7 @@ function renderDeck(){
   const st=$('mtStack');st.innerHTML='';
   if(!queue.length) return deckDone();
   cur=queue[0];const el=card(cur,false);st.appendChild(el);drag(el);
+  if(window.swViewModel) swViewModel(cur.x.id,'quiz');
   if(!hinted){hinted=true;el.insertAdjacentHTML('beforeend','<span class="mt-swipehint yes">Shortlist <span aria-hidden="true">→</span></span><span class="mt-swipehint no"><span aria-hidden="true">←</span> Reject</span>');
     el.classList.add('hinting');
     const stop=()=>{el.classList.remove('hinting');el.querySelectorAll('.mt-swipehint').forEach(h=>h.remove())};

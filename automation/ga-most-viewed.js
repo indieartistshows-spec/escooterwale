@@ -1,11 +1,12 @@
 /* automation/ga-most-viewed.js | weekly: which scooters people opened most last week.
-   Reads GA4 scooter_view counts by model for the last full Monday to Sunday week and writes
+   Reads GA4 scooter view counts (one event per model, see lib/view-events.js) by model for the last full Monday to Sunday week and writes
    data/most-viewed.json (the "Most viewed this week" strip). Adds a comparison page for every
    pair among the top 8 models to data/compare-pairs.json (append only, nothing removed).
    Also writes data/city-most-viewed.json: each of our cities' most opened scooters over the last
    28 days (GA city x model), which the city pages show first.
    Needs GA_SA_KEY and GA_PROPERTY_ID; without them it leaves the files as they are. */
 const fs = require('fs'), crypto = require('crypto');
+const { viewFilter } = require('./lib/view-events');
 const report = { ok: false, note: '' };
 function jwt(sa) {
   const b64 = o => Buffer.from(JSON.stringify(o)).toString('base64url'), now = Math.floor(Date.now() / 1000);
@@ -24,7 +25,7 @@ function jwt(sa) {
     if (!tok.access_token) throw new Error('GA sign-in failed');
     const rep = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${pid}:runReport`, { method: 'POST', headers: { authorization: `Bearer ${tok.access_token}`, 'content-type': 'application/json' }, body: JSON.stringify({
       dateRanges: [{ startDate: d(mon), endDate: d(sun) }], dimensions: [{ name: 'customEvent:model' }], metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }], limit: 200,
-      dimensionFilter: { filter: { fieldName: 'eventName', stringFilter: { value: 'scooter_view' } } }, orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }] }) }).then(r => r.json());
+      dimensionFilter: viewFilter(), orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }] }) }).then(r => r.json());
     const ids = new Set(JSON.parse(fs.readFileSync('data/scooters.json', 'utf8')).map(s => s.id));
     const models = (rep.rows || []).map(r => ({ id: r.dimensionValues[0].value, views: +r.metricValues[0].value, people: +r.metricValues[1].value })).filter(m => ids.has(m.id));
     if (models.length < 5) throw new Error(`only ${models.length} models with views; most viewed unchanged`);
@@ -45,7 +46,7 @@ function jwt(sa) {
       const from = new Date(sun.getTime() - 27 * 864e5);
       const rc = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${pid}:runReport`, { method: 'POST', headers: { authorization: `Bearer ${tok.access_token}`, 'content-type': 'application/json' }, body: JSON.stringify({
         dateRanges: [{ startDate: d(from), endDate: d(sun) }], dimensions: [{ name: 'city' }, { name: 'customEvent:model' }], metrics: [{ name: 'totalUsers' }], limit: 5000,
-        dimensionFilter: { filter: { fieldName: 'eventName', stringFilter: { value: 'scooter_view' } } } }) }).then(r => r.json());
+        dimensionFilter: viewFilter() }) }).then(r => r.json());
       const ALIAS = { bengaluru: 'bangalore', 'new delhi': 'delhi', gurugram: 'delhi', noida: 'delhi', ghaziabad: 'delhi', faridabad: 'delhi', secunderabad: 'hyderabad', 'pimpri-chinchwad': 'pune', thane: 'mumbai', 'navi mumbai': 'mumbai', 'vasai-virar': 'mumbai', howrah: 'kolkata', panchkula: 'chandigarh', 'sahibzada ajit singh nagar': 'chandigarh', mohali: 'chandigarh' };
       const ours = new Set(JSON.parse(fs.readFileSync('data/cities.json', 'utf8')).map(c => c.id));
       const all = JSON.parse(fs.readFileSync('data/scooters.json', 'utf8')), score = Object.fromEntries(all.map(s => [s.id, s.score || 0])), onSale = new Set(all.filter(s => !s.discontinued).map(s => s.id));

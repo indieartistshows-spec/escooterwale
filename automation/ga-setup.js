@@ -12,6 +12,7 @@ const DIMENSIONS = [
   ['model', 'Model', 'Scooter model id'],
   ['page_type', 'Page type', 'home, scooters, brands, cities, best, compare, match and so on'],
   ['page_entity', 'Page item', 'The model, brand or city a page is about'],
+  ['seen_on', 'Seen on', 'Where a scooter was viewed: model_page, compare or quiz (per-model view events)'],
   ['lang', 'Site language', 'en, hi, mr, ta, te, kn, gu, bn or or'],
   ['link_type', 'Outbound link type', 'brand, test-ride, dealer, aggregator or external'],
   ['link_domain', 'Outbound domain', 'Website an outbound click went to'],

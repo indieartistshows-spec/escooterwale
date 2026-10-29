@@ -27,9 +27,9 @@
 <meta property="og:description" id="ogDesc" content="Ola S1 Pro 3 kWh at ₹1,29,999 or Ola S1 Pro+ 5.2 kWh at ₹1,74,999? Real-world range, specs, running cost and our verdict, side by side.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="/styles.css?v=e08dcda1">
-<script src="/data.js?v=8f63dae4"></script>
+<script src="/data.js?v=18c77026"></script>
 <script src="/seo.js?v=6b580009"></script>
-<script src="/outbound.js?v=e9ecae44"></script>
+<script src="/outbound.js?v=3f21bbce"></script>
 <script src="/components.js?v=89a51694"></script>
 <script src="/videos-db.js?v=f29ab906"></script>
 <style>
@@ -717,6 +717,7 @@ function runCompare(opts){
   if(!a||!b){console.warn('EScooterwale: unknown scooter id',idA,idB);return;}
   document.getElementById('cmpOutput').innerHTML=buildCmp(a,b);
   updateSEO(a,b);
+  if(window.swViewModel){ swViewModel(a.id,'compare'); swViewModel(b.id,'compare'); }
   if(scroll) document.querySelector('.cmp-body').scrollIntoView({behavior:'smooth',block:'start'});
   if(!window.__SW_A__){
     // a pair with its own page gets that page's address; any other pair keeps the ?a=&b= form

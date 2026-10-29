@@ -51,10 +51,21 @@
 
   const send = (name, params) => { try { if (typeof gtag === 'function') gtag('event', name, Object.assign({ page_type: pageType, page_entity: pageEntity, lang: LANG }, params)); } catch (e) {} };
 
-  // browses: which scooter model pages people open
-  if (pageType === 'scooters' && pageEntity) {
-    const s = scooters.find(x => x.id === pageEntity);
-    send('scooter_view', { model: pageEntity, brand: s ? s.brandSlug : '' });
+  // scooter views: one GA event per model, named by its code in data/scooters.json (gaEvent, e.g.
+  // amp_mag_gmax_3, ath_450s_29). Fired when a model is actually looked at: its own page, a comparison
+  // page (both models), or its card in the match quiz deck. Each carries model, brand and seen_on.
+  // (Replaces the single scooter_view event, Oct 2026.)
+  const all = G('SCOOTERS_ALL') || scooters, seenViews = new Set();
+  window.swViewModel = (id, where) => {
+    const s = all.find(x => x.id === id);
+    if (!s || !s.gaEvent || seenViews.has(id + '|' + where)) return;
+    seenViews.add(id + '|' + where);
+    send(s.gaEvent, { model: s.id, brand: s.brandSlug, seen_on: where });
+  };
+  if (pageType === 'scooters' && pageEntity) window.swViewModel(pageEntity, 'model_page');
+  if (pageType === 'compare' && pageEntity.includes('-vs-')) {
+    const i = all.map(s => s.id).find(id => pageEntity.startsWith(id + '-vs-'));
+    if (i) { window.swViewModel(i, 'compare'); window.swViewModel(pageEntity.slice(i.length + 4), 'compare'); }
   }
 
   // clicks inside the site: buttons and links that stay on escooterwale.in

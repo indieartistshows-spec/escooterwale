@@ -43,3 +43,13 @@ Also check GitHub → Settings → Actions → General → **Workflow permission
 
 Actions → **Weekly update** → Run workflow. Untick "scrape" to only rebuild from the current `/data`.
 Locally: `npm ci && node tools/build-all.js`.
+
+## Scooter view tracking in Google Analytics
+
+Each scooter has its own GA event, named by the `gaEvent` code in `data/scooters.json`
+(brand_model_variant, for example `amp_mag_gmax_3`, `ath_450s_29`, `bjc_c3501`). It fires when the
+model is looked at: its own page (`seen_on: model_page`), a comparison page (`compare`), or its card
+in the match quiz (`quiz`), with the model id and brand as parameters. The old single `scooter_view`
+event is no longer sent; the weekly reports read both, so earlier weeks still count.
+Codes never change once set, even if a model is renamed. A new model added without a code gets one
+made from its id at build time.

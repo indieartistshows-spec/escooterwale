@@ -3,6 +3,7 @@
    for today and the last 7 days. Writes reports/ga-traffic.json (no personal data).
    Needs GA_SA_KEY and GA_PROPERTY_ID. Run from .github/workflows/ga-traffic.yml. */
 const fs = require('fs'), crypto = require('crypto');
+const { viewFilter } = require('./lib/view-events');
 function jwt(sa) {
   const b64 = o => Buffer.from(JSON.stringify(o)).toString('base64url'), now = Math.floor(Date.now() / 1000);
   const head = b64({ alg: 'RS256', typ: 'JWT' }), body = b64({ iss: sa.client_email, scope: 'https://www.googleapis.com/auth/analytics.readonly', aud: 'https://oauth2.googleapis.com/token', iat: now, exp: now + 3600 });
@@ -30,10 +31,10 @@ function jwt(sa) {
   out.weekly = flat(await run({ dateRanges: [{ startDate: '2026-08-31', endDate: 'yesterday' }], dimensions: [{ name: 'isoYearIsoWeek' }, { name: 'country' }, { name: 'sessionDefaultChannelGroup' }],
     metrics: ['activeUsers', 'sessions', 'engagedSessions', 'screenPageViews', 'keyEvents'].map(name => ({ name })), limit: 5000 }));
   out.events = flat(await run({ dateRanges: [{ startDate: '2026-10-19', endDate: 'yesterday' }], dimensions: [{ name: 'eventName' }], metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }], limit: 50 }));
-  // which scooters and brands people actually opened (scooter_view carries model and brand)
+  // which scooters and brands people actually opened (the per-model view events carry model and brand)
   out.scooterViews = flat(await run({ dateRanges: [{ startDate: '2026-10-19', endDate: '2026-10-25' }], dimensions: [{ name: 'customEvent:brand' }, { name: 'customEvent:model' }],
     metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }], limit: 200,
-    dimensionFilter: { filter: { fieldName: 'eventName', stringFilter: { value: 'scooter_view' } } }, orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }] }));
+    dimensionFilter: viewFilter(), orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }] }));
   fs.mkdirSync('reports', { recursive: true });
   fs.writeFileSync('reports/ga-traffic.json', JSON.stringify(out, null, 1));
   console.log('done');

@@ -6,6 +6,7 @@
    Needs GA_SA_KEY and GA_PROPERTY_ID. Run from .github/workflows/brand-interest.yml.
    Usage: node automation/brand-interest.js [YYYY-MM] */
 const fs = require('fs'), crypto = require('crypto');
+const { viewFilter } = require('./lib/view-events');
 function jwt(sa) {
   const b64 = o => Buffer.from(JSON.stringify(o)).toString('base64url'), now = Math.floor(Date.now() / 1000);
   const head = b64({ alg: 'RS256', typ: 'JWT' }), body = b64({ iss: sa.client_email, scope: 'https://www.googleapis.com/auth/analytics.readonly', aud: 'https://oauth2.googleapis.com/token', iat: now, exp: now + 3600 });
@@ -29,7 +30,7 @@ const byId = Object.fromEntries(S.map(s => [s.id, s])), bname = id => (B.find(b 
   const ev = (name, dims) => run({ dimensions: dims.map(n => ({ name: n })), metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }],
     dimensionFilter: { filter: { fieldName: 'eventName', stringFilter: { value: name } } } }).then(rows);
 
-  const views = await ev('scooter_view', ['customEvent:model']);
+  const views = rows(await run({ dimensions: [{ name: 'customEvent:model' }], metrics: [{ name: 'eventCount' }, { name: 'totalUsers' }], dimensionFilter: viewFilter() }));
   const swipes = await ev('match_swipe', ['customEvent:model', 'customEvent:direction']);
   // brand_click fires for brand site, test ride and dealer links; link_type tells them apart.
   // If link_type is not registered as a custom dimension in GA, every click counts as a brand site click.
