@@ -367,6 +367,7 @@ function footerHTML(){
           <a href="/electric-scooter-price">EV Scooter Price List</a>
           <a href="/best/under-1-lakh">Electric Scooter Under 1 Lakh</a>
           <a href="/launches">Upcoming Launches</a>
+          <a href="/city">Prices by City</a>
         </div>
 
         <!-- Tools & Guides -->

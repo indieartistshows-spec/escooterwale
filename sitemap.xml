@@ -49,6 +49,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.escooterwale.in/city</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.escooterwale.in/yellow-brother</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -1508,6 +1514,12 @@
   </url>
   <url>
     <loc>https://www.escooterwale.in/hi/launches</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.escooterwale.in/hi/city</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2977,6 +2989,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.escooterwale.in/mr/city</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.escooterwale.in/mr/yellow-brother</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -4436,6 +4454,12 @@
   </url>
   <url>
     <loc>https://www.escooterwale.in/ta/launches</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.escooterwale.in/ta/city</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -5905,6 +5929,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.escooterwale.in/te/city</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.escooterwale.in/te/yellow-brother</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -7364,6 +7394,12 @@
   </url>
   <url>
     <loc>https://www.escooterwale.in/kn/launches</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.escooterwale.in/kn/city</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -8833,6 +8869,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.escooterwale.in/gu/city</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.escooterwale.in/gu/yellow-brother</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -10297,6 +10339,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.escooterwale.in/bn/city</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.escooterwale.in/bn/yellow-brother</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -11756,6 +11804,12 @@
   </url>
   <url>
     <loc>https://www.escooterwale.in/or/launches</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.escooterwale.in/or/city</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

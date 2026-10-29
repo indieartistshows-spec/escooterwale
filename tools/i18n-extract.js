@@ -7,7 +7,7 @@ const SKIP_TAGS = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'SVG', 'CODE', 'PRE', 
 const ATTRS = ['title', 'alt', 'placeholder', 'aria-label', 'data-label', 'data-short'];
 
 function englishPages() {
-  const root = fs.readdirSync('.').filter(f => f.endsWith('.html') && !['scooter-detail.html', 'brand.html', 'city.html', 'article.html', 'terms.html', 'privacy.html'].includes(f));
+  const root = fs.readdirSync('.').filter(f => f.endsWith('.html') && !['scooter-detail.html', 'brand.html', 'article.html', 'terms.html', 'privacy.html'].includes(f));
   const dirs = ['scooters', 'brands', 'cities', 'best', 'articles', 'compare'].flatMap(d => fs.existsSync(d) ? fs.readdirSync(d).map(x => path.join(d, x, 'index.html')).filter(f => fs.existsSync(f)) : []);
   return root.concat(dirs);
 }

@@ -13,14 +13,14 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-<title id="pgTitle">Electric Scooter Price in Mumbai 2026: On-Road Prices | EScooterwale</title>
+<title id="pgTitle">Electric Scooter Price by City 2026: On-Road Price and Subsidy in 12 Cities | EScooterwale</title>
 <meta property="og:image" content="https://www.escooterwale.in/images/og/city.jpg?v=037c1195"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="EScooterwale"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.escooterwale.in/images/og/city.jpg?v=037c1195"/>
-<meta name="description" id="pgDesc" content="Find electric scooters in Mumbai. Best EV prices, dealer locations, state government subsidies, charging stations map. Compare Ola, Ather, TVS in Mumbai."/>
+<meta name="description" id="pgDesc" content="Pick your city for the on-road price of every electric scooter, the state EV subsidy and road tax, the most viewed scooters there, and dealers near you."/>
 <meta name="keywords" content="electric scooter mumbai, ev scooter price mumbai, ev dealer mumbai, electric scooter bangalore, ev scooter delhi price"/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/city"/>
 <link rel="stylesheet" href="styles.css?v=2e218cf0"/>
@@ -58,11 +58,36 @@
 .city-price-table td a{color:var(--ink);font-weight:600;text-decoration:none}
 .city-price-table .amt{font-weight:700;color:var(--g)}
 @media(max-width:900px){.city-layout{grid-template-columns:1fr}.city-stats-row{gap:12px}}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:18px 0 36px}
+.hub-card{display:block;background:var(--surf);border:1px solid var(--border);border-radius:14px;padding:16px 16px 14px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.hub-card:hover{border-color:var(--g);transform:translateY(-2px)}
+.hub-card.mine{border-color:var(--g);box-shadow:0 0 0 2px var(--g) inset}
+.hub-card h3{font-size:18px;margin:0}
+.hub-state{font-size:12px;color:var(--ink-3);margin:2px 0 10px}
+.hub-row{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:4px 0;border-top:1px dashed var(--border)}
+.hub-row span:first-child{color:var(--ink-3)}
+.hub-row b{text-align:right}
+.hub-fav{font-size:12px;color:var(--ink-2);margin-top:8px}
+.hub-cta{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--g-dim,#0e7a49)}
+@media(max-width:600px){#cityHub .grid-3{grid-template-columns:1fr}.hub-grid{grid-template-columns:1fr}}
+.hub-mine{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:var(--g);color:#fff;border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}
 </style>
 
 <!-- Favicon -->
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!--hreflang-->
+<link rel="alternate" hreflang="en-IN" href="https://www.escooterwale.in/city"/>
+<link rel="alternate" hreflang="hi-IN" href="https://www.escooterwale.in/hi/city"/>
+<link rel="alternate" hreflang="mr-IN" href="https://www.escooterwale.in/mr/city"/>
+<link rel="alternate" hreflang="ta-IN" href="https://www.escooterwale.in/ta/city"/>
+<link rel="alternate" hreflang="te-IN" href="https://www.escooterwale.in/te/city"/>
+<link rel="alternate" hreflang="kn-IN" href="https://www.escooterwale.in/kn/city"/>
+<link rel="alternate" hreflang="gu-IN" href="https://www.escooterwale.in/gu/city"/>
+<link rel="alternate" hreflang="bn-IN" href="https://www.escooterwale.in/bn/city"/>
+<link rel="alternate" hreflang="or-IN" href="https://www.escooterwale.in/or/city"/>
+<link rel="alternate" hreflang="x-default" href="https://www.escooterwale.in/city"/>
+<!--/hreflang-->
 </head>
 <body>
 <div id="navMount"></div>
@@ -71,7 +96,7 @@
 <div class="city-hero" id="cityHero">
   <div class="container city-hero-content">
     <div class="eyebrow mb-12">EV scooters near you</div>
-    <h1 id="cityHeroTitle">Electric scooters in Mumbai</h1>
+    <h1 id="cityHeroTitle">Electric scooters by city</h1>
     <p id="cityHeroDesc">Find the best EV scooter prices, dealers, charging stations, and state subsidies in Mumbai.</p>
     <div class="city-stats-row">
       <div class="cst"><div class="cst-num" id="statDealers">420</div><div class="cst-lbl">EV brands on sale</div></div>
@@ -82,14 +107,16 @@
   </div>
 </div>
 
-<div class="breadcrumb"><div class="container"><div class="breadcrumb-inner"><a href="/">Home</a><span class="bc-sep">›</span><span>EV Scooters by City</span><span class="bc-sep">›</span><span id="bcCity">Mumbai</span></div></div></div>
+<div class="breadcrumb"><div class="container"><div class="breadcrumb-inner"><a href="/">Home</a><span class="bc-sep">›</span><a href="/city" id="bcHub">EV Scooters by City</a><span class="bc-sep" id="bcSep2">›</span><span id="bcCity">Mumbai</span></div></div></div>
 
 <div class="container">
-  <div style="padding-top:24px;margin-bottom:4px;font-size:13px;font-weight:600;color:var(--ink-3)">Browse by city:</div>
+  <div style="padding-top:24px;margin-bottom:4px;font-size:13px;font-weight:600;color:var(--ink-3)" id="citySelLbl">Browse by city:</div>
   <div class="city-selector" id="citySelector"></div>
 </div>
 
-<div class="container">
+<div class="container" id="cityHub" hidden></div>
+
+<div class="container" id="cityOnly">
 <div class="city-layout">
 
 <div>
@@ -169,10 +196,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="data.js?v=dc155bbb"></script>
+<script src="data.js?v=c084b35d"></script>
 <script src="seo.js?v=32380c46"></script>
 <script src="outbound.js?v=3f21bbce"></script>
-<script src="components.js?v=5938102b"></script>
+<script src="components.js?v=aee08dfb"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -335,9 +362,56 @@ function loadCity(cityId){
   document.getElementById('stateBenefits').innerHTML=`<ul>${ben.map(b=>`<li class="trust-item" style="padding:4px 0"><span class="trust-icon">✓</span><span style="font-size:13px">${b}</span></li>`).join('')}</ul>`;
 }
 
-// Init from URL
-const initCity=window.__SW_CITY__||new URLSearchParams(location.search).get('city')||SW_CONFIG.headlineCity||'mumbai';
-loadCity(initCity);
+/* /city with no city chosen: a hub. Pick a city, or explore scooters at national prices. */
+function loadHub(){
+  const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/)/)||[''])[0];
+  const mine=(typeof swGetCity==='function'&&!navigator.webdriver)?swGetCity():null;
+  document.getElementById('cityOnly').hidden=true;
+  document.getElementById('cityHub').hidden=false;
+  document.getElementById('bcSep2').style.display='none';
+  document.getElementById('bcCity').style.display='none';
+  document.getElementById('citySelLbl').textContent='Pick your city:';
+  const t='Electric Scooter Price by City 2026: On-Road Price and Subsidy in '+CITIES_DB.length+' Cities | EScooterwale';
+  const d=`Pick your city for the on-road price of all ${SCOOTERS_DB.length} electric scooters, the state EV subsidy and road tax, the scooters people there look at most, and dealers near you. ${CITIES_DB.map(c=>c.name).join(', ')}.`;
+  document.getElementById('pgTitle').textContent=t; document.title=t;
+  document.getElementById('pgDesc').setAttribute('content',d);
+  document.getElementById('pgCanon').setAttribute('href','https://www.escooterwale.in/city');
+  document.getElementById('cityHeroTitle').textContent='Electric scooters by city';
+  document.getElementById('cityHeroDesc').textContent='Pick your city to see on-road prices, the state subsidy and road tax, the scooters people there look at most, and dealers near you. Prices below are national until you choose.';
+  document.getElementById('cityHero').style.backgroundImage="url('/images/hero-scooter.webp')";
+  const natMin=Math.min(...SCOOTERS_DB.map(s=>s.nationalPrice||s.price));
+  const stats=[[CITIES_DB.length,'Cities covered'],[SCOOTERS_DB.length,'Models on sale'],[BRANDS_DB.length,'EV brands'],[inrC(natMin),'Ex-showroom from']];
+  ['statDealers','statSubsidy','statChargers','statRegistered'].forEach((id,i)=>{ const el=document.getElementById(id); el.textContent=stats[i][0]; el.nextElementSibling.textContent=stats[i][1]; });
+  document.querySelectorAll('.city-sel-btn').forEach(b=>b.classList.toggle('active',b.dataset.city===mine));
+
+  const CMV=(typeof CITY_MOST_VIEWED!=='undefined'&&CITY_MOST_VIEWED)||{cities:{}};
+  const cards=CITIES_DB.map(c=>{
+    const stateId=SUBSIDY.cityState[c.id], st=SUBSIDY.states[stateId]||{name:c.state}, cash=st.cash||{};
+    const fav=(CMV.cities[c.id]||[]).find(m=>m.visits>=(CMV.minVisits||2)&&SCOOTERS_DB.some(s=>s.id===m.id));
+    const favS=fav&&SCOOTERS_DB.find(s=>s.id===fav.id);
+    return `<a class="hub-card${c.id===mine?' mine':''}" href="${lp}/cities/${c.id}" data-city="${c.id}">
+      <h3>${c.name}${c.id===mine?'<span class="hub-mine">Your city</span>':''}</h3>
+      <div class="hub-state">${st.name||c.state||''}</div>
+      <div class="hub-row"><span>State subsidy</span><b>${cash.amount?'Up to '+inrC(cash.amount):(cash.amount===null?'Unclear':'None')}</b></div>
+      <div class="hub-row"><span>Road tax on EVs</span><b>${roadTaxLabel(st)}</b></div>
+      ${favS?`<div class="hub-fav">Most viewed here: <strong translate="no">${favS.fullName}</strong></div>`:''}
+      <span class="hub-cta">See ${c.name} prices →</span>
+    </a>`;
+  }).join('');
+  const mv=((typeof MOST_VIEWED!=='undefined'&&MOST_VIEWED.models)||[]).map(m=>SCOOTERS_DB.find(s=>s.id===m.id)).filter(Boolean);
+  const seen=new Set(), pop=[]; for(const s of mv.concat([...SCOOTERS_DB].sort((a,b)=>b.score-a.score))){ if(!seen.has(s.id)){ seen.add(s.id); pop.push(s); } if(pop.length===6) break; }
+  document.getElementById('cityHub').innerHTML=`
+    <div class="sec-hd" style="margin:28px 0 0"><div><div class="eyebrow">Choose a city</div><h2 class="mt-8">Electric scooter prices in ${CITIES_DB.length} cities</h2></div></div>
+    <p style="font-size:14px;color:var(--ink-3);margin:6px 0 0">On-road prices change with the state's road tax and subsidy. Pick your city and every price on the site follows it.</p>
+    <div class="hub-grid">${cards}</div>
+    <div class="sec-hd" style="margin-bottom:16px"><div><div class="eyebrow">Explore scooters</div><h2 class="mt-8">Most viewed electric scooters across India</h2></div><a href="${lp}/listings" class="sec-hd-right">All ${SCOOTERS_DB.length} scooters →</a></div>
+    <div class="grid-3" style="margin-bottom:40px">${pop.map(s=>scooterCardHTML(s)).join('')}</div>`;
+  document.getElementById('cityHub').addEventListener('click',e=>{ const a=e.target.closest('.hub-card'); if(a&&typeof swSetCity==='function') swSetCity(a.dataset.city,'city_hub'); });
+}
+
+// Init from URL: a city page, or the hub when no city is given
+const initCity=window.__SW_CITY__||new URLSearchParams(location.search).get('city');
+if(initCity&&CITIES_DB.some(c=>c.id===initCity)) loadCity(initCity); else loadHub();
 // opening a city page counts as choosing that city (prices elsewhere follow it)
 if(window.__SW_CITY__&&typeof swSetCity==='function'&&!navigator.webdriver) swSetCity(window.__SW_CITY__,'city_page',true);
 </script>

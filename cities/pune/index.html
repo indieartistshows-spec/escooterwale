@@ -58,6 +58,19 @@
 .city-price-table td a{color:var(--ink);font-weight:600;text-decoration:none}
 .city-price-table .amt{font-weight:700;color:var(--g)}
 @media(max-width:900px){.city-layout{grid-template-columns:1fr}.city-stats-row{gap:12px}}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:18px 0 36px}
+.hub-card{display:block;background:var(--surf);border:1px solid var(--border);border-radius:14px;padding:16px 16px 14px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.hub-card:hover{border-color:var(--g);transform:translateY(-2px)}
+.hub-card.mine{border-color:var(--g);box-shadow:0 0 0 2px var(--g) inset}
+.hub-card h3{font-size:18px;margin:0}
+.hub-state{font-size:12px;color:var(--ink-3);margin:2px 0 10px}
+.hub-row{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:4px 0;border-top:1px dashed var(--border)}
+.hub-row span:first-child{color:var(--ink-3)}
+.hub-row b{text-align:right}
+.hub-fav{font-size:12px;color:var(--ink-2);margin-top:8px}
+.hub-cta{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--g-dim,#0e7a49)}
+@media(max-width:600px){#cityHub .grid-3{grid-template-columns:1fr}.hub-grid{grid-template-columns:1fr}}
+.hub-mine{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:var(--g);color:#fff;border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}
 </style>
 
 <!-- Favicon -->
@@ -133,14 +146,16 @@
   </div>
 </div>
 
-<div class="breadcrumb"><div class="container"><div class="breadcrumb-inner"><a href="/">Home</a><span class="bc-sep">›</span><span>EV Scooters by City</span><span class="bc-sep">›</span><span id="bcCity">Pune</span></div></div></div>
+<div class="breadcrumb"><div class="container"><div class="breadcrumb-inner"><a href="/">Home</a><span class="bc-sep">›</span><a href="/city" id="bcHub">EV Scooters by City</a><span class="bc-sep" id="bcSep2">›</span><span id="bcCity">Pune</span></div></div></div>
 
 <div class="container">
-  <div style="padding-top:24px;margin-bottom:4px;font-size:13px;font-weight:600;color:var(--ink-3)">Browse by city:</div>
+  <div style="padding-top:24px;margin-bottom:4px;font-size:13px;font-weight:600;color:var(--ink-3)" id="citySelLbl">Browse by city:</div>
   <div class="city-selector" id="citySelector"><a class="city-sel-btn" href="/cities/mumbai" data-city="mumbai">Mumbai</a><a class="city-sel-btn" href="/cities/delhi" data-city="delhi">Delhi</a><a class="city-sel-btn" href="/cities/bangalore" data-city="bangalore">Bengaluru</a><a class="city-sel-btn" href="/cities/hyderabad" data-city="hyderabad">Hyderabad</a><a class="city-sel-btn" href="/cities/chennai" data-city="chennai">Chennai</a><a class="city-sel-btn active" href="/cities/pune" data-city="pune">Pune</a><a class="city-sel-btn" href="/cities/ahmedabad" data-city="ahmedabad">Ahmedabad</a><a class="city-sel-btn" href="/cities/kolkata" data-city="kolkata">Kolkata</a><a class="city-sel-btn" href="/cities/jaipur" data-city="jaipur">Jaipur</a><a class="city-sel-btn" href="/cities/lucknow" data-city="lucknow">Lucknow</a><a class="city-sel-btn" href="/cities/surat" data-city="surat">Surat</a><a class="city-sel-btn" href="/cities/chandigarh" data-city="chandigarh">Chandigarh</a></div>
 </div>
 
-<div class="container">
+<div class="container" id="cityHub" hidden=""></div>
+
+<div class="container" id="cityOnly">
 <div class="city-layout">
 
 <div>
@@ -161,7 +176,7 @@
   </div>
 
   <!-- POPULAR WITH BUYERS HERE -->
-  <div id="cityPopular"><div class="mv-strip"><div class="mv-hd"><div><div class="eyebrow">Most viewed by visitors in Pune</div><div class="mv-sub">With the approximate on-road price here</div></div></div><div class="mv-row"><a class="mv-card" href="/scooters/bajaj-chetak-chetak-3501-3point5-kwh"><img src="/images/cards/bajaj-chetak-chetak-3501-3point5-kwh.webp?v=tnov5s" alt="Bajaj Chetak C3501 3.5 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Bajaj</span><span class="mv-name" translate="no">Chetak C3501 3.5 kWh</span><span class="mv-price">₹1,60,620 <small>on-road</small></span></a><a class="mv-card" href="/scooters/hero-vida-vx2-plus-3point4-kwh"><img src="/images/cards/hero-vida-vx2-plus-3point4-kwh.webp?v=tnov5s" alt="Hero Vida VX2 Plus 3.4 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Hero Vida</span><span class="mv-name" translate="no">VX2 Plus 3.4 kWh</span><span class="mv-price">₹1,47,530 <small>on-road</small></span></a><a class="mv-card" href="/scooters/bajaj-chetak-chetak-3502-3point5-kwh"><img src="/images/cards/bajaj-chetak-chetak-3502-3point5-kwh.webp?v=tnov5s" alt="Bajaj Chetak C3502 3.5 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Bajaj</span><span class="mv-name" translate="no">Chetak C3502 3.5 kWh</span><span class="mv-price">₹1,45,080 <small>on-road</small></span></a><a class="mv-card" href="/scooters/bajaj-chetak-chetak-3503-3point5-kwh"><img src="/images/cards/bajaj-chetak-chetak-3503-3point5-kwh.webp?v=tnov5s" alt="Bajaj Chetak C3503 3.5 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Bajaj</span><span class="mv-name" translate="no">Chetak C3503 3.5 kWh</span><span class="mv-price">₹1,31,960 <small>on-road</small></span></a><a class="mv-card" href="/scooters/hero-vida-v2-pro-3point94-kwh"><img src="/images/cards/hero-vida-v2-pro-3point94-kwh.webp?v=tnov5s" alt="Hero Vida V2 Pro 3.94 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Hero Vida</span><span class="mv-name" translate="no">V2 Pro 3.94 kWh</span><span class="mv-price">₹1,21,380 <small>on-road</small></span></a></div></div></div>
+  <div id="cityPopular"><div class="mv-strip"><div class="mv-hd"><div><div class="eyebrow">Most viewed by visitors in Pune</div><div class="mv-sub">With the approximate on-road price here</div></div></div><div class="mv-row"><a class="mv-card" href="/scooters/bajaj-chetak-chetak-3501-3point5-kwh"><img src="/images/cards/bajaj-chetak-chetak-3501-3point5-kwh.webp?v=tnhri5" alt="Bajaj Chetak C3501 3.5 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Bajaj</span><span class="mv-name" translate="no">Chetak C3501 3.5 kWh</span><span class="mv-price">₹1,60,620 <small>on-road</small></span></a><a class="mv-card" href="/scooters/hero-vida-vx2-plus-3point4-kwh"><img src="/images/cards/hero-vida-vx2-plus-3point4-kwh.webp?v=tnhri5" alt="Hero Vida VX2 Plus 3.4 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Hero Vida</span><span class="mv-name" translate="no">VX2 Plus 3.4 kWh</span><span class="mv-price">₹1,47,530 <small>on-road</small></span></a><a class="mv-card" href="/scooters/bajaj-chetak-chetak-3502-3point5-kwh"><img src="/images/cards/bajaj-chetak-chetak-3502-3point5-kwh.webp?v=tnhri5" alt="Bajaj Chetak C3502 3.5 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Bajaj</span><span class="mv-name" translate="no">Chetak C3502 3.5 kWh</span><span class="mv-price">₹1,45,080 <small>on-road</small></span></a><a class="mv-card" href="/scooters/bajaj-chetak-chetak-3503-3point5-kwh"><img src="/images/cards/bajaj-chetak-chetak-3503-3point5-kwh.webp?v=tnhri5" alt="Bajaj Chetak C3503 3.5 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Bajaj</span><span class="mv-name" translate="no">Chetak C3503 3.5 kWh</span><span class="mv-price">₹1,31,960 <small>on-road</small></span></a><a class="mv-card" href="/scooters/hero-vida-v2-pro-3point94-kwh"><img src="/images/cards/hero-vida-v2-pro-3point94-kwh.webp?v=tnhri5" alt="Hero Vida V2 Pro 3.94 kWh" loading="lazy" width="120" height="120"><span class="mv-brand" translate="no">Hero Vida</span><span class="mv-name" translate="no">V2 Pro 3.94 kWh</span><span class="mv-price">₹1,21,380 <small>on-road</small></span></a></div></div></div>
 
   <!-- ON-ROAD PRICES IN CITY -->
   <div class="sec-hd" style="margin-bottom:12px">
@@ -183,7 +198,7 @@
   <div class="grid-3" id="cityPicksGrid">
   <div class="scooter-card " data-id="bajaj-chetak-chetak-3501-3point5-kwh" onclick="window.location='/scooters/bajaj-chetak-chetak-3501-3point5-kwh'" role="button" tabindex="0" style="cursor:pointer">
     <div class="sc-img-wrap">
-      <img src="/images/cards/bajaj-chetak-chetak-3501-3point5-kwh.webp?v=tnov5s" alt="Bajaj Chetak Chetak C3501 3.5 kWh electric scooter price India 2026" loading="lazy" onerror="this.onerror=null;this.style.display='none';var fb=this.parentElement.querySelector('.sc-img-fb');if(fb){fb.style.display='flex';}" class="sc-photo">
+      <img src="/images/cards/bajaj-chetak-chetak-3501-3point5-kwh.webp?v=tnhri5" alt="Bajaj Chetak Chetak C3501 3.5 kWh electric scooter price India 2026" loading="lazy" onerror="this.onerror=null;this.style.display='none';var fb=this.parentElement.querySelector('.sc-img-fb');if(fb){fb.style.display='flex';}" class="sc-photo">
       <div class="sc-img-fb" style="display:none;background:linear-gradient(135deg,#7c3aed22,#7c3aed08)">
         <svg width="140" height="86" viewBox="0 0 180 110" fill="none" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="38" cy="88" rx="20" ry="20" stroke="#7c3aed" stroke-width="4" fill="#7c3aed" fill-opacity=".1"></ellipse>
@@ -252,7 +267,7 @@
   </div>
   <div class="scooter-card " data-id="ather-energy-450x-3point7-kwh" onclick="window.location='/scooters/ather-energy-450x-3point7-kwh'" role="button" tabindex="0" style="cursor:pointer">
     <div class="sc-img-wrap">
-      <img src="/images/cards/ather-energy-450x-3point7-kwh.webp?v=tnov5s" alt="Ather Energy 450X 3.5 kWh electric scooter price India 2026" loading="lazy" onerror="this.onerror=null;this.style.display='none';var fb=this.parentElement.querySelector('.sc-img-fb');if(fb){fb.style.display='flex';}" class="sc-photo">
+      <img src="/images/cards/ather-energy-450x-3point7-kwh.webp?v=tnhri5" alt="Ather Energy 450X 3.5 kWh electric scooter price India 2026" loading="lazy" onerror="this.onerror=null;this.style.display='none';var fb=this.parentElement.querySelector('.sc-img-fb');if(fb){fb.style.display='flex';}" class="sc-photo">
       <div class="sc-img-fb" style="display:none;background:linear-gradient(135deg,#2563eb22,#2563eb08)">
         <svg width="140" height="86" viewBox="0 0 180 110" fill="none" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="38" cy="88" rx="20" ry="20" stroke="#2563eb" stroke-width="4" fill="#2563eb" fill-opacity=".1"></ellipse>
@@ -321,7 +336,7 @@
   </div>
   <div class="scooter-card " data-id="tvs-motor-iqube-st-5point3-kwh" onclick="window.location='/scooters/tvs-motor-iqube-st-5point3-kwh'" role="button" tabindex="0" style="cursor:pointer">
     <div class="sc-img-wrap">
-      <img src="/images/cards/tvs-motor-iqube-st-5point3-kwh.webp?v=tnov5s" alt="TVS Motor iQube ST 5.3 kWh electric scooter price India 2026" loading="lazy" onerror="this.onerror=null;this.style.display='none';var fb=this.parentElement.querySelector('.sc-img-fb');if(fb){fb.style.display='flex';}" class="sc-photo">
+      <img src="/images/cards/tvs-motor-iqube-st-5point3-kwh.webp?v=tnhri5" alt="TVS Motor iQube ST 5.3 kWh electric scooter price India 2026" loading="lazy" onerror="this.onerror=null;this.style.display='none';var fb=this.parentElement.querySelector('.sc-img-fb');if(fb){fb.style.display='flex';}" class="sc-photo">
       <div class="sc-img-fb" style="display:none;background:linear-gradient(135deg,#f59e0b22,#f59e0b08)">
         <svg width="140" height="86" viewBox="0 0 180 110" fill="none" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="38" cy="88" rx="20" ry="20" stroke="#f59e0b" stroke-width="4" fill="#f59e0b" fill-opacity=".1"></ellipse>
@@ -657,6 +672,7 @@
           <a href="/electric-scooter-price">EV Scooter Price List</a>
           <a href="/best/under-1-lakh">Electric Scooter Under 1 Lakh</a>
           <a href="/launches">Upcoming Launches</a>
+          <a href="/city">Prices by City</a>
         </div>
 
         <!-- Tools & Guides -->
@@ -705,10 +721,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="/data.js?v=dc155bbb"></script>
+<script src="/data.js?v=c084b35d"></script>
 <script src="/seo.js?v=32380c46"></script>
 <script src="/outbound.js?v=3f21bbce"></script>
-<script src="/components.js?v=5938102b"></script>
+<script src="/components.js?v=aee08dfb"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -871,9 +887,56 @@ function loadCity(cityId){
   document.getElementById('stateBenefits').innerHTML=`<ul>${ben.map(b=>`<li class="trust-item" style="padding:4px 0"><span class="trust-icon">✓</span><span style="font-size:13px">${b}</span></li>`).join('')}</ul>`;
 }
 
-// Init from URL
-const initCity=window.__SW_CITY__||new URLSearchParams(location.search).get('city')||SW_CONFIG.headlineCity||'mumbai';
-loadCity(initCity);
+/* /city with no city chosen: a hub. Pick a city, or explore scooters at national prices. */
+function loadHub(){
+  const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/)/)||[''])[0];
+  const mine=(typeof swGetCity==='function'&&!navigator.webdriver)?swGetCity():null;
+  document.getElementById('cityOnly').hidden=true;
+  document.getElementById('cityHub').hidden=false;
+  document.getElementById('bcSep2').style.display='none';
+  document.getElementById('bcCity').style.display='none';
+  document.getElementById('citySelLbl').textContent='Pick your city:';
+  const t='Electric Scooter Price by City 2026: On-Road Price and Subsidy in '+CITIES_DB.length+' Cities | EScooterwale';
+  const d=`Pick your city for the on-road price of all ${SCOOTERS_DB.length} electric scooters, the state EV subsidy and road tax, the scooters people there look at most, and dealers near you. ${CITIES_DB.map(c=>c.name).join(', ')}.`;
+  document.getElementById('pgTitle').textContent=t; document.title=t;
+  document.getElementById('pgDesc').setAttribute('content',d);
+  document.getElementById('pgCanon').setAttribute('href','https://www.escooterwale.in/city');
+  document.getElementById('cityHeroTitle').textContent='Electric scooters by city';
+  document.getElementById('cityHeroDesc').textContent='Pick your city to see on-road prices, the state subsidy and road tax, the scooters people there look at most, and dealers near you. Prices below are national until you choose.';
+  document.getElementById('cityHero').style.backgroundImage="url('/images/hero-scooter.webp')";
+  const natMin=Math.min(...SCOOTERS_DB.map(s=>s.nationalPrice||s.price));
+  const stats=[[CITIES_DB.length,'Cities covered'],[SCOOTERS_DB.length,'Models on sale'],[BRANDS_DB.length,'EV brands'],[inrC(natMin),'Ex-showroom from']];
+  ['statDealers','statSubsidy','statChargers','statRegistered'].forEach((id,i)=>{ const el=document.getElementById(id); el.textContent=stats[i][0]; el.nextElementSibling.textContent=stats[i][1]; });
+  document.querySelectorAll('.city-sel-btn').forEach(b=>b.classList.toggle('active',b.dataset.city===mine));
+
+  const CMV=(typeof CITY_MOST_VIEWED!=='undefined'&&CITY_MOST_VIEWED)||{cities:{}};
+  const cards=CITIES_DB.map(c=>{
+    const stateId=SUBSIDY.cityState[c.id], st=SUBSIDY.states[stateId]||{name:c.state}, cash=st.cash||{};
+    const fav=(CMV.cities[c.id]||[]).find(m=>m.visits>=(CMV.minVisits||2)&&SCOOTERS_DB.some(s=>s.id===m.id));
+    const favS=fav&&SCOOTERS_DB.find(s=>s.id===fav.id);
+    return `<a class="hub-card${c.id===mine?' mine':''}" href="${lp}/cities/${c.id}" data-city="${c.id}">
+      <h3>${c.name}${c.id===mine?'<span class="hub-mine">Your city</span>':''}</h3>
+      <div class="hub-state">${st.name||c.state||''}</div>
+      <div class="hub-row"><span>State subsidy</span><b>${cash.amount?'Up to '+inrC(cash.amount):(cash.amount===null?'Unclear':'None')}</b></div>
+      <div class="hub-row"><span>Road tax on EVs</span><b>${roadTaxLabel(st)}</b></div>
+      ${favS?`<div class="hub-fav">Most viewed here: <strong translate="no">${favS.fullName}</strong></div>`:''}
+      <span class="hub-cta">See ${c.name} prices →</span>
+    </a>`;
+  }).join('');
+  const mv=((typeof MOST_VIEWED!=='undefined'&&MOST_VIEWED.models)||[]).map(m=>SCOOTERS_DB.find(s=>s.id===m.id)).filter(Boolean);
+  const seen=new Set(), pop=[]; for(const s of mv.concat([...SCOOTERS_DB].sort((a,b)=>b.score-a.score))){ if(!seen.has(s.id)){ seen.add(s.id); pop.push(s); } if(pop.length===6) break; }
+  document.getElementById('cityHub').innerHTML=`
+    <div class="sec-hd" style="margin:28px 0 0"><div><div class="eyebrow">Choose a city</div><h2 class="mt-8">Electric scooter prices in ${CITIES_DB.length} cities</h2></div></div>
+    <p style="font-size:14px;color:var(--ink-3);margin:6px 0 0">On-road prices change with the state's road tax and subsidy. Pick your city and every price on the site follows it.</p>
+    <div class="hub-grid">${cards}</div>
+    <div class="sec-hd" style="margin-bottom:16px"><div><div class="eyebrow">Explore scooters</div><h2 class="mt-8">Most viewed electric scooters across India</h2></div><a href="${lp}/listings" class="sec-hd-right">All ${SCOOTERS_DB.length} scooters →</a></div>
+    <div class="grid-3" style="margin-bottom:40px">${pop.map(s=>scooterCardHTML(s)).join('')}</div>`;
+  document.getElementById('cityHub').addEventListener('click',e=>{ const a=e.target.closest('.hub-card'); if(a&&typeof swSetCity==='function') swSetCity(a.dataset.city,'city_hub'); });
+}
+
+// Init from URL: a city page, or the hub when no city is given
+const initCity=window.__SW_CITY__||new URLSearchParams(location.search).get('city');
+if(initCity&&CITIES_DB.some(c=>c.id===initCity)) loadCity(initCity); else loadHub();
 // opening a city page counts as choosing that city (prices elsewhere follow it)
 if(window.__SW_CITY__&&typeof swSetCity==='function'&&!navigator.webdriver) swSetCity(window.__SW_CITY__,'city_page',true);
 </script>

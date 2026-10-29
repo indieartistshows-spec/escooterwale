@@ -48,6 +48,7 @@ add(`${BASE}/trending`,               '0.8', 'daily');
 add(`${BASE}/emi`,                    '0.7', 'monthly');
 add(`${BASE}/match`,                  '0.8', 'weekly');
 add(`${BASE}/launches`,               '0.8', 'weekly');
+add(`${BASE}/city`,                   '0.8', 'weekly');
 add(`${BASE}/yellow-brother`,         '0.7', 'weekly');
 
 // Guides. The subsidy cluster earns most of the site's search traffic.
