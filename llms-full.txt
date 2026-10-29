@@ -1,7 +1,7 @@
 # EScooterwale — full electric scooter dataset for India
 
 Source: https://www.escooterwale.in
-Last updated: 2026-10-28
+Last updated: 2026-10-29
 Models: 78 | Brands: 17
 
 Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the

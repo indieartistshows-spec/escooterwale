@@ -27,10 +27,10 @@
 <meta property="og:description" id="ogDesc" content="Side-by-side EV scooter comparison with a clear winner verdict."/>
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="styles.css?v=e08dcda1"/>
-<script src="data.js?v=c46e3d9d"></script>
+<script src="data.js?v=8f63dae4"></script>
 <script src="seo.js?v=6b580009"></script>
 <script src="outbound.js?v=e9ecae44"></script>
-<script src="components.js?v=9ef23386"></script>
+<script src="components.js?v=89a51694"></script>
 <script src="videos-db.js?v=f29ab906"></script>
 <style>
 .cmp-header{background:var(--ink);padding:40px 0 32px;background-image:url('https://images.unsplash.com/photo-1571333250630-f0230c320b6d?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;position:relative}
@@ -177,7 +177,7 @@
 <div class="container light-cmpr" style="margin-top:24px">
 
   <h3 style="text-align:center;margin-bottom:12px;font-size:16px;font-weight:700">
-    🔥 Try Popular Comparisons
+    Try Popular Comparisons
   </h3>
 
   <div class="popular-cmps" style="justify-content:center">
@@ -258,7 +258,7 @@ const CMP_ROWS=[
   {lbl:'Real-world range',fA:s=>s.realRange,fB:s=>s.realRange},
   {lbl:'Battery capacity',fA:s=>s.battery,fB:s=>s.battery},
   {lbl:'Charge time',fA:s=>s.charging,fB:s=>s.charging,win:(a,b)=>parseFloat(a.charging)<parseFloat(b.charging)?'a':'b',note:()=>'Lower = better'},
-  {sec:'⚡ Performance'},
+  {sec:'Performance'},
   {lbl:'Top speed',fA:s=>s.speed,fB:s=>s.speed,win:(a,b)=>parseInt(a.speed)>=parseInt(b.speed)?'a':'b'},
   {lbl:'Motor power',fA:s=>s.motor,fB:s=>s.motor},
   {lbl:'Torque',fA:s=>s.torque,fB:s=>s.torque},
@@ -267,7 +267,7 @@ const CMP_ROWS=[
   {lbl:'Kerb weight',fA:s=>s.weight,fB:s=>s.weight,win:(a,b)=>parseInt(a.weight)<parseInt(b.weight)?'a':'b',note:()=>'Lighter = better'},
   {lbl:'Ground clearance',fA:s=>s.groundClearance,fB:s=>s.groundClearance,win:(a,b)=>parseInt(a.groundClearance)>parseInt(b.groundClearance)?'a':'b'},
   {lbl:'Seat height',fA:s=>s.seatHeight,fB:s=>s.seatHeight},
-  {sec:'⭐ Our Scores (out of 10)'},
+  {sec:'Our Scores (out of 10)'},
   {lbl:'Range',fA:s=>getScores(s.id).Range,fB:s=>getScores(s.id).Range,isScore:true,win:(a,b)=>getScores(a.id).Range>getScores(b.id).Range?'a':'b'},
   {lbl:'Features',fA:s=>getScores(s.id).Features,fB:s=>getScores(s.id).Features,isScore:true,win:(a,b)=>getScores(a.id).Features>getScores(b.id).Features?'a':'b'},
   {lbl:'Value for money',fA:s=>getScores(s.id).Value,fB:s=>getScores(s.id).Value,isScore:true,win:(a,b)=>getScores(a.id).Value>getScores(b.id).Value?'a':'b'},

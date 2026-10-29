@@ -359,7 +359,7 @@
 
   <!-- QUIZ PROMPT -->
   <a class="qp-card" id="quizPrompt" href="/match" data-cta-location="model-quiz-prompt">
-    <span class="qp-ic" aria-hidden="true">❤️</span>
+    
     <span class="qp-txt"><span class="qp-model" id="qpModel" translate="no"></span><b>Is it right for you?</b><span>Answer 7 quick questions and see how it ranks for the way you ride.</span></span>
     <span class="qp-btn">Take the 1-minute match</span>
   </a>
@@ -458,11 +458,11 @@
   </a>
 </div>
 
-<script src="data.js?v=c46e3d9d"></script>
+<script src="data.js?v=8f63dae4"></script>
 <script src="seo.js?v=6b580009"></script>
 <script src="outbound.js?v=e9ecae44"></script>
-<script src="trending-data.js?v=9d728f01"></script>
-<script src="components.js?v=9ef23386"></script>
+<script src="trending-data.js?v=18073779"></script>
+<script src="components.js?v=89a51694"></script>
 <script src="videos-db.js?v=f29ab906"></script>
 <script>
 document.getElementById('navMount').innerHTML = navHTML('listings');
@@ -612,7 +612,7 @@ function buildSpecTable(s){
   if(s.specs?.performance?.['Motor power'] || s.specs?.performance?.['Motor']) perf['Motor Power'] = s.specs.performance['Motor power']||s.specs.performance['Motor'];
   if(s.specs?.performance?.['Torque']) perf['Torque'] = s.specs.performance['Torque'];
   if(s.specs?.performance?.['Ride modes']) perf['Ride Modes'] = s.specs.performance['Ride modes'];
-  if(Object.keys(perf).length) sections.push({title:'⚡ Performance', rows: perf});
+  if(Object.keys(perf).length) sections.push({title:'Performance', rows: perf});
 
   // 2. Battery & Range
   const bat = {};
@@ -800,7 +800,7 @@ function hydratePage(id){
     <div class="metric"><div class="metric-val">${s.charging}</div><div class="metric-label">Fast charge</div></div>
     <div class="metric"><div class="metric-val">${s.bootSpace||'—'}</div><div class="metric-label">Boot space</div></div>
     <div class="metric"><div class="metric-val">${s.weight||'—'}</div><div class="metric-label">Kerb weight</div></div>
-    <div class="metric"><div class="metric-icon">🔌</div><div class="metric-val">${s.battery||'—'}</div><div class="metric-label">Battery</div></div>
+    <div class="metric"><div class="metric-val">${s.battery||'—'}</div><div class="metric-label">Battery</div></div>
     <div class="metric"><div class="metric-val">${s.subsidy&&s.subsidy.eligible?'₹'+s.subsidy.amount.toLocaleString('en-IN'):'None'}</div><div class="metric-label">PM E-DRIVE subsidy</div></div>`;
 
   // Best For / Avoid If — redesigned

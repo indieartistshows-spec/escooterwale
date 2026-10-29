@@ -122,7 +122,7 @@ function scooterCardHTML(s, opts={}){
   const {showCompare=true, extraClass=''} = opts;
   const score = s.score||0;
   const scoreColor = score>=8.5?'#16c964':score>=7.5?'#22c55e':score>=6.5?'#f59e0b':'#ef4444';
-  const badgeMap = {'popular':'🔥 Popular','top-rated':'⭐ Top Rated','new':'New','trending':'Trending','editor-pick':'Editor Pick'};
+  const badgeMap = {'popular':'Popular','top-rated':'Top Rated','new':'New','trending':'Trending','editor-pick':'Editor Pick'};
   const badgeLabel = s.badge ? (badgeMap[s.badge]||s.badge) : null;
 
   return `
@@ -244,7 +244,7 @@ function langSelectHTML(){
   if(cur!=='en'&&!live.includes(cur))live=live.concat(cur);
   if(!live.length)return '';
   const opts=SW_LANGS.filter(([c])=>c==='en'||live.includes(c));
-  return `<label class="lang-sel-wrap" translate="no"><span class="lang-sel-icon" aria-hidden="true">🌐</span><select class="lang-sel" aria-label="Language" onchange="swLang(this.value)">${opts.map(([c,n])=>`<option value="${c}"${c===cur?' selected':''}>${n}</option>`).join('')}</select></label>`;
+  return `<label class="lang-sel-wrap" translate="no"><select class="lang-sel" aria-label="Language" onchange="swLang(this.value)">${opts.map(([c,n])=>`<option value="${c}"${c===cur?' selected':''}>${n}</option>`).join('')}</select></label>`;
 }
 function swLang(l){
   const path=location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/';
@@ -257,7 +257,7 @@ function navHTML(active='home'){
     {id:'listings',label:'All Scooters',href:'/listings'},
     {id:'compare',label:'Compare',href:'/compare'},
     {id:'best',label:'Best For',href:'/best'},
-    {id:'trending',label:'🔥 Trending',href:'/trending'},
+    {id:'trending',label:'Trending',href:'/trending'},
     {id:'launches',label:'Launches',href:'/launches'},
     {id:'emi',label:'EMI Calc',href:'/emi'},
   ];

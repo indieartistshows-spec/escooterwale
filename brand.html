@@ -181,10 +181,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="data.js?v=c46e3d9d"></script>
+<script src="data.js?v=8f63dae4"></script>
 <script src="seo.js?v=6b580009"></script>
 <script src="outbound.js?v=e9ecae44"></script>
-<script src="components.js?v=9ef23386"></script>
+<script src="components.js?v=89a51694"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -211,7 +211,7 @@ if(models[0]?.heroImg) document.getElementById('brandHeroBg').style.backgroundIm
   box.innerHTML=`<img class="bv-poster" src="https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.id}/hqdefault.jpg'" alt="${brand.name}" fetchpriority="high"/>
     <div class="bv-logo">${brandLogoHTML(bid,52)}<span translate="no">${brand.name}</span></div>
     <span class="bv-credit" translate="no">${v.title}</span>
-    <button class="bv-sound" type="button" aria-pressed="false"><span class="bv-ic">🔇</span> <span class="bv-tx">Tap for sound</span></button><span hidden>Mute</span>`;
+    <button class="bv-sound" type="button" aria-pressed="false"> <span class="bv-tx">Tap for sound</span></button><span hidden>Mute</span>`;
   const start=()=>{
     if(navigator.webdriver) return; // the build's page renderer should not bake a player into the static page
     const f=document.createElement('iframe');
@@ -223,7 +223,7 @@ if(models[0]?.heroImg) document.getElementById('brandHeroBg').style.backgroundIm
     b.addEventListener('click',()=>{muted=!muted;
       f.contentWindow&&f.contentWindow.postMessage(JSON.stringify({event:'command',func:muted?'mute':'unMute',args:[]}),'*');
       if(!muted) f.contentWindow&&f.contentWindow.postMessage(JSON.stringify({event:'command',func:'playVideo',args:[]}),'*');
-      b.setAttribute('aria-pressed',String(!muted));b.querySelector('.bv-ic').textContent=muted?'🔇':'🔊';b.querySelector('.bv-tx').textContent=muted?'Tap for sound':'Mute';
+      b.setAttribute('aria-pressed',String(!muted));b.querySelector('.bv-tx').textContent=muted?'Tap for sound':'Mute';
       try{gtag('event','brand_video_sound',{brand:bid,on:!muted})}catch(e){}
     });
   };
@@ -271,7 +271,7 @@ document.getElementById('brandScores').innerHTML=Object.entries(sc).map(([k,v])=
 { const lm=document.getElementById('lineupMount'); if(lm&&typeof lineupHTML==='function') lm.innerHTML=lineupHTML(bid,null); }
 document.getElementById('brandModelsGrid').innerHTML=models.length
   ?models.map(s=>scooterCardHTML(s)).join('')
-  :`<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--ink-3)"><div style="font-size:40px;margin-bottom:12px">🔍</div><p>No models found for this brand yet. Check back soon.</p></div>`;
+  :`<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--ink-3)"><p>No models found for this brand yet. Check back soon.</p></div>`;
 
 // Other brands — use brandLogoHTML
 document.getElementById('otherBrandsStrip').innerHTML=BRANDS_DB.filter(b=>b.id!==bid).map(b=>`
