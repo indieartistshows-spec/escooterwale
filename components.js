@@ -364,7 +364,9 @@ function footerHTML(){
           <a href="/compare">Compare Models</a>
           <a href="/best">Best For You</a>
           <a href="/trending">Trending Now</a>
-          <a href="/city">By City</a>
+          <a href="/electric-scooter-price">EV Scooter Price List</a>
+          <a href="/best/under-1-lakh">Electric Scooter Under 1 Lakh</a>
+          <a href="/launches">Upcoming Launches</a>
         </div>
 
         <!-- Tools & Guides -->
@@ -468,6 +470,51 @@ function lineupHTML(brandSlug, currentId){
   ${fam.length?`<div class="lu-fam">${fam.map(f=>`<div class="lu-fam-i"><b translate="no">${f.name}</b><span>${f.text}</span></div>`).join('')}</div>`:''}
   ${(N.faq||[]).length?`<div class="lu-faq">${N.faq.map(x=>`<details><summary>${x.q}</summary><p>${x.a}</p></details>`).join('')}</div>`:''}
   </section>`;
+}
+
+/* Search-intent helpers (SEO, Oct 2026): a visible FAQ block plus matching FAQPage schema,
+   and the brand price list with the top and cheapest model. Search Console showed people
+   searching "<brand> electric scooter price", "<brand> top model price", "all model price". */
+function seoFaqHTML(items, title){
+  if(!items||!items.length) return '';
+  return `<section class="seo-faq"><h2>${title||'Common questions'}</h2>${items.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</section>`;
+}
+function seoInjectFaq(items, id){
+  try{
+    const strip=t=>String(t).replace(/<[^>]+>/g,'');
+    let el=document.getElementById(id||'swFaqSchema');
+    if(!el){ el=document.createElement('script'); el.type='application/ld+json'; el.id=id||'swFaqSchema'; document.head.appendChild(el); }
+    el.textContent=JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:items.map(([q,a])=>({'@type':'Question',name:strip(q),acceptedAnswer:{'@type':'Answer',text:strip(a)}}))});
+  }catch(e){}
+}
+function brandPriceHTML(brand, models){
+  const ms=models.filter(s=>!s.discontinued).sort((a,b)=>a.price-b.price);
+  if(!ms.length) return '';
+  const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0];
+  const short=brand.shortName||brand.name, lo=ms[0], hi=ms[ms.length-1];
+  const link=s=>`<a href="${lp}/scooters/${s.id}" translate="no">${s.name}</a>`;
+  const span=v=>String(v||'').replace(/\s*[–—-]\s*/,' to ');
+  return `<section class="sw-answer" id="brandPrice">
+    <h2>${short} electric scooter price list 2026</h2>
+    <p>${ms.length>1?`${short} sells ${ms.length} electric scooters in India, priced from <strong>${lo.nationalPriceDisplay||lo.priceDisplay}</strong> to <strong>${hi.nationalPriceDisplay||hi.priceDisplay}</strong> ex-showroom.`:`${short} sells one electric scooter in India, priced at <strong>${lo.nationalPriceDisplay||lo.priceDisplay}</strong> ex-showroom.`} On-road prices start around ${lo.onRoadDisplay}, depending on your state's road tax.</p>
+    ${ms.length>1?`<div class="sw-tops"><div class="sw-top"><span>Top model</span>${link(hi)}<b>${hi.nationalPriceDisplay||hi.priceDisplay}</b></div><div class="sw-top"><span>Cheapest model</span>${link(lo)}<b>${lo.nationalPriceDisplay||lo.priceDisplay}</b></div><div class="sw-top"><span>Longest claimed range</span>${link(ms.reduce((a,b)=>parseFloat(b.range)>parseFloat(a.range)?b:a))}<b>${ms.reduce((a,b)=>parseFloat(b.range)>parseFloat(a.range)?b:a).range}</b></div></div>`:''}
+    <div class="lu-scroll" style="margin-top:14px"><table class="lu-t"><thead><tr><th>Model</th><th>Ex-showroom</th><th>On-road from</th><th>Battery</th><th>Claimed range</th><th>Real range</th><th>Top speed</th></tr></thead><tbody>
+    ${ms.slice().reverse().map(s=>`<tr><td>${link(s)}</td><td>${s.nationalPriceDisplay||s.priceDisplay}</td><td>${s.onRoadDisplay}</td><td>${s.battery}</td><td>${s.range}</td><td>${span(s.realRange)}</td><td>${s.speed}</td></tr>`).join('')}
+    </tbody></table></div>
+  </section>`;
+}
+function brandFaqItems(brand, models){
+  const ms=models.filter(s=>!s.discontinued).sort((a,b)=>a.price-b.price);
+  if(!ms.length) return [];
+  const short=brand.shortName||brand.name, lo=ms[0], hi=ms[ms.length-1];
+  const p=s=>s.nationalPriceDisplay||s.priceDisplay, longest=ms.reduce((a,b)=>parseFloat(b.range)>parseFloat(a.range)?b:a);
+  const items=[[`What is the price of the ${short} electric scooter?`, ms.length>1?`${short} electric scooters cost ${p(lo)} to ${p(hi)} ex-showroom in India in 2026. The cheapest is the ${lo.name} and the top model is the ${hi.name}. On-road prices start around ${lo.onRoadDisplay}.`:`The ${short} ${lo.name} costs ${p(lo)} ex-showroom, about ${lo.onRoadDisplay} on-road.`]];
+  if(ms.length>1){
+    items.push([`Which is the top model of ${short} and what is its price?`,`The top ${short} model is the ${hi.name} at ${p(hi)} ex-showroom, with a ${hi.battery} battery, ${hi.range} claimed range and ${hi.speed} top speed.${ms.length>2?` The second most expensive is the ${ms[ms.length-2].name} at ${p(ms[ms.length-2])}.`:''}`]);
+    items.push([`Which is the cheapest ${short} electric scooter?`,`The ${lo.name} at ${p(lo)} ex-showroom, with a ${lo.battery} battery and ${lo.range} claimed range.`]);
+  }
+  items.push([`What is the range of ${short} electric scooters?`,`Claimed range runs from ${ms.reduce((a,b)=>parseFloat(b.range)<parseFloat(a.range)?b:a).range} to ${longest.range} (${longest.name}). In real use expect roughly 20 to 30% less; our real range figures are on each model page.`]);
+  return items;
 }
 
 /* Chat-style quiz button: round, bottom right, on every page except the quiz itself.

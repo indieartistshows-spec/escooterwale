@@ -919,3 +919,19 @@ img.lazy.loaded{opacity:1}
 .lu-faq details{border-top:1px solid var(--border);padding:10px 0}
 .lu-faq summary{cursor:pointer;font-weight:700;font-size:14.5px}
 .lu-faq p{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--ink-2)}
+/* search-intent blocks: direct answer, price list, FAQ (SEO, Oct 2026) */
+.sw-answer{margin:0 0 22px;padding:16px 18px;border:1px solid var(--g-mid,#bbf0d6);background:var(--g-tint,#edfbf4);border-radius:var(--r-lg,16px);font-size:15px;line-height:1.65;color:var(--ink-2)}
+.sw-answer h2{font-size:20px;line-height:1.3;margin:0 0 6px;color:var(--ink)}
+.sw-answer p{margin:0}
+.sw-answer strong{color:var(--ink)}
+.sw-tops{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.sw-top{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:10px 12px}
+.sw-top span{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3)}
+.sw-top a{font-weight:700;color:var(--ink);text-decoration:none}
+.sw-top b{display:block;font-size:15px;color:var(--g-dim,#0e7a49)}
+.seo-faq{margin:32px 0;padding:22px;border:1px solid var(--border);border-radius:var(--r-lg,16px);background:var(--surf)}
+.seo-faq h2{font-size:20px;margin:0 0 6px}
+.seo-faq details{border-top:1px solid var(--border);padding:12px 0}
+.seo-faq details:first-of-type{border-top:0}
+.seo-faq summary{cursor:pointer;font-weight:700;font-size:15px}
+.seo-faq p{margin:8px 0 0;font-size:14.5px;line-height:1.65;color:var(--ink-2)}

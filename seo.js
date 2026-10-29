@@ -37,21 +37,33 @@
       const prices = models.map(m => m.price).sort((x, y) => x - y);
       const short = b.shortName || b.name;
       const lo = prices[0], hi = prices[prices.length - 1];
+      // the name people search with ("chetak price", "hero vida price"); search terms: price, all model price, top model price
+      const name = { 'bajaj-chetak': 'Bajaj Chetak', 'hero-vida': 'Hero Vida' }[b.id] || short;
+      const sorted = models.slice().sort((x, y) => x.price - y.price), top = sorted[sorted.length - 1];
       return {
-        title: `${short} Electric Scooter Price ${YEAR}: ${inr(lo)} to ${inr(hi)}, All ${models.length} Models | EScooterwale`,
-        desc: `Every ${short} electric scooter on sale in India, ${models.length} models from ${inr(lo)} to ${inr(hi)}. Real-world range from our own tests, ScootScore, subsidy and on-road price for each.`
+        title: models.length > 1 ? `${name} Electric Scooter Price ${YEAR}: All ${models.length} Models, ${inr(lo)} to ${inr(hi)} | EScooterwale` : `${name} ${top.name.replace(/\s*[\d.]+\s*kWh$/i, '')} Price ${YEAR}: ${inr(lo)} | EScooterwale`,
+        desc: models.length > 1 ? `${name} electric scooter price list: all ${models.length} models from ${inr(lo)} to ${inr(hi)} ex-showroom. Top model ${top.name} at ${inr(top.price)}, on-road prices, real range and ScootScore for each.` : `${name} ${top.name} price ${inr(lo)} ex-showroom. On-road price, real range, ScootScore and subsidy.`
       };
     },
 
     city(c, opts) {
       const o = opts || {};
       return {
-        title: `Electric Scooter Price in ${c.name} ${YEAR}: On-Road Prices | EScooterwale`,
-        desc: `On-road prices for ${o.count || 41} electric scooters in ${c.name}, plus what ${o.state || c.state} gives you in subsidy and road tax${o.taxLine ? ' (' + o.taxLine + ')' : ''}. Dealers, charging and real range.`
+        // searched as "electric scooter price hyderabad", "scooty price in kolkata", "ev scooter price in ahmedabad"
+        title: `Electric Scooter Price in ${c.name} ${YEAR}: EV Scooty On-Road Prices | EScooterwale`,
+        desc: `EV scooter and scooty prices in ${c.name}: ${o.count || 41} models${o.minOn ? ' from ' + inr(o.minOn) + ' on-road' : ''}, plus ${o.state || c.state} subsidy and road tax${o.taxLine ? ' (' + o.taxLine + ')' : ''}. Showrooms near you and real range.`
       };
     },
 
     compare(a, b) {
+      // same family ("Rizta S vs Rizta Z"): people search the difference, so say it that way
+      const fam = x => String(x.name).split(' ')[0];
+      if (a.brandSlug === b.brandSlug && fam(a) === fam(b)) {
+        return {
+          title: `${a.fullName} vs ${b.name}: Difference, Price and Range (${YEAR})`,
+          desc: `${a.fullName} vs ${b.name}: what is the difference? ${a.priceDisplay} vs ${b.priceDisplay}, real range ${span(a.realRange)} vs ${span(b.realRange)}, specs and which one to buy.`
+        };
+      }
       return {
         title: `${a.fullName} vs ${b.fullName}: Which to Buy (${YEAR})`,
         desc: `${a.fullName} at ${a.priceDisplay} or ${b.fullName} at ${b.priceDisplay}? Real-world range, specs, running cost and our verdict, side by side.`

@@ -7,6 +7,7 @@ const { page, BASE, VERIFIED, kwh, exFactory, inr, subsidyFor,
         ORG, crumbs, article, faq, SIDEBAR_SUBSIDY, SCOOTERS_DB } = G;
 
 const byPrice = [...SCOOTERS_DB].sort((a, b) => a.price - b.price);
+const fullSpeed = byPrice.filter(s => (parseFloat(s.speed) || 0) > 25);
 const rows = byPrice.map(s => ({ s, k: kwh(s), f: exFactory(s), sub: subsidyFor(s) }));
 const ineligible = rows.filter(r => !r.sub.eligible);
 const partial = rows.filter(r => r.sub.eligible && r.sub.amount < 5000);
@@ -512,12 +513,14 @@ const band = (label, lo, hi) => {
 page({
   file: 'electric-scooter-price.html',
   canon: '/electric-scooter-price',
-  title: `Electric Scooter Price in India 2026: All ${SCOOTERS_DB.length} Models Compared | EScooterwale`,
-  desc: `Complete electric scooter price list for India 2026. Ex-showroom and on-road prices, EMI, real-world range and subsidy for all ${SCOOTERS_DB.length} models from ${new Set(SCOOTERS_DB.map(s => s.brandSlug)).size} brands. Prices updated every week.`,
+  // search terms that bring people here (Search Console, Oct 2026): ev scooter price, electric scooty price,
+  // electric scooter price in india, electric two wheeler price, cheapest / lowest price, charging scooty price
+  title: `EV Scooter Price in India 2026: All ${SCOOTERS_DB.length} Electric Scooty Prices | EScooterwale`,
+  desc: `EV scooter and electric scooty prices in India 2026, from ${inr(byPrice[0].price)} to ${inr(byPrice[byPrice.length-1].price)}. Ex-showroom and on-road price, EMI, real range and subsidy for all ${SCOOTERS_DB.length} models from ${new Set(SCOOTERS_DB.map(s => s.brandSlug)).size} brands, updated weekly.`,
   eyebrow: 'Price List',
   crumb: 'Electric scooter prices',
-  h1: `Electric scooter price in India 2026: all ${SCOOTERS_DB.length} models`,
-  standfirst: `Ex-showroom price, estimated on-road price, EMI, real-world range and the central subsidy for every electric scooter on sale in India. Prices from ${inr(byPrice[0].price)} to ${inr(byPrice[byPrice.length-1].price)}.`,
+  h1: `EV scooter price in India 2026: all ${SCOOTERS_DB.length} electric scooter and scooty prices`,
+  standfirst: `The price of every electric scooter (EV scooty) on sale in India: ex-showroom, estimated on-road, EMI, real-world range and the central subsidy. Prices run from ${inr(byPrice[0].price)} to ${inr(byPrice[byPrice.length-1].price)}.`,
   readTime: '8 min read',
   schema: { '@context': 'https://schema.org', '@graph': [
     ORG,
@@ -550,13 +553,19 @@ page({
       ['What is the difference between ex-showroom and on-road price?',
        'Ex-showroom is the manufacturer price including GST but excluding registration, insurance and any local levies. On-road price adds those. For electric scooters the gap is smaller than for petrol, because registration fees are waived nationwide and many states also exempt road tax. Expect roughly 8 to 10% above ex-showroom.'],
       ['Do electric scooter prices include the subsidy?',
-       'Advertised ex-showroom prices normally exclude the PM E-DRIVE subsidy, which is deducted at the point of sale. The central subsidy is ₹5,000 for most eligible scooters. Four models we track exceed the ₹1.5 lakh ex-factory cap and receive nothing.']
+       `Advertised ex-showroom prices normally exclude the PM E-DRIVE subsidy, which is deducted at the point of sale. The central subsidy is ₹5,000 for most eligible scooters. ${ineligible.length} of the ${SCOOTERS_DB.length} models we track exceed the ₹1.5 lakh ex-factory cap and receive nothing.`],
+      ['What is the price of an EV scooty?',
+       `An EV scooty (electric scooter) costs ${inr(byPrice[0].price)} to ${inr(byPrice[byPrice.length-1].price)} ex-showroom in India. Popular models from Ola, TVS, Bajaj Chetak, Ather and Hero Vida mostly cost ₹90,000 to ₹1.6 lakh.`],
+      ['What is the price of an electric two wheeler in India?',
+       `Electric two-wheeler scooters in India cost from ${inr(byPrice[0].price)} to ${inr(byPrice[byPrice.length-1].price)} ex-showroom. ${SCOOTERS_DB.filter(s => s.price < 100000).length} models cost under ₹1 lakh and ${SCOOTERS_DB.filter(s => s.price < 150000).length} under ₹1.5 lakh.`],
+      ['What is the lowest price electric scooter?',
+       `The lowest price electric scooter we track is the ${byPrice[0].fullName} at ${inr(byPrice[0].price)}. The lowest priced full-speed scooter (above 25 km/h) is the ${fullSpeed[0].fullName} at ${inr(fullSpeed[0].price)}.`]
     ])
   ]},
   body: `
   <div class="callout-box green">
     <h4>The short answer</h4>
-    <p style="margin:0;font-size:15px">Electric scooters in India run from <strong>${inr(byPrice[0].price)}</strong> to <strong>${inr(byPrice[byPrice.length-1].price)}</strong> ex-showroom. The mainstream band is ₹90,000 to ₹1.5 lakh. On-road adds roughly 8 to 10%, less than for petrol scooters because registration fees are waived nationwide and many states also waive road tax. Most eligible scooters get <strong>₹5,000 off</strong> via PM E-DRIVE.</p>
+    <p style="margin:0;font-size:15px">EV scooter prices in India run from <strong>${inr(byPrice[0].price)}</strong> (${byPrice[0].fullName}) to <strong>${inr(byPrice[byPrice.length-1].price)}</strong> (${byPrice[byPrice.length-1].fullName}) ex-showroom. The lowest price full-speed electric scooter is the ${fullSpeed[0].fullName} at ${inr(fullSpeed[0].price)}. The mainstream band is ₹90,000 to ₹1.5 lakh. On-road adds roughly 8 to 10%, less than for petrol scooters because registration fees are waived nationwide and many states also waive road tax. Most eligible scooters get <strong>₹5,000 off</strong> via PM E-DRIVE.</p>
   </div>
 
   <h2>Full price list, cheapest first</h2>
@@ -593,6 +602,12 @@ ${band('Above ₹1.5 lakh', 150000, 99999999)}
 
   <h3>What is the difference between ex-showroom and on-road price?</h3>
   <p>Ex-showroom includes GST but excludes registration, insurance and local levies. On-road adds those. For EVs the gap is smaller than for petrol because registration fees are waived nationwide and many states waive road tax too.</p>
+
+  <h3>What is the price of an EV scooty or electric two wheeler?</h3>
+  <p>The same as an electric scooter: ${inr(byPrice[0].price)} to ${inr(byPrice[byPrice.length-1].price)} ex-showroom. ${SCOOTERS_DB.filter(s => s.price < 100000).length} models cost under ₹1 lakh (<a href="/best/under-1-lakh">best electric scooters under ₹1 lakh</a>) and ${SCOOTERS_DB.filter(s => s.price < 150000).length} under ₹1.5 lakh (<a href="/best/under-1-5l">under ₹1.5 lakh</a>).</p>
+
+  <h3>How much does a charging (battery) scooty cost?</h3>
+  <p>A battery or charging scooty is just another name for an electric scooter. The price depends mostly on battery size: around ${inr(Math.min(...SCOOTERS_DB.filter(s => parseFloat(s.battery) <= 2).map(s => s.price)))} upward with a pack of 2 kWh or less and ${inr(Math.min(...SCOOTERS_DB.filter(s => parseFloat(s.battery) >= 3.5).map(s => s.price)))} upward for 3.5 kWh or more. A bigger battery buys more real range, not more speed.</p>
 
   <h3>Are electric scooter prices coming down?</h3>
   <p>Not obviously. The central subsidy halved in April 2025, which raised effective prices by up to ₹5,000, and several state subsidies have expired. Falling cell costs have mostly gone into bigger batteries rather than lower prices.</p>

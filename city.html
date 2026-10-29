@@ -23,7 +23,7 @@
 <meta name="description" id="pgDesc" content="Find electric scooters in Mumbai. Best EV prices, dealer locations, state government subsidies, charging stations map. Compare Ola, Ather, TVS in Mumbai."/>
 <meta name="keywords" content="electric scooter mumbai, ev scooter price mumbai, ev dealer mumbai, electric scooter bangalore, ev scooter delhi price"/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/city"/>
-<link rel="stylesheet" href="styles.css?v=e08dcda1"/>
+<link rel="stylesheet" href="styles.css?v=2e218cf0"/>
 <style>
 .city-hero{background:var(--ink);padding:48px 0 36px;background-size:cover;background-position:center;position:relative}
 .city-hero::before{content:'';position:absolute;inset:0;background:rgba(13,17,23,.85)}
@@ -93,6 +93,8 @@
 <div class="city-layout">
 
 <div>
+  <!-- DIRECT ANSWER (search intent: electric scooter / scooty price in <city>) -->
+  <div id="cityAnswer"></div>
   <!-- SUBSIDY CARD -->
   <div class="subsidy-card">
     <div class="eyebrow" style="color:var(--g-dim);margin-bottom:6px">Government incentives</div>
@@ -140,6 +142,7 @@
     </div>
     <div id="dealersList"></div>
   </div>
+  <div id="cityFaq"></div>
 </div>
 
 <!-- SIDEBAR -->
@@ -166,10 +169,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="data.js?v=c85f4290"></script>
-<script src="seo.js?v=6b580009"></script>
+<script src="data.js?v=18c77026"></script>
+<script src="seo.js?v=32380c46"></script>
 <script src="outbound.js?v=3f21bbce"></script>
-<script src="components.js?v=89a51694"></script>
+<script src="components.js?v=5938102b"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -253,6 +256,23 @@ function loadCity(cityId){
     rowsP.map(r=>`<tr><td><a href="/scooters/${r.s.id}">${r.s.fullName}</a></td><td>${inrC(r.ex)}</td><td class="amt">${inrC(r.on)}</td><td>${r.s.realRange}</td></tr>`).join('')+`</tbody>`;
   document.getElementById('priceNote').textContent=`On-road is our estimate for ${c.name}: ex-showroom plus ${rtLabel==='Exempt'?'no road tax (EVs are exempt in '+st.name+')':(rtLabel==='Unconfirmed'?'road tax, which we could not confirm for '+st.name+' (ask the RTO or dealer)':rtLabel+' road tax')}, first-year insurance and handling. Registration is free for EVs. Prices updated ${fmtDate(SW_CONFIG.dataUpdated)}.`;
 
+  // Direct answer at the top, FAQ at the bottom (with FAQPage schema), and a sharper meta description
+  { const byOn=[...rowsP].sort((a,b)=>a.on-b.on), cheap=byOn[0], fs=byOn.find(r=>(parseFloat(r.s.speed)||0)>25)||cheap;
+    const fav=(((typeof CITY_MOST_VIEWED!=='undefined'&&CITY_MOST_VIEWED.cities[c.id])||[]).find(m=>m.visits>=((CITY_MOST_VIEWED||{}).minVisits||2)&&SCOOTERS_DB.some(s=>s.id===m.id)));
+    const favS=fav&&SCOOTERS_DB.find(s=>s.id===fav.id);
+    const sub=cash.amount?`${st.name} adds a state subsidy of up to ${inrC(cash.amount)}`:`${st.name} has no state cash subsidy right now`;
+    const tax=rtLabel==='Exempt'?'and electric scooters pay no road tax':(rtLabel==='Unconfirmed'?'and the road tax on EVs is unconfirmed':`and EVs pay ${rtLabel} road tax`);
+    document.getElementById('cityAnswer').innerHTML=`<section class="sw-answer"><h2>Electric scooter price in ${c.name}</h2><p>Electric scooters (EV scooty) in ${c.name} cost from <strong>${inrC(cheap.on)} on-road</strong> for the ${cheap.s.fullName}${fs!==cheap?`, or ${inrC(fs.on)} for the cheapest full-speed model, the ${fs.s.fullName}`:''}. ${favS?`The most viewed scooter by visitors from ${c.name} is the ${favS.fullName}. `:''}${sub}, ${tax}. The full on-road price list for all ${rowsP.length} models is below.</p></section>`;
+    const fq=[
+      [`What is the on-road price of an electric scooter in ${c.name}?`,`Electric scooters in ${c.name} cost from ${inrC(cheap.on)} on-road (${cheap.s.fullName}) up to ${inrC(byOn[byOn.length-1].on)} (${byOn[byOn.length-1].s.fullName}). Most popular models cost between ₹1 lakh and ₹1.7 lakh on-road.`],
+      [`Which is the cheapest electric scooter in ${c.name}?`,`The ${cheap.s.fullName} at about ${inrC(cheap.on)} on-road.${fs!==cheap?` The cheapest full-speed scooter (above 25 km/h, needs a licence) is the ${fs.s.fullName} at about ${inrC(fs.on)}.`:''}`],
+      [`Is there an EV subsidy in ${c.name}?`,`${sub}, on top of the central PM E-DRIVE subsidy of up to ${inrC(SUBSIDY.central.cap)} on eligible scooters. ${rtLabel==='Exempt'?`Electric scooters are exempt from road tax in ${st.name}.`:(rtLabel==='Unconfirmed'?`Road tax on EVs in ${st.name} is unconfirmed, so ask the dealer.`:`EVs pay ${rtLabel} road tax in ${st.name}.`)}`],
+      [`Where is the nearest electric scooter showroom in ${c.name}?`,`Every brand's official dealer finder is listed below, with test ride links and directions to showrooms near you in ${c.name}.`]
+    ];
+    document.getElementById('cityFaq').innerHTML=seoFaqHTML(fq,`Electric scooters in ${c.name}: common questions`); seoInjectFaq(fq);
+    document.getElementById('pgDesc').setAttribute('content',SEO.city(c,{count:SCOOTERS_DB.length,state:st.name,minOn:cheap.on,taxLine:rtLabel==='Exempt'?'road tax exempt':(rtLabel==='Unconfirmed'?'road tax status unconfirmed':rtLabel+' road tax')}).desc);
+  }
+
   // This city's most visited scooters (GA, by city) come first, when there is enough data; then the city's
   // featured models (Chetak and Vida where that demand is), then last week's most viewed across India
   const CMV=(typeof CITY_MOST_VIEWED!=='undefined'&&CITY_MOST_VIEWED)||{cities:{}}, cmv=(CMV.cities[c.id]||[]).filter(m=>SCOOTERS_DB.some(s=>s.id===m.id));
@@ -274,7 +294,7 @@ function loadCity(cityId){
   document.getElementById('cityPicksGrid').innerHTML=top.map(s=>scooterCardHTML(s)).join('');
 
   // Dealers: each brand's own dealer finder (no invented addresses)
-  document.getElementById('dealersTitle').textContent=`Electric scooter dealers in ${c.name}`;
+  document.getElementById('dealersTitle').textContent=`Electric scooter showrooms and dealers in ${c.name}`;
   document.getElementById('mapLink').href=`https://www.google.com/maps/search/${encodeURIComponent('electric scooter showroom '+c.name)}`;
   document.getElementById('dealersList').innerHTML=BRANDS_DB.map(b=>{
     const L=(typeof BRAND_LINKS!=='undefined'&&BRAND_LINKS[b.id])||{};

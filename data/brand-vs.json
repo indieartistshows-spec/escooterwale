@@ -1,0 +1,15 @@
+{
+ "_note": "Written by tools/build-brand-vs.js; read by build-sitemap.js.",
+ "pages": [
+  "ola-vs-ather",
+  "ola-vs-tvs",
+  "ola-vs-chetak",
+  "ola-vs-vida",
+  "ather-vs-tvs",
+  "ather-vs-chetak",
+  "ather-vs-vida",
+  "tvs-vs-chetak",
+  "tvs-vs-vida",
+  "chetak-vs-vida"
+ ]
+}

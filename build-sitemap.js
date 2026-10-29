@@ -61,6 +61,9 @@ add(`${BASE}/guide-battery-chemistry`,   '0.8', 'monthly');
 add(`${BASE}/guide-battery-types`,       '0.7', 'monthly');
 add(`${BASE}/guide-service-network`,     '0.7', 'monthly');
 
+// Brand vs brand pages (tools/build-brand-vs.js)
+try { JSON.parse(fs.readFileSync('data/brand-vs.json', 'utf8')).pages.forEach(p => add(`${BASE}/${p}`, '0.8', 'weekly')); } catch (e) {}
+
 // Pre-rendered static pages, one per entity
 const BEST_CATS = ['daily-commute','under-1-lakh','under-1-5l','family','best-range','tier2-cities'];
 const ARTICLES  = ['ola-s1-pro-review','fame-3-guide','ev-running-costs'];
