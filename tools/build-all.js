@@ -25,6 +25,7 @@ function serve(port) {
   run('node tools/build-data.js');
   run('node tools/build-banners.js');
   run('node build-guide-pages.js');
+  run('node tools/build-brand-vs.js'); // ola-vs-ather and the other brand pairs
   run('node tools/build-launches.js');
   run('node build-schema.js');
   run('node build-llms.js');

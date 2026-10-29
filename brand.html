@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://www.escooterwale.in/images/og/brand.jpg?v=ff303845"/>
 <meta name="description" id="pgDesc" content="Every electric scooter model from India's leading EV brands. Prices, real-world range, specs and independent ScootScore ratings."/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/brand"/>
-<link rel="stylesheet" href="styles.css?v=e08dcda1"/>
+<link rel="stylesheet" href="styles.css?v=2e218cf0"/>
 <style>
 .brand-video{position:relative;background:#000;aspect-ratio:16/9;max-height:78vh;width:100%;overflow:hidden}
 .brand-video .bv-poster,.brand-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
@@ -151,6 +151,7 @@
 <div class="breadcrumb"><div class="container"><div class="breadcrumb-inner"><a href="/">Home</a><span class="bc-sep">›</span><a href="/listings">Electric Scooters</a><span class="bc-sep">›</span><span id="bcBrand">Ola Electric</span></div></div></div>
 
 <div class="container" style="padding:32px 20px 64px">
+  <div id="brandPriceMount"></div>
   <div class="grid-2 brand-top-grid" style="gap:24px;margin-bottom:32px;align-items:start">
     <div>
       <div class="brand-about-card">
@@ -171,6 +172,7 @@
   <div class="grid-3" id="brandModelsGrid"></div>
   <div id="lineupMount"></div>
 
+  <div id="brandFaqMount"></div>
   <div style="margin-top:40px">
     <div class="sec-hd"><div><div class="eyebrow">Compare all brands</div><h2 class="mt-8">Browse other EV brands in India</h2></div></div>
     <div class="brand-strip" id="otherBrandsStrip"></div>
@@ -181,10 +183,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="data.js?v=c85f4290"></script>
-<script src="seo.js?v=6b580009"></script>
+<script src="data.js?v=18c77026"></script>
+<script src="seo.js?v=32380c46"></script>
 <script src="outbound.js?v=3f21bbce"></script>
-<script src="components.js?v=89a51694"></script>
+<script src="components.js?v=5938102b"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -249,7 +251,7 @@ document.getElementById('bcBrand').textContent=brand.name;
 document.getElementById('brandAbout').textContent=brand.about;
 document.getElementById('brandWebsiteLink').href=brand.website;
 document.getElementById('modelsEyebrow').textContent=`${models.length} models available`;
-document.getElementById('modelsTitle').textContent=`${brand.name} scooters 2026`;
+document.getElementById('modelsTitle').textContent=`All ${brand.shortName||brand.name} electric scooter models 2026`;
 
 // Brand scores — compute from actual model data
 const scoreKeys=['Range','Features','Value','Ride','Service'];
@@ -272,6 +274,14 @@ document.getElementById('brandScores').innerHTML=Object.entries(sc).map(([k,v])=
 document.getElementById('brandModelsGrid').innerHTML=models.length
   ?models.map(s=>scooterCardHTML(s)).join('')
   :`<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--ink-3)"><p>No models found for this brand yet. Check back soon.</p></div>`;
+
+// Price list with top and cheapest model, and the FAQ (search intent: "<brand> price", "top model price")
+document.getElementById('brandPriceMount').innerHTML=brandPriceHTML(brand,models);
+{ const fq=brandFaqItems(brand,models); document.getElementById('brandFaqMount').innerHTML=seoFaqHTML(fq,`${brand.shortName||brand.name} electric scooter: common questions`); seoInjectFaq(fq); }
+{ const VS={'ola-electric':'ola','ather-energy':'ather','tvs-motor':'tvs','bajaj-chetak':'chetak','hero-vida':'vida'}, NM={ola:'Ola',ather:'Ather',tvs:'TVS iQube',chetak:'Bajaj Chetak',vida:'Hero Vida'}, ORD=['ola','ather','tvs','chetak','vida'];
+  const me=VS[brand.id];
+  if(me){ const links=ORD.filter(x=>x!==me).map(x=>{const [a,b]=ORD.indexOf(me)<ORD.indexOf(x)?[me,x]:[x,me];return `<a class="sw-top" href="/${a}-vs-${b}" style="text-decoration:none"><b>${NM[me]} vs ${NM[x]}</b></a>`;}).join('');
+    document.getElementById('brandFaqMount').insertAdjacentHTML('beforebegin',`<section class="seo-faq" id="brandVs"><h2>Compare ${NM[me]} with other brands</h2><div class="sw-tops">${links}</div></section>`); } }
 
 // Other brands — use brandLogoHTML
 document.getElementById('otherBrandsStrip').innerHTML=BRANDS_DB.filter(b=>b.id!==bid).map(b=>`
