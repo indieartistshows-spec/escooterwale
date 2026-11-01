@@ -1,4 +1,4 @@
 {
- "ok": true,
- "note": "already have September 2026"
+ "ok": false,
+ "note": "VAHAN scrape failed, kept September 2026: page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://vahan.parivahan.gov.in/vahan4dashboard/vahan/view/reportview.xhtml\", waiting"
 }
