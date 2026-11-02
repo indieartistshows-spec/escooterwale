@@ -253,8 +253,8 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Battery: 4 kWh
 - Claimed range (IDC): 242 km
 - Real-world range (EScooterwale estimate): 155–165 km
-- Top speed: 125 km/h
-- Charging time: 4.8 hrs
+- Top speed: 130 km/h
+- Charging time: 4 hrs
 - Kerb weight: 113 kg
 - Boot space: 34 L
 - Ground clearance: 160 mm
@@ -441,7 +441,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price from: ₹1,22,660 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3069/month
 - Battery: 2.3 kWh
-- Claimed range (IDC): 114 km
+- Claimed range (IDC): 94 km
 - Real-world range (EScooterwale estimate): 70–82 km
 - Top speed: 68 km/h
 - Charging time: 2.4 hrs
@@ -538,7 +538,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
 - Real-world range (EScooterwale estimate): 115–130 km
-- Top speed: 80 km/h
+- Top speed: 73 km/h
 - Charging time: 3 hrs
 - Kerb weight: 125 kg
 - Boot space: 35 L
@@ -612,10 +612,10 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price from: ₹1,47,530 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3713/month
 - Battery: 3.4 kWh
-- Claimed range (IDC): 146 km
+- Claimed range (IDC): 142 km
 - Real-world range (EScooterwale estimate): 105–120 km
 - Top speed: 80 km/h
-- Charging time: 5.3 hrs
+- Charging time: 3 hrs
 - Kerb weight: 108 kg
 - Boot space: 26 L
 - Ground clearance: 155 mm
@@ -1011,7 +1011,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price from: ₹1,42,200 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3575/month
 - Battery: 3.1 kWh
-- Claimed range (IDC): 123 km
+- Claimed range (IDC): 121 km
 - Real-world range (EScooterwale estimate): 91–103 km
 - Top speed: 82 km/h
 - Charging time: 3.5 hrs
@@ -1201,10 +1201,10 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price from: ₹1,37,350 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3449/month
 - Battery: 3.4 kWh
-- Claimed range (IDC): 146 km
+- Claimed range (IDC): 142 km
 - Real-world range (EScooterwale estimate): 108–123 km
 - Top speed: 70 km/h
-- Charging time: Not published
+- Charging time: 4 hrs
 - Kerb weight: Not published
 - Boot space: 27 L
 - Ground clearance: Not published
@@ -1223,7 +1223,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Claimed range (IDC): 187 km
 - Real-world range (EScooterwale estimate): 138–157 km
 - Top speed: 90 km/h
-- Charging time: Not published
+- Charging time: 2 hrs
 - Kerb weight: Not published
 - Boot space: Not published
 - Ground clearance: Not published
@@ -1482,9 +1482,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Kinetic DX 2.6 kWh
 - URL: https://www.escooterwale.in/scooters/kinetic-watts-volts-dx-2point6-kwh
-- Ex-showroom price: ₹1,16,499
-- Estimated on-road price from: ₹1,22,600 (lowest across our 12 cities; varies by state road tax)
-- EMI from: ₹3068/month
+- Ex-showroom price: ₹1,11,499
+- Estimated on-road price from: ₹1,17,510 (lowest across our 12 cities; varies by state road tax)
+- EMI from: ₹2936/month
 - Battery: 2.6 kWh
 - Claimed range (IDC): 102 km
 - Real-world range (EScooterwale estimate): 75–86 km
@@ -1501,9 +1501,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Kinetic DX+ 2.6 kWh
 - URL: https://www.escooterwale.in/scooters/kinetic-watts-volts-dxplus-2point6-kwh
-- Ex-showroom price: ₹1,26,174
-- Estimated on-road price from: ₹1,32,450 (lowest across our 12 cities; varies by state road tax)
-- EMI from: ₹3323/month
+- Ex-showroom price: ₹1,21,174
+- Estimated on-road price from: ₹1,27,360 (lowest across our 12 cities; varies by state road tax)
+- EMI from: ₹3191/month
 - Battery: 2.6 kWh
 - Claimed range (IDC): 105 km
 - Real-world range (EScooterwale estimate): 78–88 km

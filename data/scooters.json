@@ -286,8 +286,8 @@
   "emiFrom": 3900,
   "range": "242 km",
   "realRange": "155–165 km",
-  "speed": "125 km/h",
-  "charging": "4.8 hrs",
+  "speed": "130 km/h",
+  "charging": "4 hrs",
   "battery": "4 kWh",
   "bootSpace": "34 L",
   "weight": "113 kg",
@@ -328,14 +328,14 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "125 km/h",
+    "Top speed": "130 km/h",
     "Battery capacity": "4 kWh",
-    "Charging time": "4.8 hrs"
+    "Charging time": "4 hrs"
    },
    "battery": {
     "Claimed range": "242 km",
     "Real-world range": "155–165 km",
-    "Charge time": "4.8 hrs"
+    "Charge time": "4 hrs"
    }
   }
  },
@@ -1078,7 +1078,7 @@
   "onRoad": 120250,
   "onRoadDisplay": "₹120,250",
   "emiFrom": 2842,
-  "range": "114 km",
+  "range": "94 km",
   "realRange": "70–82 km",
   "speed": "68 km/h",
   "charging": "2.4 hrs",
@@ -1126,7 +1126,7 @@
     "Charging time": "2.4 hrs"
    },
    "battery": {
-    "Claimed range": "114 km",
+    "Claimed range": "94 km",
     "Real-world range": "70–82 km",
     "Charge time": "2.4 hrs"
    }
@@ -1498,7 +1498,7 @@
   "emiFrom": 2980,
   "range": "153 km",
   "realRange": "115–130 km",
-  "speed": "80 km/h",
+  "speed": "73 km/h",
   "charging": "3 hrs",
   "battery": "3.5 kWh",
   "bootSpace": "35 L",
@@ -1541,7 +1541,7 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "80 km/h",
+    "Top speed": "73 km/h",
     "Battery capacity": "3.5 kWh",
     "Charging time": "3 hrs"
    },
@@ -1782,10 +1782,10 @@
   "onRoad": 132484,
   "onRoadDisplay": "₹132,484",
   "emiFrom": 3131,
-  "range": "146 km",
+  "range": "142 km",
   "realRange": "105–120 km",
   "speed": "80 km/h",
-  "charging": "5.3 hrs",
+  "charging": "3 hrs",
   "battery": "3.4 kWh",
   "bootSpace": "26 L",
   "weight": "108 kg",
@@ -1827,12 +1827,12 @@
    "performance": {
     "Top speed": "80 km/h",
     "Battery capacity": "3.4 kWh",
-    "Charging time": "5.3 hrs"
+    "Charging time": "3 hrs"
    },
    "battery": {
-    "Claimed range": "146 km",
+    "Claimed range": "142 km",
     "Real-world range": "105–120 km",
-    "Charge time": "5.3 hrs"
+    "Charge time": "3 hrs"
    }
   }
  },
@@ -3673,7 +3673,7 @@
   "onRoad": 0,
   "onRoadDisplay": "",
   "emiFrom": 0,
-  "range": "123 km",
+  "range": "121 km",
   "realRange": "91–103 km",
   "speed": "82 km/h",
   "charging": "3.5 hrs",
@@ -3721,7 +3721,7 @@
     "Charging time (0–80%)": "3.5 hrs"
    },
    "battery": {
-    "Claimed range": "123 km",
+    "Claimed range": "121 km",
     "Real-world range": "91–103 km",
     "Charge time": "3.5 hrs"
    }
@@ -4364,10 +4364,10 @@
   "onRoad": 0,
   "onRoadDisplay": "",
   "emiFrom": 0,
-  "range": "146 km",
+  "range": "142 km",
   "realRange": "108–123 km",
   "speed": "70 km/h",
-  "charging": "Not published",
+  "charging": "4 hrs",
   "battery": "3.4 kWh",
   "bootSpace": "27 L",
   "weight": "Not published",
@@ -4408,12 +4408,12 @@
    "performance": {
     "Top speed": "70 km/h",
     "Battery capacity": "3.4 kWh",
-    "Charging time": "Not published"
+    "Charging time": "4 hrs"
    },
    "battery": {
-    "Claimed range": "146 km",
+    "Claimed range": "142 km",
     "Real-world range": "108–123 km",
-    "Charge time": "Not published"
+    "Charge time": "4 hrs"
    }
   },
   "realRangeEstimated": true
@@ -4434,7 +4434,7 @@
   "range": "187 km",
   "realRange": "138–157 km",
   "speed": "90 km/h",
-  "charging": "Not published",
+  "charging": "2 hrs",
   "battery": "4.4 kWh",
   "bootSpace": "Not published",
   "weight": "Not published",
@@ -4477,12 +4477,13 @@
    "performance": {
     "Top speed": "90 km/h",
     "Battery capacity": "4.4 kWh",
-    "Fast charging (0–80%)": "1.1 hrs"
+    "Fast charging (0–80%)": "1.1 hrs",
+    "Charging time": "2 hrs"
    },
    "battery": {
     "Claimed range": "187 km",
     "Real-world range": "138–157 km",
-    "Charge time": "Not published"
+    "Charge time": "2 hrs"
    }
   },
   "realRangeEstimated": true
@@ -5379,7 +5380,7 @@
   "slug": "kinetic-watts-volts-dx-2point6-kwh",
   "gaEvent": "kin_dx_26",
   "tagline": "",
-  "price": 116499,
+  "price": 111499,
   "priceDisplay": "₹1,16,499",
   "onRoad": 0,
   "onRoadDisplay": "",
@@ -5448,7 +5449,7 @@
   "slug": "kinetic-watts-volts-dxplus-2point6-kwh",
   "gaEvent": "kin_dxp_26",
   "tagline": "",
-  "price": 126174,
+  "price": 121174,
   "priceDisplay": "₹1,26,174",
   "onRoad": 0,
   "onRoadDisplay": "",
