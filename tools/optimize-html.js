@@ -55,6 +55,10 @@ for (const file of pages) {
   if (!h.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))
     h = h.replace(/<head(\s[^>]*)?>/i, m => `${m}\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2946997043388287" crossorigin="anonymous"></script>`);
 
+  // AdSense site verification meta tag (GK, Nov 2026): in the <head> of every page
+  if (!h.includes('name="google-adsense-account"'))
+    h = h.replace(/<head(\s[^>]*)?>/i, m => `${m}\n<meta name="google-adsense-account" content="ca-pub-2946997043388287">`);
+
   // homepages: styles inlined, so the first paint does not wait for styles.css
   if (/^(index\.html|[a-z]{2}\/index\.html)$/.test(path.relative(ROOT, file).split(path.sep).join('/'))) {
     const css = `<style data-inline-css>${inlineCss()}</style>`;
