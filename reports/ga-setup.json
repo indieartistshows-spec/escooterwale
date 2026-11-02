@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-11-02T09:39:34.121Z",
+ "ranAt": "2026-11-02T10:55:52.380Z",
  "keyEvents": {
   "quiz_start": "already a key event",
   "quiz_complete": "already a key event",
@@ -27,8 +27,8 @@
   "charging": "already registered",
   "priority": "already registered",
   "licence": "already registered",
-  "stage": "registered as Lead stage",
-  "icon_name": "registered as Icon name"
+  "stage": "already registered",
+  "icon_name": "already registered"
  },
  "errors": [],
  "serviceAccount": "esco...@escooterwale-bot.iam.gserviceaccount.com"
