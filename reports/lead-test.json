@@ -1,14 +1,18 @@
 {
- "ranAt": "2026-11-02T10:57:53.865Z",
+ "ranAt": "2026-11-02T15:11:28.387Z",
  "page": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
  "result": {
   "contact": {
    "status": 200,
-   "body": "{\"ok\":true,\"id\":\"2026-11-02T10:58:00.903Z_7e4e71\",\"range\":\"Tests!A3:W3\",\"duplicate\":false}"
+   "body": "{\"ok\":true,\"id\":\"2026-11-02T15:11:35.488Z_4d2da0\",\"range\":\"Tests!A4:W4\",\"duplicate\":true,\"copy\":{\"tab\":\"Tests: Match quiz\",\"added\":3,\"range\":\"'Tests: Match quiz'!A2:W4\"}}"
   },
   "final": {
    "status": 200,
-   "body": "{\"ok\":true,\"id\":\"2026-11-02T10:58:00.903Z_7e4e71\",\"updated\":true}"
+   "body": "{\"ok\":true,\"id\":\"2026-11-02T15:11:35.488Z_4d2da0\",\"updated\":true,\"copy\":{\"tab\":\"Tests: Match quiz\",\"updated\":true}}"
+  },
+  "home": {
+   "status": 200,
+   "body": "{\"ok\":true,\"id\":\"2026-11-02T15:11:39.899Z_f440d6\",\"range\":\"Tests!A5:W5\",\"duplicate\":false,\"copy\":{\"tab\":\"Tests: Homepage form\",\"added\":1,\"range\":\"'Tests: Homepage form'!A2:W2\"}}"
   }
  }
 }
