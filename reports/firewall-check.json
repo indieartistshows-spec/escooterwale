@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-11-02T11:02:47.435Z",
+ "ranAt": "2026-11-02T11:45:48.291Z",
  "plain": [
   {
    "path": "/",
@@ -7,7 +7,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 117698
+   "bytes": 117709
   },
   {
    "path": "/",
@@ -15,7 +15,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 117698
+   "bytes": 117709
   },
   {
    "path": "/compare",
@@ -23,7 +23,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 37368
+   "bytes": 37896
   },
   {
    "path": "/compare",
@@ -31,7 +31,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 37368
+   "bytes": 37896
   },
   {
    "path": "/match",
@@ -55,7 +55,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 162485
+   "bytes": 163019
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
@@ -63,7 +63,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 162485
+   "bytes": 163019
   },
   {
    "path": "/hi/",
