@@ -27,7 +27,7 @@
 <meta property="og:title" id="ogTitle" content="Best EV Scooter Under 1.5 Lakh in India 2026: Top Picks and Prices">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="/styles.css?v=ab7f6b48">
-<script src="/data.js?v=1014624e"></script>
+<script src="/data.js?v=7c1dd4ad"></script>
 <script src="/seo.js?v=32380c46"></script>
 <script src="/outbound.js?v=3f21bbce"></script>
 <script src="/components.js?v=efba8756"></script>
@@ -232,7 +232,7 @@
     <div class="ranked-card rank-1">
       <div class="rank-num">#1</div>
       <div class="ranked-img">
-        <img src="/images/cards/ola-electric-s1-xplus-4-kwh.webp?v=tnvfoo" alt="Ola Electric S1 X+ 4 kWh review India" loading="lazy" onerror="this.style.display='none'">
+        <img src="/images/cards/ola-electric-s1-xplus-4-kwh.webp?v=tnvhde" alt="Ola Electric S1 X+ 4 kWh review India" loading="lazy" onerror="this.style.display='none'">
       </div>
       <div class="ranked-body">
         <div>
@@ -263,7 +263,7 @@
     <div class="ranked-card rank-2">
       <div class="rank-num">#2</div>
       <div class="ranked-img">
-        <img src="/images/cards/ather-energy-450s-2point9-kwh.webp?v=tnvfoo" alt="Ather Energy 450S 2.9 kWh review India" loading="lazy" onerror="this.style.display='none'">
+        <img src="/images/cards/ather-energy-450s-2point9-kwh.webp?v=tnvhde" alt="Ather Energy 450S 2.9 kWh review India" loading="lazy" onerror="this.style.display='none'">
       </div>
       <div class="ranked-body">
         <div>
@@ -294,7 +294,7 @@
     <div class="ranked-card rank-3">
       <div class="rank-num">#3</div>
       <div class="ranked-img">
-        <img src="/images/cards/tvs-motor-iqube-s-3point5-kwh.webp?v=tnvfoo" alt="TVS Motor iQube 3.5 kWh review India" loading="lazy" onerror="this.style.display='none'">
+        <img src="/images/cards/tvs-motor-iqube-s-3point5-kwh.webp?v=tnvhde" alt="TVS Motor iQube 3.5 kWh review India" loading="lazy" onerror="this.style.display='none'">
       </div>
       <div class="ranked-body">
         <div>
@@ -325,7 +325,7 @@
     <div class="ranked-card rank-4">
       <div class="rank-num">#4</div>
       <div class="ranked-img">
-        <img src="/images/cards/ather-energy-rizta-s-2point9-kwh.webp?v=tnvfoo" alt="Ather Energy Rizta S 2.9 kWh review India" loading="lazy" onerror="this.style.display='none'">
+        <img src="/images/cards/ather-energy-rizta-s-2point9-kwh.webp?v=tnvhde" alt="Ather Energy Rizta S 2.9 kWh review India" loading="lazy" onerror="this.style.display='none'">
       </div>
       <div class="ranked-body">
         <div>
@@ -356,7 +356,7 @@
     <div class="ranked-card rank-5">
       <div class="rank-num">#5</div>
       <div class="ranked-img">
-        <img src="/images/cards/ola-electric-s1-x-3-kwh.webp?v=tnvfoo" alt="Ola Electric S1 X 3 kWh review India" loading="lazy" onerror="this.style.display='none'">
+        <img src="/images/cards/ola-electric-s1-x-3-kwh.webp?v=tnvhde" alt="Ola Electric S1 X 3 kWh review India" loading="lazy" onerror="this.style.display='none'">
       </div>
       <div class="ranked-body">
         <div>
@@ -676,7 +676,7 @@ function renderPage(catSlug) {
   // Update SEO
   document.getElementById('pgTitle').textContent = seo.title;
   document.getElementById('pgDesc').setAttribute('content', seo.desc);
-  document.getElementById('pgCanon').setAttribute('href', `https://www.escooterwale.in/best/${catSlug}`);
+  document.getElementById('pgCanon').setAttribute('href', `https://www.escooterwale.in${(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0]}/best/${catSlug}`);
   document.getElementById('ogTitle').setAttribute('content', seo.title.replace(' | EScooterwale',''));
   document.getElementById('pgH1').textContent = cat.title;
   document.getElementById('pgSubtitle').textContent = cat.subtitle;
@@ -817,7 +817,7 @@ if (IS_ROOT) {
   const t = 'Best Electric Scooters in India 2026: Top 10 With Price | EScooterwale';
   document.getElementById('pgTitle').textContent = t;
   document.getElementById('ogTitle').setAttribute('content', t.replace(' | EScooterwale', ''));
-  document.getElementById('pgCanon').setAttribute('href', 'https://www.escooterwale.in/best');
+  document.getElementById('pgCanon').setAttribute('href', `https://www.escooterwale.in${(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0]}/best`);
   document.getElementById('pgH1').textContent = 'Best Electric Scooters in India 2026';
   const top = window.__TOP10__ || [];
   if (top.length) document.getElementById('pgDesc').setAttribute('content', `Which electric scooter is best in India? Our top 10 for 2026 with price, led by the ${top[0].fullName}. Real range, ScootScore and picks for commuting, families and under ₹1 lakh.`);
