@@ -22,7 +22,8 @@ const out = { changed: false, from: cfg.headlineCity, to: cfg.headlineCity, user
 
 const ALIAS = { 'new delhi': 'delhi', 'delhi': 'delhi', 'bengaluru': 'bangalore', 'bangalore': 'bangalore', 'secunderabad': 'hyderabad', 'hyderabad': 'hyderabad',
   'mumbai': 'mumbai', 'navi mumbai': 'mumbai', 'thane': 'mumbai', 'chennai': 'chennai', 'pune': 'pune', 'pimpri-chinchwad': 'pune', 'kolkata': 'kolkata', 'howrah': 'kolkata',
-  'ahmedabad': 'ahmedabad', 'gandhinagar': 'ahmedabad', 'jaipur': 'jaipur', 'lucknow': 'lucknow', 'surat': 'surat', 'chandigarh': 'chandigarh', 'mohali': 'chandigarh', 'sahibzada ajit singh nagar': 'chandigarh', 'panchkula': 'chandigarh' };
+  'ahmedabad': 'ahmedabad', 'gandhinagar': 'ahmedabad', 'jaipur': 'jaipur', 'lucknow': 'lucknow', 'surat': 'surat', 'chandigarh': 'chandigarh', 'mohali': 'chandigarh', 'sahibzada ajit singh nagar': 'chandigarh', 'panchkula': 'chandigarh',
+  'patna': 'patna', 'indore': 'indore', 'bhopal': 'bhopal', 'nagpur': 'nagpur', 'bhubaneswar': 'bhubaneswar' };
 
 function jwt(sa) {
   const b64 = o => Buffer.from(JSON.stringify(o)).toString('base64url');

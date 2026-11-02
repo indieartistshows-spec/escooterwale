@@ -156,5 +156,67 @@
   "guide": [
    "Chandigarh waives road tax on EVs. Cash incentives are uncertain, with reports in early 2026 that they may not be paid for the rest of the policy period."
   ]
+ },
+ {
+  "id": "patna",
+  "name": "Patna",
+  "icon": "",
+  "subsidy": "₹10,000",
+  "charging": "Developing",
+  "state": "Bihar",
+  "guide": [
+   "Bihar's 2026 EV policy pays ₹10,000 on an electric two-wheeler, or ₹12,000 for SC and ST buyers, for purchases from 15 May 2026. The money is claimed through the state's DBT portal after you buy, so keep your invoice and registration papers.",
+   "We have not confirmed the road tax on electric scooters in Bihar, so ask the dealer or the RTO for the exact on-road figure before you pay.",
+   "Patna streets often waterlog in the monsoon. Look for a high water and dust rating on the battery and motor (IP67 is common) and avoid riding through deep water."
+  ]
+ },
+ {
+  "id": "indore",
+  "name": "Indore",
+  "icon": "",
+  "subsidy": "₹10,000",
+  "charging": "Developing",
+  "state": "Madhya Pradesh",
+  "guide": [
+   "Madhya Pradesh pays ₹5,000 per kWh of battery, up to ₹10,000, on scooters under ₹1.5 lakh ex-factory, for the first 1,00,000 buyers under the policy notified on 29 March 2025. A 2 kWh or bigger battery gets the full amount.",
+   "We have not confirmed the road tax on electric scooters in Madhya Pradesh, so ask the dealer or the RTO for the exact on-road figure before you pay."
+  ]
+ },
+ {
+  "id": "bhopal",
+  "name": "Bhopal",
+  "icon": "",
+  "subsidy": "₹10,000",
+  "charging": "Developing",
+  "state": "Madhya Pradesh",
+  "guide": [
+   "Madhya Pradesh pays ₹5,000 per kWh of battery, up to ₹10,000, on scooters under ₹1.5 lakh ex-factory, for the first 1,00,000 buyers under the policy notified on 29 March 2025. A 2 kWh or bigger battery gets the full amount.",
+   "We have not confirmed the road tax on electric scooters in Madhya Pradesh, so ask the dealer or the RTO for the exact on-road figure before you pay.",
+   "Bhopal has more climbs than most Indian cities. If your daily ride has steep roads or two riders, pick a scooter with a stronger motor and expect a little less range than the claimed figure."
+  ]
+ },
+ {
+  "id": "nagpur",
+  "name": "Nagpur",
+  "icon": "",
+  "subsidy": "₹10,000",
+  "charging": "Developing",
+  "state": "Maharashtra",
+  "guide": [
+   "Maharashtra adds up to ₹10,000 (10% of the ex-factory price) on top of the central subsidy and waives road tax and registration for EVs under its 2025 policy, which runs to March 2030. Nagpur buyers get the same benefits as Mumbai and Pune.",
+   "Nagpur summers are among the hottest in India. If your scooter will park in the sun, battery chemistry and a good battery warranty matter more here. Our LFP vs NMC guide lists which models use which cells."
+  ]
+ },
+ {
+  "id": "bhubaneswar",
+  "name": "Bhubaneswar",
+  "icon": "",
+  "subsidy": "₹5,000",
+  "charging": "Developing",
+  "state": "Odisha",
+  "guide": [
+   "Odisha pays 15% of the ex-factory price, up to ₹5,000, and waives road tax on electric scooters under its EV Policy 2021. The policy has been extended to 31 December 2026, so register before then to be sure of both.",
+   "Bhubaneswar gets heavy monsoon rain and humid summers. Look for a high water and dust rating on the battery and motor (IP67 is common) and park under cover where you can."
+  ]
  }
 ]

@@ -455,7 +455,12 @@
   "jaipur": "302001",
   "lucknow": "226001",
   "surat": "395003",
-  "chandigarh": "160017"
+  "chandigarh": "160017",
+  "patna": "800001",
+  "indore": "452001",
+  "bhopal": "462001",
+  "nagpur": "440001",
+  "bhubaneswar": "751001"
  },
  "ather-energy-konarc-s-100-2point1-kwh": {
   "url": "https://www.atherenergy.com/konarc",

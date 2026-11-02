@@ -18,7 +18,7 @@
    ------
    /scooters/<id>/index.html      41 model pages
    /brands/<id>/index.html        10 brand pages
-   /cities/<id>/index.html        12 city pages
+   /cities/<id>/index.html        one page per city in data/cities.json
    /best/<cat>/index.html          6 category pages
    /compare/<a>-vs-<b>/index.html  top comparison pages
    /articles/<id>/index.html       3 article pages

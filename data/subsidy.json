@@ -418,7 +418,12 @@
   "kolkata": "west-bengal",
   "jaipur": "rajasthan",
   "lucknow": "uttar-pradesh",
-  "chandigarh": "chandigarh"
+  "chandigarh": "chandigarh",
+  "patna": "bihar",
+  "indore": "madhya-pradesh",
+  "bhopal": "madhya-pradesh",
+  "nagpur": "maharashtra",
+  "bhubaneswar": "odisha"
  },
  "changelog": [
   {

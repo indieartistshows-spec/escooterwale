@@ -13,7 +13,12 @@
   "jaipur",
   "lucknow",
   "surat",
-  "chandigarh"
+  "chandigarh",
+  "patna",
+  "indore",
+  "bhopal",
+  "nagpur",
+  "bhubaneswar"
  ],
  "pairs": [
   "ather-energy-450-apex-3point7-kwh-vs-tvs-motor-iqube-2point2-kwh",
