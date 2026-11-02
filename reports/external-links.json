@@ -1,0 +1,1567 @@
+{
+ "ranAt": "2026-11-02T17:28:26.620Z",
+ "total": 1107,
+ "ok": 281,
+ "dead": [
+  {
+   "url": "https://e-veg.gujarat.gov.in/",
+   "plain": "ENOTFOUND",
+   "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://e-veg.gujarat.gov.in/",
+   "pages": 4,
+   "examples": [
+    "/cities/ahmedabad",
+    "/cities/surat",
+    "/guide-subsidy-deadlines"
+   ]
+  }
+ ],
+ "blocked": [
+  {
+   "url": "https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=ather-energy-450-apex-3point7-kwh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=ather-energy-450-apex-3point7-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=ather-energy-konarc-s-100-2point1-kwh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=ather-energy-konarc-s-100-2point1-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=ather-energy-konarc-s-125-2point7-kwh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=ather-energy-konarc-s-125-2point7-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=ather-energy-konarc-s-161-3point5-kwh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=ather-energy-konarc-s-161-3point5-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/r30?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=okinawa-r30-0point8-kwh",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/r30?utm_source=escooterwale&utm_mediu",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/lite?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=okinawa-lite-1point2-kwh",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/lite?utm_source=escooterwale&utm_medi",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/ipraise-plus?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=okinawa-ipraiseplus-2point2-kwh",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/ipraise-plus?utm_source=escooterwale&",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/ridge-plus-gps?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=okinawa-ridgeplus-2point8-kwh",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/ridge-plus-gps?utm_source=escooterwal",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/okhi-90?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=okinawa-okhi-90-2point8-kwh",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/okhi-90?utm_source=escooterwale&utm_m",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/praisepro?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=okinawa-praisepro-2point08-kwh",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/praisepro?utm_source=escooterwale&utm",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-epluto-7g-2point0-kwh",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=re",
+   "final": "https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-epluto-7g-2point0-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-epluto-7g-cx-1point8-kwh",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=re",
+   "final": "https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-epluto-7g-cx-1point8-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-epluto-7g-pro-3point0-kwh",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_mediu",
+   "final": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-epluto-7g-pro-3point0-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-epluto-7g-max-3point5-kwh",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_mediu",
+   "final": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-epluto-7g-max-3point5-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-etrance-neo-sx-1point8-kwh",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=",
+   "final": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-etrance-neo-sx-1point8-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-etrance-neo-2point4-kwh",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=",
+   "final": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-etrance-neo-2point4-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-etrance-neoplus-3point0-kwh",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=",
+   "final": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=footer_directory&utm_content=pure-ev-etrance-neoplus-3point0-kwh",
+   "pages": 234,
+   "examples": [
+    "/articles/ev-running-costs",
+    "/articles/fame-3-guide",
+    "/articles/ola-s1-pro-review"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=best",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=best\"",
+   "final": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=best",
+   "pages": 2,
+   "examples": [
+    "/best/daily-commute",
+    "/best/under-1-5l"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=best",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=best",
+   "pages": 1,
+   "examples": [
+    "/best/under-1-lakh"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/ridge-plus-gps?utm_source=escooterwale&utm_medium=referral&utm_campaign=best",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/ridge-plus-gps?utm_source=escooterwal",
+   "pages": 1,
+   "examples": [
+    "/best/under-1-lakh"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.atherenergy.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand\" i",
+   "final": "https://www.atherenergy.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "pages": 1,
+   "examples": [
+    "/brands/ather-energy"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "final": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "pages": 1,
+   "examples": [
+    "/brands/ather-energy"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=bran",
+   "final": "https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "pages": 1,
+   "examples": [
+    "/brands/ather-energy"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=br",
+   "final": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "pages": 1,
+   "examples": [
+    "/brands/ather-energy"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/?utm_source=escooterwale&utm_medium=referral&u",
+   "pages": 1,
+   "examples": [
+    "/brands/okinawa"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/r30?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/r30?utm_source=escooterwale&utm_mediu",
+   "pages": 1,
+   "examples": [
+    "/brands/okinawa"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/lite?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/lite?utm_source=escooterwale&utm_medi",
+   "pages": 1,
+   "examples": [
+    "/brands/okinawa"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/ipraise-plus?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/ipraise-plus?utm_source=escooterwale&",
+   "pages": 1,
+   "examples": [
+    "/brands/okinawa"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/ridge-plus-gps?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/ridge-plus-gps?utm_source=escooterwal",
+   "pages": 1,
+   "examples": [
+    "/brands/okinawa"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/okhi-90?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/okhi-90?utm_source=escooterwale&utm_m",
+   "pages": 1,
+   "examples": [
+    "/brands/okinawa"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/praisepro?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/praisepro?utm_source=escooterwale&utm",
+   "pages": 1,
+   "examples": [
+    "/brands/okinawa"
+   ]
+  },
+  {
+   "url": "https://pureev.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://pureev.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand\" is interrup",
+   "final": "https://www.pureenergy.co.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "pages": 1,
+   "examples": [
+    "/brands/pure-ev"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=re",
+   "final": "https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "pages": 1,
+   "examples": [
+    "/brands/pure-ev"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_mediu",
+   "final": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "pages": 1,
+   "examples": [
+    "/brands/pure-ev"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=",
+   "final": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=brand",
+   "pages": 1,
+   "examples": [
+    "/brands/pure-ev"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=city",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=city\"",
+   "final": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=city",
+   "pages": 16,
+   "examples": [
+    "/cities/ahmedabad",
+    "/cities/bangalore",
+    "/cities/bhopal"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=city",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.atherenergy.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=city\" is",
+   "final": "https://www.atherenergy.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=city",
+   "pages": 17,
+   "examples": [
+    "/cities/ahmedabad",
+    "/cities/bangalore",
+    "/cities/bhopal"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=city",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/?utm_source=escooterwale&utm_medium=referral&u",
+   "pages": 17,
+   "examples": [
+    "/cities/ahmedabad",
+    "/cities/bangalore",
+    "/cities/bhopal"
+   ]
+  },
+  {
+   "url": "https://pureev.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=city",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://pureev.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=city\" is interrupt",
+   "final": "https://www.pureenergy.co.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=city",
+   "pages": 17,
+   "examples": [
+    "/cities/ahmedabad",
+    "/cities/bangalore",
+    "/cities/bhopal"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=compare",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=comp",
+   "final": "https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=compare",
+   "pages": 11,
+   "examples": [
+    "/compare/ather-energy-450-apex-3point7-kwh-vs-tvs-motor-iqube-2point2-kwh",
+    "/compare/ather-energy-450s-2point9-kwh-vs-ather-energy-450-apex-3point7-kwh",
+    "/compare/ather-energy-450x-3point7-kwh-vs-ather-energy-450-apex-3point7-kwh"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=compare",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=compa",
+   "final": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=compare",
+   "pages": 27,
+   "examples": [
+    "/compare/ather-energy-450s-2point9-kwh-vs-ather-energy-450-apex-3point7-kwh",
+    "/compare/ather-energy-450s-2point9-kwh-vs-ather-energy-450x-3point7-kwh",
+    "/compare/ather-energy-450s-2point9-kwh-vs-tvs-motor-iqube-2point2-kwh"
+   ]
+  },
+  {
+   "url": "https://industries.assam.gov.in/sites/default/files/swf_utility_folder/departments/industries_com_oid_4/portlet/level_2/ilovepdf_merged.pdf",
+   "plain": "UND_ERR_CONNECT_TIMEOUT",
+   "browser": "page.goto: Timeout 30000ms exceeded.",
+   "pages": 2,
+   "examples": [
+    "/guide-subsidy-deadlines",
+    "/guide-subsidy"
+   ]
+  },
+  {
+   "url": "https://vahan.parivahan.gov.in/",
+   "plain": "UND_ERR_CONNECT_TIMEOUT",
+   "browser": "page.goto: Timeout 30000ms exceeded.",
+   "pages": 1,
+   "examples": [
+    "/guide-subsidy"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=home_banner&utm_content=ather-konarc",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=home_banner&utm_content=ather-konarc",
+   "pages": 1,
+   "examples": [
+    "/"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=launches&utm_content=launch-ather-konarc",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=launches&utm_content=launch-ather-konarc",
+   "pages": 1,
+   "examples": [
+    "/launches"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Magnus%20G%20Max%203%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Magnus%20G%20Max%203%20kWh&__cf_chl_rt_tk=mghYEGKoAWJuCFbZxHp2QXHw36pYsOKSsk2vVbDdkvQ-1793640503-1.0.1.1-stmrHcpqyVUnzaOHQtIZaLRiBBo_.nnAChna_c6JY9U",
+   "pages": 1,
+   "examples": [
+    "/scooters/ampere-magnus-g-max-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Magnus%20Neo%202.3%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Magnus%20Neo%202.3%20kWh&__cf_chl_rt_tk=w_N7xtKS_2p.cLuX.kbneua_Kox7Mi9F4OcFrSaEBcs-1793640503-1.0.1.1-rDaMM9.T_tFEBM47WUnhkzo3ZzXAYcRC4Kg9dpfXN_A",
+   "pages": 1,
+   "examples": [
+    "/scooters/ampere-magnus-neo-2point3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Nexus%20EX%2B%203%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Nexus%20EX%2B%203%20kWh&__cf_chl_rt_tk=AtNDtWTqT9.lD6P7TcONzuGz8QjWwzcIm5WkBPrdn14-1793640503-1.0.1.1-MR1naaHydxW0KP2AWEwTsEUA8pwDudK1R5grRFozfIk",
+   "pages": 1,
+   "examples": [
+    "/scooters/ampere-nexus-ex-3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Nexus%20ST%203%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Nexus%20ST%203%20kWh&__cf_chl_rt_tk=fk1yu4NotGKaT9kQTcS0yWpMRlTw.zUykydxsSL00bs-1793640503-1.0.1.1-8QydzaUqYNNvA4Us9jlGsVqqGneDlQL0ZWiUlilxiwo",
+   "pages": 1,
+   "examples": [
+    "/scooters/ampere-nexus-st-3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Reo%201.3%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Reo%201.3%20kWh&__cf_chl_rt_tk=21h_VvUdHPHOv7F0Q6kWBsvb8Vazd.k_srOhlcdLWXk-1793640503-1.0.1.1-0nkPHWRmusQzvvkP4TNMl0FX5eQT4B7erSK3W_IGSoQ",
+   "pages": 1,
+   "examples": [
+    "/scooters/ampere-reo-1point3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Reo%20Vyb%201.44%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ampere%20Reo%20Vyb%201.44%20kWh&__cf_chl_rt_tk=E7.URhh_Y5R16trkDIVmOpHyzW8jaPb8hLO5DzBumKk-1793640503-1.0.1.1-hfkXFdwCiBLDL6CKvko23SrMcriaP4iWso0dWI3SJhs",
+   "pages": 1,
+   "examples": [
+    "/scooters/ampere-reo-vyb-1point44-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450%20Apex%203.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450%20Apex%203.5%20kWh&__cf_chl_rt_tk=hPmkyjL1XGmSeECUOIl4Ty6G8Jr6oLcGAEGzu2aPT2U-1793640503-1.0.1.1-F3A0NoPADWEFTKr3Gf92iHUWsjMFAOTn1zufz3.BCaw",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-450-apex-3point7-kwh"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/apex?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-450-apex-3point7-kwh"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "pages": 12,
+   "examples": [
+    "/scooters/ather-energy-450-apex-3point7-kwh",
+    "/scooters/ather-energy-450s-2point9-kwh",
+    "/scooters/ather-energy-450s-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450S%202.9%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450S%202.9%20kWh&__cf_chl_rt_tk=O_G8cIG7os5PRentLGtkZSswdRYAf_1iJdgEhgefEiM-1793640503-1.0.1.1-EV46sEHt0aCmlkBunUcREMcgm5WmZOotLw07888Ji7s",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-450s-2point9-kwh"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/450?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "pages": 4,
+   "examples": [
+    "/scooters/ather-energy-450s-2point9-kwh",
+    "/scooters/ather-energy-450s-3point5-kwh",
+    "/scooters/ather-energy-450x-2point9-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450S%203.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450S%203.5%20kWh&__cf_chl_rt_tk=FlS9VLxGvXWaaV7q1b0J2DawBZEHKyzT4JSbSYeKE0w-1793640503-1.0.1.1-fMXNWV2iVqgs1W4QP7r5nQI5zlY0iAAULKAL1GkLqME",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-450s-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450X%202.9%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450X%202.9%20kWh&__cf_chl_rt_tk=EAsOlWl2ZDbw8Zx306GyPEGhsbc1SRk29AuUUUqt2Qw-1793640503-1.0.1.1-_7PehbzQHDRI8enPvvskaaaEiH2OMQFrNIyJtFpb180",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-450x-2point9-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450X%203.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20450X%203.5%20kWh&__cf_chl_rt_tk=QrujwwLSO07sLtadvAtRUHpSaFRFTDCFppPr5TBDKto-1793640503-1.0.1.1-DLj09QDEX3Uq74PARJgADNWbBIAofnmGFZOqnEGiC04",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-450x-3point7-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Konarc%20S%20100%202.1%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Konarc%20S%20100%202.1%20kWh&__cf_chl_rt_tk=FcYBimUj4H0CIUOgPT6ECag_BI_1QYzItAUl43vFw9c-1793640503-1.0.1.1-uVCAuZXb.HokApfjSChqAqC5K5BGF.Bzi01iKidWeag",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-konarc-s-100-2point1-kwh"
+   ]
+  },
+  {
+   "url": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": 403,
+   "browser": 403,
+   "title": "Attention Required! | Cloudflare",
+   "final": "https://www.atherenergy.com/konarc?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "pages": 3,
+   "examples": [
+    "/scooters/ather-energy-konarc-s-100-2point1-kwh",
+    "/scooters/ather-energy-konarc-s-125-2point7-kwh",
+    "/scooters/ather-energy-konarc-s-161-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Konarc%20S%20125%202.7%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Konarc%20S%20125%202.7%20kWh&__cf_chl_rt_tk=wKcL.a13p.SXUxR7H8N1XLtznASoGMbW7RZtL53lOMc-1793640503-1.0.1.1-g3ky4DDz71nJNFkuFozMlqe5AIcmHKN.H3c6jruz2Qk",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-konarc-s-125-2point7-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Konarc%20S%20161%203.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Konarc%20S%20161%203.5%20kWh&__cf_chl_rt_tk=Ez1hA._u8Ts3_LzRtoguMQeW2T5zFb2A1l2KNC6LIFI-1793640503-1.0.1.1-tZviylSMElaDXVGRObUOoXuLUji_6XV1TOdhc67KL8s",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-konarc-s-161-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Rizta%20S%202.9%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Rizta%20S%202.9%20kWh&__cf_chl_rt_tk=FPHKfv3ST.I_NWHUJdcyEo2T2M6TcgpsXA2pt9XiSNY-1793640503-1.0.1.1-B8CjQl0.vRTAzvJZl3XuUlbcEWnqyLFoz0MhNQgo09g",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-rizta-s-2point9-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Rizta%20S%203.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Rizta%20S%203.5%20kWh&__cf_chl_rt_tk=c.lNEVQR5GAzQxAApH6LbqU.iz5.1Vb5Mm7nXIlfvTo-1793640503-1.0.1.1-jHmZfivwjwrxQyfE1SGvsKM3upHH9N8.uia2k1dAAio",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-rizta-s-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Rizta%20Z%202.9%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Rizta%20Z%202.9%20kWh&__cf_chl_rt_tk=.TDXeUbLWvUHsuxIDf84kyq.M8mjq.PpZJdXuKjGRq8-1793640503-1.0.1.1-neuhbASvT.1NO25VtjoyHMcubzo4n9FhGtrLhoEUCV0",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-rizta-z-2point9-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Rizta%20Z%203.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ather%20Rizta%20Z%203.5%20kWh&__cf_chl_rt_tk=OdqfnT3dNit7yZZ3vwQG6DQMEwwpFGLvCx6_edz2WV0-1793640503-1.0.1.1-lMvFrah_r_i3a3KNJF_EgbBY8gwzEuBsWs2MY1B8Qj0",
+   "pages": 1,
+   "examples": [
+    "/scooters/ather-energy-rizta-z-3point7-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C3001%203.0%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C3001%203.0%20kWh&__cf_chl_rt_tk=4xbkYBqhSUsCewRpDNSD4x8iPTOcuhcHaGfmo33rfTA-1793640503-1.0.1.1-0zH.7U1caz0iUprQwJyOAl85nF1lcuK1rJdjOs9nT5E",
+   "pages": 1,
+   "examples": [
+    "/scooters/bajaj-chetak-chetak-3001-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C3501%203.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C3501%203.5%20kWh&__cf_chl_rt_tk=YWPUwdtmgbB9FCn86Pb2VWrBSXJ4nm.wvVSvlIJGc.M-1793640504-1.0.1.1-vcBQP4SKsRLpfwRRRNFl1zrunk1_gJSmnOTQVtjuVdY",
+   "pages": 1,
+   "examples": [
+    "/scooters/bajaj-chetak-chetak-3501-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C3502%203.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C3502%203.5%20kWh&__cf_chl_rt_tk=U1WyVrCqXi9oKnTRuZ9PccWgU1sDEe.ME9PXmXjmsqw-1793640504-1.0.1.1-Z8QdyFJb.i1ZrRcon3_pzDEdQtqrF7tEZnEjyvZ5lD4",
+   "pages": 1,
+   "examples": [
+    "/scooters/bajaj-chetak-chetak-3502-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C3503%203.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C3503%203.5%20kWh&__cf_chl_rt_tk=o8rg6wrf1_A2VPO_g1AGUcTgghKu39N7Dvr3ecFQ5Lc-1793640504-1.0.1.1-U0KOYP3J.yv4rTU5MNAIotMRhcehUBhIBcPN_2UfAwo",
+   "pages": 1,
+   "examples": [
+    "/scooters/bajaj-chetak-chetak-3503-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C2501%202.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Bajaj%20Chetak%20C2501%202.5%20kWh&__cf_chl_rt_tk=p..TZzbnM1YYUaUTiIq0GjDKdB9knaDjb4xq_rZTofQ-1793640504-1.0.1.1-wILSKDQH93MrHEnof9sBQA2dea_4XHHum2vY14b.3is",
+   "pages": 1,
+   "examples": [
+    "/scooters/bajaj-chetak-chetak-c2501-2point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20C12%20MaxR%203.8%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20C12%20MaxR%203.8%20kWh&__cf_chl_rt_tk=oArCBBLtvaVCncAFgOyeazSQAjYLT4DCxP0SKhEOSBU-1793640504-1.0.1.1-CJ9UOXS2vMOGg4CDQMxnGDwQqGgGFA71c1MrTuhitRU",
+   "pages": 1,
+   "examples": [
+    "/scooters/bgauss-c12-maxr-3point8-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20C12i%20EX%202.0%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20C12i%20EX%202.0%20kWh&__cf_chl_rt_tk=0_jESwwhyemIk8SQH8HiKS1Va3pPvHhJwIIkt6BDcII-1793640504-1.0.1.1-u5uYOmjfZLlXKHE.ipCELxJS6rsUDSjZgpBR9J_wOIE",
+   "pages": 1,
+   "examples": [
+    "/scooters/bgauss-c12i-2point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20D15i%203.0%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20D15i%203.0%20kWh&__cf_chl_rt_tk=auM4RLtHhMl_6fTR5cgHPkYsH_v0O5v_zFvX4nUc8lo-1793640504-1.0.1.1-3iBQlu3PKTF4CUkynl.IFrjaUsQzyLetgAUf0bLOlzE",
+   "pages": 1,
+   "examples": [
+    "/scooters/bgauss-d15i-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20MAX%20C12%202.7%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20MAX%20C12%202.7%20kWh&__cf_chl_rt_tk=sMR8RfBW00aOXT3VBh.3A_IyYLXRHZNTmujpL9GZV68-1793640504-1.0.1.1-lnhg8f.d1uusyw0DJwVfOo1eawWOqAVxrP9806Nrjmc",
+   "pages": 1,
+   "examples": [
+    "/scooters/bgauss-max-c12-2point7-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20OoWah%20EX%202.3%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20OoWah%20EX%202.3%20kWh&__cf_chl_rt_tk=6JelB0fsHeUmLtIjpu5A.ycpdG___VX8Sqha8zHvinU-1793640504-1.0.1.1-CmKakQomjTPu_a1t8MX0r6hd9evu7_9vkd0DUohP7oM",
+   "pages": 1,
+   "examples": [
+    "/scooters/bgauss-oowah-ex-2point3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20OoWah%20MAX%20Plus%203.0%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20OoWah%20MAX%20Plus%203.0%20kWh&__cf_chl_rt_tk=_uuddHspGyvYTVjmZwWKQ4UapyrFibJuHDm0LwQpD1c-1793640504-1.0.1.1-pUXTLwfiY3LQ2ZfoAqO5X5KtA3wMK9mNGbBWiEk9KYs",
+   "pages": 1,
+   "examples": [
+    "/scooters/bgauss-oowah-max-plus-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20RUV%20350%20MAX%203.0%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=BGauss%20RUV%20350%20MAX%203.0%20kWh&__cf_chl_rt_tk=TOTqA_tSn1oYAp3VSQNTqia143jKgn1BmD25Wo2zKs8-1793640504-1.0.1.1-O7sz4wH3v9dk_PmAuIAUZissg0vJN1nMAgMt0eNZO2c",
+   "pages": 1,
+   "examples": [
+    "/scooters/bgauss-ruv-350i-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Bounce%20Infinity%20E1%202.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Bounce%20Infinity%20E1%202.5%20kWh&__cf_chl_rt_tk=WcnEVptdYwiF.eh11U_hjYKW0snD_NayfBBpxAaG.C0-1793640504-1.0.1.1-RPyRy_lbYEmRXZMMu2cq1k1bADNonVYZWR54cuBRMdM",
+   "pages": 1,
+   "examples": [
+    "/scooters/bounce-infinity-infinity-e1-2point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Bounce%20Infinity%20E1%2B%201.9%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Bounce%20Infinity%20E1%2B%201.9%20kWh&__cf_chl_rt_tk=UxHDi4RdnQCd6SN1nVoYSIJJDdKJZIrZsqO3vuQpuyM-1793640504-1.0.1.1-yRqYkmvJzeu6k9B0WMTrshjqWNSQGWBJqyGAFcD0u2o",
+   "pages": 1,
+   "examples": [
+    "/scooters/bounce-infinity-infinity-e1-plus-2point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20V2%20Pro%203.94%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20V2%20Pro%203.94%20kWh&__cf_chl_rt_tk=vD1E6RTYfu54ONsQRRO3iObUF5wDoN6h9Ai0fcJMaPY-1793640504-1.0.1.1-kr5oridXEq_BuJfbJkQUDgbNjRoJRvQLJCxznEOHWUg",
+   "pages": 1,
+   "examples": [
+    "/scooters/hero-vida-v2-pro-3point94-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Go%202.2%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Go%202.2%20kWh&__cf_chl_rt_tk=GWZ61tpcR9SB1CaMtm9tBOjlRu0WNxemrFObu87Wl0E-1793640504-1.0.1.1-mppYrzp4zxdSlj__l4JtXmh7FiiNbyPHiAql2h51pWc",
+   "pages": 1,
+   "examples": [
+    "/scooters/hero-vida-vx2-go-2point2-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Go%203.4%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Go%203.4%20kWh&__cf_chl_rt_tk=tZkKJyp_1TDqKgu_BHhFvXbi91L1ZpQ9t_w.P08T1p0-1793640504-1.0.1.1-qn6m7xXgY_.iJFa_PcwVedM0F0coCSyDl3jmgUZCCSY",
+   "pages": 1,
+   "examples": [
+    "/scooters/hero-vida-vx2-go-3point4-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Go%20FB%203.1%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Go%20FB%203.1%20kWh&__cf_chl_rt_tk=6mB1WePj4IlUi7N1aHnjM1QNj2bVQib69z4Jmcei_TA-1793640504-1.0.1.1-UB.v8Scz8kEv8YH4ypCNjJ4bCD6vhfHZ81dVL.Z.BKU",
+   "pages": 1,
+   "examples": [
+    "/scooters/hero-vida-vx2-go-fb-3point1-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Plus%203.4%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Plus%203.4%20kWh&__cf_chl_rt_tk=gy4yYoY8zGHs3ErL8H.h1239Uz.52HGR_g2SzyeefBw-1793640504-1.0.1.1-o.zMb.p8vG9i2GE3f57X08aNJ1.S30iXTrCH2_8wa5g",
+   "pages": 1,
+   "examples": [
+    "/scooters/hero-vida-vx2-plus-3point4-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Plus%204.4%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Hero%20Vida%20VX2%20Plus%204.4%20kWh&__cf_chl_rt_tk=SVd1ifl2QogS5.Zi2igF.fg5NNcFyaOBGz16VSzASxo-1793640504-1.0.1.1-k.B_ud6rUVVlPoZKcdQoFHzS6nA6685viDxRH5jw04Q",
+   "pages": 1,
+   "examples": [
+    "/scooters/hero-vida-vx2-plus-4point4-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Honda%20QC1%201.5%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Honda%20QC1%201.5%20kWh&__cf_chl_rt_tk=ERwI2a28m8Lfn1k_v5i8A2YeIe4RNftvZQYVT6aNID8-1793640504-1.0.1.1-9HYpQVAZqhYbysfDmEHpaStn_t4UW3r6ooJqoejRen0",
+   "pages": 1,
+   "examples": [
+    "/scooters/honda-qc1-1point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Kinetic%20DX%202.6%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Kinetic%20DX%202.6%20kWh&__cf_chl_rt_tk=UdZ_pd9mNa03pmvcPyLxPi.JEMKSzQqDEGimq3XtUp4-1793640504-1.0.1.1-nBesf7K5CMrotR8Qu_LvmBzu8h.uGYXmx.AHNf3sMmc",
+   "pages": 1,
+   "examples": [
+    "/scooters/kinetic-watts-volts-dx-2point6-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Kinetic%20DX%2B%202.6%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Kinetic%20DX%2B%202.6%20kWh&__cf_chl_rt_tk=jV.gjUoII_gfRRfwcCNWovaZku.LmQ_8T5HjNKZd6AY-1793640504-1.0.1.1-at4hIRXiwgnFxviDE7hEx7DtUyjLk884Arsh4CzBLBg",
+   "pages": 1,
+   "examples": [
+    "/scooters/kinetic-watts-volts-dxplus-2point6-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Lectrix%20LXS%202.0%202.3%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Lectrix%20LXS%202.0%202.3%20kWh&__cf_chl_rt_tk=fsUxMWMifkIeC4kNaf2aZ86DKJYLggH7ue0pfc07u5U-1793640504-1.0.1.1-f4__GTs9ayvN1gls12H6.t8FnD86h0gYf8fh3QtiTXs",
+   "pages": 1,
+   "examples": [
+    "/scooters/lectrix-lxs-2point0-2point3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Lectrix%20NDuro%203.0%203%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Lectrix%20NDuro%203.0%203%20kWh&__cf_chl_rt_tk=ChmUa72PaAdo7oiK7sYggbkPW.u0CoFQftDL.roRYTo-1793640504-1.0.1.1-Sj6EONaTloeAu8K1O6.j7_NWdyZZq0CB0HWjnd_..ws",
+   "pages": 1,
+   "examples": [
+    "/scooters/lectrix-nduro-3point0-3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Okaya%20Faast%20F2F%202.19%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Okaya%20Faast%20F2F%202.19%20kWh&__cf_chl_rt_tk=8zIsG61kP_g18P7Ft8PyGiOOjc2.GCZQE0sGPaBgKEk-1793640504-1.0.1.1-plRtkHGZ7bFKkqANjulxCsGL1ik46Kc.6Fta2vPWAx0",
+   "pages": 1,
+   "examples": [
+    "/scooters/okaya-ev-faast-f2f-2point19-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Okaya%20Faast%20F4%204.4%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Okaya%20Faast%20F4%204.4%20kWh&__cf_chl_rt_tk=PoUCsaw3h_X2tqSk3i8peOzC9fzQhL.okD3Qree0IQo-1793640504-1.0.1.1-a9LY8k_D.NIQenhMbuTo9hGb3kAlAJ7AB3QIYWfbTKc",
+   "pages": 1,
+   "examples": [
+    "/scooters/okaya-ev-faast-f4-4point4-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Okaya%20Freedum%20LI%201.44%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Okaya%20Freedum%20LI%201.44%20kWh&__cf_chl_rt_tk=.eYT1Ls5YnslleTVGwWli21IOnPC_8QQRQ6HJvcNgwI-1793640504-1.0.1.1-w97uYD7ujt09dXlgjTjITbppa9YLTQDuVn_qfBqm8s8",
+   "pages": 1,
+   "examples": [
+    "/scooters/okaya-ev-freedum-li-1point44-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20iPraise%2B%203.3%20kWh",
+   "plain": 403,
+   "browser": 403,
+   "title": "Just a moment...",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20iPraise%2B%203.3%20kWh&__cf_chl_rt_tk=Grc3RjNQn6XNmQQNqORth704XsU77o421IoKolEkkMw-1793640504-1.0.1.1-f31WdtaDYMdmGELK2eCcvmtaokhXdW.aWc0EaxQEauw",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-ipraiseplus-2point2-kwh"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/ipraise-plus?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/scooters/ipraise-plus?utm_source=escooterwale&",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-ipraiseplus-2point2-kwh"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://okinawascooters.com/?utm_source=escooterwale&utm_medium=referral&u",
+   "pages": 6,
+   "examples": [
+    "/scooters/okinawa-ipraiseplus-2point2-kwh",
+    "/scooters/okinawa-lite-1point2-kwh",
+    "/scooters/okinawa-okhi-90-2point8-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20Lite%201.25%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Navigation to \"https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20Lite%201.25%20kWh\" is int",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20Lite%201.25%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-lite-1point2-kwh"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/lite?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-lite-1point2-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20OKHI-90%203.6%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20OKHI-90%203.6%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-okhi-90-2point8-kwh"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/okhi-90?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-okhi-90-2point8-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20PraisePro%202.08%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20PraisePro%202.08%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-praisepro-2point08-kwh"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/praisepro?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-praisepro-2point08-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20R30%201.25%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20R30%201.25%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-r30-0point8-kwh"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/r30?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-r30-0point8-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20Ridge%2B%201.7%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Okinawa%20Ridge%2B%201.7%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-ridgeplus-2point8-kwh"
+   ]
+  },
+  {
+   "url": "https://okinawascooters.com/scooters/ridge-plus-gps?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "pages": 1,
+   "examples": [
+    "/scooters/okinawa-ridgeplus-2point8-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20Pro%203%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20Pro%203%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/ola-electric-s1-pro-3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20Pro%204%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20Pro%204%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/ola-electric-s1-pro-4-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20Pro%2B%204%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20Pro%2B%204%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/ola-electric-s1-proplus-4-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20Pro%2B%205.2%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20Pro%2B%205.2%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/ola-electric-s1-proplus-5point2-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20X%202%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20X%202%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/ola-electric-s1-x-2-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20X%203%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20X%203%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/ola-electric-s1-x-3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20X%204%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20X%204%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/ola-electric-s1-x-4-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20X%2B%204%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Ola%20S1%20X%2B%204%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/ola-electric-s1-xplus-4-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ePluto%207G%202.4%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ePluto%207G%202.4%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-epluto-7g-2point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.pureenergy.co.in/electric-scooters/epluto-7g?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "pages": 2,
+   "examples": [
+    "/scooters/pure-ev-epluto-7g-2point0-kwh",
+    "/scooters/pure-ev-epluto-7g-cx-1point8-kwh"
+   ]
+  },
+  {
+   "url": "https://pureev.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.pureenergy.co.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "pages": 9,
+   "examples": [
+    "/scooters/pure-ev-epluto-7g-2point0-kwh",
+    "/scooters/pure-ev-epluto-7g-cx-1point8-kwh",
+    "/scooters/pure-ev-epluto-7g-max-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ePluto%207G%20CX%201.8%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ePluto%207G%20CX%201.8%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-epluto-7g-cx-1point8-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ePluto%207G%20MAX%203.5%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ePluto%207G%20MAX%203.5%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-epluto-7g-max-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.pureenergy.co.in/electric-scooters/epluto-7g-max?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "pages": 2,
+   "examples": [
+    "/scooters/pure-ev-epluto-7g-max-3point5-kwh",
+    "/scooters/pure-ev-epluto-7g-pro-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ePluto%207G%20PRO%203.0%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ePluto%207G%20PRO%203.0%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-epluto-7g-pro-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20eTrance%20Neo%202.4%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20eTrance%20Neo%202.4%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-etrance-neo-2point4-kwh"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.pureenergy.co.in/electric-scooters/etrance-neo?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "pages": 4,
+   "examples": [
+    "/scooters/pure-ev-etrance-neo-2point4-kwh",
+    "/scooters/pure-ev-etrance-neo-sx-1point8-kwh",
+    "/scooters/pure-ev-etrance-neoplus-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20eTrance%20Neo%20SX%201.8%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20eTrance%20Neo%20SX%201.8%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-etrance-neo-sx-1point8-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20eTrance%20Neo%2B%203.0%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20eTrance%20Neo%2B%203.0%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-etrance-neoplus-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ETrance%2B%204.5%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20ETrance%2B%204.5%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-etranceplus-4point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20Etron%20Plus%203.0%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Pure%20EV%20Etron%20Plus%203.0%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-etron-plus-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.pureenergy.co.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.pureenergy.co.in/?utm_source=escooterwale&utm_medium=referral&utm_campaign=scooter-detail",
+   "pages": 1,
+   "examples": [
+    "/scooters/pure-ev-etron-plus-3point0-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Simple%20One%205%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Simple%20One%205%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/simple-energy-one-5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Simple%20Ultra%206.5%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Simple%20Ultra%206.5%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/simple-energy-ultra-6point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Simple%20WaveS%202.2%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Simple%20WaveS%202.2%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/simple-energy-waves-2point2-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=Suzuki%20e-Access%203.07%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=Suzuki%20e-Access%203.07%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/suzuki-e-access-3point07-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%202.3%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%202.3%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/tvs-motor-iqube-2point2-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%203.1%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%203.1%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/tvs-motor-iqube-3point1-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%203.5%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%203.5%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/tvs-motor-iqube-s-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%20S%204.7%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%20S%204.7%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/tvs-motor-iqube-s-4point7-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%20ST%203.5%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%20ST%203.5%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/tvs-motor-iqube-st-3point5-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%20ST%205.3%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20iQube%20ST%205.3%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/tvs-motor-iqube-st-5point3-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20Orbiter%20V1%201.8%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20Orbiter%20V1%201.8%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/tvs-motor-orbiter-v1-1point8-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20Orbiter%20V2%203.1%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20Orbiter%20V2%203.1%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/tvs-motor-orbiter-v2-3point1-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20X%204.44%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=TVS%20X%204.44%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/tvs-motor-x-4point44-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=VLF%20Strada%20City%202.16%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=VLF%20Strada%20City%202.16%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/vlf-strada-city-2point16-kwh"
+   ]
+  },
+  {
+   "url": "https://www.team-bhp.com/forum/search.php?do=process&query=VLF%20Strada%20Max%204.32%20kWh",
+   "plain": 403,
+   "browser": "page.goto: Target page, context or browser has been closed",
+   "final": "https://www.team-bhp.com/forum/search.php?do=process&query=VLF%20Strada%20Max%204.32%20kWh",
+   "pages": 1,
+   "examples": [
+    "/scooters/vlf-strada-max-4point32-kwh"
+   ]
+  }
+ ],
+ "skipped": 680
+}
