@@ -1,4 +1,12 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "claude/*": false,
+      "feature/*": false,
+      "v2.1-build": false
+    }
+  },
+  "ignoreCommand": "bash tools/vercel-ignore.sh",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
