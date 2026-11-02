@@ -956,3 +956,4 @@ img.lazy.loaded{opacity:1}
 .cl-match-btn{margin-top:auto;text-decoration:none}
 @media(max-width:800px){.lead-box{grid-template-columns:1fr}.cl-fields{grid-template-columns:1fr}.cl-match-btn{width:100%;text-align:center}}
 .lead-box-wrap{margin:8px 0 24px}
+.lead-box-home{margin:28px 0 0}
