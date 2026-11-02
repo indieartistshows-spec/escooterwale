@@ -40,6 +40,12 @@ const PATHS = ['/', '/compare', '/match', '/scooters/ather-energy-rizta-s-2point
       } catch (e) { out.adsTxt.push({ start: base, ua: ua.slice(0, 20), error: e.message }); }
     }
   }
+  // SEO crawlers by user agent (from GitHub, so not their real IPs): tells a user-agent rule from an IP block
+  out.seoBots = [];
+  for (const ua of ['Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25 (compatible; SiteAuditBot/0.97; +http://www.semrush.com/bot.html)', 'Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)', 'Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)']) {
+    try { const r = await fetch(BASE + '/', { headers: { 'user-agent': ua }, redirect: 'manual' }); await r.text(); out.seoBots.push({ ua: (ua.match(/(SiteAuditBot|SemrushBot|AhrefsBot)/) || [ua])[0], status: r.status, mitigated: r.headers.get('x-vercel-mitigated') }); }
+    catch (e) { out.seoBots.push({ ua: ua.slice(0, 30), error: e.message }); }
+  }
   // old addresses should 301 to the clean page (middleware.js); a preview user agent gets past the firewall
   out.redirects = [];
   for (const p of ['/best?cat=family', '/city?city=pune', '/city', '/scooters/bajaj-chetak-chetak-3501-3point5-kwh?id=bajaj-chetak-chetak-3501-3point5-kwh',
