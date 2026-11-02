@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-11-02T11:45:48.291Z",
+ "ranAt": "2026-11-02T17:56:42.880Z",
  "plain": [
   {
    "path": "/",
@@ -7,7 +7,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 117709
+   "bytes": 117719
   },
   {
    "path": "/",
@@ -15,7 +15,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 117709
+   "bytes": 117719
   },
   {
    "path": "/compare",
@@ -23,7 +23,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 37896
+   "bytes": 37925
   },
   {
    "path": "/compare",
@@ -31,7 +31,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 37896
+   "bytes": 37925
   },
   {
    "path": "/match",
@@ -39,7 +39,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 55620
+   "bytes": 55644
   },
   {
    "path": "/match",
@@ -47,7 +47,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 55620
+   "bytes": 55644
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
@@ -55,7 +55,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 163019
+   "bytes": 163014
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
@@ -63,7 +63,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 163019
+   "bytes": 163014
   },
   {
    "path": "/hi/",
@@ -134,7 +134,7 @@
   {
    "path": "/",
    "status": 200,
-   "title": "Best Electric Scooters in India 2026: Prices, Real Range, Reviews | EScooterwale",
+   "title": "Best Electric Scooters in India 2026: Prices, Real Range, Reviews",
    "final": "https://www.escooterwale.in/",
    "checkpoint": false,
    "h1": "Find the right electric scooter, not just the popular one"
@@ -150,7 +150,7 @@
   {
    "path": "/listings",
    "status": 200,
-   "title": "All Electric Scooters in India 2026: Prices, On-Road Price and Real Range | EScooterwale",
+   "title": "All Electric Scooters in India 2026: Prices, On-Road Price and Real Range",
    "final": "https://www.escooterwale.in/listings",
    "checkpoint": false,
    "h1": "All 78 electric scooters in India, compared"
@@ -158,7 +158,7 @@
   {
    "path": "/trending",
    "status": 200,
-   "title": "Trending EV Scooter Videos, Reddit Threads and Brand News | EScooterwale",
+   "title": "Trending EV Scooter Videos, Reddit Threads and Brand News",
    "final": "https://www.escooterwale.in/trending",
    "checkpoint": false,
    "h1": "EV Scooter Trending"
