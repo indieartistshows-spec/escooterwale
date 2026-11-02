@@ -23,6 +23,28 @@ const { chromium } = require('playwright');
       return { contact, final, home };
     });
   } catch (e) { out.error = String(e.message || e); }
+  // the name and mobile forms as a visitor uses them: fill the form on the live page and press
+  // Submit. The request is marked as a test on its way out, so the row lands in Tests, not Leads.
+  out.pageForms = {};
+  for (const [label, url] of [['city', 'https://www.escooterwale.in/cities/delhi'], ['scooter', 'https://www.escooterwale.in/scooters/ather-energy-450x-3point7-kwh'], ['home', 'https://www.escooterwale.in/'], ['city-hindi', 'https://www.escooterwale.in/hi/cities/patna']]) {
+    const r = { url };
+    try {
+      const ctx = await b.newContext({ userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0 Safari/537.36' });
+      const p = await ctx.newPage(); const errs = []; p.on('pageerror', e => errs.push(String(e.message).slice(0, 150)));
+      await ctx.route('**/api/lead', async route => {
+        const body = JSON.parse(route.request().postData() || '{}'); body.test = true; r.sent = { form: body.form, city: body.city, shortlist: body.shortlist, page: body.page };
+        const resp = await route.fetch({ postData: JSON.stringify(body) }); r.status = resp.status(); r.reply = (await resp.text()).slice(0, 300); await route.fulfill({ response: resp });
+      });
+      await p.goto(url, { waitUntil: 'networkidle', timeout: 60000 }); await p.waitForTimeout(3000);
+      r.formOnPage = await p.$('#clForm') !== null;
+      await p.fill('#clName', 'Form Test ' + label); await p.fill('#clMobile', '9999999997'); await p.check('#clConsent');
+      await p.waitForTimeout(3200); // the API ignores forms sent faster than a person types
+      await p.click('#clSubmit'); await p.waitForTimeout(8000);
+      r.thanksShown = await p.isVisible('#clDone'); r.errorShown = await p.evaluate(() => [...document.querySelectorAll('.cl-err')].filter(e => !e.hidden).map(e => e.id));
+      r.pageErrors = errs; await ctx.close();
+    } catch (e) { r.error = String(e.message || e).slice(0, 200); }
+    out.pageForms[label] = r;
+  }
   await b.close();
   fs.mkdirSync('reports', { recursive: true });
   fs.writeFileSync('reports/lead-test.json', JSON.stringify(out, null, 1));
