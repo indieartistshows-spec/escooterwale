@@ -21,8 +21,10 @@ function serve(port) {
 }
 
 (async () => {
+  run('node tools/minify-assets.js'); // pages load /min/ copies: refresh them before any render
   run('node tools/card-images.js'); // square thumbnails, only rebuilt when a photo changes
   run('node tools/build-data.js');
+  run('node tools/minify-assets.js'); // data.js just changed
   run('node tools/build-banners.js');
   run('node build-guide-pages.js');
   run('node tools/build-brand-vs.js'); // ola-vs-ather and the other brand pairs

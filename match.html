@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="EScooterwale"/>
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=ab7f6b48"/>
+<link rel="stylesheet" href="/min/styles.css?v=dc160e2a"/>
 <style>
 .mt-wrap{max-width:620px;margin:0 auto;padding:28px 16px 120px}
 .mt-head{text-align:center;margin-bottom:22px}
@@ -356,10 +356,10 @@
   <span>Saving your shortlist</span><span>Please tick the box to continue.</span><span>Could not save right now. Please try again.</span><span>Too many tries. Please wait a few minutes.</span><span>Copied. Paste it anywhere to share.</span><span>India</span>
 </div>
 
-<script src="data.js?v=f00232e2"></script>
-<script src="seo.js?v=32380c46"></script>
-<script src="outbound.js?v=3f21bbce"></script>
-<script src="components.js?v=efba8756"></script>
+<script src="/min/data.js?v=699c5305"></script>
+<script src="/min/seo.js?v=f562f865"></script>
+<script src="/min/outbound.js?v=373ff4f8"></script>
+<script src="/min/components.js?v=0ff8faff"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('match');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -657,7 +657,7 @@ function showList(){
   $('mtListPlace').textContent=A.place?A.place.label:'India';
   try{sessionStorage.setItem('swShortlist',JSON.stringify(liked.map(r=>r.x.id)))}catch(e){}
   const top=$('mtTopActs');
-  top.innerHTML=liked.length>1?`<a class="mt-btn" href="${LP}/compare?a=${liked[0].x.id}&b=${liked[1].x.id}">Compare your top two</a>`:'';
+  top.innerHTML=liked.length>1?`<a class="mt-btn" href="${LP}${swCompareHref(liked[0].x.id,liked[1].x.id)}">Compare your top two</a>`:'';
   $('mtListItems').innerHTML=liked.map(r=>{const x=r.x,s=x.s;return `<div class="mt-li"><img src="${esc(s.cardImg||s.heroImg)}" alt="${esc(s.fullName)}" loading="lazy"/><div>
     <div class="nm" translate="no">${esc(s.fullName)}</div>
     <div class="meta"><span>On-road about ${inr(onRoad(x))}</span><br><span>Real range ${x.lo} to ${x.hi} km</span> · <span>Top speed ${x.speed} km/h</span></div>

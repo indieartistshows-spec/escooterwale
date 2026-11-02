@@ -108,6 +108,11 @@
       "permanent": true
     },
     {
+      "source": "/scooter-detail",
+      "destination": "/listings",
+      "permanent": true
+    },
+    {
       "source": "/brand",
       "has": [
         {
@@ -129,6 +134,11 @@
         }
       ],
       "destination": "/brands/:bid",
+      "permanent": true
+    },
+    {
+      "source": "/brand",
+      "destination": "/listings",
       "permanent": true
     },
     {
@@ -189,6 +199,11 @@
         }
       ],
       "destination": "/articles/:aid",
+      "permanent": true
+    },
+    {
+      "source": "/article",
+      "destination": "/",
       "permanent": true
     },
     {

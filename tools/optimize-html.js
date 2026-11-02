@@ -20,6 +20,23 @@ const inlineCss = () => _css || (_css = fs.readFileSync(path.join(ROOT, 'styles.
   .replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{}:;,>])\s*/g, '$1').replace(/;}/g, '}').trim());
 const hashes = {};
 const hashOf = f => hashes[f] || (hashes[f] = crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0, 8));
+/* minified copy of a local .js/.css in min/<same path> (whitespace and syntax only: names are kept,
+   so the globals one script reads from another still match). Returns its path from the site root,
+   or null when it cannot be minified (the page then keeps the source file). */
+const minDone = {};
+function minified(abs) {
+  if (abs in minDone) return minDone[abs];
+  const rel = path.relative(ROOT, abs).split(path.sep).join('/');
+  if (rel.startsWith('..') || rel.startsWith('min/')) return (minDone[abs] = null);
+  try {
+    const src = fs.readFileSync(abs, 'utf8');
+    const out = require('esbuild').transformSync(src, { loader: rel.endsWith('.css') ? 'css' : 'js', minifyWhitespace: true, minifySyntax: true, minifyIdentifiers: false, legalComments: 'none', charset: 'utf8' }).code;
+    const dest = path.join(ROOT, 'min', rel);
+    fs.mkdirSync(path.dirname(dest), { recursive: true });
+    if (!fs.existsSync(dest) || fs.readFileSync(dest, 'utf8') !== out) fs.writeFileSync(dest, out);
+    return (minDone[abs] = 'min/' + rel);
+  } catch (e) { console.warn('minify failed for', rel, e.message.split('\n')[0]); return (minDone[abs] = null); }
+}
 
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -55,6 +72,13 @@ for (const file of pages) {
   if (!h.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'))
     h = h.replace(/<head(\s[^>]*)?>/i, m => `${m}\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2946997043388287" crossorigin="anonymous"></script>`);
 
+  // titles: Google shows about 60 characters and Semrush flags over 70. A long title drops the
+  // " | EScooterwale" ending (the site name shows beside the result anyway); every language.
+  h = h.replace(/<title([^>]*)>([^<]*)<\/title>/i, (m, at, t) => {
+    const plain = t.replace(/&amp;/g, '&').trim();
+    return plain.length > 60 && /\s\|\s*EScooterwale\s*$/.test(t) ? `<title${at}>${t.replace(/\s*\|\s*EScooterwale\s*$/, '')}</title>` : m;
+  });
+
   // AdSense site verification meta tag (GK, Nov 2026): in the <head> of every page
   if (!h.includes('name="google-adsense-account"'))
     h = h.replace(/<head(\s[^>]*)?>/i, m => `${m}\n<meta name="google-adsense-account" content="ca-pub-2946997043388287">`);
@@ -66,10 +90,14 @@ for (const file of pages) {
       : h.replace(/<link rel="stylesheet" href="\/?styles\.css(\?v=[a-z0-9]+)?"\s*\/?>/, () => css);
   }
 
-  // cache busting for local scripts and styles
+  // local scripts and styles: served minified from /min/ (the source files stay readable and are
+  // what we edit), with ?v=<content hash> cache busting
   h = h.replace(/(<(?:script|link)\b[^>]*?\s(?:src|href)=")([^":?#]+\.(?:js|css))(\?v=[a-z0-9]+)?(")/g, (m, a, ref, _v, z) => {
-    const abs = ref.startsWith('/') ? path.join(ROOT, ref) : path.join(path.dirname(file), ref);
-    return fs.existsSync(abs) ? `${a}${ref}?v=${hashOf(abs)}${z}` : m;
+    const src0 = ref.replace(/^\/?min\//, '/');
+    const abs = src0.startsWith('/') ? path.join(ROOT, src0) : path.join(path.dirname(file), src0);
+    if (!fs.existsSync(abs)) return m;
+    const min = minified(abs);
+    return min ? `${a}/${min}?v=${hashOf(path.join(ROOT, min))}${z}` : `${a}${src0}?v=${hashOf(abs)}${z}`;
   });
 
   // lazy images: everything except the first two <img> on the page (logo and hero)

@@ -87,7 +87,10 @@ ${sumRow('PM E-DRIVE eligible', `${A.eligible} of ${A.n}`, `${B.eligible} of ${B
   const both = pairPages.filter(p => { const [x, y] = p.split('-vs-'); return (x.startsWith(ia) && y.startsWith(ib)) || (x.startsWith(ib) && y.startsWith(ia)); });
   const byId = Object.fromEntries(SCOOTERS_DB.map(s => [s.id, s]));
   const modelLinks = both.map(p => { const [x, y] = p.split('-vs-'); return byId[x] && byId[y] ? `<li><a href="/compare/${p}">${byId[x].fullName} vs ${byId[y].fullName}</a></li>` : ''; }).filter(Boolean);
-  const headToHead = `/compare.html?a=${A.best.id}&b=${B.best.id}`;
+  // the clean comparison page when we have one, so the link needs no redirect
+  const PAGE_PAIRS = (JSON.parse(fs.readFileSync('data/compare-pairs.json', 'utf8')).pairs) || [];
+  const pk = [`${A.best.id}-vs-${B.best.id}`, `${B.best.id}-vs-${A.best.id}`].find(x => PAGE_PAIRS.includes(x));
+  const headToHead = pk ? `/compare/${pk}` : `/compare?a=${A.best.id}&b=${B.best.id}`;
 
   const answer = `${na} sells ${A.n} electric scooter models from ${inr(A.lo.price)} to ${inr(A.hi.price)}, and ${nb} sells ${B.n} from ${inr(B.lo.price)} to ${inr(B.hi.price)} (ex-showroom). `
     + (tie(A.lo.price, B.lo.price) ? `Both start at the same price. ` : `${cheaper[0]} is cheaper to get into, with the ${cheaper[1].lo.fullName} at ${inr(cheaper[1].lo.price)}. `)

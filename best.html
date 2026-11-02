@@ -26,11 +26,11 @@
 <link id="pgCanon" rel="canonical" href="https://www.escooterwale.in/best"/>
 <meta property="og:title" id="ogTitle" content="Best Electric Scooters India 2026"/>
 <meta property="og:type" content="website"/>
-<link rel="stylesheet" href="styles.css?v=ab7f6b48"/>
-<script src="data.js?v=f00232e2"></script>
-<script src="seo.js?v=32380c46"></script>
-<script src="outbound.js?v=3f21bbce"></script>
-<script src="components.js?v=efba8756"></script>
+<link rel="stylesheet" href="/min/styles.css?v=dc160e2a"/>
+<script src="/min/data.js?v=699c5305"></script>
+<script src="/min/seo.js?v=f562f865"></script>
+<script src="/min/outbound.js?v=373ff4f8"></script>
+<script src="/min/components.js?v=0ff8faff"></script>
 <style>
 /* ── PAGE HERO ──────────────────────────────────────────── */
 .best-hero{background:var(--ink);padding:52px 0 40px;border-bottom:1px solid rgba(255,255,255,.07)}
@@ -458,7 +458,7 @@ function renderPage(catSlug) {
         <div class="ranked-actions">
           <a href="/scooters/${s.id}"><button class="btn btn-outline" style="font-size:13px">Full review →</button></a>
           <a href="${s.brandUrl}" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary" style="font-size:13px">Buy on ${s.brand} ↗</button></a>
-          <a href="/compare?a=${s.id}&b=${cat.picks.find(p=>p.rank===1)?.id===s.id?(cat.picks[1]?.id||s.id):cat.picks[0]?.id}">
+          <a href="${swCompareHref(s.id,cat.picks.find(p=>p.rank===1)?.id===s.id?(cat.picks[1]?.id||s.id):cat.picks[0]?.id)}">
             <button class="btn btn-ghost" style="font-size:13px">Compare →</button>
           </a>
         </div>
@@ -476,7 +476,7 @@ function renderPage(catSlug) {
       <div class="final-rec-row">
         ${recA ? `<a href="${recA.brandUrl}" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary btn-lg">${recA.brand} ${recA.name} ↗</button></a>` : ''}
         ${recB ? `<a href="${recB.brandUrl}" target="_blank" rel="noopener noreferrer"><button class="btn" style="background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.25);padding:12px 24px;border-radius:var(--r-sm);font-size:15px;font-weight:700;cursor:pointer">${recB.brand} ${recB.name} ↗</button></a>` : ''}
-        <a href="/compare?a=${cat.finalRec.scooterA}&b=${cat.finalRec.scooterB}"><button class="btn" style="background:transparent;color:rgba(255,255,255,.6);border:1.5px solid rgba(255,255,255,.2);padding:12px 24px;border-radius:var(--r-sm);font-size:15px;font-weight:600;cursor:pointer">Compare these two →</button></a>
+        <a href="${swCompareHref(cat.finalRec.scooterA,cat.finalRec.scooterB)}"><button class="btn" style="background:transparent;color:rgba(255,255,255,.6);border:1.5px solid rgba(255,255,255,.2);padding:12px 24px;border-radius:var(--r-sm);font-size:15px;font-weight:600;cursor:pointer">Compare these two →</button></a>
       </div>
     </div>`;
 

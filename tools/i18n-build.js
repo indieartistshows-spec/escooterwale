@@ -104,7 +104,7 @@ function translateDoc(doc, dict, lang, u, missing) {
     ATTRS.forEach(a => { if (n.hasAttribute(a)) { const t = tr(n.getAttribute(a)); if (t != null) n.setAttribute(a, t); } });
     if (n.tagName === 'A') {
       const h = n.getAttribute('href');
-      if (h && h[0] === '/' && !h.startsWith('//') && !ASSET.test(h) && !h.startsWith('/images/') && !/^\/(hi|mr|ta|te|kn|gu|bn|or)(\/|$)/.test(h)) n.setAttribute('href', '/' + lang + (h === '/' ? '' : h));
+      if (h && h[0] === '/' && !h.startsWith('//') && !ASSET.test(h) && !h.startsWith('/images/') && !/^\/(terms|privacy)(\.html)?([?#]|$)/.test(h) && !/^\/(hi|mr|ta|te|kn|gu|bn|or)(\/|$)/.test(h)) n.setAttribute('href', '/' + lang + (h === '/' ? '' : h));
     }
     if (n.tagName === 'SELECT' && n.classList.contains('lang-sel')) n.querySelectorAll('option').forEach(o => o.value === lang ? o.setAttribute('selected', '') : o.removeAttribute('selected'));
     n.childNodes.forEach(walk);

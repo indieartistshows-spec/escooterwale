@@ -636,8 +636,8 @@ ${band('Above ₹1.5 lakh', 150000, 99999999)}
     <h4>Filter by budget</h4>
     <a href="/listings?tag=under-1-lakh" class="toc-link">Under ₹1 lakh</a>
     <a href="/listings?tag=under-1-5l" class="toc-link">Under ₹1.5 lakh</a>
-    <a href="/best?cat=best-range" class="toc-link">Best range</a>
-    <a href="/best?cat=daily-commute" class="toc-link">Best for commuting</a>
+    <a href="/best/best-range" class="toc-link">Best range</a>
+    <a href="/best/daily-commute" class="toc-link">Best for commuting</a>
   </div>
   ${SIDEBAR_SUBSIDY}`
 });

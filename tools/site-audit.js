@@ -89,7 +89,7 @@ for (const [u, f] of pages) {
   // links (static HTML only, like a crawler without JS)
   const body = h.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<template[\s\S]*?<\/template>/gi, '');
   for (const m of body.matchAll(/<a\s[^>]*href\s*=\s*("([^"]*)"|'([^']*)')/gi)) {
-    const href = (m[2] != null ? m[2] : m[3]).trim();
+    const href = (m[2] != null ? m[2] : m[3]).trim().replace(/&amp;/g, '&');
     if (!isInternal(href)) continue;
     const r = resolve(href);
     if (r.status === 404) { const k = new URL(href, BASE + u).pathname; (out.brokenLinks[k] = out.brokenLinks[k] || []).push(u); }

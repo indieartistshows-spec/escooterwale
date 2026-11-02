@@ -28,7 +28,7 @@
   }
   function fixLink(a) {
     const h = a.getAttribute('href');
-    if (!h || h[0] !== '/' || h.startsWith('//') || LANG_RE.test(h) || ASSET.test(h) || h.startsWith('/images/')) return;
+    if (!h || h[0] !== '/' || h.startsWith('//') || LANG_RE.test(h) || ASSET.test(h) || h.startsWith('/images/') || /^\/(terms|privacy)(\.html)?([?#]|$)/.test(h)) return; // terms and privacy exist in English only
     a.setAttribute('href', '/' + L + (h === '/' ? '' : h));
   }
   function fix(n) {
@@ -37,6 +37,8 @@
       if (n.__swDone === n.textContent) return;
       const t = tr(n.textContent);
       if (t != null) n.textContent = t; else if (!full) pending.push(n);
+      // a long page title drops its " | EScooterwale" ending once translated (as seo.js does in English)
+      if (n.parentNode && n.parentNode.nodeName === 'TITLE' && n.textContent.trim().length > 60 && /\s\|\s*EScooterwale\s*$/.test(n.textContent)) n.textContent = n.textContent.replace(/\s*\|\s*EScooterwale\s*$/, '');
       n.__swDone = n.textContent; return;
     }
     if (n.nodeType !== 1 || SKIP[n.tagName] || n.getAttribute('translate') === 'no') return;
@@ -46,6 +48,7 @@
   }
   function fixHead() {
     const t = tr(document.title); if (t != null && t !== document.title) document.title = t;
+    if (document.title.trim().length > 60 && /\s\|\s*EScooterwale\s*$/.test(document.title)) document.title = document.title.replace(/\s*\|\s*EScooterwale\s*$/, '');
     document.querySelectorAll('meta[name="description"],meta[property="og:title"],meta[property="og:description"]').forEach(m => { const v = tr(m.getAttribute('content') || ''); if (v != null) m.setAttribute('content', v); });
   }
   new MutationObserver(ms => {

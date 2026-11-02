@@ -28,7 +28,7 @@
       const where = s.headlinePriceCity ? ` in ${cityName()}` : '';
       return {
         // price searches dominate (Search Console, Oct 2026): price and on-road price up front
-        title: `${s.fullName} Price ${s.priceDisplay}: On-Road Price and Real Range ${YEAR} | EScooterwale`,
+        title: `${s.fullName} Price ${s.priceDisplay}: Real Range ${YEAR} | EScooterwale`, // short: Google shows about 60 characters
         desc: `${s.fullName} costs ${s.priceDisplay} ex-showroom${where}. See the on-road price in your city, real range of ${span(s.realRange)} (${s.range} claimed), EMI, subsidy and who should skip it.`
       };
     },
@@ -41,7 +41,7 @@
       const name = { 'bajaj-chetak': 'Bajaj Chetak', 'hero-vida': 'Hero Vida' }[b.id] || short;
       const sorted = models.slice().sort((x, y) => x.price - y.price), top = sorted[sorted.length - 1];
       return {
-        title: models.length > 1 ? `${name} Electric Scooter Price ${YEAR}: All ${models.length} Models, ${inr(lo)} to ${inr(hi)} | EScooterwale` : `${name} ${top.name.replace(/\s*[\d.]+\s*kWh$/i, '')} Price ${YEAR}: ${inr(lo)} | EScooterwale`,
+        title: models.length > 1 ? `${name} Electric Scooter Price ${YEAR}: All ${models.length} Models | EScooterwale` : `${name} ${top.name.replace(/\s*[\d.]+\s*kWh$/i, '')} Price ${YEAR}: ${inr(lo)} | EScooterwale`,
         desc: models.length > 1 ? `${name} electric scooter price list: all ${models.length} models from ${inr(lo)} to ${inr(hi)} ex-showroom. Top model ${top.name} at ${inr(top.price)}, on-road prices, real range and ScootScore for each.` : `${name} ${top.name} price ${inr(lo)} ex-showroom. On-road price, real range, ScootScore and subsidy.`
       };
     },
@@ -50,7 +50,7 @@
       const o = opts || {};
       return {
         // searched as "electric scooter price hyderabad", "scooty price in kolkata", "ev scooter price in ahmedabad"
-        title: `Electric Scooter Price in ${c.name} ${YEAR}: EV Scooty On-Road Prices | EScooterwale`,
+        title: `Electric Scooter Price in ${c.name} ${YEAR}: On-Road Prices | EScooterwale`,
         desc: `EV scooter and scooty prices in ${c.name}: ${o.count || 41} models${o.minOn ? ' from ' + inr(o.minOn) + ' on-road' : ''}, plus ${o.state || c.state} subsidy and road tax${o.taxLine ? ' (' + o.taxLine + ')' : ''}. Showrooms near you and real range.`
       };
     },
@@ -98,6 +98,18 @@
     const go = () => { SEO.fillFacts(document); setTimeout(() => SEO.fillFacts(document), 0); };
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
     window.addEventListener('load', () => SEO.fillFacts(document));
+  }
+
+  // Google shows about 60 characters of a title; a longer one drops its " | EScooterwale" ending.
+  // Same rule as tools/optimize-html.js (built pages) and i18n-runtime.js (translated pages).
+  SEO.shortTitle = t => String(t).trim().length > 60 && /\s\|\s*EScooterwale\s*$/.test(t) ? String(t).replace(/\s*\|\s*EScooterwale\s*$/, '') : t;
+  if (typeof document !== 'undefined' && typeof MutationObserver !== 'undefined' && !(typeof navigator !== 'undefined' && navigator.webdriver) && !/^\/(hi|mr|ta|te|kn|gu|bn|or)(\/|$)/.test(location.pathname)) {
+    // English pages: page scripts set the title after load, keep it short whenever it changes.
+    // Not while the build renders pages (webdriver): the build keeps full titles for translation
+    // and tools/optimize-html.js shortens them afterwards.
+    const fix = () => { const el = document.querySelector('title'); if (el) { const v = SEO.shortTitle(el.textContent); if (v !== el.textContent) el.textContent = v; } };
+    new MutationObserver(fix).observe(document.head || document.documentElement, { subtree: true, childList: true, characterData: true });
+    fix();
   }
 
   root.SEO = SEO;

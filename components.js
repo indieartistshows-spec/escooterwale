@@ -226,7 +226,7 @@ function updateCompareTray(){
            :'<span style="color:var(--ink-4)">+ Add scooter</span>'}
       </div>
     </div>
-    ${compareList.length===2?`<a href="/compare?a=${compareList[0]}&b=${compareList[1]}"><button class="btn btn-primary ct-go">Compare →</button></a>`:''}
+    ${compareList.length===2?`<a href="${swCompareHref(compareList[0],compareList[1])}"><button class="btn btn-primary ct-go">Compare →</button></a>`:''}
     <button class="ct-clear" onclick="compareList=[];saveCompare();updateCompareTray()" aria-label="Clear all">✕</button>
   </div>`;
 }
@@ -601,3 +601,13 @@ function swInitLeadBox(){
   });
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',swInitLeadBox); else swInitLeadBox();
+
+/* Link to a head-to-head: the clean /compare/<a>-vs-<b> page when it exists (no redirect hop for
+   visitors or crawlers), else the compare tool with both picked. */
+function swCompareHref(a, b){
+  if(!b) return `/compare?a=${a}`;
+  const P=(typeof COMPARE_PAIRS!=='undefined'&&COMPARE_PAIRS)||[];
+  if(P.includes(a+'-vs-'+b)) return `/compare/${a}-vs-${b}`;
+  if(P.includes(b+'-vs-'+a)) return `/compare/${b}-vs-${a}`;
+  return `/compare?a=${a}&b=${b}`;
+}
