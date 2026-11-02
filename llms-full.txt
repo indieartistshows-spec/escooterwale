@@ -1667,3 +1667,8 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 | Lucknow | Uttar Pradesh | ₹0 | Developing |
 | Surat | Gujarat | ₹0 | Good |
 | Chandigarh | Punjab/Haryana | Unclear | Good |
+| Patna | Bihar | ₹10,000 | Developing |
+| Indore | Madhya Pradesh | ₹10,000 | Developing |
+| Bhopal | Madhya Pradesh | ₹10,000 | Developing |
+| Nagpur | Maharashtra | ₹10,000 | Developing |
+| Bhubaneswar | Odisha | ₹5,000 | Developing |

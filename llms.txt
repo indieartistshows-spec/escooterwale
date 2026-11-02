@@ -33,7 +33,7 @@ Last updated: 2026-11-02
 
 - [Compare any two scooters](https://www.escooterwale.in/compare): Side-by-side specs with a stated verdict.
 - [EMI calculator](https://www.escooterwale.in/emi): Monthly payment on any model.
-- [City pages](https://www.escooterwale.in/city): Local subsidy, dealer and charging information for 12 Indian cities.
+- [City pages](https://www.escooterwale.in/city): Local subsidy, dealer and charging information for 17 Indian cities.
 
 ## Brands covered
 
