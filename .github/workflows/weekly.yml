@@ -110,6 +110,17 @@ jobs:
       - name: Check pages (text and screenshots), keep last week's version of any failing page
         run: node tools/weekly-guard.js pages ../prev-site
 
+      # SEO checks on the built site (broken internal links, hreflang, canonicals, structured data).
+      # Never blocks publishing; problems show as warnings on the run and in reports/site-audit.json.
+      - name: SEO audit of the built site
+        continue-on-error: true
+        run: |
+          mkdir -p reports
+          if ! node tools/site-audit.js --json reports/site-audit.json > /tmp/audit.log 2>&1; then
+            echo "::warning title=SEO audit::$(grep -E '^(BROKEN|HREFLANG|SCHEMA|CANONICAL|LANG)' /tmp/audit.log | tr '\n' ' ')"
+          fi
+          grep -E '^(pages|BROKEN|Internal|HREFLANG|CANONICAL|LANG|SCHEMA)' /tmp/audit.log
+
       - name: Summary
         run: |
           node -e "const l=require('./tools/i18n-live.js');const c=l.coverage();require('fs').writeFileSync('automation/out/i18n.json',JSON.stringify({note:'Coverage '+Object.entries(c).map(([k,v])=>k+' '+Math.round(v*100)+'%').join(', ')+'. Live: '+(l.liveLangs().join(', ')||'none yet')}))"

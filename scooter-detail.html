@@ -25,7 +25,7 @@
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/scooter-detail"/>
 <meta property="og:type" content="product"/>
 <link rel="stylesheet" href="styles.css?v=ab7f6b48"/>
-<script type="application/ld+json" id="pgSchema"></script>
+<script type="application/ld+json" id="pgSchema">{"@context":"https://schema.org","@type":"WebPage"}</script>
 <style>
 .detail-layout{display:grid;grid-template-columns:1fr 340px;gap:28px;padding:28px 0 64px;align-items:start}
 .left-col{min-width:0}
@@ -491,7 +491,7 @@
   </a>
 </div>
 
-<script src="data.js?v=1014624e"></script>
+<script src="data.js?v=2e016f11"></script>
 <script src="seo.js?v=32380c46"></script>
 <script src="outbound.js?v=3f21bbce"></script>
 <script src="trending-data.js?v=089c9480"></script>
@@ -749,10 +749,12 @@ function hydratePage(id){
   const _seo=SEO.scooter(s);
   document.getElementById('pgTitle').textContent=_seo.title;
   document.getElementById('pgDesc').setAttribute('content',_seo.desc);
-  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/scooters/${id}`);
+  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in${(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0]}/scooters/${id}`);
   document.getElementById('pgSchema').textContent = JSON.stringify({
     "@context":"https://schema.org","@type":"Product",
     "name":s.fullName,"brand":{"@type":"Brand","name":s.brand},
+    "image":[s.heroImg,s.cardImg].filter(Boolean).map(u=>new URL(u,'https://www.escooterwale.in').href.replace(/\?.*$/,'')).filter((u,i,a)=>a.indexOf(u)===i),
+    "url":`https://www.escooterwale.in/scooters/${s.id}`,
     "description":s.tagline,
     "offers":{"@type":"Offer","price":s.price,"priceCurrency":"INR","availability":"https://schema.org/InStock","url":s.brandUrl},
     "review":{"@type":"Review","author":{"@type":"Organization","name":"EScooterwale"},"reviewRating":{"@type":"Rating","ratingValue":s.score,"bestRating":10,"worstRating":0},"name":"ScootScore"}

@@ -27,7 +27,7 @@
 <meta property="og:title" id="ogTitle" content="Best Electric Scooters India 2026"/>
 <meta property="og:type" content="website"/>
 <link rel="stylesheet" href="styles.css?v=ab7f6b48"/>
-<script src="data.js?v=1014624e"></script>
+<script src="data.js?v=2e016f11"></script>
 <script src="seo.js?v=32380c46"></script>
 <script src="outbound.js?v=3f21bbce"></script>
 <script src="components.js?v=efba8756"></script>
@@ -375,7 +375,7 @@ function renderPage(catSlug) {
   // Update SEO
   document.getElementById('pgTitle').textContent = seo.title;
   document.getElementById('pgDesc').setAttribute('content', seo.desc);
-  document.getElementById('pgCanon').setAttribute('href', `https://www.escooterwale.in/best/${catSlug}`);
+  document.getElementById('pgCanon').setAttribute('href', `https://www.escooterwale.in${(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0]}/best/${catSlug}`);
   document.getElementById('ogTitle').setAttribute('content', seo.title.replace(' | EScooterwale',''));
   document.getElementById('pgH1').textContent = cat.title;
   document.getElementById('pgSubtitle').textContent = cat.subtitle;
@@ -516,7 +516,7 @@ if (IS_ROOT) {
   const t = 'Best Electric Scooters in India 2026: Top 10 With Price | EScooterwale';
   document.getElementById('pgTitle').textContent = t;
   document.getElementById('ogTitle').setAttribute('content', t.replace(' | EScooterwale', ''));
-  document.getElementById('pgCanon').setAttribute('href', 'https://www.escooterwale.in/best');
+  document.getElementById('pgCanon').setAttribute('href', `https://www.escooterwale.in${(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0]}/best`);
   document.getElementById('pgH1').textContent = 'Best Electric Scooters in India 2026';
   const top = window.__TOP10__ || [];
   if (top.length) document.getElementById('pgDesc').setAttribute('content', `Which electric scooter is best in India? Our top 10 for 2026 with price, led by the ${top[0].fullName}. Real range, ScootScore and picks for commuting, families and under ₹1 lakh.`);

@@ -24,7 +24,7 @@
 <meta name="description" id="pgDesc" content="Independent electric scooter reviews, real-world range tests and India EV news from the EScooterwale editorial team."/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/article"/>
 <link rel="stylesheet" href="styles.css?v=ab7f6b48"/>
-<script type="application/ld+json" id="artSchema"></script>
+<script type="application/ld+json" id="artSchema">{"@context":"https://schema.org","@type":"WebPage"}</script>
 <style>
 .art-layout{display:grid;grid-template-columns:1fr 300px;gap:32px;padding:32px 0 64px;align-items:start}
 .art-card{background:var(--surf);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh)}
@@ -122,7 +122,7 @@
 <div id="footerMount"></div>
 </div>
 
-<script src="data.js?v=1014624e"></script>
+<script src="data.js?v=2e016f11"></script>
 <script src="seo.js?v=32380c46"></script>
 <script src="outbound.js?v=3f21bbce"></script>
 <script src="components.js?v=efba8756"></script>
@@ -178,8 +178,14 @@ const dbItem=NEWS_DB.find(n=>n.id===id);
 
 document.getElementById('pgTitle').textContent=art.title+' | EScooterwale';
 document.getElementById('pgDesc').setAttribute('content',(dbItem?.excerpt||art.title).substring(0,160));
-document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/articles/${id}`);
-document.getElementById('artSchema').textContent=JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":art.title,"datePublished":art.date,"author":{"@type":"Organization","name":"EScooterwale Editorial"},"publisher":{"@type":"Organization","name":"EScooterwale","logo":"https://escooterwale.in/logo.png"}});
+document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in${(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0]}/articles/${id}`);
+// dates in news.json read like "Mar 28, 2026"; schema needs ISO (YYYY-MM-DD)
+{ const iso=d=>{const t=Date.parse(d+' 12:00 UTC');return isNaN(t)?undefined:new Date(t).toISOString().slice(0,10)};
+  const url=`https://www.escooterwale.in${(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0]}/articles/${id}`;
+  document.getElementById('artSchema').textContent=JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":art.title,"datePublished":iso(art.date),"dateModified":iso(art.date),
+    "image":art.img?[new URL(art.img,'https://www.escooterwale.in').href]:["https://www.escooterwale.in/og-image.jpg"],"url":url,"mainEntityOfPage":url,
+    "author":{"@type":"Organization","name":"EScooterwale Editorial","url":"https://www.escooterwale.in/"},
+    "publisher":{"@type":"Organization","name":"EScooterwale","logo":{"@type":"ImageObject","url":"https://www.escooterwale.in/images/escooterwale_logo.png"}}}); }
 
 document.getElementById('bcTitle').textContent=art.title.substring(0,50)+'...';
 document.getElementById('artImg').src=art.img;
@@ -205,7 +211,7 @@ if(art.scooters?.length){
 
 // Related articles
 document.getElementById('relatedArticles').innerHTML=NEWS_DB.filter(n=>n.id!==id).slice(0,3).map(n=>`
-  <a href="/articles/${n.id}" class="related-article">
+  <a href="${n.href||'/articles/'+n.id}" class="related-article">
     <div class="ra-img"><img src="${n.img}" alt="${n.title}" loading="lazy"/></div>
     <div><div class="ral">${n.title}</div><div class="ram">${n.date}</div></div>
   </a>`).join('');

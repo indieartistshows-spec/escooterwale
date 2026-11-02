@@ -228,7 +228,7 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="data.js?v=1014624e"></script>
+<script src="data.js?v=2e016f11"></script>
 <script src="seo.js?v=32380c46"></script>
 <script src="outbound.js?v=3f21bbce"></script>
 <script src="components.js?v=efba8756"></script>
@@ -272,7 +272,7 @@ function loadCity(cityId){
   const _seo=SEO.city(c,{count:SCOOTERS_DB.length,state:st.name,taxLine:rtLabel==='Exempt'?'road tax exempt':(rtLabel==='Unconfirmed'?'road tax status unconfirmed':rtLabel+' road tax')});
   document.getElementById('pgTitle').textContent=_seo.title;
   document.getElementById('pgDesc').setAttribute('content',_seo.desc);
-  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in/cities/${c.id}`);
+  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in${(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0]}/cities/${c.id}`);
   document.getElementById('cityHeroTitle').textContent=`Electric scooters in ${c.name}`;
   document.getElementById('cityHeroDesc').textContent=`On-road prices for all ${SCOOTERS_DB.length} models, ${st.name} subsidy and road tax rules, and where to find dealers in ${c.name}.`;
   document.getElementById('cityHero').style.backgroundImage=`url('${CITY_IMG[c.id]||'/images/hero-scooter.webp'}')`;
@@ -407,7 +407,7 @@ function loadHub(){
   const d=`Pick your city for the on-road price of all ${SCOOTERS_DB.length} electric scooters, the state EV subsidy and road tax, the scooters people there look at most, and dealers near you. ${CITIES_DB.map(c=>c.name).join(', ')}.`;
   document.getElementById('pgTitle').textContent=t; document.title=t;
   document.getElementById('pgDesc').setAttribute('content',d);
-  document.getElementById('pgCanon').setAttribute('href','https://www.escooterwale.in/city');
+  document.getElementById('pgCanon').setAttribute('href',`https://www.escooterwale.in${(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0]}/city`);
   document.getElementById('cityHeroTitle').textContent='Electric scooters by city';
   document.getElementById('cityHeroDesc').textContent='Pick your city to see on-road prices, the state subsidy and road tax, the scooters people there look at most, and dealers near you. Prices below are national until you choose.';
   document.getElementById('cityHero').style.backgroundImage="url('/images/hero-scooter.webp')";
