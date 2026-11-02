@@ -26,6 +26,20 @@ const PATHS = ['/', '/compare', '/match', '/scooters/ather-energy-rizta-s-2point
       } catch (e) { out.previews.push({ ua, path: p, error: e.message }); }
     }
   }
+  // ads.txt as AdSense asks for it: the bare domain (registered in AdSense) and www, following redirects.
+  // A spoofed Google user agent from GitHub is not on Google's IPs, so a challenge here does not prove
+  // Google is challenged too, but a plain 200 with the publisher line proves the file is reachable.
+  out.adsTxt = [];
+  for (const base of ['https://escooterwale.in', 'https://www.escooterwale.in']) {
+    for (const ua of ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0 Safari/537.36', 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)', 'Mediapartners-Google']) {
+      try {
+        const hops = []; let url = base + '/ads.txt', r;
+        for (let i = 0; i < 5; i++) { r = await fetch(url, { headers: { 'user-agent': ua }, redirect: 'manual' }); hops.push(r.status); const loc = r.headers.get('location'); if (r.status >= 300 && r.status < 400 && loc) url = new URL(loc, url).href; else break; }
+        const body = await r.text();
+        out.adsTxt.push({ start: base, ua: ua.split(/[ ;(]/).filter(Boolean)[0].slice(0, 20) + (/Googlebot/.test(ua) ? ' (Googlebot)' : ''), hops, final: url, mitigated: r.headers.get('x-vercel-mitigated'), type: r.headers.get('content-type'), hasPublisherLine: body.includes('pub-2946997043388287'), firstLine: body.slice(0, 80) });
+      } catch (e) { out.adsTxt.push({ start: base, ua: ua.slice(0, 20), error: e.message }); }
+    }
+  }
   // old addresses should 301 to the clean page (middleware.js); a preview user agent gets past the firewall
   out.redirects = [];
   for (const p of ['/best?cat=family', '/city?city=pune', '/city', '/scooters/bajaj-chetak-chetak-3501-3point5-kwh?id=bajaj-chetak-chetak-3501-3point5-kwh',
