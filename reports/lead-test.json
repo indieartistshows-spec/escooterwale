@@ -1,18 +1,86 @@
 {
- "ranAt": "2026-11-02T15:11:28.387Z",
+ "ranAt": "2026-11-02T18:45:22.357Z",
  "page": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
  "result": {
   "contact": {
    "status": 200,
-   "body": "{\"ok\":true,\"id\":\"2026-11-02T15:11:35.488Z_4d2da0\",\"range\":\"Tests!A4:W4\",\"duplicate\":true,\"copy\":{\"tab\":\"Tests: Match quiz\",\"added\":3,\"range\":\"'Tests: Match quiz'!A2:W4\"}}"
+   "body": "{\"ok\":true,\"id\":\"2026-11-02T18:45:28.767Z_125f64\",\"range\":\"Tests!A6:W6\",\"duplicate\":true,\"copy\":{\"tab\":\"Tests: Match quiz\",\"added\":4,\"range\":\"'Tests: Match quiz'!A2:W5\"}}"
   },
   "final": {
    "status": 200,
-   "body": "{\"ok\":true,\"id\":\"2026-11-02T15:11:35.488Z_4d2da0\",\"updated\":true,\"copy\":{\"tab\":\"Tests: Match quiz\",\"updated\":true}}"
+   "body": "{\"ok\":true,\"id\":\"2026-11-02T18:45:28.767Z_125f64\",\"updated\":true,\"copy\":{\"tab\":\"Tests: Match quiz\",\"updated\":true}}"
   },
   "home": {
    "status": 200,
-   "body": "{\"ok\":true,\"id\":\"2026-11-02T15:11:39.899Z_f440d6\",\"range\":\"Tests!A5:W5\",\"duplicate\":false,\"copy\":{\"tab\":\"Tests: Homepage form\",\"added\":1,\"range\":\"'Tests: Homepage form'!A2:W2\"}}"
+   "body": "{\"ok\":true,\"id\":\"2026-11-02T18:45:31.650Z_39fa2f\",\"range\":\"Tests!A7:W7\",\"duplicate\":true,\"copy\":{\"tab\":\"Tests: Homepage form\",\"added\":2,\"range\":\"'Tests: Homepage form'!A2:W3\"}}"
+  }
+ },
+ "pageForms": {
+  "city": {
+   "url": "https://www.escooterwale.in/cities/delhi",
+   "formOnPage": true,
+   "sent": {
+    "form": "city",
+    "city": "Delhi",
+    "shortlist": [],
+    "page": "/cities/delhi"
+   },
+   "status": 200,
+   "reply": "{\"ok\":true,\"id\":\"2026-11-02T18:45:41.089Z_872393\",\"range\":\"Tests!A8:W8\",\"duplicate\":false,\"copy\":{\"tab\":\"Tests: City page form\",\"added\":1,\"range\":\"'Tests: City page form'!A2:W2\"}}",
+   "thanksShown": true,
+   "errorShown": [],
+   "pageErrors": []
+  },
+  "scooter": {
+   "url": "https://www.escooterwale.in/scooters/ather-energy-450x-3point7-kwh",
+   "formOnPage": true,
+   "sent": {
+    "form": "scooter",
+    "city": "",
+    "shortlist": [
+     "ather-energy-450x-3point7-kwh"
+    ],
+    "page": "/scooters/ather-energy-450x-3point7-kwh"
+   },
+   "status": 200,
+   "reply": "{\"ok\":true,\"id\":\"2026-11-02T18:45:58.048Z_0dafa8\",\"range\":\"Tests!A9:W9\",\"duplicate\":true,\"copy\":{\"tab\":\"Tests: Scooter page form\",\"added\":1,\"range\":\"'Tests: Scooter page form'!A2:W2\"}}",
+   "thanksShown": true,
+   "errorShown": [],
+   "pageErrors": []
+  },
+  "home": {
+   "url": "https://www.escooterwale.in/",
+   "formOnPage": true,
+   "sent": {
+    "form": "home",
+    "city": "",
+    "shortlist": [],
+    "page": "/"
+   },
+   "status": 429,
+   "reply": "{\"ok\":false,\"error\":\"Too many tries. Please wait a few minutes.\"}",
+   "thanksShown": false,
+   "errorShown": [
+    "clErrSave"
+   ],
+   "pageErrors": []
+  },
+  "city-hindi": {
+   "url": "https://www.escooterwale.in/hi/cities/patna",
+   "formOnPage": true,
+   "sent": {
+    "form": "city",
+    "city": "Patna",
+    "shortlist": [],
+    "page": "/hi/cities/patna"
+   },
+   "status": 429,
+   "reply": "{\"ok\":false,\"error\":\"Too many tries. Please wait a few minutes.\"}",
+   "thanksShown": false,
+   "errorShown": [
+    "clErrSave"
+   ],
+   "pageErrors": []
   }
  }
 }
