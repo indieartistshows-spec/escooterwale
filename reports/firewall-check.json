@@ -1,254 +1,259 @@
 {
- "ranAt": "2026-11-02T10:32:14.254Z",
+ "ranAt": "2026-11-02T10:37:13.338Z",
  "plain": [
   {
    "path": "/",
    "ua": "curl/8.5",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 115199
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/",
    "ua": "Mozilla/5.0 ",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 115199
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/compare",
    "ua": "curl/8.5",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 37368
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/compare",
    "ua": "Mozilla/5.0 ",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 37368
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/match",
    "ua": "curl/8.5",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 55620
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/match",
    "ua": "Mozilla/5.0 ",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 55620
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
    "ua": "curl/8.5",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 162485
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
    "ua": "Mozilla/5.0 ",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 162485
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/hi/",
    "ua": "curl/8.5",
-   "status": 308,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 15
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/hi/",
    "ua": "Mozilla/5.0 ",
-   "status": 308,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 15
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/sitemap.xml",
    "ua": "curl/8.5",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 491640
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/sitemap.xml",
    "ua": "Mozilla/5.0 ",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 491640
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/robots.txt",
    "ua": "curl/8.5",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 1474
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/robots.txt",
    "ua": "Mozilla/5.0 ",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 1474
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/api/service?pin=400050",
    "ua": "curl/8.5",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 634
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   },
   {
    "path": "/api/service?pin=400050",
    "ua": "Mozilla/5.0 ",
-   "status": 200,
-   "mitigated": null,
-   "challenge": false,
-   "bytes": 634
+   "status": 429,
+   "mitigated": "challenge",
+   "challenge": true,
+   "bytes": 37007
   }
  ],
  "browser": [
   {
    "path": "/",
-   "status": 200,
-   "title": "Best Electric Scooters in India 2026: Prices, Real Range, Reviews | EScooterwale",
+   "status": 429,
+   "title": "Vercel Security Checkpoint",
    "final": "https://www.escooterwale.in/",
-   "checkpoint": false,
-   "h1": "Find the right electric scooter, not just the popular one"
+   "checkpoint": true,
+   "h1": null
   },
   {
    "path": "/match",
-   "status": 200,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+   "status": 429,
+   "title": "Vercel Security Checkpoint",
    "final": "https://www.escooterwale.in/match",
-   "checkpoint": false,
-   "h1": "Match with your Dream EV Scooter"
+   "checkpoint": true,
+   "h1": null
   },
   {
    "path": "/listings",
-   "status": 200,
-   "title": "All Electric Scooters in India 2026: Prices, On-Road Price and Real Range | EScooterwale",
+   "status": 429,
+   "title": "Vercel Security Checkpoint",
    "final": "https://www.escooterwale.in/listings",
-   "checkpoint": false,
-   "h1": "All 78 electric scooters in India, compared"
+   "checkpoint": true,
+   "h1": null
   },
   {
    "path": "/trending",
-   "status": 200,
-   "title": "Trending EV Scooter Videos, Reddit Threads and Brand News | EScooterwale",
+   "status": 429,
+   "title": "Vercel Security Checkpoint",
    "final": "https://www.escooterwale.in/trending",
-   "checkpoint": false,
-   "h1": "EV Scooter Trending"
+   "checkpoint": true,
+   "h1": null
   }
  ],
  "previews": [
   {
    "ua": "WhatsApp",
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
-   "status": 200,
-   "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   },
   {
    "ua": "WhatsApp",
    "path": "/match",
-   "status": 200,
-   "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
-   "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   },
   {
    "ua": "TelegramBot",
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
-   "status": 200,
-   "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   },
   {
    "ua": "TelegramBot",
    "path": "/match",
-   "status": 200,
-   "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
-   "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   },
   {
    "ua": "Slackbot-LinkExpanding",
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
-   "status": 200,
-   "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   },
   {
    "ua": "Slackbot-LinkExpanding",
    "path": "/match",
-   "status": 200,
-   "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
-   "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   },
   {
    "ua": "Mozilla",
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
-   "status": 200,
-   "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   },
   {
    "ua": "Mozilla",
    "path": "/match",
-   "status": 200,
-   "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
-   "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   },
   {
    "ua": "facebookexternalhit",
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
-   "status": 200,
-   "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   },
   {
    "ua": "facebookexternalhit",
    "path": "/match",
-   "status": 200,
-   "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
-   "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
-   "img": "200 image/jpeg"
+   "status": 429,
+   "mitigated": "challenge",
+   "title": "Vercel Security Checkpoint",
+   "og": null,
+   "img": null
   }
  ],
  "adsTxt": [
@@ -256,119 +261,133 @@
    "start": "https://escooterwale.in",
    "ua": "Mozilla/5.0",
    "hops": [
-    308,
-    200
+    429
    ],
-   "final": "https://www.escooterwale.in/ads.txt",
-   "mitigated": null,
-   "type": "text/plain; charset=utf-8",
-   "hasPublisherLine": true,
-   "firstLine": "google.com, pub-2946997043388287, DIRECT, f08c47fec0942fa0\n"
+   "final": "https://escooterwale.in/ads.txt",
+   "mitigated": "challenge",
+   "type": "text/html; charset=utf-8",
+   "hasPublisherLine": false,
+   "firstLine": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-"
   },
   {
    "start": "https://escooterwale.in",
    "ua": "Mozilla/5.0 (Googlebot)",
    "hops": [
-    308,
-    200
+    429
    ],
-   "final": "https://www.escooterwale.in/ads.txt",
-   "mitigated": null,
-   "type": "text/plain; charset=utf-8",
-   "hasPublisherLine": true,
-   "firstLine": "google.com, pub-2946997043388287, DIRECT, f08c47fec0942fa0\n"
+   "final": "https://escooterwale.in/ads.txt",
+   "mitigated": "challenge",
+   "type": "text/html; charset=utf-8",
+   "hasPublisherLine": false,
+   "firstLine": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-"
   },
   {
    "start": "https://escooterwale.in",
    "ua": "Mediapartners-Google",
    "hops": [
-    308,
-    200
+    429
    ],
-   "final": "https://www.escooterwale.in/ads.txt",
-   "mitigated": null,
-   "type": "text/plain; charset=utf-8",
-   "hasPublisherLine": true,
-   "firstLine": "google.com, pub-2946997043388287, DIRECT, f08c47fec0942fa0\n"
+   "final": "https://escooterwale.in/ads.txt",
+   "mitigated": "challenge",
+   "type": "text/html; charset=utf-8",
+   "hasPublisherLine": false,
+   "firstLine": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-"
   },
   {
    "start": "https://www.escooterwale.in",
    "ua": "Mozilla/5.0",
    "hops": [
-    200
+    429
    ],
    "final": "https://www.escooterwale.in/ads.txt",
-   "mitigated": null,
-   "type": "text/plain; charset=utf-8",
-   "hasPublisherLine": true,
-   "firstLine": "google.com, pub-2946997043388287, DIRECT, f08c47fec0942fa0\n"
+   "mitigated": "challenge",
+   "type": "text/html; charset=utf-8",
+   "hasPublisherLine": false,
+   "firstLine": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-"
   },
   {
    "start": "https://www.escooterwale.in",
    "ua": "Mozilla/5.0 (Googlebot)",
    "hops": [
-    200
+    429
    ],
    "final": "https://www.escooterwale.in/ads.txt",
-   "mitigated": null,
-   "type": "text/plain; charset=utf-8",
-   "hasPublisherLine": true,
-   "firstLine": "google.com, pub-2946997043388287, DIRECT, f08c47fec0942fa0\n"
+   "mitigated": "challenge",
+   "type": "text/html; charset=utf-8",
+   "hasPublisherLine": false,
+   "firstLine": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-"
   },
   {
    "start": "https://www.escooterwale.in",
    "ua": "Mediapartners-Google",
    "hops": [
-    200
+    429
    ],
    "final": "https://www.escooterwale.in/ads.txt",
-   "mitigated": null,
-   "type": "text/plain; charset=utf-8",
-   "hasPublisherLine": true,
-   "firstLine": "google.com, pub-2946997043388287, DIRECT, f08c47fec0942fa0\n"
+   "mitigated": "challenge",
+   "type": "text/html; charset=utf-8",
+   "hasPublisherLine": false,
+   "firstLine": "<!DOCTYPE html><html lang=\"en\" data-astro-cid-4wdtffzm><head><meta charset=\"utf-"
+  }
+ ],
+ "seoBots": [
+  {
+   "ua": "SiteAuditBot",
+   "status": 429,
+   "mitigated": "challenge"
+  },
+  {
+   "ua": "SemrushBot",
+   "status": 429,
+   "mitigated": "challenge"
+  },
+  {
+   "ua": "AhrefsBot",
+   "status": 429,
+   "mitigated": "challenge"
   }
  ],
  "redirects": [
   {
    "path": "/best?cat=family",
-   "status": 301,
-   "to": "/best/family"
+   "status": 429,
+   "to": null
   },
   {
    "path": "/city?city=pune",
-   "status": 308,
-   "to": "/cities/pune?city=pune"
+   "status": 429,
+   "to": null
   },
   {
    "path": "/city",
-   "status": 200,
+   "status": 429,
    "to": null
   },
   {
    "path": "/scooters/bajaj-chetak-chetak-3501-3point5-kwh?id=bajaj-chetak-chetak-3501-3point5-kwh",
-   "status": 301,
-   "to": "/scooters/bajaj-chetak-chetak-3501-3point5-kwh"
+   "status": 429,
+   "to": null
   },
   {
    "path": "/compare?a=bajaj-chetak-chetak-3501-3point5-kwh&b=ola-electric-s1-x-3-kwh",
-   "status": 301,
-   "to": "/compare/bajaj-chetak-chetak-3501-3point5-kwh-vs-ola-electric-s1-x-3-kwh"
+   "status": 429,
+   "to": null
   },
   {
    "path": "/hi/best?cat=family",
-   "status": 301,
-   "to": "/hi/best/family"
+   "status": 429,
+   "to": null
   },
   {
    "path": "/best/family",
-   "status": 200,
+   "status": 429,
    "to": null
   },
   {
    "path": "/listings",
-   "status": 200,
+   "status": 429,
    "to": null
   }
  ],
- "apiFromPage": "200 application/json"
+ "apiFromPage": "429 text/html; charset=utf-8"
 }
