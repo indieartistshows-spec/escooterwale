@@ -1,4 +1,4 @@
-/* api/lead.js | Vercel serverless function: saves a /match lead as a row in the leads Google Sheet.
+/* api/lead.js | Vercel serverless function: saves a lead (the /match quiz, or the name and mobile form on city pages) as a row in the leads Google Sheet.
    Two calls per quiz: name, mobile and pincode are saved as soon as they are given (mid quiz), and
    the shortlist and remaining answers are added to that same row at the end ({ leadId, mobile, ... }).
    Email is optional.
@@ -116,7 +116,9 @@ module.exports = async (req, res) => {
   if (name.length < 2) bad.push('name');
   if (!/^[6-9]\d{9}$/.test(mobile)) bad.push('mobile');
   if (email && !/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) bad.push('email'); // optional
-  if (!/^[1-9]\d{5}$/.test(pincode)) bad.push('pincode');
+  // the city page form asks only for name and mobile; the quiz also asks for a pincode
+  const cityForm = b.form === 'city';
+  if (!(cityForm && !pincode) && !/^[1-9]\d{5}$/.test(pincode)) bad.push('pincode');
   if (b.consent !== true) bad.push('consent');
   if (bad.length) return res.status(400).json({ ok: false, error: 'invalid', fields: bad });
 
@@ -140,7 +142,7 @@ module.exports = async (req, res) => {
       clean((b.shortlist || []).join(', '), 500),
       clean((b.skipped || []).map(s => s.id + (s.reason ? ' (' + s.reason + ')' : '')).join(', '), 800),
       clean(a.budget), clean(a.daily), clean(a.riders), clean(a.charging), clean(a.priority),
-      clean(JSON.stringify({ ...Object.fromEntries(Object.entries(a).filter(([k]) => !['budget', 'daily', 'riders', 'charging', 'priority', 'pincode'].includes(k))), stage: b.stage === 'contact' ? 'contact given, quiz in progress' : 'quiz finished' }), 500),
+      clean(JSON.stringify({ ...Object.fromEntries(Object.entries(a).filter(([k]) => !['budget', 'daily', 'riders', 'charging', 'priority', 'pincode'].includes(k))), stage: cityForm ? 'city page form' : b.stage === 'contact' ? 'contact given, quiz in progress' : 'quiz finished' }), 500),
       'Yes', clean(b.consentText, 600), clean(b.lang, 5) || 'en', clean(b.source, 300), clean(b.page, 200),
       /mobile|android|iphone/i.test(ua) ? 'Mobile' : 'Desktop', dup, id].map(v => safe(String(v)));
     const out = await sheets(`/values/${encodeURIComponent(tab)}!A1:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`, { method: 'POST', body: JSON.stringify({ values: [row] }) });
