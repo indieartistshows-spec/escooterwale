@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-10-29T11:04:44.216Z",
+ "ranAt": "2026-11-02T09:39:34.121Z",
  "keyEvents": {
   "quiz_start": "already a key event",
   "quiz_complete": "already a key event",
@@ -11,7 +11,7 @@
   "model": "already registered",
   "page_type": "already registered",
   "page_entity": "already registered",
-  "seen_on": "registered as Seen on",
+  "seen_on": "already registered",
   "lang": "already registered",
   "link_type": "already registered",
   "link_domain": "already registered",
@@ -26,7 +26,9 @@
   "riders": "already registered",
   "charging": "already registered",
   "priority": "already registered",
-  "licence": "already registered"
+  "licence": "already registered",
+  "stage": "registered as Lead stage",
+  "icon_name": "registered as Icon name"
  },
  "errors": [],
  "serviceAccount": "esco...@escooterwale-bot.iam.gserviceaccount.com"
