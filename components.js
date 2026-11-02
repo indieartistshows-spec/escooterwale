@@ -554,3 +554,50 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
   });
 });
+
+/* Lead box (city pages, scooter pages): name + mobile go to /api/lead, the same Leads sheet as the
+   quiz. The section's data-lead-form says which page it is on ("city" or "scooter"); a scooter page
+   sends its model as the shortlist. Nothing personal goes to GA: lead_submitted on save, icon_click on the match button. */
+function swInitLeadBox(){
+  const $=id=>document.getElementById(id), form=$('clForm'); if(!form||form._swReady) return;
+  form._swReady=true; // a property, not an attribute: pre-rendered pages must not carry it
+  const box=form.closest('[data-lead-form]'), kind=(box&&box.dataset.leadForm)||'city';
+  const ev=(n,p)=>{try{window.gtag&&gtag('event',n,p||{})}catch(e){}};
+  const LANG=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[])[1]||'en';
+  const page=()=>location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/';
+  let shownAt=Date.now(), busy=false;
+  // form_start and form_submit are sent by GA's enhanced measurement on its own, as on the quiz form
+  // (form_id clForm). The match button sends icon_click like the floating match button, named by place.
+  const mb=$('clMatchBtn');
+  if(mb) mb.addEventListener('click',()=>ev('icon_click',{icon_name:'match-'+kind,link_url:mb.getAttribute('href'),page_path:page(),lang:LANG}));
+  form.addEventListener('submit',async e=>{
+    e.preventDefault(); if(busy) return;
+    ['clErrName','clErrMobile','clErrConsent','clErrSave'].forEach(id=>$(id).hidden=true);
+    const name=$('clName').value.trim();
+    const mobile=$('clMobile').value.replace(/[\s-]/g,'').replace(/^(\+?91|0)(?=[6-9]\d{9}$)/,'');
+    const consent=$('clConsent').checked;
+    const badName=name.length<2, badMob=!/^[6-9]\d{9}$/.test(mobile);
+    $('clName').classList.toggle('bad',badName); $('clMobile').classList.toggle('bad',badMob); $('clConsentRow').classList.toggle('bad',!consent);
+    if(badName){ $('clErrName').hidden=false; $('clName').focus(); return; }
+    if(badMob){ $('clErrMobile').hidden=false; $('clMobile').focus(); return; }
+    if(!consent){ $('clErrConsent').hidden=false; return; }
+    const cid=window.__SW_CITY__||((typeof swGetCity==='function')?swGetCity():null);
+    const c=cid&&typeof CITIES_DB!=='undefined'&&CITIES_DB.find(x=>x.id===cid), st=c&&SUBSIDY.states[SUBSIDY.cityState[c.id]];
+    const model=kind==='scooter'&&window.__SW_CUR__?window.__SW_CUR__.id:null;
+    const qs=new URLSearchParams(location.search);
+    const source=['utm_source','utm_medium','utm_campaign'].map(k=>qs.get(k)).filter(Boolean).join(' / ')||document.referrer||'direct';
+    busy=true; $('clSubmit').disabled=true;
+    try{
+      const r=await fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({
+        form:kind,name,mobile,city:c?c.name:'',state:st?st.name:(c?c.state||'':''),shortlist:model?[model]:[],consent:true,
+        consentText:$('clConsentText').textContent.trim(),lang:LANG,source,page:location.pathname,hp:$('clWeb').value,t:shownAt})});
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok||!j.ok) throw new Error(j.error||'save failed');
+      form.hidden=true; $('clDone').hidden=false;
+      // same key event as the quiz (stage contact / final there): stage city_form or scooter_form here
+      ev('lead_submitted',{stage:kind+'_form',lang:LANG});
+    }catch(err){ $('clErrSave').hidden=false; }
+    finally{ busy=false; $('clSubmit').disabled=false; }
+  });
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',swInitLeadBox); else swInitLeadBox();

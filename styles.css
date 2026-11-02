@@ -935,3 +935,24 @@ img.lazy.loaded{opacity:1}
 .seo-faq details:first-of-type{border-top:0}
 .seo-faq summary{cursor:pointer;font-weight:700;font-size:15px}
 .seo-faq p{margin:8px 0 0;font-size:14.5px;line-height:1.65;color:var(--ink-2)}
+
+/* Lead box: name + mobile form and "Match with your dream scooter" (city pages, scooter pages). Script in components.js */
+.lead-box{display:grid;grid-template-columns:3fr 2fr;gap:16px;padding-top:24px}
+.cl-box{border:1px solid var(--border);border-radius:16px;padding:20px 22px;background:var(--surf)}
+.cl-match{background:var(--g-tint);border-color:var(--g-mid);display:flex;flex-direction:column;align-items:flex-start}
+.cl-h{font-size:20px;margin:6px 0 4px}
+.cl-sub{font-size:13.5px;color:var(--ink-3);margin:0 0 14px;line-height:1.5}
+.cl-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cl-field{display:flex;flex-direction:column;gap:5px;font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.cl-field input{font:inherit;font-size:15px;font-weight:400;padding:10px 12px;border:1.5px solid var(--border);border-radius:10px;background:var(--surf);color:var(--ink);width:100%;box-sizing:border-box}
+.cl-field input:focus{outline:none;border-color:var(--g)}
+.cl-field input.bad{border-color:#b42318}
+.cl-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cl-consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;line-height:1.5;color:var(--ink-3);margin:12px 0;cursor:pointer}
+.cl-consent input{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:#0b7a45}
+.cl-consent.bad{color:#b42318}
+.cl-err{color:#b42318;font-size:13px;margin:8px 0 0}
+.cl-done{font-size:15px;font-weight:600;color:var(--g-dim);background:var(--g-tint);border-radius:10px;padding:14px 16px}
+.cl-match-btn{margin-top:auto;text-decoration:none}
+@media(max-width:800px){.lead-box{grid-template-columns:1fr}.cl-fields{grid-template-columns:1fr}.cl-match-btn{width:100%;text-align:center}}
+.lead-box-wrap{margin:8px 0 24px}

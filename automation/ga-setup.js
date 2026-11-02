@@ -27,7 +27,9 @@ const DIMENSIONS = [
   ['riders', 'Quiz riders', 'Who rides, from the quiz'],
   ['charging', 'Quiz charging', 'Where they charge, from the quiz'],
   ['priority', 'Quiz priorities', 'What matters most, from the quiz'],
-  ['licence', 'Quiz licence', 'Has a two-wheeler licence or not']
+  ['licence', 'Quiz licence', 'Has a two-wheeler licence or not'],
+  ['stage', 'Lead stage', 'lead_submitted: contact or final (quiz), city_form or scooter_form (page forms)'],
+  ['icon_name', 'Icon name', 'icon_click: match-fab (floating button), match-city or match-scooter (lead box)']
 ];
 
 const b64u = b => Buffer.from(b).toString('base64').replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
