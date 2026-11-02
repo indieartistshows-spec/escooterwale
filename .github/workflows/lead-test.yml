@@ -1,7 +1,7 @@
 # Sends one test lead to the live /api/lead endpoint (from a real browser, automation/lead-test.js) and
 # commits the reply to reports/lead-test.json,
-# so the Google Sheet connection can be checked without anyone's real details. The test row lands
-# in the Sheet's "Tests" tab, never in "Leads". Run it from Actions after changing the Vercel keys.
+# so the Google Sheet connection can be checked without anyone's real details. Test rows land in
+# the Sheet's "Tests" tab and its "Tests: <form>" copies, never in "Leads" or the real form tabs. Run it from Actions after changing the Vercel keys.
 name: Lead form test
 
 on:

@@ -5,11 +5,23 @@
    Env (set in Vercel, never in the repo):
      GOOGLE_SA_KEY   the service account JSON key (the Sheet is shared with its client_email as Editor)
      LEADS_SHEET_ID  the spreadsheet id
-   Rows go to the "Leads" tab. Test submissions ({ test: true }) go to a separate "Tests" tab.
+   Every lead goes to the "Leads" tab (the master list) and a copy goes to its form's own tab:
+   "Match quiz", "Homepage form", "City page form" or "Scooter page form". The quiz's second call
+   updates the row in both. Each save also copies any of that form's leads missing from its tab
+   (all earlier ones the first time, or one whose copy failed), so the form tabs stay complete.
+   The master write must succeed; the copy is best effort and never loses a lead.
+   Test submissions ({ test: true }) go to "Tests" and "Tests: <form tab>" instead.
    Nothing personal is ever sent to Google Analytics; the page only fires a "lead_submitted" event. */
 const crypto = require('crypto');
 
 const TAB = 'Leads', TEST_TAB = 'Tests';
+// one tab per form, next to the master "Leads" tab
+const FORM_TABS = { quiz: 'Match quiz', home: 'Homepage form', city: 'City page form', scooter: 'Scooter page form' };
+const formKey = f => (FORM_TABS[f] ? f : 'quiz');
+const formTab = (f, test) => (test ? TEST_TAB + ': ' : '') + FORM_TABS[formKey(f)];
+// which form an existing master row came from, read from the stage note in "Other answers" (column O)
+const STAGE_FORM = { 'homepage form': 'home', 'city page form': 'city', 'scooter page form': 'scooter' };
+const rowForm = r => { try { return STAGE_FORM[JSON.parse(r[14] || '{}').stage] || 'quiz'; } catch (e) { return 'quiz'; } };
 const HEADER = ['Submitted (IST)', 'Name', 'Mobile', 'Email', 'Pincode', 'City', 'State', 'Shortlist', 'Skipped (reason)',
   'Budget', 'Daily km', 'Riders', 'Charging', 'Priority', 'Other answers', 'Consent', 'Consent text', 'Language',
   'Source', 'Page', 'Device', 'Duplicate of earlier lead', 'Lead id'];
@@ -56,14 +68,28 @@ async function sheets(path, opts = {}) {
   return j;
 }
 
-// create the tab with a bold, frozen header row the first time it is used
+// create the tab with a bold, frozen header row the first time it is used; true when it was just made
 async function ensureTab(name) {
   const meta = await sheets('?fields=sheets.properties');
-  if ((meta.sheets || []).some(s => s.properties.title === name)) return;
+  if ((meta.sheets || []).some(s => s.properties.title === name)) return false;
   const add = await sheets(':batchUpdate', { method: 'POST', body: JSON.stringify({ requests: [{ addSheet: { properties: { title: name, gridProperties: { frozenRowCount: 1 } } } }] }) });
   const id = add.replies[0].addSheet.properties.sheetId;
   await sheets(`/values/${encodeURIComponent(name)}!A1:append?valueInputOption=RAW`, { method: 'POST', body: JSON.stringify({ values: [HEADER] }) });
   await sheets(':batchUpdate', { method: 'POST', body: JSON.stringify({ requests: [{ repeatCell: { range: { sheetId: id, startRowIndex: 0, endRowIndex: 1 }, cell: { userEnteredFormat: { textFormat: { bold: true } } }, fields: 'userEnteredFormat.textFormat.bold' } }] }) });
+  return true;
+}
+
+// bring a form's tab up to date with the master tab: every master row of that form whose lead id
+// is not in the form tab yet is appended, in master order. Normally that is just the new lead; the
+// first time (or after a failed copy) it also fills in the earlier leads, so the form tab is complete.
+async function syncFormTab(master, tab, form) {
+  await ensureTab(tab);
+  const all = (await sheets(`/values/${encodeURIComponent(master)}!A2:W`)).values || [];
+  const have = new Set(((await sheets(`/values/${encodeURIComponent(tab)}!W1:W`)).values || []).map(r => r[0]));
+  const rows = all.filter(r => r[22] && !have.has(r[22]) && rowForm(r) === form).map(r => { const x = r.slice(0, 23); while (x.length < 23) x.push(''); return x; });
+  if (!rows.length) return { tab, added: 0 };
+  const out = await sheets(`/values/${encodeURIComponent(tab)}!A1:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`, { method: 'POST', body: JSON.stringify({ values: rows }) });
+  return { tab, added: rows.length, range: out.updates && out.updates.updatedRange };
 }
 
 const clean = (v, n = 200) => String(v == null ? '' : v).replace(/[\u0000-\u001f]/g, ' ').trim().slice(0, n);
@@ -102,7 +128,19 @@ module.exports = async (req, res) => {
         clean(a.budget), clean(a.daily), clean(a.riders), clean(a.charging), clean(a.priority),
         clean(JSON.stringify({ ...Object.fromEntries(Object.entries(a).filter(([k]) => !['budget', 'daily', 'riders', 'charging', 'priority', 'pincode'].includes(k))), stage: 'quiz finished' }), 500)].map(v => safe(String(v)));
       await sheets(`/values/${encodeURIComponent(tab)}!H${i + 1}:O${i + 1}?valueInputOption=RAW`, { method: 'PUT', body: JSON.stringify({ values: [vals] }) });
-      return res.status(200).json({ ok: true, id: leadId, updated: true });
+      // the same row in the form's own tab; if it is not there yet, syncing copies the updated row in
+      let copy;
+      try {
+        const form = rowForm(rows[i]), ftab = formTab(form, b.test);
+        await ensureTab(ftab);
+        const fall = (await sheets(`/values/${encodeURIComponent(ftab)}!A1:W`)).values || [];
+        const j = fall.findIndex(r => r[22] === leadId && r[2] === mob);
+        if (j >= 1) {
+          await sheets(`/values/${encodeURIComponent(ftab)}!H${j + 1}:O${j + 1}?valueInputOption=RAW`, { method: 'PUT', body: JSON.stringify({ values: [vals] }) });
+          copy = { tab: ftab, updated: true };
+        } else copy = await syncFormTab(tab, ftab, form);
+      } catch (e) { console.error('form tab update failed', e.message); copy = { error: b.test ? e.message : 'failed' }; }
+      return res.status(200).json({ ok: true, id: leadId, updated: true, copy: b.test ? copy : undefined });
     } catch (e) {
       console.error('lead update failed', e.message);
       return res.status(502).json({ ok: false, error: 'Could not save right now.', detail: b.test ? e.message : undefined });
@@ -146,7 +184,11 @@ module.exports = async (req, res) => {
       'Yes', clean(b.consentText, 600), clean(b.lang, 5) || 'en', clean(b.source, 300), clean(b.page, 200),
       /mobile|android|iphone/i.test(ua) ? 'Mobile' : 'Desktop', dup, id].map(v => safe(String(v)));
     const out = await sheets(`/values/${encodeURIComponent(tab)}!A1:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`, { method: 'POST', body: JSON.stringify({ values: [row] }) });
-    return res.status(200).json({ ok: true, id, range: out.updates && out.updates.updatedRange, duplicate: !!dup });
+    // the lead is safe in the master tab now; the form tab copy must not turn that into an error
+    let copy;
+    try { copy = await syncFormTab(tab, formTab(b.form, b.test), formKey(b.form)); }
+    catch (e) { console.error('form tab copy failed', e.message); copy = { error: b.test ? e.message : 'failed' }; }
+    return res.status(200).json({ ok: true, id, range: out.updates && out.updates.updatedRange, duplicate: !!dup, copy: b.test ? copy : undefined });
   } catch (e) {
     console.error('lead save failed', e.message);
     return res.status(502).json({ ok: false, error: 'Could not save right now. Please try again.', detail: b.test ? e.message : undefined });
