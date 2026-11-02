@@ -3,151 +3,236 @@
  "label": "October 2026",
  "from": "2026-10-01",
  "to": "2026-10-31",
- "totalViews": 381,
+ "totalViews": 1200,
  "brands": [
   {
    "brandId": "ather-energy",
    "name": "Ather Energy",
-   "views": 75,
-   "viewers": 63,
+   "views": 222,
+   "viewers": 191,
    "models": {
-    "450X 3.7 kWh": 22,
-    "Rizta Z 3.7 kWh": 13,
-    "Konarc S 161 3.5 kWh": 10,
-    "Konarc S 125 2.7 kWh": 9,
-    "Konarc S 100 2.1 kWh": 7,
-    "Rizta S 2.9 kWh": 7,
-    "450 Apex 3.7 kWh": 4,
-    "450S 2.9 kWh": 3
+    "450X 3.5 kWh": 88,
+    "Rizta Z 3.5 kWh": 31,
+    "Konarc S 100 2.1 kWh": 23,
+    "Konarc S 161 3.5 kWh": 22,
+    "Rizta S 2.9 kWh": 19,
+    "Konarc S 125 2.7 kWh": 16,
+    "450S 2.9 kWh": 7,
+    "450 Apex 3.5 kWh": 6,
+    "Rizta S 3.5 kWh": 6,
+    "Rizta Z 2.9 kWh": 3,
+    "450X 2.9 kWh": 1
    },
-   "shortlisted": 3,
-   "skipped": 5,
-   "brandSiteClicks": 7,
-   "testRideDealerClicks": 1,
-   "compareViews": 11,
+   "shortlisted": 7,
+   "skipped": 11,
+   "brandSiteClicks": 21,
+   "testRideDealerClicks": 2,
+   "compareViews": 90,
    "rivals": {
-    "TVS Motor": 1
+    "Ola Electric": 59,
+    "TVS Motor": 10,
+    "Hero Vida": 3,
+    "Bajaj Chetak": 2
    },
    "rank": 1,
-   "share": 19.7
+   "share": 18.5
   },
   {
    "brandId": "bajaj-chetak",
    "name": "Bajaj Chetak",
-   "views": 71,
-   "viewers": 64,
+   "views": 216,
+   "viewers": 187,
    "models": {
-    "Chetak 3501 3.5 kWh": 46,
-    "Chetak 3503 3.5 kWh": 9,
-    "Chetak 3001 3.0 kWh": 7,
-    "Chetak C2501 2.5 kWh": 6,
-    "Chetak 3502 3.5 kWh": 3
+    "Chetak C3501 3.5 kWh": 108,
+    "Chetak C3503 3.5 kWh": 37,
+    "Chetak C3001 3.0 kWh": 26,
+    "Chetak C2501 2.5 kWh": 25,
+    "Chetak C3502 3.5 kWh": 20
    },
-   "shortlisted": 2,
-   "skipped": 4,
-   "brandSiteClicks": 13,
+   "shortlisted": 5,
+   "skipped": 9,
+   "brandSiteClicks": 16,
    "testRideDealerClicks": 0,
-   "compareViews": 0,
-   "rivals": {},
+   "compareViews": 9,
+   "rivals": {
+    "TVS Motor": 2,
+    "Ola Electric": 3,
+    "Hero Vida": 2,
+    "Ather Energy": 2
+   },
    "rank": 2,
-   "share": 18.6
+   "share": 18
   },
   {
    "brandId": "tvs-motor",
    "name": "TVS Motor",
-   "views": 59,
-   "viewers": 50,
+   "views": 183,
+   "viewers": 159,
    "models": {
-    "iQube ST 5.3 kWh": 27,
-    "iQube S 3.5 kWh": 21,
-    "iQube 2.2 kWh": 8,
-    "iQube ST 3.5 kWh": 3
+    "iQube ST 5.3 kWh": 77,
+    "iQube 3.5 kWh": 47,
+    "iQube 2.3 kWh": 29,
+    "iQube ST 3.5 kWh": 10,
+    "Orbiter V2 3.1 kWh": 8,
+    "Orbiter V1 1.8 kWh": 5,
+    "iQube S 4.7 kWh": 3,
+    "iQube 3.1 kWh": 2,
+    "X 4.44 kWh": 2
    },
    "shortlisted": 1,
-   "skipped": 1,
-   "brandSiteClicks": 12,
+   "skipped": 4,
+   "brandSiteClicks": 19,
    "testRideDealerClicks": 1,
-   "compareViews": 2,
+   "compareViews": 25,
    "rivals": {
-    "Ather Energy": 1,
-    "Ola Electric": 1
+    "Ola Electric": 8,
+    "Ather Energy": 10,
+    "Bajaj Chetak": 2,
+    "Hero Vida": 1
    },
    "rank": 3,
-   "share": 15.5
-  },
-  {
-   "brandId": "ampere",
-   "name": "Ampere",
-   "views": 45,
-   "viewers": 39,
-   "models": {
-    "Magnus G Max 3.0 kWh": 20,
-    "Magnus Neo 2.3 kWh": 10,
-    "Nexus EX 3 kWh": 7,
-    "Reo 1.3 kWh": 6,
-    "Nexus ST 3 kWh": 2
-   },
-   "shortlisted": 4,
-   "skipped": 4,
-   "brandSiteClicks": 5,
-   "testRideDealerClicks": 1,
-   "compareViews": 0,
-   "rivals": {},
-   "rank": 4,
-   "share": 11.8
+   "share": 15.3
   },
   {
    "brandId": "ola-electric",
    "name": "Ola Electric",
-   "views": 45,
-   "viewers": 40,
+   "views": 179,
+   "viewers": 157,
    "models": {
-    "S1 X 3 kWh": 16,
-    "S1 X+ 4 kWh": 9,
-    "S1 X 2 kWh": 8,
-    "S1 Pro+ 5.2 kWh": 6,
-    "S1 Pro 3 kWh": 3,
-    "S1 Pro 4 kWh": 3
+    "S1 X 3 kWh": 46,
+    "S1 X 2 kWh": 34,
+    "S1 Pro 4 kWh": 28,
+    "S1 X+ 4 kWh": 28,
+    "S1 Pro 3 kWh": 17,
+    "S1 Pro+ 5.2 kWh": 17,
+    "S1 X 4 kWh": 7,
+    "S1 Pro+ 4 kWh": 2
    },
-   "shortlisted": 2,
-   "skipped": 0,
-   "brandSiteClicks": 3,
-   "testRideDealerClicks": 2,
+   "shortlisted": 5,
+   "skipped": 6,
+   "brandSiteClicks": 7,
+   "testRideDealerClicks": 5,
+   "compareViews": 89,
+   "rivals": {
+    "Ather Energy": 59,
+    "TVS Motor": 8,
+    "Ampere": 2,
+    "Bajaj Chetak": 3,
+    "Hero Vida": 1
+   },
+   "rank": 4,
+   "share": 14.9
+  },
+  {
+   "brandId": "ampere",
+   "name": "Ampere",
+   "views": 124,
+   "viewers": 105,
+   "models": {
+    "Magnus G Max 3 kWh": 61,
+    "Magnus Neo 2.3 kWh": 29,
+    "Reo 1.3 kWh": 11,
+    "Reo Vyb 1.44 kWh": 9,
+    "Nexus EX+ 3 kWh": 8,
+    "Nexus ST 3 kWh": 6
+   },
+   "shortlisted": 10,
+   "skipped": 7,
+   "brandSiteClicks": 13,
+   "testRideDealerClicks": 3,
    "compareViews": 3,
    "rivals": {
-    "TVS Motor": 1
+    "Ola Electric": 2,
+    "Hero Vida": 1
    },
    "rank": 5,
-   "share": 11.8
+   "share": 10.3
   },
   {
    "brandId": "hero-vida",
    "name": "Hero Vida",
-   "views": 39,
-   "viewers": 36,
+   "views": 119,
+   "viewers": 103,
    "models": {
-    "VX2 Plus 3.4 kWh": 19,
-    "VX2 Go 2.2 kWh": 11,
-    "V2 Pro 3.94 kWh": 9
+    "VX2 Plus 3.4 kWh": 41,
+    "V2 Pro 3.94 kWh": 28,
+    "VX2 Go 2.2 kWh": 22,
+    "VX2 Go FB 3.1 kWh": 13,
+    "VX2 Plus 4.4 kWh": 11,
+    "VX2 Go 3.4 kWh": 4
+   },
+   "shortlisted": 3,
+   "skipped": 4,
+   "brandSiteClicks": 20,
+   "testRideDealerClicks": 0,
+   "compareViews": 8,
+   "rivals": {
+    "Ather Energy": 3,
+    "Bajaj Chetak": 2,
+    "Ampere": 1,
+    "Ola Electric": 1,
+    "TVS Motor": 1
+   },
+   "rank": 6,
+   "share": 9.9
+  },
+  {
+   "brandId": "okinawa",
+   "name": "Okinawa",
+   "views": 42,
+   "viewers": 40,
+   "models": {
+    "R30 1.25 kWh": 20,
+    "iPraise+ 3.3 kWh": 7,
+    "OKHI-90 3.6 kWh": 6,
+    "Ridge+ 1.7 kWh": 6,
+    "Lite 1.25 kWh": 2,
+    "PraisePro 2.08 kWh": 1
    },
    "shortlisted": 0,
-   "skipped": 4,
-   "brandSiteClicks": 12,
-   "testRideDealerClicks": 0,
+   "skipped": 5,
+   "brandSiteClicks": 3,
+   "testRideDealerClicks": 1,
    "compareViews": 0,
    "rivals": {},
-   "rank": 6,
-   "share": 10.2
+   "rank": 7,
+   "share": 3.5
+  },
+  {
+   "brandId": "pure-ev",
+   "name": "Pure EV",
+   "views": 33,
+   "viewers": 28,
+   "models": {
+    "ePluto 7G 2.4 kWh": 8,
+    "ETrance+ 4.5 kWh": 8,
+    "ePluto 7G CX 1.8 kWh": 5,
+    "ePluto 7G MAX 3.5 kWh": 4,
+    "Etron Plus 3.0 kWh": 3,
+    "ePluto 7G PRO 3.0 kWh": 2,
+    "eTrance Neo SX 1.8 kWh": 2,
+    "eTrance Neo+ 3.0 kWh": 1
+   },
+   "shortlisted": 1,
+   "skipped": 5,
+   "brandSiteClicks": 1,
+   "testRideDealerClicks": 1,
+   "compareViews": 0,
+   "rivals": {},
+   "rank": 8,
+   "share": 2.8
   },
   {
    "brandId": "bgauss",
    "name": "BGauss",
-   "views": 17,
-   "viewers": 12,
+   "views": 29,
+   "viewers": 20,
    "models": {
-    "C12i 2.0 kWh": 8,
-    "D15i 3.0 kWh": 5,
-    "RUV 350i 3.0 kWh": 4
+    "C12i EX 2.0 kWh": 10,
+    "RUV 350 MAX 3.0 kWh": 8,
+    "D15i 3.0 kWh": 6,
+    "OoWah EX 2.3 kWh": 3,
+    "C12 MaxR 3.8 kWh": 2
    },
    "shortlisted": 0,
    "skipped": 0,
@@ -155,65 +240,151 @@
    "testRideDealerClicks": 0,
    "compareViews": 0,
    "rivals": {},
-   "rank": 7,
-   "share": 4.5
-  },
-  {
-   "brandId": "okinawa",
-   "name": "Okinawa",
-   "views": 12,
-   "viewers": 11,
-   "models": {
-    "R30 0.8 kWh": 4,
-    "Ridge+ 2.8 kWh": 4,
-    "iPraise+ 2.2 kWh": 3,
-    "Okhi-90 2.8 kWh": 1
-   },
-   "shortlisted": 0,
-   "skipped": 0,
-   "brandSiteClicks": 2,
-   "testRideDealerClicks": 0,
-   "compareViews": 0,
-   "rivals": {},
-   "rank": 8,
-   "share": 3.1
-  },
-  {
-   "brandId": "pure-ev",
-   "name": "Pure EV",
-   "views": 10,
-   "viewers": 9,
-   "models": {
-    "ETrance+ 4.5 kWh": 6,
-    "EPluto 7G 2.0 kWh": 3,
-    "Etron Plus 3.0 kWh": 1
-   },
-   "shortlisted": 0,
-   "skipped": 0,
-   "brandSiteClicks": 1,
-   "testRideDealerClicks": 1,
-   "compareViews": 0,
-   "rivals": {},
    "rank": 9,
-   "share": 2.6
+   "share": 2.4
   },
   {
-   "brandId": "bounce-infinity",
-   "name": "Bounce Infinity",
-   "views": 8,
-   "viewers": 7,
+   "brandId": "okaya-ev",
+   "name": "OPG Mobility (Okaya)",
+   "views": 14,
+   "viewers": 10,
    "models": {
-    "Infinity E1 2.0 kWh": 7,
-    "Infinity E1 Plus 2.5 kWh": 1
+    "Faast F2F 2.19 kWh": 6,
+    "Freedum LI 1.44 kWh": 6,
+    "Faast F4 4.4 kWh": 2
    },
    "shortlisted": 0,
-   "skipped": 0,
+   "skipped": 2,
    "brandSiteClicks": 0,
    "testRideDealerClicks": 0,
    "compareViews": 0,
    "rivals": {},
    "rank": 10,
-   "share": 2.1
+   "share": 1.2
+  },
+  {
+   "brandId": "bounce-infinity",
+   "name": "Bounce Infinity",
+   "views": 13,
+   "viewers": 11,
+   "models": {
+    "Infinity E1 2.5 kWh": 10,
+    "Infinity E1+ 1.9 kWh": 3
+   },
+   "shortlisted": 0,
+   "skipped": 0,
+   "brandSiteClicks": 0,
+   "testRideDealerClicks": 0,
+   "compareViews": 0,
+   "rivals": {},
+   "rank": 11,
+   "share": 1.1
+  },
+  {
+   "brandId": "honda",
+   "name": "Honda",
+   "views": 9,
+   "viewers": 9,
+   "models": {
+    "QC1 1.5 kWh": 9
+   },
+   "shortlisted": 0,
+   "skipped": 0,
+   "brandSiteClicks": 0,
+   "testRideDealerClicks": 0,
+   "compareViews": 0,
+   "rivals": {},
+   "rank": 12,
+   "share": 0.8
+  },
+  {
+   "brandId": "simple-energy",
+   "name": "Simple Energy",
+   "views": 5,
+   "viewers": 4,
+   "models": {
+    "One 5 kWh": 2,
+    "WaveS 2.2 kWh": 2,
+    "Ultra 6.5 kWh": 1
+   },
+   "shortlisted": 0,
+   "skipped": 0,
+   "brandSiteClicks": 0,
+   "testRideDealerClicks": 0,
+   "compareViews": 0,
+   "rivals": {},
+   "rank": 13,
+   "share": 0.4
+  },
+  {
+   "brandId": "suzuki",
+   "name": "Suzuki",
+   "views": 4,
+   "viewers": 3,
+   "models": {
+    "e-Access 3.07 kWh": 4
+   },
+   "shortlisted": 0,
+   "skipped": 0,
+   "brandSiteClicks": 0,
+   "testRideDealerClicks": 0,
+   "compareViews": 0,
+   "rivals": {},
+   "rank": 14,
+   "share": 0.3
+  },
+  {
+   "brandId": "lectrix",
+   "name": "Lectrix",
+   "views": 4,
+   "viewers": 3,
+   "models": {
+    "LXS 2.0 2.3 kWh": 3,
+    "NDuro 3.0 3 kWh": 1
+   },
+   "shortlisted": 1,
+   "skipped": 0,
+   "brandSiteClicks": 0,
+   "testRideDealerClicks": 0,
+   "compareViews": 0,
+   "rivals": {},
+   "rank": 15,
+   "share": 0.3
+  },
+  {
+   "brandId": "vlf",
+   "name": "VLF",
+   "views": 3,
+   "viewers": 3,
+   "models": {
+    "Strada Max 4.32 kWh": 2,
+    "Strada City 2.16 kWh": 1
+   },
+   "shortlisted": 0,
+   "skipped": 1,
+   "brandSiteClicks": 0,
+   "testRideDealerClicks": 0,
+   "compareViews": 0,
+   "rivals": {},
+   "rank": 16,
+   "share": 0.3
+  },
+  {
+   "brandId": "kinetic-watts-volts",
+   "name": "Kinetic",
+   "views": 1,
+   "viewers": 1,
+   "models": {
+    "DX+ 2.6 kWh": 1
+   },
+   "shortlisted": 0,
+   "skipped": 0,
+   "brandSiteClicks": 0,
+   "testRideDealerClicks": 0,
+   "compareViews": 0,
+   "rivals": {},
+   "rank": 17,
+   "share": 0.1
   }
  ],
  "notes": []
