@@ -611,3 +611,51 @@ function swCompareHref(a, b){
   if(P.includes(b+'-vs-'+a)) return `/compare/${b}-vs-${a}`;
   return `/compare?a=${a}&b=${b}`;
 }
+
+/* AdSense in-feed ads (GK, Nov 2026): one native ad between items of a list, never above the
+   first item and never after the last. Lists: all scooters, trending videos and posts, city and
+   brand model cards, homepage picks. Each entry: [list selector, ad after every N items, most ads].
+   Added in the browser only (not while the build renders pages), and put back whenever a list is
+   re-rendered (filters, "load more"). */
+const SW_FEED_ADS = [['#listingsGrid', 6, 4], ['#ytGrid', 6, 3], ['#redditList', 5, 3], ['#brandModelsGrid', 3, 1]];
+// short lists (3 picks, a brand with 3 or fewer models): one ad right after the list instead,
+// between it and the next section. [list, only when it has at most this many items]
+const SW_AFTER_ADS = [['#picksGrid', 99], ['#cityPicksGrid', 99], ['#brandModelsGrid', 3]];
+function swFeedAdHTML(){
+  return '<div class="sw-feed-ad" aria-label="Advertisement" style="grid-column:1/-1;min-width:0;width:100%"><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="+1n+rx+1+2-3" data-ad-client="ca-pub-2946997043388287" data-ad-slot="6950598216"></ins></div>';
+}
+function swPlaceFeedAds(el, every, max){
+  const items=[...el.children].filter(c=>!c.classList.contains('sw-feed-ad'));
+  let n=el.querySelectorAll(':scope > .sw-feed-ad').length;
+  for(let k=every; k<items.length && n<max; k+=every){
+    const after=items[k-1], next=after.nextElementSibling;
+    if(next && next.classList.contains('sw-feed-ad')) continue;
+    after.insertAdjacentHTML('afterend', swFeedAdHTML()); n++;
+    try{ (window.adsbygoogle=window.adsbygoogle||[]).push({}); }catch(e){}
+  }
+}
+function swPlaceAfterAd(el, maxItems){
+  const items=[...el.children].filter(c=>!c.classList.contains('sw-feed-ad')).length;
+  const next=el.nextElementSibling, has=next && next.classList.contains('sw-feed-ad');
+  if(!items || items>maxItems || has) return;
+  el.insertAdjacentHTML('afterend', swFeedAdHTML().replace('class="sw-feed-ad"','class="sw-feed-ad sw-after-ad"').replace('style="grid-column:1/-1;','style="margin:24px 0;'));
+  try{ (window.adsbygoogle=window.adsbygoogle||[]).push({}); }catch(e){}
+}
+function swInitFeedAds(){
+  if(navigator.webdriver) return;
+  for(const [sel,maxItems] of SW_AFTER_ADS){
+    const el=document.querySelector(sel); if(!el || el._swAfterAd) continue;
+    el._swAfterAd=true;
+    let t=null; const run=()=>{ clearTimeout(t); t=setTimeout(()=>swPlaceAfterAd(el,maxItems),150); };
+    new MutationObserver(run).observe(el,{childList:true});
+    run();
+  }
+  for(const [sel,every,max] of SW_FEED_ADS){
+    const el=document.querySelector(sel); if(!el || el._swAds) continue;
+    el._swAds=true;
+    let t=null; const run=()=>{ clearTimeout(t); t=setTimeout(()=>swPlaceFeedAds(el,every,max),150); };
+    new MutationObserver(run).observe(el,{childList:true});
+    run();
+  }
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',swInitFeedAds); else swInitFeedAds();
