@@ -38,7 +38,7 @@
       const t = tr(n.textContent);
       if (t != null) n.textContent = t; else if (!full) pending.push(n);
       // a long page title drops its " | EScooterwale" ending once translated (as seo.js does in English)
-      if (n.parentNode && n.parentNode.nodeName === 'TITLE' && n.textContent.trim().length > 60 && /\s\|\s*EScooterwale\s*$/.test(n.textContent)) n.textContent = n.textContent.replace(/\s*\|\s*EScooterwale\s*$/, '');
+      if (n.parentNode && n.parentNode.nodeName === 'TITLE' && window.SEO && SEO.shortTitle) { const h = document.querySelector('h1'), v = SEO.shortTitle(n.textContent, h && h.textContent); if (v !== n.textContent) n.textContent = v; }
       n.__swDone = n.textContent; return;
     }
     if (n.nodeType !== 1 || SKIP[n.tagName] || n.getAttribute('translate') === 'no') return;
@@ -48,7 +48,7 @@
   }
   function fixHead() {
     const t = tr(document.title); if (t != null && t !== document.title) document.title = t;
-    if (document.title.trim().length > 60 && /\s\|\s*EScooterwale\s*$/.test(document.title)) document.title = document.title.replace(/\s*\|\s*EScooterwale\s*$/, '');
+    if (window.SEO && SEO.shortTitle) { const h = document.querySelector('h1'), v = SEO.shortTitle(document.title, h && h.textContent); if (v !== document.title) document.title = v; } // same rules as the built pages
     document.querySelectorAll('meta[name="description"],meta[property="og:title"],meta[property="og:description"]').forEach(m => { const v = tr(m.getAttribute('content') || ''); if (v != null) m.setAttribute('content', v); });
   }
   new MutationObserver(ms => {

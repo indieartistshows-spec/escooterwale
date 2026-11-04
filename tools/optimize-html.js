@@ -19,6 +19,8 @@ let _css = null;
 const inlineCss = () => _css || (_css = fs.readFileSync(path.join(ROOT, 'styles.css'), 'utf8')
   .replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{}:;,>])\s*/g, '$1').replace(/;}/g, '}').trim());
 const hashes = {};
+const SEO_RULES = require('../seo.js');
+const decode = s => s.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
 const hashOf = f => hashes[f] || (hashes[f] = crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0, 8));
 /* minified copy of a local .js/.css in min/<same path> (whitespace and syntax only: names are kept,
    so the globals one script reads from another still match). Returns its path from the site root,
@@ -74,10 +76,12 @@ for (const file of pages) {
 
   // titles: Google shows about 60 characters and Semrush flags over 70. A long title drops the
   // " | EScooterwale" ending (the site name shows beside the result anyway); every language.
-  h = h.replace(/<title([^>]*)>([^<]*)<\/title>/i, (m, at, t) => {
-    const plain = t.replace(/&amp;/g, '&').trim();
-    return plain.length > 60 && /\s\|\s*EScooterwale\s*$/.test(t) ? `<title${at}>${t.replace(/\s*\|\s*EScooterwale\s*$/, '')}</title>` : m;
-  });
+  { const h1m = h.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+    const h1 = h1m ? decode(h1m[1].replace(/<[^>]+>/g, '')) : '';
+    h = h.replace(/<title([^>]*)>([^<]*)<\/title>/i, (m, at, t) => {
+      const plain = decode(t), v = SEO_RULES.shortTitle(plain, h1); // same rules as seo.js in the browser
+      return v === plain ? m : `<title${at}>${v.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</title>`;
+    }); }
 
   // AdSense site verification meta tag (GK, Nov 2026): in the <head> of every page
   if (!h.includes('name="google-adsense-account"'))

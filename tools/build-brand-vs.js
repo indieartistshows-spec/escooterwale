@@ -107,7 +107,7 @@ ${sumRow('PM E-DRIVE eligible', `${A.eligible} of ${A.n}`, `${B.eligible} of ${B
   <h2>Questions people ask</h2>
 ${qs.map(([q, a]) => `  <h3>${q}</h3>\n  <p>${a}</p>`).join('\n')}`;
 
-  const t = `${TA} vs ${TB} Electric Scooter 2026: Price, Range and Which to Buy | EScooterwale`;
+  const t = `${TA} vs ${TB} 2026: Price, Range and Which to Buy | EScooterwale`; // short: under 70 characters
   page({
     file: `${slug}.html`,
     canon,

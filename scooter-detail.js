@@ -362,6 +362,12 @@ function hydratePage(id){
     </div>`;
 
   // Kick off Amazon rating fetch
+  // every ready comparison page with this model, so each comparison page is reachable from both models
+  { const P=(typeof COMPARE_PAIRS!=='undefined'&&COMPARE_PAIRS)||[], ALL=(typeof SCOOTERS_ALL!=='undefined'?SCOOTERS_ALL:SCOOTERS_DB);
+    const items=P.filter(k=>k.startsWith(s.id+'-vs-')||k.endsWith('-vs-'+s.id)).map(k=>{ const o=ALL.find(x=>x.id===(k.startsWith(s.id+'-vs-')?k.slice(s.id.length+4):k.slice(0,k.length-s.id.length-4))); return o?{k,o}:null; }).filter(Boolean);
+    const el=document.getElementById('dH2H');
+    if(el && items.length){ el.innerHTML=`<div class="h2h-hd">Head-to-head comparisons</div><div class="h2h-row">${items.map(({k,o})=>`<a class="h2h-link" href="/compare/${k}" translate="no">${s.name} vs ${o.fullName}</a>`).join('')}</div>`; el.hidden=false; } }
+
   renderOwnerVoices(s);
 
   // Specs — pass full scooter object for comprehensive table

@@ -60,12 +60,13 @@
       const fam = x => String(x.name).split(' ')[0];
       if (a.brandSlug === b.brandSlug && fam(a) === fam(b)) {
         return {
-          title: `${a.fullName} vs ${b.name}: Difference, Price and Range (${YEAR})`,
+          // Semrush flags titles over 70 characters: long model names get the shorter form
+          title: (t => t.length > 70 ? `${a.fullName} vs ${b.name}: Difference and Price` : t)(`${a.fullName} vs ${b.name}: Difference, Price and Range (${YEAR})`),
           desc: `${a.fullName} vs ${b.name}: what is the difference? ${a.priceDisplay} vs ${b.priceDisplay}, real range ${span(a.realRange)} vs ${span(b.realRange)}, specs and which one to buy.`
         };
       }
       return {
-        title: `${a.fullName} vs ${b.fullName}: Which to Buy (${YEAR})`,
+        title: (t => t.length > 70 ? `${a.fullName} vs ${b.fullName}: Which to Buy` : t)(`${a.fullName} vs ${b.fullName}: Which to Buy (${YEAR})`),
         desc: `${a.fullName} at ${a.priceDisplay} or ${b.fullName} at ${b.priceDisplay}? Real-world range, specs, running cost and our verdict, side by side.`
       };
     },
@@ -102,13 +103,33 @@
 
   // Google shows about 60 characters of a title; a longer one drops its " | EScooterwale" ending.
   // Same rule as tools/optimize-html.js (built pages) and i18n-runtime.js (translated pages).
-  SEO.shortTitle = t => String(t).trim().length > 60 && /\s\|\s*EScooterwale\s*$/.test(t) ? String(t).replace(/\s*\|\s*EScooterwale\s*$/, '') : t;
+  // Title rules (Semrush flags over 70 characters, and a title the same as the H1):
+  //  1. over 60 characters: drop the " | EScooterwale" ending
+  //  2. still over 70: keep the part before the first ": " (the subject comes first in our titles)
+  //  3. if that leaves it the same as the page's H1, try the other forms
+  SEO.shortTitle = (t, h1) => {
+    t = String(t).trim();
+    const SUF = /\s*\|\s*EScooterwale\s*$/, base = t.replace(SUF, '').trim(), hasSuf = SUF.test(t);
+    // head: the longest start of the title, up to 70 characters, that ends at ": ", "? " or ", "
+    let head = null;
+    let first = null;
+    for (const m of base.matchAll(/(: |\? |, )/g)) { const h = base.slice(0, m.index) + (m[1] === '? ' ? '?' : ''); if (h.length < 20) continue; if (!first) first = h; if (h.length <= 70) head = h; }
+    if (!head && first && first.length < base.length) head = first; // nothing fits: the shortest clean start
+    let out = !hasSuf || t.length <= 60 ? t : base;
+    if (out.length > 70 && head) out = head;
+    const same = x => !!h1 && x.trim().toLowerCase() === String(h1).replace(/\s+/g, ' ').trim().toLowerCase();
+    if (same(out)) {
+      const alts = [base + ' | EScooterwale', head, head && head + ' | EScooterwale'].filter(x => x && x.length <= 70 && !same(x));
+      if (alts.length) out = alts[0];
+    }
+    return out;
+  };
   if (typeof document !== 'undefined' && typeof MutationObserver !== 'undefined' && !(typeof navigator !== 'undefined' && navigator.webdriver) && !/^\/(hi|mr|ta|te|kn|gu|bn|or)(\/|$)/.test(location.pathname)) {
     // English pages: page scripts set the title after load, keep it short whenever it changes.
     // Not while the build renders pages (webdriver): the build keeps full titles for translation
     // and tools/optimize-html.js shortens them afterwards.
-    const fix = () => { const el = document.querySelector('title'); if (el) { const v = SEO.shortTitle(el.textContent); if (v !== el.textContent) el.textContent = v; } };
-    new MutationObserver(fix).observe(document.head || document.documentElement, { subtree: true, childList: true, characterData: true });
+    const fix = () => { const el = document.querySelector('title'), h = document.querySelector('h1'); if (el) { const v = SEO.shortTitle(el.textContent, h && h.textContent); if (v !== el.textContent) el.textContent = v; } };
+    new MutationObserver(fix).observe(document.documentElement, { subtree: true, childList: true, characterData: true });
     fix();
   }
 

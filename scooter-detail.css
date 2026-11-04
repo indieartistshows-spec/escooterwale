@@ -226,3 +226,10 @@
 .cp-city .cp-on{color:var(--ink-3);font-size:11px}
 .cp-city.active{background:var(--g-bg,#edfbf4)}
 .cp-city.active span:first-child{color:var(--g)}
+
+/* head-to-head comparison links (model page) */
+.h2h-links{margin:8px 0 24px}
+.h2h-hd{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+.h2h-row{display:flex;flex-wrap:wrap;gap:8px}
+.h2h-link{display:inline-block;font-size:13px;font-weight:600;color:var(--ink);background:var(--surf);border:1px solid var(--border);border-radius:999px;padding:6px 12px;text-decoration:none}
+.h2h-link:hover{border-color:var(--g);color:var(--g-dim)}

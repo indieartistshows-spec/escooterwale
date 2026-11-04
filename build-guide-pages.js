@@ -185,7 +185,7 @@ const eligibilityRows = rows.map(r => `      <tr>
 page({
   file: 'guide-subsidy-eligibility.html',
   canon: '/guide-subsidy-eligibility',
-  title: `Which Electric Scooters Qualify for PM E-DRIVE Subsidy? All ${SCOOTERS_DB.length} Models Checked | EScooterwale`,
+  title: `Which Electric Scooters Get PM E-DRIVE Subsidy? All ${SCOOTERS_DB.length} Checked | EScooterwale`,
   desc: `${ineligible.length} of the ${SCOOTERS_DB.length} electric scooters sold in India get no PM E-DRIVE subsidy because they exceed the ₹1.5 lakh ex-factory cap. Model-by-model subsidy amounts, verified 24 August 2026.`,
   eyebrow: 'Eligibility Check',
   crumb: 'Which scooters qualify',
@@ -634,8 +634,8 @@ ${band('Above ₹1.5 lakh', 150000, 99999999)}
   </div>
   <div class="sidebar-card">
     <h4>Filter by budget</h4>
-    <a href="/listings?tag=under-1-lakh" class="toc-link">Under ₹1 lakh</a>
-    <a href="/listings?tag=under-1-5l" class="toc-link">Under ₹1.5 lakh</a>
+    <a href="/best/under-1-lakh" class="toc-link">Under ₹1 lakh</a>
+    <a href="/best/under-1-5l" class="toc-link">Under ₹1.5 lakh</a>
     <a href="/best/best-range" class="toc-link">Best range</a>
     <a href="/best/daily-commute" class="toc-link">Best for commuting</a>
   </div>

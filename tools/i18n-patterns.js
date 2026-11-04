@@ -104,6 +104,10 @@ const RULES = [
   // ---- model templates ($B = brand + model, brand localised)
   [/^(.+) at (\{\d\}) or (.+) at (\{\d\})\? Real-world range, specs, running cost and our verdict, side by side\.$/, W('$B1 $2 में या $B2 $4 में? असली रेंज, स्पेक्स, चलाने का ख़र्च और हमारा फ़ैसला, साथ-साथ।','$B1 $2 ला की $B2 $4 ला? खरी रेंज, स्पेक्स, चालवण्याचा खर्च आणि आमचा निर्णय, शेजारी शेजारी.','$B1 $2-க்கு அல்லது $B2 $4-க்கு? உண்மை ரேஞ்ச், விவரங்கள், இயக்கச் செலவு, எங்கள் தீர்ப்பு, அருகருகே.','$B1 $2కు లేదా $B2 $4కు? అసలు రేంజ్, స్పెక్స్, నడిపే ఖర్చు, మా తీర్పు, పక్కపక్కనే.','$B1 $2ಕ್ಕೆ ಅಥವಾ $B2 $4ಕ್ಕೆ? ನಿಜ ರೇಂಜ್, ಸ್ಪೆಕ್ಸ್, ಚಾಲನಾ ವೆಚ್ಚ ಮತ್ತು ನಮ್ಮ ತೀರ್ಪು, ಪಕ್ಕಪಕ್ಕ.','$B1 $2 માં કે $B2 $4 માં? સાચી રેન્જ, સ્પેક્સ, ચલાવવાનો ખર્ચ અને અમારો ચુકાદો, બાજુ-બાજુમાં.','$B1 $2-এ না $B2 $4-এ? আসল রেঞ্জ, স্পেক, চালানোর খরচ আর আমাদের রায়, পাশাপাশি।','$B1 $2 ରେ ନା $B2 $4 ରେ? ପ୍ରକୃତ ରେଞ୍ଜ, ସ୍ପେକ୍, ଚାଳନା ଖର୍ଚ୍ଚ ଓ ଆମ ରାୟ, ପାଖାପାଖି।'), 'VS2'],
   [/^(.+) costs (\{\d\}) ex-showroom\. We measured (\{\d\}) of real range against the (\{\d\}) claimed\. Specs, subsidy, EMI and who should skip it\.$/, W('$B की क़ीमत $2 एक्स-शोरूम है। हमने $4 दावे के मुक़ाबले $3 असली रेंज मापी। स्पेक्स, सब्सिडी, EMI और किसे नहीं लेना चाहिए।','$B ची किंमत $2 एक्स-शोरूम. $4 दाव्याच्या तुलनेत आम्ही $3 खरी रेंज मोजली. स्पेक्स, अनुदान, EMI आणि कोणी टाळावी.','$B விலை $2 எக்ஸ்-ஷோரூம். கூறப்பட்ட $4-க்கு எதிராக $3 உண்மை ரேஞ்ச் அளந்தோம். விவரங்கள், மானியம், EMI, யார் தவிர்க்க வேண்டும்.','$B ధర $2 ఎక్స్-షోరూమ్. $4 క్లెయిమ్‌కు ఎదురుగా $3 అసలు రేంజ్ కొలిచాం. స్పెక్స్, సబ్సిడీ, EMI, ఎవరు వద్దనుకోవాలి.','$B ಬೆಲೆ $2 ಎಕ್ಸ್-ಶೋರೂಮ್. $4 ಹೇಳಿಕೆಗೆ ಎದುರು $3 ನಿಜ ರೇಂಜ್ ಅಳೆದಿದ್ದೇವೆ. ಸ್ಪೆಕ್ಸ್, ಸಬ್ಸಿಡಿ, EMI, ಯಾರು ತಪ್ಪಿಸಬೇಕು.','$B ની કિંમત $2 એક્સ-શોરૂમ છે. અમે $4 દાવા સામે $3 સાચી રેન્જ માપી. સ્પેક્સ, સબસિડી, EMI અને કોણે ન લેવું.','$B-এর দাম $2 এক্স-শোরুম। $4 দাবির বিপরীতে আমরা $3 আসল রেঞ্জ মেপেছি। স্পেক, ভর্তুকি, EMI আর কার এড়ানো উচিত।','$B ଦାମ $2 ଏକ୍ସ-ସୋରୁମ୍। $4 ଦାବି ତୁଳନାରେ ଆମେ $3 ପ୍ରକୃତ ରେଞ୍ଜ ମାପିଲୁ। ସ୍ପେକ୍, ସବସିଡି, EMI ଓ କିଏ ଏଡ଼ାଇବା ଉଚିତ।'), 'B'],
+  // shorter comparison titles (Nov 2026: Semrush flags over 70 characters)
+  [/^(.+) vs (.+): Which to Buy$/, W('$B1 बनाम $B2: कौन सा लें','$B1 विरुद्ध $B2: कोणती घ्यावी','$B1 vs $B2: எதை வாங்குவது','$B1 vs $B2: ఏది కొనాలి','$B1 vs $B2: ಯಾವುದನ್ನು ಖರೀದಿಸಬೇಕು','$B1 vs $B2: કયું લેવું','$B1 বনাম $B2: কোনটি কিনবেন','$B1 ବନାମ $B2: କେଉଁଟି କିଣିବେ'), 'VS'],
+  [/^(.+) vs (.+): Difference and Price$/, W('$1 vs $2: अंतर और कीमत','$1 vs $2: फरक आणि किंमत','$1 vs $2: வித்தியாசம், விலை','$1 vs $2: తేడా, ధర','$1 vs $2: ವ್ಯತ್ಯಾಸ ಮತ್ತು ಬೆಲೆ','$1 vs $2: ફરક અને કિંમત','$1 বনাম $2: পার্থক্য ও দাম','$1 ବନାମ $2: ପାର୍ଥକ୍ୟ ଓ ଦାମ')],
+  [/^(.+) vs (.+) (\{\d\}): Price, Range and Which to Buy \| EScooterwale$/, W('$1 vs $2 $3: क़ीमत, रेंज और कौन सा लें | EScooterwale','$1 vs $2 $3: किंमत, रेंज आणि कोणती घ्यावी | EScooterwale','$1 vs $2 $3: விலை, ரேஞ்ச் மற்றும் எதை வாங்குவது | EScooterwale','$1 vs $2 $3: ధర, రేంజ్, ఏది కొనాలి | EScooterwale','$1 vs $2 $3: ಬೆಲೆ, ರೇಂಜ್ ಮತ್ತು ಯಾವುದನ್ನು ಖರೀದಿಸಬೇಕು | EScooterwale','$1 vs $2 $3: કિંમત, રેન્જ અને કયું લેવું | EScooterwale','$1 vs $2 $3: দাম, রেঞ্জ ও কোনটি কিনবেন | EScooterwale','$1 vs $2 $3: ଦାମ, ରେଞ୍ଜ ଓ କେଉଁଟି କିଣିବେ | EScooterwale')],
   [/^(.+) vs (.+): Which to Buy \((\{\d\})\)$/, W('$B1 बनाम $B2: कौन सा लें ($3)','$B1 विरुद्ध $B2: कोणती घ्यावी ($3)','$B1 vs $B2: எதை வாங்குவது ($3)','$B1 vs $B2: ఏది కొనాలి ($3)','$B1 vs $B2: ಯಾವುದನ್ನು ಖರೀದಿಸಬೇಕು ($3)','$B1 vs $B2: કયું લેવું ($3)','$B1 বনাম $B2: কোনটি কিনবেন ($3)','$B1 ବନାମ $B2: କେଉଁଟି କିଣିବେ ($3)'), 'VS'],
   [/^(.+) vs (.+)$/, W('$B1 बनाम $B2','$B1 विरुद्ध $B2','$B1 vs $B2','$B1 vs $B2','$B1 vs $B2','$B1 vs $B2','$B1 বনাম $B2','$B1 ବନାମ $B2'), 'VS'],
   // any outlet: "↗ Read on <outlet>" (outlet names stay as they are)
@@ -162,6 +166,16 @@ function run({ keys, dicts, write = true } = {}) {
       let v = apply(k, i);
       // a title shortened by tools/optimize-html.js (no " | EScooterwale" ending): reuse the full one
       if (!v) { const full = dicts[l][k + ' | EScooterwale'] || apply(k + ' | EScooterwale', i); if (full && /\s\|\s*EScooterwale$/.test(full)) v = full.replace(/\s*\|\s*EScooterwale$/, ''); }
+      // a title cut short at ": ", "? " or ", " (seo.js shortTitle; the root pages keep the cut title):
+      // take the same start of the full title's translation
+      if (!v) for (const sep of [': ', '? ', ', ']) {
+        const full = Object.keys(dicts[l]).find(x => x.startsWith(k + sep) || (sep === '? ' && k.endsWith('?') && x.startsWith(k + ' ')));
+        if (!full) continue;
+        const t = dicts[l][full], n = k.split(sep).length - 1, parts = t.split(sep);
+        if (parts.length > n + 1) { v = parts.slice(0, n + 1).join(sep) + (sep === '? ' ? '?' : ''); if (sep === '? ' && k.endsWith('?')) v = parts.slice(0, n + 1).join(sep); break; }
+      }
+      // and the other way: a title with the ending, when its plain form is translated or templated
+      if (!v && / \| EScooterwale$/.test(k)) { const base = k.replace(/ \| EScooterwale$/, ''); const t = dicts[l][base] || apply(base, i); if (t) v = t + ' | EScooterwale'; }
       if (v && ph(v) === ph(k)) { dicts[l][k] = v; n++; }
     }
     if (write) fs.writeFileSync(`i18n/${l}.json`, JSON.stringify(dicts[l], null, 0));
