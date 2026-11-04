@@ -334,7 +334,7 @@ function seoLinksHTML(){
       return `<li><a class="sl-model" translate="no" href="/scooters/${s.id}">${nm}</a>: `+
         (s.brandUrl?ext(utm(s.brandUrl,s.id),'Buy from '+bname,'brand',bid)+' · ':'')+
         ext(bd,'Buy on BikeDekho','aggregator')+' · '+ext(bw,'Buy on BikeWale','aggregator')+' · '+
-        ext(ev,'Compare on EVIndia','aggregator')+' · '+`<a href="/compare?a=${s.id}">Compare on EScooterwale</a></li>`;
+        ext(ev,'Compare on EVIndia','aggregator')+' · '+(h=>`<a href="${h}"${h.includes('?')?' rel="nofollow"':''}>Compare on EScooterwale</a></li>`)(swCompareFor(s.id));
     }).join('');
     return `<div class="sl-brand"><h4><a href="/brands/${bid}">${bname} electric scooters</a></h4><ul>${rows}</ul></div>`;
   }).join('');
@@ -659,3 +659,11 @@ function swInitFeedAds(){
   }
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',swInitFeedAds); else swInitFeedAds();
+
+/* A model's best comparison link for crawlable footers: one of our ready comparison pages that
+   includes it (a real page with its own text), else the compare tool with the model picked. */
+function swCompareFor(id){
+  const P=(typeof COMPARE_PAIRS!=='undefined'&&COMPARE_PAIRS)||[];
+  const hit=P.find(k=>k.startsWith(id+'-vs-'))||P.find(k=>k.endsWith('-vs-'+id));
+  return hit?`/compare/${hit}`:`/compare?a=${id}`;
+}
