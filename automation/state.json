@@ -1,21 +1,21 @@
 {
  "missing": {
   "bgauss-c12-maxr-3point8-kwh": {
-   "n": 1,
-   "last": "2026-11-02"
+   "n": 2,
+   "last": "2026-11-09"
   },
   "bgauss-oowah-ex-2point3-kwh": {
-   "n": 1,
-   "last": "2026-11-02"
+   "n": 2,
+   "last": "2026-11-09"
   },
   "hero-vida-vx2-go-fb-3point1-kwh": {
-   "n": 1,
-   "last": "2026-11-02"
+   "n": 2,
+   "last": "2026-11-09"
   }
  },
  "candidates": {
-  "bgauss|ARAI Certified Range|2.7": 1,
-  "bgauss|ARAI Certified Range|3.8": 1,
-  "bgauss|ARAI Certified Range|3": 1
+  "bgauss|ARAI Certified Range|2.7": 2,
+  "bgauss|ARAI Certified Range|3.8": 2,
+  "bgauss|ARAI Certified Range|3": 2
  }
 }

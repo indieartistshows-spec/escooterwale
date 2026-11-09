@@ -1,6 +1,39 @@
 {
  "events": [
   {
+   "date": "2026-11-09",
+   "type": "launch",
+   "key": "bgauss|ARAI Certified Range|3",
+   "brand": "BGauss",
+   "brandId": "bgauss",
+   "name": "ARAI Certified Range 3 kWh",
+   "price": 124990,
+   "url": "https://www.bgauss.com/bg-oowah/",
+   "note": "Spotted on the official brand website. Full review and ScootScore to follow."
+  },
+  {
+   "date": "2026-11-09",
+   "type": "launch",
+   "key": "bgauss|ARAI Certified Range|3.8",
+   "brand": "BGauss",
+   "brandId": "bgauss",
+   "name": "ARAI Certified Range 3.8 kWh",
+   "price": 159990,
+   "url": "https://www.bgauss.com/bg-c12-maxr/",
+   "note": "Spotted on the official brand website. Full review and ScootScore to follow."
+  },
+  {
+   "date": "2026-11-09",
+   "type": "launch",
+   "key": "bgauss|ARAI Certified Range|2.7",
+   "brand": "BGauss",
+   "brandId": "bgauss",
+   "name": "ARAI Certified Range 2.7 kWh",
+   "price": 128990,
+   "url": "https://www.bgauss.com",
+   "note": "Spotted on the official brand website. Full review and ScootScore to follow."
+  },
+  {
    "date": "2026-10-26",
    "type": "discontinued",
    "id": "bgauss-d15i-3point0-kwh",

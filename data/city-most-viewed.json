@@ -1,193 +1,197 @@
 {
  "_note": "Most visited scooters per city, ranked (ties broken by ScootScore). A city page shows its #1 first only when it has at least minVisits visits; otherwise it keeps the default order. Seeded from the GA export of 22 to 28 Oct 2026 (sessions landing on a model or comparison page, by city); refreshed every Monday from GA scooter_view events by city (automation/ga-most-viewed.js).",
  "minVisits": 2,
- "from": "2026-10-05",
- "to": "2026-11-01",
- "updated": "2026-11-02",
+ "from": "2026-10-12",
+ "to": "2026-11-08",
+ "updated": "2026-11-09",
  "cities": {
   "hyderabad": [
    {
     "id": "bajaj-chetak-chetak-3501-3point5-kwh",
-    "visits": 17
+    "visits": 21
    },
    {
     "id": "ather-energy-450x-3point7-kwh",
-    "visits": 12
+    "visits": 16
    },
    {
     "id": "tvs-motor-iqube-st-5point3-kwh",
-    "visits": 11
+    "visits": 14
    },
    {
     "id": "hero-vida-vx2-plus-3point4-kwh",
-    "visits": 10
+    "visits": 11
    },
    {
     "id": "tvs-motor-iqube-2point2-kwh",
     "visits": 10
-   }
-  ],
-  "chennai": [
-   {
-    "id": "ather-energy-rizta-z-3point7-kwh",
-    "visits": 8
-   },
-   {
-    "id": "ampere-magnus-g-max-3point0-kwh",
-    "visits": 8
-   },
-   {
-    "id": "ola-electric-s1-xplus-4-kwh",
-    "visits": 6
-   },
-   {
-    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
-    "visits": 6
-   },
-   {
-    "id": "ather-energy-450x-3point7-kwh",
-    "visits": 5
-   }
-  ],
-  "ahmedabad": [
-   {
-    "id": "ola-electric-s1-x-3-kwh",
-    "visits": 6
-   },
-   {
-    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
-    "visits": 5
-   },
-   {
-    "id": "tvs-motor-iqube-2point2-kwh",
-    "visits": 5
-   },
-   {
-    "id": "bajaj-chetak-chetak-3503-3point5-kwh",
-    "visits": 4
-   },
-   {
-    "id": "ather-energy-rizta-z-3point7-kwh",
-    "visits": 3
-   }
-  ],
-  "bangalore": [
-   {
-    "id": "ather-energy-450x-3point7-kwh",
-    "visits": 6
-   },
-   {
-    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
-    "visits": 6
-   },
-   {
-    "id": "ola-electric-s1-x-3-kwh",
-    "visits": 5
-   },
-   {
-    "id": "bajaj-chetak-chetak-3503-3point5-kwh",
-    "visits": 5
-   },
-   {
-    "id": "ather-energy-rizta-z-3point7-kwh",
-    "visits": 4
    }
   ],
   "pune": [
    {
     "id": "bajaj-chetak-chetak-3501-3point5-kwh",
-    "visits": 9
-   },
-   {
-    "id": "hero-vida-vx2-plus-3point4-kwh",
-    "visits": 5
-   },
-   {
-    "id": "tvs-motor-iqube-st-5point3-kwh",
-    "visits": 4
+    "visits": 18
    },
    {
     "id": "bajaj-chetak-chetak-3503-3point5-kwh",
-    "visits": 4
+    "visits": 8
+   },
+   {
+    "id": "tvs-motor-iqube-st-5point3-kwh",
+    "visits": 6
+   },
+   {
+    "id": "hero-vida-vx2-plus-3point4-kwh",
+    "visits": 6
+   },
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 5
+   }
+  ],
+  "chennai": [
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 12
+   },
+   {
+    "id": "ampere-magnus-g-max-3point0-kwh",
+    "visits": 10
+   },
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 8
+   },
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 8
    },
    {
     "id": "ola-electric-s1-xplus-4-kwh",
-    "visits": 3
+    "visits": 6
+   }
+  ],
+  "mumbai": [
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 10
+   },
+   {
+    "id": "ampere-magnus-g-max-3point0-kwh",
+    "visits": 10
+   },
+   {
+    "id": "ola-electric-s1-pro-4-kwh",
+    "visits": 6
+   },
+   {
+    "id": "ather-energy-konarc-s-100-2point1-kwh",
+    "visits": 5
+   },
+   {
+    "id": "ola-electric-s1-x-3-kwh",
+    "visits": 4
+   }
+  ],
+  "bangalore": [
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 9
+   },
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 7
+   },
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 7
+   },
+   {
+    "id": "ola-electric-s1-x-3-kwh",
+    "visits": 6
+   },
+   {
+    "id": "bajaj-chetak-chetak-3503-3point5-kwh",
+    "visits": 6
    }
   ],
   "delhi": [
    {
     "id": "ampere-magnus-g-max-3point0-kwh",
-    "visits": 6
+    "visits": 12
+   },
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 8
    },
    {
     "id": "okinawa-r30-0point8-kwh",
-    "visits": 5
-   },
-   {
-    "id": "ather-energy-450x-3point7-kwh",
-    "visits": 4
-   },
-   {
-    "id": "ola-electric-s1-x-2-kwh",
-    "visits": 4
+    "visits": 7
    },
    {
     "id": "ather-energy-rizta-z-3point7-kwh",
-    "visits": 3
-   }
-  ],
-  "lucknow": [
-   {
-    "id": "ather-energy-450x-3point7-kwh",
-    "visits": 4
-   },
-   {
-    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
-    "visits": 4
-   },
-   {
-    "id": "ola-electric-s1-x-3-kwh",
-    "visits": 3
+    "visits": 6
    },
    {
     "id": "tvs-motor-iqube-st-5point3-kwh",
-    "visits": 3
-   },
-   {
-    "id": "ather-energy-konarc-s-125-2point7-kwh",
-    "visits": 3
+    "visits": 6
    }
   ],
-  "mumbai": [
+  "patna": [
    {
     "id": "ampere-magnus-g-max-3point0-kwh",
-    "visits": 5
+    "visits": 9
    },
    {
-    "id": "ather-energy-450x-3point7-kwh",
-    "visits": 4
+    "id": "ather-energy-konarc-s-161-3point5-kwh",
+    "visits": 2
+   },
+   {
+    "id": "hero-vida-vx2-plus-3point4-kwh",
+    "visits": 2
    },
    {
     "id": "ather-energy-konarc-s-100-2point1-kwh",
-    "visits": 3
+    "visits": 2
    },
    {
-    "id": "pure-ev-epluto-7g-2point0-kwh",
-    "visits": 3
+    "id": "ampere-magnus-neo-2point3-kwh",
+    "visits": 2
+   }
+  ],
+  "ahmedabad": [
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 8
    },
    {
-    "id": "honda-qc1-1point5-kwh",
-    "visits": 3
+    "id": "ola-electric-s1-x-3-kwh",
+    "visits": 6
+   },
+   {
+    "id": "bajaj-chetak-chetak-3503-3point5-kwh",
+    "visits": 6
+   },
+   {
+    "id": "tvs-motor-iqube-2point2-kwh",
+    "visits": 5
+   },
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 4
    }
   ],
   "surat": [
    {
     "id": "bajaj-chetak-chetak-3501-3point5-kwh",
-    "visits": 4
+    "visits": 8
    },
    {
     "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 3
+   },
+   {
+    "id": "ather-energy-450x-3point7-kwh",
     "visits": 2
    },
    {
@@ -195,40 +199,124 @@
     "visits": 2
    },
    {
-    "id": "ather-energy-450x-3point7-kwh",
+    "id": "ola-electric-s1-pro-4-kwh",
     "visits": 1
+   }
+  ],
+  "nagpur": [
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 7
+   },
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 4
+   },
+   {
+    "id": "hero-vida-v2-pro-3point94-kwh",
+    "visits": 2
+   },
+   {
+    "id": "hero-vida-vx2-plus-3point4-kwh",
+    "visits": 2
+   },
+   {
+    "id": "ather-energy-rizta-z-3point7-kwh",
+    "visits": 1
+   }
+  ],
+  "bhubaneswar": [
+   {
+    "id": "ampere-magnus-g-max-3point0-kwh",
+    "visits": 5
    },
    {
     "id": "tvs-motor-iqube-st-5point3-kwh",
-    "visits": 1
+    "visits": 4
+   },
+   {
+    "id": "ampere-magnus-neo-2point3-kwh",
+    "visits": 4
+   },
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 3
+   },
+   {
+    "id": "ola-electric-s1-x-3-kwh",
+    "visits": 3
+   }
+  ],
+  "lucknow": [
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 5
+   },
+   {
+    "id": "tvs-motor-iqube-st-5point3-kwh",
+    "visits": 5
+   },
+   {
+    "id": "ola-electric-s1-x-3-kwh",
+    "visits": 4
+   },
+   {
+    "id": "ather-energy-konarc-s-125-2point7-kwh",
+    "visits": 4
+   },
+   {
+    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 4
+   }
+  ],
+  "indore": [
+   {
+    "id": "ather-energy-450x-3point7-kwh",
+    "visits": 4
+   },
+   {
+    "id": "ola-electric-s1-pro-4-kwh",
+    "visits": 4
+   },
+   {
+    "id": "tvs-motor-iqube-st-5point3-kwh",
+    "visits": 3
+   },
+   {
+    "id": "bajaj-chetak-chetak-3001-3point0-kwh",
+    "visits": 3
+   },
+   {
+    "id": "ola-electric-s1-xplus-4-kwh",
+    "visits": 2
    }
   ],
   "jaipur": [
    {
     "id": "ather-energy-450x-3point7-kwh",
-    "visits": 3
-   },
-   {
-    "id": "bajaj-chetak-chetak-3501-3point5-kwh",
-    "visits": 3
+    "visits": 4
    },
    {
     "id": "tvs-motor-iqube-s-3point5-kwh",
-    "visits": 3
+    "visits": 4
    },
    {
-    "id": "ampere-magnus-g-max-3point0-kwh",
-    "visits": 3
+    "id": "ather-energy-konarc-s-100-2point1-kwh",
+    "visits": 4
    },
    {
-    "id": "ampere-magnus-neo-2point3-kwh",
+    "id": "pure-ev-epluto-7g-2point0-kwh",
+    "visits": 4
+   },
+   {
+    "id": "ola-electric-s1-x-3-kwh",
     "visits": 3
    }
   ],
   "chandigarh": [
    {
     "id": "tvs-motor-iqube-st-5point3-kwh",
-    "visits": 2
+    "visits": 3
    },
    {
     "id": "ola-electric-s1-x-2-kwh",
@@ -236,6 +324,28 @@
    },
    {
     "id": "ampere-magnus-g-max-3point0-kwh",
+    "visits": 1
+   }
+  ],
+  "bhopal": [
+   {
+    "id": "ola-electric-s1-pro-3-kwh",
+    "visits": 2
+   },
+   {
+    "id": "bajaj-chetak-chetak-3001-3point0-kwh",
+    "visits": 2
+   },
+   {
+    "id": "ather-energy-konarc-s-100-2point1-kwh",
+    "visits": 2
+   },
+   {
+    "id": "ather-energy-rizta-s-2point9-kwh",
+    "visits": 1
+   },
+   {
+    "id": "ola-electric-s1-x-2-kwh",
     "visits": 1
    }
   ],
@@ -245,19 +355,19 @@
     "visits": 2
    },
    {
-    "id": "ather-energy-450s-2point9-kwh",
-    "visits": 1
-   },
-   {
-    "id": "ather-energy-konarc-s-161-3point5-kwh",
-    "visits": 1
-   },
-   {
-    "id": "ather-energy-rizta-s-3point5-kwh",
-    "visits": 1
-   },
-   {
     "id": "bajaj-chetak-chetak-3501-3point5-kwh",
+    "visits": 2
+   },
+   {
+    "id": "hero-vida-v2-pro-3point94-kwh",
+    "visits": 2
+   },
+   {
+    "id": "ampere-magnus-g-max-3point0-kwh",
+    "visits": 2
+   },
+   {
+    "id": "ather-energy-450s-2point9-kwh",
     "visits": 1
    }
   ]

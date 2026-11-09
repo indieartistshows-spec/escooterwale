@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-04T10:31:50.882Z",
+  "generated": "2026-11-09T07:14:09.420Z",
   "scooters": [
     "ola-electric-s1-x-2-kwh",
     "ola-electric-s1-x-3-kwh",
@@ -244,6 +244,14 @@
     "ampere-magnus-g-max-3point0-kwh-vs-ola-electric-s1-pro-4-kwh",
     "ola-electric-s1-x-3-kwh-vs-bajaj-chetak-chetak-3503-3point5-kwh",
     "bajaj-chetak-chetak-3503-3point5-kwh-vs-ola-electric-s1-x-2-kwh",
-    "bajaj-chetak-chetak-3503-3point5-kwh-vs-ola-electric-s1-pro-4-kwh"
+    "bajaj-chetak-chetak-3503-3point5-kwh-vs-ola-electric-s1-pro-4-kwh",
+    "ather-energy-450x-3point7-kwh-vs-ampere-magnus-neo-2point3-kwh",
+    "bajaj-chetak-chetak-3501-3point5-kwh-vs-ampere-magnus-neo-2point3-kwh",
+    "ampere-magnus-g-max-3point0-kwh-vs-ampere-magnus-neo-2point3-kwh",
+    "ola-electric-s1-pro-4-kwh-vs-ampere-magnus-neo-2point3-kwh",
+    "tvs-motor-iqube-st-5point3-kwh-vs-ampere-magnus-neo-2point3-kwh",
+    "bajaj-chetak-chetak-3503-3point5-kwh-vs-ather-energy-rizta-z-3point7-kwh",
+    "bajaj-chetak-chetak-3503-3point5-kwh-vs-ampere-magnus-neo-2point3-kwh",
+    "ather-energy-rizta-z-3point7-kwh-vs-ampere-magnus-neo-2point3-kwh"
   ]
 }
