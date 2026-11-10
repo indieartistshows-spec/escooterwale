@@ -957,3 +957,11 @@ img.lazy.loaded{opacity:1}
 @media(max-width:800px){.lead-box{grid-template-columns:1fr}.cl-fields{grid-template-columns:1fr}.cl-match-btn{width:100%;text-align:center}}
 .lead-box-wrap{margin:8px 0 24px}
 .lead-box-home{margin:28px 0 0}
+/* electric scooter price by brand (homepage, city pages) */
+.sw-brand-prices{margin:32px 0}
+.sw-brand-prices h2{font-size:22px;margin:0 0 14px}
+.sw-bp-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.sw-bp{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:var(--surf);text-decoration:none;color:var(--ink)}
+.sw-bp b{font-size:14px}
+.sw-bp span{font-size:12.5px;color:var(--ink-3)}
+.sw-bp:hover{border-color:var(--g)}

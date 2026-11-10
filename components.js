@@ -490,11 +490,13 @@ function seoInjectFaq(items, id){
     el.textContent=JSON.stringify({'@context':'https://schema.org','@type':'FAQPage',mainEntity:items.map(([q,a])=>({'@type':'Question',name:strip(q),acceptedAnswer:{'@type':'Answer',text:strip(a)}}))});
   }catch(e){}
 }
+// the brand name people type ("chetak price", Search Console Nov 2026); the short name elsewhere
+function swBrandSearchName(brand){ return ({'bajaj-chetak':'Bajaj Chetak'})[brand.id] || brand.shortName || brand.name; }
 function brandPriceHTML(brand, models){
   const ms=models.filter(s=>!s.discontinued).sort((a,b)=>a.price-b.price);
   if(!ms.length) return '';
   const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0];
-  const short=brand.shortName||brand.name, lo=ms[0], hi=ms[ms.length-1];
+  const short=swBrandSearchName(brand), lo=ms[0], hi=ms[ms.length-1];
   const link=s=>`<a href="${lp}/scooters/${s.id}" translate="no">${s.name}</a>`;
   const span=v=>String(v||'').replace(/\s*[–—-]\s*/,' to ');
   return `<section class="sw-answer" id="brandPrice">
@@ -509,16 +511,33 @@ function brandPriceHTML(brand, models){
 function brandFaqItems(brand, models){
   const ms=models.filter(s=>!s.discontinued).sort((a,b)=>a.price-b.price);
   if(!ms.length) return [];
-  const short=brand.shortName||brand.name, lo=ms[0], hi=ms[ms.length-1];
+  const short=swBrandSearchName(brand), lo=ms[0], hi=ms[ms.length-1];
   const p=s=>s.nationalPriceDisplay||s.priceDisplay, longest=ms.reduce((a,b)=>parseFloat(b.range)>parseFloat(a.range)?b:a);
   const items=[[`What is the price of the ${short} electric scooter?`, ms.length>1?`${short} electric scooters cost ${p(lo)} to ${p(hi)} ex-showroom in India in 2026. The cheapest is the ${lo.name} and the top model is the ${hi.name}. On-road prices start around ${lo.onRoadDisplay}.`:`The ${short} ${lo.name} costs ${p(lo)} ex-showroom, about ${lo.onRoadDisplay} on-road.`]];
+  // on-road and EMI: what "<brand> on road price" and "<brand> emi" searches ask (Search Console, Nov 2026)
+  const cp=lo.cityPrices||{}, metro=['delhi','mumbai','bangalore','hyderabad'].filter(c=>cp[c]&&cp[c].onRoadDisplay);
+  if(metro.length===4) items.push([`What is the on-road price of the ${short} electric scooter?`,`On-road prices for the ${lo.name} start at ${cp.delhi.onRoadDisplay} in Delhi, ${cp.mumbai.onRoadDisplay} in Mumbai, ${cp.bangalore.onRoadDisplay} in Bengaluru and ${cp.hyderabad.onRoadDisplay} in Hyderabad, including road tax, insurance and handling. Pick your city on a model page for your exact on-road price.`]);
   if(ms.length>1){
     items.push([`Which is the top model of ${short} and what is its price?`,`The top ${short} model is the ${hi.name} at ${p(hi)} ex-showroom, with a ${hi.battery} battery, ${hi.range} claimed range and ${hi.speed} top speed.${ms.length>2?` The second most expensive is the ${ms[ms.length-2].name} at ${p(ms[ms.length-2])}.`:''}`]);
     items.push([`Which is the cheapest ${short} electric scooter?`,`The ${lo.name} at ${p(lo)} ex-showroom, with a ${lo.battery} battery and ${lo.range} claimed range.`]);
   }
+  const em=(typeof SUBSIDY!=='undefined'&&SUBSIDY.emiModel)||{months:48,annualRatePct:12};
+  if(lo.emiFrom) items.push([`What is the EMI for the ${short} electric scooter?`,`EMI starts at about ₹${Number(lo.emiFrom).toLocaleString('en-IN')} a month for the ${lo.name}, over ${em.months} months at ${em.annualRatePct}% interest with no down payment. Our EMI calculator works it out for your own down payment and tenure.`]);
   items.push([`What is the range of ${short} electric scooters?`,`Claimed range runs from ${ms.reduce((a,b)=>parseFloat(b.range)<parseFloat(a.range)?b:a).range} to ${longest.range} (${longest.name}). In real use expect roughly 20 to 30% less; our real range figures are on each model page.`]);
   return items;
 }
+/* "Electric scooter price by brand": links with the words people search ("<brand> electric scooter
+   price") to every brand page, on the homepage and city pages (Search Console, Nov 2026: brand price
+   searches rank on page 2 to 4). Fills any element with id swBrandPriceLinks. */
+function swBrandPriceLinksHTML(){
+  if(typeof BRANDS_DB==='undefined'||typeof SCOOTERS_DB==='undefined') return '';
+  const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0];
+  const rows=BRANDS_DB.map(b=>{ const ms=SCOOTERS_DB.filter(s=>s.brandSlug===b.id); return ms.length?{b,n:ms.length,lo:Math.min(...ms.map(s=>s.nationalPrice||s.price))}:null; }).filter(Boolean).sort((x,y)=>y.n-x.n);
+  if(!rows.length) return '';
+  return `<section class="sw-brand-prices"><h2>Electric scooter price by brand</h2><div class="sw-bp-row">${rows.map(r=>`<a class="sw-bp" href="${lp}/brands/${r.b.id}"><b>${swBrandSearchName(r.b)} electric scooter price</b><span>from ₹${Math.round(r.lo).toLocaleString('en-IN')}</span></a>`).join('')}</div></section>`;
+}
+function swMountBrandPriceLinks(){ const el=document.getElementById('swBrandPriceLinks'); if(el&&!el.innerHTML.trim()) el.innerHTML=swBrandPriceLinksHTML(); }
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',swMountBrandPriceLinks); else swMountBrandPriceLinks();
 
 /* Chat-style quiz button: round, bottom right, on every page except the quiz itself.
    A small white label beside it always reads "Match with your dream scooter".

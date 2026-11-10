@@ -515,8 +515,8 @@ page({
   canon: '/electric-scooter-price',
   // search terms that bring people here (Search Console, Oct 2026): ev scooter price, electric scooty price,
   // electric scooter price in india, electric two wheeler price, cheapest / lowest price, charging scooty price
-  title: `EV Scooter Price in India 2026: All ${SCOOTERS_DB.length} Electric Scooty Prices | EScooterwale`,
-  desc: `EV scooter and electric scooty prices in India 2026, from ${inr(byPrice[0].price)} to ${inr(byPrice[byPrice.length-1].price)}. Ex-showroom and on-road price, EMI, real range and subsidy for all ${SCOOTERS_DB.length} models from ${new Set(SCOOTERS_DB.map(s => s.brandSlug)).size} brands, updated weekly.`,
+  title: `Electric Scooter Price List India 2026: All ${SCOOTERS_DB.length} EV Scooty Prices | EScooterwale`,
+  desc: `Electric scooter (EV scooty) price list for India: all ${SCOOTERS_DB.length} models from ${inr(byPrice[0].price)} to ${inr(byPrice[byPrice.length-1].price)} ex-showroom, with on-road price for your city, EMI, real range and subsidy. Updated every week.`,
   eyebrow: 'Price List',
   crumb: 'Electric scooter prices',
   h1: `EV scooter price in India 2026: all ${SCOOTERS_DB.length} electric scooter and scooty prices`,
@@ -803,3 +803,17 @@ ${chemRows}
     <a href="/compare"><button class="btn btn-primary btn-full">Compare now →</button></a>
   </div>`
 });
+
+// homepage "Electric scooter price by brand" links, written into the page so crawlers that do not
+// run scripts see them too (components.js fills the same box in the browser when it is empty)
+{ const fs = require('fs'), D = require('./data.js'), f = 'index.html', h0 = fs.readFileSync(f, 'utf8');
+  const name = b => ({ 'bajaj-chetak': 'Bajaj Chetak' })[b.id] || b.shortName || b.name;
+  const rows = D.BRANDS_DB.map(b => { const ms = D.SCOOTERS_DB.filter(x => x.brandSlug === b.id); return ms.length ? { b, n: ms.length, lo: Math.min(...ms.map(x => x.nationalPrice || x.price)) } : null; }).filter(Boolean).sort((x, y) => y.n - x.n);
+  const html = `<section class="sw-brand-prices"><h2>Electric scooter price by brand</h2><div class="sw-bp-row">${rows.map(r => `<a class="sw-bp" href="/brands/${r.b.id}"><b>${name(r.b)} electric scooter price</b><span>from ${inr(r.lo)}</span></a>`).join('')}</div></section>`;
+  const h1 = h0.replace(/<div id="swBrandPriceLinks">[\s\S]*?<\/div><!--\/swBrandPriceLinks-->|<div id="swBrandPriceLinks"><\/div>/, `<div id="swBrandPriceLinks">${html}</div><!--/swBrandPriceLinks-->`);
+  if (h1 !== h0) fs.writeFileSync(f, h1); }
+
+// homepage description: the cheapest price and model count follow the data every build
+{ const fs = require('fs'), f = 'index.html', h0 = fs.readFileSync(f, 'utf8');
+  const h1 = h0.replace(/(<meta name="description" content="Electric scooter price in India from )₹[\d,]+(: compare all )\d+( EV scooty models)/, `$1${inr(byPrice[0].price)}$2${SCOOTERS_DB.length}$3`);
+  if (h1 !== h0) fs.writeFileSync(f, h1); }
