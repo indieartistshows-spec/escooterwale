@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-11-02T17:56:42.880Z",
+ "ranAt": "2026-11-10T10:52:38.224Z",
  "plain": [
   {
    "path": "/",
@@ -7,7 +7,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 117719
+   "bytes": 117777
   },
   {
    "path": "/",
@@ -15,7 +15,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 117719
+   "bytes": 117777
   },
   {
    "path": "/compare",
@@ -39,7 +39,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 55644
+   "bytes": 55784
   },
   {
    "path": "/match",
@@ -47,7 +47,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 55644
+   "bytes": 55784
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
@@ -55,7 +55,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 163014
+   "bytes": 113385
   },
   {
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
@@ -63,7 +63,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 163014
+   "bytes": 113385
   },
   {
    "path": "/hi/",
@@ -87,7 +87,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 491640
+   "bytes": 508626
   },
   {
    "path": "/sitemap.xml",
@@ -95,7 +95,7 @@
    "status": 200,
    "mitigated": null,
    "challenge": false,
-   "bytes": 491640
+   "bytes": 508626
   },
   {
    "path": "/robots.txt",
@@ -142,7 +142,7 @@
   {
    "path": "/match",
    "status": 200,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+   "title": "Match with your Dream EV Scooter | EScooterwale",
    "final": "https://www.escooterwale.in/match",
    "checkpoint": false,
    "h1": "Match with your Dream EV Scooter"
@@ -150,7 +150,7 @@
   {
    "path": "/listings",
    "status": 200,
-   "title": "All Electric Scooters in India 2026: Prices, On-Road Price and Real Range",
+   "title": "All Electric Scooters in India 2026",
    "final": "https://www.escooterwale.in/listings",
    "checkpoint": false,
    "h1": "All 78 electric scooters in India, compared"
@@ -170,7 +170,7 @@
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
    "status": 200,
    "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
+   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=9f0fa916",
    "img": "200 image/jpeg"
   },
   {
@@ -178,7 +178,7 @@
    "path": "/match",
    "status": 200,
    "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+   "title": "Match with your Dream EV Scooter | EScooterwale",
    "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
    "img": "200 image/jpeg"
   },
@@ -187,7 +187,7 @@
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
    "status": 200,
    "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
+   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=9f0fa916",
    "img": "200 image/jpeg"
   },
   {
@@ -195,7 +195,7 @@
    "path": "/match",
    "status": 200,
    "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+   "title": "Match with your Dream EV Scooter | EScooterwale",
    "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
    "img": "200 image/jpeg"
   },
@@ -204,7 +204,7 @@
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
    "status": 200,
    "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
+   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=9f0fa916",
    "img": "200 image/jpeg"
   },
   {
@@ -212,7 +212,7 @@
    "path": "/match",
    "status": 200,
    "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+   "title": "Match with your Dream EV Scooter | EScooterwale",
    "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
    "img": "200 image/jpeg"
   },
@@ -221,7 +221,7 @@
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
    "status": 200,
    "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
+   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=9f0fa916",
    "img": "200 image/jpeg"
   },
   {
@@ -229,7 +229,7 @@
    "path": "/match",
    "status": 200,
    "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+   "title": "Match with your Dream EV Scooter | EScooterwale",
    "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
    "img": "200 image/jpeg"
   },
@@ -238,7 +238,7 @@
    "path": "/scooters/ather-energy-rizta-s-2point9-kwh",
    "status": 200,
    "mitigated": null,
-   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=b6a77775",
+   "og": "https://www.escooterwale.in/images/og/scooters-ather-energy-rizta-s-2point9-kwh.jpg?v=9f0fa916",
    "img": "200 image/jpeg"
   },
   {
@@ -246,7 +246,7 @@
    "path": "/match",
    "status": 200,
    "mitigated": null,
-   "title": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+   "title": "Match with your Dream EV Scooter | EScooterwale",
    "og": "https://www.escooterwale.in/images/og/match.jpg?v=54f3410d",
    "img": "200 image/jpeg"
   }
