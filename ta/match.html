@@ -469,10 +469,10 @@
   <span>உங்கள் ஷார்ட்லிஸ்ட் சேமிக்கப்படுகிறது</span><span>தொடர பெட்டியில் டிக் செய்யவும்.</span><span>இப்போது சேமிக்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.</span><span>அதிக முயற்சிகள். சில நிமிடங்கள் காத்திருக்கவும்.</span><span>நகலெடுக்கப்பட்டது. எங்கும் ஒட்டி பகிருங்கள்.</span><span>இந்தியா</span>
 </div>
 
-<script src="/min/data.js?v=8b9ba455"></script>
+<script src="/min/data.js?v=99726aaf"></script>
 <script src="/min/seo.js?v=b4409ead"></script>
 <script src="/min/outbound.js?v=373ff4f8"></script>
-<script src="/min/components.js?v=c4ce6c8f"></script>
+<script src="/min/components.js?v=4b7ed23d"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('match');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -661,6 +661,7 @@ $('mtContact').addEventListener('submit',async e=>{
     const j=await saveLead({...v,city:A.place.city||'',state:A.place.stateName||'',consent:true,consentText:$('mtConsentText').textContent.trim(),
       answers:answersNow(),lang:LANG,source:leadSource(),page:location.pathname,hp:$('fWeb').value,t:contactShownAt,stage:'contact'});
     LEAD={id:j.id,mobile:v.mobile};
+    ev('form_submit',{form_id:'mtContact',form_name:'quiz_contact',page_path:location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/',lang:LANG});
     ev('lead_submitted',{stage:'contact',lang:LANG});
     show(step+1);
   }catch(x){

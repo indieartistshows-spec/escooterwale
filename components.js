@@ -90,7 +90,9 @@ function swSetCity(id, how, quiet){
   if(!id) return;
   const prev=swGetCity();
   try{ localStorage.setItem('sw_city',id); }catch(e){}
-  if(prev!==id){
+  // quiet: the city was set by the page itself (opening a city page), not picked by the visitor,
+  // so it is remembered for prices but not counted in GA as a choice
+  if(prev!==id && !quiet){
     try{ if(typeof gtag==='function') gtag('event','city_selected',{city:id,previous_city:prev||'none',how:how||'picker',page_path:location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/'}); }catch(e){}
   }
   try{ document.dispatchEvent(new CustomEvent('sw-city',{detail:{city:id,how}})); }catch(e){}
@@ -557,7 +559,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 /* Lead box (city pages, scooter pages): name + mobile go to /api/lead, the same Leads sheet as the
    quiz. The section's data-lead-form says which page it is on ("city" or "scooter"); a scooter page
-   sends its model as the shortlist. Nothing personal goes to GA: lead_submitted on save, icon_click on the match button. */
+   sends its model as the shortlist. Nothing personal goes to GA: form_submit and lead_submitted on save, icon_click on the match button. */
 function swInitLeadBox(){
   const $=id=>document.getElementById(id), form=$('clForm'); if(!form||form._swReady) return;
   form._swReady=true; // a property, not an attribute: pre-rendered pages must not carry it
@@ -595,6 +597,8 @@ function swInitLeadBox(){
       if(!r.ok||!j.ok) throw new Error(j.error||'save failed');
       form.hidden=true; $('clDone').hidden=false;
       // same key event as the quiz (stage contact / final there): stage city_form or scooter_form here
+      // GA's automatic form tracking does not see this form (it is sent by script), so say it ourselves
+      ev('form_submit',{form_id:'clForm',form_name:kind+'_lead',page_path:page(),lang:LANG});
       ev('lead_submitted',{stage:kind+'_form',lang:LANG});
     }catch(err){ $('clErrSave').hidden=false; }
     finally{ busy=false; $('clSubmit').disabled=false; }
