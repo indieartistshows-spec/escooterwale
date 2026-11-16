@@ -1,7 +1,7 @@
 # EScooterwale — full electric scooter dataset for India
 
 Source: https://www.escooterwale.in
-Last updated: 2026-11-10
+Last updated: 2026-11-16
 Models: 78 | Brands: 17
 
 Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the
@@ -253,8 +253,8 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Battery: 4 kWh
 - Claimed range (IDC): 242 km
 - Real-world range (EScooterwale estimate): 155–165 km
-- Top speed: 130 km/h
-- Charging time: 4 hrs
+- Top speed: 125 km/h
+- Charging time: 4.8 hrs
 - Kerb weight: 113 kg
 - Boot space: 34 L
 - Ground clearance: 160 mm
@@ -441,7 +441,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price from: ₹1,22,660 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3069/month
 - Battery: 2.3 kWh
-- Claimed range (IDC): 94 km
+- Claimed range (IDC): 114 km
 - Real-world range (EScooterwale estimate): 70–82 km
 - Top speed: 68 km/h
 - Charging time: 2.4 hrs
@@ -612,7 +612,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price from: ₹1,47,530 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3713/month
 - Battery: 3.4 kWh
-- Claimed range (IDC): 142 km
+- Claimed range (IDC): 146 km
 - Real-world range (EScooterwale estimate): 105–120 km
 - Top speed: 80 km/h
 - Charging time: 3 hrs
@@ -634,8 +634,8 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Claimed range (IDC): 165 km
 - Real-world range (EScooterwale estimate): 108–122 km
 - Top speed: 90 km/h
-- Charging time: 5 hrs
-- Kerb weight: 108 kg
+- Charging time: 5.9 hrs
+- Kerb weight: 125 kg
 - Boot space: 26 L
 - Ground clearance: 155 mm
 - Seat height: 785 mm
@@ -653,7 +653,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Claimed range (IDC): 125 km
 - Real-world range (EScooterwale estimate): 93–105 km
 - Top speed: 65 km/h
-- Charging time: 5 hrs
+- Charging time: 3.3 hrs
 - Kerb weight: 104 kg
 - Boot space: 22 L
 - Ground clearance: 156 mm
@@ -672,7 +672,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Claimed range (IDC): 142 km
 - Real-world range (EScooterwale estimate): 105–120 km
 - Top speed: 65 km/h
-- Charging time: 4.3 hrs
+- Charging time: 4.4 hrs
 - Kerb weight: 116 kg
 - Boot space: 33 L
 - Ground clearance: 165 mm
@@ -739,22 +739,22 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Best for: Budget buyers near Okinawa dealers; Short daily commutes
 - Avoid if: Service consistency is critical; Premium build quality expected
 
-### Okinawa iPraise+ 3.3 kWh
+### Okinawa iPraise+ 3.6 kWh
 - URL: https://www.escooterwale.in/scooters/okinawa-ipraiseplus-2point2-kwh
 - Ex-showroom price: ₹1,22,955
 - Estimated on-road price from: ₹1,29,170 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3238/month
-- Battery: 3.3 kWh
-- Claimed range (IDC): 139 km
+- Battery: 3.6 kWh
+- Claimed range (IDC): 137 km
 - Real-world range (EScooterwale estimate): 103–117 km
-- Top speed: 58 km/h
+- Top speed: 56 km/h
 - Charging time: 4.5 hrs
 - Kerb weight: 108 kg
 - Boot space: 18 L
 - Ground clearance: 175 mm
 - Seat height: 800 mm
 - ScootScore: 7/10 (Range 4.5, Features 6, Value 8.6, Ride 7, Service 5.5)
-- Verdict: The Okinawa iPraise+ (3.3 kWh) is a budget-friendly option from one of India's oldest EV brands. 700+ dealers. Good for cost-conscious buyers.
+- Verdict: The Okinawa iPraise+ (3.6 kWh) is a budget-friendly option from one of India's oldest EV brands. 700+ dealers. Good for cost-conscious buyers.
 - Best for: Budget buyers near Okinawa dealers; Short daily commutes
 - Avoid if: Service consistency is critical; Premium build quality expected
 
@@ -863,7 +863,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Real-world range (EScooterwale estimate): 63–71 km
 - Top speed: 60 km/h
 - Charging time: 5 hrs
-- Kerb weight: 107 kg
+- Kerb weight: 106 kg
 - Boot space: 23 L
 - Ground clearance: 155 mm
 - Seat height: 774 mm
@@ -874,9 +874,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Bgauss RUV 350 MAX 3.0 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-ruv-350i-3point0-kwh
-- Ex-showroom price: ₹1,43,990
-- Estimated on-road price from: ₹1,50,580 (lowest across our 12 cities; varies by state road tax)
-- EMI from: ₹3792/month
+- Ex-showroom price: ₹1,46,990
+- Estimated on-road price from: ₹1,53,640 (lowest across our 12 cities; varies by state road tax)
+- EMI from: ₹3871/month
 - Battery: 3 kWh
 - Claimed range (IDC): 145 km
 - Real-world range (EScooterwale estimate): 107–122 km
@@ -1011,7 +1011,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price from: ₹1,42,200 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3575/month
 - Battery: 3.1 kWh
-- Claimed range (IDC): 121 km
+- Claimed range (IDC): 123 km
 - Real-world range (EScooterwale estimate): 91–103 km
 - Top speed: 82 km/h
 - Charging time: 3.5 hrs
@@ -1110,7 +1110,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Real-world range (EScooterwale estimate): 91–103 km
 - Top speed: 60 km/h
 - Charging time: 6.8 hrs
-- Kerb weight: 112 kg
+- Kerb weight: 116 kg
 - Boot space: 23 L
 - Ground clearance: 155 mm
 - Seat height: 774 mm
@@ -1140,9 +1140,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### BGauss OoWah EX 2.3 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-oowah-ex-2point3-kwh
-- Ex-showroom price: ₹94,990
-- Estimated on-road price from: ₹1,00,700 (lowest across our 12 cities; varies by state road tax)
-- EMI from: ₹2501/month
+- Ex-showroom price: ₹96,990
+- Estimated on-road price from: ₹1,02,740 (lowest across our 12 cities; varies by state road tax)
+- EMI from: ₹2554/month
 - Battery: 2.3 kWh
 - Claimed range (IDC): 105 km
 - Real-world range (EScooterwale estimate): 78–88 km
@@ -1153,15 +1153,15 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Ground clearance: 160 mm
 - Seat height: 765 mm
 - ScootScore: 6.2/10 (Range 4.8, Features 6, Value 7.8, Ride 7, Service 5.5)
-- Verdict: Claimed range is 105 km from a 2.3 kWh battery, at ₹94,990 ex-showroom. Top speed is 60 km/h. A full charge takes about 3.8 hours at home.
+- Verdict: Claimed range is 105 km from a 2.3 kWh battery, at ₹96,990 ex-showroom. Top speed is 60 km/h. A full charge takes about 3.8 hours at home.
 - Best for: Daily city commutes; Buyers on a tight budget
 - Avoid if: You need to keep up with fast traffic; There is no brand dealer near you
 
 ### BGauss OoWah MAX Plus 3.0 kWh
 - URL: https://www.escooterwale.in/scooters/bgauss-oowah-max-plus-3point0-kwh
-- Ex-showroom price: ₹1,22,990
-- Estimated on-road price from: ₹1,29,200 (lowest across our 12 cities; varies by state road tax)
-- EMI from: ₹3239/month
+- Ex-showroom price: ₹1,24,990
+- Estimated on-road price from: ₹1,31,240 (lowest across our 12 cities; varies by state road tax)
+- EMI from: ₹3291/month
 - Battery: 3 kWh
 - Claimed range (IDC): 145 km
 - Real-world range (EScooterwale estimate): 107–122 km
@@ -1172,7 +1172,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Ground clearance: 160 mm
 - Seat height: 765 mm
 - ScootScore: 6.3/10 (Range 6.6, Features 6, Value 6.4, Ride 7, Service 5.5)
-- Verdict: Claimed range is 145 km from a 3 kWh battery, at ₹122,990 ex-showroom. Top speed is 60 km/h. A full charge takes about 4.9 hours at home.
+- Verdict: Claimed range is 145 km from a 3 kWh battery, at ₹124,990 ex-showroom. Top speed is 60 km/h. A full charge takes about 4.9 hours at home.
 - Best for: Daily city commutes; Buyers who want something different from the big brands
 - Avoid if: You need to keep up with fast traffic; There is no brand dealer near you
 
@@ -1201,7 +1201,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Estimated on-road price from: ₹1,37,350 (lowest across our 12 cities; varies by state road tax)
 - EMI from: ₹3449/month
 - Battery: 3.4 kWh
-- Claimed range (IDC): 142 km
+- Claimed range (IDC): 146 km
 - Real-world range (EScooterwale estimate): 108–123 km
 - Top speed: 70 km/h
 - Charging time: 4 hrs
@@ -1545,14 +1545,14 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Battery: 3 kWh
 - Claimed range (IDC): 142 km
 - Real-world range (EScooterwale estimate): 105–119 km
-- Top speed: 65 km/h
+- Top speed: 66 km/h
 - Charging time: Not published
-- Kerb weight: Not published
+- Kerb weight: 123 kg
 - Boot space: Not published
 - Ground clearance: Not published
 - Seat height: Not published
 - ScootScore: 6.5/10 (Range 6.5, Features 6, Value 7.3, Ride 7, Service 5.5)
-- Verdict: Claimed range is 142 km from a 3 kWh battery, at ₹104,990 ex-showroom. Top speed is 65 km/h.
+- Verdict: Claimed range is 142 km from a 3 kWh battery, at ₹104,990 ex-showroom. Top speed is 66 km/h.
 - Best for: Daily city commutes; Buyers who want something different from the big brands
 - Avoid if: There is no brand dealer near you; You need a confirmed boot size before you buy
 
