@@ -3,6 +3,29 @@
   "headlineCityReason": "No default city since 28 Oct 2026 (GK): prices show national ex-showroom until the visitor picks a city, so city demand in GA is not skewed by a default.",
   "headlineHistory": [
     {
+      "week": "2026-11-16",
+      "leader": "hyderabad",
+      "users": {
+        "hyderabad": 412,
+        "chennai": 229,
+        "bangalore": 226,
+        "delhi": 255,
+        "pune": 229,
+        "ahmedabad": 154,
+        "jaipur": 149,
+        "lucknow": 145,
+        "mumbai": 138,
+        "kolkata": 103,
+        "bhubaneswar": 88,
+        "patna": 85,
+        "indore": 80,
+        "nagpur": 65,
+        "bhopal": 49,
+        "surat": 48,
+        "chandigarh": 24
+      }
+    },
+    {
       "week": "2026-11-09",
       "leader": "hyderabad",
       "users": {
@@ -98,7 +121,7 @@
       }
     }
   ],
-  "dataUpdated": "2026-11-09",
+  "dataUpdated": "2026-11-16",
   "langMinCoverage": 0.98,
   "langsLive_note": "A language goes live automatically once 98% of site text is translated. langsForceLive / langsBlocked override.",
   "langsForceLive": [
