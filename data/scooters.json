@@ -286,8 +286,8 @@
   "emiFrom": 3900,
   "range": "242 km",
   "realRange": "155–165 km",
-  "speed": "130 km/h",
-  "charging": "4 hrs",
+  "speed": "125 km/h",
+  "charging": "4.8 hrs",
   "battery": "4 kWh",
   "bootSpace": "34 L",
   "weight": "113 kg",
@@ -328,14 +328,14 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "130 km/h",
+    "Top speed": "125 km/h",
     "Battery capacity": "4 kWh",
-    "Charging time": "4 hrs"
+    "Charging time": "4.8 hrs"
    },
    "battery": {
     "Claimed range": "242 km",
     "Real-world range": "155–165 km",
-    "Charge time": "4 hrs"
+    "Charge time": "4.8 hrs"
    }
   }
  },
@@ -1078,7 +1078,7 @@
   "onRoad": 120250,
   "onRoadDisplay": "₹120,250",
   "emiFrom": 2842,
-  "range": "94 km",
+  "range": "114 km",
   "realRange": "70–82 km",
   "speed": "68 km/h",
   "charging": "2.4 hrs",
@@ -1126,7 +1126,7 @@
     "Charging time": "2.4 hrs"
    },
    "battery": {
-    "Claimed range": "94 km",
+    "Claimed range": "114 km",
     "Real-world range": "70–82 km",
     "Charge time": "2.4 hrs"
    }
@@ -1782,7 +1782,7 @@
   "onRoad": 132484,
   "onRoadDisplay": "₹132,484",
   "emiFrom": 3131,
-  "range": "142 km",
+  "range": "146 km",
   "realRange": "105–120 km",
   "speed": "80 km/h",
   "charging": "3 hrs",
@@ -1830,7 +1830,7 @@
     "Charging time": "3 hrs"
    },
    "battery": {
-    "Claimed range": "142 km",
+    "Claimed range": "146 km",
     "Real-world range": "105–120 km",
     "Charge time": "3 hrs"
    }
@@ -1852,10 +1852,10 @@
   "range": "165 km",
   "realRange": "108–122 km",
   "speed": "90 km/h",
-  "charging": "5 hrs",
+  "charging": "5.9 hrs",
   "battery": "3.94 kWh",
   "bootSpace": "26 L",
-  "weight": "108 kg",
+  "weight": "125 kg",
   "groundClearance": "155 mm",
   "seatHeight": "785 mm",
   "rating": 4,
@@ -1894,12 +1894,12 @@
    "performance": {
     "Top speed": "90 km/h",
     "Battery capacity": "3.94 kWh",
-    "Charging time": "5 hrs"
+    "Charging time": "5.9 hrs"
    },
    "battery": {
     "Claimed range": "165 km",
     "Real-world range": "108–122 km",
-    "Charge time": "5 hrs"
+    "Charge time": "5.9 hrs"
    }
   }
  },
@@ -1988,7 +1988,7 @@
   "range": "125 km",
   "realRange": "93–105 km",
   "speed": "65 km/h",
-  "charging": "5 hrs",
+  "charging": "3.3 hrs",
   "battery": "2.3 kWh",
   "bootSpace": "22 L",
   "weight": "104 kg",
@@ -2030,12 +2030,12 @@
    "performance": {
     "Top speed": "65 km/h",
     "Battery capacity": "2.3 kWh",
-    "Charging time": "5 hrs"
+    "Charging time": "3.3 hrs"
    },
    "battery": {
     "Claimed range": "125 km",
     "Real-world range": "93–105 km",
-    "Charge time": "5 hrs"
+    "Charge time": "3.3 hrs"
    }
   },
   "realRangeEstimated": true
@@ -2056,7 +2056,7 @@
   "range": "142 km",
   "realRange": "105–120 km",
   "speed": "65 km/h",
-  "charging": "4.3 hrs",
+  "charging": "4.4 hrs",
   "battery": "3 kWh",
   "bootSpace": "33 L",
   "weight": "116 kg",
@@ -2109,12 +2109,12 @@
    "performance": {
     "Top speed": "65 km/h",
     "Battery capacity": "3 kWh",
-    "Charging time": "4.3 hrs"
+    "Charging time": "4.4 hrs"
    },
    "battery": {
     "Claimed range": "142 km",
     "Real-world range": "105–120 km",
-    "Charge time": "4.3 hrs"
+    "Charge time": "4.4 hrs"
    }
   }
  },
@@ -2404,7 +2404,7 @@
   "id": "okinawa-ipraiseplus-2point2-kwh",
   "brand": "Okinawa",
   "brandSlug": "okinawa",
-  "name": "iPraise+ 3.3 kWh",
+  "name": "iPraise+ 3.6 kWh",
   "slug": "okinawa-ipraiseplus-2point2-kwh",
   "gaEvent": "oki_ipraisep_33",
   "tagline": "Okinawa iPraise+ — 2.2 kWh | 100 km claimed | 55 km/h",
@@ -2413,11 +2413,11 @@
   "onRoad": 98998,
   "onRoadDisplay": "₹98,998",
   "emiFrom": 2340,
-  "range": "139 km",
+  "range": "137 km",
   "realRange": "103–117 km",
-  "speed": "58 km/h",
+  "speed": "56 km/h",
   "charging": "4.5 hrs",
-  "battery": "3.3 kWh",
+  "battery": "3.6 kWh",
   "bootSpace": "18 L",
   "weight": "108 kg",
   "groundClearance": "175 mm",
@@ -2444,7 +2444,7 @@
   ],
   "heroImg": "/images/okinawa-ipraise+-2.2-kwh.webp",
   "cardImg": "/images/okinawa-ipraise+-2.2-kwh.webp",
-  "verdict": "The Okinawa iPraise+ (3.3 kWh) is a budget-friendly option from one of India's oldest EV brands. 700+ dealers. Good for cost-conscious buyers.",
+  "verdict": "The Okinawa iPraise+ (3.6 kWh) is a budget-friendly option from one of India's oldest EV brands. 700+ dealers. Good for cost-conscious buyers.",
   "bestFor": [
    "Budget buyers near Okinawa dealers",
    "Short daily commutes"
@@ -2456,12 +2456,12 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "58 km/h",
-    "Battery capacity": "3.3 kWh",
+    "Top speed": "56 km/h",
+    "Battery capacity": "3.6 kWh",
     "Charging time": "4.5 hrs"
    },
    "battery": {
-    "Claimed range": "139 km",
+    "Claimed range": "137 km",
     "Real-world range": "103–117 km",
     "Charge time": "4.5 hrs"
    }
@@ -2975,7 +2975,7 @@
   "charging": "5 hrs",
   "battery": "2 kWh",
   "bootSpace": "23 L",
-  "weight": "107 kg",
+  "weight": "106 kg",
   "groundClearance": "155 mm",
   "seatHeight": "774 mm",
   "rating": 3.9,
@@ -3097,7 +3097,7 @@
   "slug": "bgauss-ruv-350i-3point0-kwh",
   "gaEvent": "bgs_ruv350_max_3",
   "tagline": "Bgauss RUV 350i — 3.0 kWh | 100 km claimed | 75 km/h",
-  "price": 143990,
+  "price": 146990,
   "priceDisplay": "₹124,900",
   "onRoad": 137390,
   "onRoadDisplay": "₹137,390",
@@ -3673,7 +3673,7 @@
   "onRoad": 0,
   "onRoadDisplay": "",
   "emiFrom": 0,
-  "range": "121 km",
+  "range": "123 km",
   "realRange": "91–103 km",
   "speed": "82 km/h",
   "charging": "3.5 hrs",
@@ -3721,7 +3721,7 @@
     "Charging time (0–80%)": "3.5 hrs"
    },
    "battery": {
-    "Claimed range": "121 km",
+    "Claimed range": "123 km",
     "Real-world range": "91–103 km",
     "Charge time": "3.5 hrs"
    }
@@ -4022,7 +4022,7 @@
   "charging": "6.8 hrs",
   "battery": "2.7 kWh",
   "bootSpace": "23 L",
-  "weight": "112 kg",
+  "weight": "116 kg",
   "groundClearance": "155 mm",
   "seatHeight": "774 mm",
   "rating": null,
@@ -4157,7 +4157,7 @@
   "slug": "bgauss-oowah-ex-2point3-kwh",
   "gaEvent": "bgs_oowah_ex_23",
   "tagline": "",
-  "price": 94990,
+  "price": 96990,
   "priceDisplay": "₹94,990",
   "onRoad": 0,
   "onRoadDisplay": "",
@@ -4193,7 +4193,7 @@
   ],
   "heroImg": "/images/bgauss-oowah-ex-2point3-kwh.webp",
   "cardImg": "/images/bgauss-oowah-ex-2point3-kwh.webp",
-  "verdict": "Claimed range is 105 km from a 2.3 kWh battery, at ₹94,990 ex-showroom. Top speed is 60 km/h. A full charge takes about 3.8 hours at home.",
+  "verdict": "Claimed range is 105 km from a 2.3 kWh battery, at ₹96,990 ex-showroom. Top speed is 60 km/h. A full charge takes about 3.8 hours at home.",
   "bestFor": [
    "Daily city commutes",
    "Buyers on a tight budget"
@@ -4225,7 +4225,7 @@
   "slug": "bgauss-oowah-max-plus-3point0-kwh",
   "gaEvent": "bgs_oowah_maxp_3",
   "tagline": "",
-  "price": 122990,
+  "price": 124990,
   "priceDisplay": "₹1,22,990",
   "onRoad": 0,
   "onRoadDisplay": "",
@@ -4260,7 +4260,7 @@
   ],
   "heroImg": "/images/bgauss-oowah-max-plus-3point0-kwh.webp",
   "cardImg": "/images/bgauss-oowah-max-plus-3point0-kwh.webp",
-  "verdict": "Claimed range is 145 km from a 3 kWh battery, at ₹122,990 ex-showroom. Top speed is 60 km/h. A full charge takes about 4.9 hours at home.",
+  "verdict": "Claimed range is 145 km from a 3 kWh battery, at ₹124,990 ex-showroom. Top speed is 60 km/h. A full charge takes about 4.9 hours at home.",
   "bestFor": [
    "Daily city commutes",
    "Buyers who want something different from the big brands"
@@ -4364,7 +4364,7 @@
   "onRoad": 0,
   "onRoadDisplay": "",
   "emiFrom": 0,
-  "range": "142 km",
+  "range": "146 km",
   "realRange": "108–123 km",
   "speed": "70 km/h",
   "charging": "4 hrs",
@@ -4411,7 +4411,7 @@
     "Charging time": "4 hrs"
    },
    "battery": {
-    "Claimed range": "142 km",
+    "Claimed range": "146 km",
     "Real-world range": "108–123 km",
     "Charge time": "4 hrs"
    }
@@ -5593,11 +5593,11 @@
   "emiFrom": 0,
   "range": "142 km",
   "realRange": "105–119 km",
-  "speed": "65 km/h",
+  "speed": "66 km/h",
   "charging": "Not published",
   "battery": "3 kWh",
   "bootSpace": "Not published",
-  "weight": "Not published",
+  "weight": "123 kg",
   "groundClearance": "Not published",
   "seatHeight": "Not published",
   "rating": null,
@@ -5621,7 +5621,7 @@
   ],
   "heroImg": "/images/lectrix-nduro-3point0-3-kwh.webp",
   "cardImg": "/images/lectrix-nduro-3point0-3-kwh.webp",
-  "verdict": "Claimed range is 142 km from a 3 kWh battery, at ₹104,990 ex-showroom. Top speed is 65 km/h.",
+  "verdict": "Claimed range is 142 km from a 3 kWh battery, at ₹104,990 ex-showroom. Top speed is 66 km/h.",
   "bestFor": [
    "Daily city commutes",
    "Buyers who want something different from the big brands"
@@ -5633,7 +5633,7 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "65 km/h",
+    "Top speed": "66 km/h",
     "Battery capacity": "3 kWh",
     "Charging time": "Not published"
    },

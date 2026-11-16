@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-02",
+ "checked": "2026-11-16",
  "central": {
   "name": "PM E-DRIVE",
   "ratePerKwh": 2500,
@@ -29,6 +29,11 @@
     "title": "DriveSpark: PM E-Drive subsidy for electric two-wheelers extended till FY28 (13 Aug 2026)",
     "url": "https://www.drivespark.com/two-wheelers/2026/pm-e-drive-subsidy-electric-two-wheelers-extended-fy28-087949.html",
     "official": false
+   },
+   {
+    "title": "PIB backgrounder on PM E-DRIVE, 1 Oct 2026",
+    "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/oct/doc_10062_20261001_19244601.pdf",
+    "official": true
    }
   ]
  },
@@ -65,6 +70,11 @@
      "title": "Delhi EV Policy 2026 summary (evselect.in)",
      "url": "https://www.evselect.in/ev-subsidies-india/delhi",
      "official": false
+    },
+    {
+     "title": "Delhi EV Policy 2026 operational guidelines (Transport Department, GNCTD)",
+     "url": "https://transport.delhi.gov.in/sites/default/files/Transport/circulars-orders/operating_guidelines.pdf",
+     "official": true
     }
    ],
    "deadlineWhat": "EV Policy 2026 runs its full term, but the subsidy tapers every year",
@@ -87,6 +97,11 @@
     {
      "title": "Assam Electric Vehicle Policy 2021 (Industries & Commerce Dept)",
      "url": "https://industries.assam.gov.in/sites/default/files/swf_utility_folder/departments/industries_com_oid_4/portlet/level_2/ilovepdf_merged.pdf",
+     "official": true
+    },
+    {
+     "title": "Assam EV Policy 2021 operational guidelines (Industries and Commerce Dept, via AIIDC)",
+     "url": "https://aiidc.assam.gov.in/sites/default/files/swf_utility_folder/departments/industries_com_oid_4/portlet/level_2/final_-_operational_guidelines_ev_policy_2021.pdf",
      "official": true
     }
    ],
