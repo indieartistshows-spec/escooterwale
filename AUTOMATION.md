@@ -56,7 +56,8 @@ made from its id at build time.
 
 ## Leads sheet clean up (every night)
 
-Vercel runs `api/leads-cleanup.js` every day at 22:00 UTC (03:30 IST; Vercel may start it any time in that hour).
+Vercel runs `api/leads-cleanup.js` every day at 18:29 UTC (11:59 PM IST). On Vercel's free plan the cron can start any time in that hour, so between about 11:30 PM and 12:29 AM IST.
+To run it now: GitHub, Actions, **Leads clean up**, Run workflow.
 In the **Leads** tab, rows with the same mobile number are duplicates. The row with the most answers filled in is kept
 (a tie goes to the one with more text, then the newest) and the others are deleted.
 
@@ -64,5 +65,5 @@ In the **Leads** tab, rows with the same mobile number are duplicates. The row w
 - A number with a lead from the last 2 hours is left for the next night, so a quiz still being filled in is never touched.
 - Only the Leads tab changes. The form tabs and Tests are left alone.
 - Each run adds one line of counts to the **Cleanup log** tab.
-- Optional: add a `CRON_SECRET` environment variable in Vercel so only Vercel's cron can start it. Without it, it still runs at most once every 20 hours.
+- Optional: add a `CRON_SECRET` environment variable in Vercel so only Vercel's cron can start it. Without it, it runs at most once an hour. If you add it, add the same value as a GitHub secret named `CRON_SECRET` so the workflow still works.
 - Dry run (counts only, changes nothing): open `https://escooterwale.in/api/leads-cleanup?dry=1`.

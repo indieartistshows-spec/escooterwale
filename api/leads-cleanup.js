@@ -1,5 +1,6 @@
 /* api/leads-cleanup.js | daily clean up of the "Leads" tab in the leads Google Sheet.
-   Run by a Vercel cron every night (vercel.json "crons", 22:00 UTC = 03:30 IST, a quiet hour).
+   Run by a Vercel cron every night (vercel.json "crons", 18:29 UTC = 11:59 PM IST), and on demand by
+   the GitHub workflow "Leads clean up" (.github/workflows/leads-cleanup.yml).
    Rows with the same mobile number are duplicates. Of each group, the row with the most
    information is kept and the others are deleted from "Leads":
      score = filled answer columns (Name, Email, Pincode, City, State, Shortlist, Skipped, Budget,
@@ -14,8 +15,8 @@
      - only the "Leads" tab is changed; the form tabs and "Tests" are left as they are;
      - every run is written to the "Cleanup log" tab (counts only).
    Env: GOOGLE_SA_KEY and LEADS_SHEET_ID (same as api/lead.js). CRON_SECRET is optional: when set in
-   Vercel, Vercel's cron sends it and every other caller is refused. Without it, a real clean up
-   runs at most once every 20 hours. ?dry=1 reports counts only and changes nothing.
+   Vercel (and as a GitHub secret for the workflow), every other caller is refused. Without it, a real
+   clean up runs at most once an hour. ?dry=1 reports counts only and changes nothing.
    The reply never contains names, numbers or any other personal detail. */
 const crypto = require('crypto');
 
@@ -23,7 +24,7 @@ const TAB = 'Leads', ARCHIVE = 'Removed duplicates', LOG = 'Cleanup log';
 const COLS = 23;                       // A..W, as in api/lead.js
 const C = { submitted: 0, mobile: 2, other: 14, leadId: 22 };
 const INFO = [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; // Name, Email, Pincode, City, State, Shortlist .. Priority
-const RECENT_MS = 2 * 3600e3, MIN_GAP_MS = 20 * 3600e3;
+const RECENT_MS = 2 * 3600e3, MIN_GAP_MS = 3600e3;
 
 const b64u = b => Buffer.from(b).toString('base64').replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
 async function token() {
@@ -156,7 +157,7 @@ module.exports = async (req, res) => {
   const dry = /^(1|true|yes)$/i.test(String((req.query || {}).dry || ''));
   try {
     const sheets = client(await token());
-    if (!secret && !dry && Date.now() - await lastRun(sheets) < MIN_GAP_MS) return res.status(429).json({ ok: false, error: 'already ran in the last 20 hours' });
+    if (!secret && !dry && Date.now() - await lastRun(sheets) < MIN_GAP_MS) return res.status(429).json({ ok: false, error: 'already ran in the last hour' });
     const out = await run({ dry, sheets });
     console.log('leads cleanup', JSON.stringify(out));
     return res.status(200).json(out);

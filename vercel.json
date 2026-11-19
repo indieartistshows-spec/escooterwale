@@ -350,7 +350,7 @@
   "crons": [
     {
       "path": "/api/leads-cleanup",
-      "schedule": "0 22 * * *"
+      "schedule": "29 18 * * *"
     }
   ]
 }
