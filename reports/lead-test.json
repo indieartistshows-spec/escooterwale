@@ -1,18 +1,18 @@
 {
- "ranAt": "2026-11-02T18:45:22.357Z",
- "page": "Match with your Dream EV Scooter: Which Electric Scooter to Buy in 2026",
+ "ranAt": "2026-11-19T14:18:21.704Z",
+ "page": "Match with your Dream EV Scooter | EScooterwale",
  "result": {
   "contact": {
    "status": 200,
-   "body": "{\"ok\":true,\"id\":\"2026-11-02T18:45:28.767Z_125f64\",\"range\":\"Tests!A6:W6\",\"duplicate\":true,\"copy\":{\"tab\":\"Tests: Match quiz\",\"added\":4,\"range\":\"'Tests: Match quiz'!A2:W5\"}}"
+   "body": "{\"ok\":true,\"id\":\"2026-11-19T14:18:29.342Z_aa1044\",\"range\":\"Tests!A10:W10\",\"duplicate\":false,\"copy\":{\"tab\":\"Tests: Match quiz\",\"added\":1,\"range\":\"'Tests: Match quiz'!A6:W6\"}}"
   },
   "final": {
    "status": 200,
-   "body": "{\"ok\":true,\"id\":\"2026-11-02T18:45:28.767Z_125f64\",\"updated\":true,\"copy\":{\"tab\":\"Tests: Match quiz\",\"updated\":true}}"
+   "body": "{\"ok\":true,\"id\":\"2026-11-19T14:18:29.342Z_aa1044\",\"updated\":true,\"copy\":{\"tab\":\"Tests: Match quiz\",\"updated\":true}}"
   },
   "home": {
    "status": 200,
-   "body": "{\"ok\":true,\"id\":\"2026-11-02T18:45:31.650Z_39fa2f\",\"range\":\"Tests!A7:W7\",\"duplicate\":true,\"copy\":{\"tab\":\"Tests: Homepage form\",\"added\":2,\"range\":\"'Tests: Homepage form'!A2:W3\"}}"
+   "body": "{\"ok\":true,\"id\":\"2026-11-19T14:18:31.709Z_475fcb\",\"range\":\"Tests!A11:W11\",\"duplicate\":false,\"copy\":{\"tab\":\"Tests: Homepage form\",\"added\":1,\"range\":\"'Tests: Homepage form'!A4:W4\"}}"
   }
  },
  "pageForms": {
@@ -26,7 +26,7 @@
     "page": "/cities/delhi"
    },
    "status": 200,
-   "reply": "{\"ok\":true,\"id\":\"2026-11-02T18:45:41.089Z_872393\",\"range\":\"Tests!A8:W8\",\"duplicate\":false,\"copy\":{\"tab\":\"Tests: City page form\",\"added\":1,\"range\":\"'Tests: City page form'!A2:W2\"}}",
+   "reply": "{\"ok\":true,\"id\":\"2026-11-19T14:18:41.226Z_729cc2\",\"range\":\"Tests!A12:W12\",\"duplicate\":false,\"copy\":{\"tab\":\"Tests: City page form\",\"added\":1,\"range\":\"'Tests: City page form'!A3:W3\"}}",
    "thanksShown": true,
    "errorShown": [],
    "pageErrors": []
@@ -43,7 +43,7 @@
     "page": "/scooters/ather-energy-450x-3point7-kwh"
    },
    "status": 200,
-   "reply": "{\"ok\":true,\"id\":\"2026-11-02T18:45:58.048Z_0dafa8\",\"range\":\"Tests!A9:W9\",\"duplicate\":true,\"copy\":{\"tab\":\"Tests: Scooter page form\",\"added\":1,\"range\":\"'Tests: Scooter page form'!A2:W2\"}}",
+   "reply": "{\"ok\":true,\"id\":\"2026-11-19T14:18:58.755Z_23db05\",\"range\":\"Tests!A13:W13\",\"duplicate\":true,\"copy\":{\"tab\":\"Tests: Scooter page form\",\"added\":1,\"range\":\"'Tests: Scooter page form'!A3:W3\"}}",
    "thanksShown": true,
    "errorShown": [],
    "pageErrors": []
