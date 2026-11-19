@@ -66,4 +66,4 @@ In the **Leads** tab, rows with the same mobile number are duplicates. The row w
 - Only the Leads tab changes. The form tabs and Tests are left alone.
 - Each run adds one line of counts to the **Cleanup log** tab.
 - Optional: add a `CRON_SECRET` environment variable in Vercel so only Vercel's cron can start it. Without it, it runs at most once an hour. If you add it, add the same value as a GitHub secret named `CRON_SECRET` so the workflow still works.
-- Dry run (counts only, changes nothing): open `https://escooterwale.in/api/leads-cleanup?dry=1`.
+- Dry run (counts only, changes nothing): open `https://www.escooterwale.in/api/leads-cleanup?dry=1`.

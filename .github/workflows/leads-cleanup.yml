@@ -28,7 +28,7 @@ jobs:
           DRY: ${{ inputs.dry && '1' || '0' }}
         run: |
           auth=(); [ -n "$CRON_SECRET" ] && auth=(-H "Authorization: Bearer $CRON_SECRET")
-          code=$(curl -sS -o reply.json -w '%{http_code}' -m 120 "${auth[@]}" "https://escooterwale.in/api/leads-cleanup?dry=$DRY")
+          code=$(curl -sS -L -o reply.json -w '%{http_code}' -m 120 "${auth[@]}" "https://www.escooterwale.in/api/leads-cleanup?dry=$DRY")
           echo "HTTP $code"; cat reply.json; echo
           { echo "### Leads clean up"; echo; echo '```json'; cat reply.json; echo; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           [ "$code" = 200 ] || { echo "::error::Leads clean up failed (HTTP $code): $(cat reply.json)"; exit 1; }
