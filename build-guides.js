@@ -68,6 +68,7 @@ function page({ file, title, desc, canon, eyebrow, h1, standfirst, readTime, cru
 
 <article class="guide-content">
 ${body}
+<div id="swLeadMount" data-lead-kind="guide"></div>
 </article>
 
 <aside class="guide-sidebar">

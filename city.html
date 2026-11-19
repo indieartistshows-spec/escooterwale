@@ -24,7 +24,7 @@
 <meta name="description" id="pgDesc" content="Pick your city for the on-road price of every electric scooter, the state EV subsidy and road tax, the most viewed scooters there, and dealers near you."/>
 <meta name="keywords" content="electric scooter mumbai, ev scooter price mumbai, ev dealer mumbai, electric scooter bangalore, ev scooter delhi price"/>
 <link rel="canonical" id="pgCanon" href="https://www.escooterwale.in/city"/>
-<link rel="stylesheet" href="/min/styles.css?v=0bf80bff"/>
+<link rel="stylesheet" href="/min/styles.css?v=f9d02249"/>
 <style>
 .city-hero{background:var(--ink);padding:48px 0 36px;background-size:cover;background-position:center;position:relative}
 .city-hero::before{content:'';position:absolute;inset:0;background:rgba(13,17,23,.85)}
@@ -229,10 +229,10 @@
 <div id="compareTrayMount"></div>
 </div>
 
-<script src="/min/data.js?v=612debb6"></script>
+<script src="/min/data.js?v=b4dcf410"></script>
 <script src="/min/seo.js?v=b4409ead"></script>
 <script src="/min/outbound.js?v=373ff4f8"></script>
-<script src="/min/components.js?v=ccd4231c"></script>
+<script src="/min/components.js?v=340dd805"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -324,7 +324,7 @@ function loadCity(cityId){
     const favS=fav&&SCOOTERS_DB.find(s=>s.id===fav.id);
     const sub=cash.amount?`${st.name} adds a state subsidy of up to ${inrC(cash.amount)}`:`${st.name} has no state cash subsidy right now`;
     const tax=rtLabel==='Exempt'?'and electric scooters pay no road tax':(rtLabel==='Unconfirmed'?'and the road tax on EVs is unconfirmed':`and EVs pay ${rtLabel} road tax`);
-    document.getElementById('cityAnswer').innerHTML=`<section class="sw-answer"><h2>Electric scooter price in ${c.name}</h2><p>Electric scooters (EV scooty) in ${c.name} cost from <strong>${inrC(cheap.on)} on-road</strong> for the ${cheap.s.fullName}${fs!==cheap?`, or ${inrC(fs.on)} for the cheapest full-speed model, the ${fs.s.fullName}`:''}. ${favS?`The most viewed scooter by visitors from ${c.name} is the ${favS.fullName}. `:''}${sub}, ${tax}. The full on-road price list for all ${rowsP.length} models is below.</p></section>`;
+    document.getElementById('cityAnswer').innerHTML=`<section class="sw-answer"><h2>Electric scooter price in ${c.name}</h2><p>Electric scooters (EV scooty) in ${c.name} cost from <strong>${inrC(cheap.on)} on-road</strong> for the ${cheap.s.fullName}${fs!==cheap?`, or ${inrC(fs.on)} for the cheapest full-speed model, the ${fs.s.fullName}`:''}. ${favS?`The most viewed scooter by visitors from ${c.name} is the ${favS.fullName}. `:''}${sub}, ${tax}. The full on-road price list for all ${rowsP.length} models is below, and our all-India <a href="/electric-scooter-price">electric scooter price</a> list compares every model.</p></section>`;
     const fq=[
       [`What is the on-road price of an electric scooter in ${c.name}?`,`Electric scooters in ${c.name} cost from ${inrC(cheap.on)} on-road (${cheap.s.fullName}) up to ${inrC(byOn[byOn.length-1].on)} (${byOn[byOn.length-1].s.fullName}). Most popular models cost between ₹1 lakh and ₹1.7 lakh on-road.`],
       [`Which is the cheapest electric scooter in ${c.name}?`,`The ${cheap.s.fullName} at about ${inrC(cheap.on)} on-road.${fs!==cheap?` The cheapest full-speed scooter (above 25 km/h, needs a licence) is the ${fs.s.fullName} at about ${inrC(fs.on)}.`:''}`],

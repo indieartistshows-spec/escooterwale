@@ -110,7 +110,7 @@ function translateDoc(doc, dict, lang, u, missing) {
     n.childNodes.forEach(walk);
   };
   walk(doc.body);
-  const t = tr(doc.title); if (t != null) doc.title = t;
+  const t = tr(doc.title); if (t != null) doc.title = C.pageTitle(doc.title, t);
   doc.querySelectorAll('meta[name="description"],meta[property="og:title"],meta[property="og:description"],meta[name="twitter:title"],meta[name="twitter:description"]').forEach(m => { const v = tr(m.getAttribute('content')); if (v != null) m.setAttribute('content', v); });
   doc.documentElement.setAttribute('lang', lang);
   const canon = doc.querySelector('link[rel="canonical"]');

@@ -67,3 +67,11 @@ In the **Leads** tab, rows with the same mobile number are duplicates. The row w
 - Each run adds one line of counts to the **Cleanup log** tab.
 - Optional: add a `CRON_SECRET` environment variable in Vercel so only Vercel's cron can start it. Without it, it runs at most once an hour. If you add it, add the same value as a GitHub secret named `CRON_SECRET` so the workflow still works.
 - Dry run (counts only, changes nothing): open `https://www.escooterwale.in/api/leads-cleanup?dry=1`.
+
+## Search Console follow-up (19 November 2026)
+
+- **Guides as data**: `data/guides.json` holds guides written as data; `build-guides-data.js` turns each into `/guide-<slug>` with tokens like `{{price:<id>}}` so figures follow the data. A weekly Claude scheduled task picks the next idea from `data/guide-ideas.json`, writes the guide, translates it and publishes. Append only.
+- **On-road price box**: guides, best pages and EMI-style pages carry a "Get the on-road price in your city" form; every link out to a brand site gets a "Get the best on-road price" button that opens the page's lead box (or a pop-up one). New Leads sheet tabs: "Guide page form", "Best page form", "On-road price button".
+- **Brand pages**: verdict, network size (`data/brand-network.json`, brand-stated figures with source), on-road price by city, PM E-DRIVE amount per model.
+- **Translated titles** start with the English subject (`i18n-core.js` `pageTitle`), e.g. "Electric Scooter Price in Delhi 2026 | दिल्ली में ...".
+- **Upcoming 2027** table on /launches from `data/upcoming.json`.

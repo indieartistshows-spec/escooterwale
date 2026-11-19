@@ -380,6 +380,9 @@ function footerHTML(){
           <a href="/guide-battery-types">Battery Types</a>
           <a href="/guide-subsidy">Subsidy Guide</a>
           <a href="/guide-service-network">Service Network</a>
+          <a href="/guide-100-km-daily">Best for 100 km a Day</a>
+          <a href="/guide-emi-down-payment">EMI and Down Payment</a>
+          <a href="/guide-on-road-price">On-Road Price Explained</a>
         </div>
 
         <!-- Top Brands -->
@@ -492,6 +495,48 @@ function seoInjectFaq(items, id){
 }
 // the brand name people type ("chetak price", Search Console Nov 2026); the short name elsewhere
 function swBrandSearchName(brand){ return ({'bajaj-chetak':'Bajaj Chetak'})[brand.id] || brand.shortName || brand.name; }
+/* Brand page top (Search Console, Nov 2026: English brand pages rank on page 3 while the big sites
+   own page 1): an honest "is it worth buying" verdict from our scores, the brand's own figure for its
+   sales and service network (data/brand-network.json, with source), on-road prices by city and the
+   PM E-DRIVE subsidy per model. Built from fixed phrases so translations stay few. */
+const SW_SCORE_LABEL={Range:'real-world range',Value:'value for money',Service:'service network',Ride:'ride and build quality'};
+const SW_SKIP_IF={Range:'you ride more than 50 km a day',Value:'you want the most scooter for your money',Service:'you live outside a big city, where service is thin',Ride:'you want a premium feel'};
+function brandVerdictHTML(brand, models){
+  const ms=models.filter(s=>!s.discontinued); if(!ms.length) return '';
+  const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0];
+  const short=swBrandSearchName(brand);
+  const avg=k=>ms.reduce((a,s)=>a+((s.scores||{})[k]||0),0)/ms.length;
+  const ss=ms.reduce((a,s)=>a+(s.score||0),0)/ms.length;
+  const keys=Object.keys(SW_SCORE_LABEL), sc=keys.map(k=>({k,v:avg(k)})).sort((a,b)=>b.v-a.v);
+  const strong=sc.filter(x=>x.v>=8), weak=sc.filter(x=>x.v<=5.5);
+  const line=ss>=8?'Yes, for most buyers.':ss>=7.3?'Yes, it is a safe choice.':ss>=6.8?'Worth it for the right buyer.':'Only if one of its models fits exactly what you need.';
+  const best=ms.slice().sort((a,b)=>(b.score||0)-(a.score||0)||a.price-b.price)[0];
+  const skip=(weak[0]||sc[sc.length-1]).k;
+  const net=(typeof BRAND_NETWORK!=='undefined'&&BRAND_NETWORK[brand.id])||null;
+  const fmtD=d=>{try{return new Date(d).toLocaleDateString('en-GB',{month:'long',year:'numeric'});}catch(e){return d;}};
+  return `<section class="sw-answer sw-verdict" id="brandVerdict">
+    <h2><span translate="no">${short}</span>: is it worth buying?</h2>
+    <p class="sw-v-line"><strong>${line}</strong> <span>Average ScootScore ${ss.toFixed(1)}/10 across ${ms.length} models.</span></p>
+    <ul class="sw-v-list">
+      ${(strong.length?strong:sc.slice(0,1)).map(x=>`<li><b>Strong:</b> <span>${SW_SCORE_LABEL[x.k]}</span></li>`).join('')}
+      ${weak.map(x=>`<li><b>Weak:</b> <span>${SW_SCORE_LABEL[x.k]}</span></li>`).join('')}
+      <li><b>Skip it if</b> <span>${SW_SKIP_IF[skip]}</span></li>
+      <li><b>Best pick:</b> <a href="${lp}/scooters/${best.id}" translate="no">${best.name}</a> <span>ScootScore ${best.score}/10 at ${best.nationalPriceDisplay||best.priceDisplay}</span></li>
+    </ul>
+    <p class="sw-v-net"><b>Sales and service network:</b> ${net?`<span>${net.text}</span> <small>(<a href="${net.source}" target="_blank" rel="noopener" data-out="source" translate="no">${net.sourceTitle}</a>, ${fmtD(net.date)})</small>`:'<span>Not published by the brand.</span>'} <a href="${lp}/guide-service-network">How service networks compare</a></p>
+  </section>`;
+}
+function brandCityOnroadHTML(models){
+  const ms=models.filter(s=>!s.discontinued).sort((a,b)=>a.price-b.price), lo=ms[0];
+  if(!lo||!lo.cityPrices||typeof CITIES_DB==='undefined') return '';
+  const lp=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[''])[0];
+  const ids=['delhi','mumbai','bangalore','hyderabad','chennai','pune','ahmedabad','kolkata','jaipur','lucknow'].filter(id=>lo.cityPrices[id]);
+  if(ids.length<3) return '';
+  return `<div class="sw-city-onroad"><h3>On-road price by city</h3><p><span>For the cheapest model,</span> <a href="${lp}/scooters/${lo.id}" translate="no">${lo.name}</a><span>. Includes road tax, insurance and handling.</span></p>
+    <div class="lu-scroll"><table class="lu-t"><thead><tr><th>City</th><th>On-road price</th></tr></thead><tbody>
+    ${ids.map(id=>{const c=CITIES_DB.find(x=>x.id===id); return `<tr><td><a href="${lp}/cities/${id}">${c?c.name:id}</a></td><td>${lo.cityPrices[id].onRoadDisplay}</td></tr>`;}).join('')}
+    </tbody></table></div></div>`;
+}
 function brandPriceHTML(brand, models){
   const ms=models.filter(s=>!s.discontinued).sort((a,b)=>a.price-b.price);
   if(!ms.length) return '';
@@ -499,13 +544,15 @@ function brandPriceHTML(brand, models){
   const short=swBrandSearchName(brand), lo=ms[0], hi=ms[ms.length-1];
   const link=s=>`<a href="${lp}/scooters/${s.id}" translate="no">${s.name}</a>`;
   const span=v=>String(v||'').replace(/\s*[–—-]\s*/,' to ');
-  return `<section class="sw-answer" id="brandPrice">
+  return brandVerdictHTML(brand, models)+`<section class="sw-answer" id="brandPrice">
     <h2>${short} electric scooter price list 2026</h2>
     <p>${ms.length>1?`${short} sells ${ms.length} electric scooters in India, priced from <strong>${lo.nationalPriceDisplay||lo.priceDisplay}</strong> to <strong>${hi.nationalPriceDisplay||hi.priceDisplay}</strong> ex-showroom.`:`${short} sells one electric scooter in India, priced at <strong>${lo.nationalPriceDisplay||lo.priceDisplay}</strong> ex-showroom.`} On-road prices start around ${lo.onRoadDisplay}, depending on your state's road tax.</p>
     ${ms.length>1?`<div class="sw-tops"><div class="sw-top"><span>Top model</span>${link(hi)}<b>${hi.nationalPriceDisplay||hi.priceDisplay}</b></div><div class="sw-top"><span>Cheapest model</span>${link(lo)}<b>${lo.nationalPriceDisplay||lo.priceDisplay}</b></div><div class="sw-top"><span>Longest claimed range</span>${link(ms.reduce((a,b)=>parseFloat(b.range)>parseFloat(a.range)?b:a))}<b>${ms.reduce((a,b)=>parseFloat(b.range)>parseFloat(a.range)?b:a).range}</b></div></div>`:''}
-    <div class="lu-scroll" style="margin-top:14px"><table class="lu-t"><thead><tr><th>Model</th><th>Ex-showroom</th><th>On-road from</th><th>Battery</th><th>Claimed range</th><th>Real range</th><th>Top speed</th></tr></thead><tbody>
-    ${ms.slice().reverse().map(s=>`<tr><td>${link(s)}</td><td>${s.nationalPriceDisplay||s.priceDisplay}</td><td>${s.onRoadDisplay}</td><td>${s.battery}</td><td>${s.range}</td><td>${span(s.realRange)}</td><td>${s.speed}</td></tr>`).join('')}
+    <div class="lu-scroll" style="margin-top:14px"><table class="lu-t"><thead><tr><th>Model</th><th>Ex-showroom</th><th>On-road from</th><th>Battery</th><th>Claimed range</th><th>Real range</th><th>Top speed</th><th>PM E-DRIVE subsidy</th></tr></thead><tbody>
+    ${ms.slice().reverse().map(s=>`<tr><td>${link(s)}</td><td>${s.nationalPriceDisplay||s.priceDisplay}</td><td>${s.onRoadDisplay}</td><td>${s.battery}</td><td>${s.range}</td><td>${span(s.realRange)}</td><td>${s.speed}</td><td>${s.subsidy&&s.subsidy.eligible?'₹'+Number(s.subsidy.amount).toLocaleString('en-IN'):'None'}</td></tr>`).join('')}
     </tbody></table></div>
+    ${brandCityOnroadHTML(models)}
+    <p style="margin-top:12px">Compare ${short} with every other <a href="${lp}/electric-scooter-price">electric scooter price</a> in India, or see the <a href="${lp}/best/under-1-lakh">best electric scooters under ₹1 lakh</a>.</p>
   </section>`;
 }
 function brandFaqItems(brand, models){
@@ -582,7 +629,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
 function swInitLeadBox(){
   const $=id=>document.getElementById(id), form=$('clForm'); if(!form||form._swReady) return;
   form._swReady=true; // a property, not an attribute: pre-rendered pages must not carry it
-  const box=form.closest('[data-lead-form]'), kind=(box&&box.dataset.leadForm)||'city';
+  const box=form.closest('[data-lead-form]'), kind0=(box&&box.dataset.leadForm)||'city';
+  // the on-road price button next to brand links can switch the box to its own kind (form_tab "On-road price button")
+  const kindNow=()=>(box&&box.dataset.leadKindNow)||kind0;
+  const kind=kind0;
+  // city picker (guide, best and on-road price boxes): the city the visitor chose before, if any
+  const sel=$('clCity');
+  if(sel&&typeof CITIES_DB!=='undefined'){
+    if(sel.options.length<2) CITIES_DB.forEach(c=>{const o=document.createElement('option');o.value=c.id;o.textContent=c.name;sel.appendChild(o);});
+    const cur=(typeof swGetCity==='function')?swGetCity():null; if(cur) sel.value=cur;
+    sel.addEventListener('change',()=>{ if(sel.value&&typeof swSetCity==='function') try{swSetCity(sel.value,'lead_form',true);}catch(e){} });
+  }
   const ev=(n,p)=>{try{window.gtag&&gtag('event',n,p||{})}catch(e){}};
   const LANG=(location.pathname.match(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/)||[])[1]||'en';
   const page=()=>location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/';
@@ -602,28 +659,125 @@ function swInitLeadBox(){
     if(badName){ $('clErrName').hidden=false; $('clName').focus(); return; }
     if(badMob){ $('clErrMobile').hidden=false; $('clMobile').focus(); return; }
     if(!consent){ $('clErrConsent').hidden=false; return; }
-    const cid=window.__SW_CITY__||((typeof swGetCity==='function')?swGetCity():null);
+    const cid=window.__SW_CITY__||(sel&&sel.value)||((typeof swGetCity==='function')?swGetCity():null);
     const c=cid&&typeof CITIES_DB!=='undefined'&&CITIES_DB.find(x=>x.id===cid), st=c&&SUBSIDY.states[SUBSIDY.cityState[c.id]];
-    const model=kind==='scooter'&&window.__SW_CUR__?window.__SW_CUR__.id:null;
+    const model=kind==='scooter'&&window.__SW_CUR__?window.__SW_CUR__.id:(box&&box.dataset.leadModel)||null;
     const qs=new URLSearchParams(location.search);
     const source=['utm_source','utm_medium','utm_campaign'].map(k=>qs.get(k)).filter(Boolean).join(' / ')||document.referrer||'direct';
     busy=true; $('clSubmit').disabled=true;
     try{
       const r=await fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({
-        form:kind,name,mobile,city:c?c.name:'',state:st?st.name:(c?c.state||'':''),shortlist:model?[model]:[],consent:true,
+        form:kindNow(),name,mobile,city:c?c.name:'',state:st?st.name:(c?c.state||'':''),shortlist:model?[model]:[],answers:box&&box.dataset.leadBrand?{brand:box.dataset.leadBrand}:{},consent:true,
         consentText:$('clConsentText').textContent.trim(),lang:LANG,source,page:location.pathname,hp:$('clWeb').value,t:shownAt})});
       const j=await r.json().catch(()=>({}));
       if(!r.ok||!j.ok) throw new Error(j.error||'save failed');
       form.hidden=true; $('clDone').hidden=false;
       // same key event as the quiz (stage contact / final there): stage city_form or scooter_form here
       // GA's automatic form tracking does not see this form (it is sent by script), so say it ourselves
-      ev('form_submit',{form_id:'clForm',form_name:kind+'_lead',page_path:page(),lang:LANG});
-      ev('lead_submitted',{stage:kind+'_form',lang:LANG});
+      ev('form_submit',{form_id:'clForm',form_name:kindNow()+'_lead',page_path:page(),lang:LANG});
+      ev('lead_submitted',{stage:kindNow()+'_form',lang:LANG});
     }catch(err){ $('clErrSave').hidden=false; }
     finally{ busy=false; $('clSubmit').disabled=false; }
   });
 }
-if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',swInitLeadBox); else swInitLeadBox();
+/* "Get the on-road price in your city" box (Search Console and GA, Nov 2026: guide and best pages bring
+   visits but almost no leads; city pages, which ask for details, bring two thirds of all leads).
+   swLeadBoxHTML builds the same name and mobile box as the city pages, with a city picker. It is
+   mounted into any <div id="swLeadMount" data-lead-kind="guide|best"> (guides, best pages), and,
+   on pages without a lead box, kept hidden as a pop-up for the on-road price buttons below.
+   Built in the build's browser too, so its words are translated with the page. */
+function swLeadBoxHTML(kind, popup){
+  return `<section class="lead-box lead-box-onroad${popup?' lead-pop-box':''}" id="swOnroadLead" data-cta-location="${kind}_lead" data-lead-form="${kind}">
+      <div class="cl-box cl-form">
+        <div class="eyebrow">On-road price</div>
+        <h2 class="cl-h">Get the on-road price in your city</h2>
+        <p class="cl-sub">Leave your number and we will help you get the best on-road price and offers from dealers in your city.</p>
+        <form id="clForm" novalidate>
+          <div class="cl-fields cl-fields-3">
+            <label class="cl-field"><span>Name</span><input id="clName" name="name" autocomplete="name" maxlength="80" placeholder="Your name"/></label>
+            <label class="cl-field"><span>Mobile number</span><input id="clMobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel" maxlength="14" placeholder="10-digit mobile number"/></label>
+            <label class="cl-field"><span>City</span><select id="clCity" name="city"><option value="">Select your city</option></select></label>
+          </div>
+          <div class="cl-hp" aria-hidden="true"><label for="clWeb">Website</label><input id="clWeb" name="website" tabindex="-1" autocomplete="off"/></div>
+          <label class="cl-consent" id="clConsentRow"><input type="checkbox" id="clConsent"/><span id="clConsentText">I agree that EScooterwale and its partner scooter brands and dealers may contact me about on-road prices, test rides, offers and the EScooterwale newsletter. I can unsubscribe any time.</span></label>
+          <button class="btn btn-primary" type="submit" id="clSubmit">Get on-road price</button>
+          <p class="cl-err" id="clErrName" hidden>Please enter your name.</p>
+          <p class="cl-err" id="clErrMobile" hidden>Please enter a valid 10-digit mobile number.</p>
+          <p class="cl-err" id="clErrConsent" hidden>Please tick the box to continue.</p>
+          <p class="cl-err" id="clErrSave" hidden>Could not save right now. Please try again.</p>
+        </form>
+        <div class="cl-done" id="clDone" hidden>Thanks, we have your details. We will be in touch with the best on-road price in your city.</div>
+      </div>
+      <div class="cl-box cl-match">
+        <div class="eyebrow">Not sure which scooter?</div>
+        <h2 class="cl-h">Find your perfect match</h2>
+        <p class="cl-sub">Answer a few quick questions about your budget and daily ride, and see the scooters that suit you best.</p>
+        <a class="btn btn-primary cl-match-btn" href="/match" id="clMatchBtn">Match with your dream scooter</a>
+      </div>
+    </section>`;
+}
+function swMountLeadBox(){
+  const m=document.getElementById('swLeadMount');
+  if(m&&!m.querySelector('#clForm')&&!document.getElementById('clForm')) m.innerHTML='<div class="lead-box-wrap">'+swLeadBoxHTML(m.dataset.leadKind||'guide')+'</div>';
+}
+/* "Get the best on-road price" button beside every link out to a brand site (GA, Nov 2026: 138 clicks
+   to brand sites in 19 days, each one a buyer who left without asking us for a price). Opens the
+   page's own lead box, or the pop-up one, with the brand and model passed on to the lead. */
+function swOnroadButtons(root){
+  if(/^\/(?:(?:hi|mr|ta|te|kn|gu|bn|or)\/)?match(?:\.html)?\/?$/.test(location.pathname)) return; // the quiz has its own form
+  (root||document).querySelectorAll('a[data-out="brand"],a[data-out="test-ride"],a[data-out="dealer"],#brandWebsiteLink').forEach(a=>{
+    if(a.closest('.hero-slide,.lf-img,.lead-box,.sw-fab,footer,.footer,.seo-links,nav,.nav,.mobile-menu,[data-no-onroad]')||a.classList.contains('lf-img')||a.classList.contains('hero-slide')) return;
+    if(a.style.display==='none') return; // hidden until the page fills it (scooter page test ride)
+    const nx=a.nextElementSibling; if(nx&&nx.classList.contains('sw-onroad-btn')) return;
+    if(a.parentElement&&a.parentElement.querySelector(':scope > .sw-onroad-btn')) return;
+    const b=document.createElement('button');
+    b.type='button'; b.className='sw-onroad-btn'; b.textContent='Get the best on-road price';
+    if(a.dataset.brand) b.dataset.brand=a.dataset.brand;
+    // one button per group of brand links, after the last of them (city dealer cards have three)
+    const grp=a.parentElement?[...a.parentElement.children].filter(x=>x.matches&&x.matches('a[data-out]')):[a];
+    (grp[grp.length-1]||a).insertAdjacentElement('afterend',b);
+  });
+}
+function swOpenLead(brand, model){
+  let form=document.getElementById('clForm');
+  if(!form){ swEnsureLeadPopup(); form=document.getElementById('clForm'); }
+  if(!form) return;
+  const box=form.closest('[data-lead-form]');
+  if(box){ if(model) box.dataset.leadModel=model; if(brand) box.dataset.leadBrand=brand; box.dataset.leadKindNow=box.classList.contains('lead-pop-box')?'onroad':box.dataset.leadForm; }
+  const pop=document.getElementById('swLeadPop');
+  if(pop&&pop.contains(form)){ pop.hidden=false; document.body.classList.add('sw-pop-open'); }
+  else (box||form).scrollIntoView({behavior:'smooth',block:'center'});
+  setTimeout(()=>{ const n=document.getElementById('clName'); if(n) try{n.focus({preventScroll:true});}catch(e){} },350);
+  try{window.gtag&&gtag('event','onroad_price_open',{brand:brand||'',model:model||'',page_path:location.pathname.replace(/^\/(hi|mr|ta|te|kn|gu|bn|or)(?=\/|$)/,'')||'/'});}catch(e){}
+}
+function swEnsureLeadPopup(){
+  if(document.getElementById('clForm')||document.getElementById('swLeadPop')) return;
+  const d=document.createElement('div');
+  d.id='swLeadPop'; d.className='sw-lead-pop'; d.hidden=true;
+  d.innerHTML='<div class="sw-lead-pop-in" role="dialog" aria-modal="true" aria-label="Get the on-road price in your city"><button type="button" class="sw-lead-pop-x" aria-label="Close">×</button>'+swLeadBoxHTML('onroad',true)+'</div>';
+  document.body.appendChild(d);
+  swInitLeadBox();
+}
+function swLeadSetup(){
+  swMountLeadBox();
+  swOnroadButtons();
+  // pages without a lead box keep a hidden one ready, so the button works and its words get translated
+  if(document.querySelector('.sw-onroad-btn')) swEnsureLeadPopup();
+  swInitLeadBox();
+  // brand links added later by page scripts (city dealer list, scooter page buttons)
+  if(!window.__swOnroadObs&&typeof MutationObserver!=='undefined'){
+    window.__swOnroadObs=new MutationObserver(ms=>{ if(ms.some(m=>[...m.addedNodes].some(n=>n.nodeType===1&&(n.matches('a[data-out]')||n.querySelector&&n.querySelector('a[data-out]'))))) { swOnroadButtons(); if(document.querySelector('.sw-onroad-btn')) swEnsureLeadPopup(); } });
+    window.__swOnroadObs.observe(document.body,{childList:true,subtree:true});
+  }
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest&&e.target.closest('.sw-onroad-btn');
+  if(b){ e.preventDefault(); const m=(location.pathname.match(/\/scooters\/([^/?#]+)/)||[])[1]||(window.__SW_CUR__&&window.__SW_CUR__.id)||''; swOpenLead(b.dataset.brand||'', m); return; }
+  const pop=document.getElementById('swLeadPop');
+  if(pop&&!pop.hidden&&(e.target===pop||(e.target.closest&&e.target.closest('.sw-lead-pop-x')))){ pop.hidden=true; document.body.classList.remove('sw-pop-open'); }
+});
+document.addEventListener('keydown',e=>{ const pop=document.getElementById('swLeadPop'); if(e.key==='Escape'&&pop&&!pop.hidden){ pop.hidden=true; document.body.classList.remove('sw-pop-open'); } });
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',swLeadSetup); else swLeadSetup();
 
 /* Link to a head-to-head: the clean /compare/<a>-vs-<b> page when it exists (no redirect hop for
    visitors or crawlers), else the compare tool with both picked. */

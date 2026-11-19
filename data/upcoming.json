@@ -1,0 +1,97 @@
+{
+ "_note": "Electric scooters announced for India but not yet delivering, shown on /launches. Only brand statements or reputable outlets; speculative reports are left out. Remove nothing: when a model launches, set status to Launched.",
+ "checked": "2026-11-19",
+ "items": [
+  {
+   "brand": "Ola Electric",
+   "brandId": "ola-electric",
+   "model": "S1 Z 3.1 kWh",
+   "status": "Launched, deliveries pending",
+   "expected": "Deliveries from December 2026",
+   "price": "₹79,999",
+   "specs": "3.1 kWh LFP battery, 179 km claimed range",
+   "confidence": "Confirmed by Ola",
+   "url": "https://www.autocarpro.in/news/ola-electric-launches-s1z-scooter-with-in-house-lfp-battery-technology-134321",
+   "title": "Ola Electric Launches S1Z Scooter with In-House LFP Battery Technology (Autocar Professional)",
+   "date": "2026-08-28"
+  },
+  {
+   "brand": "Ola Electric",
+   "brandId": "ola-electric",
+   "model": "S1 Z 5.1 kWh",
+   "status": "Launched, deliveries pending",
+   "expected": "Deliveries from March 2027",
+   "price": "₹99,999",
+   "specs": "5.1 kWh LFP battery, up to 301 km claimed range",
+   "confidence": "Confirmed by Ola",
+   "url": "https://www.autocarpro.in/news/ola-electric-launches-s1z-scooter-with-in-house-lfp-battery-technology-134321",
+   "title": "Ola Electric Launches S1Z Scooter with In-House LFP Battery Technology (Autocar Professional)",
+   "date": "2026-08-28"
+  },
+  {
+   "brand": "Ather",
+   "brandId": "ather-energy",
+   "model": "Konarc S 100",
+   "status": "Price announced, launch delayed",
+   "expected": "January to March 2027",
+   "price": "₹99,999",
+   "specs": "2.1 kWh battery, 100 km claimed range, 70 km/h",
+   "confidence": "Confirmed by Ather",
+   "url": "https://www.autocarindia.com/bike-news-amp/entry-level-ather-konarc-launch-delayed-441142",
+   "title": "Entry-level Ather Konarc launch delayed (Autocar India)",
+   "date": "2026-10-27"
+  },
+  {
+   "brand": "Ather",
+   "brandId": "ather-energy",
+   "model": "Konarc Z 125",
+   "status": "Announced",
+   "expected": "April to June 2027",
+   "price": "Not announced",
+   "specs": "125 km claimed range, 80 km/h",
+   "confidence": "Reported",
+   "url": "https://www.drivespark.com/two-wheelers/2026/ather-konarc-launched-at-rs-99999-specs-range-variants-features-images-088075.html",
+   "title": "Ather Konarc Launched At Rs 99,999 - 200km Range, 1350W Combined Charging, Magic Key & More (DriveSpark)",
+   "date": "2026-08-29"
+  },
+  {
+   "brand": "Ather",
+   "brandId": "ather-energy",
+   "model": "Konarc Z 161",
+   "status": "Announced",
+   "expected": "April to June 2027",
+   "price": "Not announced",
+   "specs": "161 km claimed range, 80 km/h",
+   "confidence": "Reported",
+   "url": "https://www.drivespark.com/two-wheelers/2026/ather-konarc-launched-at-rs-99999-specs-range-variants-features-images-088075.html",
+   "title": "Ather Konarc Launched At Rs 99,999 - 200km Range, 1350W Combined Charging, Magic Key & More (DriveSpark)",
+   "date": "2026-08-29"
+  },
+  {
+   "brand": "Ather",
+   "brandId": "ather-energy",
+   "model": "Konarc S 200",
+   "status": "Announced",
+   "expected": "July to September 2027",
+   "price": "Not announced",
+   "specs": "200 km claimed range",
+   "confidence": "Reported",
+   "url": "https://www.drivespark.com/two-wheelers/2026/ather-konarc-launched-at-rs-99999-specs-range-variants-features-images-088075.html",
+   "title": "Ather Konarc Launched At Rs 99,999 - 200km Range, 1350W Combined Charging, Magic Key & More (DriveSpark)",
+   "date": "2026-08-29"
+  },
+  {
+   "brand": "Ultraviolette",
+   "brandId": null,
+   "model": "Tesseract",
+   "status": "Pre-bookings open, launch delayed",
+   "expected": "January to March 2027",
+   "price": "About ₹1.45 lakh indicated earlier, likely to rise",
+   "specs": "15 kW peak power on a new 100V platform",
+   "confidence": "Confirmed by Ultraviolette",
+   "url": "https://www.autocarindia.com/bike-news/updated-ultraviolette-shockwave-and-tesseract-showcased-441247",
+   "title": "Updated Ultraviolette Shockwave and Tesseract showcased (Autocar India)",
+   "date": "2026-11-05"
+  }
+ ]
+}

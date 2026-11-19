@@ -1,0 +1,14 @@
+{
+ "_note": "Backlog for the weekly guide task. Each idea names the searches it should answer (from Search Console). The task picks the first idea with done: null, writes the guide into data/guides.json and sets done to the date and slug. Add new ideas at the end; never remove one.",
+ "ideas": [
+  { "topic": "Low speed electric scooters: no licence, no registration. Which ones, the 25 km/h rule, who they suit", "searches": ["low speed electric scooter in india", "electric scooter under 30000", "electric scooter under 20,000 rupees near me", "electric scooter 13000 price", "under 50k"], "done": null },
+  { "topic": "Electric scooter resale value: which brands hold value and why", "searches": ["which electric scooter has the best resale value in india?"], "done": null },
+  { "topic": "E-scooty yojana 2026: which government schemes actually pay you to buy an electric scooter (PM E-DRIVE plus state schemes), and fake scheme warnings", "searches": ["e scooty yojana 2026", "e scooty scheme 2026", "ई स्कूटर अनुदान योजना 2026", "government subsidy on ev scooter", "electric scooter me subsidy kitna milta hai"], "done": null },
+  { "topic": "Electric scooter battery warranty and replacement cost, brand by brand", "searches": ["battery warrenty", "ampere electric scooter battery price", "electric scooter battery price"], "done": null },
+  { "topic": "Highest range electric scooters in India, by real range not claimed range", "searches": ["highest range electric scooter in india", "highest range ev scooter in india", "best ev scooter with highest range", "which electric scooter have highest range", "best range electric scooter in india"], "done": null },
+  { "topic": "Electric scooter in the rain and floods: IP ratings and what to check before monsoon", "searches": ["electric scooter waterproof", "electric scooter in rain"], "done": null },
+  { "topic": "Charging cost per km and running cost of an electric scooter vs petrol", "searches": ["electric scooter running cost", "charging scooty price", "charger scooty price"], "done": null },
+  { "topic": "Electric scooter insurance: what it costs and how to buy it outside the dealer", "searches": ["electric scooter insurance"], "done": null },
+  { "topic": "Best electric scooter value for money in India, price against real range and ScootScore", "searches": ["which electric scooter offers best value for money in india?", "best electric scooter price", "cheap and best electric scooter"], "done": null }
+ ]
+}

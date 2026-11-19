@@ -61,6 +61,8 @@ add(`${BASE}/guide-real-range`,          '0.9', 'monthly');
 add(`${BASE}/guide-battery-chemistry`,   '0.8', 'monthly');
 add(`${BASE}/guide-battery-types`,       '0.7', 'monthly');
 add(`${BASE}/guide-service-network`,     '0.7', 'monthly');
+// guides written as data (data/guides.json, build-guides-data.js)
+try { JSON.parse(fs.readFileSync('data/guides.json', 'utf8')).guides.forEach(g => add(`${BASE}/guide-${g.slug}`, '0.8', 'monthly')); } catch (e) {}
 
 // Brand vs brand pages (tools/build-brand-vs.js)
 try { JSON.parse(fs.readFileSync('data/brand-vs.json', 'utf8')).pages.forEach(p => add(`${BASE}/${p}`, '0.8', 'weekly')); } catch (e) {}

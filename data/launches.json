@@ -6,10 +6,11 @@
    "key": "bgauss|ARAI Certified Range|3",
    "brand": "BGauss",
    "brandId": "bgauss",
-   "name": "ARAI Certified Range 3 kWh",
+   "name": "OoWah MAX Plus 3 kWh",
    "price": 124990,
    "url": "https://www.bgauss.com/bg-oowah/",
-   "note": "Spotted on the official brand website. Full review and ScootScore to follow."
+   "note": "Not a new model: the BGauss site now lists the existing OoWah MAX Plus 3 kWh under its ARAI certified range, which our weekly check first read as a new name. Corrected 19 November 2026.",
+   "corrected": "2026-11-19"
   },
   {
    "date": "2026-11-09",
@@ -17,10 +18,11 @@
    "key": "bgauss|ARAI Certified Range|3.8",
    "brand": "BGauss",
    "brandId": "bgauss",
-   "name": "ARAI Certified Range 3.8 kWh",
+   "name": "C12 MaxR 3.8 kWh",
    "price": 159990,
    "url": "https://www.bgauss.com/bg-c12-maxr/",
-   "note": "Spotted on the official brand website. Full review and ScootScore to follow."
+   "note": "Not a new model: the BGauss site now lists the existing C12 MaxR 3.8 kWh under its ARAI certified range, which our weekly check first read as a new name. Corrected 19 November 2026.",
+   "corrected": "2026-11-19"
   },
   {
    "date": "2026-11-09",
@@ -28,10 +30,11 @@
    "key": "bgauss|ARAI Certified Range|2.7",
    "brand": "BGauss",
    "brandId": "bgauss",
-   "name": "ARAI Certified Range 2.7 kWh",
+   "name": "MAX C12i 2.0 2.7 kWh",
    "price": 128990,
    "url": "https://www.bgauss.com",
-   "note": "Spotted on the official brand website. Full review and ScootScore to follow."
+   "note": "Not a new model: the BGauss site now lists the existing MAX C12i 2.0 2.7 kWh under its ARAI certified range, which our weekly check first read as a new name. Corrected 19 November 2026.",
+   "corrected": "2026-11-19"
   },
   {
    "date": "2026-10-26",

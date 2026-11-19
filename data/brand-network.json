@@ -1,0 +1,17 @@
+{
+ "_note": "Sales and service network size per brand, as the brand last stated it. Shown on brand pages. Only company figures from 2025 or 2026 (brand site, press release, earnings call, or a reputable outlet quoting the company). A brand without one shows 'Not published'. Re-check every few months.",
+ "checked": "2026-11-19",
+ "brands": {
+  "ola-electric": { "text": "255 dealer partners running 319 stores (8 November 2026). Ola is closing its own stores and moving to dealers, with a target of 700 dealer stores by March 2027", "date": "2026-11-17", "source": "https://www.autocarpro.in/news/ola-electric-shifts-away-from-d2c-model-targets-700-dealerships-by-march-2027-135968", "sourceTitle": "Autocar Professional, quoting Ola Electric's Q2 FY27 call" },
+  "ather-energy": { "text": "Over 700 Experience Centres across India", "date": "2026-04-09", "source": "https://www.autocarindia.com/bike-news/ather-expands-with-over-700-experience-centres-across-india-439426", "sourceTitle": "Autocar India" },
+  "tvs-motor": { "text": "Over 3,300 sales and service touchpoints in more than 3,000 cities", "date": "2026-06-25", "source": "https://www.tvsmotor.com/media/press-release/one-millionth-tvs-iqube-rolled-out-reflects-tvs-motors-role-in-shaping-indias-ev-transformation", "sourceTitle": "TVS Motor press release" },
+  "bajaj-chetak": { "text": "550 plus exclusive Chetak stores, present in over 850 cities", "date": "2026-10-27", "source": "https://www.bajajauto.com/-/media/images/bajajauto/media-kit/press-release/financial-quarterly/2026-2027/bajaj-auto-earnings-call-q2-fy27.pdf", "sourceTitle": "Bajaj Auto Q2 FY27 earnings call" },
+  "hero-vida": { "text": "Over 900 touchpoints in 475 cities, with 778 dealers (September 2026)", "date": "2026-10-30", "source": "https://www.autocarpro.in/analysis-sales/hero-vida-e-scooter-sales-soar-to-new-high-in-october-cross-200000-for-the-first-time-in-cy2026-135566", "sourceTitle": "Autocar Professional" },
+  "ampere": { "text": "More than 600 Experience Centres", "date": "2026-10-09", "source": "https://www.autocarpro.in/news/ampere-adds-50-new-experience-centers-in-retail-expansion-ahead-of-festive-season-135148", "sourceTitle": "Autocar Professional" },
+  "bgauss": { "text": "250 plus dealerships across India", "date": "2026-11-19", "source": "https://www.bgauss.com/", "sourceTitle": "BGauss website" },
+  "suzuki": { "text": "Over 1,200 Suzuki dealerships across India sell the e-Access", "date": "2026-01-09", "source": "https://www.autocarindia.com/bike-news/suzuki-e-access-launched-at-rs-188-lakh-438769", "sourceTitle": "Autocar India" },
+  "simple-energy": { "text": "Close to 70 outlets in more than 38 cities", "date": "2026-04-09", "source": "https://www.autocarpro.in/news/simple-energy-opens-five-new-stores-across-four-cities-132046", "sourceTitle": "Autocar Professional" },
+  "kinetic-watts-volts": { "text": "30 exclusive showrooms across India", "date": "2026-08-20", "source": "https://kineticindia.com/?p=6072", "sourceTitle": "Kinetic India website" },
+  "lectrix": { "text": "100 plus dealerships, each also a service centre", "date": "2026-11-19", "source": "https://www.lectrixev.com/", "sourceTitle": "Lectrix EV website" }
+ }
+}

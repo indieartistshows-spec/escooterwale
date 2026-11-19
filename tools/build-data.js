@@ -132,6 +132,7 @@ const out = header +
   `const CITIES_DB = ${JSON.stringify(cities)};\n\n` +
   `const SUBSIDY = ${JSON.stringify(subsidy)};\n\n` +
   `const BRAND_LINKS = ${JSON.stringify(brandLinks)};\n\n` +
+  `const BRAND_NETWORK = ${JSON.stringify((() => { try { return J('data/brand-network.json').brands; } catch (e) { return {}; } })())};\n\n` +
   `const EV_SALES = ${JSON.stringify(evSales)};\n\n` +
   `const BRAND_VIDEOS = ${JSON.stringify((() => { try { return J('data/brand-videos.json').videos; } catch (e) { return {}; } })())};\n\n` +
   `const AGG_LINKS = ${JSON.stringify((() => { try { return J('data/aggregator-links.json'); } catch (e) { return { families: {} }; } })())};\n\n` +
@@ -140,7 +141,7 @@ const out = header +
 function getByBrand(slug)  { return SCOOTERS_DB.filter(s=>s.brandSlug===slug); }
 function getSorted(by)     { return [...SCOOTERS_DB].sort((a,b)=>b[by]-a[by]); }
 function getBrandById(id)  { return BRANDS_DB.find(b=>b.id===id); }
-if(typeof module!=='undefined') module.exports={CITY_MOST_VIEWED,SCOOTERS_ALL,MODEL_NOTES,COMPARE_PAIRS,MOST_VIEWED,BRAND_SOCIALS,BRAND_VIDEOS,AGG_LINKS,SCOOTERS_DB,BRANDS_DB,NEWS_DB,CITIES_DB,SUBSIDY,SW_CONFIG,EV_SALES,BRAND_LINKS};
+if(typeof module!=='undefined') module.exports={CITY_MOST_VIEWED,SCOOTERS_ALL,MODEL_NOTES,COMPARE_PAIRS,MOST_VIEWED,BRAND_SOCIALS,BRAND_VIDEOS,AGG_LINKS,SCOOTERS_DB,BRANDS_DB,NEWS_DB,CITIES_DB,SUBSIDY,SW_CONFIG,EV_SALES,BRAND_LINKS,BRAND_NETWORK};
 `;
 fs.writeFileSync('data.js', out);
 // Trending archive goes in its own file so data.js stays small as it grows

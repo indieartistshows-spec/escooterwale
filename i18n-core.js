@@ -35,7 +35,18 @@
     const t = dict[key];
     return t == null ? null : lead + fill(t, vals) + trail;
   }
-  const API = { LANGS, toKey, fill, translatable, translate, norm };
+  // translated page titles keep the English subject in front ("Electric Scooter Price List India 2026 | <translation>"):
+  // many people on a translated page searched in English letters, and an all-script title gets skipped
+  // (Search Console, Nov 2026: translated pages had half the CTR of English ones at better positions)
+  const SUF = /\s*\|\s*EScooterwale\s*$/i;
+  function pageTitle(en, translated) {
+    if (translated == null) return translated;
+    const enHead = norm(en).replace(SUF, '').split(/: | \| |\? /)[0].trim();
+    const t = norm(translated).replace(SUF, '').trim();
+    if (!enHead || !t || t.toLowerCase().startsWith(enHead.toLowerCase()) || enHead.length < 8) return translated;
+    return enHead + ' | ' + t;
+  }
+  const API = { LANGS, toKey, fill, translatable, translate, norm, pageTitle };
   root.SW_I18N_CORE = API;
   if (typeof module !== 'undefined') module.exports = API;
 })(typeof window !== 'undefined' ? window : globalThis);

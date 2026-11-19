@@ -6,7 +6,8 @@
      GOOGLE_SA_KEY   the service account JSON key (the Sheet is shared with its client_email as Editor)
      LEADS_SHEET_ID  the spreadsheet id
    Every lead goes to the "Leads" tab (the master list) and a copy goes to its form's own tab:
-   "Match quiz", "Homepage form", "City page form" or "Scooter page form". The quiz's second call
+   "Match quiz", "Homepage form", "City page form", "Scooter page form", "Guide page form", "Best page form"
+   or "On-road price button" (the button beside links to brand sites). The quiz's second call
    updates the row in both. Each save also copies any of that form's leads missing from its tab
    (all earlier ones the first time, or one whose copy failed), so the form tabs stay complete.
    The master write must succeed; the copy is best effort and never loses a lead.
@@ -16,11 +17,14 @@ const crypto = require('crypto');
 
 const TAB = 'Leads', TEST_TAB = 'Tests';
 // one tab per form, next to the master "Leads" tab
-const FORM_TABS = { quiz: 'Match quiz', home: 'Homepage form', city: 'City page form', scooter: 'Scooter page form' };
+const FORM_TABS = { quiz: 'Match quiz', home: 'Homepage form', city: 'City page form', scooter: 'Scooter page form',
+  guide: 'Guide page form', best: 'Best page form', onroad: 'On-road price button' };
 const formKey = f => (FORM_TABS[f] ? f : 'quiz');
 const formTab = (f, test) => (test ? TEST_TAB + ': ' : '') + FORM_TABS[formKey(f)];
 // which form an existing master row came from, read from the stage note in "Other answers" (column O)
-const STAGE_FORM = { 'homepage form': 'home', 'city page form': 'city', 'scooter page form': 'scooter' };
+const STAGE_FORM = { 'homepage form': 'home', 'city page form': 'city', 'scooter page form': 'scooter',
+  'guide page form': 'guide', 'best page form': 'best', 'on-road price button': 'onroad' };
+const STAGE_OF = { city: 'city page form', scooter: 'scooter page form', home: 'homepage form', guide: 'guide page form', best: 'best page form', onroad: 'on-road price button' };
 const rowForm = r => { try { return STAGE_FORM[JSON.parse(r[14] || '{}').stage] || 'quiz'; } catch (e) { return 'quiz'; } };
 const HEADER = ['Submitted (IST)', 'Name', 'Mobile', 'Email', 'Pincode', 'City', 'State', 'Shortlist', 'Skipped (reason)',
   'Budget', 'Daily km', 'Riders', 'Charging', 'Priority', 'Other answers', 'Consent', 'Consent text', 'Language',
@@ -155,7 +159,7 @@ module.exports = async (req, res) => {
   if (!/^[6-9]\d{9}$/.test(mobile)) bad.push('mobile');
   if (email && !/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) bad.push('email'); // optional
   // the city, scooter and homepage forms ask only for name and mobile; the quiz also asks for a pincode
-  const cityForm = ['city', 'scooter', 'home'].includes(b.form);
+  const cityForm = ['city', 'scooter', 'home', 'guide', 'best', 'onroad'].includes(b.form);
   if (!(cityForm && !pincode) && !/^[1-9]\d{5}$/.test(pincode)) bad.push('pincode');
   if (b.consent !== true) bad.push('consent');
   if (bad.length) return res.status(400).json({ ok: false, error: 'invalid', fields: bad });
@@ -180,7 +184,7 @@ module.exports = async (req, res) => {
       clean((b.shortlist || []).join(', '), 500),
       clean((b.skipped || []).map(s => s.id + (s.reason ? ' (' + s.reason + ')' : '')).join(', '), 800),
       clean(a.budget), clean(a.daily), clean(a.riders), clean(a.charging), clean(a.priority),
-      clean(JSON.stringify({ ...Object.fromEntries(Object.entries(a).filter(([k]) => !['budget', 'daily', 'riders', 'charging', 'priority', 'pincode'].includes(k))), stage: cityForm ? ({ city: 'city page form', scooter: 'scooter page form', home: 'homepage form' })[b.form] : b.stage === 'contact' ? 'contact given, quiz in progress' : 'quiz finished' }), 500),
+      clean(JSON.stringify({ ...Object.fromEntries(Object.entries(a).filter(([k]) => !['budget', 'daily', 'riders', 'charging', 'priority', 'pincode'].includes(k))), stage: cityForm ? STAGE_OF[b.form] : b.stage === 'contact' ? 'contact given, quiz in progress' : 'quiz finished' }), 500),
       'Yes', clean(b.consentText, 600), clean(b.lang, 5) || 'en', clean(b.source, 300), clean(b.page, 200),
       /mobile|android|iphone/i.test(ua) ? 'Mobile' : 'Desktop', dup, id].map(v => safe(String(v)));
     const out = await sheets(`/values/${encodeURIComponent(tab)}!A1:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`, { method: 'POST', body: JSON.stringify({ values: [row] }) });

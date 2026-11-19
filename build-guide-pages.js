@@ -25,6 +25,14 @@ const withDeadline = Object.entries(SD.states).filter(([k, s]) => s.deadline && 
   .map(([k, s]) => ({ k, s, passed: s.deadline < TODAY_ISO })).sort((a, b) => a.s.deadline.localeCompare(b.s.deadline));
 const upcoming = withDeadline.filter(x => !x.passed), passed = withDeadline.filter(x => x.passed);
 const next = upcoming.slice(0, 3);
+// the soonest state deadline(s), named in the title and description: people search "<state> ev subsidy last date"
+const MONL = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const fmtLong = iso => { const [y, m, d] = iso.split('-').map(Number); return `${d} ${MONL[m - 1]} ${y}`; };
+const soonest = upcoming.length ? upcoming.filter(x => x.s.deadline === upcoming[0].s.deadline) : [];
+const soonNames = soonest.map(x => x.s.name).join(' and ');
+const soonDate = soonest.length ? fmtLong(soonest[0].s.deadline) : '';
+const soonShort = soonest.length ? fmtD(soonest[0].s.deadline) : '';
+const tg = SD.states.telangana, od = SD.states.odisha;
 const shortList = upcoming.slice(0, 3).map(x => `${x.s.name} ${fmtD(x.s.deadline, x.s.deadlineApprox)}`).join(', ');
 const deadlineRows = upcoming.map(({ s }) => `      <tr><td class="amt">${fmtD(s.deadline, s.deadlineApprox)}</td><td><strong>${s.name}</strong></td><td>${s.deadlineWhat}</td><td>${s.deadlineAdvice}</td></tr>`).join('\n');
 const passedRows = passed.map(({ s }) => `      <tr><td>${s.name}</td><td>${s.deadlineWhat}</td><td>Ended ${fmtD(s.deadline, s.deadlineApprox)}. ${s.deadlineAdvice}</td></tr>`).join('\n');
@@ -36,8 +44,8 @@ const srcLinks = [SD.central.sources, ...Object.values(SD.states).map(s => s.sou
 page({
   file: 'guide-subsidy-deadlines.html',
   canon: '/guide-subsidy-deadlines',
-  title: 'EV Subsidy Last Date 2026: Every Central and State Deadline | EScooterwale',
-  desc: `PM E-DRIVE runs to 31 March 2028. State deadlines come sooner: ${shortList}. Every electric scooter subsidy deadline, checked ${VERIFIED}.`,
+  title: soonest.length ? `EV Subsidy Last Date: ${soonNames} ${soonShort}, All States | EScooterwale` : 'EV Subsidy Last Date 2026: Every Central and State Deadline | EScooterwale',
+  desc: soonest.length ? `${soonest.map(x => `${x.s.name} EV subsidy last date: ${soonDate}`).join('. ')}. PM E-DRIVE runs to 31 March 2028. Every state deadline, checked ${VERIFIED}.` : `PM E-DRIVE runs to 31 March 2028. State deadlines come sooner: ${shortList}. Every electric scooter subsidy deadline, checked ${VERIFIED}.`,
   eyebrow: 'Deadline Tracker',
   crumb: 'EV subsidy deadlines',
   h1: 'Electric scooter subsidy last date: every deadline that matters in 2026',
@@ -57,6 +65,8 @@ page({
        'Eligibility is normally locked at the date of booking and advance payment rather than at delivery. If you book before the deadline you should keep the subsidy even if delivery is delayed. Get that confirmation in writing from the dealer.'],
       ['What is the Odisha EV subsidy last date?',
        `${SD.states.odisha.notes} The state subsidy is ${SD.states.odisha.cash.text.toLowerCase()}`],
+      ['What is the Telangana EV road tax exemption last date?',
+       `${tg.deadline ? fmtLong(tg.deadline) + '. ' : ''}${tg.notes || ''}`.trim()],
       ['Has the PM E-DRIVE subsidy been extended?',
        'Yes. The Ministry of Heavy Industries extended PM E-DRIVE demand incentives for electric two-wheelers to 31 March 2028, raised the two-wheeler allocation from ₹1,772 crore to ₹2,767 crore and lifted the unit cap to about 45.8 lakh vehicles. The rate stays at ₹2,500/kWh, capped at ₹5,000.']
     ])
@@ -64,6 +74,7 @@ page({
   body: `
   <div class="callout-box green">
     <h4>The short answer</h4>
+    ${soonest.length ? `<p style="margin:0 0 8px;font-size:16px"><strong>${soonest.map(x => `${x.s.name}: ${soonDate}`).join('. ')}.</strong> These are the next deadlines to end.</p>` : ''}
     <p style="margin:0;font-size:15px">The central <strong>PM E-DRIVE scheme runs to 31 March 2028</strong>, so there is no rush on the central ₹5,000. The dates that matter are at state level, soonest first: <strong>${shortList}</strong>.</p>
   </div>
 
@@ -131,7 +142,10 @@ ${passedRows}
   <p>31 March 2028 for the central PM E-DRIVE scheme. State deadlines are earlier and vary: ${shortList}.</p>
 
   <h3>What is the Odisha EV subsidy last date?</h3>
-  <p>${SD.states.odisha.notes} The state pays ${SD.states.odisha.cash.text.toLowerCase()}</p>
+  <p>${od.deadline ? `<strong>${fmtLong(od.deadline)}.</strong> ` : ''}${od.notes} The state pays ${od.cash.text.toLowerCase()}</p>
+
+  <h3>What is the Telangana EV road tax exemption last date?</h3>
+  <p>${tg.deadline ? `<strong>${fmtLong(tg.deadline)}.</strong> ` : ''}${tg.notes || ''}</p>
 
   <h3>Will PM E-DRIVE be extended again beyond 2028?</h3>
   <p>Nobody knows yet. The scheme has been extended and the two-wheeler budget raised by about 85%, which suggests continued support. But the rate was also halved in April 2025, so the amount per scooter is heading down even as the timeline stretches.</p>
@@ -501,6 +515,57 @@ const priceRows = byPrice.map(r => {
       </tr>`;
 }).join('\n');
 
+/* Top of the price page and the homepage (Search Console, Nov 2026: "electric scooter price",
+   "electric scooty price", "ev scooter price" sit at position 9 to 11 with 24,000 impressions):
+   a dated price table first, the cheapest and best under ₹1 lakh, and on-road prices by city. */
+const DD = require('./data.js');
+const MONL2 = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const UPDATED = (d => { const [y, m, dd] = d.split('-').map(Number); return `${dd} ${MONL2[m - 1]} ${y}`; })(DD.SW_CONFIG.dataUpdated);
+const sp = v => String(v || '').replace(/\s*[–—-]\s*/g, ' to ');
+const popular = (() => {
+  const seen = new Set(), out = [];
+  ((DD.MOST_VIEWED && DD.MOST_VIEWED.models) || []).forEach(m => { const x = SCOOTERS_DB.find(s => s.id === m.id); if (x && !seen.has(x.id)) { seen.add(x.id); out.push(x); } });
+  [...SCOOTERS_DB].sort((a, b) => b.score - a.score).forEach(x => { if (!seen.has(x.id)) { seen.add(x.id); out.push(x); } });
+  return out.slice(0, 10).sort((a, b) => a.price - b.price);
+})();
+const priceGlanceHTML = (h = 'h2') => `<section class="sw-price-glance">
+  <${h}>Electric scooter price list today</${h}>
+  <p class="sw-upd">Prices updated <strong>${UPDATED}</strong>. The ${popular.length} most viewed scooters this week, cheapest first.</p>
+  <div class="lu-scroll"><table class="lu-t"><thead><tr><th>Model</th><th>Ex-showroom</th><th>On-road from</th><th>Real range</th><th>EMI from</th></tr></thead><tbody>
+${popular.map(s => `    <tr><td><a href="/scooters/${s.id}" translate="no">${s.fullName}</a></td><td class="amt">${inr(s.nationalPrice || s.price)}</td><td>${inr(s.onRoad)}</td><td>${sp(s.realRange)}</td><td>${inr(s.emiFrom)}/mo</td></tr>`).join('\n')}
+  </tbody></table></div>
+  <p class="sw-more"><a href="/electric-scooter-price">See the electric scooter price of all ${SCOOTERS_DB.length} models</a></p>
+</section>`;
+const under1L = byPrice.filter(s => s.price < 100000);
+const under1LFull = under1L.filter(s => (parseFloat(s.speed) || 0) > 25);
+const best1L = [...under1LFull].sort((a, b) => b.score - a.score || a.price - b.price);
+const cheap1L = under1LFull[0];
+const under1LakhHTML = (h = 'h2') => !best1L.length ? '' : `<section class="sw-u1l">
+  <${h}>Cheapest and best electric scooter under ₹1 lakh</${h}>
+  <div class="sw-tops">
+    <div class="sw-top"><span>Cheapest full-speed</span><a href="/scooters/${cheap1L.id}" translate="no">${cheap1L.fullName}</a><b>${inr(cheap1L.price)}</b></div>
+    <div class="sw-top"><span>Best under ₹1 lakh</span><a href="/scooters/${best1L[0].id}" translate="no">${best1L[0].fullName}</a><b>${inr(best1L[0].price)}</b></div>
+    ${best1L[1] ? `<div class="sw-top"><span>Runner-up</span><a href="/scooters/${best1L[1].id}" translate="no">${best1L[1].fullName}</a><b>${inr(best1L[1].price)}</b></div>` : ''}
+  </div>
+  <p class="sw-more">${under1L.length} electric scooters cost under ₹1 lakh ex-showroom, ${under1LFull.length} of them full-speed (above 25 km/h). <a href="/best/under-1-lakh">Best electric scooters under ₹1 lakh</a></p>
+</section>`;
+// (three most viewed models, kept for reference)
+const CITY_COLS = ((DD.MOST_VIEWED && DD.MOST_VIEWED.models) || []).map(m => SCOOTERS_DB.find(s => s.id === m.id)).filter(Boolean).concat([...SCOOTERS_DB].sort((a, b) => b.score - a.score)).filter((x, i, a) => a.indexOf(x) === i).slice(0, 3);
+const cityOnroadHTML = (h = 'h2') => `<section class="sw-city-prices">
+  <${h}>Electric scooter on-road price by city</${h}>
+  <p>On-road prices are close across cities, because most states charge no road tax on electric scooters and registration is free. The state subsidy is what really changes what you pay.</p>
+  <div class="lu-scroll"><table class="lu-t"><thead><tr><th>City</th><th>Road tax on EVs</th><th>State subsidy</th><th>On-road from</th></tr></thead><tbody>
+${DD.CITIES_DB.map(c => {
+    const rows = SCOOTERS_DB.map(s => ({ s, on: s.cityPrices && s.cityPrices[c.id] ? s.cityPrices[c.id].onRoad : null })).filter(r => r.on);
+    if (!rows.length) return '';
+    const ch = rows.sort((a, b) => a.on - b.on)[0];
+    const st = DD.SUBSIDY.states[DD.SUBSIDY.cityState[c.id]] || {}, amt = st.cash && st.cash.amount, rt = st.roadTax || {};
+    const tax = rt.type === 'exempt' ? 'None' : rt.type === 'percent' ? rt.pct + '%' : 'Not confirmed';
+    return `    <tr><td><a href="/cities/${c.id}">${c.name}</a></td><td>${tax}</td><td>${amt ? 'Up to ' + inr(amt) : 'None'}</td><td class="amt">${inr(ch.on)}</td></tr>`;
+  }).join('\n')}
+  </tbody></table></div>
+</section>`;
+
 const band = (label, lo, hi) => {
   const list = byPrice.filter(s => s.price >= lo && s.price < hi);
   if (!list.length) return '';
@@ -563,6 +628,9 @@ page({
     ])
   ]},
   body: `
+  ${priceGlanceHTML()}
+  ${under1LakhHTML()}
+
   <div class="callout-box green">
     <h4>The short answer</h4>
     <p style="margin:0;font-size:15px">EV scooter prices in India run from <strong>${inr(byPrice[0].price)}</strong> (${byPrice[0].fullName}) to <strong>${inr(byPrice[byPrice.length-1].price)}</strong> (${byPrice[byPrice.length-1].fullName}) ex-showroom. The lowest price full-speed electric scooter is the ${fullSpeed[0].fullName} at ${inr(fullSpeed[0].price)}. The mainstream band is ₹90,000 to ₹1.5 lakh. On-road adds roughly 8 to 10%, less than for petrol scooters because registration fees are waived nationwide and many states also waive road tax. Most eligible scooters get <strong>₹5,000 off</strong> via PM E-DRIVE.</p>
@@ -579,6 +647,8 @@ ${priceRows}
   </table>
   </div>
   <p style="font-size:13px;color:var(--ink-4)">On-road prices are estimates and vary by state depending on road tax and insurance. Real-world range is our own figure and is consistently lower than the manufacturer IDC claim. See the <a href="/guide-real-range">real range test</a> for how we measure it.</p>
+
+  ${cityOnroadHTML()}
 
   <h2>Prices by budget</h2>
 ${band('Under ₹80,000', 0, 80000)}
@@ -659,6 +729,9 @@ const chemBadge = c => c === 'LFP' ? '<strong style="color:#16a663">LFP</strong>
   : c === 'LFP or NMC' ? '<strong style="color:#f59e0b">LFP or NMC</strong>'
   : '<span style="color:var(--ink-4)">Not published</span>';
 
+// which battery each brand uses (Search Console, Nov 2026: "tvs iqube lfp battery", "does bajaj chetak use lfp battery")
+const chemByBrand = (() => { const m = {}; withChem.forEach(({ s, c }) => { (m[s.brand] = m[s.brand] || { chem: new Set(), n: 0, rem: 0 }); m[s.brand].chem.add(c.chem); m[s.brand].n++; if (c.removable) m[s.brand].rem++; });
+  return Object.entries(m).sort((a, b) => b[1].n - a[1].n).map(([b, v]) => `      <tr><td><strong translate="no">${b}</strong></td><td>${[...v.chem].join(', ')}</td><td>${v.n}</td><td>${v.rem ? v.rem + ' of ' + v.n : 'None'}</td></tr>`).join('\n'); })();
 const chemRows = withChem.map(r => `      <tr>
         <td><a href="/scooters/${r.s.id}">${r.s.brand} ${r.s.name}</a></td>
         <td>${r.s.battery}</td>
@@ -701,6 +774,16 @@ page({
   <div class="callout-box green">
     <h4>The short answer</h4>
     <p style="margin:0;font-size:15px">Of the ${withChem.length} scooters we track, <strong>${nmc.length} use NMC</strong>, <strong>${lfp.length} use LFP</strong>, ${mixed.length} may be either depending on supply, and <strong>${undisclosed.length} come from brands that do not publish the chemistry at all</strong>. LFP handles Indian heat better and lasts more cycles. NMC packs more range into the same space. Ampere and BGauss are the LFP brands. Ola, Ather, TVS, Okinawa and Bounce are NMC.</p>
+  </div>
+
+  <h2>Which battery does each brand use?</h2>
+  <div style="overflow-x:auto">
+  <table class="subsidy-table">
+    <thead><tr><th>Brand</th><th>Battery chemistry</th><th>Models</th><th>Removable battery</th></tr></thead>
+    <tbody>
+${chemByBrand}
+    </tbody>
+  </table>
   </div>
 
   <h2>Every model, by chemistry</h2>
@@ -813,7 +896,16 @@ ${chemRows}
   const h1 = h0.replace(/<div id="swBrandPriceLinks">[\s\S]*?<\/div><!--\/swBrandPriceLinks-->|<div id="swBrandPriceLinks"><\/div>/, `<div id="swBrandPriceLinks">${html}</div><!--/swBrandPriceLinks-->`);
   if (h1 !== h0) fs.writeFileSync(f, h1); }
 
+// homepage price table, under ₹1 lakh block and on-road prices by city, written into the page
+{ const fs = require('fs'), f = 'index.html', h0 = fs.readFileSync(f, 'utf8');
+  const html = `<div class="container">${priceGlanceHTML()}${under1LakhHTML()}${cityOnroadHTML()}</div>`;
+  const h1 = h0.replace(/<div id="swHomePrices">[\s\S]*?<\/div><!--\/swHomePrices-->|<div id="swHomePrices"><\/div>/, `<div id="swHomePrices">${html}</div><!--/swHomePrices-->`);
+  if (h1 !== h0) fs.writeFileSync(f, h1); }
+
 // homepage description: the cheapest price and model count follow the data every build
 { const fs = require('fs'), f = 'index.html', h0 = fs.readFileSync(f, 'utf8');
   const h1 = h0.replace(/(<meta name="description" content="Electric scooter price in India from )₹[\d,]+(: compare all )\d+( EV scooty models)/, `$1${inr(byPrice[0].price)}$2${SCOOTERS_DB.length}$3`);
   if (h1 !== h0) fs.writeFileSync(f, h1); }
+
+// guides written as data (data/guides.json), one page each
+require('./build-guides-data.js');

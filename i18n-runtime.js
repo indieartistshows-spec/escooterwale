@@ -35,8 +35,9 @@
     if (!n) return;
     if (n.nodeType === 3) {
       if (n.__swDone === n.textContent) return;
+      const inTitle = n.parentNode && n.parentNode.nodeName === 'TITLE';
       const t = tr(n.textContent);
-      if (t != null) n.textContent = t; else if (!full) pending.push(n);
+      if (t != null) n.textContent = inTitle ? C.pageTitle(n.textContent, t) : t; else if (!full) pending.push(n);
       // a long page title drops its " | EScooterwale" ending once translated (as seo.js does in English)
       if (n.parentNode && n.parentNode.nodeName === 'TITLE' && window.SEO && SEO.shortTitle) { const h = document.querySelector('h1'), v = SEO.shortTitle(n.textContent, h && h.textContent); if (v !== n.textContent) n.textContent = v; }
       n.__swDone = n.textContent; return;
@@ -47,7 +48,7 @@
     for (const c of n.childNodes) fix(c);
   }
   function fixHead() {
-    const t = tr(document.title); if (t != null && t !== document.title) document.title = t;
+    const t = tr(document.title); if (t != null && t !== document.title) document.title = C.pageTitle(document.title, t);
     if (window.SEO && SEO.shortTitle) { const h = document.querySelector('h1'), v = SEO.shortTitle(document.title, h && h.textContent); if (v !== document.title) document.title = v; } // same rules as the built pages
     document.querySelectorAll('meta[name="description"],meta[property="og:title"],meta[property="og:description"]').forEach(m => { const v = tr(m.getAttribute('content') || ''); if (v != null) m.setAttribute('content', v); });
   }

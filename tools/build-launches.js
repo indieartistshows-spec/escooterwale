@@ -16,6 +16,13 @@ const launches = ev.filter(e => e.type === 'launch'), gone = ev.filter(e => e.ty
 const onSale = S.filter(s => !s.discontinued).length;
 const F = JSON.parse(fs.readFileSync('data/launch-features.json', 'utf8')).slides.filter(f => f.img && fs.existsSync('.' + f.img.d) || f.img && fs.existsSync('.' + f.img.m));
 const host = u => new URL(u).hostname.replace(/^www\./, '');
+// announced but not yet delivering (data/upcoming.json): what "upcoming electric scooters 2027" searches want
+const UP = (() => { try { return JSON.parse(fs.readFileSync('data/upcoming.json', 'utf8')); } catch (e) { return { items: [] }; } })();
+const upcomingHTML = !UP.items.length ? '' : `<h2>Upcoming electric scooters in 2027</h2>
+  <p>Scooters announced for India that are not delivering yet, with the timing the brand or a reputable report gives. Checked ${fmt(UP.checked)}.</p>
+  <div style="overflow-x:auto"><table class="subsidy-table"><thead><tr><th>Scooter</th><th>Expected</th><th>Price</th><th>What we know</th><th>Source</th></tr></thead><tbody>
+  ${UP.items.map(u => `<tr><td><strong><span translate="no">${u.brand} ${u.model}</span></strong><br><small>${u.status}</small></td><td>${u.expected}</td><td>${u.price}</td><td>${u.specs}</td><td><a href="${u.url}" target="_blank" rel="noopener" data-out="article">${u.confidence}</a></td></tr>`).join('\n  ')}
+  </tbody></table></div>`;
 // WebP copies made by tools/build-banners.js, used when present
 const wp = (f, w) => { const o = f.replace(/\.jpg$/, w ? `-${w}.webp` : '.webp'); return o !== f && fs.existsSync('.' + o) ? o : null; };
 const fold = (f, k) => {
@@ -90,6 +97,8 @@ page({
     crumbs([{ name: 'Home', url: `${BASE}/` }, { name: 'Launches' }]),
     { '@type': 'ItemList', name: 'New electric scooter launches in India', itemListElement: launches.slice(0, 30).map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: `${e.brand} ${e.name}` })) }] },
   body: `${FOLD_CSS}
+  ${upcomingHTML}
+
   <h2>Latest launches</h2>
   ${F.map(fold).join('')}
 
