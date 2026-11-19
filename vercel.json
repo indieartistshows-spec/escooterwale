@@ -346,11 +346,5 @@
       "destination": "/best",
       "permanent": true
     }
-  ],
-  "crons": [
-    {
-      "path": "/api/leads-cleanup",
-      "schedule": "29 18 * * *"
-    }
   ]
 }

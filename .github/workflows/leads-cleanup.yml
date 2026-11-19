@@ -1,5 +1,5 @@
 # Runs the Leads sheet clean up (api/leads-cleanup.js on the live site) on demand.
-# The nightly run at 11:59 PM IST is a Vercel cron (vercel.json), not this workflow.
+# Started every night at 11:59 PM IST by a Claude scheduled task (gh workflow run), and by hand from Actions.
 # The reply holds counts only, never names or numbers. Pick "dry" to see counts without changing anything.
 name: Leads clean up
 

@@ -56,7 +56,7 @@ made from its id at build time.
 
 ## Leads sheet clean up (every night)
 
-Vercel runs `api/leads-cleanup.js` every day at 18:29 UTC (11:59 PM IST). On Vercel's free plan the cron can start any time in that hour, so between about 11:30 PM and 12:29 AM IST.
+Every night at 11:59 PM IST a Claude scheduled task starts the GitHub workflow **Leads clean up**, which calls `api/leads-cleanup.js` on the live site.
 To run it now: GitHub, Actions, **Leads clean up**, Run workflow.
 In the **Leads** tab, rows with the same mobile number are duplicates. The row with the most answers filled in is kept
 (a tie goes to the one with more text, then the newest) and the others are deleted.

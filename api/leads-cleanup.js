@@ -1,6 +1,6 @@
 /* api/leads-cleanup.js | daily clean up of the "Leads" tab in the leads Google Sheet.
-   Run by a Vercel cron every night (vercel.json "crons", 18:29 UTC = 11:59 PM IST), and on demand by
-   the GitHub workflow "Leads clean up" (.github/workflows/leads-cleanup.yml).
+   Run every night at 11:59 PM IST by a Claude scheduled task that starts the GitHub workflow
+   "Leads clean up" (.github/workflows/leads-cleanup.yml), which calls this endpoint. Also run on demand from Actions.
    Rows with the same mobile number are duplicates. Of each group, the row with the most
    information is kept and the others are deleted from "Leads":
      score = filled answer columns (Name, Email, Pincode, City, State, Shortlist, Skipped, Budget,
