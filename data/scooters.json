@@ -1498,7 +1498,7 @@
   "emiFrom": 2980,
   "range": "153 km",
   "realRange": "115–130 km",
-  "speed": "80 km/h",
+  "speed": "73 km/h",
   "charging": "3 hrs",
   "battery": "3.5 kWh",
   "bootSpace": "35 L",
@@ -1541,7 +1541,7 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "80 km/h",
+    "Top speed": "73 km/h",
     "Battery capacity": "3.5 kWh",
     "Charging time": "3 hrs"
    },

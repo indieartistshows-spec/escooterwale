@@ -538,7 +538,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
 - Real-world range (EScooterwale estimate): 115–130 km
-- Top speed: 80 km/h
+- Top speed: 73 km/h
 - Charging time: 3 hrs
 - Kerb weight: 125 kg
 - Boot space: 35 L
