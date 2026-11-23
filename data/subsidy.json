@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-16",
+ "checked": "2026-11-23",
  "central": {
   "name": "PM E-DRIVE",
   "ratePerKwh": 2500,
@@ -177,8 +177,8 @@
   "odisha": {
    "name": "Odisha",
    "cash": {
-    "amount": 5000,
-    "text": "15% of ex-factory price capped at ₹5,000."
+    "amount": 20000,
+    "text": "₹5,000/kWh, capped at ₹20,000."
    },
    "roadTax": {
     "type": "exempt",
@@ -186,17 +186,24 @@
    },
    "status": "active",
    "deadline": "2026-12-31",
-   "notes": "The Commerce and Transport Department extended the Odisha EV Policy 2021 to 31 December 2026 (reported 5 October 2026). This is the third extension, after 31 March and 30 September 2026.",
-   "changed": "2026-10-05",
+   "notes": "The Odisha EV Policy 2021 pays ₹5,000 per kWh on electric two wheelers, up to ₹20,000. This rate was set by Commerce and Transport Department notification No. 4709 of 26 April 2023. The gazette shows extensions to 31 March, 30 June and 30 September 2026. News reported a further extension to 31 December 2026 on 5 October 2026.",
+   "changed": "2026-11-23",
    "sources": [
+    {
+     "title": "Odisha Commerce and Transport Department: Odisha EV Policy 2021 with gazette amendments and extensions",
+     "url": "https://ct.odisha.gov.in/sites/default/files/2026-07/Odisha%20EV%20Policy-2021.pdf",
+     "official": true
+    },
     {
      "title": "The Hans India: Odisha extends EV policy validity till Dec 31 (5 Oct 2026)",
      "url": "https://www.thehansindia.com/odisha/odisha-extends-ev-policy-validity-till-dec-31-1128872",
      "official": false
     }
    ],
-   "deadlineWhat": "Odisha EV Policy 2021, including the ₹5,000 state subsidy and road tax waiver. Extended three times: 31 March, 30 September and now 31 December 2026",
-   "deadlineAdvice": "Book and register before 31 December 2026 if you want the state subsidy. Another extension is possible but not announced"
+   "deadlineWhat": "Odisha EV Policy 2021, including the state subsidy of ₹5,000 per kWh (up to ₹20,000) and the road tax waiver. Extended four times: 31 March, 30 June, 30 September and now 31 December 2026",
+   "deadlineAdvice": "Book and register before 31 December 2026 if you want the state subsidy. Another extension is possible but not announced",
+   "lastChange": "2026-11-23",
+   "lastChangeNote": "Corrected the two wheeler subsidy to ₹5,000 per kWh, up to ₹20,000. The official gazette shows this rate since April 2023. We had listed the older 15% up to ₹5,000 rate."
   },
   "andhra-pradesh": {
    "name": "Andhra Pradesh",
@@ -441,6 +448,14 @@
   "bhubaneswar": "odisha"
  },
  "changelog": [
+  {
+   "date": "2026-11-23",
+   "items": [
+    "Odisha: two wheeler subsidy corrected to ₹5,000/kWh capped at ₹20,000, per Commerce and Transport Department notification No. 4709 of 26 April 2023 (official gazette compilation on ct.odisha.gov.in). Previously listed as 15% capped at ₹5,000.",
+    "PM E-DRIVE: no change. ₹2,500/kWh, capped at ₹5,000, valid to 31 March 2028.",
+    "Telangana: road tax waiver still ends 31 December 2026. No extension notified yet."
+   ]
+  },
   {
    "date": "2026-10-17",
    "items": [

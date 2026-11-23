@@ -1422,7 +1422,7 @@
   "slug": "bajaj-chetak-chetak-3001-3point0-kwh",
   "gaEvent": "bjc_c3001",
   "tagline": "Bajaj Chetak Chetak 3001 — 3.0 kWh | 127 km claimed | 73 km/h",
-  "price": 115483,
+  "price": 116483,
   "priceDisplay": "₹99,990",
   "onRoad": 109989,
   "onRoadDisplay": "₹109,989",
@@ -1498,7 +1498,7 @@
   "emiFrom": 2980,
   "range": "153 km",
   "realRange": "115–130 km",
-  "speed": "73 km/h",
+  "speed": "80 km/h",
   "charging": "3 hrs",
   "battery": "3.5 kWh",
   "bootSpace": "35 L",
@@ -1541,7 +1541,7 @@
   "variants": [],
   "specs": {
    "performance": {
-    "Top speed": "73 km/h",
+    "Top speed": "80 km/h",
     "Battery capacity": "3.5 kWh",
     "Charging time": "3 hrs"
    },
@@ -5843,12 +5843,12 @@
    },
    {
     "name": "Freedum LI Plus (2 Years)",
-    "price": 64099,
+    "price": 72324,
     "range": "75 km"
    },
    {
     "name": "Freedum LI Plus (3 Years)",
-    "price": 69999,
+    "price": 74676,
     "range": "75 km"
    }
   ],
