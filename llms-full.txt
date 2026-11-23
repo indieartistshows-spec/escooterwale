@@ -1,7 +1,7 @@
 # EScooterwale — full electric scooter dataset for India
 
 Source: https://www.escooterwale.in
-Last updated: 2026-11-19
+Last updated: 2026-11-23
 Models: 78 | Brands: 17
 
 Prices are ex-showroom in Indian rupees unless stated. "Claimed range (IDC)" is the
@@ -513,9 +513,9 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 
 ### Bajaj Chetak Chetak C3001 3.0 kWh
 - URL: https://www.escooterwale.in/scooters/bajaj-chetak-chetak-3001-3point0-kwh
-- Ex-showroom price: ₹1,15,483
-- Estimated on-road price from: ₹1,21,560 (lowest across our 12 cities; varies by state road tax)
-- EMI from: ₹3041/month
+- Ex-showroom price: ₹1,16,483
+- Estimated on-road price from: ₹1,22,580 (lowest across our 12 cities; varies by state road tax)
+- EMI from: ₹3067/month
 - Battery: 3 kWh
 - Claimed range (IDC): 127 km
 - Real-world range (EScooterwale estimate): 95–108 km
@@ -538,7 +538,7 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 - Battery: 3.5 kWh
 - Claimed range (IDC): 153 km
 - Real-world range (EScooterwale estimate): 115–130 km
-- Top speed: 73 km/h
+- Top speed: 80 km/h
 - Charging time: 3 hrs
 - Kerb weight: 125 kg
 - Boot space: 35 L
@@ -1671,4 +1671,4 @@ Normal-mode city estimate, 0.9 for Eco mode, 0.65 for aggressive riding.
 | Indore | Madhya Pradesh | ₹10,000 | Developing |
 | Bhopal | Madhya Pradesh | ₹10,000 | Developing |
 | Nagpur | Maharashtra | ₹10,000 | Developing |
-| Bhubaneswar | Odisha | ₹5,000 | Developing |
+| Bhubaneswar | Odisha | ₹20,000 | Developing |
