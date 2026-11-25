@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="EScooterwale"/>
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="/min/styles.css?v=f9d02249"/>
+<link rel="stylesheet" href="/min/styles.css?v=b0756b7b"/>
 <style>
 .mt-wrap{max-width:620px;margin:0 auto;padding:28px 16px 120px}
 .mt-head{text-align:center;margin-bottom:22px}
@@ -123,7 +123,7 @@
 .mt-field.bad input{border-color:#b42318}
 .mt-err{font-size:12.5px;color:#b42318;margin-top:4px;display:none}
 .mt-field.bad .mt-err{display:block}
-.mt-consent{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:var(--ink-2);margin:14px 0 8px;cursor:pointer}
+.mt-consent{display:block;font-size:12.5px;line-height:1.5;color:var(--ink-3);margin:10px 0 4px}
 .mt-consent input{width:20px;height:20px;margin-top:2px;flex-shrink:0;accent-color:#0b7a45}
 .mt-consent.bad{color:#b42318}
 .mt-legal{font-size:12.5px;color:var(--ink-3);margin:6px 0 16px}
@@ -244,9 +244,9 @@
         <div class="mt-field" data-f="name"><label for="fName">Your name</label><input id="fName" name="name" autocomplete="name"/><div class="mt-err">Please enter your name.</div></div>
         <div class="mt-field" data-f="mobile"><label for="fMobile">Mobile number</label><input id="fMobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="14" placeholder="10 digit mobile"/><div class="mt-err">Please enter a valid 10 digit mobile number.</div></div>
         <div class="mt-hp" aria-hidden="true"><label for="fWeb">Website</label><input id="fWeb" name="website" tabindex="-1" autocomplete="off"/></div>
-        <label class="mt-consent" id="mtConsentRow"><input type="checkbox" id="fConsent"/><span id="mtConsentText">I agree that EScooterwale and its partner scooter brands and dealers may contact me about on-road prices, test rides, offers and the EScooterwale newsletter. I can unsubscribe any time.</span></label>
-        <p class="mt-legal">By continuing you agree to our <a href="/terms" target="_blank">Terms</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.</p>
         <button class="mt-btn" type="submit" id="mtPinGo" style="width:100%">Continue</button>
+        <p class="mt-consent" id="mtConsentRow"><span id="mtConsentText">By continuing, I agree that EScooterwale and its partner scooter brands and dealers may contact me about on-road prices, test rides, offers and the EScooterwale newsletter. I can unsubscribe any time.</span></p>
+        <p class="mt-legal">By continuing you agree to our <a href="/terms" target="_blank">Terms</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.</p>
         <p class="mt-formerr" id="mtFormErr" aria-live="polite"></p>
       </form>
     </div>
@@ -356,10 +356,10 @@
   <span>Saving your shortlist</span><span>Please tick the box to continue.</span><span>Could not save right now. Please try again.</span><span>Too many tries. Please wait a few minutes.</span><span>Copied. Paste it anywhere to share.</span><span>India</span>
 </div>
 
-<script src="/min/data.js?v=40c25b26"></script>
+<script src="/min/data.js?v=391d9094"></script>
 <script src="/min/seo.js?v=b4409ead"></script>
 <script src="/min/outbound.js?v=373ff4f8"></script>
-<script src="/min/components.js?v=340dd805"></script>
+<script src="/min/components.js?v=8ba63189"></script>
 <script>
 document.getElementById('navMount').innerHTML=navHTML('match');
 document.getElementById('footerMount').innerHTML=footerHTML();
@@ -534,10 +534,8 @@ $('mtContact').addEventListener('submit',async e=>{
   const ok={pincode:/^[1-9]\d{5}$/.test(v.pincode),name:v.name.length>=2,mobile:/^[6-9]\d{9}$/.test(v.mobile)};
   Object.keys(ok).forEach(k=>field(k).classList.toggle('bad',!ok[k]));
   if(!ok.pincode){const m=$('mtPinMsg');m.className='mt-pinmsg err';m.textContent='Please enter a valid 6 digit pincode.'}
-  const consent=$('fConsent').checked;$('mtConsentRow').classList.toggle('bad',!consent);
   const err=$('mtFormErr');err.textContent='';
   if(Object.values(ok).includes(false)){const k=Object.keys(ok).find(k=>!ok[k]);(k==='pincode'?pinIn:field(k).querySelector('input')).focus();return}
-  if(!consent){err.textContent='Please tick the box to continue.';return}
   A.pincode=v.pincode;A.place=place(v.pincode)||{pin:v.pincode,state:'',stateName:'India',label:'India',city:''};
   if(A.place.cityId&&typeof swSetCity==='function') swSetCity(A.place.cityId,'pincode');
   ev('quiz_answer',{question:'pincode',answer:A.place.state||'unknown'});

@@ -948,7 +948,7 @@ img.lazy.loaded{opacity:1}
 .cl-field input:focus{outline:none;border-color:var(--g)}
 .cl-field input.bad{border-color:#b42318}
 .cl-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.cl-consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;line-height:1.5;color:var(--ink-3);margin:12px 0;cursor:pointer}
+.cl-consent{display:block;font-size:12px;line-height:1.5;color:var(--ink-3);margin:10px 0 0}
 .cl-consent input{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:#0b7a45}
 .cl-consent.bad{color:#b42318}
 .cl-err{color:#b42318;font-size:13px;margin:8px 0 0}

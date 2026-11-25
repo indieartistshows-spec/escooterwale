@@ -623,7 +623,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
   });
 });
 
-/* Lead box (city pages, scooter pages): name + mobile go to /api/lead, the same Leads sheet as the
+/* Consent: no tick box. The consent line under the button is shown to everyone and saved with the lead (consentText); pressing submit is the agreement.
+   Lead box (city pages, scooter pages): name + mobile go to /api/lead, the same Leads sheet as the
    quiz. The section's data-lead-form says which page it is on ("city" or "scooter"); a scooter page
    sends its model as the shortlist. Nothing personal goes to GA: form_submit and lead_submitted on save, icon_click on the match button. */
 function swInitLeadBox(){
@@ -650,15 +651,13 @@ function swInitLeadBox(){
   if(mb) mb.addEventListener('click',()=>ev('icon_click',{icon_name:'match-'+kind,link_url:mb.getAttribute('href'),page_path:page(),lang:LANG}));
   form.addEventListener('submit',async e=>{
     e.preventDefault(); if(busy) return;
-    ['clErrName','clErrMobile','clErrConsent','clErrSave'].forEach(id=>$(id).hidden=true);
+    ['clErrName','clErrMobile','clErrSave'].forEach(id=>$(id).hidden=true);
     const name=$('clName').value.trim();
     const mobile=$('clMobile').value.replace(/[\s-]/g,'').replace(/^(\+?91|0)(?=[6-9]\d{9}$)/,'');
-    const consent=$('clConsent').checked;
     const badName=name.length<2, badMob=!/^[6-9]\d{9}$/.test(mobile);
-    $('clName').classList.toggle('bad',badName); $('clMobile').classList.toggle('bad',badMob); $('clConsentRow').classList.toggle('bad',!consent);
+    $('clName').classList.toggle('bad',badName); $('clMobile').classList.toggle('bad',badMob);
     if(badName){ $('clErrName').hidden=false; $('clName').focus(); return; }
     if(badMob){ $('clErrMobile').hidden=false; $('clMobile').focus(); return; }
-    if(!consent){ $('clErrConsent').hidden=false; return; }
     const cid=window.__SW_CITY__||(sel&&sel.value)||((typeof swGetCity==='function')?swGetCity():null);
     const c=cid&&typeof CITIES_DB!=='undefined'&&CITIES_DB.find(x=>x.id===cid), st=c&&SUBSIDY.states[SUBSIDY.cityState[c.id]];
     const model=kind==='scooter'&&window.__SW_CUR__?window.__SW_CUR__.id:(box&&box.dataset.leadModel)||null;
@@ -699,11 +698,10 @@ function swLeadBoxHTML(kind, popup){
             <label class="cl-field"><span>City</span><select id="clCity" name="city"><option value="">Select your city</option></select></label>
           </div>
           <div class="cl-hp" aria-hidden="true"><label for="clWeb">Website</label><input id="clWeb" name="website" tabindex="-1" autocomplete="off"/></div>
-          <label class="cl-consent" id="clConsentRow"><input type="checkbox" id="clConsent"/><span id="clConsentText">I agree that EScooterwale and its partner scooter brands and dealers may contact me about on-road prices, test rides, offers and the EScooterwale newsletter. I can unsubscribe any time.</span></label>
           <button class="btn btn-primary" type="submit" id="clSubmit">Get on-road price</button>
+          <p class="cl-consent" id="clConsentRow"><span id="clConsentText">By submitting, I agree that EScooterwale and its partner scooter brands and dealers may contact me about on-road prices, test rides, offers and the EScooterwale newsletter. I can unsubscribe any time.</span></p>
           <p class="cl-err" id="clErrName" hidden>Please enter your name.</p>
           <p class="cl-err" id="clErrMobile" hidden>Please enter a valid 10-digit mobile number.</p>
-          <p class="cl-err" id="clErrConsent" hidden>Please tick the box to continue.</p>
           <p class="cl-err" id="clErrSave" hidden>Could not save right now. Please try again.</p>
         </form>
         <div class="cl-done" id="clDone" hidden>Thanks, we have your details. We will be in touch with the best on-road price in your city.</div>
